@@ -273,7 +273,7 @@ select {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
   gap: 2rem;
   align-items: center;
 }
@@ -295,22 +295,23 @@ h4 {
   margin: 0;
   color: var(--atlantic-navy);
   letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 h1 {
   font-family: "Anton", sans-serif;
-  font-size: clamp(3.1rem, 6vw, 6rem);
-  line-height: 0.93;
+  font-size: clamp(2.6rem, 4.6vw, 4.8rem);
+  line-height: 0.96;
   text-transform: uppercase;
-  max-width: 10.8ch;
+  max-width: 15ch;
 }
 
 h2 {
   font-family: "Anton", sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.8rem);
-  line-height: 0.96;
+  line-height: 0.98;
   text-transform: uppercase;
-  max-width: 12ch;
+  max-width: 14ch;
 }
 
 h3 {
@@ -338,9 +339,10 @@ h4 {
 }
 
 .hero-text {
-  max-width: 60ch;
+  max-width: 54ch;
   margin-top: 1.2rem;
   font-size: 1.04rem;
+  color: rgba(11, 46, 79, 0.82);
 }
 
 .hero-actions {
