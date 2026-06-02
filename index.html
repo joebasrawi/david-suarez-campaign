@@ -3,754 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Suarez | Miami Beach, On the Record</title>
-  <meta name="description" content="An informational public-facing website for Miami Beach Commissioner David Suarez featuring current work, legislation, achievements, town halls, public updates, and official contact information.">
+  <title>Miami Beach Active Projects</title>
+  <meta name="description" content="A cleaner live map of current Miami Beach projects built from the city's active projects feed.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root{--ink:#0d2940;--muted:#5f7689;--line:#d9e3ea;--bg:#f5f7f8;--card:#ffffff;--sea:#0c8c87;--sky:#1d6fa3;--sand:#f2c879;--coral:#ef6b57;--pine:#1e5a56;--radius:22px;--shadow:0 16px 40px rgba(13,41,64,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Manrope",sans-serif;color:var(--ink);background:radial-gradient(circle at top right,rgba(29,111,163,.12),transparent 24%),radial-gradient(circle at top left,rgba(239,107,87,.12),transparent 24%),var(--bg)}a{color:inherit}button,input,select{font:inherit}
+    .wrap{width:min(1380px,calc(100% - 24px));margin:0 auto}.top{position:sticky;top:0;z-index:50;background:rgba(245,247,248,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(13,41,64,.08)}.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none}.mark{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--coral),var(--sand));display:grid;place-items:center;color:#fff;font:700 20px/1 "Fraunces",serif;box-shadow:0 12px 26px rgba(239,107,87,.25)}.brand b{display:block}.brand span{display:block;color:var(--muted);font-size:13px}
+    .cta,.pill,.card button,.chips button,.nhoods button{transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background .16s ease}.cta:hover,.pill:hover,.card button:hover,.chips button:hover,.nhoods button:hover{transform:translateY(-1px)}
+    .cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:12px 16px;border-radius:999px;background:linear-gradient(135deg,var(--coral),#e9543f);color:#fff;font-weight:700;box-shadow:0 14px 30px rgba(239,107,87,.22)}
+    .hero{padding:44px 0 28px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.panel,.mapbox,.listbox,.detail,.insight,.source{background:rgba(255,255,255,.82);border:1px solid rgba(13,41,64,.08);border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+    .hero-copy,.hero-side{padding:28px}.eyebrow,.kicker,.meta{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--sky)}h1,h2,h3{margin:0;font-family:"Fraunces",serif;letter-spacing:-.04em}h1{font-size:clamp(42px,5vw,74px);line-height:.95;max-width:10ch}h2{font-size:clamp(30px,3vw,48px);line-height:.96}h3{font-size:22px}
+    .lede,.subtle,.summary,.desc,.source p,.empty p{color:var(--muted);line-height:1.65}.lede{margin:16px 0 0;max-width:64ch}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.stat{padding:16px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.72)}.stat b{display:block;font-size:30px;line-height:1.05;margin-top:4px}
+    .mini-list{display:grid;gap:10px;margin-top:16px}.mini{padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.7);display:flex;justify-content:space-between;gap:10px;align-items:center}.mini strong{font-size:16px}.mini span{color:var(--muted);font-size:13px}
+    .section{padding:18px 0 28px}.head{display:grid;gap:8px;margin-bottom:18px}.dashboard{display:grid;grid-template-columns:300px minmax(0,1fr) 350px;gap:14px;align-items:start}.panel,.listbox{padding:18px}.mapbox{padding:18px}.block{padding:14px 0;border-bottom:1px solid var(--line)}.block:last-child{border-bottom:0;padding-bottom:0}.block:first-child{padding-top:0}
+    input,select{width:100%;margin-top:10px;min-height:48px;border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:#fff;color:var(--ink)}input:focus,select:focus{outline:2px solid rgba(12,140,135,.22);border-color:rgba(12,140,135,.42)}
+    .row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.reset{border:0;background:none;color:var(--sky);font-weight:700;padding:0;cursor:pointer}.chips,.nhoods,.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chips button,.nhoods button,.pill{border:1px solid var(--line);background:rgba(255,255,255,.88);color:var(--ink);padding:10px 12px;border-radius:999px;cursor:pointer}.chips .on,.nhoods .on{background:linear-gradient(135deg,var(--ink),var(--sky));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(13,41,64,.14)}
+    .legend{display:grid;gap:10px}.legend div{display:flex;gap:10px;align-items:center;color:var(--muted)}.dot{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+    .map-head,.list-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}.map-note{margin:0;color:var(--muted);font-size:13px}.map{height:650px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}.leaflet-container{font-family:"Manrope",sans-serif;background:#dbeaf0}.leaflet-popup-content-wrapper{border-radius:16px}.leaflet-popup-content{margin:12px 14px}
+    .cards{display:grid;gap:10px}.card button{width:100%;text-align:left;border:1px solid var(--line);background:rgba(255,255,255,.8);border-radius:20px;padding:16px;cursor:pointer}.card .active{background:#fff;border-color:rgba(13,41,64,.22);box-shadow:0 14px 24px rgba(13,41,64,.1)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.pill{font-size:12px;font-weight:700;padding:8px 10px}.place{margin:8px 0 0;color:var(--muted);font-size:14px}.summary{margin:10px 0 0;font-size:14px}.empty{padding:20px 4px 0}
+    .detail{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;margin-top:14px}.media{min-height:340px;background:linear-gradient(160deg,var(--ink),var(--sky));display:grid;place-items:center}.media img{width:100%;height:100%;object-fit:cover}.fallback{padding:26px;color:rgba(255,255,255,.88);text-align:center}.body{padding:24px;display:grid;gap:14px}.meta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.meta-card{padding:14px;border-radius:18px;background:rgba(13,41,64,.05)}.meta-card b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}.actions{display:flex;flex-wrap:wrap;gap:10px}.ghost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:12px 16px;border-radius:999px;background:rgba(13,41,64,.06);color:var(--ink);font-weight:700;border:1px solid rgba(13,41,64,.08)}
+    .insights{display:grid;grid-template-columns:1fr 1fr;gap:14px}.insight{padding:20px}.bars{display:grid;gap:12px;margin-top:12px}.bar-top{display:flex;justify-content:space-between;gap:10px;font-size:14px}.track{height:10px;border-radius:999px;background:rgba(13,41,64,.08);overflow:hidden}.fill{height:100%;border-radius:inherit}
+    .sources{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.source{padding:20px;text-decoration:none}.source p{margin-bottom:0}
+    .hide{display:none}.muted{color:var(--muted)}@media (max-width:1180px){.hero-grid,.dashboard,.detail,.insights,.sources{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.map{height:480px}}@media (max-width:680px){.top .wrap{flex-wrap:wrap}.cta{width:100%}.hero-copy,.hero-side,.panel,.mapbox,.listbox,.body,.insight,.source{padding-left:16px;padding-right:16px}.stats,.meta-grid{grid-template-columns:1fr}.map{height:400px}h1{max-width:none;font-size:clamp(38px,14vw,58px)}}
+  </style>
 </head>
-<body data-language="en">
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-row">
-        <a class="brand" href="#top" aria-label="David Suarez home">
-          <span class="brand-mark">DS</span>
-          <span class="brand-copy">
-            <strong>David Suarez</strong>
-            <span>
-              <span data-lang="en">Miami Beach, on the record</span>
-              <span data-lang="es">Miami Beach, en el registro</span>
-            </span>
-          </span>
-        </a>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <span class="mark">MB</span>
+        <span><b>Miami Beach Active Projects</b><span>Live city data, cleaner interface.</span></span>
+      </a>
+      <a class="cta" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a>
+    </div>
+  </header>
 
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="panel hero-copy">
+          <p class="eyebrow">Interactive civic tracker</p>
+          <h1>All current Miami Beach projects, without the clutter.</h1>
+          <p class="lede">This version rebuilds the city’s active-project map into a faster experience with better filters, clearer cards, a synced detail view, and direct links back to official project pages.</p>
+          <div class="stats" id="stats"></div>
+        </div>
+        <aside class="panel hero-side">
+          <p class="eyebrow">Live source</p>
+          <h3>Data loads directly from the city project feed.</h3>
+          <p class="subtle">The map, counts, and cards below are generated from Miami Beach’s current active-project marker data, not a frozen screenshot or manual spreadsheet.</p>
+          <div class="mini-list" id="mini-list"></div>
+        </aside>
+      </div>
+    </section>
 
-        <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a href="#about">
-            <span data-lang="en">Profile</span>
-            <span data-lang="es">Perfil</span>
-          </a>
-          <a href="#work">
-            <span data-lang="en">Current Work</span>
-            <span data-lang="es">Trabajo Actual</span>
-          </a>
-          <a href="#record">
-            <span data-lang="en">Record</span>
-            <span data-lang="es">Trayectoria</span>
-          </a>
-          <a href="#news">
-            <span data-lang="en">Updates</span>
-            <span data-lang="es">Actualizaciones</span>
-          </a>
-          <a href="#connect">
-            <span data-lang="en">Connect</span>
-            <span data-lang="es">Contacto</span>
-          </a>
-        </nav>
+    <section class="section" id="explore">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Explorer</p>
+          <h2>Filter by type, neighborhood, or project name.</h2>
+          <p class="subtle">Pick a marker or a card to open the full detail panel.</p>
+        </div>
 
-        <div class="nav-actions">
-          <button class="lang-toggle" type="button" aria-label="Toggle language">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm6.93 9h-3.08a15.723 15.723 0 0 0-1.18-5A8.037 8.037 0 0 1 18.93 11ZM12 4.04c.86 1.07 1.94 3.38 2.38 6.96H9.62C10.06 7.42 11.14 5.11 12 4.04ZM4.07 13h3.08a15.723 15.723 0 0 0 1.18 5A8.037 8.037 0 0 1 4.07 13Zm3.08-2H4.07a8.037 8.037 0 0 1 4.26-5 15.723 15.723 0 0 0-1.18 5ZM12 19.96c-.86-1.07-1.94-3.38-2.38-6.96h4.76c-.44 3.58-1.52 5.89-2.38 6.96ZM14.6 13a17.506 17.506 0 0 1-.82 4h-3.56a17.506 17.506 0 0 1-.82-4Zm-4.38-2a17.506 17.506 0 0 1 .82-4h3.56a17.506 17.506 0 0 1 .82 4ZM15.67 18a15.723 15.723 0 0 0 1.18-5h3.08a8.037 8.037 0 0 1-4.26 5Z"/>
-            </svg>
-            <span class="lang-label">ES</span>
-          </button>
-          <a class="button button-primary" href="https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/" target="_blank" rel="noreferrer">
-            <span data-lang="en">Official Office Page</span>
-            <span data-lang="es">Página oficial</span>
+        <div class="dashboard">
+          <aside class="panel">
+            <div class="block">
+              <label class="meta" for="search">Search projects</label>
+              <input id="search" type="search" placeholder="Project name or keyword">
+            </div>
+            <div class="block">
+              <div class="row">
+                <span class="meta">Project type</span>
+                <button class="reset" id="reset" type="button">Reset</button>
+              </div>
+              <div class="chips" id="cat-filters"></div>
+            </div>
+            <div class="block">
+              <span class="meta">Neighborhood</span>
+              <div class="nhoods" id="hood-filters"></div>
+            </div>
+            <div class="block">
+              <label class="meta" for="sort">Sort</label>
+              <select id="sort">
+                <option value="az">Alphabetical</option>
+                <option value="ns">North to south</option>
+                <option value="sn">South to north</option>
+              </select>
+            </div>
+            <div class="block">
+              <span class="meta">Legend</span>
+              <div class="legend" id="legend"></div>
+            </div>
+          </aside>
+
+          <section class="mapbox">
+            <div class="map-head">
+              <div>
+                <p class="meta">Map</p>
+                <h3 id="summary">Loading projects...</h3>
+              </div>
+              <p class="map-note" id="status">Connecting to city feed</p>
+            </div>
+            <div id="map" class="map"></div>
+          </section>
+
+          <section class="listbox">
+            <div class="list-head">
+              <div>
+                <p class="meta">Project list</p>
+                <h3 id="count">0 projects</h3>
+              </div>
+            </div>
+            <div class="cards" id="cards"></div>
+            <div class="empty hide" id="empty">
+              <h3>No matching projects</h3>
+              <p>Clear a filter or broaden the search.</p>
+            </div>
+          </section>
+        </div>
+
+        <section class="detail" id="detail"></section>
+      </div>
+    </section>
+
+    <section class="section" id="insights">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Insights</p>
+          <h2>Where the current project load is concentrated.</h2>
+        </div>
+        <div class="insights">
+          <article class="insight">
+            <p class="meta">By neighborhood</p>
+            <div class="bars" id="hood-bars"></div>
+          </article>
+          <article class="insight">
+            <p class="meta">By project type</p>
+            <div class="bars" id="cat-bars"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Sources</p>
+          <h2>Keep the redesign tied to the original public record.</h2>
+        </div>
+        <div class="sources">
+          <a class="source" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">
+            <p class="meta">Official map</p>
+            <h3>Open the city’s active-project page</h3>
+            <p>Use the original map and project pages as the source of truth.</p>
+          </a>
+          <a class="source" href="https://www.miamibeachfl.gov/city-hall/cip/" target="_blank" rel="noreferrer">
+            <p class="meta">CIP hub</p>
+            <h3>View the broader capital projects section</h3>
+            <p>This redesign can expand into the rest of the city’s project ecosystem later.</p>
+          </a>
+          <a class="source" href="https://www.miamibeachfl.gov/wp-json/wpgmza/v1/markers?map_id=11" target="_blank" rel="noreferrer">
+            <p class="meta">Live feed</p>
+            <h3>Inspect the underlying marker endpoint</h3>
+            <p>The published site reads from this source live.</p>
           </a>
         </div>
       </div>
-    </header>
+    </section>
+  </main>
 
-    <main id="top">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy" data-reveal>
-            <p class="eyebrow">
-              <span data-lang="en">Miami Beach commissioner</span>
-              <span data-lang="es">Comisionado de Miami Beach</span>
-            </p>
-            <h1>
-              <span data-lang="en">David Suarez’s Miami Beach work.</span>
-              <span data-lang="es">El trabajo de David Suarez en Miami Beach.</span>
-            </h1>
-            <p class="hero-text">
-              <span data-lang="en">Legislation, committee work, town halls, achievements, and official updates.</span>
-              <span data-lang="es">Legislación, trabajo en comités, cabildos, logros y actualizaciones oficiales.</span>
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#work">
-                <span data-lang="en">Browse Current Work</span>
-                <span data-lang="es">Ver Trabajo Actual</span>
-              </a>
-              <a class="button button-secondary" href="#news">
-                <span data-lang="en">See Public Updates</span>
-                <span data-lang="es">Ver Actualizaciones</span>
-              </a>
-              <a class="button button-tertiary" href="#connect">
-                <span data-lang="en">Office & Social Links</span>
-                <span data-lang="es">Oficina y Redes</span>
-              </a>
-            </div>
-
-            <div class="hero-notes">
-              <article class="hero-note">
-                <span class="note-label">Group 5</span>
-                <strong>Miami Beach Commissioner</strong>
-              </article>
-              <article class="hero-note">
-                <span class="note-label">
-                  <span data-lang="en">Elected</span>
-                  <span data-lang="es">Electo</span>
-                </span>
-                <strong>November 7, 2023</strong>
-              </article>
-              <article class="hero-note">
-                <span class="note-label">
-                  <span data-lang="en">Focus</span>
-                  <span data-lang="es">Enfoque</span>
-                </span>
-                <strong>
-                  <span data-lang="en">Neighborhoods, quality of life, and accountability</span>
-                  <span data-lang="es">Vecindarios, calidad de vida y rendición de cuentas</span>
-                </strong>
-              </article>
-            </div>
-          </div>
-
-          <div class="hero-visual" data-reveal>
-            <div class="portrait-frame">
-              <div class="portrait-badge">
-                <span data-lang="en">South Florida, on the record</span>
-                <span data-lang="es">Sur de Florida, en el registro</span>
-              </div>
-              <img src="https://www.miamibeachfl.gov/wp-content/uploads/2023/07/DavidSuarez.png" alt="Portrait of David Suarez">
-            </div>
-
-            <div class="floating-card floating-card-top">
-              <p>
-                <span data-lang="en">Current leadership</span>
-                <span data-lang="es">Liderazgo actual</span>
-              </p>
-              <strong>
-                <span data-lang="en">Chair, Land Use and Sustainability Committee</span>
-                <span data-lang="es">Presidente, Comité de Uso de Suelo y Sostenibilidad</span>
-              </strong>
-            </div>
-
-            <div class="floating-card floating-card-bottom">
-              <p>
-                <span data-lang="en">Committee role</span>
-                <span data-lang="es">Rol en comité</span>
-              </p>
-              <strong>
-                <span data-lang="en">Vice chair, Finance and Economic Resiliency</span>
-                <span data-lang="es">Vicepresidente, Finanzas y Resiliencia Económica</span>
-              </strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container about-grid">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">
-              <span data-lang="en">Profile</span>
-              <span data-lang="es">Perfil</span>
-            </p>
-            <h2>
-              <span data-lang="en">Engineer, business owner, father, and Miami Beach commissioner.</span>
-              <span data-lang="es">Ingeniero, empresario, padre y comisionado de Miami Beach.</span>
-            </h2>
-          </div>
-
-          <article class="story-panel panel-large" data-reveal>
-            <p>
-              <span data-lang="en">David Suarez is a South Florida native with Cuban and Israeli roots, a University of Florida mechanical engineering graduate, a small business owner, and a father raising his family in Miami Beach.</span>
-              <span data-lang="es">David Suarez es nativo del sur de Florida, de raíces cubanas e israelíes, graduado en ingeniería mecánica de la Universidad de Florida, pequeño empresario y padre que cría a su familia en Miami Beach.</span>
-            </p>
-            <p>
-              <span data-lang="en">His public work centers on neighborhood quality of life, land use, waterways, and city accountability.</span>
-              <span data-lang="es">Su trabajo público se centra en la calidad de vida vecinal, el uso de suelo, las vías acuáticas y la rendición de cuentas de la ciudad.</span>
-            </p>
-          </article>
-
-          <div class="about-cards">
-            <article class="story-card" data-reveal>
-              <span class="panel-kicker">
-                <span data-lang="en">Office</span>
-                <span data-lang="es">Cargo</span>
-              </span>
-              <h3>Miami Beach Commissioner, Group 5</h3>
-              <p>
-                <span data-lang="en">Elected on November 7, 2023.</span>
-                <span data-lang="es">Electo el 7 de noviembre de 2023.</span>
-              </p>
-            </article>
-
-            <article class="story-card" data-reveal>
-              <span class="panel-kicker">
-                <span data-lang="en">Committees</span>
-                <span data-lang="es">Comités</span>
-              </span>
-              <h3>
-                <span data-lang="en">Land use and finance leadership</span>
-                <span data-lang="es">Liderazgo en uso de suelo y finanzas</span>
-              </h3>
-              <p>
-                <span data-lang="en">Chair of Land Use and Sustainability and vice chair of Finance and Economic Resiliency.</span>
-                <span data-lang="es">Presidente de Uso de Suelo y Sostenibilidad y vicepresidente de Finanzas y Resiliencia Económica.</span>
-              </p>
-            </article>
-
-            <article class="story-card" data-reveal>
-              <span class="panel-kicker">
-                <span data-lang="en">Focus</span>
-                <span data-lang="es">Enfoque</span>
-              </span>
-              <h3>
-                <span data-lang="en">Issues residents actually track</span>
-                <span data-lang="es">Temas que los residentes sí siguen</span>
-              </h3>
-              <p>
-                <span data-lang="en">Neighborhoods, parking, waterways, town halls, and committee work.</span>
-                <span data-lang="es">Vecindarios, estacionamiento, vías acuáticas, cabildos y trabajo en comités.</span>
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="work" class="section section-tinted">
-        <div class="container">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">
-              <span data-lang="en">Interactive Work Explorer</span>
-              <span data-lang="es">Explorador Interactivo</span>
-            </p>
-            <h2>
-              <span data-lang="en">Current work, recent wins, and public updates.</span>
-              <span data-lang="es">Trabajo actual, logros recientes y actualizaciones públicas.</span>
-            </h2>
-            <p class="section-intro">
-              <span data-lang="en">Use the tabs to move between legislation, achievements, town halls, and recent coverage.</span>
-              <span data-lang="es">Usa las pestañas para pasar entre legislación, logros, cabildos y cobertura reciente.</span>
-            </p>
-          </div>
-
-          <div class="explorer">
-            <div class="explorer-tabs" role="tablist" aria-label="Current work tabs">
-              <button class="explorer-tab is-active" type="button" data-panel="legislation" aria-selected="true">
-                <span data-lang="en">Legislation</span>
-                <span data-lang="es">Legislación</span>
-              </button>
-              <button class="explorer-tab" type="button" data-panel="achievements" aria-selected="false">
-                <span data-lang="en">Achievements</span>
-                <span data-lang="es">Logros</span>
-              </button>
-              <button class="explorer-tab" type="button" data-panel="townhalls" aria-selected="false">
-                <span data-lang="en">Town Halls</span>
-                <span data-lang="es">Cabildos</span>
-              </button>
-              <button class="explorer-tab" type="button" data-panel="press" aria-selected="false">
-                <span data-lang="en">Press & News</span>
-                <span data-lang="es">Prensa y Noticias</span>
-              </button>
-            </div>
-
-            <div class="explorer-panels">
-              <section id="panel-legislation" class="explorer-panel is-active" data-panel="legislation" data-reveal>
-                <div class="panel-intro">
-                  <span class="agenda-tag">
-                    <span data-lang="en">Selected current and recent legislative items</span>
-                    <span data-lang="es">Asuntos legislativos seleccionados</span>
-                  </span>
-                  <h3>
-                    <span data-lang="en">A short list of current items with source links.</span>
-                    <span data-lang="es">Una lista breve de asuntos actuales con enlaces a las fuentes.</span>
-                  </h3>
-                </div>
-
-                <details class="record-item" open>
-                  <summary>
-                    <span class="record-status">Sponsor</span>
-                    <span class="record-title">Remove Eco-Tours Exception to Marina Hours of Operation</span>
-                  </summary>
-                  <div class="record-body">
-                    <p>
-                      <span data-lang="en">A 2025 ordinance item sponsored by Commissioner Suarez to modify exceptions to prohibited vessel departure hours at publicly owned marinas and marine facilities, tied to quality-of-life complaints around charter activity.</span>
-                      <span data-lang="es">Un asunto de ordenanza de 2025 patrocinado por el comisionado Suarez para modificar excepciones a los horarios prohibidos de salida de embarcaciones en marinas e instalaciones marinas públicas, vinculado a quejas de calidad de vida sobre la actividad de charters.</span>
-                    </p>
-                    <a href="https://docmgmt.miamibeachfl.gov/WebLink/ElectronicFile.aspx?dbid=0&docid=299211&repo=CityClerk" target="_blank" rel="noreferrer">Source document</a>
-                  </div>
-                </details>
-
-                <details class="record-item">
-                  <summary>
-                    <span class="record-status">Presented</span>
-                    <span class="record-title">Anchoring Limitations Bill (HB 481)</span>
-                  </summary>
-                  <div class="record-body">
-                    <p>
-                      <span data-lang="en">A policy deck presented by Commissioner Suarez framing derelict and abandoned boats as a major waterways issue, with Miami Beach examples and support for statewide anchoring limitations.</span>
-                      <span data-lang="es">Una presentación liderada por el comisionado Suarez que plantea las embarcaciones abandonadas como un problema importante para las vías acuáticas, con ejemplos de Miami Beach y apoyo a limitaciones estatales de fondeo.</span>
-                    </p>
-                    <a href="https://docmgmt.miamibeachfl.gov/WebLink/edoc/309503/R5%20I%20Anchoring%20Legislation.pdf?dbid=0&repo=CityClerk" target="_blank" rel="noreferrer">Source document</a>
-                  </div>
-                </details>
-
-                <details class="record-item">
-                  <summary>
-                    <span class="record-status">Co-sponsor</span>
-                    <span class="record-title">Repeal Decriminalization of Certain Marijuana Related Offenses</span>
-                  </summary>
-                  <div class="record-body">
-                    <p>
-                      <span data-lang="en">A 2024 ordinance item sponsored by Commissioner Alex Fernandez and co-sponsored by Mayor Steven Meiner and Commissioner Suarez to repeal the city’s civil citation option for possession of small amounts of cannabis and drug paraphernalia.</span>
-                      <span data-lang="es">Un asunto de ordenanza de 2024 patrocinado por el comisionado Alex Fernandez y copatrocinado por el alcalde Steven Meiner y el comisionado Suarez para eliminar la opción de citación civil de la ciudad por posesión de pequeñas cantidades de cannabis y parafernalia.</span>
-                    </p>
-                    <a href="https://docmgmt.miamibeachfl.gov/WebLink/edoc/294032/BIE%20-%20Repeal%20Decriminalization%20of%20Marijuana%20Related%20Offenses.%20%28292024%29.pdf?dbid=0&repo=CityClerk" target="_blank" rel="noreferrer">Source document</a>
-                  </div>
-                </details>
-              </section>
-
-              <section id="panel-achievements" class="explorer-panel" data-panel="achievements" hidden>
-                <div class="panel-intro">
-                  <span class="agenda-tag">
-                    <span data-lang="en">Verified record</span>
-                    <span data-lang="es">Trayectoria verificada</span>
-                  </span>
-                  <h3>
-                    <span data-lang="en">Selected items with clear public documentation.</span>
-                    <span data-lang="es">Asuntos seleccionados con documentación pública clara.</span>
-                  </h3>
-                </div>
-
-                <div class="achievement-grid">
-                  <article class="achievement-card">
-                    <span class="panel-kicker">
-                      <span data-lang="en">Neighborhood preservation</span>
-                      <span data-lang="es">Preservación vecinal</span>
-                    </span>
-                    <h4>
-                      <span data-lang="en">Short-term rental prohibition in his neighborhood</span>
-                      <span data-lang="es">Prohibición de alquileres a corto plazo en su vecindario</span>
-                    </h4>
-                    <p>
-                      <span data-lang="en">The official city bio credits him with championing legislation that prohibited short-term rentals in his neighborhood to preserve residential character.</span>
-                      <span data-lang="es">La biografía oficial de la ciudad le atribuye impulsar legislación que prohibió los alquileres a corto plazo en su vecindario para preservar el carácter residencial.</span>
-                    </p>
-                    <a href="https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/" target="_blank" rel="noreferrer">Official bio</a>
-                  </article>
-
-                  <article class="achievement-card">
-                    <span class="panel-kicker">
-                      <span data-lang="en">Quality of life</span>
-                      <span data-lang="es">Calidad de vida</span>
-                    </span>
-                    <h4>
-                      <span data-lang="en">Closed a 70-year valet placard loophole</span>
-                      <span data-lang="es">Cerró una laguna de 70 años sobre valet y placards</span>
-                    </h4>
-                    <p>
-                      <span data-lang="en">The city bio also credits him with addressing a 70-year loophole that allowed valet parking vendors to abuse disabled placards and park in residential areas citywide.</span>
-                      <span data-lang="es">La biografía oficial también le atribuye cerrar una laguna de 70 años que permitía a operadores de valet abusar de placards para discapacitados y estacionar en áreas residenciales en toda la ciudad.</span>
-                    </p>
-                    <a href="https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/" target="_blank" rel="noreferrer">Official bio</a>
-                  </article>
-
-                  <article class="achievement-card">
-                    <span class="panel-kicker">
-                      <span data-lang="en">Environmental stewardship</span>
-                      <span data-lang="es">Protección ambiental</span>
-                    </span>
-                    <h4>
-                      <span data-lang="en">Balloon ban in parks, beaches, and marinas</span>
-                      <span data-lang="es">Prohibición de globos en parques, playas y marinas</span>
-                    </h4>
-                    <p>
-                      <span data-lang="en">A February 1, 2024 city release identifies Commissioner Suarez as the sponsor of the ordinance banning party balloons in public marinas, parks, marine facilities, and city beaches.</span>
-                      <span data-lang="es">Un comunicado municipal del 1 de febrero de 2024 identifica al comisionado Suarez como patrocinador de la ordenanza que prohíbe globos de fiesta en marinas públicas, parques, instalaciones marinas y playas de la ciudad.</span>
-                    </p>
-                    <a href="https://www.miamibeachfl.gov/miami-beach-prohibits-party-balloons-in-public-marinas-parks-and-beaches/" target="_blank" rel="noreferrer">Press release</a>
-                  </article>
-
-                  <article class="achievement-card">
-                    <span class="panel-kicker">
-                      <span data-lang="en">Animal welfare</span>
-                      <span data-lang="es">Bienestar animal</span>
-                    </span>
-                    <h4>
-                      <span data-lang="en">Crawlspace humane-removal ordinance passed unanimously</span>
-                      <span data-lang="es">Ordenanza de retiro humanitario en entrepisos aprobada por unanimidad</span>
-                    </h4>
-                    <p>
-                      <span data-lang="en">An Animal Welfare Committee agenda update states the crawlspace ordinance passed unanimously on December 11, 2024, requiring humane removal before closing crawlspaces or tenting structures.</span>
-                      <span data-lang="es">Una actualización del Comité de Bienestar Animal señala que la ordenanza sobre entrepisos fue aprobada por unanimidad el 11 de diciembre de 2024, exigiendo retiro humanitario antes de cerrar espacios o fumigar estructuras.</span>
-                    </p>
-                    <a href="https://docmgmt.miamibeachfl.gov/WebLink/edoc/301750/12.17%20AWC%20Agenda.pdf?dbid=0&repo=CityClerk" target="_blank" rel="noreferrer">Committee agenda</a>
-                  </article>
-                </div>
-              </section>
-
-              <section id="panel-townhalls" class="explorer-panel" data-panel="townhalls" hidden>
-                <div class="panel-intro">
-                  <span class="agenda-tag">
-                    <span data-lang="en">Resident engagement</span>
-                    <span data-lang="es">Participación vecinal</span>
-                  </span>
-                  <h3>
-                    <span data-lang="en">Recent meetings focused on neighborhood issues.</span>
-                    <span data-lang="es">Reuniones recientes centradas en temas vecinales.</span>
-                  </h3>
-                </div>
-
-                <div class="news-grid">
-                  <article class="news-card">
-                    <p class="news-date">January 27, 2026</p>
-                    <h4>Byron Carlyle Town Hall</h4>
-                    <p>
-                      <span data-lang="en">A public discussion on preserving, reimagining, or redeveloping the Byron Carlyle site and its role in North Beach’s cultural future.</span>
-                      <span data-lang="es">Una discusión pública sobre preservar, reimaginar o reconstruir el sitio Byron Carlyle y su papel en el futuro cultural de North Beach.</span>
-                    </p>
-                    <a href="https://events.miamibeachfl.gov/event/byron-carlyle-town-hall-with-commissioner-david-suarez/" target="_blank" rel="noreferrer">Event page</a>
-                  </article>
-
-                  <article class="news-card">
-                    <p class="news-date">February 2, 2026</p>
-                    <h4>Condominium Town Hall</h4>
-                    <p>
-                      <span data-lang="en">Focused on 40-year recertifications, SIRS requirements, and what city and other governments can do to help condominium residents.</span>
-                      <span data-lang="es">Enfocado en recertificaciones de 40 años, requisitos SIRS y lo que la ciudad y otros gobiernos pueden hacer para ayudar a residentes de condominios.</span>
-                    </p>
-                    <a href="https://events.miamibeachfl.gov/event/condominium-town-hall-with-commissioner-david-suarez/" target="_blank" rel="noreferrer">Event page</a>
-                  </article>
-
-                  <article class="news-card">
-                    <p class="news-date">April 8, 2026</p>
-                    <h4>North Beach Parking Town Hall</h4>
-                    <p>
-                      <span data-lang="en">Centered on residential parking enforcement and development impacts tied to Ocean Terrace, 72 Street, the Byron Carlyle site, and new towers.</span>
-                      <span data-lang="es">Centrado en la fiscalización del estacionamiento residencial y los impactos del desarrollo vinculados a Ocean Terrace, la calle 72, el sitio Byron Carlyle y nuevas torres.</span>
-                    </p>
-                    <a href="https://events.miamibeachfl.gov/event/north-beach-parking-town-hall-with-commissioner-suarez/" target="_blank" rel="noreferrer">Event page</a>
-                  </article>
-                </div>
-              </section>
-
-              <section id="panel-press" class="explorer-panel" data-panel="press" hidden>
-                <div class="panel-intro">
-                  <span class="agenda-tag">
-                    <span data-lang="en">Recent positive coverage and updates</span>
-                    <span data-lang="es">Cobertura y actualizaciones positivas</span>
-                  </span>
-                  <h3>
-                    <span data-lang="en">Recent official releases and public-facing updates.</span>
-                    <span data-lang="es">Comunicados oficiales y actualizaciones públicas recientes.</span>
-                  </h3>
-                </div>
-
-                <div class="news-grid">
-                  <article class="news-card">
-                    <p class="news-date">September 22, 2025</p>
-                    <h4>Miami Beach Bans Plastic and Metallic Party Decorations</h4>
-                    <p>
-                      <span data-lang="en">The city’s release quotes Commissioner Suarez in support of extending the public-space balloon ban to plastic and metallic decorations to reduce microplastic pollution.</span>
-                      <span data-lang="es">El comunicado de la ciudad cita al comisionado Suarez apoyando la extensión de la prohibición de globos en espacios públicos a decoraciones plásticas y metálicas para reducir la contaminación por microplásticos.</span>
-                    </p>
-                    <a href="https://www.miamibeachfl.gov/miami-beach-bans-plastic-and-metallic-party-decorations/" target="_blank" rel="noreferrer">Press release</a>
-                  </article>
-
-                  <article class="news-card">
-                    <p class="news-date">February 1, 2024</p>
-                    <h4>Miami Beach Prohibits Party Balloons in Public Marinas, Parks and Beaches</h4>
-                    <p>
-                      <span data-lang="en">The public release identifies Commissioner Suarez as sponsor of the ordinance and frames the move around waterway protection and marine life.</span>
-                      <span data-lang="es">El comunicado público identifica al comisionado Suarez como patrocinador de la ordenanza y enmarca la medida en la protección de vías acuáticas y vida marina.</span>
-                    </p>
-                    <a href="https://www.miamibeachfl.gov/miami-beach-prohibits-party-balloons-in-public-marinas-parks-and-beaches/" target="_blank" rel="noreferrer">Press release</a>
-                  </article>
-
-                  <article class="news-card">
-                    <p class="news-date">Current committee roles</p>
-                    <h4>
-                      <span data-lang="en">Land use and finance committee leadership</span>
-                      <span data-lang="es">Liderazgo en comités de uso de suelo y finanzas</span>
-                    </h4>
-                    <p>
-                      <span data-lang="en">Current city pages list him as chair of Land Use and Sustainability and vice-chair of Finance and Economic Resiliency, giving the site a strong present-tense institutional profile.</span>
-                      <span data-lang="es">Las páginas actuales de la ciudad lo muestran como presidente de Uso de Suelo y Sostenibilidad y vicepresidente de Finanzas y Resiliencia Económica, dándole al sitio un perfil institucional fuerte en tiempo presente.</span>
-                    </p>
-                    <a href="https://www.miamibeachfl.gov/city-hall/city-clerk/boards-and-committees/sustainability-resiliency-committee/" target="_blank" rel="noreferrer">Land Use Committee</a>
-                  </article>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="record" class="section">
-        <div class="container">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">
-              <span data-lang="en">At a glance</span>
-              <span data-lang="es">En resumen</span>
-            </p>
-            <h2>
-              <span data-lang="en">Quick facts.</span>
-              <span data-lang="es">Resumen rápido.</span>
-            </h2>
-          </div>
-
-          <div class="record-layout">
-            <div class="principles-grid">
-              <article class="principle-card" data-reveal>
-                <span class="panel-kicker">
-                  <span data-lang="en">Neighborhoods</span>
-                  <span data-lang="es">Vecindarios</span>
-                </span>
-                <p>
-                  <span data-lang="en">Parking, residential character, and day-to-day quality of life show up throughout the record.</span>
-                  <span data-lang="es">El estacionamiento, el carácter residencial y la calidad de vida diaria aparecen en toda la trayectoria.</span>
-                </p>
-              </article>
-
-              <article class="principle-card" data-reveal>
-                <span class="panel-kicker">
-                  <span data-lang="en">Environment</span>
-                  <span data-lang="es">Ambiente</span>
-                </span>
-                <p>
-                  <span data-lang="en">Waterways, balloons, plastics, and marine impacts are recurring themes in the public record.</span>
-                  <span data-lang="es">Las vías acuáticas, los globos, los plásticos y los impactos marinos son temas recurrentes en el expediente público.</span>
-                </p>
-              </article>
-
-              <article class="principle-card" data-reveal>
-                <span class="panel-kicker">
-                  <span data-lang="en">Public meetings</span>
-                  <span data-lang="es">Reuniones públicas</span>
-                </span>
-                <p>
-                  <span data-lang="en">Town halls on condos, parking, and Byron Carlyle show where he has been engaging residents.</span>
-                  <span data-lang="es">Los cabildos sobre condominios, estacionamiento y Byron Carlyle muestran dónde ha estado involucrando a los residentes.</span>
-                </p>
-              </article>
-
-              <article class="principle-card" data-reveal>
-                <span class="panel-kicker">
-                  <span data-lang="en">Committee roles</span>
-                  <span data-lang="es">Comités</span>
-                </span>
-                <p>
-                  <span data-lang="en">Land use and finance roles give the site a clear picture of where he is working now.</span>
-                  <span data-lang="es">Los roles en uso de suelo y finanzas le dan al sitio una imagen clara de dónde está trabajando ahora.</span>
-                </p>
-              </article>
-            </div>
-
-            <aside class="record-quote" data-reveal>
-              <p class="eyebrow">
-                <span data-lang="en">Why this site</span>
-                <span data-lang="es">Por qué este sitio</span>
-              </p>
-              <blockquote>
-                <span data-lang="en">Current work. Public documents. Direct contact.</span>
-                <span data-lang="es">Trabajo actual. Documentos públicos. Contacto directo.</span>
-              </blockquote>
-              <p class="quote-note">
-                <span data-lang="en">Residents should be able to understand the work without digging through city archives first.</span>
-                <span data-lang="es">Los residentes deben poder entender el trabajo sin tener que buscar primero en archivos municipales.</span>
-              </p>
-            </aside>
-          </div>
-
-          <div class="impact-band" data-reveal>
-            <article>
-              <strong class="count-up" data-target="70">0</strong>
-              <span>
-                <span data-lang="en">years in the valet loophole</span>
-                <span data-lang="es">años de la laguna sobre valet</span>
-              </span>
-            </article>
-            <article>
-              <strong class="count-up" data-target="2">0</strong>
-              <span>
-                <span data-lang="en">current committee leadership posts</span>
-                <span data-lang="es">cargos actuales de liderazgo en comités</span>
-              </span>
-            </article>
-            <article>
-              <strong class="count-up" data-target="3">0</strong>
-              <span>
-                <span data-lang="en">recent town halls spotlighted</span>
-                <span data-lang="es">cabildos recientes destacados</span>
-              </span>
-            </article>
-            <article>
-              <strong class="count-up" data-target="2023">0</strong>
-              <span>
-                <span data-lang="en">election year</span>
-                <span data-lang="es">año de elección</span>
-              </span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="news" class="section section-band">
-        <div class="container">
-          <div class="section-heading section-heading-light" data-reveal>
-            <p class="eyebrow">
-              <span data-lang="en">Updates</span>
-              <span data-lang="es">Actualizaciones</span>
-            </p>
-            <h2>
-              <span data-lang="en">Quick links to official pages and current activity.</span>
-              <span data-lang="es">Enlaces rápidos a páginas oficiales y actividad actual.</span>
-            </h2>
-          </div>
-
-          <div class="updates-grid">
-            <a class="update-link" data-reveal href="https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/" target="_blank" rel="noreferrer">
-              <span class="panel-kicker">
-                <span data-lang="en">Official profile</span>
-                <span data-lang="es">Perfil oficial</span>
-              </span>
-              <h3>
-                <span data-lang="en">Read the city bio and office contact details</span>
-                <span data-lang="es">Leer la biografía y los datos de contacto oficiales</span>
-              </h3>
-            </a>
-
-            <a class="update-link" data-reveal href="https://www.miamibeachfl.gov/city-hall/city-clerk/boards-and-committees/sustainability-resiliency-committee/" target="_blank" rel="noreferrer">
-              <span class="panel-kicker">
-                <span data-lang="en">Committee work</span>
-                <span data-lang="es">Trabajo en comité</span>
-              </span>
-              <h3>
-                <span data-lang="en">Follow land-use and sustainability leadership</span>
-                <span data-lang="es">Seguir liderazgo en uso de suelo y sostenibilidad</span>
-              </h3>
-            </a>
-
-            <a class="update-link" data-reveal href="https://www.miamibeachfl.gov/city-hall/city-clerk/boards-and-committees/finance-and-economic-resiliency/" target="_blank" rel="noreferrer">
-              <span class="panel-kicker">
-                <span data-lang="en">Finance committee</span>
-                <span data-lang="es">Comité de finanzas</span>
-              </span>
-              <h3>
-                <span data-lang="en">Track current finance and resiliency committee activity</span>
-                <span data-lang="es">Seguir la actividad actual del comité de finanzas y resiliencia</span>
-              </h3>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="connect" class="section">
-        <div class="container contact-grid">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">
-              <span data-lang="en">Connect</span>
-              <span data-lang="es">Contacto</span>
-            </p>
-            <h2>
-              <span data-lang="en">Office contact and public channels.</span>
-              <span data-lang="es">Contacto oficial y canales públicos.</span>
-            </h2>
-          </div>
-
-          <article class="contact-panel" data-reveal>
-            <span class="panel-kicker">
-              <span data-lang="en">Office</span>
-              <span data-lang="es">Oficina</span>
-            </span>
-            <h3>
-              <span data-lang="en">Official office contact</span>
-              <span data-lang="es">Contacto oficial</span>
-            </h3>
-            <dl class="contact-list">
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:davidsuarez@miamibeachfl.gov">davidsuarez@miamibeachfl.gov</a></dd>
-              </div>
-              <div>
-                <dt>
-                  <span data-lang="en">Phone</span>
-                  <span data-lang="es">Teléfono</span>
-                </dt>
-                <dd><a href="tel:3056737107">305.673.7107</a></dd>
-              </div>
-              <div>
-                <dt>
-                  <span data-lang="en">Commission aide</span>
-                  <span data-lang="es">Asistente</span>
-                </dt>
-                <dd>Brandon Lloyd · 571.458.9959</dd>
-              </div>
-            </dl>
-          </article>
-
-          <article class="contact-panel" data-reveal>
-            <span class="panel-kicker">
-              <span data-lang="en">Public channels</span>
-              <span data-lang="es">Canales públicos</span>
-            </span>
-            <h3>
-              <span data-lang="en">Social and public-facing links</span>
-              <span data-lang="es">Redes y enlaces públicos</span>
-            </h3>
-            <div class="link-stack">
-              <a href="https://www.facebook.com/davidsuarezmb" target="_blank" rel="noreferrer">Facebook</a>
-              <a href="https://www.instagram.com/davidsuarezmb/" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/" target="_blank" rel="noreferrer">
-                <span data-lang="en">Official city page</span>
-                <span data-lang="es">Página oficial de la ciudad</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="contact-panel" data-reveal>
-            <span class="panel-kicker">
-              <span data-lang="en">Source trail</span>
-              <span data-lang="es">Fuentes</span>
-            </span>
-            <h3>
-              <span data-lang="en">Public documents behind this build</span>
-              <span data-lang="es">Documentos públicos detrás de esta versión</span>
-            </h3>
-            <p class="contact-note">
-              <span data-lang="en">Every featured item should point back to a city page, a public document, or an official event listing.</span>
-              <span data-lang="es">Cada asunto destacado debe apuntar a una página de la ciudad, un documento público o una lista oficial de eventos.</span>
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <p>
-          <span data-lang="en">Updated with public sources reviewed on June 2, 2026.</span>
-          <span data-lang="es">Actualizado con fuentes públicas revisadas el 2 de junio de 2026.</span>
-        </p>
-        <p>David Suarez - Miami Beach</p>
-      </div>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const CAT={1:["Environmental & Parks","#0c8c87"],2:["City Construction","#ef6b57"],3:["Neighborhood Improvement","#ff8b54"],4:["G.O. Bond Funded","#d3a441"],5:["Parking","#1e5a56"],6:["Other","#1d6fa3"],42:["Infrastructure","#0d2940"]};
+    const HOOD={7:"South Beach",8:"North Beach",9:"Mid Beach"};
+    const HOOD_ORDER=["South Beach","Mid Beach","North Beach"];
+    const CAT_ORDER=["Neighborhood Improvement","City Construction","Parking","Environmental & Parks","G.O. Bond Funded","Other","Infrastructure"];
+    const state={q:"",cats:new Set(),hoods:new Set(),sort:"az",selected:null,projects:[]};
+    const el=id=>document.getElementById(id),stats=el("stats"),mini=el("mini-list"),cards=el("cards"),detail=el("detail"),legend=el("legend"),summary=el("summary"),count=el("count"),empty=el("empty"),statusNode=el("status"),hoodBars=el("hood-bars"),catBars=el("cat-bars");
+    const map=L.map("map",{scrollWheelZoom:false}).setView([25.799,-80.133],12);L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{subdomains:"abcd",maxZoom:20,attribution:"&copy; OpenStreetMap &copy; CARTO"}).addTo(map);map.once("focus",()=>map.scrollWheelZoom.enable());
+    const markers=new Map();
+    ...
