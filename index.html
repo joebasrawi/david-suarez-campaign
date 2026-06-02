@@ -1,0 +1,1706 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Suarez | Campaign for Miami Beach</title>
+  <meta name="description" content="Campaign website concept for David Suarez with bilingual English and Spanish content, interactive agenda sections, donation calls to action, and modern campaign storytelling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #f4eee2;
+  --bg-soft: #fbf7ef;
+  --panel: rgba(255, 255, 255, 0.8);
+  --panel-strong: rgba(255, 255, 255, 0.92);
+  --ink: #132946;
+  --ink-soft: #4c6177;
+  --line: rgba(19, 41, 70, 0.12);
+  --teal: #0f8a8d;
+  --teal-deep: #0f5f68;
+  --navy: #16355d;
+  --coral: #ee8456;
+  --gold: #f1be62;
+  --shadow: 0 26px 64px rgba(21, 42, 68, 0.14);
+  --radius-lg: 34px;
+  --radius-md: 24px;
+  --radius-sm: 16px;
+  --container: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 138, 141, 0.16), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(241, 190, 98, 0.16), transparent 25%),
+    linear-gradient(180deg, #f9f5ed 0%, #f3ebdc 46%, #f8f5ef 100%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-shell {
+  overflow: clip;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(251, 248, 242, 0.72);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(19, 41, 70, 0.08);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 88px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+  color: white;
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  box-shadow: 0 14px 28px rgba(15, 138, 141, 0.2);
+}
+
+.brand-copy {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.brand-copy strong {
+  font-size: 1rem;
+}
+
+.brand-copy span {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.site-nav a {
+  font-size: 0.96rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--ink);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.75rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.lang-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.lang-label {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.menu-toggle {
+  display: none;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--ink);
+  border-radius: 999px;
+}
+
+.hero {
+  padding: 4.8rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--teal-deep);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.9rem, 5.2vw, 5.55rem);
+  line-height: 0.98;
+  max-width: 11ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
+  line-height: 1.02;
+  max-width: 16ch;
+}
+
+h3 {
+  font-size: 1.34rem;
+  line-height: 1.14;
+}
+
+.hero-text,
+.story-panel p,
+.story-card p,
+.momentum-card p,
+.section-intro,
+.contact-note,
+.faq-answer p,
+.action-card p,
+.footer-row p,
+.agenda-panel p,
+.agenda-points li {
+  color: var(--ink-soft);
+  line-height: 1.72;
+}
+
+.hero-text {
+  margin-top: 1.25rem;
+  max-width: 58ch;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: white;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+  box-shadow: 0 16px 32px rgba(15, 138, 141, 0.18);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.74);
+  border-color: var(--line);
+}
+
+.button-tertiary {
+  background: transparent;
+  border-color: rgba(19, 41, 70, 0.18);
+}
+
+.nav-cta {
+  min-height: 48px;
+  padding-inline: 1rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.metric-card,
+.story-panel,
+.story-card,
+.agenda-panel,
+.momentum-card,
+.action-card,
+.contact-panel,
+.faq-item {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow);
+}
+
+.metric-card {
+  padding: 1rem 1.05rem;
+  border-radius: var(--radius-md);
+}
+
+.metric-label,
+.panel-kicker,
+.agenda-tag {
+  display: inline-block;
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 0.45rem;
+  line-height: 1.35;
+  font-size: 1rem;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 640px;
+}
+
+.portrait-frame {
+  position: relative;
+  width: min(100%, 540px);
+  margin-left: auto;
+  padding: 1rem;
+  border-radius: 40px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(243, 234, 217, 0.8)),
+    linear-gradient(135deg, rgba(15, 138, 141, 0.15), rgba(238, 132, 86, 0.16));
+  box-shadow: 0 32px 80px rgba(19, 41, 70, 0.16);
+}
+
+.portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -26px -24px;
+  width: 154px;
+  height: 154px;
+  border-radius: 34px;
+  background: linear-gradient(135deg, rgba(15, 138, 141, 0.12), rgba(241, 190, 98, 0.18));
+  z-index: -1;
+}
+
+.portrait-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1.18;
+  object-fit: cover;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #d9e4ea, #c5d4da);
+}
+
+.portrait-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 2;
+  padding: 0.62rem 0.82rem;
+  border-radius: 999px;
+  background: rgba(22, 53, 93, 0.94);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.floating-card {
+  position: absolute;
+  max-width: 270px;
+  padding: 1rem 1.05rem;
+  border-radius: 22px;
+  background: var(--panel-strong);
+  border: 1px solid rgba(19, 41, 70, 0.08);
+  box-shadow: 0 20px 54px rgba(19, 41, 70, 0.16);
+}
+
+.floating-card p {
+  margin: 0 0 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+}
+
+.floating-card strong {
+  display: block;
+  line-height: 1.42;
+}
+
+.floating-card-top {
+  top: 3rem;
+  left: 0;
+}
+
+.floating-card-bottom {
+  right: 0;
+  bottom: 2rem;
+}
+
+.section {
+  padding: 2.7rem 0 4rem;
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-intro {
+  margin: 0;
+  max-width: 58ch;
+}
+
+.section-tinted {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.02)),
+    radial-gradient(circle at right top, rgba(15, 138, 141, 0.08), transparent 30%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.story-panel,
+.story-card,
+.momentum-card,
+.action-card,
+.contact-panel {
+  border-radius: 26px;
+}
+
+.story-panel {
+  padding: 1.65rem;
+}
+
+.story-panel p + p {
+  margin-top: 1rem;
+}
+
+.about-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.story-card {
+  padding: 1.35rem;
+}
+
+.agenda-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.agenda-tabs {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.agenda-tab {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.05rem;
+  border-radius: 18px;
+  border: 1px solid rgba(19, 41, 70, 0.1);
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.agenda-tab:hover,
+.agenda-tab:focus-visible {
+  transform: translateX(4px);
+}
+
+.agenda-tab.is-active {
+  color: white;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+  border-color: transparent;
+}
+
+.agenda-panel {
+  padding: 1.65rem;
+  min-height: 360px;
+}
+
+.agenda-panel h3 {
+  margin-top: 0.7rem;
+}
+
+.agenda-panel p {
+  margin-top: 0.95rem;
+}
+
+.agenda-points {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.agenda-points li + li {
+  margin-top: 0.7rem;
+}
+
+.momentum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.momentum-card {
+  padding: 1.45rem;
+}
+
+.momentum-card h3 {
+  margin-top: 0.75rem;
+}
+
+.momentum-card p {
+  margin-top: 0.85rem;
+}
+
+.campaign-strip {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1.6rem 1.7rem;
+  border-radius: 32px;
+  color: white;
+  background:
+    radial-gradient(circle at top right, rgba(241, 190, 98, 0.24), transparent 26%),
+    linear-gradient(135deg, var(--navy), var(--teal-deep));
+  box-shadow: var(--shadow);
+}
+
+.campaign-strip .eyebrow,
+.campaign-strip h3,
+.campaign-strip span {
+  color: white;
+}
+
+.strip-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  min-width: 420px;
+}
+
+.strip-stats article {
+  text-align: center;
+}
+
+.strip-stats strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+}
+
+.strip-stats span {
+  display: block;
+  margin-top: 0.3rem;
+  line-height: 1.45;
+}
+
+.section-band {
+  padding: 2.5rem 0;
+}
+
+.section-band .container {
+  padding: 2rem;
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at top right, rgba(241, 190, 98, 0.2), transparent 28%),
+    linear-gradient(135deg, #153c58, #0c6f72);
+  box-shadow: var(--shadow);
+}
+
+.section-heading-light .eyebrow,
+.section-heading-light h2 {
+  color: white;
+}
+
+.involved-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  display: block;
+  min-height: 220px;
+  padding: 1.4rem;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.action-card:hover,
+.action-card:focus-visible {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.action-card .panel-kicker,
+.action-card h3,
+.action-card p {
+  color: white;
+}
+
+.action-card h3 {
+  margin-top: 0.75rem;
+}
+
+.action-card p {
+  margin-top: 0.85rem;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.2rem;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.faq-icon {
+  font-family: "Sora", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0 1.2rem 1.2rem;
+}
+
+.faq-item.is-open .faq-answer {
+  max-height: 180px;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-panel {
+  padding: 1.65rem;
+}
+
+.contact-list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.82rem;
+}
+
+.contact-list li {
+  color: var(--ink-soft);
+}
+
+.accent-panel {
+  background:
+    linear-gradient(180deg, rgba(238, 132, 86, 0.09), rgba(15, 138, 141, 0.08)),
+    rgba(255, 255, 255, 0.9);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.1rem 0 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(19, 41, 70, 0.08);
+  font-weight: 700;
+}
+
+.section-contact {
+  padding-bottom: 4.8rem;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(19, 41, 70, 0.08);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0 2rem;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 650ms ease, transform 650ms ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1120px) {
+  .hero-grid,
+  .about-grid,
+  .faq-layout,
+  .contact-grid,
+  .campaign-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-metrics,
+  .momentum-grid,
+  .involved-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-visual {
+    min-height: auto;
+  }
+
+  .portrait-frame {
+    margin: 0 auto;
+  }
+
+  .agenda-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .strip-stats {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(19, 41, 70, 0.08);
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero-metrics,
+  .momentum-grid,
+  .involved-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-row {
+    min-height: 80px;
+  }
+
+  h1 {
+    max-width: 12ch;
+  }
+
+  .hero {
+    padding-top: 3.4rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .portrait-frame {
+    padding: 0.8rem;
+    border-radius: 30px;
+  }
+
+  .portrait-frame img {
+    border-radius: 24px;
+  }
+
+  .floating-card {
+    position: static;
+    max-width: none;
+    margin-top: 1rem;
+  }
+
+  .section-band .container,
+  .campaign-strip {
+    padding: 1.35rem;
+  }
+
+  .strip-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="#top" aria-label="David Suarez campaign home">
+          <span class="brand-mark">DS</span>
+          <span class="brand-copy">
+            <strong>David Suarez</strong>
+            <span data-i18n="brand_subtitle">For Miami Beach</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#agenda" data-i18n="nav_agenda">Agenda</a>
+          <a href="#momentum" data-i18n="nav_momentum">Momentum</a>
+          <a href="#involved" data-i18n="nav_involved">Get Involved</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="lang-toggle" type="button" aria-label="Toggle language">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm6.93 9h-3.08a15.723 15.723 0 0 0-1.18-5A8.037 8.037 0 0 1 18.93 11ZM12 4.04c.86 1.07 1.94 3.38 2.38 6.96H9.62C10.06 7.42 11.14 5.11 12 4.04ZM4.07 13h3.08a15.723 15.723 0 0 0 1.18 5A8.037 8.037 0 0 1 4.07 13Zm3.08-2H4.07a8.037 8.037 0 0 1 4.26-5 15.723 15.723 0 0 0-1.18 5ZM12 19.96c-.86-1.07-1.94-3.38-2.38-6.96h4.76c-.44 3.58-1.52 5.89-2.38 6.96ZM14.6 13a17.506 17.506 0 0 1-.82 4h-3.56a17.506 17.506 0 0 1-.82-4Zm-4.38-2a17.506 17.506 0 0 1 .82-4h3.56a17.506 17.506 0 0 1 .82 4ZM15.67 18a15.723 15.723 0 0 0 1.18-5h3.08a8.037 8.037 0 0 1-4.26 5Z"/>
+            </svg>
+            <span class="lang-label">ES</span>
+          </button>
+          <a class="button button-primary nav-cta" href="https://secure.anedot.com/davidsuarez/donate" target="_blank" rel="noreferrer" data-i18n="nav_donate">Donate</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow" data-i18n="hero_eyebrow">Campaign Website Concept</p>
+            <h1 data-i18n="hero_title">Safer neighborhoods. Cleaner streets. A stronger Miami Beach.</h1>
+            <p class="hero-text" data-i18n="hero_text">
+              A modern campaign site built around the message that put David Suarez on the map:
+              quality of life, stronger neighborhoods, and a city government that works for residents.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://secure.anedot.com/davidsuarez/donate" target="_blank" rel="noreferrer" data-i18n="hero_cta_donate">Contribute</a>
+              <a class="button button-secondary" href="https://davidsuarezmb.com/signup-form.php" target="_blank" rel="noreferrer" data-i18n="hero_cta_join">Join the Campaign</a>
+              <a class="button button-tertiary" href="#agenda" data-i18n="hero_cta_agenda">Explore the Agenda</a>
+            </div>
+
+            <div class="hero-metrics">
+              <article class="metric-card" data-reveal>
+                <span class="metric-label" data-i18n="metric_1_label">Neighborhood Activist</span>
+                <strong data-i18n="metric_1_value">Save SoFi roots</strong>
+              </article>
+              <article class="metric-card" data-reveal>
+                <span class="metric-label" data-i18n="metric_2_label">Elected</span>
+                <strong data-i18n="metric_2_value">Miami Beach Commissioner, 2023</strong>
+              </article>
+              <article class="metric-card" data-reveal>
+                <span class="metric-label" data-i18n="metric_3_label">Background</span>
+                <strong data-i18n="metric_3_value">Engineer, business leader, father</strong>
+              </article>
+              <article class="metric-card" data-reveal>
+                <span class="metric-label" data-i18n="metric_4_label">Campaign Energy</span>
+                <strong data-i18n="metric_4_value">Direct, local, resident-first</strong>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="portrait-frame">
+              <div class="portrait-badge" data-i18n="portrait_badge">Miami Beach</div>
+              <img src="https://www.miamibeachfl.gov/wp-content/uploads/2023/07/DavidSuarez.png" alt="Portrait of David Suarez">
+            </div>
+            <div class="floating-card floating-card-top">
+              <p data-i18n="float_top_label">Grassroots start</p>
+              <strong data-i18n="float_top_value">Built from neighborhood activism, not the political machine</strong>
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <p data-i18n="float_bottom_label">Campaign promise</p>
+              <strong data-i18n="float_bottom_value">Raise Miami Beach's standard of living block by block</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="about_eyebrow">Meet David</p>
+            <h2 data-i18n="about_title">A campaign built on neighborhood fights that residents actually felt.</h2>
+          </div>
+
+          <article class="story-panel panel-large" data-reveal>
+            <p data-i18n="about_p1">
+              David Suarez is a South Florida native with Cuban and Israeli roots, a University of Florida mechanical engineering graduate,
+              a small business operator, and a father raising his family in Miami Beach.
+            </p>
+            <p data-i18n="about_p2">
+              His public profile grew through local activism, especially the Save SoFi effort and his push to protect residential neighborhoods
+              from overreach, loopholes, and declining quality of life.
+            </p>
+            <p data-i18n="about_p3">
+              This campaign version of the site leans into that identity: direct, energetic, and focused on safer streets, cleaner neighborhoods,
+              infrastructure, accountability, and resident-first leadership.
+            </p>
+          </article>
+
+          <div class="about-cards">
+            <article class="story-card" data-reveal>
+              <span class="panel-kicker" data-i18n="about_card_1_label">Roots</span>
+              <h3 data-i18n="about_card_1_title">Community-driven</h3>
+              <p data-i18n="about_card_1_text">Started with grassroots organizing, neighborhood advocacy, and direct resident engagement.</p>
+            </article>
+            <article class="story-card" data-reveal>
+              <span class="panel-kicker" data-i18n="about_card_2_label">Approach</span>
+              <h3 data-i18n="about_card_2_title">Business-minded</h3>
+              <p data-i18n="about_card_2_text">Frames city government around performance, service quality, and measurable results.</p>
+            </article>
+            <article class="story-card" data-reveal>
+              <span class="panel-kicker" data-i18n="about_card_3_label">Why now</span>
+              <h3 data-i18n="about_card_3_title">Quality of life</h3>
+              <p data-i18n="about_card_3_text">Focuses on the issues residents feel immediately: safety, noise, traffic, cleanliness, and housing pressure.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="section section-tinted">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="agenda_eyebrow">Interactive Agenda</p>
+            <h2 data-i18n="agenda_title">Tap through the campaign platform.</h2>
+            <p class="section-intro" data-i18n="agenda_intro">This section updates live as you switch topics, so the campaign message feels active instead of static.</p>
+          </div>
+
+          <div class="agenda-layout">
+            <div class="agenda-tabs" role="tablist" aria-label="Campaign agenda">
+              <button class="agenda-tab is-active" type="button" data-topic="safety" role="tab" aria-selected="true" data-i18n="agenda_tab_safety">Public Safety</button>
+              <button class="agenda-tab" type="button" data-topic="neighborhoods" role="tab" aria-selected="false" data-i18n="agenda_tab_neighborhoods">Neighborhoods</button>
+              <button class="agenda-tab" type="button" data-topic="waterways" role="tab" aria-selected="false" data-i18n="agenda_tab_waterways">Waterways &amp; Infrastructure</button>
+              <button class="agenda-tab" type="button" data-topic="accountability" role="tab" aria-selected="false" data-i18n="agenda_tab_accountability">Accountability</button>
+            </div>
+
+            <article class="agenda-panel" data-reveal>
+              <span id="agenda-tag" class="agenda-tag">Public Safety</span>
+              <h3 id="agenda-heading">A visible response to speeding, theft, and day-to-day disorder.</h3>
+              <p id="agenda-summary">
+                The campaign should present public safety as a neighborhood quality-of-life issue: traffic, pedestrians, cyclists,
+                theft, enforcement consistency, and faster follow-through.
+              </p>
+              <ul id="agenda-points" class="agenda-points">
+                <li>More attention on dangerous traffic behavior and high-impact corridors.</li>
+                <li>Stronger neighborhood-level policing visibility and responsiveness.</li>
+                <li>Clearer messaging around safety for residents, families, and small businesses.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="momentum" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="momentum_eyebrow">Momentum</p>
+            <h2 data-i18n="momentum_title">Use the record to reinforce the campaign story.</h2>
+          </div>
+
+          <div class="momentum-grid">
+            <article class="momentum-card" data-reveal>
+              <span class="panel-kicker" data-i18n="momentum_card_1_label">Neighborhood Record</span>
+              <h3 data-i18n="momentum_card_1_title">Protected residential character</h3>
+              <p data-i18n="momentum_card_1_text">Public city and campaign bios both point back to neighborhood advocacy, including efforts against short-term rental and transient-use creep.</p>
+            </article>
+            <article class="momentum-card" data-reveal>
+              <span class="panel-kicker" data-i18n="momentum_card_2_label">Leadership</span>
+              <h3 data-i18n="momentum_card_2_title">Current committee presence</h3>
+              <p data-i18n="momentum_card_2_text">Current public committee roles give the campaign a stronger present-tense story than the old site, especially on land use, resiliency, and finance.</p>
+            </article>
+            <article class="momentum-card" data-reveal>
+              <span class="panel-kicker" data-i18n="momentum_card_3_label">Public Engagement</span>
+              <h3 data-i18n="momentum_card_3_title">Town halls and issue visibility</h3>
+              <p data-i18n="momentum_card_3_text">Recent public event pages and city releases make it easier to show an active campaign connected to real neighborhood concerns.</p>
+            </article>
+          </div>
+
+          <div class="campaign-strip" data-reveal>
+            <div class="strip-copy">
+              <p class="eyebrow" data-i18n="strip_eyebrow">Campaign Case</p>
+              <h3 data-i18n="strip_title">The updated site should feel like movement, not brochure copy.</h3>
+            </div>
+            <div class="strip-stats">
+              <article>
+                <strong class="count-up" data-target="2023">0</strong>
+                <span data-i18n="strip_stat_1">elected commissioner</span>
+              </article>
+              <article>
+                <strong class="count-up" data-target="4">0</strong>
+                <span data-i18n="strip_stat_2">core campaign pillars</span>
+              </article>
+              <article>
+                <strong class="count-up" data-target="2">0</strong>
+                <span data-i18n="strip_stat_3">live languages</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="involved" class="section section-band">
+        <div class="container">
+          <div class="section-heading section-heading-light" data-reveal>
+            <p class="eyebrow" data-i18n="involved_eyebrow">Get Involved</p>
+            <h2 data-i18n="involved_title">Give people obvious next steps.</h2>
+          </div>
+
+          <div class="involved-grid">
+            <a class="action-card" data-reveal href="https://secure.anedot.com/davidsuarez/donate" target="_blank" rel="noreferrer">
+              <span class="panel-kicker" data-i18n="action_1_label">Donate</span>
+              <h3 data-i18n="action_1_title">Fuel the campaign</h3>
+              <p data-i18n="action_1_text">Use the existing contribution path, but wrap it in stronger modern campaign design.</p>
+            </a>
+            <a class="action-card" data-reveal href="https://davidsuarezmb.com/signup-form.php" target="_blank" rel="noreferrer">
+              <span class="panel-kicker" data-i18n="action_2_label">Volunteer</span>
+              <h3 data-i18n="action_2_title">Join the team</h3>
+              <p data-i18n="action_2_text">Collect supporters, volunteers, hosts, and neighborhood contacts through one cleaner entry point.</p>
+            </a>
+            <a class="action-card" data-reveal href="https://www.instagram.com/davidsuarezmb/" target="_blank" rel="noreferrer">
+              <span class="panel-kicker" data-i18n="action_3_label">Follow</span>
+              <h3 data-i18n="action_3_title">Stay close to the message</h3>
+              <p data-i18n="action_3_text">Keep social channels integrated into the campaign experience instead of treating them like an afterthought.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container faq-layout">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+            <h2 data-i18n="faq_title">A little interactivity goes a long way.</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item" data-reveal>
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="faq_q1">What makes this version more campaign-ready?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq_a1">It leads with message, momentum, and action: donate, join, follow, and understand the platform fast.</p>
+              </div>
+            </article>
+            <article class="faq-item" data-reveal>
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="faq_q2">Why add Spanish at the top?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq_a2">Because it should feel native to Miami Beach and useful to bilingual households from the first click.</p>
+              </div>
+            </article>
+            <article class="faq-item" data-reveal>
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="faq_q3">What is interactive here right now?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq_a3">The mobile menu, language toggle, live agenda tabs, animated counters, and expandable FAQ all work locally.</p>
+              </div>
+            </article>
+            <article class="faq-item" data-reveal>
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="faq_q4">Can this become a real live campaign site?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq_a4">Yes. This is already a portable static site, so it can be hosted on GitHub Pages, Netlify, Vercel, or dropped into a CMS workflow later.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="container contact-grid">
+          <article class="contact-panel" data-reveal>
+            <p class="eyebrow" data-i18n="contact_eyebrow">Campaign Contact</p>
+            <h2 data-i18n="contact_title">Keep the campaign easy to reach.</h2>
+            <ul class="contact-list">
+              <li><strong data-i18n="contact_phone_label">Phone:</strong> <a href="tel:+13057078001">305.707.8001</a></li>
+              <li><strong data-i18n="contact_join_label">Join:</strong> <a href="https://davidsuarezmb.com/signup-form.php" target="_blank" rel="noreferrer" data-i18n="contact_join_value">Campaign contact form</a></li>
+              <li><strong data-i18n="contact_donate_label">Donate:</strong> <a href="https://secure.anedot.com/davidsuarez/donate" target="_blank" rel="noreferrer" data-i18n="contact_donate_value">Secure online contribution</a></li>
+            </ul>
+          </article>
+
+          <article class="contact-panel accent-panel" data-reveal>
+            <p class="eyebrow" data-i18n="social_eyebrow">Social</p>
+            <h2 data-i18n="social_title">Public-facing channels</h2>
+            <div class="social-links">
+              <a href="https://www.facebook.com/davidsuarezmb" target="_blank" rel="noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/davidsuarezmb/" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/" target="_blank" rel="noreferrer" data-i18n="social_office_link">Official office page</a>
+            </div>
+            <p class="contact-note" data-i18n="social_note">
+              Recommended next move after this concept: align the campaign brand, biography, and social bios so every public channel tells the same story.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p data-i18n="footer_left">Campaign website concept assembled from public campaign and city materials reviewed on June 2, 2026.</p>
+        <p><span id="year"></span> <span data-i18n="footer_right">David Suarez campaign concept.</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+const langToggle = document.querySelector(".lang-toggle");
+const langLabel = document.querySelector(".lang-label");
+const year = document.querySelector("#year");
+const revealItems = document.querySelectorAll("[data-reveal]");
+const tabs = document.querySelectorAll(".agenda-tab");
+const faqQuestions = document.querySelectorAll(".faq-question");
+const counters = document.querySelectorAll(".count-up");
+
+let currentLanguage = "en";
+let currentTopic = "safety";
+
+const dictionary = {
+  en: {
+    brand_subtitle: "For Miami Beach",
+    nav_about: "About",
+    nav_agenda: "Agenda",
+    nav_momentum: "Momentum",
+    nav_involved: "Get Involved",
+    nav_contact: "Contact",
+    nav_donate: "Donate",
+    hero_eyebrow: "Campaign Website Concept",
+    hero_title: "Safer neighborhoods. Cleaner streets. A stronger Miami Beach.",
+    hero_text: "A modern campaign site built around the message that put David Suarez on the map: quality of life, stronger neighborhoods, and a city government that works for residents.",
+    hero_cta_donate: "Contribute",
+    hero_cta_join: "Join the Campaign",
+    hero_cta_agenda: "Explore the Agenda",
+    metric_1_label: "Neighborhood Activist",
+    metric_1_value: "Save SoFi roots",
+    metric_2_label: "Elected",
+    metric_2_value: "Miami Beach Commissioner, 2023",
+    metric_3_label: "Background",
+    metric_3_value: "Engineer, business leader, father",
+    metric_4_label: "Campaign Energy",
+    metric_4_value: "Direct, local, resident-first",
+    portrait_badge: "Miami Beach",
+    float_top_label: "Grassroots start",
+    float_top_value: "Built from neighborhood activism, not the political machine",
+    float_bottom_label: "Campaign promise",
+    float_bottom_value: "Raise Miami Beach's standard of living block by block",
+    about_eyebrow: "Meet David",
+    about_title: "A campaign built on neighborhood fights that residents actually felt.",
+    about_p1: "David Suarez is a South Florida native with Cuban and Israeli roots, a University of Florida mechanical engineering graduate, a small business operator, and a father raising his family in Miami Beach.",
+    about_p2: "His public profile grew through local activism, especially the Save SoFi effort and his push to protect residential neighborhoods from overreach, loopholes, and declining quality of life.",
+    about_p3: "This campaign version of the site leans into that identity: direct, energetic, and focused on safer streets, cleaner neighborhoods, infrastructure, accountability, and resident-first leadership.",
+    about_card_1_label: "Roots",
+    about_card_1_title: "Community-driven",
+    about_card_1_text: "Started with grassroots organizing, neighborhood advocacy, and direct resident engagement.",
+    about_card_2_label: "Approach",
+    about_card_2_title: "Business-minded",
+    about_card_2_text: "Frames city government around performance, service quality, and measurable results.",
+    about_card_3_label: "Why now",
+    about_card_3_title: "Quality of life",
+    about_card_3_text: "Focuses on the issues residents feel immediately: safety, noise, traffic, cleanliness, and housing pressure.",
+    agenda_eyebrow: "Interactive Agenda",
+    agenda_title: "Tap through the campaign platform.",
+    agenda_intro: "This section updates live as you switch topics, so the campaign message feels active instead of static.",
+    agenda_tab_safety: "Public Safety",
+    agenda_tab_neighborhoods: "Neighborhoods",
+    agenda_tab_waterways: "Waterways & Infrastructure",
+    agenda_tab_accountability: "Accountability",
+    momentum_eyebrow: "Momentum",
+    momentum_title: "Use the record to reinforce the campaign story.",
+    momentum_card_1_label: "Neighborhood Record",
+    momentum_card_1_title: "Protected residential character",
+    momentum_card_1_text: "Public city and campaign bios both point back to neighborhood advocacy, including efforts against short-term rental and transient-use creep.",
+    momentum_card_2_label: "Leadership",
+    momentum_card_2_title: "Current committee presence",
+    momentum_card_2_text: "Current public committee roles give the campaign a stronger present-tense story than the old site, especially on land use, resiliency, and finance.",
+    momentum_card_3_label: "Public Engagement",
+    momentum_card_3_title: "Town halls and issue visibility",
+    momentum_card_3_text: "Recent public event pages and city releases make it easier to show an active campaign connected to real neighborhood concerns.",
+    strip_eyebrow: "Campaign Case",
+    strip_title: "The updated site should feel like movement, not brochure copy.",
+    strip_stat_1: "elected commissioner",
+    strip_stat_2: "core campaign pillars",
+    strip_stat_3: "live languages",
+    involved_eyebrow: "Get Involved",
+    involved_title: "Give people obvious next steps.",
+    action_1_label: "Donate",
+    action_1_title: "Fuel the campaign",
+    action_1_text: "Use the existing contribution path, but wrap it in stronger modern campaign design.",
+    action_2_label: "Volunteer",
+    action_2_title: "Join the team",
+    action_2_text: "Collect supporters, volunteers, hosts, and neighborhood contacts through one cleaner entry point.",
+    action_3_label: "Follow",
+    action_3_title: "Stay close to the message",
+    action_3_text: "Keep social channels integrated into the campaign experience instead of treating them like an afterthought.",
+    faq_eyebrow: "FAQ",
+    faq_title: "A little interactivity goes a long way.",
+    faq_q1: "What makes this version more campaign-ready?",
+    faq_a1: "It leads with message, momentum, and action: donate, join, follow, and understand the platform fast.",
+    faq_q2: "Why add Spanish at the top?",
+    faq_a2: "Because it should feel native to Miami Beach and useful to bilingual households from the first click.",
+    faq_q3: "What is interactive here right now?",
+    faq_a3: "The mobile menu, language toggle, live agenda tabs, animated counters, and expandable FAQ all work locally.",
+    faq_q4: "Can this become a real live campaign site?",
+    faq_a4: "Yes. This is already a portable static site, so it can be hosted on GitHub Pages, Netlify, Vercel, or dropped into a CMS workflow later.",
+    contact_eyebrow: "Campaign Contact",
+    contact_title: "Keep the campaign easy to reach.",
+    contact_phone_label: "Phone:",
+    contact_join_label: "Join:",
+    contact_join_value: "Campaign contact form",
+    contact_donate_label: "Donate:",
+    contact_donate_value: "Secure online contribution",
+    social_eyebrow: "Social",
+    social_title: "Public-facing channels",
+    social_office_link: "Official office page",
+    social_note: "Recommended next move after this concept: align the campaign brand, biography, and social bios so every public channel tells the same story.",
+    footer_left: "Campaign website concept assembled from public campaign and city materials reviewed on June 2, 2026.",
+    footer_right: "David Suarez campaign concept."
+  },
+  es: {
+    brand_subtitle: "Para Miami Beach",
+    nav_about: "Sobre David",
+    nav_agenda: "Agenda",
+    nav_momentum: "Impulso",
+    nav_involved: "Participa",
+    nav_contact: "Contacto",
+    nav_donate: "Donar",
+    hero_eyebrow: "Concepto de Sitio de Campana",
+    hero_title: "Vecindarios mas seguros. Calles mas limpias. Un Miami Beach mas fuerte.",
+    hero_text: "Un sitio moderno de campana construido alrededor del mensaje que puso a David Suarez en el mapa: calidad de vida, vecindarios mas fuertes y un gobierno que trabaja para los residentes.",
+    hero_cta_donate: "Contribuir",
+    hero_cta_join: "Unete a la Campana",
+    hero_cta_agenda: "Explorar la Agenda",
+    metric_1_label: "Activista Vecinal",
+    metric_1_value: "Origenes de Save SoFi",
+    metric_2_label: "Elegido",
+    metric_2_value: "Comisionado de Miami Beach, 2023",
+    metric_3_label: "Trayectoria",
+    metric_3_value: "Ingeniero, lider empresarial y padre",
+    metric_4_label: "Energia de Campana",
+    metric_4_value: "Directa, local y centrada en residentes",
+    portrait_badge: "Miami Beach",
+    float_top_label: "Inicio comunitario",
+    float_top_value: "Nacio del activismo vecinal, no de la maquinaria politica",
+    float_bottom_label: "Promesa de campana",
+    float_bottom_value: "Elevar el nivel de vida de Miami Beach cuadra por cuadra",
+    about_eyebrow: "Conoce a David",
+    about_title: "Una campana construida sobre luchas vecinales que los residentes realmente sintieron.",
+    about_p1: "David Suarez es nativo del sur de la Florida, de raices cubanas e israelies, graduado en ingenieria mecanica de la Universidad de Florida, pequeno empresario y padre que cria a su familia en Miami Beach.",
+    about_p2: "Su perfil publico crecio mediante el activismo local, especialmente el esfuerzo de Save SoFi y su impulso para proteger los vecindarios residenciales de abusos, vacios legales y el deterioro de la calidad de vida.",
+    about_p3: "Esta version de campana del sitio se apoya en esa identidad: directa, energica y enfocada en calles mas seguras, vecindarios mas limpios, infraestructura, rendicion de cuentas y liderazgo centrado en residentes.",
+    about_card_1_label: "Origen",
+    about_card_1_title: "Impulso comunitario",
+    about_card_1_text: "Comenzo con organizacion de base, defensa vecinal y contacto directo con residentes.",
+    about_card_2_label: "Enfoque",
+    about_card_2_title: "Mentalidad de resultados",
+    about_card_2_text: "Presenta al gobierno municipal en terminos de desempeno, calidad de servicio y resultados medibles.",
+    about_card_3_label: "Por que ahora",
+    about_card_3_title: "Calidad de vida",
+    about_card_3_text: "Se enfoca en los temas que los residentes sienten de inmediato: seguridad, ruido, trafico, limpieza y presion de vivienda.",
+    agenda_eyebrow: "Agenda Interactiva",
+    agenda_title: "Recorre la plataforma de campana.",
+    agenda_intro: "Esta seccion se actualiza en vivo al cambiar de tema, para que el mensaje de campana se sienta activo y no estatico.",
+    agenda_tab_safety: "Seguridad Publica",
+    agenda_tab_neighborhoods: "Vecindarios",
+    agenda_tab_waterways: "Canales e Infraestructura",
+    agenda_tab_accountability: "Rendicion de Cuentas",
+    momentum_eyebrow: "Impulso",
+    momentum_title: "Usa el record para reforzar la historia de la campana.",
+    momentum_card_1_label: "Historial Vecinal",
+    momentum_card_1_title: "Defensa del caracter residencial",
+    momentum_card_1_text: "Las biografias publicas de ciudad y campana apuntan al activismo vecinal, incluyendo esfuerzos contra el crecimiento de usos transitorios y alquileres de corto plazo.",
+    momentum_card_2_label: "Liderazgo",
+    momentum_card_2_title: "Presencia actual en comites",
+    momentum_card_2_text: "Los comites publicos actuales le dan a la campana una historia mas presente y fuerte que el sitio antiguo, especialmente en uso de suelo, resiliencia y finanzas.",
+    momentum_card_3_label: "Participacion Publica",
+    momentum_card_3_title: "Foros y visibilidad de temas",
+    momentum_card_3_text: "Eventos publicos recientes y comunicados de la ciudad facilitan mostrar una campana activa conectada con preocupaciones reales del vecindario.",
+    strip_eyebrow: "Caso de Campana",
+    strip_title: "El sitio actualizado debe sentirse como movimiento, no como folleto.",
+    strip_stat_1: "ano de eleccion como comisionado",
+    strip_stat_2: "pilares principales",
+    strip_stat_3: "idiomas activos",
+    involved_eyebrow: "Participa",
+    involved_title: "Dale a la gente pasos claros para actuar.",
+    action_1_label: "Donar",
+    action_1_title: "Impulsa la campana",
+    action_1_text: "Usa la ruta actual de contribuciones, pero con un diseno de campana mucho mas moderno.",
+    action_2_label: "Voluntariado",
+    action_2_title: "Unete al equipo",
+    action_2_text: "Reune simpatizantes, voluntarios, anfitriones y contactos vecinales desde un punto de entrada mas limpio.",
+    action_3_label: "Seguir",
+    action_3_title: "Mantente cerca del mensaje",
+    action_3_text: "Integra los canales sociales al recorrido de campana en vez de tratarlos como un detalle secundario.",
+    faq_eyebrow: "Preguntas",
+    faq_title: "Un poco de interactividad ayuda mucho.",
+    faq_q1: "Que hace que esta version sirva mejor para una campana?",
+    faq_a1: "Lidera con mensaje, impulso y accion: donar, unirse, seguir y entender la plataforma rapidamente.",
+    faq_q2: "Por que poner espanol arriba?",
+    faq_a2: "Porque debe sentirse natural para Miami Beach y util para hogares bilingues desde el primer clic.",
+    faq_q3: "Que es interactivo aqui ahora mismo?",
+    faq_a3: "El menu movil, el cambio de idioma, las pestanas de agenda, los contadores animados y el FAQ desplegable funcionan localmente.",
+    faq_q4: "Puede esto convertirse en un sitio real de campana?",
+    faq_a4: "Si. Ya es un sitio estatico portable, asi que puede alojarse en GitHub Pages, Netlify, Vercel o integrarse despues en un CMS.",
+    contact_eyebrow: "Contacto de Campana",
+    contact_title: "Haz que la campana sea facil de contactar.",
+    contact_phone_label: "Telefono:",
+    contact_join_label: "Unete:",
+    contact_join_value: "Formulario de contacto de campana",
+    contact_donate_label: "Donar:",
+    contact_donate_value: "Contribucion segura en linea",
+    social_eyebrow: "Redes",
+    social_title: "Canales publicos",
+    social_office_link: "Pagina oficial",
+    social_note: "Siguiente paso recomendado despues de este concepto: alinear la marca de campana, la biografia y las bios sociales para que todos los canales cuenten la misma historia.",
+    footer_left: "Concepto de sitio de campana armado con materiales publicos de campana y de la ciudad revisados el 2 de junio de 2026.",
+    footer_right: "Concepto de campana de David Suarez."
+  }
+};
+
+const agendaContent = {
+  en: {
+    safety: {
+      tag: "Public Safety",
+      heading: "A visible response to speeding, theft, and day-to-day disorder.",
+      summary: "The campaign should present public safety as a neighborhood quality-of-life issue: traffic, pedestrians, cyclists, theft, enforcement consistency, and faster follow-through.",
+      points: [
+        "More attention on dangerous traffic behavior and high-impact corridors.",
+        "Stronger neighborhood-level policing visibility and responsiveness.",
+        "Clearer messaging around safety for residents, families, and small businesses."
+      ]
+    },
+    neighborhoods: {
+      tag: "Neighborhoods",
+      heading: "Protect residential life from overdevelopment, noise, and pressure.",
+      summary: "The strongest campaign framing stays close to the frustrations residents already recognize: parking, noise, transient use, and keeping neighborhoods livable year-round.",
+      points: [
+        "Push back against loopholes that erode residential character.",
+        "Make quality-of-life enforcement feel real, not rhetorical.",
+        "Show North, Mid, and South Beach as one resident-focused map."
+      ]
+    },
+    waterways: {
+      tag: "Waterways & Infrastructure",
+      heading: "Tie clean streets to flood readiness, drainage, and marine protection.",
+      summary: "Infrastructure should not read like city jargon. It should connect directly to flooding, broken systems, visible maintenance, and protecting Miami Beach's waterways.",
+      points: [
+        "Make sewer and stormwater systems part of the quality-of-life message.",
+        "Highlight environmental stewardship with concrete examples.",
+        "Link clean blocks, cleaner waterways, and long-term resilience."
+      ]
+    },
+    accountability: {
+      tag: "Accountability",
+      heading: "Run on service standards, not excuses.",
+      summary: "This is where the campaign separates itself: faster answers, clearer communication, and a government residents can actually feel working.",
+      points: [
+        "Use business-style language around results and responsiveness.",
+        "Connect town halls, updates, and direct communication to campaign credibility.",
+        "Make accountability the through-line for every issue on the site."
+      ]
+    }
+  },
+  es: {
+    safety: {
+      tag: "Seguridad Publica",
+      heading: "Una respuesta visible al exceso de velocidad, los robos y el desorden diario.",
+      summary: "La campana debe presentar la seguridad publica como un tema de calidad de vida vecinal: trafico, peatones, ciclistas, robos, consistencia en la aplicacion y seguimiento mas rapido.",
+      points: [
+        "Mas atencion al manejo peligroso y a los corredores de mayor impacto.",
+        "Mayor visibilidad policial y mejor respuesta a nivel de vecindario.",
+        "Mensajes mas claros sobre seguridad para residentes, familias y pequenos negocios."
+      ]
+    },
+    neighborhoods: {
+      tag: "Vecindarios",
+      heading: "Protege la vida residencial del exceso de desarrollo, el ruido y la presion urbana.",
+      summary: "La narrativa mas fuerte de campana se mantiene pegada a las frustraciones que ya reconocen los residentes: estacionamiento, ruido, uso transitorio y mantener vecindarios habitables todo el ano.",
+      points: [
+        "Enfrentar vacios legales que debilitan el caracter residencial.",
+        "Hacer que la aplicacion de calidad de vida se sienta real, no solo discursiva.",
+        "Mostrar North, Mid y South Beach como un solo mapa centrado en residentes."
+      ]
+    },
+    waterways: {
+      tag: "Canales e Infraestructura",
+      heading: "Conecta calles limpias con preparacion contra inundaciones, drenaje y proteccion marina.",
+      summary: "La infraestructura no debe sonar a jerga gubernamental. Debe conectarse directamente con inundaciones, sistemas rotos, mantenimiento visible y la proteccion de las aguas de Miami Beach.",
+      points: [
+        "Hacer que drenaje, alcantarillado y aguas pluviales formen parte del mensaje de calidad de vida.",
+        "Destacar el cuidado ambiental con ejemplos concretos.",
+        "Conectar cuadras limpias, aguas mas limpias y resiliencia a largo plazo."
+      ]
+    },
+    accountability: {
+      tag: "Rendicion de Cuentas",
+      heading: "Haz campana con estandares de servicio, no con excusas.",
+      summary: "Aqui es donde la campana puede diferenciarse: respuestas mas rapidas, comunicacion mas clara y un gobierno que los residentes realmente sientan funcionando.",
+      points: [
+        "Usar lenguaje de resultados y capacidad de respuesta.",
+        "Conectar foros, actualizaciones y comunicacion directa con credibilidad politica.",
+        "Hacer de la rendicion de cuentas el hilo conductor de todo el sitio."
+      ]
+    }
+  }
+};
+
+function applyLanguage(language) {
+  const translations = dictionary[language];
+  document.documentElement.lang = language;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    if (translations[key]) {
+      element.textContent = translations[key];
+    }
+  });
+
+  currentLanguage = language;
+  if (langLabel) {
+    langLabel.textContent = language === "en" ? "ES" : "EN";
+  }
+
+  renderAgenda(currentTopic);
+}
+
+function renderAgenda(topic) {
+  const content = agendaContent[currentLanguage][topic];
+  const tag = document.querySelector("#agenda-tag");
+  const heading = document.querySelector("#agenda-heading");
+  const summary = document.querySelector("#agenda-summary");
+  const points = document.querySelector("#agenda-points");
+
+  if (!content || !tag || !heading || !summary || !points) return;
+
+  tag.textContent = content.tag;
+  heading.textContent = content.heading;
+  summary.textContent = content.summary;
+  points.innerHTML = "";
+
+  content.points.forEach((point) => {
+    const item = document.createElement("li");
+    item.textContent = point;
+    points.appendChild(item);
+  });
+
+  tabs.forEach((tab) => {
+    const isActive = tab.dataset.topic === topic;
+    tab.classList.toggle("is-active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
+}
+
+function animateCounter(counter) {
+  const target = Number(counter.dataset.target || "0");
+  const duration = 1200;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const value = Math.floor(progress * target);
+    counter.textContent = value.toString();
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      counter.textContent = target.toString();
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+    siteNav.classList.toggle("is-open", !expanded);
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      siteNav.classList.remove("is-open");
+    });
+  });
+}
+
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    const nextLanguage = currentLanguage === "en" ? "es" : "en";
+    applyLanguage(nextLanguage);
+  });
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    currentTopic = tab.dataset.topic;
+    renderAgenda(currentTopic);
+  });
+});
+
+faqQuestions.forEach((question) => {
+  question.addEventListener("click", () => {
+    const item = question.closest(".faq-item");
+    const expanded = question.getAttribute("aria-expanded") === "true";
+
+    item.classList.toggle("is-open", !expanded);
+    question.setAttribute("aria-expanded", String(!expanded));
+  });
+});
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+
+  counters.forEach((counter) => counterObserver.observe(counter));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+  counters.forEach((counter) => {
+    counter.textContent = counter.dataset.target || "0";
+  });
+}
+
+applyLanguage(currentLanguage);
+renderAgenda(currentTopic);
+
+</script>
+</body>
+</html>
+
