@@ -112,14 +112,36 @@ select {
   text-decoration: none;
 }
 
-.brand-logo {
-  width: clamp(150px, 17vw, 220px);
+.brand-wordmark {
+  display: inline-grid;
+  gap: 0.02rem;
+  line-height: 0.92;
+  text-transform: uppercase;
 }
 
-.brand-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
+.brand-ribbon {
+  justify-self: start;
+  margin-left: 0.35rem;
+  padding: 0.12rem 0.48rem 0.15rem;
+  background: var(--teal);
+  color: var(--cream);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.32em;
+}
+
+.brand-name {
+  color: var(--navy);
+  font-family: "Anton", sans-serif;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  letter-spacing: 0.035em;
+}
+
+.brand-subline {
+  color: var(--teal);
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
 }
 
 .site-nav,
@@ -362,7 +384,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 24% center;
+  object-position: center;
 }
 
 .hero-photo::after {
