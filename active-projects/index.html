@@ -7,7 +7,7 @@
   <meta name="description" content="A clean interactive map of active City of Miami Beach projects with address lookup, nearby projects, filters, charts, and project update signup.">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="styles.css?v=20260603e">
+  <link rel="stylesheet" href="styles.css?v=20260603f">
 </head>
 <body>
   <header class="topbar">
@@ -21,7 +21,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-with-map">
       <div class="hero-copy">
         <p class="eyebrow">Miami Beach capital projects</p>
         <h1>See what is being built near you.</h1>
@@ -31,6 +31,22 @@
           <a class="button ghost" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a>
         </div>
       </div>
+
+      <section class="map-shell hero-map" aria-label="Interactive project map">
+        <div class="map-toolbar">
+          <div>
+            <p class="eyebrow">Live project view</p>
+            <h2 id="project-count">Loading projects</h2>
+          </div>
+          <div class="filters">
+            <select id="hood-filter" aria-label="Filter by neighborhood"><option value="all">All neighborhoods</option></select>
+            <select id="category-filter" aria-label="Filter by project type"><option value="all">All project types</option></select>
+          </div>
+        </div>
+        <div id="map" class="map"></div>
+        <p class="source-note" id="source-note">Loading city project mirror...</p>
+      </section>
+
       <aside class="lookup-card" id="nearby">
         <h2>Projects near me</h2>
         <p>Enter an address, intersection, landmark, or coordinates in Miami Beach.</p>
@@ -52,21 +68,6 @@
         </form>
         <p class="lookup-status" id="lookup-status">Search to highlight nearby projects.</p>
       </aside>
-    </section>
-
-    <section class="map-shell" aria-label="Interactive project map">
-      <div class="map-toolbar">
-        <div>
-          <p class="eyebrow">Live project view</p>
-          <h2 id="project-count">Loading projects</h2>
-        </div>
-        <div class="filters">
-          <select id="hood-filter" aria-label="Filter by neighborhood"><option value="all">All neighborhoods</option></select>
-          <select id="category-filter" aria-label="Filter by project type"><option value="all">All project types</option></select>
-        </div>
-      </div>
-      <div id="map" class="map"></div>
-      <p class="source-note" id="source-note">Loading city project mirror...</p>
     </section>
 
     <section class="dashboard">
