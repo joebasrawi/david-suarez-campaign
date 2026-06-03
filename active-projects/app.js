@@ -21,8 +21,11 @@ const els = {
   radius: document.getElementById('radius-input'),
   status: document.getElementById('lookup-status'),
   source: document.getElementById('source-note'),
+  legend: document.getElementById('map-legend'),
   stats: document.getElementById('stats-grid'),
   chart: document.getElementById('chart'),
+  hoodChart: document.getElementById('hood-chart'),
+  transparency: document.getElementById('transparency-grid'),
   signupForm: document.getElementById('updates-form'),
   signupStatus: document.getElementById('signup-status'),
   signupNeighborhood: document.getElementById('signup-neighborhood')
@@ -41,6 +44,13 @@ const miles = (a, b) => {
 
 const clean = value => String(value || '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const validProject = p => Number.isFinite(+p.lat) && Number.isFinite(+p.lng);
+const CATEGORY_COLORS = ['#177f7a', '#e7624f', '#c59a35', '#135579', '#6f8f3d', '#f08a4b', '#092b49', '#8c5f9f'];
+
+function colorForCategory(category) {
+  const categories = [...new Set(state.projects.map(p => p.category))].sort();
+  const index = Math.max(0, categories.indexOf(category));
+  return CATEGORY_COLORS[index % CATEGORY_COLORS.length];
+}
 
 function initMap() {
   state.map = L.map(els.map, { zoomControl: false, scrollWheelZoom: true }).setView([25.806, -80.132], 12);
@@ -84,8 +94,8 @@ function buildFilters() {
   hoods.forEach(h => els.signupNeighborhood.append(new Option(h, h)));
 }
 
-function pin(colorClass = '') {
-  return L.divIcon({ className: '', html: `<div class="marker-pin ${colorClass}"><span></span></div>`, iconSize: [26, 32], iconAnchor: [13, 28], popupAnchor: [0, -27] });
+function pin(color = '#e7624f', colorClass = '') {
+  return L.divIcon({ className: '', html: `<div class="marker-pin ${colorClass}" style="--pin-color:${color}"><span></span></div>`, iconSize: [26, 32], iconAnchor: [13, 28], popupAnchor: [0, -27] });
 }
 
 function applyFilters() {
@@ -105,7 +115,8 @@ function renderMap() {
   state.layer.clearLayers();
   state.markers = [];
   state.filtered.forEach(p => {
-    const marker = L.marker([p.lat, p.lng], { icon: pin() }).bindPopup(`<div class="popup"><strong>${p.title}</strong><p>${p.hood} / ${p.category}</p><a href="${p.link}" target="_blank" rel="noreferrer">Official project page</a></div>`);
+    const color = colorForCategory(p.category);
+    const marker = L.marker([p.lat, p.lng], { icon: pin(color) }).bindPopup(`<div class="popup"><strong>${p.title}</strong><p><i style="background:${color}"></i>${p.hood} / ${p.category}</p><a href="${p.link}" target="_blank" rel="noreferrer">Official project page</a></div>`);
     marker.addTo(state.layer);
     state.markers.push(marker);
   });
@@ -143,18 +154,17 @@ function renderStats() {
   const byHood = countBy(all, 'hood');
   const byCat = countBy(all, 'category');
   const topHood = topEntry(byHood);
-  const topCat = topEntry(byCat);
+  const totalCategories = new Set(state.projects.map(p => p.category)).size;
+  const visibleShare = state.projects.length ? Math.round(all.length / state.projects.length * 100) : 0;
   els.stats.innerHTML = `
     <div class="stat"><strong>${all.length}</strong><span>Visible projects</span></div>
     <div class="stat"><strong>${topHood?.[0] || 'n/a'}</strong><span>Busiest area</span></div>
-    <div class="stat"><strong>${topCat?.[0] || 'n/a'}</strong><span>Top type</span></div>
-    <div class="stat"><strong>${state.origin ? state.radius : 'All'}</strong><span>${state.origin ? 'Mile radius' : 'Citywide view'}</span></div>`;
-  const max = Math.max(1, ...Object.values(byCat));
-  els.chart.innerHTML = Object.entries(byCat).sort((a,b)=>b[1]-a[1]).slice(0,7).map(([name, value]) => `
-    <div class="bar">
-      <div class="bar-label"><span>${name}</span><span>${value}</span></div>
-      <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, value / max * 100)}%"></div></div>
-    </div>`).join('') || '<p>No chart data yet.</p>';
+    <div class="stat"><strong>${visibleShare}%</strong><span>Of full feed</span></div>
+    <div class="stat"><strong>${totalCategories}</strong><span>Project types</span></div>`;
+  renderTypeChart(byCat);
+  renderHoodChart(byHood);
+  renderLegend();
+  renderTransparency(all);
 }
 
 function countBy(items, key) {
@@ -162,6 +172,63 @@ function countBy(items, key) {
 }
 function topEntry(obj) { return Object.entries(obj).sort((a,b)=>b[1]-a[1])[0]; }
 function render() { renderMap(); renderList(); renderStats(); }
+
+function renderTypeChart(byCat) {
+  const total = Math.max(1, Object.values(byCat).reduce((sum, value) => sum + value, 0));
+  els.chart.innerHTML = Object.entries(byCat).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([name, value], index) => {
+    const color = colorForCategory(name);
+    const share = Math.round(value / total * 100);
+    return `
+      <div class="bar type-bar" style="--bar-color:${color}">
+        <div class="bar-rank">${index + 1}</div>
+        <div>
+          <div class="bar-label"><span>${name}</span><span>${value} / ${share}%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, share)}%;background:${color}"></div></div>
+        </div>
+      </div>`;
+  }).join('') || '<p>No chart data yet.</p>';
+}
+
+function renderHoodChart(byHood) {
+  if (!els.hoodChart) return;
+  const hoodColors = { 'South Beach': '#e7624f', 'Mid Beach': '#c59a35', 'North Beach': '#177f7a' };
+  const total = Math.max(1, Object.values(byHood).reduce((sum, value) => sum + value, 0));
+  els.hoodChart.innerHTML = Object.entries(byHood).sort((a,b)=>b[1]-a[1]).map(([name, value]) => {
+    const color = hoodColors[name] || '#135579';
+    const share = Math.round(value / total * 100);
+    return `
+      <div class="bar">
+        <div class="bar-label"><span>${name}</span><span>${value} / ${share}%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, share)}%;background:${color}"></div></div>
+      </div>`;
+  }).join('') || '<p>No neighborhood data yet.</p>';
+}
+
+function renderLegend() {
+  if (!els.legend) return;
+  const byCat = countBy(state.projects, 'category');
+  els.legend.innerHTML = Object.entries(byCat).sort((a,b)=>a[0].localeCompare(b[0])).map(([name, value]) => `
+    <div class="legend-item">
+      <span style="background:${colorForCategory(name)}"></span>
+      <b>${name}</b>
+      <em>${value}</em>
+    </div>`).join('');
+}
+
+function renderTransparency(visibleProjects) {
+  if (!els.transparency) return;
+  const linked = state.projects.filter(p => p.link).length;
+  const images = state.projects.filter(p => p.image).length;
+  const neighborhoods = new Set(state.projects.map(p => p.hood)).size;
+  els.transparency.innerHTML = [
+    ['Mapped projects', state.projects.length],
+    ['Visible now', visibleProjects.length],
+    ['Official links', linked],
+    ['Project images', images],
+    ['Neighborhoods', neighborhoods],
+    ['Data source', 'City mirror']
+  ].map(([label, value]) => `<div class="mini-stat"><strong>${value}</strong><span>${label}</span></div>`).join('');
+}
 
 async function geocode(query) {
   const q = query.trim();
@@ -208,7 +275,7 @@ els.form.addEventListener('submit', async event => {
   try {
     state.origin = await geocode(query);
     if (state.userMarker) state.layer.removeLayer(state.userMarker);
-    state.userMarker = L.marker([state.origin.lat, state.origin.lng], { icon: pin('user-pin') }).bindPopup(`<strong>${state.origin.label}</strong>`);
+    state.userMarker = L.marker([state.origin.lat, state.origin.lng], { icon: pin('#177f7a', 'user-pin') }).bindPopup(`<strong>${state.origin.label}</strong>`);
     els.status.textContent = `Showing projects within ${els.radius.value} mile${els.radius.value === '1' ? '' : 's'} of ${state.origin.label}.`;
     applyFilters();
   } catch (error) {
@@ -240,7 +307,7 @@ els.signupForm.addEventListener('submit', event => {
     if (params.has('lat') && params.has('lng')) {
       state.origin = { lat: +params.get('lat'), lng: +params.get('lng'), label: 'shared lookup point' };
       els.radius.value = params.get('radius') || '1';
-      state.userMarker = L.marker([state.origin.lat, state.origin.lng], { icon: pin('user-pin') }).bindPopup('<strong>Shared lookup point</strong>');
+      state.userMarker = L.marker([state.origin.lat, state.origin.lng], { icon: pin('#177f7a', 'user-pin') }).bindPopup('<strong>Shared lookup point</strong>');
       applyFilters();
     }
   } catch (error) {
