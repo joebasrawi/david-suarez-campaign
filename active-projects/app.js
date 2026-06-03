@@ -46,6 +46,32 @@ const clean = value => String(value || '').replace(/&amp;/g, '&').replace(/\s+/g
 const validProject = p => Number.isFinite(+p.lat) && Number.isFinite(+p.lng);
 const CATEGORY_COLORS = ['#177f7a', '#e7624f', '#c59a35', '#135579', '#6f8f3d', '#f08a4b', '#092b49', '#8c5f9f'];
 
+function deriveArea(project) {
+  const text = `${project.title} ${project.address} ${project.summary}`.toLowerCase();
+  const lat = project.lat;
+  const lng = project.lng;
+
+  if (/south pointe|first street|\b1st street\b|\b1 street\b|nikki|lot p2/.test(text) || lat < 25.7725) return 'South of Fifth';
+  if (/ocean drive|5th street|5 street|6th st|6 street|fire station/.test(text)) return 'Ocean Drive / Fifth Street';
+  if (/west avenue/.test(text)) return 'West Avenue';
+  if (/flamingo|slow streets|fire flow|meridian/.test(text)) return 'Flamingo Park';
+  if (/lincoln road/.test(text)) return 'Lincoln Road';
+  if (/collins park|23 street|23rd|promenade|dade blvd|collins canal/.test(text)) return 'Collins Park';
+  if (/marine patrol|sunset harbour/.test(text)) return 'Sunset Harbour';
+  if (/venetian/.test(text)) return 'Venetian Islands';
+  if (/sunset islands/.test(text)) return 'Sunset Islands';
+  if (/bayshore/.test(text) || (lat >= 25.801 && lat < 25.809 && lng > -80.138 && lng < -80.127)) return 'Bayshore';
+  if (/41 street|41st/.test(text) || (lat >= 25.809 && lat < 25.821)) return '41st Street / Mid-Beach';
+  if (/pine tree|pump station #28|28 street|beach view|5301 collins/.test(text) || (lat >= 25.821 && lat < 25.836)) return 'Mid-Beach / Collins Corridor';
+  if (/normandy/.test(text)) return 'Normandy Isles';
+  if (/biscayne point/.test(text)) return 'Biscayne Point';
+  if (/72 street|72nd|community complex/.test(text)) return 'North Beach Town Center';
+  if (/north shore|log cabin|oceanside/.test(text) || lat >= 25.865) return 'North Shore / Oceanside';
+  if (/indian creek|shane/.test(text) || (lat >= 25.842 && lat < 25.855)) return 'Indian Creek / North Beach';
+
+  return project.hood || 'Miami Beach';
+}
+
 function colorForCategory(category) {
   const categories = [...new Set(state.projects.map(p => p.category))].sort();
   const index = Math.max(0, categories.indexOf(category));
@@ -69,16 +95,20 @@ async function loadProjects() {
       const res = await fetch(`${url}?v=20260603`, { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      return data.filter(validProject).map(p => ({
-        ...p,
-        title: clean(p.title),
-        summary: clean(p.summary),
-        category: clean(p.category) || 'Other',
-        hood: clean(p.hood) || 'Miami Beach',
-        address: clean(p.address),
-        lat: +p.lat,
-        lng: +p.lng
-      }));
+      return data.filter(validProject).map(p => {
+        const project = {
+          ...p,
+          title: clean(p.title),
+          summary: clean(p.summary),
+          category: clean(p.category) || 'Other',
+          hood: clean(p.hood) || 'Miami Beach',
+          address: clean(p.address),
+          lat: +p.lat,
+          lng: +p.lng
+        };
+        project.area = deriveArea(project);
+        return project;
+      });
     } catch (error) {
       console.warn('Project feed failed', url, error);
     }
@@ -87,7 +117,7 @@ async function loadProjects() {
 }
 
 function buildFilters() {
-  const hoods = [...new Set(state.projects.map(p => p.hood))].sort();
+  const hoods = [...new Set(state.projects.map(p => p.area))].sort();
   const cats = [...new Set(state.projects.map(p => p.category))].sort();
   hoods.forEach(h => els.hood.append(new Option(h, h)));
   cats.forEach(c => els.cat.append(new Option(c, c)));
@@ -103,7 +133,7 @@ function applyFilters() {
   const cat = els.cat.value;
   state.radius = Number(els.radius.value || 1);
   state.filtered = state.projects
-    .filter(p => hood === 'all' || p.hood === hood)
+    .filter(p => hood === 'all' || p.area === hood)
     .filter(p => cat === 'all' || p.category === cat)
     .map(p => ({ ...p, distance: state.origin ? miles(state.origin, p) : null }))
     .filter(p => !state.origin || p.distance <= state.radius)
@@ -116,7 +146,7 @@ function renderMap() {
   state.markers = [];
   state.filtered.forEach(p => {
     const color = colorForCategory(p.category);
-    const marker = L.marker([p.lat, p.lng], { icon: pin(color) }).bindPopup(`<div class="popup"><strong>${p.title}</strong><p><i style="background:${color}"></i>${p.hood} / ${p.category}</p><a href="${p.link}" target="_blank" rel="noreferrer">Official project page</a></div>`);
+    const marker = L.marker([p.lat, p.lng], { icon: pin(color) }).bindPopup(`<div class="popup"><strong>${p.title}</strong><p><i style="background:${color}"></i>${p.area} / ${p.category}</p><a href="${p.link}" target="_blank" rel="noreferrer">Official project page</a></div>`);
     marker.addTo(state.layer);
     state.markers.push(marker);
   });
@@ -140,6 +170,7 @@ function renderList() {
         <h3>${p.title}</h3>
         <p>${p.summary || p.address || 'Project details available from the official city page.'}</p>
         <div class="meta">
+          <span class="pill">${p.area}</span>
           <span class="pill">${p.hood}</span>
           <span class="pill">${p.category}</span>
           ${p.distance != null ? `<span class="pill">${p.distance.toFixed(2)} mi</span>` : ''}
@@ -151,7 +182,7 @@ function renderList() {
 
 function renderStats() {
   const all = state.filtered;
-  const byHood = countBy(all, 'hood');
+  const byHood = countBy(all, 'area');
   const byCat = countBy(all, 'category');
   const topHood = topEntry(byHood);
   const totalCategories = new Set(state.projects.map(p => p.category)).size;
@@ -217,16 +248,18 @@ function renderLegend() {
 
 function renderTransparency(visibleProjects) {
   if (!els.transparency) return;
-  const linked = state.projects.filter(p => p.link).length;
-  const images = state.projects.filter(p => p.image).length;
-  const neighborhoods = new Set(state.projects.map(p => p.hood)).size;
+  const areas = new Set(visibleProjects.map(p => p.area)).size;
+  const infrastructure = visibleProjects.filter(p => /Infrastructure|Neighborhood Improvement/i.test(p.category)).length;
+  const parks = visibleProjects.filter(p => /Parks|Environmental/i.test(p.category)).length;
+  const gob = visibleProjects.filter(p => /G\.O\. Bond/i.test(p.category)).length;
+  const searchView = state.origin ? `${state.radius} mi` : 'Citywide';
   els.transparency.innerHTML = [
-    ['Mapped projects', state.projects.length],
-    ['Visible now', visibleProjects.length],
-    ['Official links', linked],
-    ['Project images', images],
-    ['Neighborhoods', neighborhoods],
-    ['Data source', 'City mirror']
+    ['Visible projects', visibleProjects.length],
+    ['Detailed areas shown', areas],
+    ['Infrastructure / flooding', infrastructure],
+    ['Parks / public space', parks],
+    ['GO Bond funded', gob],
+    ['Current search view', searchView]
   ].map(([label, value]) => `<div class="mini-stat"><strong>${value}</strong><span>${label}</span></div>`).join('');
 }
 
