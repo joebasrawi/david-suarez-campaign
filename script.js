@@ -5,7 +5,7 @@ const revealItems = document.querySelectorAll("[data-reveal]");
 const legislationItems = [
   {
     title: "Party balloon ban in public marinas, parks, marine facilities, and city beaches",
-    role: "Sponsor",
+    role: "Main sponsor",
     topic: "Environment",
     year: "2024",
     summary: "City release identifies Commissioner Suarez as sponsor of the ordinance prohibiting party balloons in key public spaces to protect waterways and marine life.",
@@ -14,24 +14,34 @@ const legislationItems = [
     tags: ["balloons", "marine debris", "parks", "beaches"]
   },
   {
-    title: "Plastic and metallic party decorations in public spaces",
-    role: "Sponsor",
-    topic: "Environment",
-    year: "2025",
-    summary: "City release describes a follow-on public-space restriction aimed at reducing microplastic pollution and expanding the balloon-ban policy approach.",
-    source: "City press release",
-    url: "https://www.miamibeachfl.gov/miami-beach-bans-plastic-and-metallic-party-decorations/",
-    tags: ["microplastics", "decorations", "public spaces"]
-  },
-  {
     title: "Remove eco-tours exception to marina hours of operation",
-    role: "Sponsor",
+    role: "Main sponsor",
     topic: "Waterways",
     year: "2025",
     summary: "Ordinance item sponsored by Commissioner Suarez addressing vessel departure-hour exceptions at publicly owned marinas and marine facilities.",
     source: "City Clerk document",
     url: "https://docmgmt.miamibeachfl.gov/WebLink/ElectronicFile.aspx?dbid=0&docid=299211&repo=CityClerk",
     tags: ["marinas", "charters", "quality of life"]
+  },
+  {
+    title: "Sound regulations for vessels and floating structures",
+    role: "Main sponsor",
+    topic: "Waterways",
+    year: "2025",
+    summary: "Official agenda minutes identify Commissioner Suarez as sponsor of a noise item for vessels and floating structures, with public comment and commission discussion recorded.",
+    source: "Official agenda minutes",
+    url: "https://miamibeach.novusagenda.com/AgendaPublic/MinutesView.aspx?MinutesMeetingID=273",
+    tags: ["noise", "vessels", "floating structures", "quality of life"]
+  },
+  {
+    title: "Metromover extension opposition resolution",
+    role: "Main sponsor",
+    topic: "Transportation",
+    year: "2025",
+    summary: "Official agenda item lists Commissioner Suarez as sponsor, with Commissioner Dominguez as co-sponsor, for a resolution opposing extension of the Metromover into Miami Beach.",
+    source: "Official agenda item",
+    url: "https://miamibeach.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=37718&MeetingID=1381",
+    tags: ["transportation", "metromover", "resolution"]
   },
   {
     title: "Anchoring limitations and derelict-vessel advocacy",
@@ -54,8 +64,18 @@ const legislationItems = [
     tags: ["public safety", "ordinance", "co-sponsor"]
   },
   {
+    title: "Water management expert alternative for land use boards",
+    role: "Co-sponsor",
+    topic: "Environment",
+    year: "2025",
+    summary: "Official agenda item lists Commissioner Laura Dominguez as sponsor and Commissioner Suarez as co-sponsor for allowing water management experts as an alternative to floodplain managers on land use boards.",
+    source: "Official agenda item",
+    url: "https://miamibeach.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=38415&MeetingID=1411",
+    tags: ["land use boards", "water management", "floodplain", "co-sponsor"]
+  },
+  {
     title: "Humane wildlife removal before closing crawlspaces or tenting structures",
-    role: "Official bio",
+    role: "Background record",
     topic: "Animal welfare",
     year: "2024",
     summary: "Animal Welfare Committee agenda notes the crawlspace ordinance passed unanimously on December 11, 2024 and required humane removal before closing crawlspaces or tenting structures.",
@@ -65,7 +85,7 @@ const legislationItems = [
   },
   {
     title: "Short-term rental prohibition in his neighborhood",
-    role: "Official bio",
+    role: "Background record",
     topic: "Neighborhoods",
     year: "Public bio",
     summary: "Official city bio credits Suarez with championing legislation prohibiting short-term rentals in his neighborhood to preserve residential character.",
@@ -75,7 +95,7 @@ const legislationItems = [
   },
   {
     title: "Disabled placard and valet parking loophole",
-    role: "Official bio",
+    role: "Background record",
     topic: "Neighborhoods",
     year: "Public bio",
     summary: "Official city bio credits Suarez with addressing a 70-year loophole involving valet operators abusing disabled placards and parking in residential areas.",
