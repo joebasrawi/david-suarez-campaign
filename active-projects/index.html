@@ -1,333 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miami Beach Active Projects | David Suarez</title>
-  <meta name="description" content="A cleaner civic map of current Miami Beach projects with nearby lookup, live city data, and resident-friendly alerts.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""
-  >
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A clean interactive map of active City of Miami Beach projects with address lookup, nearby projects, filters, charts, and project update signup.">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css?v=20260603e">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-row">
-        <a class="brand" href="../index.html" aria-label="Return to David Suarez home">
-          <span class="brand-mark">DS</span>
-          <span class="brand-copy">
-            <strong>David Suarez</strong>
-            <span>Miami Beach project tracker</span>
-          </span>
-        </a>
+  <header class="topbar">
+    <a class="brand" href="../">David Suarez</a>
+    <nav>
+      <a href="../">Main website</a>
+      <a href="#nearby">Find nearby</a>
+      <a href="#updates">Get updates</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a href="../index.html">Home</a>
-          <a href="#explore">Map</a>
-          <a href="#alerts">Alerts</a>
-          <a href="#sources">Sources</a>
-        </nav>
-
-        <div class="nav-actions">
-          <a class="button button-secondary" href="../index.html#work">Back to main site</a>
-          <a class="button button-primary" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Miami Beach capital projects</p>
+        <h1>See what is being built near you.</h1>
+        <p class="lede">A resident-first view of active public projects, organized by neighborhood, project type, and distance from any Miami Beach address.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#nearby">Search your address</a>
+          <a class="button ghost" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a>
         </div>
       </div>
-    </header>
-
-    <main id="top">
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Resident-first civic map</p>
-            <h1>Miami Beach active projects, mapped like a resident would actually use them.</h1>
-            <p class="hero-text">
-              This page rebuilds the city's active-project map into a cleaner tracker with live project data,
-              stronger filtering, better project cards, and an address lookup that shows what is near you.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#explore">Open the map</a>
-              <a class="button button-tertiary" href="#alerts">Get project alerts</a>
-            </div>
-
-            <div class="hero-stats" id="stats"></div>
+      <aside class="lookup-card" id="nearby">
+        <h2>Projects near me</h2>
+        <p>Enter an address, intersection, landmark, or coordinates in Miami Beach.</p>
+        <form id="address-form">
+          <label for="address-input">Address or place</label>
+          <div class="search-row">
+            <input id="address-input" name="address" autocomplete="street-address" placeholder="1700 Convention Center Drive">
+            <button type="submit">Search</button>
           </div>
+          <div class="radius-row">
+            <label for="radius-input">Radius</label>
+            <select id="radius-input" name="radius">
+              <option value="0.5">0.5 mile</option>
+              <option value="1" selected>1 mile</option>
+              <option value="2">2 miles</option>
+              <option value="5">5 miles</option>
+            </select>
+          </div>
+        </form>
+        <p class="lookup-status" id="lookup-status">Search to highlight nearby projects.</p>
+      </aside>
+    </section>
 
-          <aside class="hero-panel">
-            <div class="panel-topline">
-              <div>
-                <p class="eyebrow">Near your address</p>
-                <h2>Find nearby projects in a few seconds.</h2>
-              </div>
-              <span class="live-pill" id="status">Connecting to city feed</span>
-            </div>
-
-            <form class="address-form" id="address-form">
-              <label class="field">
-                <span class="field-label">Street address</span>
-                <input id="address-input" name="address" type="text" placeholder="Example: 1234 Meridian Ave, Miami Beach, FL" autocomplete="street-address">
-              </label>
-
-              <div class="address-grid">
-                <label class="field">
-                  <span class="field-label">Radius</span>
-                  <select id="radius-select" name="radius">
-                    <option value="0.5">0.5 mile</option>
-                    <option value="1" selected>1 mile</option>
-                    <option value="2">2 miles</option>
-                    <option value="5">5 miles</option>
-                  </select>
-                </label>
-
-                <div class="field button-stack">
-                  <span class="field-label">Action</span>
-                  <div class="inline-actions">
-                    <button class="button button-dark" type="submit">Find nearby</button>
-                    <button class="button button-ghost" id="geo-button" type="button">Use my location</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-
-            <div class="lookup-card" id="lookup-card">
-              <p class="lookup-kicker">No address loaded yet</p>
-              <h3>Search an address to see the projects closest to you.</h3>
-              <p class="lookup-copy">The map will drop a home pin, draw a nearby radius, and sort the list by distance.</p>
-            </div>
-
-            <div class="nearby-list" id="nearby-list"></div>
-          </aside>
+    <section class="map-shell" aria-label="Interactive project map">
+      <div class="map-toolbar">
+        <div>
+          <p class="eyebrow">Live project view</p>
+          <h2 id="project-count">Loading projects</h2>
         </div>
-      </section>
-
-      <section class="section section-tinted" id="explore">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Explorer</p>
-            <h2>Filter by project type, neighborhood, keyword, or distance from your address.</h2>
-            <p class="section-intro">Choose a marker or a card to open the full project panel. Every project links back to the official city source.</p>
-          </div>
-
-          <div class="dashboard">
-            <aside class="control-panel">
-              <div class="panel-block">
-                <label class="field-label" for="search">Search projects</label>
-                <input id="search" type="search" placeholder="Project name, address, or keyword">
-              </div>
-
-              <div class="panel-block">
-                <div class="block-head">
-                  <span class="field-label">Project type</span>
-                  <button class="text-button" id="reset" type="button">Reset</button>
-                </div>
-                <div class="chip-set" id="cat-filters"></div>
-              </div>
-
-              <div class="panel-block">
-                <span class="field-label">Neighborhood</span>
-                <div class="chip-set" id="hood-filters"></div>
-              </div>
-
-              <div class="panel-block">
-                <label class="field-label" for="sort">Sort list</label>
-                <select id="sort">
-                  <option value="az" selected>Alphabetical</option>
-                  <option value="nearby">Closest first</option>
-                  <option value="ns">North to south</option>
-                  <option value="sn">South to north</option>
-                </select>
-              </div>
-
-              <div class="panel-block nearby-controls" id="nearby-controls">
-                <div class="block-head">
-                  <span class="field-label">Nearby mode</span>
-                  <button class="text-button" id="clear-address" type="button">Clear address</button>
-                </div>
-                <label class="toggle">
-                  <input id="nearby-toggle" type="checkbox">
-                  <span>Show only projects inside the selected radius.</span>
-                </label>
-                <p class="helper-text" id="nearby-caption">Add an address to enable nearby filtering.</p>
-              </div>
-
-              <div class="panel-block legend-block">
-                <span class="field-label">Legend</span>
-                <div class="legend-list" id="legend"></div>
-              </div>
-            </aside>
-
-            <section class="map-panel">
-              <div class="map-head">
-                <div>
-                  <p class="panel-kicker">Live map</p>
-                  <h3 id="summary">Loading projects...</h3>
-                </div>
-                <p class="map-note" id="map-note">Live city feed</p>
-              </div>
-              <div id="map" class="map" aria-label="Interactive map of active projects"></div>
-            </section>
-
-            <section class="results-panel">
-              <div class="results-head">
-                <div>
-                  <p class="panel-kicker">Project list</p>
-                  <h3 id="count">0 projects</h3>
-                </div>
-              </div>
-              <div class="cards" id="cards"></div>
-              <div class="empty hide" id="empty">
-                <h3>No matching projects</h3>
-                <p>Clear a filter, widen the radius, or search a different address.</p>
-              </div>
-            </section>
-          </div>
-
-          <section class="detail-shell" id="detail"></section>
+        <div class="filters">
+          <select id="hood-filter" aria-label="Filter by neighborhood"><option value="all">All neighborhoods</option></select>
+          <select id="category-filter" aria-label="Filter by project type"><option value="all">All project types</option></select>
         </div>
-      </section>
+      </div>
+      <div id="map" class="map"></div>
+      <p class="source-note" id="source-note">Loading city project mirror...</p>
+    </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Insights</p>
-            <h2>See where the current project load is concentrated.</h2>
-          </div>
-
-          <div class="insights">
-            <article class="insight-card">
-              <p class="panel-kicker">By neighborhood</p>
-              <div class="bars" id="hood-bars"></div>
-            </article>
-
-            <article class="insight-card">
-              <p class="panel-kicker">By project type</p>
-              <div class="bars" id="cat-bars"></div>
-            </article>
-          </div>
+    <section class="dashboard">
+      <article class="panel wide">
+        <div class="panel-head">
+          <p class="eyebrow">Nearby results</p>
+          <h2 id="results-title">All active projects</h2>
         </div>
-      </section>
+        <div id="project-list" class="project-list"></div>
+      </article>
+      <aside class="panel insights">
+        <p class="eyebrow">At a glance</p>
+        <div id="stats-grid" class="stats-grid"></div>
+        <h3>Projects by type</h3>
+        <div id="chart" class="chart"></div>
+      </aside>
+    </section>
 
-      <section class="section section-band" id="alerts">
-        <div class="container alerts-grid">
-          <div class="alerts-copy">
-            <p class="eyebrow">Project alerts</p>
-            <h2>Get updates without filling out a giant campaign form.</h2>
-            <p class="section-intro">
-              This signup only asks for the minimum: your name, one way to reach you, and the area you care about.
-              Use it for project alerts, meeting notices, and major construction changes.
-            </p>
+    <section class="updates" id="updates">
+      <div>
+        <p class="eyebrow">Resident updates</p>
+        <h2>GET UPDATES ON PROJECTS IN YOUR NEIGHBORHOOD.</h2>
+        <p>Leave only what is useful: a phone or email, your neighborhood, and the kind of projects you want to hear about. No party affiliation, no extra personal details.</p>
+      </div>
+      <form class="updates-form" id="updates-form">
+        <label>Phone or email<input name="contact" required placeholder="305-555-0123 or name@email.com"></label>
+        <label>Neighborhood<select name="neighborhood" id="signup-neighborhood"><option>Any Miami Beach neighborhood</option></select></label>
+        <label>Project interest<select name="interest"><option>All city projects</option><option>Infrastructure and flooding</option><option>Parks and public spaces</option><option>Traffic and safety</option><option>GO Bond projects</option></select></label>
+        <button type="submit">Prepare update request</button>
+        <p id="signup-status" class="signup-status">This opens your text or email app so you control what gets sent.</p>
+      </form>
+    </section>
 
-            <div class="alert-points">
-              <div>
-                <strong>Light touch</strong>
-                <span>Project-specific updates only. No long intake form.</span>
-              </div>
-              <div>
-                <strong>Neighborhood-based</strong>
-                <span>Choose the part of Miami Beach you want to hear about.</span>
-              </div>
-              <div>
-                <strong>Static-site friendly</strong>
-                <span>Submits to the office inbox now and can later swap into a CRM.</span>
-              </div>
-            </div>
-          </div>
+    <section class="sources" id="sources">
+      <p class="eyebrow">Source trail</p>
+      <h2>Official data, clear limitations.</h2>
+      <p>Project names, categories, descriptions, links, and map points are mirrored from the City of Miami Beach active projects directory. This page is a cleaner resident interface, not the official procurement or construction record.</p>
+      <a href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Review the official City of Miami Beach active projects page</a>
+    </section>
+  </main>
 
-          <form class="alerts-form" id="alerts-form" action="https://formsubmit.co/davidsuarez@miamibeachfl.gov" method="POST">
-            <input type="hidden" name="_subject" value="Miami Beach Project Alerts Signup">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_autoresponse" value="Thanks for signing up for Miami Beach project alerts. We will use this only for local project-related updates.">
-
-            <label class="field">
-              <span class="field-label">First name</span>
-              <input name="first_name" type="text" placeholder="Your first name" required>
-            </label>
-
-            <label class="field">
-              <span class="field-label">Phone or email</span>
-              <input id="contact-input" name="contact" type="text" placeholder="Mobile number or email address" required>
-            </label>
-
-            <label class="field">
-              <span class="field-label">Neighborhood interest</span>
-              <select name="neighborhood_interest" required>
-                <option value="">Choose one</option>
-                <option value="South Beach">South Beach</option>
-                <option value="Mid Beach">Mid Beach</option>
-                <option value="North Beach">North Beach</option>
-                <option value="Citywide">Citywide</option>
-              </select>
-            </label>
-
-            <label class="field">
-              <span class="field-label">What should we send?</span>
-              <select name="update_type" required>
-                <option value="Project alerts">Project alerts</option>
-                <option value="Town hall notices">Town hall notices</option>
-                <option value="Both">Both</option>
-              </select>
-            </label>
-
-            <label class="toggle consent">
-              <input id="consent-input" name="consent" type="checkbox" value="Yes" required>
-              <span>I am opting in to receive project updates and understand this request goes to the office inbox.</span>
-            </label>
-
-            <div class="inline-actions">
-              <button class="button button-primary" type="submit">Request alerts</button>
-              <a class="button button-ghost light" href="mailto:davidsuarez@miamibeachfl.gov?subject=Miami%20Beach%20Project%20Alerts">Email instead</a>
-            </div>
-
-            <p class="form-note" id="alerts-status">Project alerts only. No donation ask on this form.</p>
-          </form>
-        </div>
-      </section>
-
-      <section class="section" id="sources">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Sources</p>
-            <h2>Keep the redesign tied to the original public record.</h2>
-          </div>
-
-          <div class="source-grid">
-            <a class="source-card" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">
-              <span class="panel-kicker">Official map</span>
-              <h3>Open the city's active-project page</h3>
-              <p>Use the original map and project pages as the source of truth.</p>
-            </a>
-
-            <a class="source-card" href="https://www.miamibeachfl.gov/city-hall/cip/" target="_blank" rel="noreferrer">
-              <span class="panel-kicker">CIP hub</span>
-              <h3>View the broader capital projects section</h3>
-              <p>This page can expand into the rest of the city's project ecosystem later.</p>
-            </a>
-
-            <a class="source-card" href="https://www.miamibeachfl.gov/wp-json/wpgmza/v1/markers?map_id=11" target="_blank" rel="noreferrer">
-              <span class="panel-kicker">Live feed</span>
-              <h3>Inspect the marker endpoint directly</h3>
-              <p>The page reads from this source live instead of relying on a frozen export.</p>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
-  <script src="app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js?v=20260603e"></script>
 </body>
 </html>
