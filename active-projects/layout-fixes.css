@@ -1,0 +1,21 @@
+.project-list {
+  max-height: min(760px, 72vh);
+  overflow-y: auto;
+  padding-right: 0.35rem;
+  scrollbar-color: rgba(9, 43, 73, 0.35) rgba(9, 43, 73, 0.08);
+  scrollbar-width: thin;
+}
+
+.dashboard .wide {
+  min-height: 0;
+}
+
+.updates {
+  margin-top: 0;
+}
+
+@media (max-width: 980px) {
+  .project-list {
+    max-height: 620px;
+  }
+}
