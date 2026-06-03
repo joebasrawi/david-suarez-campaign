@@ -12,6 +12,25 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css?v=20260603h">
   <link rel="stylesheet" href="layout-fixes.css?v=20260603a">
+  <style>
+    .marker-pin{background:var(--pin-color,var(--coral))}
+    .marker-pin span{background:rgba(255,253,248,.92)}
+    .user-pin{--pin-color:var(--teal)}
+    .popup p{display:flex;align-items:center;gap:.4rem}
+    .popup i{width:.72rem;height:.72rem;border-radius:999px;box-shadow:0 0 0 2px rgba(9,43,73,.08);flex:0 0 auto}
+    .map-legend{display:flex;flex-wrap:wrap;gap:.45rem;padding:.72rem 1.05rem;border-top:1px solid var(--line);background:rgba(255,253,248,.72)}
+    .legend-item{display:inline-flex;align-items:center;gap:.38rem;border:1px solid rgba(9,43,73,.1);border-radius:999px;background:rgba(255,255,255,.78);padding:.4rem .55rem;color:var(--navy);font-size:.74rem;font-weight:800}
+    .legend-item span{width:.7rem;height:.7rem;border-radius:50%;box-shadow:0 0 0 2px rgba(9,43,73,.08)}
+    .legend-item em{display:inline-grid;place-items:center;min-width:1.35rem;height:1.35rem;border-radius:999px;background:rgba(9,43,73,.08);font-style:normal}
+    .type-bar{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:center;gap:.65rem;padding:.58rem;border:1px solid rgba(9,43,73,.08);border-radius:12px;background:rgba(255,255,255,.72)}
+    .bar-rank{display:grid;place-items:center;width:2rem;height:2rem;border-radius:999px;background:var(--bar-color);color:white;font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:800}
+    .secondary-chart{margin-bottom:1rem}
+    .transparency-grid{display:grid;grid-template-columns:1fr 1fr;gap:.58rem;margin-top:1rem}
+    .mini-stat{display:grid;gap:.3rem;align-content:space-between;min-height:4.9rem;padding:.72rem;border:1px solid rgba(9,43,73,.1);border-radius:12px;background:rgba(255,255,255,.7)}
+    .mini-stat strong{color:var(--navy);font-family:"Source Serif 4",serif;font-size:1.35rem;line-height:1}
+    .mini-stat span{color:rgba(9,43,73,.62);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+    @media (max-width:560px){.transparency-grid{grid-template-columns:1fr}.map-legend{padding:.65rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}}
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -31,7 +50,7 @@
     <section class="hero hero-with-map">
       <div class="hero-copy">
         <p class="eyebrow">Miami Beach capital projects</p>
-        <h1>See what is being built near you.</h1>
+        <h1>See what's being built near you.</h1>
         <p class="lede">A resident-first view of active public projects, organized by neighborhood, project type, and distance from any Miami Beach address.</p>
         <div class="hero-actions">
           <a class="button primary" href="#nearby">Search your address</a>
@@ -51,6 +70,7 @@
           </div>
         </div>
         <div id="map" class="map"></div>
+        <div class="map-legend" id="map-legend" aria-label="Project category legend"></div>
         <p class="source-note" id="source-note">Loading city project mirror...</p>
       </section>
 
@@ -105,18 +125,21 @@
         <div id="stats-grid" class="stats-grid"></div>
         <h3>Projects by type</h3>
         <div id="chart" class="chart"></div>
+        <h3>Projects by neighborhood</h3>
+        <div id="hood-chart" class="chart secondary-chart"></div>
+        <div id="transparency-grid" class="transparency-grid"></div>
       </aside>
     </section>
 
     <section class="sources" id="sources">
       <p class="eyebrow">Source trail</p>
-      <h2>Official data, clear limitations.</h2>
+      <h2>Official data.</h2>
       <p>Project names, categories, descriptions, links, and map points are mirrored from the City of Miami Beach active projects directory. This page is a cleaner resident interface, not the official procurement or construction record.</p>
       <a href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Review the official City of Miami Beach active projects page</a>
     </section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="app.js?v=20260603e"></script>
+  <script src="app.js?v=20260603f"></script>
 </body>
 </html>
