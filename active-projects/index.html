@@ -30,6 +30,10 @@
     .mini-stat{display:grid;gap:.3rem;align-content:space-between;min-height:4.9rem;padding:.72rem;border:1px solid rgba(9,43,73,.1);border-radius:12px;background:rgba(255,255,255,.7)}
     .mini-stat strong{color:var(--navy);font-family:"Source Serif 4",serif;font-size:1.35rem;line-height:1}
     .mini-stat span{color:rgba(9,43,73,.62);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+    .panel.wide{display:flex;flex-direction:column;min-height:40rem}
+    .panel.wide .panel-head{flex:0 0 auto}
+    .project-list{flex:1 1 0;align-content:start;min-height:0;max-height:none;overflow:auto;padding-right:.35rem;scrollbar-color:rgba(23,127,122,.55) rgba(9,43,73,.08)}
+    @media (max-width:980px){.panel.wide{min-height:auto}.project-list{flex:none;height:min(72vh,680px);min-height:26rem}}
     @media (max-width:560px){.transparency-grid{grid-template-columns:1fr}.map-legend{left:.65rem;right:.65rem;bottom:3.45rem;max-height:8rem;overflow:auto;padding:.55rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}}
   </style>
 </head>
