@@ -45,6 +45,9 @@
     .brand-ribbon{justify-self:start;margin-left:.35rem;padding:.12rem .48rem .15rem;background:var(--teal);color:var(--cream);font-size:.72rem;font-weight:900;letter-spacing:.32em}
     .brand-name{color:var(--navy);font-family:"Anton",sans-serif;font-size:clamp(2rem,3.3vw,3rem);letter-spacing:.035em}
     .brand-subline{color:var(--teal);font-size:.6rem;font-weight:900;letter-spacing:.13em}
+    .reset-search{width:100%;min-height:44px;margin-top:.75rem;border:1px solid rgba(9,43,73,.14);border-radius:999px;background:rgba(255,253,248,.82);color:var(--navy);font-weight:900;cursor:pointer}
+    .reset-search:hover{background:rgba(23,127,122,.12);border-color:rgba(23,127,122,.34)}
+    .reset-search[hidden]{display:none}
     @media (max-width:980px){.panel.wide{min-height:auto}.project-list{flex:none;height:min(72vh,680px);min-height:26rem}}
     @media (max-width:560px){.brand-name{font-size:2rem}.brand-subline{font-size:.55rem}.transparency-grid{grid-template-columns:1fr}.map-legend{left:.65rem;right:.65rem;bottom:3.45rem;max-height:8rem;overflow:auto;padding:.55rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}}
   </style>
@@ -114,6 +117,7 @@
               <option value="5">5 miles</option>
             </select>
           </div>
+          <button class="reset-search" id="reset-search" type="button">Show all projects</button>
         </form>
         <p class="lookup-status" id="lookup-status">Search to highlight nearby projects.</p>
       </aside>
@@ -164,5 +168,6 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="app.js?v=20260604b"></script>
   <script src="future-map-fixes.js?v=20260604b"></script>
+  <script src="interaction-fixes.js?v=20260604a"></script>
 </body>
 </html>
