@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miami Beach Active Projects | David Suarez</title>
-  <meta name="description" content="A clean interactive map of active City of Miami Beach projects with address lookup, nearby projects, filters, charts, and project update signup.">
+  <title>Miami Beach Project Map | David Suarez</title>
+  <meta name="description" content="A clean interactive map of current and future City of Miami Beach projects with address lookup, nearby projects, filters, charts, and project update signup.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap" rel="stylesheet">
@@ -25,6 +25,12 @@
     .legend-item em{display:inline-grid;place-items:center;min-width:1.35rem;height:1.35rem;border-radius:999px;background:rgba(9,43,73,.08);font-style:normal}
     .type-bar{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:center;gap:.65rem;padding:.58rem;border:1px solid rgba(9,43,73,.08);border-radius:12px;background:rgba(255,255,255,.72)}
     .bar-rank{display:grid;place-items:center;width:2rem;height:2rem;border-radius:999px;background:var(--bar-color);color:white;font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:800}
+    .view-tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+    .view-tab{border:1px solid rgba(9,43,73,.12);border-radius:999px;background:rgba(255,255,255,.72);color:var(--navy);padding:.65rem .9rem;font-size:.82rem;font-weight:900;cursor:pointer}
+    .view-tab.active{background:var(--navy);color:var(--cream);box-shadow:0 14px 28px rgba(9,43,73,.16)}
+    .future-meta{display:flex;gap:.45rem;flex-wrap:wrap;margin:.3rem 0 .55rem}
+    .cost-pill{border-radius:999px;background:rgba(197,154,53,.18);color:var(--navy);padding:.34rem .55rem;font-size:.76rem;font-weight:900}
+    .future-thumb{display:grid;place-items:center;color:rgba(255,253,248,.92);font-family:"Anton",sans-serif;font-size:1.7rem;letter-spacing:.05em}
     .secondary-chart{margin-bottom:1rem}
     .transparency-grid{display:grid;grid-template-columns:1fr 1fr;gap:.58rem;margin-top:1rem}
     .mini-stat{display:grid;gap:.3rem;align-content:space-between;min-height:4.9rem;padding:.72rem;border:1px solid rgba(9,43,73,.1);border-radius:12px;background:rgba(255,255,255,.7)}
@@ -61,7 +67,11 @@
       <div class="hero-copy">
         <p class="eyebrow">Miami Beach capital projects</p>
         <h1>See what's being built near you.</h1>
-        <p class="lede">A resident-first view of active public projects, organized by neighborhood, project type, and distance from any Miami Beach address.</p>
+        <p class="lede">A resident-first view of active public projects and future infrastructure needs, organized by neighborhood, project type, and distance from any Miami Beach address.</p>
+        <div class="view-tabs" role="tablist" aria-label="Project dataset">
+          <button class="view-tab active" type="button" role="tab" aria-selected="true" data-view="active">Current active projects</button>
+          <button class="view-tab" type="button" role="tab" aria-selected="false" data-view="future">Future projects</button>
+        </div>
         <div class="hero-actions">
           <a class="button primary" href="#nearby">Search your address</a>
           <a class="button ghost" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a>
@@ -71,7 +81,7 @@
       <section class="map-shell hero-map" aria-label="Interactive project map">
         <div class="map-toolbar">
           <div>
-            <p class="eyebrow">Live project view</p>
+            <p class="eyebrow" id="view-eyebrow">Live project view</p>
             <h2 id="project-count">Loading projects</h2>
           </div>
           <div class="filters">
@@ -144,12 +154,12 @@
     <section class="sources" id="sources">
       <p class="eyebrow">Source trail</p>
       <h2>Official data.</h2>
-      <p>Project names, categories, descriptions, links, and map points are mirrored from the City of Miami Beach active projects directory. This page is a cleaner resident interface, not the official procurement or construction record.</p>
+      <p>Active project names, categories, descriptions, links, and map points are mirrored from the City of Miami Beach active projects directory. Future project needs are transcribed from the June 5, 2026 Critical Infrastructure Funding presentation and mapped with approximate resident-facing locations when the deck identifies a corridor or neighborhood.</p>
       <a href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Review the official City of Miami Beach active projects page</a>
     </section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="app.js?v=20260603i"></script>
+  <script src="app.js?v=20260604a"></script>
 </body>
 </html>
