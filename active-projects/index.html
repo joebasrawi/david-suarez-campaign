@@ -33,15 +33,20 @@
     .panel.wide{display:flex;flex-direction:column;min-height:40rem}
     .panel.wide .panel-head{flex:0 0 auto}
     .project-list{flex:1 1 0;align-content:start;min-height:0;max-height:none;overflow:auto;padding-right:.35rem;scrollbar-color:rgba(23,127,122,.55) rgba(9,43,73,.08)}
+    .brand-wordmark{display:inline-grid;gap:.02rem;line-height:.92;text-transform:uppercase}
+    .brand-ribbon{justify-self:start;margin-left:.35rem;padding:.12rem .48rem .15rem;background:var(--teal);color:var(--cream);font-size:.72rem;font-weight:900;letter-spacing:.32em}
+    .brand-name{color:var(--navy);font-family:"Anton",sans-serif;font-size:clamp(2rem,3.3vw,3rem);letter-spacing:.035em}
+    .brand-subline{color:var(--teal);font-size:.6rem;font-weight:900;letter-spacing:.13em}
     @media (max-width:980px){.panel.wide{min-height:auto}.project-list{flex:none;height:min(72vh,680px);min-height:26rem}}
-    @media (max-width:560px){.transparency-grid{grid-template-columns:1fr}.map-legend{left:.65rem;right:.65rem;bottom:3.45rem;max-height:8rem;overflow:auto;padding:.55rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}}
+    @media (max-width:560px){.brand-name{font-size:2rem}.brand-subline{font-size:.55rem}.transparency-grid{grid-template-columns:1fr}.map-legend{left:.65rem;right:.65rem;bottom:3.45rem;max-height:8rem;overflow:auto;padding:.55rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}}
   </style>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="../" aria-label="David Suarez home">
-      <span class="brand-mark">DS</span>
-      <span class="brand-copy"><strong>David Suarez</strong><span>Miami Beach project tracker</span></span>
+    <a class="brand brand-wordmark" href="../" aria-label="David Suarez home">
+      <span class="brand-ribbon">David</span>
+      <span class="brand-name">Suarez</span>
+      <span class="brand-subline">Commissioner - Miami Beach Group 5</span>
     </a>
     <nav>
       <a href="../">Main website</a>
