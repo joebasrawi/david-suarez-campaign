@@ -39,9 +39,9 @@
     const visiblePins = spread(state.filtered);
     visiblePins.forEach(project => {
       const color = colorForCategory(project.category);
-      const linkText = state.view === 'future' ? 'Open source presentation' : 'Open official project page';
       const detail = state.view === 'future' ? `${project.area} / ${project.category} / ${formatMoney(project.totalNeed)}` : `${project.area} / ${project.category}`;
-      const marker = L.marker([project.mapLat, project.mapLng], { icon: pin(color) }).bindPopup(`<div class="popup"><strong>${project.title}</strong><p><i style="background:${color}"></i>${detail}</p><a href="${project.link}" target="_blank" rel="noreferrer">${linkText}</a></div>`);
+      const link = state.view === 'future' ? '' : '<a href="' + project.link + '" target="_blank" rel="noreferrer">Open official project page</a>';
+      const marker = L.marker([project.mapLat, project.mapLng], { icon: pin(color) }).bindPopup(`<div class="popup"><strong>${project.title}</strong><p><i style="background:${color}"></i>${detail}</p>${link}</div>`);
       marker.addTo(state.layer);
       state.markers.push(marker);
     });
@@ -59,7 +59,6 @@
       els.list.innerHTML = '<p>No projects match this search. Try a larger radius or fewer filters.</p>';
       return;
     }
-    const linkText = state.view === 'future' ? 'Open source presentation' : 'Open official project page';
     els.list.innerHTML = state.filtered.map(project => `
       <article class="project-card">
         ${project.image ? `<img class="thumb" src="${project.image}" alt="">` : state.view === 'future' ? `<div class="thumb future-thumb" style="--thumb-color:${colorForCategory(project.category)}" aria-hidden="true">${iconFor(project.category)}</div>` : '<div class="thumb" aria-hidden="true"></div>'}
@@ -74,7 +73,7 @@
             ${state.view === 'future' ? `<span class="pill">${project.address}</span>` : ''}
             ${project.distance != null ? `<span class="pill">${project.distance.toFixed(2)} mi</span>` : ''}
           </div>
-          <p><a href="${project.link}" target="_blank" rel="noreferrer">${linkText}</a></p>
+          ${state.view === 'future' ? '' : `<p><a href="${project.link}" target="_blank" rel="noreferrer">Open official project page</a></p>`}
         </div>
       </article>`).join('');
   };
