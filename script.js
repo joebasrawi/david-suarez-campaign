@@ -1,201 +1,46 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
-const revealItems = document.querySelectorAll("[data-reveal]");
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('.site-nav');
+const revealItems = document.querySelectorAll('[data-reveal]');
 
 const legislationItems = [
-  {
-    title: "Party balloon ban in public marinas, parks, marine facilities, and city beaches",
-    role: "Main sponsor",
-    topic: "Environment",
-    year: "2024",
-    summary: "City release identifies Commissioner Suarez as sponsor of the ordinance prohibiting party balloons in key public spaces to protect waterways and marine life.",
-    source: "City press release",
-    url: "https://www.miamibeachfl.gov/miami-beach-prohibits-party-balloons-in-public-marinas-parks-and-beaches/",
-    tags: ["balloons", "marine debris", "parks", "beaches"]
-  },
-  {
-    title: "Remove eco-tours exception to marina hours of operation",
-    role: "Main sponsor",
-    topic: "Waterways",
-    year: "2025",
-    summary: "Ordinance item sponsored by Commissioner Suarez addressing vessel departure-hour exceptions at publicly owned marinas and marine facilities.",
-    source: "City Clerk document",
-    url: "https://docmgmt.miamibeachfl.gov/WebLink/ElectronicFile.aspx?dbid=0&docid=299211&repo=CityClerk",
-    tags: ["marinas", "charters", "quality of life"]
-  },
-  {
-    title: "Sound regulations for vessels and floating structures",
-    role: "Main sponsor",
-    topic: "Waterways",
-    year: "2025",
-    summary: "Official agenda minutes identify Commissioner Suarez as sponsor of a noise item for vessels and floating structures, with public comment and commission discussion recorded.",
-    source: "Official agenda minutes",
-    url: "https://miamibeach.novusagenda.com/AgendaPublic/MinutesView.aspx?MinutesMeetingID=273",
-    tags: ["noise", "vessels", "floating structures", "quality of life"]
-  },
-  {
-    title: "Metromover extension opposition resolution",
-    role: "Main sponsor",
-    topic: "Transportation",
-    year: "2025",
-    summary: "Official agenda item lists Commissioner Suarez as sponsor, with Commissioner Dominguez as co-sponsor, for a resolution opposing extension of the Metromover into Miami Beach.",
-    source: "Official agenda item",
-    url: "https://miamibeach.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=37718&MeetingID=1381",
-    tags: ["transportation", "metromover", "resolution"]
-  },
-  {
-    title: "Anchoring limitations and derelict-vessel advocacy",
-    role: "Presented",
-    topic: "Waterways",
-    year: "2025",
-    summary: "Public deck presented by Commissioner Suarez on derelict and abandoned boats, Miami Beach examples, and statewide anchoring limitations.",
-    source: "City Clerk presentation",
-    url: "https://docmgmt.miamibeachfl.gov/WebLink/edoc/309503/R5%20I%20Anchoring%20Legislation.pdf?dbid=0&repo=CityClerk",
-    tags: ["anchoring", "derelict boats", "state legislation"]
-  },
-  {
-    title: "Repeal civil citation option for certain marijuana-related offenses",
-    role: "Co-sponsor",
-    topic: "Public safety",
-    year: "2024",
-    summary: "Business impact estimate identifies the item as sponsored by Commissioner Alex Fernandez and co-sponsored by Mayor Steven Meiner and Commissioner Suarez.",
-    source: "Business impact estimate",
-    url: "https://docmgmt.miamibeachfl.gov/WebLink/edoc/294032/BIE%20-%20Repeal%20Decriminalization%20of%20Marijuana%20Related%20Offenses.%20%28292024%29.pdf?dbid=0&repo=CityClerk",
-    tags: ["public safety", "ordinance", "co-sponsor"]
-  },
-  {
-    title: "Water management expert alternative for land use boards",
-    role: "Co-sponsor",
-    topic: "Environment",
-    year: "2025",
-    summary: "Official agenda item lists Commissioner Laura Dominguez as sponsor and Commissioner Suarez as co-sponsor for allowing water management experts as an alternative to floodplain managers on land use boards.",
-    source: "Official agenda item",
-    url: "https://miamibeach.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=38415&MeetingID=1411",
-    tags: ["land use boards", "water management", "floodplain", "co-sponsor"]
-  },
-  {
-    title: "Humane wildlife removal before closing crawlspaces or tenting structures",
-    role: "Background record",
-    topic: "Animal welfare",
-    year: "2024",
-    summary: "Animal Welfare Committee agenda notes the crawlspace ordinance passed unanimously on December 11, 2024 and required humane removal before closing crawlspaces or tenting structures.",
-    source: "Committee agenda",
-    url: "https://docmgmt.miamibeachfl.gov/WebLink/edoc/301750/12.17%20AWC%20Agenda.pdf?dbid=0&repo=CityClerk",
-    tags: ["animal welfare", "crawlspaces", "humane removal"]
-  },
-  {
-    title: "Short-term rental prohibition in his neighborhood",
-    role: "Background record",
-    topic: "Neighborhoods",
-    year: "Public bio",
-    summary: "Official city bio credits Suarez with championing legislation prohibiting short-term rentals in his neighborhood to preserve residential character.",
-    source: "Official city bio",
-    url: "https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/",
-    tags: ["short-term rentals", "residential character", "neighborhoods"]
-  },
-  {
-    title: "Disabled placard and valet parking loophole",
-    role: "Background record",
-    topic: "Neighborhoods",
-    year: "Public bio",
-    summary: "Official city bio credits Suarez with addressing a 70-year loophole involving valet operators abusing disabled placards and parking in residential areas.",
-    source: "Official city bio",
-    url: "https://www.miamibeachfl.gov/egovapp/mayor-and-commissioners/commissioner-david-suarez/",
-    tags: ["parking", "valet", "quality of life"]
-  }
+  {id:'2025-06-25-r5h',item:'R5H',type:'Ordinance',status:'On agenda',meetingDate:'2025-06-25',topic:'Waterways',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Prohibit anchoring of commercial vessels',language:'An ordinance amending Chapter 66 of the City Code, entitled Marine Structures, Facilities and Vessels, by creating Section 66-143 to prohibit anchoring of commercial vessels or floating structures used to rent, store, or otherwise secure other vessels.',summary:'Creates a city code prohibition aimed at commercial vessels and floating structures that use anchoring as a business storage or rental platform.',stage:'Regular agenda ordinance item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['anchoring','commercial vessels','marine structures','floating structures']},
+  {id:'2025-06-25-r5i',item:'R5I',type:'Ordinance',status:'On agenda',meetingDate:'2025-06-25',topic:'Waterways',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Establish Miami Beach overnight anchoring limitation area',language:'An ordinance amending Chapter 66 of the City Code, entitled Marine Structures, Facilities and Vessels, by creating Section 66-156 to establish a Miami Beach overnight anchoring limitation area.',summary:'Establishes a local overnight anchoring limitation area for Miami Beach waterways.',stage:'Regular agenda ordinance item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['anchoring','overnight anchoring','marine patrol','waterways']},
+  {id:'2025-06-25-c7ao',item:'C7AO',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Waterways',sponsor:'City Attorney',department:'City Attorney',area:'Citywide',title:'Urge Marine Patrol to relocate vessels creating navigational hazards',language:'A resolution urging Marine Patrol to require vessels anchored or moored in or adjacent to channels, or otherwise constituting a navigational hazard or interference, to endeavor to have such vessels relocated in accordance with Florida law.',summary:'Directs attention to anchored or moored vessels that create safety problems in channels and waterways.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['marine patrol','navigation','channels','Florida law']},
+  {id:'2025-06-25-c7at',item:'C7AT',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Public safety',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Route homeless activity reports to MBPD dispatch',language:'A resolution directing the administration to route all homeless activity reports submitted through the MB GOV mobile application to Miami Beach Police Department dispatch, in addition to Housing and Community Services.',summary:'Changes intake routing so reports go to police dispatch as well as the city housing team for faster response and enforcement review.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['MB GOV','dispatch','homeless activity','enforcement']},
+  {id:'2025-06-25-c7bf',item:'C7BF',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Governance',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Censure former Sustainability Committee member Johann Moore',language:'A resolution censuring former Sustainability Committee member Johann Moore, condemning recent incendiary remarks, and reassuring residents that safety and confidence in city government will be maintained.',summary:'A formal censure resolution tied to conduct by a former city committee member.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['censure','committee','public confidence']},
+  {id:'2025-06-25-c7bl',item:'C7BL',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Parks and culture',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Allow free ice rink access after Florida Panthers Stanley Cup win',language:'A resolution directing the administration to allow residents free admission to the Scott Rakow Youth Center ice rink during a weekend in July to honor the Florida Panthers for their Stanley Cup Finals victory.',summary:'Creates a resident-facing recreation benefit tied to the Florida Panthers championship.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['Scott Rakow','ice rink','residents','Florida Panthers']},
+  {id:'2025-06-25-r5j',item:'R5J',type:'Ordinance',status:'On agenda',meetingDate:'2025-06-25',topic:'Economic development',sponsor:'Commissioner Joseph Magazine',department:'City Attorney',area:'Citywide',title:'Create Economic Development Advisory Committee',language:'An ordinance amending Chapter 2 of the City Code by creating Division 35 and Sections 2-190.157 through 2-190.160 to establish the Economic Development Advisory Committee.',summary:'Creates a new advisory committee to provide recommendations and ideas supporting economic development in Miami Beach.',stage:'Regular agenda ordinance item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['economic development','advisory committee','boards']},
+  {id:'2025-06-25-r5k',item:'R5K',type:'Ordinance',status:'On agenda',meetingDate:'2025-06-25',topic:'Sanitation',sponsor:'Commissioner Alex Fernandez',department:'City Attorney',area:'Citywide',title:'Allow outdoor maintenance equipment exemption',language:'An ordinance amending Chapter 46, Environment, Article IV, Noise, to provide an exemption allowing commercial entities to use certain outdoor maintenance equipment at specified times.',summary:'Adds a targeted noise-code exemption for outdoor maintenance equipment to support sanitation and cleanliness.',stage:'Regular agenda ordinance item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['noise','maintenance','sanitation','commercial']},
+  {id:'2025-06-25-r5l',item:'R5L',type:'Ordinance',status:'On agenda',meetingDate:'2025-06-25',topic:'Public safety',sponsor:'City Attorney',department:'City Attorney',area:'Citywide',title:'Double graffiti fines',language:'An ordinance amending Chapter 70, Miscellaneous Offenses, Article III, Graffiti, to double civil fines for violations.',summary:'Raises civil penalties for graffiti violations under the city code.',stage:'Regular agenda ordinance item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['graffiti','fines','code compliance']},
+  {id:'2025-06-25-c7f',item:'C7F',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Resilience',sponsor:'Commissioner Laura Dominguez',department:'Environment and Sustainability',area:'Citywide',title:'Accept sea level rise vulnerability assessment and adaptation plan',language:'A resolution accepting the City of Miami Beach Sea Level Rise Vulnerability Assessment and Adaptation Plan.',summary:'Accepts the citywide assessment and adaptation plan for sea level rise risks.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['sea level rise','resilience','vulnerability assessment']},
+  {id:'2025-06-25-c7ar',item:'C7AR',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Resilience',sponsor:'City Attorney',department:'City Attorney',area:'Citywide',title:'Support Miami-Dade County seawall ordinance',language:'A resolution expressing support for adoption of the Miami-Dade County seawall ordinance, recognizing seawall infrastructure for flood mitigation, coastal resilience, and public safety, and urging efficient permitting and intergovernmental collaboration.',summary:'Supports county-level seawall regulation and calls for faster, flexible implementation for coastal resilience.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['seawalls','flood mitigation','county ordinance','resilience']},
+  {id:'2025-06-25-c7as',item:'C7AS',type:'Resolution',status:'On agenda',meetingDate:'2025-06-25',topic:'Health',sponsor:'City Attorney',department:'City Attorney',area:'Citywide',title:'Ban smoking in outdoor dining concession areas',language:'A resolution directing the City Manager to amend selected outdoor dining concession agreements for the term beginning October 1, 2025, to include a voluntary no-cigarette-smoking term in concession areas.',summary:'Uses concession agreement terms to prevent cigarette smoking in outdoor dining concession areas.',stage:'Consent resolution item',source:'Miami Beach Agenda',url:'https://miamibeachagenda.com/agenda/june/25/2025',tags:['outdoor dining','smoking','concession agreements']},
+  {id:'2025-09-22-plastic-decorations',item:'ORD',type:'Ordinance',status:'Adopted',meetingDate:'2025-09-22',topic:'Environment',sponsor:'Commissioner Alex Fernandez',cosponsors:'Commissioner David Suarez',department:'City Attorney',area:'Public marinas, parks, marine facilities, and beaches',title:'Ban plastic and metallic party decorations in sensitive public spaces',language:'City ordinance extending the party balloon restrictions to plastic and metallic decorations, including glitter, tinsel, metalized confetti, sequins, synthetic flower petals, and mylar streamers.',summary:'Expands environmental restrictions to materials that break down into microplastics in beaches, parks, marinas, and waterways.',stage:'City release announcing commission vote',source:'City press release',url:'https://www.miamibeachfl.gov/miami-beach-bans-plastic-and-metallic-party-decorations/',tags:['microplastics','decorations','beaches','parks','marinas']},
+  {id:'2025-eco-tours-marina-hours',item:'ORD',type:'Ordinance',status:'First reading public hearing',meetingDate:'2025-03-01',topic:'Waterways',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Remove eco-tour exception to marina hours of operation',language:'An ordinance to repeal the exception for educational eco or nature tours that allows those operators to operate outside normal business hours in the City Code.',summary:'Targets a marina-hours carveout by removing special after-hours treatment for educational eco or nature tour operators.',stage:'Business impact estimate / first reading record',source:'City Clerk document',url:'https://docmgmt.miamibeachfl.gov/WebLink/ElectronicFile.aspx?dbid=0&docid=299211&repo=CityClerk',tags:['eco tours','marina hours','commercial vessels']},
+  {id:'2024-02-21-c7j-metromover',item:'C7J',type:'Resolution',status:'Agenda item',meetingDate:'2024-02-21',topic:'Transportation',sponsor:'Commissioner David Suarez',cosponsors:'Mayor Steven Meiner and Commissioners Dominguez, Bhatt, Magazine, Rosen Gonzalez, and Fernandez',department:'City Attorney',area:'Citywide',title:'Oppose Metromover as the Beach Corridor trunkline option',language:'A resolution opposing the use of Metromover as the transit option for the Beach Corridor trunkline of the Miami-Dade SMART Plan, urging the TPO to rescind the designation, and urging alternative transportation solutions such as bus express rapid transit.',summary:'States city opposition to Metromover expansion into Miami Beach and asks county transportation bodies to revisit the preferred alternative.',stage:'Consent resolution item',source:'Official Novus coversheet',url:'https://miamibeach.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=33950&MeetingID=1335',tags:['Metromover','SMART Plan','TPO','BERT']},
+  {id:'2024-02-21-marijuana-citation',item:'R5',type:'Ordinance',status:'Adopted',meetingDate:'2024-02-21',topic:'Public safety',sponsor:'Commissioner Alex Fernandez',cosponsors:'Mayor Steven Meiner and Commissioner David Suarez',department:'City Attorney',area:'Citywide',title:'Repeal civil citation option for certain marijuana-related offenses',language:'Ordinance repealing the civil citation option for possession of 20 grams or less of marijuana and related offenses.',summary:'Removes the city civil citation path and returns low-level marijuana possession handling to criminal enforcement options.',stage:'Adopted on second reading per public reporting',source:'Business impact estimate',url:'https://docmgmt.miamibeachfl.gov/WebLink/edoc/294032/BIE%20-%20Repeal%20Decriminalization%20of%20Marijuana%20Related%20Offenses.%20%28292024%29.pdf?dbid=0&repo=CityClerk',tags:['marijuana','civil citation','spring break','enforcement']},
+  {id:'2024-03-13-r5m-water-expert',item:'R5M',type:'Ordinance',status:'Adopted on first reading',meetingDate:'2024-03-13',topic:'Land use',sponsor:'Commissioner Tanya Bhatt',cosponsors:'Commissioners Alex Fernandez and David Suarez',department:'Planning',area:'Citywide',title:'Land use board water expert alternative requirement',language:'An ordinance amending the Miami Beach Resiliency Code sections governing Planning Board, Design Review Board, and Historic Preservation Board membership to allow the water management expert position to alternatively be occupied by a resident at-large.',summary:'Changes qualification flexibility for the water management expert seat on land use boards.',stage:'First reading adopted 7-0; second reading scheduled for April 3, 2024',source:'Official agenda minutes',url:'https://miamibeach.novusagenda.com/agendapublic/DisplayAgendaPDF.ashx?MinutesMeetingID=1196',tags:['land use boards','water management','resiliency code']},
+  {id:'2024-02-01-party-balloons',item:'ORD',type:'Ordinance',status:'Adopted',meetingDate:'2024-02-01',topic:'Environment',sponsor:'Commissioner David Suarez',department:'City Attorney',area:'Public marinas, parks, marine facilities, and beaches',title:'Prohibit party balloons in public marinas, parks, marine facilities, and city beaches',language:'City ordinance banning party balloons in public marinas, public marine facilities, public parks, and city beaches, with escalating civil fines after educational warnings.',summary:'Goes beyond state balloon-release limits by banning party balloons in key public coastal and recreational spaces.',stage:'City release announcing commission vote',source:'City press release',url:'https://www.miamibeachfl.gov/miami-beach-prohibits-party-balloons-in-public-marinas-parks-and-beaches/',tags:['balloons','marine debris','wildlife','civil fines']},
+  {id:'2023-11-28-r7a-election',item:'R7A',type:'Resolution',status:'Agenda item',meetingDate:'2023-11-28',topic:'Elections',sponsor:'Office of the City Clerk',department:'Office of the City Clerk',area:'Citywide',title:'Certify November 21, 2023 runoff election results',language:'A resolution adopting the certification of the results of the November 21, 2023 runoff election for the City of Miami Beach and declaring candidates elected.',summary:'Formal certification of the 2023 runoff election results.',stage:'Regular agenda resolution item',source:'Official Novus agenda',url:'https://miamibeach.novusagenda.com/agendapublic/MeetingView.aspx?MeetingID=1278&MinutesMeetingID=-1&doctype=Agenda',tags:['election','certification','runoff']},
+  {id:'2023-11-28-r7b-budget',item:'R7B',type:'Resolution',status:'Public hearing',meetingDate:'2023-11-28',topic:'Budget',sponsor:'Office of Management and Budget',department:'Office of Management and Budget',area:'Citywide',title:'Adopt eighth amendment to FY 2023 budgets',language:'A resolution adopting the eighth amendment to the General Fund, Enterprise Funds, Internal Service Funds, and Special Revenue Funds budgets for Fiscal Year 2023.',summary:'Amends multiple FY 2023 city funds through the budget resolution process.',stage:'10:01 a.m. public hearing',source:'Official Novus agenda',url:'https://miamibeach.novusagenda.com/agendapublic/MeetingView.aspx?MeetingID=1278&MinutesMeetingID=-1&doctype=Agenda',tags:['budget','FY2023','public hearing']},
+  {id:'2023-11-28-r7c-budget',item:'R7C',type:'Resolution',status:'Public hearing',meetingDate:'2023-11-28',topic:'Budget',sponsor:'Office of Management and Budget',department:'Office of Management and Budget',area:'Citywide',title:'Adopt first amendment to FY 2024 budgets',language:'A resolution adopting the first amendment to the General Fund, Enterprise Funds, Internal Service Funds, and Special Revenue Funds budgets for Fiscal Year 2024.',summary:'Amends the citywide FY 2024 budget shortly after the fiscal year began.',stage:'10:03 a.m. public hearing',source:'Official Novus agenda',url:'https://miamibeach.novusagenda.com/agendapublic/MeetingView.aspx?MeetingID=1278&MinutesMeetingID=-1&doctype=Agenda',tags:['budget','FY2024','public hearing']},
+  {id:'2023-11-28-r7g-vice-mayor',item:'R7G',type:'Resolution',status:'Agenda item',meetingDate:'2023-11-28',topic:'Governance',sponsor:'Office of the City Clerk',department:'Office of the City Clerk',area:'Citywide',title:'Elect Commissioner Kristen Rosen Gonzalez as vice mayor',language:'A resolution electing Commissioner Kristen Rosen Gonzalez, Group I, as vice-mayor for a term commencing November 28, 2023 and terminating March 31, 2024.',summary:'Sets the vice mayor term immediately after the November 2023 election cycle.',stage:'Regular agenda resolution item',source:'Official Novus agenda',url:'https://miamibeach.novusagenda.com/agendapublic/MeetingView.aspx?MeetingID=1278&MinutesMeetingID=-1&doctype=Agenda',tags:['vice mayor','commission','governance']},
+  {id:'2024-12-11-humane-wildlife',item:'ORD',type:'Ordinance',status:'Adopted',meetingDate:'2024-12-11',topic:'Animal welfare',sponsor:'City Commission',department:'Animal Welfare Committee',area:'Citywide',title:'Require humane wildlife removal before closing crawlspaces or tenting structures',language:'Ordinance requiring humane removal before closing crawlspaces or tenting structures, as summarized in the Animal Welfare Committee agenda.',summary:'Protects animals from being sealed into crawlspaces or structures during building closure or tenting work.',stage:'Animal Welfare Committee agenda notes unanimous passage',source:'Committee agenda',url:'https://docmgmt.miamibeachfl.gov/WebLink/edoc/301750/12.17%20AWC%20Agenda.pdf?dbid=0&repo=CityClerk',tags:['animal welfare','crawlspaces','tenting','humane removal']}
 ];
 
-function toggleMenu(forceClose = false) {
-  if (!menuToggle || !siteNav) {
-    return;
-  }
+let selectedLegislationId = legislationItems[0]?.id || null;
 
-  const shouldOpen = forceClose ? false : menuToggle.getAttribute("aria-expanded") !== "true";
-  menuToggle.setAttribute("aria-expanded", String(shouldOpen));
-  siteNav.classList.toggle("is-open", shouldOpen);
-}
+function toggleMenu(forceClose=false){if(!menuToggle||!siteNav)return;const shouldOpen=forceClose?false:menuToggle.getAttribute('aria-expanded')!=='true';menuToggle.setAttribute('aria-expanded',String(shouldOpen));siteNav.classList.toggle('is-open',shouldOpen)}
+function escapeHtml(value=''){return String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;')}
+function formatDate(value){if(!value)return'Date not listed';return new Date(`${value}T12:00:00`).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})}
+function populateLegislationFilters(){[['#type-filter',legislationItems.map(i=>i.type)],['#status-filter',legislationItems.map(i=>i.status)],['#sponsor-filter',legislationItems.flatMap(i=>[i.sponsor,i.cosponsors].filter(Boolean))],['#topic-filter',legislationItems.map(i=>i.topic)]].forEach(([selector,values])=>{const select=document.querySelector(selector);if(!select||select.dataset.ready==='true')return;[...new Set(values)].sort((a,b)=>a.localeCompare(b)).forEach(value=>{const option=document.createElement('option');option.value=value;option.textContent=value;select.appendChild(option)});select.dataset.ready='true'})}
+function getFilteredLegislation(){const query=document.querySelector('#legislation-search')?.value.trim().toLowerCase()||'';const typeValue=document.querySelector('#type-filter')?.value||'all';const statusValue=document.querySelector('#status-filter')?.value||'all';const sponsorValue=document.querySelector('#sponsor-filter')?.value||'all';const topicValue=document.querySelector('#topic-filter')?.value||'all';const sortValue=document.querySelector('#legislation-sort')?.value||'newest';const oldRole=document.querySelector('#role-filter')?.value||'all';const filtered=legislationItems.filter(item=>{const sponsors=[item.sponsor,item.cosponsors].filter(Boolean).join(' ');const roleMatch=oldRole==='all'||(oldRole==='Main sponsor'&&/David Suarez/.test(item.sponsor))||(oldRole==='Co-sponsor'&&/David Suarez/.test(item.cosponsors||''))||oldRole==='Background record'||oldRole==='Presented';const haystack=[item.item,item.type,item.status,item.meetingDate,item.topic,item.sponsor,item.cosponsors,item.department,item.area,item.title,item.summary,item.language,item.stage,item.source,...item.tags].filter(Boolean).join(' ').toLowerCase();return roleMatch&&(typeValue==='all'||item.type===typeValue)&&(statusValue==='all'||item.status===statusValue)&&(sponsorValue==='all'||sponsors.includes(sponsorValue))&&(topicValue==='all'||item.topic===topicValue)&&(!query||haystack.includes(query))});return filtered.sort((a,b)=>sortValue==='oldest'?a.meetingDate.localeCompare(b.meetingDate):sortValue==='item'?a.item.localeCompare(b.item):sortValue==='sponsor'?a.sponsor.localeCompare(b.sponsor)||b.meetingDate.localeCompare(a.meetingDate):b.meetingDate.localeCompare(a.meetingDate))}
+function renderLegislationStats(){const stats=document.querySelector('#legislation-stats');if(!stats)return;const ordinances=legislationItems.filter(i=>i.type==='Ordinance').length;const resolutions=legislationItems.filter(i=>i.type==='Resolution').length;stats.innerHTML=[['Records',legislationItems.length],['Ordinances',ordinances],['Resolutions',resolutions],['Sponsors',new Set(legislationItems.map(i=>i.sponsor)).size],['Issue areas',new Set(legislationItems.map(i=>i.topic)).size]].map(([label,value])=>`<article><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></article>`).join('')}
+function renderLegislationDetail(item){const detail=document.querySelector('#legislation-detail');if(!detail)return;if(!item){detail.innerHTML='<div class="detail-empty"><h3>No record selected</h3><p>Choose a legislation record to see sponsor, status, source, and language.</p></div>';return}detail.innerHTML=`<div class="detail-eyebrow">${escapeHtml(item.type)} ${escapeHtml(item.item)}</div><h3>${escapeHtml(item.title)}</h3><div class="detail-status-row"><span>${escapeHtml(item.status)}</span><span>${escapeHtml(formatDate(item.meetingDate))}</span><span>${escapeHtml(item.topic)}</span></div><p class="record-copy">${escapeHtml(item.summary)}</p><dl class="legislation-fields"><div><dt>Sponsor</dt><dd>${escapeHtml(item.sponsor)}</dd></div>${item.cosponsors?`<div><dt>Co-sponsors</dt><dd>${escapeHtml(item.cosponsors)}</dd></div>`:''}<div><dt>Department</dt><dd>${escapeHtml(item.department)}</dd></div><div><dt>Area</dt><dd>${escapeHtml(item.area)}</dd></div><div><dt>Stage</dt><dd>${escapeHtml(item.stage)}</dd></div></dl><div class="language-box"><span class="field-label">Legislative language</span><p>${escapeHtml(item.language)}</p></div><div class="record-tags">${item.tags.map(tag=>`<span>${escapeHtml(tag)}</span>`).join('')}</div><div class="detail-actions"><a class="button button-primary" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Open source</a><a class="button button-secondary" href="https://miamibeachagenda.com/" target="_blank" rel="noreferrer">Search all agendas</a></div>`}
+function renderLegislation(){const list=document.querySelector('#legislation-list');const count=document.querySelector('#legislation-count');if(!list||!count)return;populateLegislationFilters();renderLegislationStats();const filtered=getFilteredLegislation();if(!filtered.some(item=>item.id===selectedLegislationId))selectedLegislationId=filtered[0]?.id||null;count.textContent=`${filtered.length} of ${legislationItems.length} source-backed ${filtered.length===1?'record':'records'} shown`;list.innerHTML=filtered.length?filtered.map(item=>`<article class="record-card ${item.id===selectedLegislationId?'is-selected':''}"><button type="button" class="record-select" data-legislation-id="${escapeHtml(item.id)}"><span class="record-status">${escapeHtml(item.type)}</span><span class="record-item">${escapeHtml(item.item)}</span></button><div class="record-main"><div class="record-line"><span>${escapeHtml(formatDate(item.meetingDate))}</span><span>${escapeHtml(item.status)}</span><span>${escapeHtml(item.topic)}</span></div><h3>${escapeHtml(item.title)}</h3><p class="record-copy">${escapeHtml(item.summary)}</p><div class="record-meta-grid"><span><strong>Sponsor:</strong> ${escapeHtml(item.sponsor)}</span><span><strong>Department:</strong> ${escapeHtml(item.department)}</span></div><div class="record-tags">${item.tags.slice(0,5).map(tag=>`<span>${escapeHtml(tag)}</span>`).join('')}</div></div><a class="record-source" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.source)}</a></article>`).join(''):'<article class="record-card"><div></div><div><h3>No matching records</h3><p class="record-copy">Clear the filters or search another keyword.</p></div></article>';list.querySelectorAll('[data-legislation-id]').forEach(button=>button.addEventListener('click',()=>{selectedLegislationId=button.dataset.legislationId;renderLegislation()}));renderLegislationDetail(filtered.find(item=>item.id===selectedLegislationId)||null)}
 
-function renderLegislation() {
-  const list = document.querySelector("#legislation-list");
-  const count = document.querySelector("#legislation-count");
-  const search = document.querySelector("#legislation-search");
-  const role = document.querySelector("#role-filter");
-  const topic = document.querySelector("#topic-filter");
-
-  if (!list || !count || !search || !role || !topic) {
-    return;
-  }
-
-  const query = search.value.trim().toLowerCase();
-  const roleValue = role.value;
-  const topicValue = topic.value;
-
-  const filtered = legislationItems.filter((item) => {
-    const haystack = [item.title, item.role, item.topic, item.year, item.summary, item.source, ...item.tags]
-      .join(" ")
-      .toLowerCase();
-    return (roleValue === "all" || item.role === roleValue)
-      && (topicValue === "all" || item.topic === topicValue)
-      && (!query || haystack.includes(query));
-  });
-
-  count.textContent = `${filtered.length} source-backed ${filtered.length === 1 ? "record" : "records"} shown`;
-
-  list.innerHTML = filtered.length
-    ? filtered.map((item) => `
-      <article class="record-card">
-        <div>
-          <span class="record-status">${item.role}</span>
-        </div>
-        <div>
-          <h3>${item.title}</h3>
-          <p class="record-copy">${item.summary}</p>
-          <div class="record-tags">
-            <span>${item.topic}</span>
-            <span>${item.year}</span>
-            ${item.tags.map((tag) => `<span>${tag}</span>`).join("")}
-          </div>
-        </div>
-        <a href="${item.url}" target="_blank" rel="noreferrer">${item.source}</a>
-      </article>
-    `).join("")
-    : `<article class="record-card"><div></div><div><h3>No matching records</h3><p class="record-copy">Clear the filters or search another keyword.</p></div></article>`;
-}
-
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => toggleMenu());
-}
-
-if (siteNav) {
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => toggleMenu(true));
-  });
-}
-
-["#legislation-search", "#role-filter", "#topic-filter"].forEach((selector) => {
-  const element = document.querySelector(selector);
-  if (element) {
-    element.addEventListener("input", renderLegislation);
-    element.addEventListener("change", renderLegislation);
-  }
-});
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
-      entry.target.classList.add("is-visible");
-      revealObserver.unobserve(entry.target);
-    });
-  },
-  {
-    threshold: 0.14,
-    rootMargin: "0px 0px -30px 0px"
-  }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
+if(menuToggle)menuToggle.addEventListener('click',()=>toggleMenu());
+if(siteNav)siteNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>toggleMenu(true)));
+['#legislation-search','#type-filter','#status-filter','#sponsor-filter','#topic-filter','#legislation-sort','#role-filter'].forEach(selector=>{const element=document.querySelector(selector);if(element){element.addEventListener('input',renderLegislation);element.addEventListener('change',renderLegislation)}});
+if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)})},{threshold:.14,rootMargin:'0px 0px -30px 0px'});revealItems.forEach(item=>revealObserver.observe(item))}else{revealItems.forEach(item=>item.classList.add('is-visible'))}
 renderLegislation();
