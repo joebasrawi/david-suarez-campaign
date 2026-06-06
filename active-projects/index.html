@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miami Beach Project and Legislation Dashboard | David Suarez</title>
-  <meta name="description" content="Interactive Miami Beach dashboard with current project maps, future infrastructure projects, address lookup, charts, and a detailed ordinance and resolution tracker.">
+  <title>Resident Dashboard | David Suarez</title>
+  <meta name="description" content="Resident dashboard for Miami Beach with current project maps, future infrastructure projects, address lookup, charts, resident updates, and a detailed ordinance and resolution tracker.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="layout-fixes.css?v=20260603a">
   <link rel="stylesheet" href="legislation-dashboard.css?v=20260605a">
   <style>
-    .marker-pin{background:var(--pin-color,var(--coral))}.marker-pin span{background:rgba(255,253,248,.92)}.user-pin{--pin-color:var(--teal)}.popup p{display:flex;align-items:center;gap:.4rem}.popup i{width:.72rem;height:.72rem;border-radius:999px;box-shadow:0 0 0 2px rgba(9,43,73,.08);flex:0 0 auto}.map-shell{position:relative}.map-legend{position:absolute;left:1rem;right:1rem;bottom:3.7rem;z-index:500;display:flex;flex-wrap:wrap;gap:.45rem;padding:.65rem;border:1px solid rgba(9,43,73,.12);border-radius:16px;background:rgba(255,253,248,.9);box-shadow:0 18px 42px rgba(9,43,73,.14);backdrop-filter:blur(14px)}.legend-item{display:inline-flex;align-items:center;gap:.38rem;border:1px solid rgba(9,43,73,.1);border-radius:999px;background:rgba(255,255,255,.78);padding:.4rem .55rem;color:var(--navy);font-size:.74rem;font-weight:800}.legend-item span{width:.7rem;height:.7rem;border-radius:50%;box-shadow:0 0 0 2px rgba(9,43,73,.08)}.legend-item em{display:inline-grid;place-items:center;min-width:1.35rem;height:1.35rem;border-radius:999px;background:rgba(9,43,73,.08);font-style:normal}.type-bar{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:center;gap:.65rem;padding:.58rem;border:1px solid rgba(9,43,73,.08);border-radius:12px;background:rgba(255,255,255,.72)}.bar-rank{display:grid;place-items:center;width:2rem;height:2rem;border-radius:999px;background:var(--bar-color);color:white;font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:800}.view-tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}.view-tab{border:1px solid rgba(9,43,73,.12);border-radius:999px;background:rgba(255,255,255,.72);color:var(--navy);padding:.65rem .9rem;font-size:.82rem;font-weight:900;cursor:pointer}.view-tab.active{background:var(--navy);color:var(--cream);box-shadow:0 14px 28px rgba(9,43,73,.16)}.future-meta{display:flex;gap:.45rem;flex-wrap:wrap;margin:.3rem 0 .55rem}.cost-pill{border-radius:999px;background:rgba(197,154,53,.18);color:var(--navy);padding:.34rem .55rem;font-size:.76rem;font-weight:900}.future-thumb{position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 78% 22%,rgba(255,253,248,.42),transparent 1.9rem),linear-gradient(135deg,var(--thumb-color,var(--teal)),var(--navy));color:rgba(255,253,248,.92)}.future-thumb:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.22) 0 2px,transparent 2px 10px);opacity:.35}.future-thumb svg{position:relative;z-index:1;width:3.2rem;height:3.2rem;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 6px 12px rgba(9,43,73,.18))}.secondary-chart{margin-bottom:1rem}.transparency-grid{display:grid;grid-template-columns:1fr 1fr;gap:.58rem;margin-top:1rem}.mini-stat{display:grid;gap:.3rem;align-content:space-between;min-height:4.9rem;padding:.72rem;border:1px solid rgba(9,43,73,.1);border-radius:12px;background:rgba(255,255,255,.7)}.mini-stat strong{color:var(--navy);font-family:"Source Serif 4",serif;font-size:1.35rem;line-height:1}.mini-stat span{color:rgba(9,43,73,.62);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}.panel.wide{display:flex;flex-direction:column;min-height:40rem}.panel.wide .panel-head{flex:0 0 auto}.project-list{flex:1 1 0;align-content:start;min-height:0;max-height:none;overflow:auto;padding-right:.35rem;scrollbar-color:rgba(23,127,122,.55) rgba(9,43,73,.08)}.brand-wordmark{display:inline-grid;gap:.02rem;line-height:.92;text-transform:uppercase}.brand-ribbon{justify-self:start;margin-left:.35rem;padding:.12rem .48rem .15rem;background:var(--teal);color:var(--cream);font-size:.72rem;font-weight:900;letter-spacing:.32em}.brand-name{color:var(--navy);font-family:"Anton",sans-serif;font-size:clamp(2rem,3.3vw,3rem);letter-spacing:.035em}.brand-subline{color:var(--teal);font-size:.6rem;font-weight:900;letter-spacing:.13em}.reset-search{width:100%;min-height:44px;margin-top:.75rem;border:1px solid rgba(9,43,73,.14);border-radius:999px;background:rgba(255,253,248,.82);color:var(--navy);font-weight:900;cursor:pointer}.reset-search:hover{background:rgba(23,127,122,.12);border-color:rgba(23,127,122,.34)}.reset-search[hidden]{display:none}@media (max-width:980px){.panel.wide{min-height:auto}.project-list{flex:none;height:min(72vh,680px);min-height:26rem}}@media (max-width:560px){.brand-name{font-size:2rem}.brand-subline{font-size:.55rem}.transparency-grid{grid-template-columns:1fr}.map-legend{left:.65rem;right:.65rem;bottom:3.45rem;max-height:8rem;overflow:auto;padding:.55rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}}
+    .marker-pin{background:var(--pin-color,var(--coral))}.marker-pin span{background:rgba(255,253,248,.92)}.user-pin{--pin-color:var(--teal)}.popup p{display:flex;align-items:center;gap:.4rem}.popup i{width:.72rem;height:.72rem;border-radius:999px;box-shadow:0 0 0 2px rgba(9,43,73,.08);flex:0 0 auto}.map-shell{position:relative}.map-legend{position:absolute;left:1rem;right:1rem;bottom:3.7rem;z-index:500;display:flex;flex-wrap:wrap;gap:.45rem;padding:.65rem;border:1px solid rgba(9,43,73,.12);border-radius:16px;background:rgba(255,253,248,.9);box-shadow:0 18px 42px rgba(9,43,73,.14);backdrop-filter:blur(14px)}.legend-item{display:inline-flex;align-items:center;gap:.38rem;border:1px solid rgba(9,43,73,.1);border-radius:999px;background:rgba(255,255,255,.78);padding:.4rem .55rem;color:var(--navy);font-size:.74rem;font-weight:800}.legend-item span{width:.7rem;height:.7rem;border-radius:50%;box-shadow:0 0 0 2px rgba(9,43,73,.08)}.legend-item em{display:inline-grid;place-items:center;min-width:1.35rem;height:1.35rem;border-radius:999px;background:rgba(9,43,73,.08);font-style:normal}.type-bar{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:center;gap:.65rem;padding:.58rem;border:1px solid rgba(9,43,73,.08);border-radius:12px;background:rgba(255,255,255,.72)}.bar-rank{display:grid;place-items:center;width:2rem;height:2rem;border-radius:999px;background:var(--bar-color);color:white;font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:800}.view-tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}.view-tab{border:1px solid rgba(9,43,73,.12);border-radius:999px;background:rgba(255,255,255,.72);color:var(--navy);padding:.65rem .9rem;font-size:.82rem;font-weight:900;cursor:pointer}.view-tab.active{background:var(--navy);color:var(--cream);box-shadow:0 14px 28px rgba(9,43,73,.16)}.resource-strip{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0 0}.resource-strip a{display:inline-flex;align-items:center;min-height:42px;border:1px solid rgba(9,43,73,.12);border-radius:999px;background:rgba(255,255,255,.78);color:var(--navy);padding:.62rem .85rem;font-size:.8rem;font-weight:900;text-decoration:none}.resource-strip a:first-child{background:var(--navy);color:var(--cream)}.future-meta{display:flex;gap:.45rem;flex-wrap:wrap;margin:.3rem 0 .55rem}.cost-pill{border-radius:999px;background:rgba(197,154,53,.18);color:var(--navy);padding:.34rem .55rem;font-size:.76rem;font-weight:900}.future-thumb{position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 78% 22%,rgba(255,253,248,.42),transparent 1.9rem),linear-gradient(135deg,var(--thumb-color,var(--teal)),var(--navy));color:rgba(255,253,248,.92)}.future-thumb:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.22) 0 2px,transparent 2px 10px);opacity:.35}.future-thumb svg{position:relative;z-index:1;width:3.2rem;height:3.2rem;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 6px 12px rgba(9,43,73,.18))}.secondary-chart{margin-bottom:1rem}.transparency-grid{display:grid;grid-template-columns:1fr 1fr;gap:.58rem;margin-top:1rem}.mini-stat{display:grid;gap:.3rem;align-content:space-between;min-height:4.9rem;padding:.72rem;border:1px solid rgba(9,43,73,.1);border-radius:12px;background:rgba(255,255,255,.7)}.mini-stat strong{color:var(--navy);font-family:"Source Serif 4",serif;font-size:1.35rem;line-height:1}.mini-stat span{color:rgba(9,43,73,.62);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}.panel.wide{display:flex;flex-direction:column;min-height:40rem}.panel.wide .panel-head{flex:0 0 auto}.project-list{flex:1 1 0;align-content:start;min-height:0;max-height:none;overflow:auto;padding-right:.35rem;scrollbar-color:rgba(23,127,122,.55) rgba(9,43,73,.08)}.brand-wordmark{display:inline-grid;gap:.02rem;line-height:.92;text-transform:uppercase}.brand-ribbon{justify-self:start;margin-left:.35rem;padding:.12rem .48rem .15rem;background:var(--teal);color:var(--cream);font-size:.72rem;font-weight:900;letter-spacing:.32em}.brand-name{color:var(--navy);font-family:"Anton",sans-serif;font-size:clamp(2rem,3.3vw,3rem);letter-spacing:.035em}.brand-subline{color:var(--teal);font-size:.6rem;font-weight:900;letter-spacing:.13em}.reset-search{width:100%;min-height:44px;margin-top:.75rem;border:1px solid rgba(9,43,73,.14);border-radius:999px;background:rgba(255,253,248,.82);color:var(--navy);font-weight:900;cursor:pointer}.reset-search:hover{background:rgba(23,127,122,.12);border-color:rgba(23,127,122,.34)}.reset-search[hidden]{display:none}@media (max-width:980px){.panel.wide{min-height:auto}.project-list{flex:none;height:min(72vh,680px);min-height:26rem}}@media (max-width:560px){.brand-name{font-size:2rem}.brand-subline{font-size:.55rem}.transparency-grid{grid-template-columns:1fr}.map-legend{left:.65rem;right:.65rem;bottom:3.45rem;max-height:8rem;overflow:auto;padding:.55rem}.legend-item{font-size:.7rem}.type-bar{grid-template-columns:1.8rem minmax(0,1fr)}.bar-rank{width:1.8rem;height:1.8rem}.resource-strip a{width:100%;justify-content:center}}
   </style>
 </head>
 <body>
@@ -25,96 +25,49 @@
       <span class="brand-subline">Commissioner - Miami Beach Group 5</span>
     </a>
     <nav>
-      <a href="../">Main website</a>
-      <a href="#nearby">Find nearby</a>
+      <a href="#dashboard">Resident Dashboard</a>
+      <a href="#nearby">Projects near me</a>
       <a href="#legislation">Legislation</a>
       <a href="#updates">Get updates</a>
       <a href="#sources">Sources</a>
     </nav>
   </header>
 
-  <main>
+  <main id="dashboard">
     <section class="hero hero-with-map">
       <div class="hero-copy">
-        <p class="eyebrow">Miami Beach capital projects</p>
-        <h1>See what's being built near you.</h1>
-        <p class="lede">A resident-first view of active public projects, future infrastructure needs, and city legislation, organized for residents by neighborhood, project type, issue area, and distance from any Miami Beach address.</p>
+        <p class="eyebrow">Miami Beach resident dashboard</p>
+        <h1>One place for city resources.</h1>
+        <p class="lede">A resident-first dashboard for active projects, future infrastructure needs, legislation, alerts, and official source links. This page is built to grow as more resident tools are added.</p>
+        <div class="resource-strip" aria-label="Resident dashboard resources">
+          <a href="#nearby">Active projects</a>
+          <a href="#nearby">Future projects</a>
+          <a href="#legislation">Legislation tracker</a>
+          <a href="#updates">Resident updates</a>
+          <a href="#sources">Source library</a>
+        </div>
         <div class="view-tabs" role="tablist" aria-label="Project dataset">
           <button class="view-tab active" type="button" role="tab" aria-selected="true" data-view="active">Current active projects</button>
           <button class="view-tab" type="button" role="tab" aria-selected="false" data-view="future">Future projects</button>
         </div>
-        <div class="hero-actions">
-          <a class="button primary" href="#nearby">Search your address</a>
-          <a class="button ghost" href="#legislation">Search legislation</a>
-          <a class="button ghost" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a>
-        </div>
+        <div class="hero-actions"><a class="button primary" href="#nearby">Search your address</a><a class="button ghost" href="#legislation">Search legislation</a><a class="button ghost" href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Official city page</a></div>
       </div>
 
       <section class="map-shell hero-map" aria-label="Interactive project map">
-        <div class="map-toolbar">
-          <div><p class="eyebrow" id="view-eyebrow">Live project view</p><h2 id="project-count">Loading projects</h2></div>
-          <div class="filters">
-            <select id="hood-filter" aria-label="Filter by neighborhood"><option value="all">All neighborhoods</option></select>
-            <select id="category-filter" aria-label="Filter by project type"><option value="all">All project types</option></select>
-          </div>
-        </div>
-        <div id="map" class="map"></div>
-        <div class="map-legend" id="map-legend" aria-label="Project category legend"></div>
-        <p class="source-note" id="source-note">Loading city project mirror...</p>
+        <div class="map-toolbar"><div><p class="eyebrow" id="view-eyebrow">Live project view</p><h2 id="project-count">Loading projects</h2></div><div class="filters"><select id="hood-filter" aria-label="Filter by neighborhood"><option value="all">All neighborhoods</option></select><select id="category-filter" aria-label="Filter by project type"><option value="all">All project types</option></select></div></div>
+        <div id="map" class="map"></div><div class="map-legend" id="map-legend" aria-label="Project category legend"></div><p class="source-note" id="source-note">Loading city project mirror...</p>
       </section>
 
-      <aside class="lookup-card" id="nearby">
-        <h2>Projects near me</h2>
-        <p>Enter an address, intersection, landmark, or coordinates in Miami Beach.</p>
-        <form id="address-form">
-          <label for="address-input">Address or place</label>
-          <div class="search-row"><input id="address-input" name="address" autocomplete="street-address" placeholder="1700 Convention Center Drive"><button type="submit">Search</button></div>
-          <div class="radius-row"><label for="radius-input">Radius</label><select id="radius-input" name="radius"><option value="0.5">0.5 mile</option><option value="1" selected>1 mile</option><option value="2">2 miles</option><option value="5">5 miles</option></select></div>
-          <button class="reset-search" id="reset-search" type="button">Show all projects</button>
-        </form>
-        <p class="lookup-status" id="lookup-status">Search to highlight nearby projects.</p>
-      </aside>
+      <aside class="lookup-card" id="nearby"><h2>Projects near me</h2><p>Enter an address, intersection, landmark, or coordinates in Miami Beach.</p><form id="address-form"><label for="address-input">Address or place</label><div class="search-row"><input id="address-input" name="address" autocomplete="street-address" placeholder="1700 Convention Center Drive"><button type="submit">Search</button></div><div class="radius-row"><label for="radius-input">Radius</label><select id="radius-input" name="radius"><option value="0.5">0.5 mile</option><option value="1" selected>1 mile</option><option value="2">2 miles</option><option value="5">5 miles</option></select></div><button class="reset-search" id="reset-search" type="button">Show all projects</button></form><p class="lookup-status" id="lookup-status">Search to highlight nearby projects.</p></aside>
     </section>
 
-    <section class="dashboard">
-      <article class="panel wide"><div class="panel-head"><p class="eyebrow">Nearby results</p><h2 id="results-title">All active projects</h2></div><div id="project-list" class="project-list"></div></article>
-      <aside class="panel insights"><p class="eyebrow">At a glance</p><div id="stats-grid" class="stats-grid"></div><h3>Projects by type</h3><div id="chart" class="chart"></div><h3>Projects by neighborhood</h3><div id="hood-chart" class="chart secondary-chart"></div><div id="transparency-grid" class="transparency-grid"></div></aside>
-    </section>
+    <section class="dashboard"><article class="panel wide"><div class="panel-head"><p class="eyebrow">Nearby results</p><h2 id="results-title">All active projects</h2></div><div id="project-list" class="project-list"></div></article><aside class="panel insights"><p class="eyebrow">At a glance</p><div id="stats-grid" class="stats-grid"></div><h3>Projects by type</h3><div id="chart" class="chart"></div><h3>Projects by neighborhood</h3><div id="hood-chart" class="chart secondary-chart"></div><div id="transparency-grid" class="transparency-grid"></div></aside></section>
 
-    <section class="legislation-dashboard" id="legislation">
-      <div class="legislation-heading">
-        <div><p class="eyebrow">Miami Beach legislation</p><h2>Track ordinances and resolutions beside the project maps.</h2></div>
-        <p>Search introduced, pending, and adopted items by type, status, sponsor, department, issue area, legislative language, tags, and official source links.</p>
-      </div>
-      <div class="tracker">
-        <div class="tracker-stats" id="legislation-stats" aria-label="Legislation tracker summary"></div>
-        <div class="tracker-controls">
-          <label class="field"><span class="field-label">Search</span><input id="legislation-search" type="search" placeholder="Keyword, sponsor, item, chapter, or issue"></label>
-          <label class="field"><span class="field-label">Type</span><select id="type-filter"><option value="all">All types</option></select></label>
-          <label class="field"><span class="field-label">Status</span><select id="status-filter"><option value="all">All statuses</option></select></label>
-          <label class="field"><span class="field-label">Sponsor</span><select id="sponsor-filter"><option value="all">All sponsors</option></select></label>
-          <label class="field"><span class="field-label">Issue area</span><select id="topic-filter"><option value="all">All issue areas</option></select></label>
-          <label class="field"><span class="field-label">Sort</span><select id="legislation-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="item">Item number</option><option value="sponsor">Sponsor</option></select></label>
-        </div>
-        <div class="tracker-meta"><p id="legislation-count">Loading records...</p><div class="tracker-source-links"><a href="https://www.miamibeachfl.gov/city-hall/city-clerk/meetings-and-agendas/" target="_blank" rel="noreferrer">Official meetings page</a><a href="https://docmgmt.miamibeachfl.gov/WebLink/Browse.aspx?id=68335&dbid=0&repo=CityClerk" target="_blank" rel="noreferrer">City Clerk records</a><a href="https://miamibeachagenda.com/" target="_blank" rel="noreferrer">Search all agendas</a></div></div>
-        <div class="legislation-workspace"><div class="legislation-list" id="legislation-list" aria-label="Legislation result list"></div><aside class="legislation-detail" id="legislation-detail" aria-label="Selected legislation details"></aside></div>
-      </div>
-    </section>
+    <section class="legislation-dashboard" id="legislation"><div class="legislation-heading"><div><p class="eyebrow">Miami Beach legislation</p><h2>Track ordinances and resolutions beside the project maps.</h2></div><p>Search introduced, pending, and adopted items by type, status, sponsor, department, issue area, legislative language, tags, and official source links.</p></div><div class="tracker"><div class="tracker-stats" id="legislation-stats" aria-label="Legislation tracker summary"></div><div class="tracker-controls"><label class="field"><span class="field-label">Search</span><input id="legislation-search" type="search" placeholder="Keyword, sponsor, item, chapter, or issue"></label><label class="field"><span class="field-label">Type</span><select id="type-filter"><option value="all">All types</option></select></label><label class="field"><span class="field-label">Status</span><select id="status-filter"><option value="all">All statuses</option></select></label><label class="field"><span class="field-label">Sponsor</span><select id="sponsor-filter"><option value="all">All sponsors</option></select></label><label class="field"><span class="field-label">Issue area</span><select id="topic-filter"><option value="all">All issue areas</option></select></label><label class="field"><span class="field-label">Sort</span><select id="legislation-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="item">Item number</option><option value="sponsor">Sponsor</option></select></label></div><div class="tracker-meta"><p id="legislation-count">Loading records...</p><div class="tracker-source-links"><a href="https://www.miamibeachfl.gov/city-hall/city-clerk/meetings-and-agendas/" target="_blank" rel="noreferrer">Official meetings page</a><a href="https://docmgmt.miamibeachfl.gov/WebLink/Browse.aspx?id=68335&dbid=0&repo=CityClerk" target="_blank" rel="noreferrer">City Clerk records</a><a href="https://miamibeachagenda.com/" target="_blank" rel="noreferrer">Search all agendas</a></div></div><div class="legislation-workspace"><div class="legislation-list" id="legislation-list" aria-label="Legislation result list"></div><aside class="legislation-detail" id="legislation-detail" aria-label="Selected legislation details"></aside></div></div></section>
 
-    <section class="updates" id="updates">
-      <div><p class="eyebrow">Resident updates</p><h2>GET UPDATES ON PROJECTS IN YOUR NEIGHBORHOOD.</h2><p>Leave only what is useful: a phone or email, your neighborhood, and the kind of projects you want to hear about. No party affiliation, no extra personal details.</p></div>
-      <form class="updates-form" id="updates-form">
-        <label>Phone or email<input name="contact" required placeholder="305-555-0123 or name@email.com"></label>
-        <label>Neighborhood<select name="neighborhood" id="signup-neighborhood"><option>Any Miami Beach neighborhood</option></select></label>
-        <label>Project interest<select name="interest"><option>All city projects</option><option>Infrastructure and flooding</option><option>Parks and public spaces</option><option>Traffic and safety</option><option>GO Bond projects</option></select></label>
-        <button type="submit">Prepare update request</button><p id="signup-status" class="signup-status">This opens your text or email app so you control what gets sent.</p>
-      </form>
-    </section>
+    <section class="updates" id="updates"><div><p class="eyebrow">Resident updates</p><h2>GET UPDATES ON PROJECTS IN YOUR NEIGHBORHOOD.</h2><p>Leave only what is useful: a phone or email, your neighborhood, and the kind of projects you want to hear about. No party affiliation, no extra personal details.</p></div><form class="updates-form" id="updates-form"><label>Phone or email<input name="contact" required placeholder="305-555-0123 or name@email.com"></label><label>Neighborhood<select name="neighborhood" id="signup-neighborhood"><option>Any Miami Beach neighborhood</option></select></label><label>Project interest<select name="interest"><option>All city projects</option><option>Infrastructure and flooding</option><option>Parks and public spaces</option><option>Traffic and safety</option><option>GO Bond projects</option></select></label><button type="submit">Prepare update request</button><p id="signup-status" class="signup-status">This opens your text or email app so you control what gets sent.</p></form></section>
 
-    <section class="sources" id="sources">
-      <p class="eyebrow">Source trail</p><h2>Official data.</h2><p>Active project names, categories, descriptions, links, and map points are mirrored from the City of Miami Beach active projects directory. Future project needs are transcribed from the June 5, 2026 Critical Infrastructure Funding presentation and mapped with approximate resident-facing locations when the deck identifies a corridor or neighborhood. Legislation records link back to city agendas, City Clerk records, public releases, and official Novus items.</p>
-      <a href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Review the official City of Miami Beach active projects page</a>
-    </section>
+    <section class="sources" id="sources"><p class="eyebrow">Source trail</p><h2>Official data.</h2><p>Active project names, categories, descriptions, links, and map points are mirrored from the City of Miami Beach active projects directory. Future project needs are transcribed from the June 5, 2026 Critical Infrastructure Funding presentation and mapped with approximate resident-facing locations when the deck identifies a corridor or neighborhood. Legislation records link back to city agendas, City Clerk records, public releases, and official Novus items.</p><a href="https://www.miamibeachfl.gov/city-hall/cip/active-projects/" target="_blank" rel="noreferrer">Review the official City of Miami Beach active projects page</a></section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
