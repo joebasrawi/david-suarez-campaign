@@ -53,6 +53,13 @@
       "authority": "Third-party resident navigation layer",
       "use": "Discover the current commission agenda and David Suarez sponsorship metadata; every snapshot preserves the official PrimeGov source link",
       "automation": "data/city-agenda.json"
+    },
+    {
+      "name": "Mayor and Commissioners directory",
+      "url": "https://www.miamibeachfl.gov/city-hall/elected-officials/",
+      "authority": "City of Miami Beach",
+      "use": "Current elected-official roster, official profiles, and sponsor portraits",
+      "automation": "data/commissioners.json"
     }
   ],
   "commissionerChannels": [

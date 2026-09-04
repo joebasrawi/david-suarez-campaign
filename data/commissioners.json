@@ -1,0 +1,79 @@
+{
+  "source": {
+    "label": "City of Miami Beach Mayor & Commissioners",
+    "url": "https://www.miamibeachfl.gov/city-hall/elected-officials/",
+    "note": "Portraits and profile links are sourced from the official City of Miami Beach website."
+  },
+  "items": [
+    {
+      "slug": "steven-meiner",
+      "name": "Steven Meiner",
+      "title": "Mayor",
+      "group": "Mayor",
+      "aliases": ["Mayor Steven Meiner", "Steven Meiner"],
+      "portrait": "../assets/commissioners/steven-meiner.jpg",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/Mayor_Steven_Meiner_11-25UpdateOptimized.jpg",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/mayor-steven-meiner/"
+    },
+    {
+      "slug": "monica-matteo-salinas",
+      "name": "Monica Matteo-Salinas",
+      "title": "Commissioner",
+      "group": "Group 1",
+      "aliases": ["Commissioner Monica Matteo-Salinas", "Monica Matteo-Salinas"],
+      "portrait": "../assets/commissioners/monica-matteo-salinas.png",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/Monica-Matteo-Salinas-commissioner-YellowOutline.png",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/commissioner-monica-matteo-salinas/"
+    },
+    {
+      "slug": "laura-dominguez",
+      "name": "Laura Dominguez",
+      "title": "Commissioner",
+      "group": "Group 2",
+      "aliases": ["Commissioner Laura Dominguez", "Laura Dominguez"],
+      "portrait": "../assets/commissioners/laura-dominguez.png",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/Laura-Dominguezyellowborder.png",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/commissioner-laura-dominguez/"
+    },
+    {
+      "slug": "alex-fernandez",
+      "name": "Alex J. Fernandez",
+      "title": "Commissioner",
+      "group": "Group 3",
+      "aliases": ["Commissioner Alex Fernandez", "Vice-Mayor Alex Fernandez", "Alex Fernandez", "Alex J. Fernandez"],
+      "portrait": "../assets/commissioners/alex-fernandez.png",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/AlexFernandez.png",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/commissioner-alex-fernandez/"
+    },
+    {
+      "slug": "tanya-bhatt",
+      "name": "Tanya K. Bhatt",
+      "title": "Commissioner",
+      "group": "Group 4",
+      "aliases": ["Commissioner Tanya Bhatt", "Commissioner Tanya K. Bhatt", "Tanya Bhatt", "Tanya K. Bhatt"],
+      "portrait": "../assets/commissioners/tanya-bhatt.png",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/TanyaKatzoffBhatt.png",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/commissioner-tanya-k-bhatt/"
+    },
+    {
+      "slug": "david-suarez",
+      "name": "David Suarez",
+      "title": "Commissioner",
+      "group": "Group 5",
+      "aliases": ["Commissioner David Suarez", "David Suarez"],
+      "portrait": "../assets/commissioners/david-suarez.png",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/DavidSuarez.png",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/commissioner-david-suarez/"
+    },
+    {
+      "slug": "joseph-magazine",
+      "name": "Joseph Magazine",
+      "title": "Commissioner",
+      "group": "Group 6",
+      "aliases": ["Commissioner Joseph Magazine", "Joseph Magazine", "Joe Magazine"],
+      "portrait": "../assets/commissioners/joseph-magazine.png",
+      "portraitSource": "https://www.miamibeachfl.gov/wp-content/uploads/2023/07/JoeMagazine.png",
+      "profileUrl": "https://www.miamibeachfl.gov/staff/commissioner-joseph-magazine/"
+    }
+  ]
+}

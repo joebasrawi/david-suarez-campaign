@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission Agenda | David Suarez Miami Beach Resident Hub</title>
+  <meta name="description" content="A resident-friendly guide to the next Miami Beach City Commission agenda, with searchable items, official sponsors, departments, and direct links to the legal record.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#agenda-main">Skip to agenda</a>
+
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="../" aria-label="David Suarez resident hub home">
+        <span class="brand-first">David</span>
+        <span class="brand-last">Suarez</span>
+        <span class="brand-office">Commissioner · Miami Beach Group 5</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i><span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../">Home</a>
+        <a class="is-active" href="./">Commission agenda</a>
+        <a href="../#resident-dashboard">Resident dashboard</a>
+        <a href="../active-projects/">Projects near me</a>
+        <a href="../#legislation">Legislation</a>
+      </nav>
+      <a class="header-action" href="../#get-updates">Get updates</a>
+    </div>
+  </header>
+
+  <main id="agenda-main">
+    <section class="agenda-intro">
+      <div class="container intro-layout">
+        <div>
+          <a class="back-link" href="../#resident-dashboard"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Resident dashboard</a>
+          <p class="eyebrow">Resident agenda guide</p>
+          <h1 id="meeting-title">Commission Agenda</h1>
+          <p class="meeting-meta" id="meeting-meta">Loading the next City Commission meeting…</p>
+        </div>
+        <aside class="official-callout">
+          <span class="source-mark"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
+          <div>
+            <strong>Official legal record</strong>
+            <p>This page makes the agenda easier to browse. PrimeGov remains the official source for legal language, attachments, and updates.</p>
+            <a id="official-agenda-link" href="https://miamibeachfl.primegov.com/" target="_blank" rel="noreferrer">Open official agenda <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="agenda-tools" aria-label="Agenda search and filters">
+      <div class="container">
+        <div class="search-row">
+          <label class="search-field" for="agenda-search">
+            <span class="sr-only">Search agenda</span>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="agenda-search" type="search" placeholder="Search an item, sponsor, department, or neighborhood" autocomplete="off">
+          </label>
+          <label class="filter-field"><span>Department</span><select id="department-filter"><option value="all">All departments</option></select></label>
+          <label class="filter-field"><span>Neighborhood</span><select id="neighborhood-filter"><option value="all">All neighborhoods</option></select></label>
+          <label class="filter-field"><span>Hearing</span><select id="hearing-filter"><option value="all">Any hearing time</option></select></label>
+          <label class="filter-field"><span>Status</span><select id="status-filter"><option value="all">All statuses</option></select></label>
+        </div>
+        <div class="quick-row">
+          <label class="david-toggle">
+            <input id="david-filter" type="checkbox">
+            <span class="toggle-track" aria-hidden="true"><span></span></span>
+            <span>Sponsored or co-sponsored by David</span>
+          </label>
+          <button id="reset-filters" type="button"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset filters</button>
+          <p id="result-count" aria-live="polite">Loading items…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="agenda-workspace">
+      <div class="container">
+        <div class="section-tabs" id="section-tabs" role="tablist" aria-label="Agenda sections"></div>
+        <div class="reader-shell">
+          <aside class="item-browser" id="item-browser" aria-label="Agenda items">
+            <div class="list-heading">
+              <span>Agenda items</span>
+              <strong id="list-count">0</strong>
+            </div>
+            <div class="item-list" id="item-list"></div>
+          </aside>
+
+          <article class="item-detail" id="item-detail" aria-live="polite">
+            <div class="empty-detail">
+              <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+              <h2>Select an agenda item</h2>
+              <p>Choose an item from the list to see its resident-friendly overview and official sponsors.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">David Suarez<span>Commissioner · Miami Beach Group 5</span></div>
+      <p>Resident-friendly context is provided for convenience. Always consult the linked official record before relying on an agenda item.</p>
+      <a href="../">Back to resident hub</a>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

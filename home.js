@@ -63,6 +63,7 @@ function officialItem(icon, label, title, description, url, linkLabel) {
 
 function renderOfficialUpdates(calendar, agenda, news, projects, records) {
   const meeting = agenda.nextMeeting;
+  const davidItems = agenda.items.filter(item => item.davidInvolved);
   const latestNews = news.items[0];
   const project = projects.items.find(item => item.phase === 'Construction' && item.title && item.link) || projects.items.find(item => item.phase === 'Construction');
   const ordinance = records.items.find(item => item.type === 'ordinances');
@@ -73,14 +74,14 @@ function renderOfficialUpdates(calendar, agenda, news, projects, records) {
     officialItem('fa-regular fa-newspaper', latestNews?.label || 'Official city news', latestNews?.title || 'City press releases', latestNews ? displayDate(latestNews.publishedAt, { short: true }) : 'Current City of Miami Beach announcements.', latestNews?.url || news.source.url, 'Read update')
   ].join('');
   document.querySelector('#meeting-summary').textContent = meeting ? `Next City Commission agenda: ${displayDate(meeting.date, { short: true })}, with ${meeting.itemCount} listed items.` : 'See upcoming public meetings and check whether an agenda is available.';
-  document.querySelector('#current-agenda-link').href = meeting?.url || agenda.source.url;
+  document.querySelector('#current-agenda-link').href = 'commission-agenda/';
   document.querySelector('#official-agenda-link').href = meeting?.officialAgendaUrl || records.source.url;
   document.querySelector('#current-agenda-source').href = meeting?.officialAgendaUrl || records.source.url;
-  document.querySelector('#current-agenda-summary').textContent = agenda.items.length
-    ? `${agenda.items.length} upcoming items list Commissioner Suarez as a sponsor or co-sponsor. Open an item for its source title and full agenda record.`
+  document.querySelector('#current-agenda-summary').textContent = davidItems.length
+    ? `${davidItems.length} upcoming items list Commissioner Suarez as a sponsor or co-sponsor. Open an item for its source title and full agenda record.`
     : 'No Commissioner Suarez sponsorship was identified on the current agenda snapshot.';
-  document.querySelector('#current-agenda-items').innerHTML = agenda.items.length
-    ? agenda.items.slice(0, 4).map(item => `<article><span>${homeEscape(item.itemNumber)} · ${homeEscape(item.type)}</span><h4>${homeEscape(item.title)}</h4><p>${homeEscape(item.status)}</p><a href="${homeEscape(item.url)}" target="_blank" rel="noreferrer">View agenda item</a></article>`).join('')
+  document.querySelector('#current-agenda-items').innerHTML = davidItems.length
+    ? davidItems.slice(0, 4).map(item => `<article><span>${homeEscape(item.itemNumber)} · ${homeEscape(item.type)}</span><h4>${homeEscape(item.title)}</h4><p>${homeEscape(item.status)}</p><a href="commission-agenda/?item=${encodeURIComponent(item.itemNumber)}">View agenda item</a></article>`).join('')
     : '<p class="loading-copy">Use the official agenda link for the complete meeting record.</p>';
   document.querySelector('#project-summary').textContent = `${projects.items.length} official construction, design, and planning features are available in the current city snapshot.`;
   document.querySelector('#records-summary').textContent = ordinance ? `The official ordinance registry currently runs through ${displayDate(ordinance.currentThrough, { short: true })}.` : 'Search the City Clerk registry, then use the tracker below for resident-friendly context.';
