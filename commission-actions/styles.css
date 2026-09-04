@@ -1,0 +1,59 @@
+.decisions-intro h1 { white-space: normal; font-size: clamp(38px, 4vw, 58px); }
+.coverage-stats { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+.coverage-stats span { min-width: 120px; padding: 9px 12px; border-left: 3px solid var(--teal); background: #edf6f5; color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.coverage-stats strong { margin-right: 4px; color: var(--navy); font-family: var(--display); font-size: 24px; font-weight: 400; }
+.decisions-search-row { grid-template-columns: minmax(330px, 1.8fr) repeat(3, minmax(170px, .7fr)); }
+.meeting-status-row { display: flex; overflow-x: auto; border-bottom: 1px solid #9ba8aa; scrollbar-width: thin; }
+.meeting-status-row span { min-width: max-content; padding: 11px 13px 9px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.meeting-status-row i { margin-right: 5px; color: var(--teal); }
+.meeting-status-row .is-pending i { color: var(--coral); }
+.decisions-shell { height: min(720px, calc(100vh - 400px)); }
+.decision-card { grid-template-columns: 62px minmax(0, 1fr); }
+.decision-card .agenda-card-copy h3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.decision-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+.decision-badges span { padding: 2px 5px; border: 1px solid #b7c5c5; background: #fff; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.decision-badges .is-passed { border-color: #82b3aa; color: var(--teal-dark); }
+.decision-badges .is-amended { border-color: #e2a794; color: #a43d29; }
+.decision-date { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; }
+.outcome-badge { padding: 6px 9px; border: 1px solid #93b8b5; color: var(--teal-dark); font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.outcome-badge[data-outcome="Failed"], .outcome-badge[data-outcome="Withdrawn"] { border-color: #d99b88; color: #9c351f; }
+.action-summary { margin: 24px 0; padding: 18px 20px; border-left: 5px solid var(--teal); background: #edf6f5; }
+.action-summary span, .vote-panel h3, .amendment-panel h3, .motion-panel h3 { display: block; margin: 0 0 6px; color: var(--teal-dark); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.action-summary p { margin: 0; font-size: 15px; font-weight: 600; }
+.vote-panel { margin-top: 26px; display: grid; grid-template-columns: 150px minmax(0, 1fr); border-top: 4px solid var(--navy); background: #f2f6f7; }
+.vote-overview { padding: 22px; border-right: 1px solid var(--line); }
+.vote-score { display: block; color: var(--navy); font-family: var(--display); font-size: 46px; line-height: 1; }
+.vote-kind { display: block; margin-top: 7px; color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+.roll-call { padding: 20px 22px; }
+.roll-call-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; }
+.roll-call-item { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.roll-call-item strong { color: var(--navy); }
+.roll-call-item.is-david { color: var(--teal-dark); font-weight: 800; }
+.roll-call-empty { margin: 0; color: var(--muted); font-size: 12px; }
+.amendment-panel { margin-top: 20px; padding: 18px 20px; border: 1px solid #e2a794; background: #fff4ef; }
+.amendment-panel p { margin: 0; color: #663224; font-size: 13px; }
+.motion-panel { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.motion-panel p { margin: 0; color: var(--muted); font-size: 13px; }
+.decision-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.decision-links a { padding: 10px 12px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 800; text-decoration: none; }
+.decision-links a + a { border: 1px solid var(--navy); background: transparent; color: var(--navy); }
+
+@media (max-width: 1120px) {
+  .decisions-search-row { grid-template-columns: minmax(280px, 1.4fr) repeat(3, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .decisions-search-row { grid-template-columns: 1fr 1fr; }
+  .decisions-search-row .search-field { grid-column: 1 / -1; grid-row: auto; }
+  .decisions-shell { height: auto; }
+}
+
+@media (max-width: 620px) {
+  .decisions-intro h1 { font-size: 46px; }
+  .coverage-stats span { flex: 1; min-width: 100px; }
+  .decisions-search-row { grid-template-columns: 1fr; }
+  .decisions-search-row .search-field { grid-column: auto; }
+  .vote-panel { grid-template-columns: 1fr; }
+  .vote-overview { border-right: 0; border-bottom: 1px solid var(--line); }
+  .roll-call-list { grid-template-columns: 1fr; }
+}

@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install data-sync dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
       - name: Refresh and validate public feeds
         run: npm run sync:data
       - name: Commit changed snapshots

@@ -25,4 +25,16 @@
 - The PrimeGov meeting stays labeled as the legal source; Miami Beach Agenda stays labeled as the navigation layer.
 - Static data validation, JavaScript syntax checks, and whitespace checks pass.
 
+## September 4 homepage and decisions pass
+
+- User reference: `/var/folders/vg/zy36khk5319fpzq07mv4fjtm0000gn/T/TemporaryItems/NSIRD_screencaptureui_aa1qvD/Screenshot 2026-09-04 at 1.45.38 PM.png`
+- Implementation: `http://127.0.0.1:4173/`
+- Combined comparison: `/Users/joe/Documents/DAVID MB/work/qa/homepage-comparison.jpg`
+- Reference and implementation were reviewed together at the same 1280 × 720 viewport and top-of-page state.
+- The updated hero preserves the entire official YouTube thumbnail at 16:9, moves all site copy into a compact field below it, and removes the former dead navy area.
+- Homepage content was reduced to the featured story, official City snapshot, series entry points, four resident tools, alerts, and contact information. Full video and legislation collections now live on dedicated routes.
+- The 2026 decisions reader was checked in the in-app browser with passed, consent/separate, amendment, meeting, and search controls. A David Suarez-sponsored record resolved his official City portrait, motion, roll call, vote result, amendment text, and approved-minutes link.
+- The dedicated Watch and Legislation pages were checked visually; video-series filtering and real official YouTube thumbnails were verified.
+- The scheduled public-data workflow refreshes every six hours, so newly published monthly meeting minutes are picked up automatically.
+
 final result: passed

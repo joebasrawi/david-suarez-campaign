@@ -5,6 +5,7 @@ const checks = [
   ['data/youtube.json', 5],
   ['data/city-calendar.json', 1],
   ['data/city-agenda.json', 100],
+  ['data/commission-actions.json', 400],
   ['data/city-news.json', 3],
   ['data/city-projects.json', 50],
   ['data/records-status.json', 2]
@@ -40,6 +41,19 @@ for (const person of commissioners.items) {
 for (const item of agenda.items) {
   if (!item.itemNumber || !item.officialTitle || !item.section || !item.officialSponsors.every(slug => commissionerSlugs.has(slug))) {
     throw new Error(`Agenda item validation failed for ${item.itemNumber || 'unknown item'}.`);
+  }
+}
+
+const actions = JSON.parse(await readFile(new URL('../data/commission-actions.json', import.meta.url), 'utf8'));
+if (actions.coverage?.startDate !== '2026-01-01' || !actions.coverage?.throughDate || !Array.isArray(actions.meetings) || actions.meetings.length < 7) {
+  throw new Error('data/commission-actions.json failed coverage validation.');
+}
+for (const item of actions.items) {
+  if (!item.itemNumber || !item.meetingDate || !item.title || !item.action || !item.sourceUrl?.startsWith('https://miamibeachfl.primegov.com/')) {
+    throw new Error(`Commission action validation failed for ${item.id || 'unknown item'}.`);
+  }
+  if (!['Consent agenda', 'Separate vote', 'Not recorded'].includes(item.voteType) || !item.sponsors.every(slug => commissionerSlugs.has(slug))) {
+    throw new Error(`Commission action metadata failed for ${item.id}.`);
   }
 }
 

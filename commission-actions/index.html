@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission Decisions | David Suarez Miami Beach Resident Hub</title>
+  <meta name="description" content="Search Miami Beach City Commission decisions, votes, consent status, motions, and amendments from official 2026 approved minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../commission-agenda/styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#decisions-main">Skip to decisions</a>
+
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="../" aria-label="David Suarez resident hub home">
+        <span class="brand-first">David</span>
+        <span class="brand-last">Suarez</span>
+        <span class="brand-office">Commissioner · Miami Beach Group 5</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i><span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../">Home</a>
+        <a href="../commission-agenda/">Next agenda</a>
+        <a class="is-active" href="./">Decisions & votes</a>
+        <a href="../active-projects/">Projects near me</a>
+        <a href="../legislation/">Legislation</a>
+      </nav>
+      <a class="header-action" href="../#get-updates">Get updates</a>
+    </div>
+  </header>
+
+  <main id="decisions-main">
+    <section class="agenda-intro decisions-intro">
+      <div class="container intro-layout">
+        <div>
+          <p class="eyebrow">Official 2026 after-action history</p>
+          <h1>What the Commission Decided</h1>
+          <p class="meeting-meta" id="coverage-summary">Loading approved meeting records…</p>
+          <div class="coverage-stats" aria-label="Decision history summary">
+            <span><strong id="passed-stat">—</strong> passed</span>
+            <span><strong id="meeting-stat">—</strong> meetings</span>
+            <span><strong id="amended-stat">—</strong> amended</span>
+          </div>
+        </div>
+        <aside class="official-callout">
+          <span class="source-mark"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
+          <div>
+            <strong>Built from approved minutes</strong>
+            <p>Every outcome links to the City’s official record. Meetings remain marked pending until approved minutes are published.</p>
+            <a href="https://miamibeachfl.primegov.com/public/portal?fromiframe=true" target="_blank" rel="noreferrer">Open PrimeGov archive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="agenda-tools" aria-label="Decision search and filters">
+      <div class="container">
+        <div class="search-row decisions-search-row">
+          <label class="search-field" for="decision-search">
+            <span class="sr-only">Search decisions</span>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="decision-search" type="search" placeholder="Search an item, action, sponsor, or amendment" autocomplete="off">
+          </label>
+          <label class="filter-field"><span>Meeting</span><select id="meeting-filter"><option value="all">All 2026 meetings</option></select></label>
+          <label class="filter-field"><span>Outcome</span><select id="outcome-filter"><option value="Passed">Passed</option><option value="all">All outcomes</option></select></label>
+          <label class="filter-field"><span>Vote path</span><select id="vote-type-filter"><option value="all">Consent and separate</option></select></label>
+        </div>
+        <div class="quick-row">
+          <label class="david-toggle">
+            <input id="amended-filter" type="checkbox">
+            <span class="toggle-track" aria-hidden="true"><span></span></span>
+            <span>Amended during the meeting</span>
+          </label>
+          <button id="reset-filters" type="button"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset filters</button>
+          <p id="result-count" aria-live="polite">Loading decisions…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="agenda-workspace decisions-workspace">
+      <div class="container">
+        <div class="meeting-status-row" id="meeting-status-row" aria-label="Meeting publication status"></div>
+        <div class="reader-shell decisions-shell">
+          <aside class="item-browser" aria-label="Commission decisions">
+            <div class="list-heading"><span>Recorded actions</span><strong id="list-count">0</strong></div>
+            <div class="item-list" id="decision-list"></div>
+          </aside>
+          <article class="item-detail" id="decision-detail" aria-live="polite">
+            <div class="empty-detail"><i class="fa-regular fa-circle-check" aria-hidden="true"></i><h2>Select a decision</h2><p>Choose an item to see its vote path, roll call, amendments, sponsors, and official minutes.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">David Suarez<span>Commissioner · Miami Beach Group 5</span></div>
+      <p>This reader summarizes approved City minutes for convenience. The linked official minutes remain the legal record.</p>
+      <a href="../commission-agenda/">Read the next agenda</a>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

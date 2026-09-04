@@ -43,4 +43,6 @@ if(menuToggle)menuToggle.addEventListener('click',()=>toggleMenu());
 if(siteNav)siteNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>toggleMenu(true)));
 ['#legislation-search','#type-filter','#status-filter','#sponsor-filter','#topic-filter','#legislation-sort','#role-filter'].forEach(selector=>{const element=document.querySelector(selector);if(element){element.addEventListener('input',renderLegislation);element.addEventListener('change',renderLegislation)}});
 if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)})},{threshold:.14,rootMargin:'0px 0px -30px 0px'});revealItems.forEach(item=>revealObserver.observe(item))}else{revealItems.forEach(item=>item.classList.add('is-visible'))}
+const initialLegislationQuery=new URLSearchParams(location.search).get('q');
+if(initialLegislationQuery&&document.querySelector('#legislation-search'))document.querySelector('#legislation-search').value=initialLegislationQuery;
 renderLegislation();
