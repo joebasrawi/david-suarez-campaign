@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T17:35:51.847Z",
+  "generatedAt": "2026-09-04T18:15:36.644Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 142,
+    "itemCount": 208,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -43,7 +43,27 @@
     {
       "id": "regular-agenda-resolutions",
       "label": "Regular Agenda — Resolutions",
-      "count": 24
+      "count": 48
+    },
+    {
+      "id": "regular-agenda-discussables",
+      "label": "Regular Agenda — Discussables",
+      "count": 32
+    },
+    {
+      "id": "city-attorney-reports-executive-sessions-r10",
+      "label": "City Attorney Reports / Executive Sessions - R10",
+      "count": 1
+    },
+    {
+      "id": "reports-and-informational-items",
+      "label": "Reports and Informational Items",
+      "count": 2
+    },
+    {
+      "id": "notices",
+      "label": "Notices",
+      "count": 7
     }
   ],
   "items": [
@@ -1709,9 +1729,12 @@
         "Parks, Facilities, Fleet & Beaches"
       ],
       "sponsors": [
-        "Parks, Facilities, Fleet & Beaches"
+        "Parks, Facilities, Fleet & Beaches",
+        "Commissioner Laura Dominguez"
       ],
-      "officialSponsors": [],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7S"
@@ -2728,7 +2751,7 @@
       "title": "Homestead Code Compliance Amnesty Program",
       "summary": "Homestead Code Compliance Amnesty Program. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "AN ORDINANCE OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, AMENDING CHAPTER 58 OF THE CODE OF THE CITY OF MIAMI BEACH, ENTITLED “HOUSING,” BY AMENDING ARTICLE III, ENTITLED “PROPERTY MAINTENANCE STANDARDS,” BY AMENDING DIVISION 3, ENTITLED “MINIMUM STANDARDS,” BY CREATING SECTION 58-302 THEREOF, ENTITLED “CODE COMPLIANCE REPRIEVE PROGRAM,” BY CREATING A CODE COMPLIANCE REPRIEVE (AMNESTY) PROGRAM FOR SINGLE FAMILY RESIDENTIAL HOMESTEADED PROPERTIES; AND PROVIDING FOR REPEALER, SEVERABILITY, CODIFICATION, AND AN EFFECTIVE DATE.",
-      "status": "Continued from 7/22/2026 - R5 R",
+      "status": "Item Withdrawn",
       "meetingDate": "2026-09-10",
       "hearingTime": "9:50 a.m. First Reading Public Hearing",
       "neighborhood": "Citywide",
@@ -3052,6 +3075,614 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7A"
+    },
+    {
+      "id": "2026-09-10-r7aa",
+      "itemNumber": "R7AA",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Adopt Small Business Fast-track Model",
+      "summary": "Adopt Small Business Fast-track Model. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH DIRECTING THE CITY ADMINISTRATION TO ADOPT AND IMPLEMENT, AS SOON AS REASONABLY PRACTICABLE, A FIVE-STEP SMALL BUSINESS FAST-TRACK MODEL, BASED ON THE CITY OF AVENTURA’S PERMITTING PROCESS, TO CLEARLY DELINEATE THE STEPS AND REQUIREMENTS NECESSARY FOR OPENING NEW BUSINESSES IN THE CITY OF MIAMI BEACH AND TO EXPEDITE THE PERMITTING PROCESS FOR SMALL BUSINESSES.",
+      "status": "Not reached on 7/22/2026 - R7 AB; Not reached on 6/24/2026 - R7 Q; Not reached on 5/20/2026 - R7 O; Not reached on 4/22/2026 - R7 K; Not reached on 3/18/2026 - R7 Q; Not reached on 2/25/2026 - R7 R; Not reached on 2/5/20",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Laura Dominguez",
+        "Commissioner Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
+      ],
+      "officialSponsors": [
+        "laura-dominguez",
+        "alex-fernandez",
+        "monica-matteo-salinas"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AA"
+    },
+    {
+      "id": "2026-09-10-r7ab",
+      "itemNumber": "R7AB",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Accept Bee Gees Historical Marker",
+      "summary": "Accept Bee Gees Historical Marker. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE AT ITS OCTOBER 22, 2025 MEETING, TO ACCEPT THE INSTALLATION OF A HISTORICAL MARKER AT 1801 BAY ROAD—FORMER SITE OF MIDDLE EAR STUDIO, FOUNDED BY THE BEE GEES.",
+      "status": "Not reached on 7/22/2026 - R7 AC; Not reached on 6/24/2026 - R7 R; Not reached on 5/20/2026 - R7 P; Not reached on 4/22/2026 - R7 L; Not reached on 3/18/2026 - R7 R; Not reached on 2/25/2026 - R7 S; Not reached on 2/5/20",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [
+        "Parks and Recreation"
+      ],
+      "sponsors": [
+        "Parks and Recreation",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AB"
+    },
+    {
+      "id": "2026-09-10-r7ac",
+      "itemNumber": "R7AC",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Create Water Environmental Committee",
+      "summary": "Create Water Environmental Committee. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, RELATING TO COMMISSION COMMITTEES, AND AMENDING AND RESTATING RESOLUTION NO. 94-21382 (AS AMENDED BY RESOLUTION NOS. 97-22607, 98-22693, 2003-25446, 2013-28437, 2015-28905, 2015-28962, 2019-31107, 2024-32896, 2024-32990, 2024-33256 2024-33437, AND 2025-33496) TO CREATE THE WATER AND ENVIRONMENTAL RESOURCES COMMITTEE.",
+      "status": "Not reached on 7/22/2026 - R7 AD; Not reached on 6/24/2026 - R7 S; Not reached on 5/20/2026 - R7 Q; Not reached on 4/22/2026 - R7 M; Not reached on 3/18/2026 - R7 U; Not reached on 2/25/2026 - R7 X; Not reached on 2/5/20",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Alex Fernandez",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas",
+        "alex-fernandez",
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AC"
+    },
+    {
+      "id": "2026-09-10-r7ad",
+      "itemNumber": "R7AD",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Require Public Safety Referrals",
+      "summary": "Require Public Safety Referrals. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, RELATING TO COMMISSION COMMITTEES, AND AMENDING AND RESTATING RESOLUTION NO. 94-21382 (AS AMENDED BY RESOLUTION NOS. 97-22607, 98-22693, 2003-25446, 2013-28437, 2015-28905, 2015-28962, 2019-31107, 2024-32896, 2024-32990, 2024-33256, 2024-33437, AND 2025-33496) TO REQUIRE, SUBJECT TO WAIVER BY THE CITY COMMISSION ON A 6/7THS VOTE, THAT ANY REFERRAL INITIATED BY ANY MEMBER(S) OF THE CITY COMMISSION TO ANY COMMISSION COMMITTEE THAT IS RELATED TO PUBLIC SAFETY (I.E. ANY ITEM THAT INVOLVES POLICE, FIRE, CODE, PARK RANGERS OR OTHERWISE INVOLVES PUBLIC SAFETY) MUST SIMULTANEOUSLY BE REFERRED TO THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE (\"PSNQLC\"); AND FURTHER, TO REQUIRE THE PSNQLC TO TRANSMIT ITS RECOMMENDATION TO THE CITY COMMISSION PRIOR TO CONSIDERATION OF THE ITEM BY THE CITY COMMISSION; AND FURTHER, TO REQUIRE THAT THE MAYOR CONFER WITH EACH MEMBER OF THE CITY COMMISSION REGARDING COMMITTEE ASSIGNMENTS BEFORE SUCH ASSIGNMENTS ARE FINALIZED AND EFFECTUATED; AND FURTHER, SUBJECT TO A WAIVER BY THE CITY COMMISSION ON A 5/7THS VOTE, RESTRICTING THE CONSIDERATION BY THE CITY COMMISSION OF ITEMS THAT ARE PENDING BEFORE A COMMISSION COMMITTEE.",
+      "status": "Not reached on 7/22/2026 - R7 AE; Not reached on 6/24/2026 - R7 T; Not reached on 5/20/2026 - R7 R; Not reached on 4/22/2026 - R7 N; Not reached on 3/18/2026 - R7 V; Not reached on 2/25/2026 - R7 Y; Not reached on 2/5/20",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AD"
+    },
+    {
+      "id": "2026-09-10-r7ae",
+      "itemNumber": "R7AE",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Approve Bayshore Park Plaque",
+      "summary": "Approve Bayshore Park Plaque. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE AT ITS FEBRUARY 19, 2026 MEETING, AND APPROVING THE INSTALLATION OF AN INFORMATIONAL PLAQUE FOR THE BANYAN TREE AT BAYSHORE PARK IN THE CITY OF MIAMI BEACH, WITH FUNDING TO BE CONSIDERED AS PART OF THE FY 2027 BUDGET PROCESS.",
+      "status": "Not reached on 7/22/2026 - R7 AF; Not reached on 6/24/2026 - R7 U; Not reached on 5/20/2026 - R7 S; Not reached on 4/22/2026 - R7 O; Not reached on 3/18/2026 - R7 Z",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Middle Beach",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches",
+        "Commissioner Alex Fernandez",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "alex-fernandez",
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AE"
+    },
+    {
+      "id": "2026-09-10-r7af",
+      "itemNumber": "R7AF",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Add Benches Bayshore Park",
+      "summary": "Add Benches Bayshore Park. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE AT ITS FEBRUARY 19, 2026 MEETING, AND APPROVING THE ADDITION OF BENCHES IN SHADED AREAS OF BAYSHORE PARK, CONTINGENT ON THE APPROPRIATION OF FUNDING FOR THE PROJECT IN THE AMOUNT OF APPROXIMATELY $14,000, AS PART OF THE FISCAL YEAR 2027 BUDGET PROCESS.",
+      "status": "Not reached on 7/22/2026 - R7 AG; Not reached on 6/24/2026 - R7 V; Not reached on 5/20/2026 - R7 T; Not reached on 4/22/2026 - R7 P; Not reached on 3/18/2026 - R7 AA",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Middle Beach",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AF"
+    },
+    {
+      "id": "2026-09-10-r7ag",
+      "itemNumber": "R7AG",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Police Presence at City Entry",
+      "summary": "Police Presence at City Entry. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE, AT ITS MARCH 30, 2026 MEETING, AND DIRECTING THE ADMINISTRATION TO IDENTIFY AND CONSIDER, AS PART OF AN UPCOMING FISCAL BUDGETARY PROCESS, PERMANENT MIAMI BEACH POLICE DEPARTMENT PRESENCE AT ENTRY POINTS TO THE CITY OF MIAMI BEACH DURING PEAK HOURS.",
+      "status": "Not reached on 7/22/2026 - R7 AI; Not reached on 6/24/2026 - R7 Y; Not reached on 5/20/2026 - R7 W; Not reached on 4/22/2026 - R7 T",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Police"
+      ],
+      "sponsors": [
+        "Police",
+        "Commissioner David Suarez",
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "david-suarez",
+        "joseph-magazine"
+      ],
+      "davidInvolved": true,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AG"
+    },
+    {
+      "id": "2026-09-10-r7ah",
+      "itemNumber": "R7AH",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Increase Claim Settlement Authority",
+      "summary": "Increase Claim Settlement Authority. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, MODIFYING THE AUTHORITY OF THE CITY MANAGER AND CITY ATTORNEY OF MIAMI BEACH, FLORIDA, OR EACH OF THEIR RESPECTIVE DESIGNEE(S), TO SETTLE CLAIMS (LIABILITY AND WORKERS COMPENSATION) TO AN AMOUNT NOT TO EXCEED $50,000.00 PER CLAIMANT IN RESPECT OF CLAIMS FILED AGAINST THE CITY OF MIAMI BEACH’S SELF INSURANCE FUND, WITH ANY CLAIM IN EXCESS OF THIS AMOUNT TO REQUIRE THE APPROVAL OF THE MAYOR AND CITY COMMISSION FOLLOWING DISCUSSION AT A PRIVATE ATTORNEY-CLIENT SESSION IN ACCORDANCE WITH SECTION 286.011(8), FLORIDA STATUTES.",
+      "status": "Not reached on 7/22/2026 - R7 AJ; Not reached on 6/24/2026 - R7 Z; Not reached on 5/20/2026 - R7 X; Not reached on 4/22/2026 - R7 U",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AH"
+    },
+    {
+      "id": "2026-09-10-r7ai",
+      "itemNumber": "R7AI",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Replant Oak Trees First Street",
+      "summary": "Replant Oak Trees First Street. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE AT ITS MARCH 25, 2026 MEETING AND DIRECTING THE CITY ADMINISTRATION TO IDENTIFY A SUITABLE AND APPROPRIATE LOCATION TO REPLANT MATURE OAK TREES THAT WILL BE REMOVED DURING THE CONSTRUCTION OF CERTAIN STREET AND INFRASTRUCTURE IMPROVEMENTS ON FIRST STREET AS PART OF THE FIRST STREET NEIGHBORHOOD IMPROVEMENT PROJECT.",
+      "status": "Not reached on 7/22/2026 - R7 AK; Not reached on 6/24/2026 - R7 AB; Not reached on 5/20/2026 - R7 Z; Continued from 3/18/2026 - R7 E; Not reached on 2/25/2026 - C7 Z (Separated by Commissioner Suarez)",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Public Works"
+      ],
+      "sponsors": [
+        "Public Works",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AI"
+    },
+    {
+      "id": "2026-09-10-r7aj",
+      "itemNumber": "R7AJ",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Grant Miami Beach Police League",
+      "summary": "Grant Miami Beach Police League. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE, AT ITS MAY 6, 2026 MEETING, AND DIRECTING THE ADMINISTRATION TO ALLOCATE FUNDS THROUGH A FISCAL YEAR 2026 BUDGET AMENDMENT, AND IDENTIFY, AS A FISCAL YEAR 2027 BUDGET PRIORITY, A RECURRING GRANT TO THE MIAMI BEACH POLICE ATHLETIC LEAGUE IN HONOR OF THE LATE SERGEANT DAVID A. CAJUSO.",
+      "status": "Not reached on 7/22/2026 - R7 AL; Not reached on 6/24/2026 - R7 AC; Not reached on 5/20/2026 - R7 AA",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Police"
+      ],
+      "sponsors": [
+        "Police",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AJ"
+    },
+    {
+      "id": "2026-09-10-r7ak",
+      "itemNumber": "R7AK",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "New Waste Hauler RFQ Process",
+      "summary": "New Waste Hauler RFQ Process. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, RESCINDING RESOLUTION NO. 2023-32617, ADOPTED ON DECEMBER 13, 2023, WHICH DIRECTED THE CITY ADMINISTRATION TO PREPARE A REQUEST FOR PROPOSALS (RFP) FOR A “SINGLE HAULER”; AND FURTHER DIRECTING THE CITY ADMINISTRATION TO PREPARE A NEW REQUEST FOR QUALIFICATIONS (RFQ) FOR NON EXCLUSIVE FRANCHISE WASTE HAULER SERVICES THAT PRIORITIZES AFFORDABILITY, COST SAVINGS, AND CONSUMER PROTECTIONS FOR MULTIFAMILY RESIDENTIAL AND COMMERCIAL PROPERTIES; AND PRESCRIBING REQUIRED CONSUMER PROTECTION TERMS TO BE INCLUDED IN THE RFQ.",
+      "status": "Not reached on 7/22/2026 - R7 AM; Not reached on 6/24/2026 - R7 AG",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AK"
+    },
+    {
+      "id": "2026-09-10-r7al",
+      "itemNumber": "R7AL",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Challenge Live Local Act",
+      "summary": "Challenge Live Local Act. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, AUTHORIZING AND DIRECTING THE CITY ATTORNEY TO COORDINATE WITH THE OFFICE OF THE CITY ATTORNEY FOR THE CITY OF MIAMI AND EVALUATE THE CITY’S POTENTIAL LEGAL OPTIONS TO CHALLENGE THE LIVE LOCAL ACT, INCLUDING APPLICABLE PROVISIONS OF SECTION 166.04151, FLORIDA STATUTES; AND DIRECTING THE CITY CLERK TO TRANSMIT A COPY OF THIS RESOLUTION TO THE MAYOR, CITY COMMISSION, CITY ATTORNEY, AND CITY CLERK FOR THE CITY OF MIAMI.",
+      "status": "Not reached on 7/22/2026 - R7 AN; Not reached on 6/24/2026 - R7 AI",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Tanya Bhatt",
+        "Commissioner Alex Fernandez",
+        "Commissioner Joseph Magazine",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt",
+        "alex-fernandez",
+        "joseph-magazine",
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AL"
+    },
+    {
+      "id": "2026-09-10-r7am",
+      "itemNumber": "R7AM",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Tree-wrap Lighting South Pointe",
+      "summary": "Tree-wrap Lighting South Pointe. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE AT ITS JULY 15, 2026 MEETING TO APPROVE TREE-WRAP LIGHTING IN A PORTION OF SOUTH POINTE PARK EAST OF SMITH & WOLLENSKY, AT A TOTAL COST NOT TO EXCEED $24,000, SUBJECT TO APPROPRIATIONS APPROVED AS PART OF THE FISCAL YEAR 2027 ANNUAL BUDGET OR AS AN AMENDMENT TO THE FISCAL YEAR 2026 ANNUAL BUDGET. R7 AQ",
+      "status": "Not reached on 7/22/2026 – R7 AQ",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas",
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AM"
+    },
+    {
+      "id": "2026-09-10-r7an",
+      "itemNumber": "R7AN",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Modernize Board Committee Structure",
+      "summary": "Modernize Board Committee Structure. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE AT ITS JULY 8, 2026 MEETING; APPROVING THE RECOMMENDED POLICY DIRECTION REGARDING THE MODERNIZATION OF THE CITY’S BOARD AND COMMITTEE STRUCTURE; AND DIRECTING THE CITY MANAGER, CITY ATTORNEY, AND CITY CLERK TO DRAFT THE NECESSARY ENABLING LEGISLATION, INCLUDING AMENDMENTS TO THE CITY CODE, TO IMPLEMENT THE RECOMMENDED CHANGES. R7 AR",
+      "status": "Not reached on 7/22/2026 - R7 AR",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Manager"
+      ],
+      "sponsors": [
+        "City Manager",
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AN"
+    },
+    {
+      "id": "2026-09-10-r7ao",
+      "itemNumber": "R7AO",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Modernize Board Committee Structure",
+      "summary": "Modernize Board Committee Structure. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATIONS OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE AT ITS JULY 15, 2026 MEETING; APPROVING THE RECOMMENDED POLICY DIRECTION REGARDING THE MODERNIZATION OF THE CITY’S BOARD AND COMMITTEE STRUCTURE AND DIRECTING THE CITY MANAGER, CITY ATTORNEY, AND CITY CLERK TO PREPARE THE NECESSARY ENABLING LEGISLATION AND AMENDMENTS TO THE CITY CODE CONSISTENT WITH THE POLICY DIRECTION PROVIDED BY THE MAYOR AND CITY COMMISSION. R7 AS",
+      "status": "Not reached on 7/22/2026 - R7 AS",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Manager"
+      ],
+      "sponsors": [
+        "City Manager",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AO"
+    },
+    {
+      "id": "2026-09-10-r7ap",
+      "itemNumber": "R7AP",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Restore Play Time and Fire",
+      "summary": "Restore Play Time and Fire. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION TO RESTORE FUNDING IN THE PRELIMINARY FISCAL YEAR 2027 BUDGET FOR THE PLAY TIME PROGRAM, AND TO RESTORE THE POSITION AND ASSOCIATED FUNDING IN THE PRELIMINARY FISCAL YEAR 2027 BUDGET FOR THE FIRE DEPARTMENT’S FULL-TIME DIGITAL COMMUNICATIONS SPECIALIST POSITION. R7 AU",
+      "status": "Not reached on 7/22/2026 - R7 AU",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AP"
+    },
+    {
+      "id": "2026-09-10-r7aq",
+      "itemNumber": "R7AQ",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Update Cybersecurity Procurement Framework",
+      "summary": "Update Cybersecurity Procurement Framework. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, UPDATING THE CITY’S EXISTING CYBERSECURITY PROCUREMENT FRAMEWORK ESTABLISHED PURSUANT TO RESOLUTION NO. 2023-32733; CONTINUING THE WAIVER OF COMPETITIVE BIDDING REQUIREMENTS AS TO FUTURE CYBERSECURITY-RELATED EQUIPMENT, SOFTWARE, AND/OR SERVICES SPECIFICALLY INVOLVING THE CITY’S CYBERSECURITY OR CRITICAL CYBERSECURITY INFRASTRUCTURE, AND FINDING SUCH WAIVER TO BE IN THE CITY’S BEST INTEREST; ESTABLISHING UPDATED PROCEDURES TO PROTECT THE CONFIDENTIAL AND EXEMPT NATURE OF THE CITY’S CYBERSECURITY SYSTEMS, ASSETS, AND INFORMATION WHILE PRESERVING COMPETITION, PRICE REASONABLENESS, ACCOUNTABILITY, AND TRANSPARENCY; REQUIRING THE CITY ADMINISTRATION TO ENDEAVOR TO OBTAIN AT LEAST THREE (3) QUOTATIONS FROM QUALIFIED SUPPLIERS OR VENDORS PRIOR TO ENTERING INTO ANY CONTRACT PURSUANT TO THIS RESOLUTION; LIMITING PURCHASES TO FUNDS DULY APPROPRIATED AND AVAILABLE THROUGH THE CITY’S BUDGET PROCESS; AND FURTHER CONTINUING THE REQUIREMENT TO REPORT PURCHASES MADE PURSUANT TO THIS RESOLUTION TO THE CITY COMMISSION ON A QUARTERLY BASIS, VIA LETTER TO COMMISSION, WITH SUFFICIENT INFORMATION TO PROVIDE TRANSPARENCY AND ACCOUNTABILITY WITHOUT DISCLOSING INFORMATION THAT IS CONFIDENTIAL OR EXEMPT UNDER FLORIDA LAW; AND SUPERSEDING AND REPLACING RESOLUTION NO. 2023-32733 IN ITS ENTIRETY.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Information Technology"
+      ],
+      "sponsors": [
+        "Information Technology"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AQ"
+    },
+    {
+      "id": "2026-09-10-r7ar",
+      "itemNumber": "R7AR",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Increase Martial Arts Contract",
+      "summary": "Increase Martial Arts Contract. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE WRITTEN RECOMMENDATION OF THE CITY MANAGER AND WAIVING, BY 5/7TH VOTE, THE FORMAL COMPETITIVE BIDDING REQUIREMENT, AS PERMITTED IN SECTION 2-367(E) OF THE CITY CODE, FINDING SUCH WAIVER TO BE IN THE BEST INTEREST OF THE CITY; FURTHER, APPROVING IN SUBSTANTIAL FORM AMENDMENT NO. 1 TO THE FISCAL YEAR 2026 PROFESSIONAL SERVICES AGREEMENT BETWEEN THE CITY AND MIAMI MARTIAL ARTS AND FITNESS LLC; SAID AMENDMENT INCREASING CONTRACTOR’S FEE BY $50,000, FROM A NOT TO EXCEED TOTAL FEE OF $100,000 TO A NOT TO EXCEED TOTAL FEE OF $150,000 FOR FY 2026; FURTHER, AUTHORIZING THE CITY MANAGER TO FINALIZE THE AMENDMENT; AND FURTHER, AUTHORIZING THE CITY MANAGER AND CITY CLERK TO EXECUTE SAID AMENDMENT, SUBJECT TO FUNDING APPROPRIATION AND APPROVAL DURING THE CITY’S ANNUAL BUDGET PROCESS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AR"
+    },
+    {
+      "id": "2026-09-10-r7as",
+      "itemNumber": "R7AS",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Purchase Golf Course Equipment",
+      "summary": "Purchase Golf Course Equipment. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE CITY MANAGER AND WAIVING, BY A 5/7TH VOTE, THE FORMAL COMPETITIVE BIDDING REQUIREMENTS PURSUANT TO SECTION 2-367(E) OF THE CITY CODE, FINDING SUCH WAIVER TO BE IN THE BEST INTEREST OF THE CITY; APPROVING THE PURCHASE OF THE EXISTING FLEET OF THE MIAMI BEACH GOLF COURSE LAWN MAINTENANCE EQUIPMENT FROM EFE, INC., AS SUCCESSOR-IN-INTEREST TO SHOWTURF, LLC, IN THE NOT TO EXCEED AMOUNT OF $246,057.27.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Middle Beach",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AS"
+    },
+    {
+      "id": "2026-09-10-r7at",
+      "itemNumber": "R7AT",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Resident Parking Permit Pilot",
+      "summary": "Resident Parking Permit Pilot. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE FAVORABLE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE, AT ITS MARCH 25, 2026 MEETING, AND APPROVING THE ESTABLISHMENT OF A 12-MONTH PILOT PROGRAM, COMMENCING OCTOBER 1, 2026, AND CONCLUDING SEPTEMBER 30, 2027, TO IMPLEMENT AN ANNUAL FLAT-FEE RESIDENT PARKING PERMIT ALLOWING ELIGIBLE CITY OF MIAMI BEACH RESIDENTS TO PARK FOR UP TO THREE (3) HOURS PER DAY ON-STREET AND IN ELIGIBLE MUNICIPAL PARKING LOTS LOCATED WITHIN NON-RESIDENTIAL PARKING ZONES; ESTABLISHING AN ANNUAL PERMIT FEE OF $300 WHEN PAID IN A SINGLE LUMP-SUM PAYMENT; AUTHORIZING, WHEN ADMINISTRATIVELY AND TECHNOLOGICALLY AVAILABLE, A RECURRING MONTHLY SUBSCRIPTION OPTION AT A COST OF $30 PER MONTH, SUBJECT TO A 12-MONTH COMMITMENT; ESTABLISHING FIVE (5) GEOGRAPHIC PARKING ZONES FOR PURPOSES OF ADMINISTERING THE PILOT PROGRAM, AS FURTHER DEPICTED AND DEFINED IN EXHIBIT \"A\"; AND AUTHORIZING THE CITY ADMINISTRATION TO IMPLEMENT, ADMINISTER, MONITOR, AND EVALUATE THE PILOT PROGRAM.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parking"
+      ],
+      "sponsors": [
+        "Parking",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AT"
+    },
+    {
+      "id": "2026-09-10-r7au",
+      "itemNumber": "R7AU",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Induct George Neary Hall Fame",
+      "summary": "Induct George Neary Hall Fame. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE 2026 MIAMI BEACH HALL OF FAME SELECTION COMMITTEE, AND RATIFYING THE INDUCTION OF GEORGE NEARY FOR SELECTION, AS A MEMBER OF THE MIAMI BEACH HALL OF FAME.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Tourism and Culture"
+      ],
+      "sponsors": [
+        "Tourism and Culture"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AU"
+    },
+    {
+      "id": "2026-09-10-r7av",
+      "itemNumber": "R7AV",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Untitled Art Fair License",
+      "summary": "Untitled Art Fair License. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING THE MUTLI-YEAR LICENSE AGREEMENT BETWEEN THE CITY OF MIAMI BEACH AND INFORMA MARKETS ART, LLC FOR USE OF 191,650 SQUARE FEET OF THE LUMMUS PARK BEACHFRONT BETWEEN 10 AND 12½ STREETS AND 12,000 SQUARE FEET OF THE LUMMUS PARK SPOIL FOR THE UNTITLED ART FAIR DURING ART WEEK MIAMI BEACH, FOR AN INITIAL TERM OF FIVE (5) CONSECUTIVE ANNUAL SHOWS FROM 2026 TO 2030, WITH A FIVE (5)-YEAR RENEWAL OPTION.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [
+        "Tourism and Culture"
+      ],
+      "sponsors": [
+        "Tourism and Culture",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AV"
+    },
+    {
+      "id": "2026-09-10-r7aw",
+      "itemNumber": "R7AW",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Extend Freebee Transit Service",
+      "summary": "Extend Freebee Transit Service. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE CITY ADMINISTRATION AND WAIVING, BY A 5/7THS VOTE, THE FORMAL COMPETITIVE BIDDING REQUIREMENT, PURSUANT TO SECTION 2-367 OF THE CITY CODE, FINDING SUCH WAIVER TO BE IN THE BEST INTEREST OF THE CITY; AND FURTHER, AUTHORIZING THE CITY MANAGER AND CITY ATTORNEY TO NEGOTIATE AND EXECUTE A THREE-YEAR EXTENSION TO THE AGREEMENT BETWEEN THE CITY OF MIAMI BEACH AND BEEFREE, LLC, D/B/A FREEBEE (“FREEBEE”), FOR THE CONTINUED OPERATION OF THE CITY’S ON-DEMAND TRANSIT SERVICE, WHICH SHALL INCLUDE A COMPLIMENTARY UPGRADE OF THE EXISTING TESLA MODEL X FLEET TO LARGER VOLKSWAGEN ID. BUZZ ELECTRIC VEHICLES AT NO ADDITIONAL COST TO THE CITY, AND WITH ALL OTHER MATERIAL TERMS AND PROVISIONS OF THE AGREEMENT REMAINING UNCHANGED.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Alex Fernandez",
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "alex-fernandez",
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AW"
     },
     {
       "id": "2026-09-10-r7b",
@@ -3622,6 +4253,1039 @@
       "davidInvolved": true,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7X"
+    },
+    {
+      "id": "2026-09-10-r7z",
+      "itemNumber": "R7Z",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Eliminate Mayor Commissioner Allowances",
+      "summary": "Eliminate Mayor Commissioner Allowances. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, REPEALING, EFFECTIVE OCTOBER 1, 2025, ALL PRIOR RESOLUTIONS PROVIDING FOR THE CELL PHONE ALLOWANCE, CAR ALLOWANCE, AND MONTHLY STIPEND PAYABLE TO THE MAYOR AND EACH COMMISSIONER TO HELP REDUCE THE BUDGET OF THE OFFICE OF THE MAYOR AND CITY COMMISSION, CONSISTENT WITH THE DIRECTIVE PROVIDED TO THE CITY ADMINISTRATION AT THE JULY 11, 2025 BUDGET WORKSHOP TO SEEK REDUCTIONS TO THE CITY'S OPERATIONAL BUDGET TO HELP FUND INFRASTRUCTURE AND OTHER PRIORITIES OF THE MAYOR AND CITY COMMISSION THAT MAY OTHERWISE GO UNFUNDED IN FISCAL YEAR 2026.",
+      "status": "Not reached on 7/22/2026 - R7 AA; Not reached on 6/24/2026 - R7 P; Not reached on 5/20/2026 - R7 N; Not reached on 4/22/2026 - R7 J; Not reached on 3/18/2026 - R7 M; Not reached on 2/25/2026 - R7 N; Not reached on 2/5/20",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7Z"
+    },
+    {
+      "id": "2026-09-10-r9a",
+      "itemNumber": "R9A",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Board and Committee Appointments",
+      "summary": "Board and Committee Appointments. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "BOARD AND COMMITTEE APPOINTMENTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9A"
+    },
+    {
+      "id": "2026-09-10-r9aa",
+      "itemNumber": "R9AA",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "R9 Ak",
+      "summary": "R9 Ak. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "R9 AK",
+      "status": "Not reached on 7/22/2026 – R9 AK",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [
+        "Tourism and Culture"
+      ],
+      "sponsors": [
+        "Tourism and Culture"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AA"
+    },
+    {
+      "id": "2026-09-10-r9ab",
+      "itemNumber": "R9AB",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Identify Urban Soccer Pocket Parks",
+      "summary": "Identify Urban Soccer Pocket Parks. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSSION REGARDING THE IDENTIFICATION OF AT LEAST TWO POSSIBLE LOCATIONS FOR URBAN SOCCER POCKET PARKS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches",
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AB"
+    },
+    {
+      "id": "2026-09-10-r9ac",
+      "itemNumber": "R9AC",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Uniform Recall Implementation Status",
+      "summary": "Uniform Recall Implementation Status. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION REGARDING THE STATUS OF THE UNIFORM RECALL AND RECOMMENDED NEXT STEPS FOR THE IMPLEMENTATION OF CORRECTED UNIFORMS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parking"
+      ],
+      "sponsors": [
+        "Parking"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AC"
+    },
+    {
+      "id": "2026-09-10-r9ad",
+      "itemNumber": "R9AD",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Crime North Bay Road Policing",
+      "summary": "Crime North Bay Road Policing. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION - CRIME ACTIVITY ALONG NORTH BAY ROAD AND POLICING EFFORTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AD"
+    },
+    {
+      "id": "2026-09-10-r9ae",
+      "itemNumber": "R9AE",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Duck Population Management North Beach",
+      "summary": "Duck Population Management North Beach. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION - INCREASING DUCK POPULATION IN NORTH BEACH AND ITS IMPACTS ON RESIDENTS AND PROVIDING DIRECTION ON MITIGATION AND MANAGEMENT STRATEGIES.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Monica Matteo-Salinas"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AE"
+    },
+    {
+      "id": "2026-09-10-r9af",
+      "itemNumber": "R9AF",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Prepare for Delivery Drones",
+      "summary": "Prepare for Delivery Drones. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION REGARDING CITY PREPARATION & POTENTIAL IMPACTS FOR THE INCREASE IN UNMANNED AIRCRAFT SYSTEMS OR DELIVERY DRONES.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AF"
+    },
+    {
+      "id": "2026-09-10-r9b",
+      "itemNumber": "R9B",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "At-large Commission Appointments",
+      "summary": "At-large Commission Appointments. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "BOARD AND COMMITTEE APPOINTMENTS – CITY COMMISSION / AT-LARGE APPOINTMENTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9B"
+    },
+    {
+      "id": "2026-09-10-r9c",
+      "itemNumber": "R9C",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Dr. Stanley Sutnick Citizens Forum",
+      "summary": "Dr. Stanley Sutnick Citizens Forum. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DR. STANLEY SUTNICK CITIZEN'S FORUM. (8:35 A.M./1:00 P.M.)",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9C"
+    },
+    {
+      "id": "2026-09-10-r9d",
+      "itemNumber": "R9D",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "September 11 Remembrance Moment",
+      "summary": "September 11 Remembrance Moment. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A MOMENT OF SILENCE IN REMEMBRANCE OF SEPTEMBER 11, 2001.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9D"
+    },
+    {
+      "id": "2026-09-10-r9e",
+      "itemNumber": "R9E",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Police Visibility Implementation Update",
+      "summary": "Police Visibility Implementation Update. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION – UPDATE FROM THE CITY ADMINISTRATION ON THE IMPLEMENTATION OF THE RESOLUTIONS PREVIOUSLY ADOPTED BY THE CITY COMMISSION CONCERNING INCREASED POLICE VISIBILITY.",
+      "status": "Not reached on 7/22/2026 - R9 J; Not reached on 6/24/2026 - R9 G; Not reached on 5/20/2026 - R9 F; Not reached on 4/22/2026 - R9 I; Not reached on 3/18/2026 - R9 H; Not reached on 2/25/2026 - R9 F",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9E"
+    },
+    {
+      "id": "2026-09-10-r9f",
+      "itemNumber": "R9F",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Police Staffing Workload Analysis",
+      "summary": "Police Staffing Workload Analysis. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS THE FINDINGS OF THE POLICE PROFESSIONAL PERSONNEL STAFFING AND WORKLOAD ANALYSIS.",
+      "status": "Not reached on 7/22/2026 - R9 K; Not reached on 6/24/2026 - R9 H; Not reached on 5/20/2026 - R9 I; Not reached on 4/22/2026 - R9 N; Not reached on 3/18/2026 - R9 M; Not reached on 2/25/2026 - R9 L",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Police"
+      ],
+      "sponsors": [
+        "Police",
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9F"
+    },
+    {
+      "id": "2026-09-10-r9g",
+      "itemNumber": "R9G",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Food Beverage Park Kiosks",
+      "summary": "Food Beverage Park Kiosks. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION TO CONSIDER POTENTIAL PROCUREMENT FOR FOOD AND BEVERAGE CONCESSION KIOSKS AT SELECT CITY PARKS.",
+      "status": "Not reached on 7/22/2026 - R9 L; Not reached on 6/24/2026 - R9 I; Not reached on 5/20/2026 - R9 J; Not reached on 4/22/2026 - R9 O; Not reached on 3/18/2026 - R9 N; Not reached on 2/25/2026 - R9 M",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parks and Recreation"
+      ],
+      "sponsors": [
+        "Parks and Recreation",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9G"
+    },
+    {
+      "id": "2026-09-10-r9h",
+      "itemNumber": "R9H",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Construction Lane Closure Oversight",
+      "summary": "Construction Lane Closure Oversight. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION REGARDING THE OVERSIGHT OF CONSTRUCTION, MAINTENANCE, REPAIR AND UTILITY-RELATED LANE CLOSURES AND ENHANCED PUBLIC COMMUNICATION.",
+      "status": "Not reached on 7/22/2026 - R9 M; Not reached on 6/24/2026 - R9 J; Not reached on 5/20/2026 - R9 K; Not reached on 4/22/2026 - R9 P; Not reached on 3/18/2026 - R9 O; Not reached on 2/25/2026 - R9 N",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "steven-meiner",
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9H"
+    },
+    {
+      "id": "2026-09-10-r9i",
+      "itemNumber": "R9I",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Underground Tunnels Traffic Feasibility",
+      "summary": "Underground Tunnels Traffic Feasibility. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION REGARDING FEASIBILITY OF DEVELOPING UNDERGROUND TUNNELS AS A MEANS TO REDUCE SURFACE-LEVEL TRAFFIC CONGESTION IN THE CITY.",
+      "status": "Not reached on 7/22/2026 - R9 N; Not reached on 6/24/2026 - R9 K; Not reached on 5/20/2026 - R9 L; Not reached on 4/22/2026 - R9 Q; Not reached on 3/18/2026 - R9 P; Not reached on 2/25/2026 - R9 O",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9I"
+    },
+    {
+      "id": "2026-09-10-r9j",
+      "itemNumber": "R9J",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Sidewalk Repair Program Updates",
+      "summary": "Sidewalk Repair Program Updates. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION, SIDEWALK REPAIR PROGRAM UPDATES.",
+      "status": "Not reached on 7/22/2026 - R9 O; Not reached on 6/24/2026 - R9 L; Not reached on 5/20/2026 - R9 M; Not reached on 4/22/2026 - R9 R; Not reached on 3/18/2026 - R9 Q; Not reached on 2/25/2026 - R9 P",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner",
+        "Commissioner Tanya Bhatt",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "steven-meiner",
+        "tanya-bhatt",
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9J"
+    },
+    {
+      "id": "2026-09-10-r9k",
+      "itemNumber": "R9K",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Police/transportation Update on Traffic Congestion",
+      "summary": "Police/transportation Update on Traffic Congestion. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION: UPDATE FROM POLICE AND TRANSPORTATION DEPARTMENTS ON TRAFFIC CONGESTION IN NORTH BEACH AND TRAFFIC LIGHT SYNCHRONIZATION EFFORTS.",
+      "status": "Not reached on 7/22/2026 - R9 P; Not reached on 6/24/2026 - R9 M; Not reached on 5/20/2026 - R9 O; Continued from 4/22/2026 - R9 T; Not reached on 3/18/2026 - R9 S; Not reached on 2/25/2026 - R9 T",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9K"
+    },
+    {
+      "id": "2026-09-10-r9l",
+      "itemNumber": "R9L",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Address Parking Loss in Flamingo Park Area",
+      "summary": "Address Parking Loss in Flamingo Park Area. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION - ADDRESSING THE LOSS OF ON-STREET PARKING IN THE FLAMINGO PARK NEIGHBORHOOD DUE TO CURRENT ROAD DESIGN.",
+      "status": "Not reached on 7/22/2026 - R9 Q; Not reached on 6/24/2026 - R9 N; Not reached on 5/20/2026 - R9 Q; Not reached on 4/22/2026 - R9 V; Not reached on 3/18/2026 - R9 U; Not reached on 2/25/2026 - R9 W",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9L"
+    },
+    {
+      "id": "2026-09-10-r9m",
+      "itemNumber": "R9M",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Enhance Resident Notification for Major Events",
+      "summary": "Enhance Resident Notification for Major Events. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION – UPDATE AND DISCUSSION REGARDING ENHANCING RESIDENT NOTIFICATION PRIOR TO CONCERTS, RACES, AND OTHER HIGH-IMPACT EVENTS IN THE CITY.",
+      "status": "Not reached on 7/22/2026 - R9 R; Not reached on 6/24/2026 - R9 P; Not reached on 5/20/2026 - R9 S; Not reached on 4/22/2026 - R9 Y; Not reached on 3/18/2026 - R9 Y; Not reached on 2/25/2026 - R9 AB",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9M"
+    },
+    {
+      "id": "2026-09-10-r9n",
+      "itemNumber": "R9N",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Fund Four Lighted Pickleball Courts",
+      "summary": "Fund Four Lighted Pickleball Courts. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS AND TAKE ACTION ON THE FUNDING AND CONSTRUCTION OF FOUR LIGHTED PICKLEBALL COURTS AT BAYSHORE PARK IN THE CITY OF MIAMI BEACH.",
+      "status": "Not reached on 7/22/2026 - R9 S; Not reached on 6/24/2026 - R9 Q; Not reached on 5/20/2026 - R9 T; Not reached on 4/22/2026 - R9 AA; Not reached on 3/18/2026 - R9 AA",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Middle Beach",
+      "departments": [
+        "Parks, Facilities, Fleet & Beaches"
+      ],
+      "sponsors": [
+        "Parks, Facilities, Fleet & Beaches",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9N"
+    },
+    {
+      "id": "2026-09-10-r9o",
+      "itemNumber": "R9O",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Discuss North Shore Community Center Future Use",
+      "summary": "Discuss North Shore Community Center Future Use. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION - FUTURE USE SCENARIOS FOR THE NORTH SHORE COMMUNITY CENTER FOLLOWING COMPLETION OF THE NEW 72ND STREET COMMUNITY COMPLEX.",
+      "status": "Not reached on 7/22/2026 - R9 T; Not reached on 6/24/2026 - R9 R; Not reached on 5/20/2026 - R9 U; Not reached on 4/22/2026 - R9 AB; Not reached on 3/18/2026 - R9 AC",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9O"
+    },
+    {
+      "id": "2026-09-10-r9p",
+      "itemNumber": "R9P",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Historic Plaque Program for Designated Properties",
+      "summary": "Historic Plaque Program for Designated Properties. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "PLAQUE PROGRAM FOR HISTORICALLY DESIGNATED HOMES AND PUBLIC BUILDINGS WITHIN THE CITY OF MIAMI BEACH.",
+      "status": "Not reached on 7/22/2026 - R9 U; Not reached on 6/24/2026 - R9 S; Not reached on 5/20/2026 - R9 V; Not reached on 4/22/2026 - R9 AC",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Planning"
+      ],
+      "sponsors": [
+        "Planning",
+        "Commissioner Tanya Bhatt",
+        "Commissioner Laura Dominguez",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt",
+        "laura-dominguez",
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9P"
+    },
+    {
+      "id": "2026-09-10-r9q",
+      "itemNumber": "R9Q",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Monitor Beachwalk Camera Feeds for Issues",
+      "summary": "Monitor Beachwalk Camera Feeds for Issues. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION – UPDATE ON REGULARLY MONITORING BEACHWALK CAMERA FEEDS TO IDENTIFY AND ADDRESS ANY VISIBILITY ISSUES.",
+      "status": "Not reached on 7/22/2026 - R9 W; Not reached on 6/24/2026 - R9 U; Not reached on 5/20/2026 - R9 X; Not reached on 4/22/2026 - R9 AE",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Police"
+      ],
+      "sponsors": [
+        "Police",
+        "Mayor Steven Meiner",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "steven-meiner",
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9Q"
+    },
+    {
+      "id": "2026-09-10-r9r",
+      "itemNumber": "R9R",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Create Temporary Morning Loading Zone Belle Isle",
+      "summary": "Create Temporary Morning Loading Zone Belle Isle. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION ON POTENTIAL CREATION OF A TEMPORARY MORNING-TIME LOADING ZONE ON BELLE ISLE IN FRONT OF THE STANDARD SPA HOTEL.",
+      "status": "Not reached on 7/22/2026 - R9 X; Not reached on 6/24/2026 - R9 V; Not reached on 5/20/2026 - R9 Y; Not reached on 4/22/2026 - R9 AG",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Middle Beach",
+      "departments": [],
+      "sponsors": [
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9R"
+    },
+    {
+      "id": "2026-09-10-r9s",
+      "itemNumber": "R9S",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Address 947 Lincoln Road Prolonged Vacancy",
+      "summary": "Address 947 Lincoln Road Prolonged Vacancy. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION: REGARDING THE PROLONGED VACANCY AT 947 LINCOLN ROAD, INCLUDING A REQUEST FOR THE MIAMI DESIGN PRESERVATION LEAGUE (MDPL) AND CITY ADMINISTRATION TO PROVIDE AN UPDATE ON THE STATUS OF THE PROPERTY, OUTLINE SPECIFIC REGULATORY OR CODE-RELATED BARRIERS THAT HAVE IMPEDED TENANT ACTIVATION, AND PRESENT RECOMMENDATIONS OR PROPOSED ACTIONS TO FACILITATE AND EXPEDITE OCCUPANCY AS WELL AS PRODUCTIVE USE OF THE SITE GOING FORWARD.",
+      "status": "Not reached on 7/22/2026 - R9 Y; Not reached on 6/24/2026 - R9 W; Not reached on 5/20/2026 - R9 AA; Not reached on 4/22/2026 - R9 AK",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9S"
+    },
+    {
+      "id": "2026-09-10-r9t",
+      "itemNumber": "R9T",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Discuss Charter/private School in Complex",
+      "summary": "Discuss Charter/private School in Complex. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS THE POSSIBLE INCLUSION OF A CHARTER OR PRIVATE SCHOOL WITHIN THE 72ND STREET COMMUNITY COMPLEX PROJECT.",
+      "status": "Not reached on 7/22/2026 - R9 AB; Not reached on 6/24/2026 - R9 Z; Not reached on 5/20/2026 - R9 AD",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "North Beach",
+      "departments": [
+        "Capital Improvement Projects"
+      ],
+      "sponsors": [
+        "Capital Improvement Projects",
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9T"
+    },
+    {
+      "id": "2026-09-10-r9u",
+      "itemNumber": "R9U",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Parking Dept Analyzes Personnel Service Needs",
+      "summary": "Parking Dept Analyzes Personnel Service Needs. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION: UPDATE FROM THE PARKING DEPARTMENT WITH A PLAN TO EFFECTUATE AN ANALYSIS OF PERSONNEL, INCLUDING PART-TIME AND CONTRACTING SERVICE NEEDS WITH A TIMETABLE FOR IMPLEMENTATION.",
+      "status": "Not reached on 7/22/2026 - R9 AC; Not reached on 6/24/2026 - R9 AA; Not reached on 5/20/2026 - R9 AE",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parking"
+      ],
+      "sponsors": [
+        "Parking"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9U"
+    },
+    {
+      "id": "2026-09-10-r9v",
+      "itemNumber": "R9V",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Normandy Isle Entrance Signs at Fountain",
+      "summary": "Normandy Isle Entrance Signs at Fountain. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS AND TAKE ACTION ON THE PROPOSED NORMANDY ISLE NEIGHBORHOOD ENTRANCE SIGNS TO BE LOCATED AT THE NORMANDY FOUNTAIN NEAR NORMANDY DRIVE/71ST STREET AND BAY DRIVE.",
+      "status": "Not reached on 7/22/2026 - R9 AE; Deferred on 6/24/2026 - R9 AC",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "North Beach",
+      "departments": [
+        "Capital Improvement Projects"
+      ],
+      "sponsors": [
+        "Capital Improvement Projects",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9V"
+    },
+    {
+      "id": "2026-09-10-r9w",
+      "itemNumber": "R9W",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "City Traffic Plan for Road Closures",
+      "summary": "City Traffic Plan for Road Closures. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION – THE CITY’S TRAFFIC PLAN FOR ROAD CLOSURE EMERGENCIES.",
+      "status": "Not reached on 7/22/2026 - R9 AF; Not reached on 6/24/2026 - R9 AD",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Monica Matteo-Salinas"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9W"
+    },
+    {
+      "id": "2026-09-10-r9x",
+      "itemNumber": "R9X",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Block Flooded Alton Road Lanes During Flooding",
+      "summary": "Block Flooded Alton Road Lanes During Flooding. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION REGARDING THE BLOCKING OF FLOODED PORTIONS OF THE OUTERMOST LANES ON ALTON ROAD FROM 43RD STREET TO 63RD STREET DURING FLOODING EVENTS TO PREVENT HOMES FROM BEING “SWAMPED” BY VEHICLES DRIVING THROUGH FLOODED PORTIONS.",
+      "status": "Not reached on 7/22/2026 - R9 AH; Not reached on 6/24/2026 - R9 AF",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "North Beach",
+      "departments": [
+        "Public Works"
+      ],
+      "sponsors": [
+        "Public Works",
+        "Commissioner Tanya Bhatt",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt",
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9X"
+    },
+    {
+      "id": "2026-09-10-r9y",
+      "itemNumber": "R9Y",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Address Homelessness and Public Safety Concerns",
+      "summary": "Address Homelessness and Public Safety Concerns. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION REGARDING NOTICEABLE UPTICK IN HOMELESSNESS TRENDS, PUBLIC SAFETY CONCERNS, AND REPORTED OUTWARDLY AGGRESSIVE, VIOLENT & CRUDE CONDUCT IN THE CITY, INCLUDING AN UPDATE FROM HOUSING AND COMMUNITY SERVICES DIRECTOR ALBA TARRE AND THE CHIEF OF MIAMI BEACH POLICE DEPARTMENT, WAYNE JONES.",
+      "status": "Not reached on 7/22/2026 - R9 AI; Not reached on 6/24/2026 - R9 AG",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9Y"
+    },
+    {
+      "id": "2026-09-10-r9z",
+      "itemNumber": "R9Z",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Police Conduct, Discipline, Public Trust Standards",
+      "summary": "Police Conduct, Discipline, Public Trust Standards. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSSION AND ACTION REGARDING POLICE DEPARTMENT EMPLOYEE CONDUCT, DISCIPLINARY STANDARDS, AND PUBLIC TRUST SAFEGUARDS.",
+      "status": "Not reached on 7/22/2026 - R9 AJ",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9Z"
+    },
+    {
+      "id": "2026-09-10-r10a",
+      "itemNumber": "R10A",
+      "type": "Commission item",
+      "section": "City Attorney Reports / Executive Sessions - R10",
+      "title": "City Attorney Status Report",
+      "summary": "City Attorney Status Report. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "CITY ATTORNEY'S STATUS REPORT",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R10A"
+    },
+    {
+      "id": "2026-09-10-1.",
+      "itemNumber": "1.",
+      "type": "Commission item",
+      "section": "Reports and Informational Items",
+      "title": "Report Withdrawn Items Not Heard",
+      "summary": "Report Withdrawn Items Not Heard. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "REPORT FROM COMMISSION COMMITTEES OF WITHDRAWN ITEMS NOT HEARD WITHIN (6) SIX MONTHS FROM REFERRAL DATE.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12821"
+    },
+    {
+      "id": "2026-09-10-7.",
+      "itemNumber": "7.",
+      "type": "Commission item",
+      "section": "Reports and Informational Items",
+      "title": "Residents' Right to Know Items",
+      "summary": "Residents' Right to Know Items. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "RESIDENTS’ RIGHT TO KNOW ITEMS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12818"
+    },
+    {
+      "id": "2026-09-10-1.",
+      "itemNumber": "1.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Appoint Rda and Cra Members",
+      "summary": "Appoint Rda and Cra Members. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "MIAMI BEACH REDEVELOPMENT AGENCY (RDA) AND NORTH BEACH COMMUNITY REDEVELOPMENT AGENCY (CRA) MEMBERS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12812"
+    },
+    {
+      "id": "2026-09-10-2.",
+      "itemNumber": "2.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Approve Av Equipment for Meetings",
+      "summary": "Approve Av Equipment for Meetings. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "USE OF AUDIO-VISUAL EQUIPMENT FOR PRESENTATIONS DURING PUBLIC MEETINGS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12813"
+    },
+    {
+      "id": "2026-09-10-3.",
+      "itemNumber": "3.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Explain Hybrid Meeting Participation",
+      "summary": "Explain Hybrid Meeting Participation. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "HOW A PERSON MAY PARTICIPATE DURING THE HYBRID CITY COMMISSION MEETING / COMMISSION MEETING PROCEDURES.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12814"
+    },
+    {
+      "id": "2026-09-10-4.",
+      "itemNumber": "4.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Set 2026 Commission Meeting Dates",
+      "summary": "Set 2026 Commission Meeting Dates. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "2026 COMMISSION MEETING DATES.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12815"
+    },
+    {
+      "id": "2026-09-10-5.",
+      "itemNumber": "5.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Release At-large Nominations",
+      "summary": "Release At-large Nominations. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "CITY COMMISSION AT-LARGE NOMINATIONS - RELEASE(S).",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12816"
+    },
+    {
+      "id": "2026-09-10-6.",
+      "itemNumber": "6.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Advertisements",
+      "summary": "Advertisements. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "ADVERTISEMENTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12817"
+    },
+    {
+      "id": "2026-09-10-8.",
+      "itemNumber": "8.",
+      "type": "Commission item",
+      "section": "Notices",
+      "title": "Time Certain and Agenda List",
+      "summary": "Time Certain and Agenda List. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "TIME CERTAIN AND AGENDA ITEMS LIST.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Clerk"
+      ],
+      "sponsors": [
+        "City Clerk"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": false,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/12819"
     }
   ]
 }
