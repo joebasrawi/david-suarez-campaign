@@ -15,6 +15,7 @@ export function recordTitle(value = '', limit = 160) {
   return clean.length > limit ? clean.slice(0,limit).replace(/\s+\S*$/,'') + '…' : clean;
 }
 export const sourceLink = (url, label = 'Official source') => `<a href="${escape(url)}" target="_blank" rel="noreferrer">${escape(label)} <span aria-hidden="true">↗</span></a>`;
+export function newsExcerpt(value='') { return value.replace(/^for immediate release[\s\S]*?[–—]\s*/i,'').replace(/\s*\[(?:&hellip;|…)\]\s*$/,'…').replaceAll('&hellip;','…').replaceAll('&nbsp;',' ').trim(); }
 export function thumbnailFallback(scope = document) {
   scope.querySelectorAll('img[data-video]').forEach(img => {
     const fallback = () => { if (!img.src.includes('/hqdefault.')) img.src = `https://i.ytimg.com/vi/${img.dataset.video}/hqdefault.jpg`; };

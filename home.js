@@ -1,4 +1,5 @@
-import {json, escape as e, date, thumbnailFallback} from './shared.js?v=468bf5ea8f';
+import {json, escape as e, date, thumbnailFallback, newsExcerpt} from './shared.js?v=da4eebcc5e';
+import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer} from './city-map.js?v=e410b87006';
 const $=s=>document.querySelector(s);
 async function init(){
  const {youtube,agenda,news}=await json('home-summary');
@@ -8,8 +9,8 @@ async function init(){
  const image=$('#featured-image');image.src='https://i.ytimg.com/vi/'+item.id+'/maxresdefault.jpg';image.alt=item.title;image.dataset.video=item.id;thumbnailFallback();
  }}
  const cards=[];
- if(agenda){const m=agenda.nextMeeting;cards.push('<article class="official-item"><div><span class="official-label">Next commission agenda</span><h3>'+e(date(m.date))+'</h3><p>'+m.itemCount+' items for consideration</p><a href="commission-agenda/">Explore the agenda</a></div></article>');}
- if(news)news.items.slice(0,2).forEach(i=>cards.push('<article class="official-item"><div><span class="official-label">'+e(date(i.publishedAt,true))+'</span><h3>'+e(i.title)+'</h3><a href="'+e(i.url)+'" target="_blank" rel="noreferrer">Read announcement ↗</a></div></article>'));
+ if(agenda){const m=agenda.nextMeeting;const d=new Date(m.date+'T12:00:00');cards.push('<article class="official-item agenda-preview"><span class="official-label">Your next commission meeting</span><time class="meeting-date-art" datetime="'+e(m.date)+'"><span>'+d.toLocaleDateString('en-US',{month:'long'})+'</span><strong>'+d.getDate()+'</strong></time><div><h3>'+m.itemCount+' items for consideration.</h3><a href="commission-agenda/">See what’s on the agenda ↗</a></div></article>');}
+ if(news)news.items.slice(0,2).forEach(i=>cards.push('<article class="official-item news-preview"><span class="official-label">City announcement · '+e(date(i.publishedAt,true))+'</span><div><h3>'+e(i.title)+'</h3><p>'+e(newsExcerpt(i.summary))+'</p></div><a href="'+e(i.url)+'" target="_blank" rel="noreferrer">Read announcement ↗</a></article>'));
  $('#official-updates').innerHTML=cards.join('')||'<p class="loading-copy">Updates could not be loaded. <a href="news/">Try city news</a>.</p>';
 
 }
@@ -56,34 +57,40 @@ function loadMapLibrary(){
  ]);
 }
 async function initHomeMap(){
- const region=$('#home-project-map'),list=$('#home-project-list');
- const areas={south:{center:[25.782,-80.137],min:25.75,max:25.805},mid:{center:[25.824,-80.127],min:25.805,max:25.846},north:{center:[25.866,-80.132],min:25.846,max:25.89}};
- let items=[],map,markers,selected='south';
+ const region=$('#home-project-map'),list=$('#home-project-list'),picker=$('#home-neighborhood');
+ let items=[],areas=[],map,markers,boundaries;
  const url=item=>'active-projects/?project='+encodeURIComponent(item.id);
- const clean=value=>value&&value!=='null'?value:'Project';
+ const choose=feature=>{picker.value=feature.properties.name;render();};
  function render(){
-  const area=areas[selected];
-  const projects=items.filter(i=>i.lat>=area.min&&i.lat<area.max).sort((a,b)=>(b.phase==='Construction')-(a.phase==='Construction')||a.title.localeCompare(b.title));
+  const selected=areas.find(f=>f.properties.name===picker.value);
+  const projects=items.filter(i=>!selected||pointInFeature(i,selected)).sort((a,b)=>(b.sourceLayer?.phase==='Construction')-(a.sourceLayer?.phase==='Construction')||a.title.localeCompare(b.title));
   const distinct=[...new Map(projects.map(i=>[i.projectNumber||i.title,i])).values()];
-  list.innerHTML=distinct.slice(0,3).map(i=>'<a class="map-project-link" href="'+url(i)+'"><span>'+e(clean(i.phase))+'</span><strong>'+e(i.title)+' <span aria-hidden="true" class="project-arrow">↗</span></strong></a>').join('')||'<p class="source-note">No mapped projects in this area. Explore the full directory below.</p>';
-  document.querySelectorAll('[data-area]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.area===selected)));
+  $('#home-map-count').textContent=projects.length+(projects.length===1?' mapped feature':' mapped features')+(selected?' in '+selected.properties.name:' across Miami Beach');
+  list.innerHTML=distinct.slice(0,3).map(i=>'<a class="map-project-link" href="'+url(i)+'"><span><i class="phase-dot" style="--marker:'+phaseColor(i)+'"></i>'+e(i.sourceLayer?.phase||i.phase||'Project')+'</span><strong>'+e(i.title)+' <span aria-hidden="true" class="project-arrow">↗</span></strong></a>').join('')||'<p class="source-note">No project points fall inside this neighborhood in the saved feed. Larger projects may cross its boundary.</p>';
+  $('#home-map-link').href='active-projects/'+(selected?'?area='+encodeURIComponent(selected.properties.name):'');
   if(!map)return;
-  map.setView(area.center,13,{animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});markers.clearLayers();
+  boundaries?.remove();boundaries=boundaryLayer(map,selected?[selected]:areas,choose);
+  if(selected)map.fitBounds(boundaries.getBounds(),{padding:[32,32],maxZoom:15,animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});
+  else map.fitBounds([[25.758,-80.17],[25.877,-80.113]],{padding:[15,15]});
+  markers.clearLayers();
   projects.forEach(i=>{
-   const marker=L.circleMarker([i.lat,i.lng],{radius:7,color:'#fff',weight:2,fillColor:'#096e69',fillOpacity:1}).addTo(markers);
-   marker.bindPopup('<strong>'+e(i.title)+'</strong><br>'+e(clean(i.phase))+'<a href="'+url(i)+'">View project details ↗</a>');
-   // Avoid dozens of map tab stops; the adjacent links and directory provide keyboard access.
+   const marker=L.circleMarker([i.lat,i.lng],{radius:6,color:'#132f38',weight:2,fillColor:phaseColor(i),fillOpacity:1}).addTo(markers);
+   marker.bindPopup('<strong>'+e(i.title)+'</strong><br>'+e(i.sourceLayer?.phase||i.phase)+'<a href="'+url(i)+'">View project details ↗</a>');
   });
  }
- document.querySelectorAll('[data-area]').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.area;render();}));
+ picker.addEventListener('change',render);
+ $('#home-map-legend').innerHTML=legendMarkup();
  try{
-  const data=await json('city-projects');items=data.items.filter(i=>Number.isFinite(i.lat)&&Number.isFinite(i.lng));render();
- }catch{list.innerHTML='<p class="source-note">Project updates are unavailable. You can still open the full directory.</p>';region.innerHTML='<div class="map-loading"><p>The project map is unavailable.</p><a href="active-projects/">Open the project directory</a></div>';region.setAttribute('aria-busy','false');return;}
+  const [data,geography]=await Promise.all([json('city-projects'),json('neighborhoods').catch(()=>null)]);
+  items=data.items.filter(i=>Number.isFinite(i.lat)&&Number.isFinite(i.lng));
+  if(geography){areas=neighborhoods(geography);picker.innerHTML='<option value="all">All Miami Beach</option>'+areas.map(f=>'<option>'+e(f.properties.name)+'</option>').join('');}
+  else {picker.disabled=true;$('#home-map-legend').insertAdjacentHTML('beforeend','<p class="source-note">Neighborhood boundaries are temporarily unavailable.</p>');}
+  render();
+ }catch{list.innerHTML='<p class="source-note">Project updates are unavailable. Open the full directory below.</p>';region.innerHTML='<div class="map-loading">Project data could not load.</div>';region.setAttribute('aria-busy','false');return;}
  try{
   await loadMapLibrary();region.replaceChildren();
   map=L.map(region,{scrollWheelZoom:false,dragging:!matchMedia('(pointer: coarse)').matches,tap:false});
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
-  markers=L.layerGroup().addTo(map);render();
+  installBasemap(map);markers=L.layerGroup().addTo(map);render();
  }catch{region.innerHTML='<div class="map-loading"><p>The map is unavailable right now.</p><a href="active-projects/">Browse the project directory</a></div>';}
  finally{region.setAttribute('aria-busy','false');}
 }

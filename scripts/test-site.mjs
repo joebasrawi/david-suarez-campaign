@@ -28,7 +28,7 @@ const fixture=context.parseMeeting(lines,{id:1,date:'February 5, 2026'},{templat
 assert.equal(fixture[0].voteType,'Consent agenda');assert.equal(fixture[1].voteSummary,'');assert.equal(fixture[1].rollCall.length,0);
 const multi=['R7 A A RESOLUTION OF THE MAYOR AND CITY COMMISSION TO APPROVE A PROJECT.','ACTION: Resolution adopted. Vote: 6-1.','VOTES:','Mayor Test: Yes','Another motion. Vote: 7-0.','VOTES:','Mayor Test: Yes'];
 assert.equal(context.parseMeeting(multi,{id:1,date:'February 5, 2026'},{templateId:1,compileOutputType:1})[0].voteSummary,'');
-const routes=['','resident-guide','search','meetings','news','sources','about','legislation','commission-agenda','commission-actions','active-projects','media'];
+const routes=['','resident-guide','search','meetings','news','sources','about','commission','legislation','commission-agenda','commission-actions','active-projects','media'];
 let checked=0;
 for(const route of routes){
  const file=new URL(`${route?route+'/':''}index.html`,root),html=await readFile(file,'utf8');
@@ -45,7 +45,9 @@ for(const route of routes){
  assert.equal((html.match(/<script[^>]+src="[^"]*experience\.js/g)||[]).length,1,route+': one shared motion controller');
  assert.ok(html.includes('experience.css'),route+': shared motion and skeleton styling');
  assert.equal((html.match(/data-load-region=/g)||[]).length,loadingRegions[route].length,route+': all asynchronous sections have loading shells');
- assert.ok(html.includes('role="status">Loading content'),route+': accessible loading announcement');
+ if(loadingRegions[route].length)assert.ok(html.includes('role="status">Loading content'),route+': accessible loading announcement');
+ assert.ok(html.includes('theme.js')&&html.includes('coastal.css'),route+': shared appearance');
+ assert.ok(!html.includes('class="hub-search"'),route+': no global search control');
  if(route!=='resident-guide')assert.equal(addLoadingShells(html,route),html,route+': skeleton assembly is idempotent');
  if(route==='resident-guide')assert.equal((html.match(/class="service-icon"/g)||[]).length,12,'All service icons are present');
  if(!['commission-agenda','commission-actions'].includes(route))assert.ok(!/<script[^>]+src="[^"]*shared\.js/.test(html),route+': shared navigation must load once via the module entry');

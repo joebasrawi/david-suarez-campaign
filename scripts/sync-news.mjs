@@ -10,13 +10,16 @@ if (!Array.isArray(categories) || !categories[0]?.id) {
   throw new Error(`Could not find the official ${year} press release category.`);
 }
 
-const posts = await fetchJson(`${API_ROOT}/posts?categories=${categories[0].id}&per_page=10&orderby=date&order=desc&_fields=id,date,link,title,excerpt`);
+const posts = await fetchJson(`${API_ROOT}/posts?categories=${categories[0].id}&per_page=10&orderby=date&order=desc&_fields=id,date,link,title,excerpt,content`);
+function summary(post) {
+  const subhead=cleanText(post.content?.rendered?.match(/<h3\b[^>]*>([\s\S]*?)<\/h3>/i)?.[1]||'').replace(/^[–—-]\s*|\s*[–—-]$/g,'').trim();
+  if(subhead.length>25&&subhead.length<320)return subhead;
+  return cleanText(post.excerpt?.rendered).replace(/^Download Press Release Share:\s*/i,'').replace(/^for immediate release[\s\S]*?[–—]\s*/i,'').replace(/\s*\[(?:&hellip;|…)\]$/u,'…');
+}
 const items = posts.map(post => ({
   id: String(post.id),
   title: cleanText(post.title?.rendered),
-  summary: cleanText(post.excerpt?.rendered)
-    .replace(/^Download Press Release Share:\s*/i, '')
-    .replace(/\s*\[…\]$/u, ''),
+  summary: summary(post),
   publishedAt: post.date,
   url: post.link,
   label: 'Official city news'

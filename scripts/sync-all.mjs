@@ -1,5 +1,5 @@
 import {isoNow,writeSnapshot} from './lib.mjs';
-const jobs=['youtube','calendar','agendas','actions','news','projects','records'];
+const jobs=['youtube','calendar','agendas','actions','news','projects','neighborhoods','records'];
 const items=[];
 for(const name of jobs){
  try { await import(`./sync-${name}.mjs`);items.push({name,status:'success',checkedAt:isoNow()}); }
