@@ -30,6 +30,7 @@ The automated sync writes versioned JSON into `data/` and never fetches third-pa
 
 - YouTube: official channel Atom feed, classified into site series by title.
 - Meetings: official City of Miami Beach calendar export, limited to upcoming City Government entries.
+- City news: official City of Miami Beach press releases from the city's WordPress API.
 - Projects: official Public Works ArcGIS layers for construction, design and planning.
 - Ordinances and resolutions: discover changes automatically, but publish resident-facing summaries only after a human verifies the official document, number, adoption date and source link.
 

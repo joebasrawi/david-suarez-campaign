@@ -1,6 +1,7 @@
 const HOME_DATA = {
   youtube: 'data/youtube.json',
   calendar: 'data/city-calendar.json',
+  news: 'data/city-news.json',
   projects: 'data/city-projects.json',
   records: 'data/records-status.json'
 };
@@ -59,15 +60,16 @@ function officialItem(icon, label, title, description, url, linkLabel) {
   return `<article class="official-item"><span class="official-icon"><i class="${homeEscape(icon)}" aria-hidden="true"></i></span><div><span class="official-label">${homeEscape(label)}</span><h3>${homeEscape(title)}</h3><p>${homeEscape(description)}</p><a href="${homeEscape(url)}" target="_blank" rel="noreferrer">${homeEscape(linkLabel)}</a></div></article>`;
 }
 
-function renderOfficialUpdates(calendar, projects, records) {
+function renderOfficialUpdates(calendar, news, projects, records) {
   const meeting = calendar.items.find(item => /commission|board|committee|authority|meeting|hearing|workshop/i.test(item.title)) || calendar.items[0];
+  const latestNews = news.items[0];
   const project = projects.items.find(item => item.phase === 'Construction' && item.title && item.link) || projects.items.find(item => item.phase === 'Construction');
   const ordinance = records.items.find(item => item.type === 'ordinances');
   const meetingDescription = meeting ? `${displayDate(meeting.startLocal, { short: true })}${meeting.location ? ` · ${meeting.location}` : ''}` : 'Check upcoming public meetings.';
   document.querySelector('#official-updates').innerHTML = [
     officialItem('fa-regular fa-calendar', 'Next public meeting', meeting?.title || 'City meeting calendar', meetingDescription, meeting?.url || calendar.source.url, 'View meeting'),
     officialItem('fa-solid fa-person-digging', 'Public Works update', project?.title || 'Active Public Works projects', project ? `${project.phase}${project.neighborhood ? ` · ${project.neighborhood}` : ''}` : `${projects.items.length} mapped project features`, project?.link || projects.source.url, 'View project source'),
-    officialItem('fa-solid fa-scale-balanced', 'City Clerk record', ordinance ? `Ordinance registry through ${displayDate(ordinance.currentThrough, { short: true })}` : 'City Clerk public records', 'Official registry files are monitored for changes.', ordinance?.registryPdf || records.source.url, 'Open registry')
+    officialItem('fa-regular fa-newspaper', latestNews?.label || 'Official city news', latestNews?.title || 'City press releases', latestNews ? displayDate(latestNews.publishedAt, { short: true }) : 'Current City of Miami Beach announcements.', latestNews?.url || news.source.url, 'Read update')
   ].join('');
   document.querySelector('#meeting-summary').textContent = meeting ? `Next listed meeting: ${meeting.title}, ${displayDate(meeting.startLocal, { short: true })}.` : 'See upcoming public meetings and check whether an agenda is available.';
   document.querySelector('#project-summary').textContent = `${projects.items.length} official construction, design, and planning features are available in the current city snapshot.`;
@@ -97,8 +99,8 @@ function applyLanguage(language) {
 
 async function initializeHome() {
   try {
-    const [youtube, calendar, projects, records] = await Promise.all(Object.values(HOME_DATA).map(loadJson));
-    renderFeatured(youtube); renderOfficialUpdates(calendar, projects, records);
+    const [youtube, calendar, news, projects, records] = await Promise.all(Object.values(HOME_DATA).map(loadJson));
+    renderFeatured(youtube); renderOfficialUpdates(calendar, news, projects, records);
     mediaItems = youtube.items; renderVideos();
   } catch (error) {
     console.error('Could not load resident hub data', error);

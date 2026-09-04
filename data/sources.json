@@ -27,6 +27,13 @@
       "automation": "data/city-calendar.json"
     },
     {
+      "name": "City press releases",
+      "url": "https://www.miamibeachfl.gov/city-hall/communications/press-releases/",
+      "authority": "City of Miami Beach",
+      "use": "Current city news and resident-facing announcements",
+      "automation": "data/city-news.json"
+    },
+    {
       "name": "Public Works GIS",
       "url": "https://gis.miamibeachfl.gov/public/rest/services/gc/gc_Projects_PW/MapServer",
       "authority": "City of Miami Beach",

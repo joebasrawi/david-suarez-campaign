@@ -4,6 +4,7 @@ import { ROOT } from './lib.mjs';
 const checks = [
   ['data/youtube.json', 5],
   ['data/city-calendar.json', 1],
+  ['data/city-news.json', 3],
   ['data/city-projects.json', 50],
   ['data/records-status.json', 2]
 ];
