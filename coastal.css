@@ -208,6 +208,7 @@ body[data-page="news"] .page-head .editorial-deck + p { display:none; }
 .profile-copy .button-row { margin-top:30px; }
 .profile-portrait { margin:0; background:var(--panel-raised); border-radius:12px; overflow:hidden; }
 .profile-portrait img { width:100%; height:500px; object-fit:cover; object-position:center 40%; }
+.profile-portrait img.family-photo { height:auto; aspect-ratio:4/5; object-fit:cover; object-position:left center; }
 .profile-portrait figcaption { color:var(--subtle); padding:18px 24px; font-size:12px; border-top:1px solid var(--rule); }
 .profile-story { display:grid; grid-template-columns:1fr 1fr; gap:80px; padding-block:72px; }
 .profile-story h2,.contact-david h2 { font-size:clamp(28px,3.2vw,42px); line-height:1.14; letter-spacing:-.035em; margin:0; }
