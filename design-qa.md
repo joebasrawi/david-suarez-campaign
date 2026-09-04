@@ -21,6 +21,7 @@
 - **Images:** Every visible photograph and video thumbnail comes from David Suarez's official YouTube channel. No AI-generated, placeholder, stock, or fabricated imagery is used.
 - **Icons:** Font Awesome supplies a consistent icon family for search, meetings, projects, records, video, and social links.
 - **Responsive:** Desktop, tablet, and mobile layouts do not overlap or clip. The mobile menu opens as a full-width navigation panel; the tablet official-update rail becomes a scannable three-column row.
+- **Agenda module:** The current-commission banner and four-item Suarez agenda grid were reviewed at desktop width; the grid follows the existing 4→2→1 responsive pattern without introducing new visual language.
 - **Interactions:** Site search filters the legislation tracker, language toggle updates navigation labels, video-series filters reduce the library correctly, and the mobile menu opens and closes with synchronized ARIA state.
 - **Accessibility:** Skip link, semantic headings, labeled controls, alt text, keyboard focus states, reduced-motion handling, and practical tap targets are present.
 - **Content:** Official records are visibly labeled and linked to source; commentary and original programming are distinguished.

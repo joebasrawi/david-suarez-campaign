@@ -1,6 +1,7 @@
 const HOME_DATA = {
   youtube: 'data/youtube.json',
   calendar: 'data/city-calendar.json',
+  agenda: 'data/city-agenda.json',
   news: 'data/city-news.json',
   projects: 'data/city-projects.json',
   records: 'data/records-status.json'
@@ -60,18 +61,27 @@ function officialItem(icon, label, title, description, url, linkLabel) {
   return `<article class="official-item"><span class="official-icon"><i class="${homeEscape(icon)}" aria-hidden="true"></i></span><div><span class="official-label">${homeEscape(label)}</span><h3>${homeEscape(title)}</h3><p>${homeEscape(description)}</p><a href="${homeEscape(url)}" target="_blank" rel="noreferrer">${homeEscape(linkLabel)}</a></div></article>`;
 }
 
-function renderOfficialUpdates(calendar, news, projects, records) {
-  const meeting = calendar.items.find(item => /commission|board|committee|authority|meeting|hearing|workshop/i.test(item.title)) || calendar.items[0];
+function renderOfficialUpdates(calendar, agenda, news, projects, records) {
+  const meeting = agenda.nextMeeting;
   const latestNews = news.items[0];
   const project = projects.items.find(item => item.phase === 'Construction' && item.title && item.link) || projects.items.find(item => item.phase === 'Construction');
   const ordinance = records.items.find(item => item.type === 'ordinances');
-  const meetingDescription = meeting ? `${displayDate(meeting.startLocal, { short: true })}${meeting.location ? ` · ${meeting.location}` : ''}` : 'Check upcoming public meetings.';
+  const meetingDescription = meeting ? `${displayDate(meeting.date, { short: true })} · ${meeting.itemCount} agenda items` : 'Check upcoming public meetings.';
   document.querySelector('#official-updates').innerHTML = [
-    officialItem('fa-regular fa-calendar', 'Next public meeting', meeting?.title || 'City meeting calendar', meetingDescription, meeting?.url || calendar.source.url, 'View meeting'),
+    officialItem('fa-regular fa-calendar', 'Next commission agenda', meeting?.type || 'City Commission', meetingDescription, meeting?.officialAgendaUrl || calendar.source.url, 'Open official agenda'),
     officialItem('fa-solid fa-person-digging', 'Public Works update', project?.title || 'Active Public Works projects', project ? `${project.phase}${project.neighborhood ? ` · ${project.neighborhood}` : ''}` : `${projects.items.length} mapped project features`, project?.link || projects.source.url, 'View project source'),
     officialItem('fa-regular fa-newspaper', latestNews?.label || 'Official city news', latestNews?.title || 'City press releases', latestNews ? displayDate(latestNews.publishedAt, { short: true }) : 'Current City of Miami Beach announcements.', latestNews?.url || news.source.url, 'Read update')
   ].join('');
-  document.querySelector('#meeting-summary').textContent = meeting ? `Next listed meeting: ${meeting.title}, ${displayDate(meeting.startLocal, { short: true })}.` : 'See upcoming public meetings and check whether an agenda is available.';
+  document.querySelector('#meeting-summary').textContent = meeting ? `Next City Commission agenda: ${displayDate(meeting.date, { short: true })}, with ${meeting.itemCount} listed items.` : 'See upcoming public meetings and check whether an agenda is available.';
+  document.querySelector('#current-agenda-link').href = meeting?.url || agenda.source.url;
+  document.querySelector('#official-agenda-link').href = meeting?.officialAgendaUrl || records.source.url;
+  document.querySelector('#current-agenda-source').href = meeting?.officialAgendaUrl || records.source.url;
+  document.querySelector('#current-agenda-summary').textContent = agenda.items.length
+    ? `${agenda.items.length} upcoming items list Commissioner Suarez as a sponsor or co-sponsor. Open an item for its source title and full agenda record.`
+    : 'No Commissioner Suarez sponsorship was identified on the current agenda snapshot.';
+  document.querySelector('#current-agenda-items').innerHTML = agenda.items.length
+    ? agenda.items.slice(0, 4).map(item => `<article><span>${homeEscape(item.itemNumber)} · ${homeEscape(item.type)}</span><h4>${homeEscape(item.title)}</h4><p>${homeEscape(item.status)}</p><a href="${homeEscape(item.url)}" target="_blank" rel="noreferrer">View agenda item</a></article>`).join('')
+    : '<p class="loading-copy">Use the official agenda link for the complete meeting record.</p>';
   document.querySelector('#project-summary').textContent = `${projects.items.length} official construction, design, and planning features are available in the current city snapshot.`;
   document.querySelector('#records-summary').textContent = ordinance ? `The official ordinance registry currently runs through ${displayDate(ordinance.currentThrough, { short: true })}.` : 'Search the City Clerk registry, then use the tracker below for resident-friendly context.';
 }
@@ -99,8 +109,8 @@ function applyLanguage(language) {
 
 async function initializeHome() {
   try {
-    const [youtube, calendar, news, projects, records] = await Promise.all(Object.values(HOME_DATA).map(loadJson));
-    renderFeatured(youtube); renderOfficialUpdates(calendar, news, projects, records);
+    const [youtube, calendar, agenda, news, projects, records] = await Promise.all(Object.values(HOME_DATA).map(loadJson));
+    renderFeatured(youtube); renderOfficialUpdates(calendar, agenda, news, projects, records);
     mediaItems = youtube.items; renderVideos();
   } catch (error) {
     console.error('Could not load resident hub data', error);

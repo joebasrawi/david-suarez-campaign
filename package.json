@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "sync:data": "node scripts/sync-all.mjs",
+    "sync:agendas": "node scripts/sync-agendas.mjs",
     "sync:calendar": "node scripts/sync-calendar.mjs",
     "sync:news": "node scripts/sync-news.mjs",
     "sync:projects": "node scripts/sync-projects.mjs",

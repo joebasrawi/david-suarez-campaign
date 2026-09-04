@@ -30,6 +30,7 @@ The automated sync writes versioned JSON into `data/` and never fetches third-pa
 
 - YouTube: official channel Atom feed, classified into site series by title.
 - Meetings: official City of Miami Beach calendar export, limited to upcoming City Government entries.
+- Commission agendas: current meeting and sponsor/co-sponsor metadata discovered through Miami Beach Agenda, with the legal source linked directly to the official PrimeGov agenda.
 - City news: official City of Miami Beach press releases from the city's WordPress API.
 - Projects: official Public Works ArcGIS layers for construction, design and planning.
 - Ordinances and resolutions: discover changes automatically, but publish resident-facing summaries only after a human verifies the official document, number, adoption date and source link.
@@ -43,4 +44,5 @@ Each generated file includes `generatedAt` and a source URL. A failed validation
 - Show “last checked” timestamps on time-sensitive sections.
 - Link directly to the official document or meeting page whenever possible.
 - Treat social posts as commentary, not as the legal record.
+- Treat Miami Beach Agenda as a navigation layer, not the legal record; preserve the official PrimeGov link for every synced meeting.
 - Keep English and Spanish content as paired fields in the future content model.

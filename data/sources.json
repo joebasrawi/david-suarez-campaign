@@ -8,9 +8,10 @@
     },
     {
       "name": "Meetings and agendas",
-      "url": "https://www.miamibeachfl.gov/egovapp/news-and-info/newsandalerts/meetingsandagendas/",
+      "url": "https://www.miamibeachfl.gov/city-hall/city-clerk/meetings-and-agendas/",
       "authority": "City of Miami Beach",
-      "use": "Agendas, notices and supporting documents"
+      "use": "Agendas, notices and supporting documents",
+      "automation": "data/city-agenda.json"
     },
     {
       "name": "Public records registry",
@@ -45,6 +46,13 @@
       "url": "https://www.miamibeachfl.gov/MBTV/",
       "authority": "City of Miami Beach",
       "use": "Meeting video and chapter markers"
+    },
+    {
+      "name": "Miami Beach Agenda navigator",
+      "url": "https://miamibeachagenda.com/",
+      "authority": "Third-party resident navigation layer",
+      "use": "Discover the current commission agenda and David Suarez sponsorship metadata; every snapshot preserves the official PrimeGov source link",
+      "automation": "data/city-agenda.json"
     }
   ],
   "commissionerChannels": [
