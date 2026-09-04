@@ -152,11 +152,11 @@ a { text-underline-offset:4px; }
 .hub-field input,.hub-field select { border-color:#c4cbcd; font-weight:400; }
 .topic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 40px; border:0; align-items:start; }
 .topic-card { display:block; padding:0; border:0; border-top:1px solid var(--line); }
-.topic-card summary { padding:22px 26px 22px 0; position:relative; list-style:none; min-height:96px; }
+.topic-card summary { padding:22px 26px 22px 0; position:relative; list-style:none; min-height:72px; }
 .topic-card summary::-webkit-details-marker { display:none; }
-.topic-card summary::after { content:'+'; position:absolute; right:4px; top:35px; font-size:20px; font-weight:400; color:var(--teal-dark); }
+.topic-card summary::after { content:'+'; position:absolute; right:4px; top:50%; transform:translateY(-50%); font-size:20px; font-weight:400; color:var(--teal-dark); }
 .topic-card[open] summary::after { content:'−'; }
-.topic-card h2 { margin:5px 0 0; font-size:18px; font-weight:500; text-wrap:initial; }
+.topic-card h2 { margin:0; font-size:18px; font-weight:500; text-wrap:initial; }
 .topic-card .topic-label { font-size:11px; color:var(--muted); font-weight:400; }
 .service-detail { padding-bottom:24px; }
 .service-detail h3 { font-size:13px; font-weight:600; margin:20px 0 8px; }
@@ -282,7 +282,7 @@ body:has(.media-archive),.media-intro,.media-archive { background:white; color:v
  .official-record { grid-template-columns:1fr; gap:12px; }
  .detail-fact+.detail-fact { padding-left:0; }
  .topic-grid { grid-template-columns:1fr; }
- .topic-card summary { min-height:90px; }
+ .topic-card summary { min-height:72px; }
  .next-meeting { align-items:start; flex-direction:column; gap:10px; }
  .next-meeting .button-row { margin-top:8px; }
  .section-heading { align-items:start; flex-direction:column; gap:10px; }
