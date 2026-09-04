@@ -37,4 +37,18 @@
 - The dedicated Watch and Legislation pages were checked visually; video-series filtering and real official YouTube thumbnails were verified.
 - The scheduled public-data workflow refreshes every six hours, so newly published monthly meeting minutes are picked up automatically.
 
+## September 4 agenda scrolling fix
+
+- Source visual truth: `/var/folders/vg/zy36khk5319fpzq07mv4fjtm0000gn/T/TemporaryItems/NSIRD_screencaptureui_k7TOul/Screenshot 2026-09-04 at 2.20.15 PM.png`
+- Browser-rendered implementation: `/Users/joe/Documents/DAVID MB/work/qa/agenda-scroll-fixed.jpg`
+- Combined comparison: `/Users/joe/Documents/DAVID MB/work/qa/agenda-scroll-comparison.jpg`
+- Source image: 1088 × 1182 pixels. The detached macOS screenshot does not expose its CSS viewport or density; it was normalized to 739 pixels wide for the combined comparison while preserving its aspect ratio.
+- Implementation capture: 739 × 940 pixels at the in-app browser's responsive single-column state.
+- State: the source shows the agenda list stuck at C2A; the implementation shows the same 208-item list after a direct scroll gesture, advanced to C7AG with the internal scrollbar thumb visibly moved.
+- Full-view evidence: the responsive agenda reader, filters, section tabs, and list hierarchy remain visually consistent after the fix.
+- Focused interaction evidence: the agenda list accepted a browser scroll targeted at the list container and moved through multiple item groups without moving or locking the surrounding page.
+- Earlier P0 finding: the flex child retained its automatic minimum height, so the 208-item list expanded beyond its fixed reader track and was clipped instead of becoming a usable scroll area.
+- Fix: the browser and list tracks now allow flex/grid shrinking with `min-height: 0`; both list and detail panes receive explicit touch momentum, stable scroll gutters, and contained overscroll.
+- Post-fix result: mouse/trackpad-style scrolling works in the in-app browser at the responsive breakpoint represented by the report. Typography, spacing, color tokens, imagery, and copy were unchanged.
+
 final result: passed

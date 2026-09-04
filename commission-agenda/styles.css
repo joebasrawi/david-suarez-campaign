@@ -76,10 +76,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-tabs button.is-active { border-color: var(--teal); color: var(--navy); }
 .section-tabs .tab-count { margin-left: 5px; color: var(--teal-dark); }
 .reader-shell { height: min(680px, calc(100vh - 420px)); min-height: 540px; display: grid; grid-template-columns: minmax(330px, .68fr) minmax(0, 1.32fr); overflow: hidden; border: 1px solid var(--line); border-top: 0; background: var(--paper); }
-.item-browser { min-width: 0; display: flex; flex-direction: column; border-right: 1px solid var(--line); background: #f7f5ef; }
+.item-browser { min-width: 0; min-height: 0; display: flex; flex-direction: column; border-right: 1px solid var(--line); background: #f7f5ef; }
 .list-heading { min-height: 52px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--teal-dark); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .list-heading strong { min-width: 32px; padding: 3px 8px; border-radius: 12px; background: var(--navy); color: #fff; text-align: center; }
-.item-list { flex: 1; overflow-y: auto; }
+.item-list { min-height: 0; flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; -webkit-overflow-scrolling: touch; }
 .agenda-card { width: 100%; padding: 17px 18px; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 13px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
 .agenda-card:hover { background: #edf5f4; }
 .agenda-card.is-selected { background: #dfeeed; box-shadow: inset 5px 0 0 var(--teal); }
@@ -91,7 +91,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .david-mark { color: var(--teal-dark); font-weight: 800; }
 .empty-list { padding: 36px 22px; color: var(--muted); text-align: center; }
 
-.item-detail { min-width: 0; overflow-y: auto; background: #fff; }
+.item-detail { min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; -webkit-overflow-scrolling: touch; background: #fff; }
 .detail-inner { padding: 32px clamp(28px, 4vw, 58px) 46px; }
 .detail-topline { display: flex; justify-content: space-between; align-items: start; gap: 22px; }
 .detail-ident { display: flex; align-items: center; gap: 12px; }
