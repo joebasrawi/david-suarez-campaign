@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile,access,readdir} from 'node:fs/promises';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 import {loadingRegions,addLoadingShells} from './ui-shells.mjs';
 const root=new URL('../',import.meta.url);
 const read=file=>readFile(new URL(file,root),'utf8');
@@ -31,6 +32,11 @@ const routes=['','resident-guide','search','meetings','news','sources','about','
 let checked=0;
 for(const route of routes){
  const file=new URL(`${route?route+'/':''}index.html`,root),html=await readFile(file,'utf8');
+ if(route===''){
+  const films=[...html.matchAll(/data-(?:video|mobile)-src="([^"?]+)\?v=([a-f0-9]+)"/g)];
+  assert.equal(films.length,2,'Both homepage film sizes must be content-versioned');
+  for(const [,path,version] of films)assert.equal(version,createHash('sha256').update(await readFile(new URL(path,file))).digest('hex').slice(0,10),'Film version matches the current edit');
+ }
  assert.equal((html.match(/<h1\b/g)||[]).length,1,route+': one main heading');
  assert.equal((html.match(/class="hub-header"/g)||[]).length,1,route+': one shared header');
  assert.equal((html.match(/class="hub-footer"/g)||[]).length,1,route+': one shared footer');
