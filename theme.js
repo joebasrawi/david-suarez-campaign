@@ -9,7 +9,11 @@
     const value = choice === 'system' ? (system.matches ? 'dark' : 'light') : choice;
     document.documentElement.dataset.theme = value;
     document.documentElement.style.colorScheme = value;
-    document.querySelectorAll('[data-theme-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === choice)));
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      const label = value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
+    });
     document.dispatchEvent(new CustomEvent('theme:change', {detail: value}));
   }
   apply();
@@ -17,9 +21,9 @@
   document.addEventListener('DOMContentLoaded', () => {
     apply();
     document.addEventListener('click', event => {
-      const button = event.target.closest('[data-theme-choice]');
+      const button = event.target.closest('[data-theme-toggle]');
       if (!button) return;
-      choice = button.dataset.themeChoice;
+      choice = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       try { localStorage.setItem(key, choice); } catch {}
       apply();
     });
