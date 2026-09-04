@@ -146,7 +146,7 @@ function renderDetail() {
       <div class="detail-fact"><span>Vote result</span><strong>${escapeHtml(item.voteSummary || 'Not separately recorded')}</strong></div>
       <div class="detail-fact"><span>Amendments</span><strong>${item.amendments.length ? 'Yes — see below' : 'No amendment identified'}</strong></div>
     </div>
-    <div class="detail-tools"><button type="button" data-copy-link>Copy decision link</button><a href="../meetings/">Meeting history</a></div>
+    <div class="detail-tools"><button type="button" class="back-to-list" data-back-to-list>Back to items</button><button type="button" data-copy-link>Copy decision link</button><a href="../meetings/">Meeting history</a></div>
     <p class="source-note">${escapeHtml(item.voteBasis || 'Extracted from approved minutes. Verify the official record.')}</p>
     <div class="vote-panel"><div class="vote-overview"><h3>Commission vote</h3><span class="vote-score">${escapeHtml(item.voteSummary || '—')}</span><span class="vote-kind">${escapeHtml(item.voteType)}</span></div><div class="roll-call"><h3>Member-by-member record</h3>${renderRollCall(item)}</div></div>
     ${item.amendments.length ? `<section class="amendment-panel"><h3><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Amendment recorded</h3>${item.amendments.map(amendment => `<p>${escapeHtml(amendment)}</p>`).join('')}</section>` : ''}

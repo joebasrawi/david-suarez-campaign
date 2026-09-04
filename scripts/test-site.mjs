@@ -34,6 +34,8 @@ for(const route of routes){
  assert.equal((html.match(/class="hub-header"/g)||[]).length,1,route+': one shared header');
  assert.equal((html.match(/class="hub-footer"/g)||[]).length,1,route+': one shared footer');
  assert.ok(html.includes('Skip to'),route+': skip navigation');
+ assert.ok(html.includes('calm.css'),route+': simplified layout stylesheet');
+ if(!['commission-agenda','commission-actions'].includes(route))assert.ok(!/<script[^>]+src="[^"]*shared\.js/.test(html),route+': shared navigation must load once via the module entry');
  for(const match of html.matchAll(/<script([^>]*?)src="([^"?]+)(?:\?[^" ]*)?"[^>]*>/g)){
    if(/^https?:/.test(match[2]))continue;
    const code=await readFile(new URL(match[2],file),'utf8');

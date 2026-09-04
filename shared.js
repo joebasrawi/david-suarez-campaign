@@ -30,11 +30,18 @@ menu?.addEventListener('click', () => {
   menu.setAttribute('aria-expanded',String(open)); nav.classList.toggle('is-open',open);
 });
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') {
+  if(event.key!=='Escape')return;
+  const openGroup=document.querySelector('.nav-group[open],.filter-disclosure[open]');
+  if(openGroup){openGroup.open=false;openGroup.querySelector('summary').focus();return;}
+  if (menu?.getAttribute('aria-expanded') === 'true') {
     menu.setAttribute('aria-expanded','false'); nav.classList.remove('is-open'); menu.focus();
   }
 });
 document.addEventListener('click', async event => {
+  if(event.target.closest('[data-back-to-list]')){
+    const selected=document.querySelector('.item-browser [aria-pressed="true"]')||document.querySelector('.item-browser button');
+    selected?.focus({preventScroll:true}); document.querySelector('.item-browser')?.scrollIntoView({block:'start',behavior:'smooth'});
+  }
   const copy = event.target.closest('[data-copy-link]');
   if (copy) {
     try { await navigator.clipboard.writeText(location.href); copy.textContent = 'Link copied'; }
@@ -42,3 +49,23 @@ document.addEventListener('click', async event => {
   }
 });
 thumbnailFallback();
+
+ // Secondary navigation is deliberate: click/tap to open, Escape or outside click to close.
+ document.addEventListener('click', event => {
+   document.querySelectorAll('.nav-group[open],.filter-disclosure[open]').forEach(group => {
+     if(!group.contains(event.target)) group.open=false;
+   });
+ });
+
+ // Keep hidden filters understandable, including filters restored from a shared URL.
+ function updateFilterCounts(){
+   document.querySelectorAll('.filter-disclosure').forEach(panel=>{
+     const count=[...panel.querySelectorAll('select')].filter(select=>select.value && select.value!=='all').length;
+     const label=panel.querySelector('.filter-count'),text=count?'('+count+' active)':'';
+     if(label.textContent!==text)label.textContent=text;
+   });
+ }
+ document.addEventListener('change',updateFilterCounts);
+ document.querySelector('#reset-filters')?.addEventListener('click',()=>queueMicrotask(updateFilterCounts));
+ new MutationObserver(updateFilterCounts).observe(document.querySelector('main')||document.body,{childList:true,subtree:true});
+ updateFilterCounts();

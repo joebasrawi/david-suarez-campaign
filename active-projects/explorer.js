@@ -1,4 +1,4 @@
-import {json,escape as e,matches,date,sourceLink} from '../shared.js';
+import {json,escape as e,matches,date,sourceLink} from '../shared.js?v=35567ffdd7';
 const $=s=>document.querySelector(s),params=new URLSearchParams(location.search);
 const state={dataset:'works',datasets:{},selected:params.get('project'),center:null,map:null,markers:null};
 const clean=v=>v && String(v).toLowerCase()!=='null'?String(v):'';

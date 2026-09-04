@@ -11,33 +11,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="../commission-agenda/styles.css?v=e6a9004438">
   <link rel="stylesheet" href="styles.css?v=761b796c5d">
-<link rel="stylesheet" href="../site.css?v=5fc2b30610"></head>
+<link rel="stylesheet" href="../site.css?v=5fc2b30610"><link rel="stylesheet" href="../calm.css?v=65115c8046"></head>
 <body>
   <a class="skip-link" href="#decisions-main">Skip to decisions</a>
 
-  <header class="hub-header"><div class="container hub-top"><a class="brand" href="../" aria-label="David Suarez resident hub home"><span class="brand-first">David</span><span class="brand-last">Suarez</span><span class="brand-office">Commissioner · Miami Beach Group 5</span></a><nav id="hub-nav" class="hub-nav" aria-label="Primary navigation"><a href="../">Home</a><a href="../resident-guide/">Resident guide</a><a href="../meetings/">Meetings</a><a href="../commission-actions/" aria-current="page">Decisions & votes</a><a href="../active-projects/">Projects</a><a href="../media/">Watch</a></nav><a class="hub-search" href="../search/">Search</a><button type="button" class="hub-menu" data-menu aria-expanded="false" aria-controls="hub-nav">Menu</button></div><nav class="container hub-subnav" aria-label="More resources"><a href="../commission-agenda/">Next agenda</a><a href="../legislation/">Legislation</a><a href="../news/">City news</a><a href="../about/">David & the commission</a><a href="../sources/">Sources & updates</a><span class="office-note">Miami Beach, Florida</span></nav></header>
+  <header class="hub-header"><div class="container hub-top"><a class="brand" href="../" aria-label="David Suarez resident hub home"><span class="brand-first">David</span><span class="brand-last">Suarez</span><span class="brand-office">Miami Beach Commissioner</span></a><nav id="hub-nav" class="hub-nav" aria-label="Primary navigation"><a href="../resident-guide/">Residents</a><details class="nav-group" data-current="true"><summary>City Hall</summary><div class="nav-dropdown"><a href="../commission-agenda/">Next agenda</a><a href="../commission-actions/" aria-current="page">Decisions & votes</a><a href="../meetings/">Meetings & participation</a><a href="../legislation/">Ordinances & resolutions</a><a href="../news/">Miami Beach Today</a></div></details><a href="../active-projects/">Projects</a><a href="../media/">Watch</a><a href="../about/">About David</a></nav><a class="hub-search" href="../search/">Search</a><button type="button" class="hub-menu" data-menu aria-expanded="false" aria-controls="hub-nav">Menu</button></div></header>
 
   <main id="decisions-main">
     <section class="agenda-intro decisions-intro">
       <div class="container intro-layout">
         <div>
-          <p class="eyebrow">Official 2026 after-action history</p>
-          <h1>What the Commission Decided</h1>
+          <h1>Decisions & votes</h1>
           <p class="meeting-meta" id="coverage-summary">Loading approved meeting records…</p>
-          <div class="coverage-stats" aria-label="Decision history summary">
+          <div hidden class="coverage-stats" aria-label="Decision history summary">
             <span><strong id="passed-stat">—</strong> passed</span>
             <span><strong id="meeting-stat">—</strong> meetings</span>
             <span><strong id="amended-stat">—</strong> amended</span>
           </div>
         </div>
-        <aside class="official-callout">
-          <span class="source-mark"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
-          <div>
-            <strong>Built from approved minutes</strong>
+<details class="official-callout disclosure"><summary>Built from approved minutes</summary><div>
             <p>Every outcome links to the City’s official record. Meetings remain marked pending until approved minutes are published.</p>
             <a href="https://miamibeachfl.primegov.com/public/portal?fromiframe=true" target="_blank" rel="noreferrer">Open PrimeGov archive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-          </div>
-        </aside>
+          </div></details>
       </div>
     </section>
 
@@ -49,9 +44,9 @@
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             <input id="decision-search" type="search" placeholder="Search an item, action, sponsor, or amendment" autocomplete="off">
           </label>
-          <label class="filter-field"><span>Meeting</span><select id="meeting-filter"><option value="all">All 2026 meetings</option></select></label>
-          <label class="filter-field"><span>Outcome</span><select id="outcome-filter"><option value="Passed">Passed</option><option value="all">All outcomes</option></select></label>
-          <label class="filter-field"><span>Vote path</span><select id="vote-type-filter"><option value="all">Consent and separate</option></select></label>
+          <label class="filter-field primary-outcome"><span>Outcome</span><select id="outcome-filter"><option value="Passed">Passed</option><option value="all">All outcomes</option></select></label><details class="filter-disclosure"><summary>Filters <span class="filter-count" aria-live="polite"></span></summary><div class="filter-options">          <label class="filter-field"><span>Meeting</span><select id="meeting-filter"><option value="all">All 2026 meetings</option></select></label>
+
+          <label class="filter-field"><span>Vote path</span><select id="vote-type-filter"><option value="all">Consent and separate</option></select></label></div></details>
         </div>
         <div class="quick-row">
           <label class="david-toggle">
@@ -81,8 +76,8 @@
     </section>
   </main>
 
-  <footer class="hub-footer"><div class="container"><div class="hub-footer-top"><div><strong class="footer-name">David Suarez</strong><p>Commissioner · Miami Beach Group 5</p><p>A resident information hub connecting city records, neighborhood resources and David’s original content. Not the City of Miami Beach’s official website.</p></div><nav aria-label="Resident resources"><strong>For residents</strong><a href="../resident-guide/">Find a city service</a><a href="../meetings/">Attend a meeting</a><a href="../commission-actions/">Look up a decision</a><a href="../active-projects/">Explore city projects</a></nav><nav aria-label="Connect"><strong>Stay connected</strong><a href="https://www.instagram.com/davidsuarezmb/" target="_blank" rel="noreferrer">David on Instagram</a><a href="https://www.instagram.com/suarezsoundoff/" target="_blank" rel="noreferrer">Suarez Sound Off on Instagram</a><a href="https://www.tiktok.com/@suarezsoundoff" target="_blank" rel="noreferrer">Suarez Sound Off on TikTok</a><a href="https://www.youtube.com/@CommissionerDavidSuarez" target="_blank" rel="noreferrer">YouTube channel</a></nav></div><div class="hub-footer-bottom"><p>Official records remain authoritative. Commentary is labeled separately.</p><a href="../sources/">Data coverage & corrections</a><a href="mailto:davidsuarez@miamibeachfl.gov">Contact the office</a></div></div></footer>
+  <footer class="hub-footer"><div class="container"><div class="hub-footer-top"><div><strong class="footer-name">David Suarez</strong><p>Commissioner · Miami Beach Group 5</p><p>Resident resources and David’s perspective. Independent of the City’s official website.</p></div><nav aria-label="Resident resources"><strong>For residents</strong><a href="../resident-guide/">Find a city service</a><a href="../news/">Miami Beach Today</a><a href="../meetings/">Attend a meeting</a><a href="../commission-actions/">Look up a decision</a><a href="../active-projects/">Explore city projects</a></nav><nav aria-label="Connect"><strong>Stay connected</strong><a href="https://www.instagram.com/davidsuarezmb/" target="_blank" rel="noreferrer">David on Instagram</a><a href="https://www.instagram.com/suarezsoundoff/" target="_blank" rel="noreferrer">Suarez Sound Off on Instagram</a><a href="https://www.tiktok.com/@suarezsoundoff" target="_blank" rel="noreferrer">Suarez Sound Off on TikTok</a><a href="https://www.youtube.com/@CommissionerDavidSuarez" target="_blank" rel="noreferrer">YouTube channel</a></nav></div><div class="hub-footer-bottom"><p>Official City records remain authoritative.</p><a href="../sources/">Data coverage & corrections</a><a href="mailto:davidsuarez@miamibeachfl.gov">Contact the office</a></div></div></footer>
 
-  <script src="app.js?v=4038b24223" defer></script>
-<script type="module" src="../shared.js?v=5f52ac139e"></script></body>
+  <script src="app.js?v=ec3c4191d4" defer></script>
+<script type="module" src="../shared.js?v=35567ffdd7"></script></body>
 </html>

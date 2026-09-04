@@ -68,14 +68,14 @@ function setupFilters() {
 
 function renderMeeting() {
   const meeting = state.agenda.nextMeeting;
-  document.querySelector('#meeting-title').textContent = `Commission Agenda: ${displayDate(meeting.date).replace(/^[^,]+, /, '')}`;
-  document.querySelector('#meeting-meta').textContent = `${displayDate(meeting.date)} · ${meeting.location} · ${meeting.itemCount} items`;
+  document.querySelector('#meeting-title').textContent = 'Commission agenda';
+  document.querySelector('#meeting-meta').textContent = `${displayDate(meeting.date)} · ${meeting.itemCount} items for consideration`;
   document.querySelector('#official-agenda-link').href = meeting.officialAgendaUrl;
 }
 
 function renderTabs() {
   const tabs = [{ id: 'all', label: 'All items', count: state.agenda.items.length }, ...state.agenda.sections];
-  document.querySelector('#section-tabs').innerHTML = tabs.map(tab => `<button type="button" role="tab" aria-selected="${state.activeSection === tab.id}" class="${state.activeSection === tab.id ? 'is-active' : ''}" data-section="${escapeHtml(tab.id)}">${escapeHtml(tab.label)} <span class="tab-count">${tab.count}</span></button>`).join('');
+  document.querySelector('#section-tabs').innerHTML = `<label class="section-picker">Agenda section<select id="section-select">${tabs.map(tab => `<option value="${escapeHtml(tab.id)}" ${state.activeSection===tab.id?'selected':''}>${escapeHtml(tab.label)} (${tab.count})</option>`).join('')}</select></label>`;
 }
 
 function filteredItems() {
@@ -110,7 +110,7 @@ function renderList({ preserveSelection = true } = {}) {
     return;
   }
   if (!preserveSelection || !items.some(item => item.id === state.selectedItem)) state.selectedItem = items[0].id;
-  list.innerHTML = items.map(item => `<button type="button" class="agenda-card ${state.selectedItem === item.itemNumber ? 'is-selected' : ''}" data-item="${escapeHtml(item.id)}" aria-pressed="${state.selectedItem === item.itemNumber}">
+  list.innerHTML = items.map(item => `<button type="button" class="agenda-card ${state.selectedItem === item.id ? 'is-selected' : ''}" data-item="${escapeHtml(item.id)}" aria-pressed="${state.selectedItem === item.id}">
     <span class="agenda-number">${escapeHtml(item.itemNumber)}</span>
     <span class="agenda-card-copy"><h3>${escapeHtml(item.title)}</h3><span class="agenda-card-meta">${listMeta(item)}</span></span>
   </button>`).join('');
@@ -145,8 +145,8 @@ function renderDetail() {
     </div>
     <h2>${escapeHtml(item.title)}</h2>
     <p class="detail-section">${escapeHtml(item.section)}</p>
-    <div class="resident-overview"><span>Agenda item—not a recorded decision</span><p>Scheduled for consideration. This is not evidence that the item passed. Short titles are navigation aids from the third-party agenda navigator; consult the official title and packet.</p></div>
-    <div class="detail-tools"><button type="button" data-copy-link>Copy item link</button><a href="../meetings/">Meeting details & participation</a><a href="../commission-actions/?q=${encodeURIComponent(item.title)}&outcome=all">Search recorded actions</a></div>
+    <div class="resident-overview"><p>On the agenda for discussion. <strong>Not a recorded decision.</strong></p></div>
+    <div class="detail-tools"><button type="button" class="back-to-list" data-back-to-list>Back to items</button><button type="button" data-copy-link>Copy item link</button><a href="../meetings/">Meeting details & participation</a><a href="../commission-actions/?q=${encodeURIComponent(item.title)}&outcome=all">Search recorded actions</a></div>
     <div class="detail-facts">
       <div class="detail-fact"><span>Department</span><strong>${escapeHtml(departments)}</strong></div>
       <div class="detail-fact"><span>Neighborhood</span><strong>${escapeHtml(optionLabel(item.neighborhood))}</strong></div>
@@ -159,8 +159,8 @@ function renderDetail() {
       <a href="${escapeHtml(state.agenda.nextMeeting.officialAgendaUrl)}" target="_blank" rel="noreferrer">Open PrimeGov <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
     </div>
     <div class="details-stack">
-      <details><summary>Source status & history</summary><div class="details-body"><p>${escapeHtml(item.status)}</p></div></details><details open><summary>Official agenda title</summary><div class="details-body"><p>${escapeHtml(item.officialTitle)}</p></div></details>
-      <details><summary>Source and item navigation</summary><div class="details-body"><p>This resident guide uses a third-party agenda navigator to organize item-level metadata while preserving the official PrimeGov meeting link.</p><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Open this item in the agenda navigator</a></div></details>
+      <details><summary>Source status & history</summary><div class="details-body"><p>${escapeHtml(item.status)}</p></div></details><details><summary>Official agenda title</summary><div class="details-body"><p>${escapeHtml(item.officialTitle)}</p></div></details>
+      <details><summary>Source and item navigation</summary><div class="details-body"><p>Short titles and sponsorship details come from the third-party agenda navigator. Consult the official PrimeGov packet for legal language and current meeting details.</p><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Open this item in the agenda navigator</a></div></details>
     </div>
   </div>`;
   const params = new URLSearchParams(location.search);
@@ -188,11 +188,9 @@ function resetFilters() {
 }
 
 function bindEvents() {
-  document.querySelector('#section-tabs').addEventListener('click', event => {
-    const button = event.target.closest('[data-section]');
-    if (!button) return;
-    state.activeSection = button.dataset.section;
-    renderTabs();
+  document.querySelector('#section-tabs').addEventListener('change', event => {
+    if (event.target.id !== 'section-select') return;
+    state.activeSection = event.target.value;
     renderList({ preserveSelection: false });
   });
   document.querySelector('#item-list').addEventListener('click', event => {

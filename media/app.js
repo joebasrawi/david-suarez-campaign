@@ -1,4 +1,4 @@
-import {json,escape as e,date,matches,thumbnailFallback} from '../shared.js';
+import {json,escape as e,date,matches,thumbnailFallback} from '../shared.js?v=35567ffdd7';
 const $=s=>document.querySelector(s),params=new URLSearchParams(location.search);
 const state={items:[],series:params.get('series')||'all',query:params.get('q')||'',selected:params.get('video')};
 const descriptions={'Suarez Sound Off':'Long-form conversations with the people shaping Miami Beach.','Miami Beach Civics':'Understand the people, process and public money behind city government.','Ride Along':'Go behind the scenes with the teams working in Miami Beach.','Accountability':'David’s reporting and perspective on public accountability.','City Issues':'Updates and conversations about life in Miami Beach.'};
@@ -6,7 +6,7 @@ function syncUrl(){const p=new URLSearchParams();if(state.selected)p.set('video'
 function select(id,scroll=false){
  const item=state.items.find(i=>i.id===id);if(!item)return;
  state.selected=id;$('#player-art').innerHTML='<img data-video="'+e(item.id)+'" src="https://i.ytimg.com/vi/'+e(item.id)+'/maxresdefault.jpg" alt="'+e(item.title)+'">';
- $('#player-title').textContent=item.title;$('#player-series').textContent=item.series;$('#player-meta').textContent=date(item.publishedAt)+(item.duration?' · '+item.duration:'');$('#player-description').textContent=descriptions[item.series]||descriptions['City Issues'];$('#youtube-link').href=item.url;$('#play-video').hidden=false;thumbnailFallback($('#player-art'));syncUrl();
+ $('#player-title').textContent=item.title.replace(/^Suarez Sound Off\s*Ep\.\s*\d+\s*[—-]\s*/i,'');$('#player-series').textContent=item.series;$('#player-meta').textContent=date(item.publishedAt)+(item.duration?' · '+item.duration:'');$('#player-description').textContent=descriptions[item.series]||descriptions['City Issues'];$('#youtube-link').href=item.url;$('#play-video').hidden=false;thumbnailFallback($('#player-art'));syncUrl();
  if(scroll){$('#watch-player').scrollIntoView({behavior:'smooth',block:'start'});$('#player-title').focus({preventScroll:true});}
 }
 function render(){
