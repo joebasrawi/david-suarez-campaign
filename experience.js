@@ -34,7 +34,7 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const running = new Set();
   const seen = new WeakSet();
-  const selector = '.home-welcome,.page-head .container,.agenda-intro .container,.media-intro .container,.featured-story,.today-panel,.official-item,.series-card,.home-explore a,.home-contact .container,.hub-toolbar,.topic-card,.help-box,.result-row,.event-row,.person,.reader-shell,.agenda-card,.detail-inner,.media-card,.player-section,.project-explorer,.project-result,#project-detail,.section-heading,.section-line,.meeting-history,.notice,.hub-footer-top > *';
+  const selector = '.home-welcome,.discovery-heading,.home-map-frame,.map-project-link,.city-today-photo,.home-service-bar,.page-head .container,.agenda-intro .container,.media-intro .container,.featured-story,.today-panel,.official-item,.series-card,.home-explore a,.home-contact .container,.hub-toolbar,.topic-card,.help-box,.result-row,.event-row,.person,.reader-shell,.agenda-card,.detail-inner,.media-card,.player-section,.project-explorer,.project-result,#project-detail,.section-heading,.section-line,.meeting-history,.notice,.hub-footer-top > *';
   function enter(element, delay = 0) {
     if (reduced.matches || !element.animate || element.closest('[hidden]')) return;
     const animation = element.animate([

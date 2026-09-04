@@ -2,6 +2,7 @@
 import {readFile, writeFile, mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {addLoadingShells} from './ui-shells.mjs';
+import {homeLayout} from './home-layout.mjs';
 const root = new URL('../',import.meta.url);
 const esc = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 function header(route) {
@@ -45,11 +46,15 @@ const pages = {
  'legislation': page('legislation','Ordinances & resolutions','Browse upcoming Miami Beach legislation and 2026 recorded ordinance and resolution actions, with original City Clerk sources.',head('Ordinances & resolutions','')+`<section class="page-body"><div class="container"><div class="hub-toolbar"><label class="hub-field grow">Search legislation<input id="law-search" type="search" placeholder="Keyword, item number or ordinance number"></label><label class="hub-field">Record stage<select id="law-stage"><option value="upcoming">Upcoming agenda</option><option value="recorded">2026 recorded actions</option></select></label><label class="hub-field">Type<select id="law-type"><option value="all">Both types</option><option value="Ordinance">Ordinances</option><option value="Resolution">Resolutions</option></select></label></div><div class="notice"><strong>A vote is not always a new law.</strong><p>An ordinance may have more than one reading. An approved first reading does not mean final adoption. The City Clerk’s ordinance and resolution registries are the source for adopted legal text.</p></div><p id="law-count" class="result-meta" aria-live="polite"></p><div id="law-list">${loading}</div><button id="law-more" class="hub-button secondary" hidden>Show more legislation</button><section class="meeting-history"><div class="section-heading"><h2>Go to the legal record</h2></div><div id="law-registries" class="two-column">${loading}</div></section></div></section>`)
 };
 pages['resident-guide'] = pages['resident-guide'].replace(/(<details class="topic-card"[^>]*id="([^"]+)"[^>]*><summary>)/g,(_,start,id)=>start+serviceIcon(id));
+pages.sources=pages.sources.replace('</main>','<section class="page-body"><div class="container" id="visual-credits"><h2>Footage & image credits</h2><p>Miami Beach aerial and coastal footage was supplied by the site owner from their stock-footage collection. The homepage uses shortened, muted edits and still frames from those files.</p><p>David at work: excerpts from <a href="https://www.youtube.com/watch?v=2fU3AA-g20k">Ride Along: Miami Beach’s Gum-Removal Machines in Action</a>, from his official YouTube channel. These are highlights, not a recording of current conditions or a continuous event. Published clips were reframed for the homepage.</p><p>Videos retain their original sources in the <a href="../media/">video archive</a>. The muted homepage film is hosted on this site; opening a YouTube player still requires an explicit play action.</p></div></section></main>');
 for (const [route,html] of Object.entries(pages)) { await mkdir(new URL(`${route}/`,root),{recursive:true}); await writeFile(new URL(`${route}/index.html`,root),html); }
 // Keep the existing readers, homepage, media and map implementations; unify their chrome.
 for (const route of ['', 'commission-agenda','commission-actions','media','active-projects']) {
  const file = new URL(`${route ? route+'/' : ''}index.html`,root);
  let html = await readFile(file,'utf8');
+ if(route===''){
+   html=html.replace(/<main\b[\s\S]*?<\/main>/,homeLayout()).replace('<body>','<body class="home-cinematic">');
+ }
  html = html.replace(/<header class="(?:site-header|hub-header|topbar)"[\s\S]*?<\/header>/,header(route));
  if (/<footer[\s\S]*?<\/footer>/.test(html)) html = html.replace(/<footer[\s\S]*?<\/footer>/,footer(route));
  else html = html.replace('</body>',footer(route)+'</body>');
@@ -78,6 +83,7 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  const base=route?'../':'';
  if(!html.includes('href="'+base+'experience.css')) html=html.replace('</head>',`<link rel="stylesheet" href="${base}experience.css"></head>`);
  if(!html.includes('src="'+base+'experience.js')) html=html.replace('</head>',`<script defer src="${base}experience.js"></script></head>`);
+ if(route===''&&!html.includes('href="home-visual.css'))html=html.replace('</head>','<link rel="stylesheet" href="home-visual.css"></head>');
  for(const match of [...html.matchAll(/(?:href|src)="((?!https?:)[^"?]+\.(?:css|js))(?:\?[^" ]*)?"/g)]) {
    const asset=new URL(match[1],file);const hash=createHash('sha256').update(await readFile(asset)).digest('hex').slice(0,10);
    html=html.replace(match[0],match[0].split('=')[0]+'="'+match[1]+'?v='+hash+'"');
