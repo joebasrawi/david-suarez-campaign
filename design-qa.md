@@ -11,14 +11,14 @@
 
 1. **P1 · Agenda hierarchy:** The first implementation used an oversized navy meeting banner that displaced the core reader. It was replaced with the selected direction’s compact cream meeting header, official-source panel, filter row, section tabs, and split list/detail workspace.
 2. **P1 · Sponsor integrity:** Concept imagery could not be treated as sponsor identity. Production sponsor cards now resolve only against the official City of Miami Beach elected-official roster and use City-hosted portraits plus official profile links. Unresolved names never receive a portrait.
-3. **P1 · Data completeness:** The prior homepage snapshot exposed only David-sponsored items. The reader now imports all 142 agenda items and all six source sections, while the homepage still highlights the 19 David-sponsored or co-sponsored items.
+3. **P1 · Data completeness:** The prior homepage snapshot exposed only David-sponsored items. The reader imports the complete current agenda snapshot, including every City-provided section, while preserving a David-only filter.
 4. **P2 · Hero composition:** The featured story’s left-side text field obscured the official YouTube thumbnail and cropped the right-hand subject. Text was moved into a compact lower field and the image now uses the complete 16:9 thumbnail without a cover crop.
 5. **P2 · Naming:** The visible video series label and supporting library copy now use “Accountability” instead of “Investigations.”
 
 ## Final verification
 
-- The source sync reports 142 parsed items, matching the meeting-page count exactly.
-- Section totals resolve to 6 competitive bid reports, 6 committee assignments, 2 committee reports, 60 consent resolutions, 44 ordinances, and 24 regular resolutions.
+- The latest source sync reports 208 parsed items across 10 City-provided sections.
+- Section totals currently resolve to 6 competitive bid reports, 6 committee assignments, 2 committee reports, 60 consent resolutions, 44 ordinances, 48 regular resolutions, 32 discussables, 1 City Attorney report, 2 informational items, and 7 notices.
 - Search, department, neighborhood, hearing-time, status, section, and David-only controls are wired to the same filtered item collection.
 - Direct item URLs preserve selection through `?item=` and update as residents move between items.
 - Item R5P correctly resolves the official David Suarez and Alex J. Fernandez portraits, City profiles, City Attorney department, Citywide neighborhood, and 9:55 a.m. hearing time.
