@@ -19,7 +19,11 @@ jobs:
       - name: Install data-sync dependencies
         run: npm install --ignore-scripts --no-audit --no-fund
       - name: Refresh and validate public feeds
+        id: refresh
+        continue-on-error: true
         run: npm run sync:data
+      - name: Validate snapshots and regression checks
+        run: npm test
       - name: Commit changed snapshots
         run: |
           if git diff --quiet -- data; then
@@ -31,3 +35,8 @@ jobs:
           git add data
           git commit -m "chore: refresh public data"
           git push
+      - name: Report any source refresh failures
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo "One or more sources failed to refresh. Validated updates were published; affected sources retain their previous snapshot."
+          exit 1

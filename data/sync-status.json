@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-09-04T20:00:18.911Z",
+  "source": {
+    "label": "Public data publishing workflow",
+    "url": "https://github.com/joebasrawi/david-suarez-campaign/actions/workflows/sync-public-data.yml"
+  },
+  "items": [
+    {
+      "name": "youtube",
+      "status": "success",
+      "checkedAt": "2026-09-04T19:59:29.947Z"
+    },
+    {
+      "name": "calendar",
+      "status": "success",
+      "checkedAt": "2026-09-04T19:59:31.374Z"
+    },
+    {
+      "name": "agendas",
+      "status": "success",
+      "checkedAt": "2026-09-04T19:59:33.395Z"
+    },
+    {
+      "name": "actions",
+      "status": "success",
+      "checkedAt": "2026-09-04T19:59:54.491Z"
+    },
+    {
+      "name": "news",
+      "status": "success",
+      "checkedAt": "2026-09-04T19:59:55.836Z"
+    },
+    {
+      "name": "projects",
+      "status": "success",
+      "checkedAt": "2026-09-04T20:00:16.240Z"
+    },
+    {
+      "name": "records",
+      "status": "success",
+      "checkedAt": "2026-09-04T20:00:18.629Z"
+    }
+  ]
+}

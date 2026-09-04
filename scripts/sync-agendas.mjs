@@ -88,11 +88,11 @@ for (const [, sectionHeading, sectionBlock] of sectionMatches) {
       const neighborhood = metadata.find(value => /^(Citywide|South Beach|Middle Beach|Mid Beach|North Beach)$/i.test(value)) || 'Citywide';
       const type = itemType(itemNumber);
       return {
-        id: `${meetingDate}-${itemNumber.toLowerCase()}`,
+        id: `${meetingDate}-${section.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${itemNumber.toLowerCase()}`,
         itemNumber,
         type,
         section,
-        title,
+        title: /^(?:C|R)\d+\s*[A-Z]{1,3}$/i.test(title) ? officialTitle.slice(0,180) : title,
         summary: residentSummary(title, type),
         officialTitle,
         status,

@@ -25,6 +25,14 @@ function displayDate(value) {
   return new Date(`${value}T12:00:00`).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 }
 
+function statusLabel(item) {
+  if (/withdrawn/i.test(item.status)) return 'Withdrawal noted';
+  if (/defer|continued/i.test(item.status)) return 'Deferral history noted';
+  if (/first reading/i.test(item.status)) return 'First reading noted';
+  if (/second reading/i.test(item.status)) return 'Second reading noted';
+  if (/addendum/i.test(item.status)) return 'Addendum noted';
+  return 'On agenda';
+}
 function optionLabel(value) {
   return value || 'Not specified';
 }
@@ -55,7 +63,7 @@ function setupFilters() {
   populateSelect('#department-filter', uniqueValues(items, item => item.departments));
   populateSelect('#neighborhood-filter', uniqueValues(items, item => [item.neighborhood]));
   populateSelect('#hearing-filter', uniqueValues(items, item => [item.hearingTime]));
-  populateSelect('#status-filter', uniqueValues(items, item => [item.status]));
+  populateSelect('#status-filter', uniqueValues(items, item => [statusLabel(item)]));
 }
 
 function renderMeeting() {
@@ -79,7 +87,7 @@ function filteredItems() {
       && (state.department === 'all' || item.departments.includes(state.department))
       && (state.neighborhood === 'all' || item.neighborhood === state.neighborhood)
       && (state.hearing === 'all' || item.hearingTime === state.hearing)
-      && (state.status === 'all' || item.status === state.status)
+      && (state.status === 'all' || statusLabel(item) === state.status)
       && (!state.davidOnly || item.davidInvolved);
   });
 }
@@ -94,14 +102,15 @@ function renderList({ preserveSelection = true } = {}) {
   document.querySelector('#result-count').textContent = `${items.length} of ${state.agenda.items.length} agenda items shown`;
   document.querySelector('#list-count').textContent = items.length;
   const list = document.querySelector('#item-list');
+  if(!preserveSelection)list.scrollTop=0;
   if (!items.length) {
     list.innerHTML = '<div class="empty-list"><strong>No items match these filters.</strong><br>Try clearing one or more filters.</div>';
     state.selectedItem = null;
     renderDetail();
     return;
   }
-  if (!preserveSelection || !items.some(item => item.itemNumber === state.selectedItem)) state.selectedItem = items[0].itemNumber;
-  list.innerHTML = items.map(item => `<button type="button" class="agenda-card ${state.selectedItem === item.itemNumber ? 'is-selected' : ''}" data-item="${escapeHtml(item.itemNumber)}" aria-pressed="${state.selectedItem === item.itemNumber}">
+  if (!preserveSelection || !items.some(item => item.id === state.selectedItem)) state.selectedItem = items[0].id;
+  list.innerHTML = items.map(item => `<button type="button" class="agenda-card ${state.selectedItem === item.itemNumber ? 'is-selected' : ''}" data-item="${escapeHtml(item.id)}" aria-pressed="${state.selectedItem === item.itemNumber}">
     <span class="agenda-number">${escapeHtml(item.itemNumber)}</span>
     <span class="agenda-card-copy"><h3>${escapeHtml(item.title)}</h3><span class="agenda-card-meta">${listMeta(item)}</span></span>
   </button>`).join('');
@@ -122,7 +131,7 @@ function sponsorCards(item) {
 
 function renderDetail() {
   const detail = document.querySelector('#item-detail');
-  const item = state.agenda.items.find(candidate => candidate.itemNumber === state.selectedItem);
+  const item = state.agenda.items.find(candidate => candidate.id === state.selectedItem);
   if (!item) {
     detail.innerHTML = '<div class="empty-detail"><i class="fa-regular fa-file-lines" aria-hidden="true"></i><h2>Select an agenda item</h2><p>Choose an item from the list to see its resident-friendly overview and official sponsors.</p></div>';
     return;
@@ -132,11 +141,12 @@ function renderDetail() {
   detail.innerHTML = `<div class="detail-inner">
     <div class="detail-topline">
       <div class="detail-ident"><span class="detail-number">${escapeHtml(item.itemNumber)}</span><span class="detail-type">${escapeHtml(item.type)}</span></div>
-      <span class="status-badge">${escapeHtml(item.status)}</span>
+      <span class="status-badge">${escapeHtml(statusLabel(item))}</span>
     </div>
     <h2>${escapeHtml(item.title)}</h2>
     <p class="detail-section">${escapeHtml(item.section)}</p>
-    <div class="resident-overview"><span>Resident-friendly overview</span><p>${escapeHtml(item.summary)}</p></div>
+    <div class="resident-overview"><span>Agenda item—not a recorded decision</span><p>Scheduled for consideration. This is not evidence that the item passed. Short titles are navigation aids from the third-party agenda navigator; consult the official title and packet.</p></div>
+    <div class="detail-tools"><button type="button" data-copy-link>Copy item link</button><a href="../meetings/">Meeting details & participation</a><a href="../commission-actions/?q=${encodeURIComponent(item.title)}&outcome=all">Search recorded actions</a></div>
     <div class="detail-facts">
       <div class="detail-fact"><span>Department</span><strong>${escapeHtml(departments)}</strong></div>
       <div class="detail-fact"><span>Neighborhood</span><strong>${escapeHtml(optionLabel(item.neighborhood))}</strong></div>
@@ -149,12 +159,13 @@ function renderDetail() {
       <a href="${escapeHtml(state.agenda.nextMeeting.officialAgendaUrl)}" target="_blank" rel="noreferrer">Open PrimeGov <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
     </div>
     <div class="details-stack">
-      <details><summary>Official agenda title</summary><div class="details-body"><p>${escapeHtml(item.officialTitle)}</p></div></details>
+      <details><summary>Source status & history</summary><div class="details-body"><p>${escapeHtml(item.status)}</p></div></details><details open><summary>Official agenda title</summary><div class="details-body"><p>${escapeHtml(item.officialTitle)}</p></div></details>
       <details><summary>Source and item navigation</summary><div class="details-body"><p>This resident guide uses a third-party agenda navigator to organize item-level metadata while preserving the official PrimeGov meeting link.</p><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Open this item in the agenda navigator</a></div></details>
     </div>
   </div>`;
   const params = new URLSearchParams(location.search);
-  params.set('item', item.itemNumber);
+  params.set('item', item.id);
+  for (const [key,value] of Object.entries({q:state.query,department:state.department,neighborhood:state.neighborhood,hearing:state.hearing,status:state.status,section:state.activeSection,david:state.davidOnly?'1':''})) { if(value && value!=='all') params.set(key,value); else params.delete(key); }
   history.replaceState(null, '', `${location.pathname}?${params.toString()}${location.hash}`);
 }
 
@@ -188,7 +199,9 @@ function bindEvents() {
     const button = event.target.closest('[data-item]');
     if (!button) return;
     state.selectedItem = button.dataset.item;
-    renderList();
+    document.querySelectorAll('#item-list [data-item]').forEach(card => { const selected=card.dataset.item===state.selectedItem;card.classList.toggle('is-selected',selected);card.setAttribute('aria-pressed',String(selected)); });
+    renderDetail();
+    document.querySelector('#item-detail').scrollTop=0;
     if (matchMedia('(max-width: 860px)').matches) document.querySelector('#item-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   document.querySelector('#agenda-search').addEventListener('input', event => { state.query = event.target.value.trim(); renderList({ preserveSelection: false }); });
@@ -197,10 +210,7 @@ function bindEvents() {
   });
   document.querySelector('#david-filter').addEventListener('change', event => { state.davidOnly = event.target.checked; renderList({ preserveSelection: false }); });
   document.querySelector('#reset-filters').addEventListener('click', resetFilters);
-  document.querySelector('#menu-toggle').addEventListener('click', event => {
-    const open = document.querySelector('#site-nav').classList.toggle('is-open');
-    event.currentTarget.setAttribute('aria-expanded', String(open));
-  });
+
 }
 
 async function initialize() {
@@ -208,9 +218,17 @@ async function initialize() {
     const [agenda, commissioners] = await Promise.all([loadJson(DATA_URLS.agenda), loadJson(DATA_URLS.commissioners)]);
     state.agenda = agenda;
     state.people = new Map(commissioners.items.map(person => [person.slug, person]));
-    state.selectedItem = new URLSearchParams(location.search).get('item');
+    const params = new URLSearchParams(location.search);
+    state.selectedItem = state.agenda.items.find(item=>item.id===params.get('item') || item.itemNumber===params.get('item'))?.id;
+    state.query=params.get('q')||'';
+    state.davidOnly=params.get('david')==='1';
+    for(const key of ['department','neighborhood','hearing','status'])state[key]=params.get(key)||'all';
+    state.activeSection=params.get('section')||'all';
     renderMeeting();
     setupFilters();
+    document.querySelector("#agenda-search").value=state.query;
+    document.querySelector("#david-filter").checked=state.davidOnly;
+    for(const key of ["department","neighborhood","hearing","status"])document.querySelector("#"+key+"-filter").value=state[key];
     renderTabs();
     renderList();
     bindEvents();

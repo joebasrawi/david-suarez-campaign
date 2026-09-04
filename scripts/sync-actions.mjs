@@ -34,6 +34,7 @@ async function extractPdfLines(url) {
   const data = new Uint8Array(await response.arrayBuffer());
   const pdf = await getDocument({ data, disableWorker: true }).promise;
   const lines = [];
+  lines.pages = [];
 
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
     const page = await pdf.getPage(pageNumber);
@@ -58,7 +59,7 @@ async function extractPdfLines(url) {
         const separator = /\s$/.test(value) || /^\s/.test(item.text) || gap < 0.7 ? '' : ' ';
         return `${value}${separator}${item.text}`;
       }, ''));
-      if (line && !isPageFurniture(line)) lines.push(line);
+      if (line && !isPageFurniture(line)) { lines.pages.push(pageNumber); lines.push(line); }
     }
   }
   return lines;
@@ -116,7 +117,6 @@ function extractMotion(lines) {
 }
 
 function extractAmendments(lines, action) {
-  if (!/\bas amended\b|\bwith changes\b/i.test(action)) return [];
   const start = lines.findIndex(line => /^AMENDMENTS:$/i.test(line));
   if (start >= 0) {
     const amendmentLines = [];
@@ -127,12 +127,17 @@ function extractAmendments(lines, action) {
     const text = cleanLine(amendmentLines.join(' '));
     if (text) return [text];
   }
+  if (!/\bas amended\b|\bwith changes\b/i.test(action)) return [];
   const text = lines.join(' ');
   const match = text.match(/(?:as amended to|with changes(?: to)?|with the following amendments?)[^.]{0,700}\./i);
   return match ? [cleanLine(match[0])] : ['The official action was adopted as amended; see the approved minutes for the complete amendment language.'];
 }
 
 function outcomeFor(action) {
+  // Classify the recorded disposition, not a failed motion discussed later.
+  const lead = action.split(/\.\s+(?=[A-Z])/)[0];
+  if (/\b(adopted|approved|accepted|authorized|passed|carried|awarded|confirmed|granted)\b/i.test(lead)
+      && !/\b(not|failed|denied)\b/i.test(lead)) return 'Passed';
   if (/\b(no separate action|no action was taken|not reached|discussion held|informational only)\b/i.test(action)) return 'Other action';
   if (/\b(failed|did not pass|motion failed|denied)\b/i.test(action)) return 'Failed';
   if (/\b(withdrawn|withdrew)\b/i.test(action)) return 'Withdrawn';
@@ -144,14 +149,17 @@ function outcomeFor(action) {
 
 function sponsorSlugs(lines) {
   const actionIndex = lines.findIndex(line => /^ACTION:/i.test(line));
-  const preAction = lines.slice(0, actionIndex < 0 ? lines.length : actionIndex).join(' ').toLowerCase();
+  const preAction = lines.slice(0, actionIndex < 0 ? lines.length : actionIndex)
+    .filter(line => /^(?:Sponsor(?:s)?:\s*)?(?:Commissioner|Mayor|Vice-Mayor)\s/i.test(line)).join(' ').toLowerCase();
   return [...new Set(commissionerNames.filter(([name]) => preAction.includes(name)).map(([, slug]) => slug))];
 }
 
 function extractConsentContext(lines) {
   const text = lines.join(' ');
-  const vote = text.match(/adopt the Consent Agenda[^.]{0,250}(?:Vote|Roll Call):\s*(\d+\s*-\s*\d+(?:\s*-\s*\d+)?)/i)?.[1]?.replace(/\s+/g, '') || '';
-  return { vote, rollCall: extractRollCall(lines) };
+  const start = lines.findIndex(line => /motion.*adopt the Consent Agenda/i.test(line));
+  const vote = start < 0 ? '' : extractVoteSummary(lines.slice(start));
+  const excluded = new Set([...text.matchAll(/\b(C\d+)\s+([A-Z]{1,3})\*?\b/g)].map(m=>`${m[1]} ${m[2]}`));
+  return { vote, rollCall: start < 0 ? [] : extractRollCall(lines.slice(start)), excluded, recorded: start >= 0 };
 }
 
 function parseMeeting(lines, meeting, minutesDocument) {
@@ -174,12 +182,18 @@ function parseMeeting(lines, meeting, minutesDocument) {
     }
     const action = extractAction(block);
     if (!action) return;
-    const consentItem = /^C\d+/.test(start.itemNumber)
-      && !/separated from the Consent Agenda|Addendum added|Item moved from|individual vote/i.test(block.join(' '));
-    const voteSummary = extractVoteSummary(block, consentItem ? consent.vote : '');
+    const outcome = outcomeFor(action);
     const rollCall = extractRollCall(block);
+    const explicitVote = extractVoteSummary(block);
+    const voteBlockCount = block.filter(line => /^VOTES:$/i.test(line)).length;
+    const consentItem = /^C\d+/.test(start.itemNumber) && consent.recorded
+      && !consent.excluded.has(start.itemNumber)
+      && !/separated from (?:the )?Consent Agenda|Addendum|Item moved from|individual vote/i.test(block.join(' '))
+      && ['Passed','Referred'].includes(outcome) && !rollCall.length && !explicitVote;
+    const voteSummary = voteBlockCount > 1 ? '' : explicitVote || (consentItem ? consent.vote : '');
     const amendments = extractAmendments(block, action);
-    const sourceUrl = `${PRIMEGOV}/Public/CompiledDocument?meetingTemplateId=${minutesDocument.templateId}&compileOutputType=${minutesDocument.compileOutputType}`;
+    const page = lines.pages?.[start.index];
+    const sourceUrl = `${PRIMEGOV}/Public/CompiledDocument?meetingTemplateId=${minutesDocument.templateId}&compileOutputType=${minutesDocument.compileOutputType}${page ? `#page=${page}` : ''}`;
 
     items.push({
       id: `${isoDate(meeting.date)}-${start.itemNumber.toLowerCase().replace(/\s+/g, '-')}`,
@@ -187,11 +201,16 @@ function parseMeeting(lines, meeting, minutesDocument) {
       meetingDate: isoDate(meeting.date),
       itemNumber: start.itemNumber,
       title: cleanLine(titleLines.join(' ')),
-      outcome: outcomeFor(action),
+      outcome,
       action,
       voteSummary,
       voteType: consentItem ? 'Consent agenda' : voteSummary || rollCall.length ? 'Separate vote' : 'Not recorded',
-      rollCall: rollCall.length ? rollCall : consentItem ? consent.rollCall : [],
+      consentPlacement: /^C\d+/.test(start.itemNumber) ? 'Listed on consent agenda' : 'Regular agenda',
+      voteBasis: voteBlockCount > 1 ? 'Multiple roll calls appear in this item. Open the minutes to match each vote to its motion; no single vote is inferred here.' : consentItem ? 'Inherited from the recorded consent-agenda motion; no separate item vote identified.' : explicitVote || rollCall.length ? 'Item-specific vote extracted from the minutes.' : 'No separate vote identified. A vote has not been inferred.',
+      rollCall: voteBlockCount > 1 ? [] : rollCall.length ? rollCall : consentItem ? consent.rollCall : [],
+      voteBlockCount,
+      sourcePage: page || null,
+      recordExcerpt: block.slice(Math.max(0,block.findIndex(line=>/^ACTION:/i.test(line)))).join('\n').slice(0,18000),
       motion: extractMotion(block),
       amendments,
       sponsors: sponsorSlugs(block),

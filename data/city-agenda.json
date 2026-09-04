@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T18:15:36.644Z",
+  "generatedAt": "2026-09-04T19:51:35.444Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -68,7 +68,7 @@
   ],
   "items": [
     {
-      "id": "2026-09-10-c2a",
+      "id": "2026-09-10-consent-agenda-competitive-bid-reports-c2a",
       "itemNumber": "C2A",
       "type": "Competitive bid report",
       "section": "Consent Agenda — Competitive Bid Reports",
@@ -91,7 +91,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C2A"
     },
     {
-      "id": "2026-09-10-c2b",
+      "id": "2026-09-10-consent-agenda-competitive-bid-reports-c2b",
       "itemNumber": "C2B",
       "type": "Competitive bid report",
       "section": "Consent Agenda — Competitive Bid Reports",
@@ -114,7 +114,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C2B"
     },
     {
-      "id": "2026-09-10-c2c",
+      "id": "2026-09-10-consent-agenda-competitive-bid-reports-c2c",
       "itemNumber": "C2C",
       "type": "Competitive bid report",
       "section": "Consent Agenda — Competitive Bid Reports",
@@ -142,7 +142,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C2C"
     },
     {
-      "id": "2026-09-10-c2d",
+      "id": "2026-09-10-consent-agenda-competitive-bid-reports-c2d",
       "itemNumber": "C2D",
       "type": "Competitive bid report",
       "section": "Consent Agenda — Competitive Bid Reports",
@@ -165,7 +165,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C2D"
     },
     {
-      "id": "2026-09-10-c2e",
+      "id": "2026-09-10-consent-agenda-competitive-bid-reports-c2e",
       "itemNumber": "C2E",
       "type": "Competitive bid report",
       "section": "Consent Agenda — Competitive Bid Reports",
@@ -188,7 +188,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C2E"
     },
     {
-      "id": "2026-09-10-c2f",
+      "id": "2026-09-10-consent-agenda-competitive-bid-reports-c2f",
       "itemNumber": "C2F",
       "type": "Competitive bid report",
       "section": "Consent Agenda — Competitive Bid Reports",
@@ -211,7 +211,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C2F"
     },
     {
-      "id": "2026-09-10-c4a",
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4a",
       "itemNumber": "C4A",
       "type": "Committee assignment",
       "section": "Consent Agenda — Committee Assignments",
@@ -234,7 +234,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4A"
     },
     {
-      "id": "2026-09-10-c4b",
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4b",
       "itemNumber": "C4B",
       "type": "Committee assignment",
       "section": "Consent Agenda — Committee Assignments",
@@ -260,7 +260,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4B"
     },
     {
-      "id": "2026-09-10-c4c",
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4c",
       "itemNumber": "C4C",
       "type": "Committee assignment",
       "section": "Consent Agenda — Committee Assignments",
@@ -283,7 +283,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4C"
     },
     {
-      "id": "2026-09-10-c4d",
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4d",
       "itemNumber": "C4D",
       "type": "Committee assignment",
       "section": "Consent Agenda — Committee Assignments",
@@ -306,7 +306,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4D"
     },
     {
-      "id": "2026-09-10-c4e",
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4e",
       "itemNumber": "C4E",
       "type": "Committee assignment",
       "section": "Consent Agenda — Committee Assignments",
@@ -329,7 +329,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4E"
     },
     {
-      "id": "2026-09-10-c4f",
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4f",
       "itemNumber": "C4F",
       "type": "Committee assignment",
       "section": "Consent Agenda — Committee Assignments",
@@ -352,7 +352,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4F"
     },
     {
-      "id": "2026-09-10-c6a",
+      "id": "2026-09-10-consent-agenda-committee-reports-c6a",
       "itemNumber": "C6A",
       "type": "Committee report",
       "section": "Consent Agenda — Committee Reports",
@@ -375,7 +375,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C6A"
     },
     {
-      "id": "2026-09-10-c6b",
+      "id": "2026-09-10-consent-agenda-committee-reports-c6b",
       "itemNumber": "C6B",
       "type": "Committee report",
       "section": "Consent Agenda — Committee Reports",
@@ -398,7 +398,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C6B"
     },
     {
-      "id": "2026-09-10-c7a",
+      "id": "2026-09-10-consent-agenda-resolutions-c7a",
       "itemNumber": "C7A",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -424,7 +424,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7A"
     },
     {
-      "id": "2026-09-10-c7aa",
+      "id": "2026-09-10-consent-agenda-resolutions-c7aa",
       "itemNumber": "C7AA",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -447,7 +447,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AA"
     },
     {
-      "id": "2026-09-10-c7ab",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ab",
       "itemNumber": "C7AB",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -470,7 +470,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AB"
     },
     {
-      "id": "2026-09-10-c7ac",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ac",
       "itemNumber": "C7AC",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -496,7 +496,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AC"
     },
     {
-      "id": "2026-09-10-c7ad",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ad",
       "itemNumber": "C7AD",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -524,7 +524,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AD"
     },
     {
-      "id": "2026-09-10-c7ae",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ae",
       "itemNumber": "C7AE",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -550,7 +550,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AE"
     },
     {
-      "id": "2026-09-10-c7af",
+      "id": "2026-09-10-consent-agenda-resolutions-c7af",
       "itemNumber": "C7AF",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -576,7 +576,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AF"
     },
     {
-      "id": "2026-09-10-c7ag",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ag",
       "itemNumber": "C7AG",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -602,7 +602,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AG"
     },
     {
-      "id": "2026-09-10-c7ah",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ah",
       "itemNumber": "C7AH",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -628,7 +628,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AH"
     },
     {
-      "id": "2026-09-10-c7ai",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ai",
       "itemNumber": "C7AI",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -654,7 +654,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AI"
     },
     {
-      "id": "2026-09-10-c7aj",
+      "id": "2026-09-10-consent-agenda-resolutions-c7aj",
       "itemNumber": "C7AJ",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -680,7 +680,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AJ"
     },
     {
-      "id": "2026-09-10-c7ak",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ak",
       "itemNumber": "C7AK",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -706,7 +706,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AK"
     },
     {
-      "id": "2026-09-10-c7al",
+      "id": "2026-09-10-consent-agenda-resolutions-c7al",
       "itemNumber": "C7AL",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -734,7 +734,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AL"
     },
     {
-      "id": "2026-09-10-c7am",
+      "id": "2026-09-10-consent-agenda-resolutions-c7am",
       "itemNumber": "C7AM",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -760,7 +760,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AM"
     },
     {
-      "id": "2026-09-10-c7an",
+      "id": "2026-09-10-consent-agenda-resolutions-c7an",
       "itemNumber": "C7AN",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -786,7 +786,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AN"
     },
     {
-      "id": "2026-09-10-c7ao",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ao",
       "itemNumber": "C7AO",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -812,7 +812,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AO"
     },
     {
-      "id": "2026-09-10-c7ap",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ap",
       "itemNumber": "C7AP",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -844,7 +844,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AP"
     },
     {
-      "id": "2026-09-10-c7aq",
+      "id": "2026-09-10-consent-agenda-resolutions-c7aq",
       "itemNumber": "C7AQ",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -870,7 +870,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AQ"
     },
     {
-      "id": "2026-09-10-c7ar",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ar",
       "itemNumber": "C7AR",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -896,7 +896,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AR"
     },
     {
-      "id": "2026-09-10-c7as",
+      "id": "2026-09-10-consent-agenda-resolutions-c7as",
       "itemNumber": "C7AS",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -922,7 +922,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AS"
     },
     {
-      "id": "2026-09-10-c7at",
+      "id": "2026-09-10-consent-agenda-resolutions-c7at",
       "itemNumber": "C7AT",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -948,7 +948,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AT"
     },
     {
-      "id": "2026-09-10-c7au",
+      "id": "2026-09-10-consent-agenda-resolutions-c7au",
       "itemNumber": "C7AU",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -974,7 +974,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AU"
     },
     {
-      "id": "2026-09-10-c7av",
+      "id": "2026-09-10-consent-agenda-resolutions-c7av",
       "itemNumber": "C7AV",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1000,7 +1000,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AV"
     },
     {
-      "id": "2026-09-10-c7aw",
+      "id": "2026-09-10-consent-agenda-resolutions-c7aw",
       "itemNumber": "C7AW",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1026,7 +1026,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AW"
     },
     {
-      "id": "2026-09-10-c7ax",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ax",
       "itemNumber": "C7AX",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1052,7 +1052,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AX"
     },
     {
-      "id": "2026-09-10-c7ay",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ay",
       "itemNumber": "C7AY",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1078,7 +1078,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AY"
     },
     {
-      "id": "2026-09-10-c7az",
+      "id": "2026-09-10-consent-agenda-resolutions-c7az",
       "itemNumber": "C7AZ",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1108,7 +1108,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AZ"
     },
     {
-      "id": "2026-09-10-c7b",
+      "id": "2026-09-10-consent-agenda-resolutions-c7b",
       "itemNumber": "C7B",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1131,7 +1131,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7B"
     },
     {
-      "id": "2026-09-10-c7ba",
+      "id": "2026-09-10-consent-agenda-resolutions-c7ba",
       "itemNumber": "C7BA",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1157,7 +1157,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BA"
     },
     {
-      "id": "2026-09-10-c7bb",
+      "id": "2026-09-10-consent-agenda-resolutions-c7bb",
       "itemNumber": "C7BB",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1185,7 +1185,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BB"
     },
     {
-      "id": "2026-09-10-c7bc",
+      "id": "2026-09-10-consent-agenda-resolutions-c7bc",
       "itemNumber": "C7BC",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1213,7 +1213,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BC"
     },
     {
-      "id": "2026-09-10-c7bd",
+      "id": "2026-09-10-consent-agenda-resolutions-c7bd",
       "itemNumber": "C7BD",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1239,7 +1239,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BD"
     },
     {
-      "id": "2026-09-10-c7be",
+      "id": "2026-09-10-consent-agenda-resolutions-c7be",
       "itemNumber": "C7BE",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1265,7 +1265,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BE"
     },
     {
-      "id": "2026-09-10-c7bf",
+      "id": "2026-09-10-consent-agenda-resolutions-c7bf",
       "itemNumber": "C7BF",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1291,7 +1291,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BF"
     },
     {
-      "id": "2026-09-10-c7bg",
+      "id": "2026-09-10-consent-agenda-resolutions-c7bg",
       "itemNumber": "C7BG",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1317,7 +1317,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BG"
     },
     {
-      "id": "2026-09-10-c7bh",
+      "id": "2026-09-10-consent-agenda-resolutions-c7bh",
       "itemNumber": "C7BH",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1343,7 +1343,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BH"
     },
     {
-      "id": "2026-09-10-c7c",
+      "id": "2026-09-10-consent-agenda-resolutions-c7c",
       "itemNumber": "C7C",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1366,7 +1366,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7C"
     },
     {
-      "id": "2026-09-10-c7d",
+      "id": "2026-09-10-consent-agenda-resolutions-c7d",
       "itemNumber": "C7D",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1392,7 +1392,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7D"
     },
     {
-      "id": "2026-09-10-c7e",
+      "id": "2026-09-10-consent-agenda-resolutions-c7e",
       "itemNumber": "C7E",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1415,7 +1415,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7E"
     },
     {
-      "id": "2026-09-10-c7f",
+      "id": "2026-09-10-consent-agenda-resolutions-c7f",
       "itemNumber": "C7F",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1438,7 +1438,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7F"
     },
     {
-      "id": "2026-09-10-c7g",
+      "id": "2026-09-10-consent-agenda-resolutions-c7g",
       "itemNumber": "C7G",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1461,7 +1461,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7G"
     },
     {
-      "id": "2026-09-10-c7h",
+      "id": "2026-09-10-consent-agenda-resolutions-c7h",
       "itemNumber": "C7H",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1484,7 +1484,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7H"
     },
     {
-      "id": "2026-09-10-c7i",
+      "id": "2026-09-10-consent-agenda-resolutions-c7i",
       "itemNumber": "C7I",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1507,7 +1507,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7I"
     },
     {
-      "id": "2026-09-10-c7j",
+      "id": "2026-09-10-consent-agenda-resolutions-c7j",
       "itemNumber": "C7J",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1530,7 +1530,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7J"
     },
     {
-      "id": "2026-09-10-c7k",
+      "id": "2026-09-10-consent-agenda-resolutions-c7k",
       "itemNumber": "C7K",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1553,7 +1553,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7K"
     },
     {
-      "id": "2026-09-10-c7l",
+      "id": "2026-09-10-consent-agenda-resolutions-c7l",
       "itemNumber": "C7L",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1576,7 +1576,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7L"
     },
     {
-      "id": "2026-09-10-c7m",
+      "id": "2026-09-10-consent-agenda-resolutions-c7m",
       "itemNumber": "C7M",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1599,7 +1599,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7M"
     },
     {
-      "id": "2026-09-10-c7n",
+      "id": "2026-09-10-consent-agenda-resolutions-c7n",
       "itemNumber": "C7N",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1622,7 +1622,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7N"
     },
     {
-      "id": "2026-09-10-c7o",
+      "id": "2026-09-10-consent-agenda-resolutions-c7o",
       "itemNumber": "C7O",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1645,7 +1645,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7O"
     },
     {
-      "id": "2026-09-10-c7p",
+      "id": "2026-09-10-consent-agenda-resolutions-c7p",
       "itemNumber": "C7P",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1668,7 +1668,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7P"
     },
     {
-      "id": "2026-09-10-c7q",
+      "id": "2026-09-10-consent-agenda-resolutions-c7q",
       "itemNumber": "C7Q",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1691,7 +1691,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7Q"
     },
     {
-      "id": "2026-09-10-c7r",
+      "id": "2026-09-10-consent-agenda-resolutions-c7r",
       "itemNumber": "C7R",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1714,7 +1714,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7R"
     },
     {
-      "id": "2026-09-10-c7s",
+      "id": "2026-09-10-consent-agenda-resolutions-c7s",
       "itemNumber": "C7S",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1740,7 +1740,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7S"
     },
     {
-      "id": "2026-09-10-c7t",
+      "id": "2026-09-10-consent-agenda-resolutions-c7t",
       "itemNumber": "C7T",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1768,7 +1768,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7T"
     },
     {
-      "id": "2026-09-10-c7u",
+      "id": "2026-09-10-consent-agenda-resolutions-c7u",
       "itemNumber": "C7U",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1791,7 +1791,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7U"
     },
     {
-      "id": "2026-09-10-c7v",
+      "id": "2026-09-10-consent-agenda-resolutions-c7v",
       "itemNumber": "C7V",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1814,7 +1814,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7V"
     },
     {
-      "id": "2026-09-10-c7w",
+      "id": "2026-09-10-consent-agenda-resolutions-c7w",
       "itemNumber": "C7W",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1837,7 +1837,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7W"
     },
     {
-      "id": "2026-09-10-c7x",
+      "id": "2026-09-10-consent-agenda-resolutions-c7x",
       "itemNumber": "C7X",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1860,7 +1860,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7X"
     },
     {
-      "id": "2026-09-10-c7y",
+      "id": "2026-09-10-consent-agenda-resolutions-c7y",
       "itemNumber": "C7Y",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1888,7 +1888,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7Y"
     },
     {
-      "id": "2026-09-10-c7z",
+      "id": "2026-09-10-consent-agenda-resolutions-c7z",
       "itemNumber": "C7Z",
       "type": "Resolution",
       "section": "Consent Agenda — Resolutions",
@@ -1911,7 +1911,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7Z"
     },
     {
-      "id": "2026-09-10-r5a",
+      "id": "2026-09-10-regular-agenda-ordinances-r5a",
       "itemNumber": "R5A",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -1937,7 +1937,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5A"
     },
     {
-      "id": "2026-09-10-r5aa",
+      "id": "2026-09-10-regular-agenda-ordinances-r5aa",
       "itemNumber": "R5AA",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -1963,7 +1963,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AA"
     },
     {
-      "id": "2026-09-10-r5ab",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ab",
       "itemNumber": "R5AB",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -1989,7 +1989,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AB"
     },
     {
-      "id": "2026-09-10-r5ac",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ac",
       "itemNumber": "R5AC",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2015,7 +2015,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AC"
     },
     {
-      "id": "2026-09-10-r5ad",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ad",
       "itemNumber": "R5AD",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2043,7 +2043,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AD"
     },
     {
-      "id": "2026-09-10-r5ae",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ae",
       "itemNumber": "R5AE",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2069,7 +2069,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AE"
     },
     {
-      "id": "2026-09-10-r5af",
+      "id": "2026-09-10-regular-agenda-ordinances-r5af",
       "itemNumber": "R5AF",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2094,7 +2094,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AF"
     },
     {
-      "id": "2026-09-10-r5ag",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ag",
       "itemNumber": "R5AG",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2120,7 +2120,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AG"
     },
     {
-      "id": "2026-09-10-r5ah",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ah",
       "itemNumber": "R5AH",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2146,7 +2146,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AH"
     },
     {
-      "id": "2026-09-10-r5ai",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ai",
       "itemNumber": "R5AI",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2171,7 +2171,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AI"
     },
     {
-      "id": "2026-09-10-r5aj",
+      "id": "2026-09-10-regular-agenda-ordinances-r5aj",
       "itemNumber": "R5AJ",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2196,7 +2196,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AJ"
     },
     {
-      "id": "2026-09-10-r5ak",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ak",
       "itemNumber": "R5AK",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2224,7 +2224,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AK"
     },
     {
-      "id": "2026-09-10-r5al",
+      "id": "2026-09-10-regular-agenda-ordinances-r5al",
       "itemNumber": "R5AL",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2252,7 +2252,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AL"
     },
     {
-      "id": "2026-09-10-r5am",
+      "id": "2026-09-10-regular-agenda-ordinances-r5am",
       "itemNumber": "R5AM",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2278,7 +2278,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AM"
     },
     {
-      "id": "2026-09-10-r5an",
+      "id": "2026-09-10-regular-agenda-ordinances-r5an",
       "itemNumber": "R5AN",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2304,7 +2304,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AN"
     },
     {
-      "id": "2026-09-10-r5ao",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ao",
       "itemNumber": "R5AO",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2330,7 +2330,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AO"
     },
     {
-      "id": "2026-09-10-r5ap",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ap",
       "itemNumber": "R5AP",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2356,7 +2356,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AP"
     },
     {
-      "id": "2026-09-10-r5aq",
+      "id": "2026-09-10-regular-agenda-ordinances-r5aq",
       "itemNumber": "R5AQ",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2381,7 +2381,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AQ"
     },
     {
-      "id": "2026-09-10-r5ar",
+      "id": "2026-09-10-regular-agenda-ordinances-r5ar",
       "itemNumber": "R5AR",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2406,7 +2406,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5AR"
     },
     {
-      "id": "2026-09-10-r5b",
+      "id": "2026-09-10-regular-agenda-ordinances-r5b",
       "itemNumber": "R5B",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2432,7 +2432,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5B"
     },
     {
-      "id": "2026-09-10-r5c",
+      "id": "2026-09-10-regular-agenda-ordinances-r5c",
       "itemNumber": "R5C",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2458,7 +2458,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5C"
     },
     {
-      "id": "2026-09-10-r5d",
+      "id": "2026-09-10-regular-agenda-ordinances-r5d",
       "itemNumber": "R5D",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2484,7 +2484,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5D"
     },
     {
-      "id": "2026-09-10-r5e",
+      "id": "2026-09-10-regular-agenda-ordinances-r5e",
       "itemNumber": "R5E",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2509,7 +2509,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5E"
     },
     {
-      "id": "2026-09-10-r5f",
+      "id": "2026-09-10-regular-agenda-ordinances-r5f",
       "itemNumber": "R5F",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2534,7 +2534,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5F"
     },
     {
-      "id": "2026-09-10-r5g",
+      "id": "2026-09-10-regular-agenda-ordinances-r5g",
       "itemNumber": "R5G",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2560,7 +2560,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5G"
     },
     {
-      "id": "2026-09-10-r5h",
+      "id": "2026-09-10-regular-agenda-ordinances-r5h",
       "itemNumber": "R5H",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2586,7 +2586,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5H"
     },
     {
-      "id": "2026-09-10-r5i",
+      "id": "2026-09-10-regular-agenda-ordinances-r5i",
       "itemNumber": "R5I",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2611,7 +2611,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5I"
     },
     {
-      "id": "2026-09-10-r5j",
+      "id": "2026-09-10-regular-agenda-ordinances-r5j",
       "itemNumber": "R5J",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2636,7 +2636,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5J"
     },
     {
-      "id": "2026-09-10-r5k",
+      "id": "2026-09-10-regular-agenda-ordinances-r5k",
       "itemNumber": "R5K",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2662,7 +2662,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5K"
     },
     {
-      "id": "2026-09-10-r5l",
+      "id": "2026-09-10-regular-agenda-ordinances-r5l",
       "itemNumber": "R5L",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2688,7 +2688,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5L"
     },
     {
-      "id": "2026-09-10-r5m",
+      "id": "2026-09-10-regular-agenda-ordinances-r5m",
       "itemNumber": "R5M",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2714,7 +2714,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5M"
     },
     {
-      "id": "2026-09-10-r5n",
+      "id": "2026-09-10-regular-agenda-ordinances-r5n",
       "itemNumber": "R5N",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2744,7 +2744,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5N"
     },
     {
-      "id": "2026-09-10-r5o",
+      "id": "2026-09-10-regular-agenda-ordinances-r5o",
       "itemNumber": "R5O",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2770,7 +2770,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5O"
     },
     {
-      "id": "2026-09-10-r5p",
+      "id": "2026-09-10-regular-agenda-ordinances-r5p",
       "itemNumber": "R5P",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2798,7 +2798,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5P"
     },
     {
-      "id": "2026-09-10-r5q",
+      "id": "2026-09-10-regular-agenda-ordinances-r5q",
       "itemNumber": "R5Q",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2824,7 +2824,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5Q"
     },
     {
-      "id": "2026-09-10-r5r",
+      "id": "2026-09-10-regular-agenda-ordinances-r5r",
       "itemNumber": "R5R",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2849,7 +2849,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5R"
     },
     {
-      "id": "2026-09-10-r5s",
+      "id": "2026-09-10-regular-agenda-ordinances-r5s",
       "itemNumber": "R5S",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2875,7 +2875,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5S"
     },
     {
-      "id": "2026-09-10-r5t",
+      "id": "2026-09-10-regular-agenda-ordinances-r5t",
       "itemNumber": "R5T",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2901,7 +2901,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5T"
     },
     {
-      "id": "2026-09-10-r5u",
+      "id": "2026-09-10-regular-agenda-ordinances-r5u",
       "itemNumber": "R5U",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2927,7 +2927,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5U"
     },
     {
-      "id": "2026-09-10-r5v",
+      "id": "2026-09-10-regular-agenda-ordinances-r5v",
       "itemNumber": "R5V",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2953,7 +2953,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5V"
     },
     {
-      "id": "2026-09-10-r5w",
+      "id": "2026-09-10-regular-agenda-ordinances-r5w",
       "itemNumber": "R5W",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -2979,7 +2979,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5W"
     },
     {
-      "id": "2026-09-10-r5x",
+      "id": "2026-09-10-regular-agenda-ordinances-r5x",
       "itemNumber": "R5X",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -3005,7 +3005,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5X"
     },
     {
-      "id": "2026-09-10-r5y",
+      "id": "2026-09-10-regular-agenda-ordinances-r5y",
       "itemNumber": "R5Y",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -3028,7 +3028,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5Y"
     },
     {
-      "id": "2026-09-10-r5z",
+      "id": "2026-09-10-regular-agenda-ordinances-r5z",
       "itemNumber": "R5Z",
       "type": "Ordinance",
       "section": "Regular Agenda — Ordinances",
@@ -3054,7 +3054,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R5Z"
     },
     {
-      "id": "2026-09-10-r7a",
+      "id": "2026-09-10-regular-agenda-resolutions-r7a",
       "itemNumber": "R7A",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3077,7 +3077,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7A"
     },
     {
-      "id": "2026-09-10-r7aa",
+      "id": "2026-09-10-regular-agenda-resolutions-r7aa",
       "itemNumber": "R7AA",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3107,7 +3107,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AA"
     },
     {
-      "id": "2026-09-10-r7ab",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ab",
       "itemNumber": "R7AB",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3133,7 +3133,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AB"
     },
     {
-      "id": "2026-09-10-r7ac",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ac",
       "itemNumber": "R7AC",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3163,7 +3163,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AC"
     },
     {
-      "id": "2026-09-10-r7ad",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ad",
       "itemNumber": "R7AD",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3189,7 +3189,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AD"
     },
     {
-      "id": "2026-09-10-r7ae",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ae",
       "itemNumber": "R7AE",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3217,7 +3217,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AE"
     },
     {
-      "id": "2026-09-10-r7af",
+      "id": "2026-09-10-regular-agenda-resolutions-r7af",
       "itemNumber": "R7AF",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3243,7 +3243,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AF"
     },
     {
-      "id": "2026-09-10-r7ag",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ag",
       "itemNumber": "R7AG",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3271,7 +3271,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AG"
     },
     {
-      "id": "2026-09-10-r7ah",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ah",
       "itemNumber": "R7AH",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3297,7 +3297,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AH"
     },
     {
-      "id": "2026-09-10-r7ai",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ai",
       "itemNumber": "R7AI",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3323,7 +3323,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AI"
     },
     {
-      "id": "2026-09-10-r7aj",
+      "id": "2026-09-10-regular-agenda-resolutions-r7aj",
       "itemNumber": "R7AJ",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3349,7 +3349,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AJ"
     },
     {
-      "id": "2026-09-10-r7ak",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ak",
       "itemNumber": "R7AK",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3375,7 +3375,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AK"
     },
     {
-      "id": "2026-09-10-r7al",
+      "id": "2026-09-10-regular-agenda-resolutions-r7al",
       "itemNumber": "R7AL",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3407,7 +3407,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AL"
     },
     {
-      "id": "2026-09-10-r7am",
+      "id": "2026-09-10-regular-agenda-resolutions-r7am",
       "itemNumber": "R7AM",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3435,7 +3435,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AM"
     },
     {
-      "id": "2026-09-10-r7an",
+      "id": "2026-09-10-regular-agenda-resolutions-r7an",
       "itemNumber": "R7AN",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3461,7 +3461,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AN"
     },
     {
-      "id": "2026-09-10-r7ao",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ao",
       "itemNumber": "R7AO",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3487,7 +3487,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AO"
     },
     {
-      "id": "2026-09-10-r7ap",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ap",
       "itemNumber": "R7AP",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3513,7 +3513,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AP"
     },
     {
-      "id": "2026-09-10-r7aq",
+      "id": "2026-09-10-regular-agenda-resolutions-r7aq",
       "itemNumber": "R7AQ",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3536,7 +3536,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AQ"
     },
     {
-      "id": "2026-09-10-r7ar",
+      "id": "2026-09-10-regular-agenda-resolutions-r7ar",
       "itemNumber": "R7AR",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3559,7 +3559,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AR"
     },
     {
-      "id": "2026-09-10-r7as",
+      "id": "2026-09-10-regular-agenda-resolutions-r7as",
       "itemNumber": "R7AS",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3582,7 +3582,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AS"
     },
     {
-      "id": "2026-09-10-r7at",
+      "id": "2026-09-10-regular-agenda-resolutions-r7at",
       "itemNumber": "R7AT",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3608,7 +3608,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AT"
     },
     {
-      "id": "2026-09-10-r7au",
+      "id": "2026-09-10-regular-agenda-resolutions-r7au",
       "itemNumber": "R7AU",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3631,7 +3631,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AU"
     },
     {
-      "id": "2026-09-10-r7av",
+      "id": "2026-09-10-regular-agenda-resolutions-r7av",
       "itemNumber": "R7AV",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3657,7 +3657,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AV"
     },
     {
-      "id": "2026-09-10-r7aw",
+      "id": "2026-09-10-regular-agenda-resolutions-r7aw",
       "itemNumber": "R7AW",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3685,7 +3685,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AW"
     },
     {
-      "id": "2026-09-10-r7b",
+      "id": "2026-09-10-regular-agenda-resolutions-r7b",
       "itemNumber": "R7B",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3708,7 +3708,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7B"
     },
     {
-      "id": "2026-09-10-r7c",
+      "id": "2026-09-10-regular-agenda-resolutions-r7c",
       "itemNumber": "R7C",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3731,7 +3731,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7C"
     },
     {
-      "id": "2026-09-10-r7d",
+      "id": "2026-09-10-regular-agenda-resolutions-r7d",
       "itemNumber": "R7D",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3754,7 +3754,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7D"
     },
     {
-      "id": "2026-09-10-r7e",
+      "id": "2026-09-10-regular-agenda-resolutions-r7e",
       "itemNumber": "R7E",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3777,7 +3777,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7E"
     },
     {
-      "id": "2026-09-10-r7f",
+      "id": "2026-09-10-regular-agenda-resolutions-r7f",
       "itemNumber": "R7F",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3800,7 +3800,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7F"
     },
     {
-      "id": "2026-09-10-r7g",
+      "id": "2026-09-10-regular-agenda-resolutions-r7g",
       "itemNumber": "R7G",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3823,7 +3823,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7G"
     },
     {
-      "id": "2026-09-10-r7h",
+      "id": "2026-09-10-regular-agenda-resolutions-r7h",
       "itemNumber": "R7H",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3846,7 +3846,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7H"
     },
     {
-      "id": "2026-09-10-r7i",
+      "id": "2026-09-10-regular-agenda-resolutions-r7i",
       "itemNumber": "R7I",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3869,7 +3869,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7I"
     },
     {
-      "id": "2026-09-10-r7j",
+      "id": "2026-09-10-regular-agenda-resolutions-r7j",
       "itemNumber": "R7J",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3892,7 +3892,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7J"
     },
     {
-      "id": "2026-09-10-r7k",
+      "id": "2026-09-10-regular-agenda-resolutions-r7k",
       "itemNumber": "R7K",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3915,7 +3915,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7K"
     },
     {
-      "id": "2026-09-10-r7l",
+      "id": "2026-09-10-regular-agenda-resolutions-r7l",
       "itemNumber": "R7L",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3938,7 +3938,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7L"
     },
     {
-      "id": "2026-09-10-r7m",
+      "id": "2026-09-10-regular-agenda-resolutions-r7m",
       "itemNumber": "R7M",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3961,7 +3961,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7M"
     },
     {
-      "id": "2026-09-10-r7n",
+      "id": "2026-09-10-regular-agenda-resolutions-r7n",
       "itemNumber": "R7N",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -3987,7 +3987,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7N"
     },
     {
-      "id": "2026-09-10-r7o",
+      "id": "2026-09-10-regular-agenda-resolutions-r7o",
       "itemNumber": "R7O",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4013,7 +4013,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7O"
     },
     {
-      "id": "2026-09-10-r7p",
+      "id": "2026-09-10-regular-agenda-resolutions-r7p",
       "itemNumber": "R7P",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4041,7 +4041,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7P"
     },
     {
-      "id": "2026-09-10-r7q",
+      "id": "2026-09-10-regular-agenda-resolutions-r7q",
       "itemNumber": "R7Q",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4069,7 +4069,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7Q"
     },
     {
-      "id": "2026-09-10-r7r",
+      "id": "2026-09-10-regular-agenda-resolutions-r7r",
       "itemNumber": "R7R",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4095,7 +4095,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7R"
     },
     {
-      "id": "2026-09-10-r7s",
+      "id": "2026-09-10-regular-agenda-resolutions-r7s",
       "itemNumber": "R7S",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4121,7 +4121,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7S"
     },
     {
-      "id": "2026-09-10-r7t",
+      "id": "2026-09-10-regular-agenda-resolutions-r7t",
       "itemNumber": "R7T",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4147,7 +4147,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7T"
     },
     {
-      "id": "2026-09-10-r7u",
+      "id": "2026-09-10-regular-agenda-resolutions-r7u",
       "itemNumber": "R7U",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4173,7 +4173,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7U"
     },
     {
-      "id": "2026-09-10-r7v",
+      "id": "2026-09-10-regular-agenda-resolutions-r7v",
       "itemNumber": "R7V",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4203,7 +4203,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7V"
     },
     {
-      "id": "2026-09-10-r7w",
+      "id": "2026-09-10-regular-agenda-resolutions-r7w",
       "itemNumber": "R7W",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4229,7 +4229,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7W"
     },
     {
-      "id": "2026-09-10-r7x",
+      "id": "2026-09-10-regular-agenda-resolutions-r7x",
       "itemNumber": "R7X",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4255,7 +4255,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7X"
     },
     {
-      "id": "2026-09-10-r7z",
+      "id": "2026-09-10-regular-agenda-resolutions-r7z",
       "itemNumber": "R7Z",
       "type": "Resolution",
       "section": "Regular Agenda — Resolutions",
@@ -4281,7 +4281,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7Z"
     },
     {
-      "id": "2026-09-10-r9a",
+      "id": "2026-09-10-regular-agenda-discussables-r9a",
       "itemNumber": "R9A",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4304,11 +4304,11 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9A"
     },
     {
-      "id": "2026-09-10-r9aa",
+      "id": "2026-09-10-regular-agenda-discussables-r9aa",
       "itemNumber": "R9AA",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
-      "title": "R9 Ak",
+      "title": "R9 AK",
       "summary": "R9 Ak. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "R9 AK",
       "status": "Not reached on 7/22/2026 – R9 AK",
@@ -4327,7 +4327,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AA"
     },
     {
-      "id": "2026-09-10-r9ab",
+      "id": "2026-09-10-regular-agenda-discussables-r9ab",
       "itemNumber": "R9AB",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4353,7 +4353,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AB"
     },
     {
-      "id": "2026-09-10-r9ac",
+      "id": "2026-09-10-regular-agenda-discussables-r9ac",
       "itemNumber": "R9AC",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4376,7 +4376,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AC"
     },
     {
-      "id": "2026-09-10-r9ad",
+      "id": "2026-09-10-regular-agenda-discussables-r9ad",
       "itemNumber": "R9AD",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4399,7 +4399,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AD"
     },
     {
-      "id": "2026-09-10-r9ae",
+      "id": "2026-09-10-regular-agenda-discussables-r9ae",
       "itemNumber": "R9AE",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4422,7 +4422,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AE"
     },
     {
-      "id": "2026-09-10-r9af",
+      "id": "2026-09-10-regular-agenda-discussables-r9af",
       "itemNumber": "R9AF",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4445,7 +4445,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AF"
     },
     {
-      "id": "2026-09-10-r9b",
+      "id": "2026-09-10-regular-agenda-discussables-r9b",
       "itemNumber": "R9B",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4468,7 +4468,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9B"
     },
     {
-      "id": "2026-09-10-r9c",
+      "id": "2026-09-10-regular-agenda-discussables-r9c",
       "itemNumber": "R9C",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4491,7 +4491,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9C"
     },
     {
-      "id": "2026-09-10-r9d",
+      "id": "2026-09-10-regular-agenda-discussables-r9d",
       "itemNumber": "R9D",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4514,7 +4514,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9D"
     },
     {
-      "id": "2026-09-10-r9e",
+      "id": "2026-09-10-regular-agenda-discussables-r9e",
       "itemNumber": "R9E",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4537,7 +4537,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9E"
     },
     {
-      "id": "2026-09-10-r9f",
+      "id": "2026-09-10-regular-agenda-discussables-r9f",
       "itemNumber": "R9F",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4563,7 +4563,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9F"
     },
     {
-      "id": "2026-09-10-r9g",
+      "id": "2026-09-10-regular-agenda-discussables-r9g",
       "itemNumber": "R9G",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4589,7 +4589,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9G"
     },
     {
-      "id": "2026-09-10-r9h",
+      "id": "2026-09-10-regular-agenda-discussables-r9h",
       "itemNumber": "R9H",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4614,7 +4614,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9H"
     },
     {
-      "id": "2026-09-10-r9i",
+      "id": "2026-09-10-regular-agenda-discussables-r9i",
       "itemNumber": "R9I",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4637,7 +4637,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9I"
     },
     {
-      "id": "2026-09-10-r9j",
+      "id": "2026-09-10-regular-agenda-discussables-r9j",
       "itemNumber": "R9J",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4664,7 +4664,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9J"
     },
     {
-      "id": "2026-09-10-r9k",
+      "id": "2026-09-10-regular-agenda-discussables-r9k",
       "itemNumber": "R9K",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4687,7 +4687,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9K"
     },
     {
-      "id": "2026-09-10-r9l",
+      "id": "2026-09-10-regular-agenda-discussables-r9l",
       "itemNumber": "R9L",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4710,7 +4710,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9L"
     },
     {
-      "id": "2026-09-10-r9m",
+      "id": "2026-09-10-regular-agenda-discussables-r9m",
       "itemNumber": "R9M",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4733,7 +4733,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9M"
     },
     {
-      "id": "2026-09-10-r9n",
+      "id": "2026-09-10-regular-agenda-discussables-r9n",
       "itemNumber": "R9N",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4759,7 +4759,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9N"
     },
     {
-      "id": "2026-09-10-r9o",
+      "id": "2026-09-10-regular-agenda-discussables-r9o",
       "itemNumber": "R9O",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4782,7 +4782,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9O"
     },
     {
-      "id": "2026-09-10-r9p",
+      "id": "2026-09-10-regular-agenda-discussables-r9p",
       "itemNumber": "R9P",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4812,7 +4812,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9P"
     },
     {
-      "id": "2026-09-10-r9q",
+      "id": "2026-09-10-regular-agenda-discussables-r9q",
       "itemNumber": "R9Q",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4840,7 +4840,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9Q"
     },
     {
-      "id": "2026-09-10-r9r",
+      "id": "2026-09-10-regular-agenda-discussables-r9r",
       "itemNumber": "R9R",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4863,7 +4863,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9R"
     },
     {
-      "id": "2026-09-10-r9s",
+      "id": "2026-09-10-regular-agenda-discussables-r9s",
       "itemNumber": "R9S",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4886,7 +4886,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9S"
     },
     {
-      "id": "2026-09-10-r9t",
+      "id": "2026-09-10-regular-agenda-discussables-r9t",
       "itemNumber": "R9T",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4912,7 +4912,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9T"
     },
     {
-      "id": "2026-09-10-r9u",
+      "id": "2026-09-10-regular-agenda-discussables-r9u",
       "itemNumber": "R9U",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4935,7 +4935,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9U"
     },
     {
-      "id": "2026-09-10-r9v",
+      "id": "2026-09-10-regular-agenda-discussables-r9v",
       "itemNumber": "R9V",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4961,7 +4961,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9V"
     },
     {
-      "id": "2026-09-10-r9w",
+      "id": "2026-09-10-regular-agenda-discussables-r9w",
       "itemNumber": "R9W",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -4984,7 +4984,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9W"
     },
     {
-      "id": "2026-09-10-r9x",
+      "id": "2026-09-10-regular-agenda-discussables-r9x",
       "itemNumber": "R9X",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -5012,7 +5012,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9X"
     },
     {
-      "id": "2026-09-10-r9y",
+      "id": "2026-09-10-regular-agenda-discussables-r9y",
       "itemNumber": "R9Y",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -5035,7 +5035,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9Y"
     },
     {
-      "id": "2026-09-10-r9z",
+      "id": "2026-09-10-regular-agenda-discussables-r9z",
       "itemNumber": "R9Z",
       "type": "Commission item",
       "section": "Regular Agenda — Discussables",
@@ -5058,7 +5058,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9Z"
     },
     {
-      "id": "2026-09-10-r10a",
+      "id": "2026-09-10-city-attorney-reports-executive-sessions-r10-r10a",
       "itemNumber": "R10A",
       "type": "Commission item",
       "section": "City Attorney Reports / Executive Sessions - R10",
@@ -5081,7 +5081,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R10A"
     },
     {
-      "id": "2026-09-10-1.",
+      "id": "2026-09-10-reports-and-informational-items-1.",
       "itemNumber": "1.",
       "type": "Commission item",
       "section": "Reports and Informational Items",
@@ -5104,7 +5104,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12821"
     },
     {
-      "id": "2026-09-10-7.",
+      "id": "2026-09-10-reports-and-informational-items-7.",
       "itemNumber": "7.",
       "type": "Commission item",
       "section": "Reports and Informational Items",
@@ -5127,7 +5127,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12818"
     },
     {
-      "id": "2026-09-10-1.",
+      "id": "2026-09-10-notices-1.",
       "itemNumber": "1.",
       "type": "Commission item",
       "section": "Notices",
@@ -5150,7 +5150,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12812"
     },
     {
-      "id": "2026-09-10-2.",
+      "id": "2026-09-10-notices-2.",
       "itemNumber": "2.",
       "type": "Commission item",
       "section": "Notices",
@@ -5173,7 +5173,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12813"
     },
     {
-      "id": "2026-09-10-3.",
+      "id": "2026-09-10-notices-3.",
       "itemNumber": "3.",
       "type": "Commission item",
       "section": "Notices",
@@ -5196,7 +5196,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12814"
     },
     {
-      "id": "2026-09-10-4.",
+      "id": "2026-09-10-notices-4.",
       "itemNumber": "4.",
       "type": "Commission item",
       "section": "Notices",
@@ -5219,7 +5219,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12815"
     },
     {
-      "id": "2026-09-10-5.",
+      "id": "2026-09-10-notices-5.",
       "itemNumber": "5.",
       "type": "Commission item",
       "section": "Notices",
@@ -5242,7 +5242,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12816"
     },
     {
-      "id": "2026-09-10-6.",
+      "id": "2026-09-10-notices-6.",
       "itemNumber": "6.",
       "type": "Commission item",
       "section": "Notices",
@@ -5265,7 +5265,7 @@
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/12817"
     },
     {
-      "id": "2026-09-10-8.",
+      "id": "2026-09-10-notices-8.",
       "itemNumber": "8.",
       "type": "Commission item",
       "section": "Notices",
