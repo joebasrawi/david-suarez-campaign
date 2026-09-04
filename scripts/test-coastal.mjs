@@ -44,4 +44,20 @@ assert.ok(!about.includes('id="official-people"'));
 assert.ok(commission.includes('id="official-people"'));
 assert.ok(home.includes('id="home-neighborhood"'));
 assert.ok((await read('media/app.js')).includes('shelf-track'));
+for(const route of ['', 'resident-guide/', 'meetings/', 'news/', 'legislation/', 'commission-agenda/', 'commission-actions/', 'about/', 'active-projects/']) {
+ const html=await read(route+'index.html');
+ assert.ok(!/A little help\.|Show up\. Speak up\.|Know what’s on the table\.|Guests, ideas and the city we share|class="editorial-deck"/.test(html),'No decorative filler on '+route);
+}
+const css=await read('coastal.css');
+assert.match(css,/body\.home-cinematic \.hub-header \{[^}]*--panel:#122e39/,'Cinematic mobile navigation keeps a dark surface in light mode');
+const rgb=h=>h.replace('#','').match(/../g).map(x=>parseInt(x,16)/255);
+const luminance=h=>rgb(h).reduce((sum,c,i)=>sum+(c<=.04045?c/12.92:((c+.055)/1.055)**2.4)*[.2126,.7152,.0722][i],0);
+const contrast=(a,b)=>{const values=[luminance(a),luminance(b)].sort((a,b)=>b-a);return(values[0]+.05)/(values[1]+.05);};
+for(const selector of [':root',':root[data-theme="light"]']) {
+ const block=css.slice(css.indexOf(selector+' {')).split('}')[0];
+ const tokens=Object.fromEntries([...block.matchAll(/--([\w-]+):(#(?:[\da-f]{6}|[\da-f]{3}));/g)].map(([,key,value])=>[key,value.length===4?'#'+[...value.slice(1)].map(x=>x+x).join(''):value]));
+ for(const surface of ['canvas','panel','panel-raised','selected'])for(const ink of ['text','subtle','accent'])assert.ok(contrast(tokens[ink],tokens[surface])>=4.5,selector+' '+ink+' on '+surface);
+ assert.ok(contrast(tokens['accent-ink'],tokens.accent)>=4.5);
+ for(const surface of ['canvas','panel','panel-raised'])assert.ok(contrast(tokens['control-border'],tokens[surface])>=3,selector+' control boundary');
+}
 console.log('Coastal regression tests passed: geography, source phases, persistent themes, and approved removals.');

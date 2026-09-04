@@ -3,7 +3,7 @@ import {readFile, writeFile, mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {addLoadingShells} from './ui-shells.mjs';
 import {homeLayout} from './home-layout.mjs';
-import {aboutLayout, commissionLayout, directoryLayout, civicIntroductions, projectsLayout} from './editorial-layouts.mjs';
+import {aboutLayout, commissionLayout, directoryLayout, projectsLayout} from './editorial-layouts.mjs';
 const root = new URL('../',import.meta.url);
 const esc = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 function header(route) {
@@ -88,11 +88,8 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  let html=await readFile(file,'utf8');
  html=html.replace(/<body([^>]*)>/,(_,attrs)=>'<body'+attrs.replace(/ data-page="[^"]*"/,'')+' data-page="'+route+'">');
  html=html.replace('Site-wide searches run in your browser.','Page-specific filters run in your browser.');
- const intro=civicIntroductions[route];
- if(intro&&!html.includes('class="chapter-label"')) {
-   html=html.replace(/(<(?:section) class="(?:page-head|agenda-intro)[^"]*"[\s\S]*?)(<h1\b)/,(_,before,h)=>before+`<p class="chapter-label">${intro[0]}</p>`+h);
-   html=html.replace(/(<h1[^>]*>[\s\S]*?<\/h1>)/,'$1'+`<p class="editorial-deck">${intro[1]}</p>`);
- }
+ // Remove legacy decorative introductions from retained reader pages as well.
+ html=html.replace(/<p class="(?:chapter-label|editorial-deck)">[^<]*<\/p>/g,'');
  if(route==='media')html=html.replace('<div class="player-copy">','<div class="player-copy" id="player-copy">');
  html=addLoadingShells(html,route);
  if(!html.includes('id="loading-noscript"')) html=html.replace('</head>','<noscript id="loading-noscript"><style>.loading-skeleton{display:none!important}</style></noscript></head>');

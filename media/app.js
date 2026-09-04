@@ -1,7 +1,7 @@
 import {json,escape as e,date,matches,thumbnailFallback} from '../shared.js?v=da4eebcc5e';
 const $=s=>document.querySelector(s),params=new URLSearchParams(location.search);
 const state={items:[],series:params.get('series')||'all',query:params.get('q')||'',selected:params.get('video')};
-const descriptions={'Suarez Sound Off':'Long-form conversations with the people shaping Miami Beach.','Miami Beach Civics':'Understand the people, process and public money behind city government.','Ride Along':'Go behind the scenes with the teams working in Miami Beach.','Accountability':'David’s reporting and perspective on public accountability.','City Issues':'Updates and conversations about life in Miami Beach.'};
+const descriptions={'Suarez Sound Off':'Interviews hosted by David.','Miami Beach Civics':'How Miami Beach city government works.','Ride Along':'David joins City crews on the job.','Accountability':'David’s accountability reports.','City Issues':'David’s updates on local issues.'};
 function syncUrl(){const p=new URLSearchParams();if(state.selected)p.set('video',state.selected);if(state.series!=='all')p.set('series',state.series);if(state.query)p.set('q',state.query);history.replaceState(null,'',location.pathname+(p.size?'?'+p:''));}
 function select(id,scroll=false){
  const item=state.items.find(i=>i.id===id);if(!item)return;
