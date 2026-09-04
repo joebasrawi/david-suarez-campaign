@@ -26,20 +26,30 @@ function initFilm(){
  let wanted=!reduced.matches&&!connection?.saveData,visible=true;
  function label(){const playing=!film.paused;control.textContent=playing?'Pause video':'Play video';control.setAttribute('aria-label',playing?'Pause background video':'Play background video');}
  function sync(){
+  film.autoplay=wanted&&visible&&!document.hidden;
   if(!wanted||!visible||document.hidden){film.pause();label();return;}
-  if(!film.getAttribute('src'))film.src=matchMedia('(max-width: 700px)').matches?film.dataset.mobileSrc:film.dataset.videoSrc;
   film.muted=true;
-  film.play().catch(error=>{if(error.name!=='AbortError')wanted=false;label();});
+  film.defaultMuted=true;
+  film.playsInline=true;
+  if(!film.getAttribute('src'))film.src=matchMedia('(max-width: 700px)').matches?film.dataset.mobileSrc:film.dataset.videoSrc;
+  // A browser policy rejection is not a visitor choosing Pause. Keep their
+  // intent so returning to the tab or interacting with the page can retry.
+  film.play().catch(()=>label());
  }
  control.addEventListener('click',()=>{wanted=film.paused;sync();});
  film.addEventListener('playing',()=>{film.closest('.coastal-hero').classList.add('is-playing');label();});
  film.addEventListener('pause',label);
  film.addEventListener('error',()=>{wanted=false;film.closest('.coastal-hero').classList.remove('is-playing');control.hidden=true;});
  document.addEventListener('visibilitychange',sync);
+ window.addEventListener('pageshow',sync);
+ const retry=event=>{if(wanted&&film.paused&&!control.contains(event.target))sync();};
+ document.addEventListener('pointerdown',retry);
+ document.addEventListener('keydown',retry);
  reduced.addEventListener('change',()=>{if(reduced.matches){wanted=false;sync();}});
  connection?.addEventListener?.('change',()=>{if(connection.saveData){wanted=false;sync();}});
  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:0.05}).observe(film.closest('.coastal-hero'));
- else sync();
+ // Start immediately; the observer only suspends playback when offscreen.
+ sync();
  label();
 }
 initFilm();
