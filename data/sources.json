@@ -1,0 +1,66 @@
+{
+  "officialRecords": [
+    {
+      "name": "City Commission meeting dates",
+      "url": "https://www.miamibeachfl.gov/city-hall/city-clerk/city-commission-meeting-dates/",
+      "authority": "City of Miami Beach",
+      "use": "Commission schedule and meeting type"
+    },
+    {
+      "name": "Meetings and agendas",
+      "url": "https://www.miamibeachfl.gov/egovapp/news-and-info/newsandalerts/meetingsandagendas/",
+      "authority": "City of Miami Beach",
+      "use": "Agendas, notices and supporting documents"
+    },
+    {
+      "name": "Public records registry",
+      "url": "https://www.miamibeachfl.gov/egovapp/city-hall/cityclerkdepartment/public-records/",
+      "authority": "City of Miami Beach",
+      "use": "Adopted ordinances and resolutions",
+      "automation": "data/records-status.json"
+    },
+    {
+      "name": "City events calendar",
+      "url": "https://events.miamibeachfl.gov/City%20Meetings/",
+      "authority": "City of Miami Beach",
+      "use": "Upcoming public meetings and civic events",
+      "automation": "data/city-calendar.json"
+    },
+    {
+      "name": "Public Works GIS",
+      "url": "https://gis.miamibeachfl.gov/public/rest/services/gc/gc_Projects_PW/MapServer",
+      "authority": "City of Miami Beach",
+      "use": "Construction, design and planning project data",
+      "automation": "data/city-projects.json"
+    },
+    {
+      "name": "MBTV archive",
+      "url": "https://www.miamibeachfl.gov/MBTV/",
+      "authority": "City of Miami Beach",
+      "use": "Meeting video and chapter markers"
+    }
+  ],
+  "commissionerChannels": [
+    {
+      "name": "David Suarez Instagram",
+      "url": "https://www.instagram.com/davidsuarezmb/",
+      "type": "commentary"
+    },
+    {
+      "name": "Suarez Sound Off Instagram",
+      "url": "https://www.instagram.com/suarezsoundoff/",
+      "type": "media"
+    },
+    {
+      "name": "Suarez Sound Off TikTok",
+      "url": "https://www.tiktok.com/@suarezsoundoff",
+      "type": "media"
+    },
+    {
+      "name": "Commissioner David Suarez YouTube",
+      "url": "https://www.youtube.com/@CommissionerDavidSuarez",
+      "type": "media",
+      "automation": "data/youtube.json"
+    }
+  ]
+}

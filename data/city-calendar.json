@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-09-04T16:36:07.983Z",
+  "timezone": "America/New_York",
+  "source": {
+    "label": "City of Miami Beach Events Calendar",
+    "url": "https://events.miamibeachfl.gov/City%20Meetings/",
+    "feedUrl": "https://events.miamibeachfl.gov/events/month/?ical=1"
+  },
+  "items": [
+    {
+      "id": "10106141-1788739200-1788825599@events.miamibeachfl.gov",
+      "title": "Labor Day",
+      "description": "City Hall Closed",
+      "startLocal": "2026-09-07",
+      "endLocal": "2026-09-08",
+      "location": "Miami Beach City Hall, 1700 Convention Center Drive, Miami Beach, Florida, 33139",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/labor-day/"
+    },
+    {
+      "id": "10104212-1788858000-1788886800@events.miamibeachfl.gov",
+      "title": "Planning Board*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86143426327 Access ID: 86143426327# 1.929.205.6099 or 877.853.5257 Miami Beach City Hall 1700 Convention Center Drive, 3rd Floor Commission Chamber",
+      "startLocal": "2026-09-08T09:00:00",
+      "endLocal": "2026-09-08T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL, 33139, United States",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-09-08/"
+    },
+    {
+      "id": "10106142-1788859800-1788867000@events.miamibeachfl.gov",
+      "title": "Miami Beach Convention Center Advisory Board",
+      "description": "https://us06web.zoom.us/j/82374361950?pwd=VTCUuEl5alieDItjLu5RvuhtUFW7mj.1 Meeting ID: 82374361950# Passcode: 086744",
+      "startLocal": "2026-09-08T09:30:00",
+      "endLocal": "2026-09-08T11:30:00",
+      "location": "Virtual Zoom Meeting",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-convention-center-advisory-board/"
+    },
+    {
+      "id": "10106143-1788861600-1788868800@events.miamibeachfl.gov",
+      "title": "Miami Beach Employees' Retirement Plan Board",
+      "description": "Miami Beach Chamber of Commerce 1920 Meridian Avenue, 2nd Floor",
+      "startLocal": "2026-09-08T10:00:00",
+      "endLocal": "2026-09-08T12:00:00",
+      "location": "FL",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-employees-retirement-plan-board/"
+    },
+    {
+      "id": "10106144-1788874200-1788881400@events.miamibeachfl.gov",
+      "title": "LGBTQIA+ Advisory Committee",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4th Floor Mayor’s Conference Room",
+      "startLocal": "2026-09-08T13:30:00",
+      "endLocal": "2026-09-08T15:30:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach, FL, 33139, United States",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/lgbtqia-advisory-committee-3/"
+    }
+  ]
+}

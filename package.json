@@ -1,0 +1,16 @@
+{
+  "name": "david-suarez-resident-hub",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:data": "node scripts/sync-all.mjs",
+    "sync:calendar": "node scripts/sync-calendar.mjs",
+    "sync:projects": "node scripts/sync-projects.mjs",
+    "sync:records": "node scripts/sync-records.mjs",
+    "sync:youtube": "node scripts/sync-youtube.mjs",
+    "test:data": "node scripts/validate-data.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

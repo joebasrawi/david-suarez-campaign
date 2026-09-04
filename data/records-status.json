@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-09-04T16:38:19.584Z",
+  "source": {
+    "label": "City of Miami Beach Public Records",
+    "url": "https://www.miamibeachfl.gov/egovapp/city-hall/cityclerkdepartment/public-records/"
+  },
+  "note": "Registry changes are detected automatically. Resident-facing summaries require human verification against the official record before publication.",
+  "items": [
+    {
+      "type": "ordinances",
+      "currentThrough": "2026-06-24",
+      "registryPdf": "https://www.miamibeachfl.gov/wp-content/uploads/2025/06/Ordinances-January-13-2016-to-June-24-2026.pdf",
+      "recordsDirectory": "https://docmgmt.miamibeachfl.gov/WebLink/Browse.aspx?id=61343&dbid=0&repo=CityClerk",
+      "bytes": 2745250,
+      "sha256": "6877e5637ae28392b14a8c57ea25c75a0bc732051c120088cf687238461390e5",
+      "sourceLastModified": "Mon, 10 Aug 2026 12:43:17 GMT"
+    },
+    {
+      "type": "resolutions",
+      "currentThrough": "2026-06-24",
+      "registryPdf": "https://www.miamibeachfl.gov/wp-content/uploads/2025/06/Resolutions-January-13-2016-June-24-2026.pdf",
+      "recordsDirectory": "https://docmgmt.miamibeachfl.gov/WebLink/Browse.aspx?id=61344&dbid=0&repo=CityClerk",
+      "bytes": 10133091,
+      "sha256": "4742281fcc25995ebf6847b8e5933c36e459c10ff0638da3d0f71a1bd454d075",
+      "sourceLastModified": "Mon, 10 Aug 2026 12:42:45 GMT"
+    }
+  ]
+}
