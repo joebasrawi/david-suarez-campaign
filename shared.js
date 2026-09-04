@@ -3,7 +3,7 @@ export const href = path => new URL(path, ROOT).href;
 export const escape = (value = '') => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
 export const date = (value, short = false) => value ? new Date(value.length === 10 ? `${value}T12:00:00` : value).toLocaleDateString('en-US', {month: short ? 'short' : 'long', day:'numeric', year:'numeric', timeZone:'America/New_York'}) : 'Not published';
 export async function json(file) {
-  const response = await fetch(href(`data/${file}.json`), {cache:'no-cache'});
+  const response = await fetch(href(`data/${file}.json`), {cache:'no-cache',signal:AbortSignal.timeout(20000)});
   if (!response.ok) throw new Error(`${file} unavailable`);
   return response.json();
 }
@@ -40,7 +40,7 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', async event => {
   if(event.target.closest('[data-back-to-list]')){
     const selected=document.querySelector('.item-browser [aria-pressed="true"]')||document.querySelector('.item-browser button');
-    selected?.focus({preventScroll:true}); document.querySelector('.item-browser')?.scrollIntoView({block:'start',behavior:'smooth'});
+    selected?.focus({preventScroll:true}); document.querySelector('.item-browser')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   }
   const copy = event.target.closest('[data-copy-link]');
   if (copy) {

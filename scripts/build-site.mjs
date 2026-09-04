@@ -1,6 +1,7 @@
 // Static page assembly: shared navigation, accessible fallbacks and page metadata.
 import {readFile, writeFile, mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {addLoadingShells} from './ui-shells.mjs';
 const root = new URL('../',import.meta.url);
 const esc = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 function header(route) {
@@ -71,6 +72,9 @@ for(const entry of ['home.js','pages.js','media/app.js','active-projects/explore
 for (const route of [...Object.keys(pages),'','commission-agenda','commission-actions','media','active-projects']) {
  const file=new URL(`${route?route+'/':''}index.html`,root);
  let html=await readFile(file,'utf8');
+ if(route==='media')html=html.replace('<div class="player-copy">','<div class="player-copy" id="player-copy">');
+ html=addLoadingShells(html,route);
+ if(!html.includes('id="loading-noscript"')) html=html.replace('</head>','<noscript id="loading-noscript"><style>.loading-skeleton{display:none!important}</style></noscript></head>');
  const base=route?'../':'';
  if(!html.includes('href="'+base+'experience.css')) html=html.replace('</head>',`<link rel="stylesheet" href="${base}experience.css"></head>`);
  if(!html.includes('src="'+base+'experience.js')) html=html.replace('</head>',`<script defer src="${base}experience.js"></script></head>`);

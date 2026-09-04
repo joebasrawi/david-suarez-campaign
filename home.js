@@ -1,4 +1,4 @@
-import {json, escape as e, date, thumbnailFallback} from './shared.js?v=35567ffdd7';
+import {json, escape as e, date, thumbnailFallback} from './shared.js?v=468bf5ea8f';
 const $=s=>document.querySelector(s);
 async function init(){
  const {youtube,agenda,news}=await json('home-summary');
@@ -13,4 +13,4 @@ async function init(){
  $('#official-updates').innerHTML=cards.join('')||'<p class="loading-copy">Updates could not be loaded. <a href="news/">Try city news</a>.</p>';
 
 }
-init().catch(error=>{console.error(error);$('#official-updates').innerHTML='<p class="loading-copy">Updates could not be loaded. <a href="news/">Open city news</a> or <a href="commission-agenda/">read the agenda</a>.</p>';});
+init().catch(error=>{console.error(error);$('#official-updates').innerHTML='<p class="loading-copy">Updates could not be loaded. <a href="news/">Open city news</a> or <a href="commission-agenda/">read the agenda</a>.</p>';}).finally(()=>document.dispatchEvent(new Event('page:ready')));

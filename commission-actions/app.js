@@ -43,7 +43,7 @@ function friendlyTitle(value = '') {
 }
 
 async function loadJson(url) {
-  const response = await fetch(`${url}?v=20260904b`, { cache: 'no-store' });
+  const response = await fetch(`${url}?v=20260904b`, { cache: 'no-store',signal:AbortSignal.timeout(20000) });
   if (!response.ok) throw new Error(`${url} returned ${response.status}`);
   return response.json();
 }
@@ -185,7 +185,7 @@ function bindEvents() {
     state.selectedId = button.dataset.item;
     document.querySelectorAll('#decision-list [data-item]').forEach(card=>{const selected=card.dataset.item===state.selectedId;card.classList.toggle('is-selected',selected);card.setAttribute('aria-pressed',String(selected));});
     renderDetail();document.querySelector('#decision-detail').scrollTop=0;
-    if (matchMedia('(max-width: 860px)').matches) document.querySelector('#decision-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (matchMedia('(max-width: 860px)').matches) document.querySelector('#decision-detail').scrollIntoView({ behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth', block: 'start' });
   });
   document.querySelector('#decision-search').addEventListener('input', event => { state.query = event.target.value.trim(); renderList({ preserveSelection: false }); });
   document.querySelector('#meeting-filter').addEventListener('change', event => { state.meeting = event.target.value; renderList({ preserveSelection: false }); });
@@ -228,4 +228,4 @@ async function initialize() {
   }
 }
 
-initialize();
+initialize().finally(()=>document.dispatchEvent(new Event('page:ready')));

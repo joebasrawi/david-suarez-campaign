@@ -38,7 +38,7 @@ function optionLabel(value) {
 }
 
 async function loadJson(url) {
-  const response = await fetch(`${url}?v=20260904`, { cache: 'no-store' });
+  const response = await fetch(`${url}?v=20260904`, { cache: 'no-store',signal:AbortSignal.timeout(20000) });
   if (!response.ok) throw new Error(`${url} returned ${response.status}`);
   return response.json();
 }
@@ -200,7 +200,7 @@ function bindEvents() {
     document.querySelectorAll('#item-list [data-item]').forEach(card => { const selected=card.dataset.item===state.selectedItem;card.classList.toggle('is-selected',selected);card.setAttribute('aria-pressed',String(selected)); });
     renderDetail();
     document.querySelector('#item-detail').scrollTop=0;
-    if (matchMedia('(max-width: 860px)').matches) document.querySelector('#item-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (matchMedia('(max-width: 860px)').matches) document.querySelector('#item-detail').scrollIntoView({ behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth', block: 'start' });
   });
   document.querySelector('#agenda-search').addEventListener('input', event => { state.query = event.target.value.trim(); renderList({ preserveSelection: false }); });
   [['#department-filter', 'department'], ['#neighborhood-filter', 'neighborhood'], ['#hearing-filter', 'hearing'], ['#status-filter', 'status']].forEach(([selector, key]) => {
@@ -236,4 +236,4 @@ async function initialize() {
   }
 }
 
-initialize();
+initialize().finally(()=>document.dispatchEvent(new Event('page:ready')));

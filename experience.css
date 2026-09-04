@@ -69,6 +69,7 @@ body[data-page="resident-guide"] .page-body { background:var(--surface-soft); }
 .next-meeting h2 { color:white; margin-top:8px; }
 .next-meeting .source-note,.next-meeting p { color:#c8dadd; }
 .next-meeting .hub-button { color:var(--navy); background:#d9eeea; }
+.help-box.next-meeting a.hub-button:not(.secondary) { color:var(--navy); }
 .next-meeting .hub-button.secondary { background:transparent; border-color:#597480; color:white; }
 .date-block { padding:12px 0; border-radius:10px; background:var(--surface-soft); }
 .reader-shell { border-color:#dce5e3; border-radius:14px; box-shadow:var(--shadow-soft); }
@@ -83,6 +84,8 @@ body[data-page="resident-guide"] .page-body { background:var(--surface-soft); }
 .media-card img { border-radius:0; }
 .media-card-copy { padding:18px; }
 #player-art { border-radius:14px; }
+.player-section { padding-top:28px; }
+#player-art:has(> p) { background:var(--surface-soft); padding:24px; color:var(--ink); }
 .project-map,.project-detail { border-radius:12px; }
 @media(hover:hover) and (prefers-reduced-motion:no-preference) {
   .series-card,.media-card,.home-explore a { transition:transform 220ms var(--ease-out),box-shadow 220ms; }
@@ -121,3 +124,59 @@ body[data-page="resident-guide"] .page-body { background:var(--surface-soft); }
   html { scroll-behavior:auto!important; }
   *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
 }
+/* Layout-specific skeletons. No artificial minimum loading time. */
+.loading-skeleton { grid-column:1/-1; width:100%; color:var(--muted); }
+.skeleton-shapes { display:grid; gap:0; }
+.skeleton-unit { display:flex; gap:18px; padding:24px 0; border-bottom:1px solid var(--line); }
+.skeleton-copy { flex:1; min-width:0; display:grid; align-content:center; gap:12px; }
+.skeleton-line,.skeleton-art { display:block; position:relative; overflow:hidden; background:#e4eae9; border-radius:5px; }
+.skeleton-line { height:12px; width:85%; }
+.skeleton-line.short { width:32%; height:9px; }
+.skeleton-line.title { width:96%; height:18px; }
+.skeleton-line::after,.skeleton-art::after { content:''; position:absolute; inset:0; background:linear-gradient(100deg,transparent 20%,#ffffff80 50%,transparent 80%); transform:translateX(-100%); animation:skeleton-sweep 1.6s ease-in-out infinite; }
+.skeleton-art { display:none; flex-shrink:0; }
+.skeleton-reader .skeleton-unit { padding:26px 20px; }
+.skeleton-reader .skeleton-art,.skeleton-events .skeleton-art,.skeleton-services .skeleton-art { display:block; width:44px; height:44px; border-radius:10px; }
+.skeleton-detail { padding:32px; }
+.skeleton-detail .skeleton-unit { min-height:330px; align-items:start; border:0; }
+.skeleton-detail .skeleton-copy { gap:26px; }
+.skeleton-detail .skeleton-line.title { height:66px; }
+.skeleton-detail .skeleton-line:last-child { height:120px; }
+.skeleton-video .skeleton-unit,.skeleton-map .skeleton-unit { padding:0; border:0; }
+.skeleton-video .skeleton-copy,.skeleton-map .skeleton-copy { display:none; }
+.skeleton-video .skeleton-art,.skeleton-map .skeleton-art { display:block; width:100%; aspect-ratio:16/9; border-radius:14px; }
+.skeleton-map .skeleton-art { aspect-ratio:auto; height:420px; }
+.skeleton-people .skeleton-shapes { grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+.skeleton-videos .skeleton-shapes { grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.skeleton-people .skeleton-unit,.skeleton-videos .skeleton-unit { display:grid; gap:18px; padding:0 0 20px; border:0; }
+.skeleton-people .skeleton-art { display:block; width:100%; aspect-ratio:4/5; border-radius:12px; }
+.skeleton-videos .skeleton-art { display:block; width:100%; aspect-ratio:16/9; border-radius:12px; }
+.skeleton-meeting .skeleton-unit { padding:30px; min-height:166px; background:var(--surface-soft); border:0; border-radius:14px; margin-bottom:20px; }
+.skeleton-cards .skeleton-shapes,.skeleton-services .skeleton-shapes { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.skeleton-cards .skeleton-unit,.skeleton-services .skeleton-unit { padding:24px; background:white; border:1px solid var(--line); border-radius:14px; }
+.skeleton-services .skeleton-line:last-child,.skeleton-services .skeleton-line.short { display:none; }
+.skeleton-services .skeleton-unit { min-height:104px; }
+.skeleton-video-copy .skeleton-unit { border:0; padding:0; }
+.skeleton-video-copy .skeleton-copy { gap:22px; }
+.skeleton-video-copy .skeleton-line.title { height:70px; }
+.skeleton-video-copy .skeleton-line:last-child { height:50px; }
+.ui-loading #player-copy { min-height:280px; }
+/* Static services remain readable without JS. The overlay only covers actual enhancement. */
+[data-static-content] > .loading-skeleton { display:none; }
+.ui-loading [data-static-content] { position:relative; }
+.ui-loading [data-static-content] > :not(.loading-skeleton) { visibility:hidden; }
+.ui-loading [data-static-content] > .loading-skeleton { display:block; position:absolute; inset:0; }
+img[data-image-pending] { background:#e4eae9; }
+@keyframes skeleton-sweep { to { transform:translateX(100%); } }
+@media(max-width:900px) { .skeleton-videos .skeleton-shapes { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:900px) { .skeleton-people .skeleton-shapes { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:860px) { .skeleton-map .skeleton-art { height:300px; } .skeleton-people .skeleton-shapes { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:640px) { .skeleton-videos .skeleton-shapes { grid-template-columns:1fr; } }
+@media(max-width:600px) {
+ .skeleton-services .skeleton-shapes,.skeleton-cards .skeleton-shapes { grid-template-columns:1fr; }
+ .skeleton-people .skeleton-shapes { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+ .skeleton-videos .skeleton-shapes { grid-template-columns:1fr; }
+ .skeleton-services .skeleton-unit { min-height:90px; padding:19px; }
+ .skeleton-detail { padding:24px 18px; }
+}
+@media(prefers-reduced-motion:reduce) { .skeleton-line::after,.skeleton-art::after { animation:none; display:none; } }

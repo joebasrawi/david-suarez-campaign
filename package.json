@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-site.mjs",
-    "test": "node scripts/validate-data.mjs && node scripts/test-site.mjs",
+    "test": "node scripts/validate-data.mjs && node scripts/test-site.mjs && node scripts/test-motion.mjs",
     "sync:data": "node scripts/sync-all.mjs",
     "sync:agendas": "node scripts/sync-agendas.mjs",
     "sync:actions": "node scripts/sync-actions.mjs",

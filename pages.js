@@ -1,4 +1,4 @@
-import {json,href,escape as e,date,recordTitle,matches,sourceLink} from './shared.js?v=35567ffdd7';
+import {json,href,escape as e,date,recordTitle,matches,sourceLink} from './shared.js?v=468bf5ea8f';
 const page = document.body.dataset.page;
 const $ = selector => document.querySelector(selector);
 const params = new URLSearchParams(location.search);
@@ -50,4 +50,4 @@ async function searchPage(){
  $('#global-search-form').addEventListener('submit',event=>{event.preventDefault();limit=12;run();});$('#search-tabs').addEventListener('click',event=>{const b=event.target.closest('[data-type]');if(b){category=b.dataset.type;limit=12;run();}});$('#more-results').addEventListener('click',()=>{limit+=12;run();});run();
 }
 const handlers={'resident-guide':[guidePage,'#guide-list'],'meetings':[meetingsPage,'#upcoming-meetings'],'news':[newsPage,'#news-list'],'about':[aboutPage,'#official-people'],'sources':[sourcesPage,'#source-status'],'legislation':[lawPage,'#law-list'],'search':[searchPage,'#search-results']};
-if(handlers[page]){const [run,target]=handlers[page];Promise.resolve().then(run).catch(error=>{console.error(error);unavailable(target);});}
+if(handlers[page]){const [run,target]=handlers[page];Promise.resolve().then(run).catch(error=>{console.error(error);unavailable(target);}).finally(()=>document.dispatchEvent(new Event('page:ready')));}

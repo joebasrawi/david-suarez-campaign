@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile,access,readdir} from 'node:fs/promises';
 import vm from 'node:vm';
+import {loadingRegions,addLoadingShells} from './ui-shells.mjs';
 const root=new URL('../',import.meta.url);
 const read=file=>readFile(new URL(file,root),'utf8');
 const agenda=JSON.parse(await read('data/city-agenda.json'));
@@ -35,6 +36,12 @@ for(const route of routes){
  assert.equal((html.match(/class="hub-footer"/g)||[]).length,1,route+': one shared footer');
  assert.ok(html.includes('Skip to'),route+': skip navigation');
  assert.ok(html.includes('calm.css'),route+': simplified layout stylesheet');
+ assert.equal((html.match(/<script[^>]+src="[^"]*experience\.js/g)||[]).length,1,route+': one shared motion controller');
+ assert.ok(html.includes('experience.css'),route+': shared motion and skeleton styling');
+ assert.equal((html.match(/data-load-region=/g)||[]).length,loadingRegions[route].length,route+': all asynchronous sections have loading shells');
+ assert.ok(html.includes('role="status">Loading content'),route+': accessible loading announcement');
+ if(route!=='resident-guide')assert.equal(addLoadingShells(html,route),html,route+': skeleton assembly is idempotent');
+ if(route==='resident-guide')assert.equal((html.match(/class="service-icon"/g)||[]).length,12,'All service icons are present');
  if(!['commission-agenda','commission-actions'].includes(route))assert.ok(!/<script[^>]+src="[^"]*shared\.js/.test(html),route+': shared navigation must load once via the module entry');
  for(const match of html.matchAll(/<script([^>]*?)src="([^"?]+)(?:\?[^" ]*)?"[^>]*>/g)){
    if(/^https?:/.test(match[2]))continue;
@@ -47,4 +54,9 @@ for(const route of routes){
   await access(url).catch(()=>assert.fail(`${route}: broken local target ${target}`));checked++;
  }
 }
+const motion=await read('experience.js');
+assert.ok(motion.includes("matchMedia('(prefers-reduced-motion: reduce)')"));
+assert.ok(motion.includes('animation.cancel()'),'Active entrances cancel when reduced motion is enabled');
+assert.ok(!/addEventListener\(['"]scroll/.test(motion),'No high-frequency scroll handlers');
+assert.ok(!/setTimeout/.test(motion),'No artificial minimum skeleton delay');
 console.log(`Passed parser regressions, data integrity checks and ${checked} local links/assets across ${routes.length} routes.`);
