@@ -1,5 +1,5 @@
 import {json,escape as e,matches,date,sourceLink} from '../shared.js?v=da4eebcc5e';
-import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer} from '../city-map.js?v=e410b87006';
+import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer} from '../city-map.js?v=094b460af6';
 const $=s=>document.querySelector(s),params=new URLSearchParams(location.search);
 const state={dataset:'works',datasets:{},areas:[],selected:params.get('project'),center:null,map:null,markers:null,markerIndex:new Map(),boundary:null};
 const clean=v=>v&&String(v).toLowerCase()!=='null'?String(v):'';
@@ -31,7 +31,7 @@ function select(id,move=false){
  const item=state.datasets[state.dataset]?.items.find(i=>i.id===id);if(!item)return;
  state.selected=id;
  document.querySelectorAll('[data-project]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.project===id)));
- state.markerIndex.forEach((marker,key)=>marker.setStyle({radius:key===id?10:6,weight:key===id?3:2,color:key===id?'#ffffff':'#18353d'}));
+ state.markerIndex.forEach((marker,key)=>marker.setStyle({radius:key===id?7:4,weight:key===id?2:1,color:key===id?'#17343c':'#ffffff'}));
  state.markerIndex.get(id)?.bringToFront();
  const fact=(label,value)=>value?'<div><dt>'+label+'</dt><dd>'+e(value)+'</dd></div>':'';
  $('#project-detail').innerHTML='<div class="project-detail-heading"><div><span class="chapter-label">'+e(item.phase||'Project')+'</span><h2>'+e(item.title)+'</h2></div><div class="button-row">'+sourceLink(item.link||state.datasets[state.dataset].source,'Open project source')+'<button class="hub-button secondary" data-copy-link>Copy link</button></div></div><div class="project-detail-body"><p>'+e(item.description||'The saved source does not include a description. Open the project source for details.')+'</p><dl>'+fact('Source neighborhood',item.neighborhood||'Not specified')+fact('Phase / status',[item.phase,item.status].filter(Boolean).join(' · '))+fact('Department',item.department)+fact('Project limits',item.limits)+fact('Project number',item.projectNumber)+fact('Start listed in source',item.startDate?date(item.startDate):'')+fact('End listed in source',item.endDate?date(item.endDate):'')+(item.totalNeed?'<div><dt>Estimated need in source</dt><dd>'+new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(item.totalNeed)+'<br>Not confirmed funding</dd></div>':'')+'</dl></div>';
@@ -43,7 +43,7 @@ function frameMap(list){
  if(!state.map)return;
  state.boundary?.remove();
  const selected=area();
- state.boundary=boundaryLayer(state.map,selected?[selected]:state.areas,feature=>{$('#project-neighborhood').value=feature.properties.name;render();});
+ state.boundary=boundaryLayer(state.map,selected?[selected]:[],feature=>{$('#project-neighborhood').value=feature.properties.name;render();});
  if(selected)state.map.fitBounds(state.boundary.getBounds(),{padding:[30,30],maxZoom:16});
  else if(state.center)state.map.setView([state.center.lat,state.center.lng],14);
  else {
@@ -59,7 +59,7 @@ function render(){
  if(state.markers){
   state.markers.clearLayers();state.markerIndex.clear();frameMap(list);
   mapped.forEach(i=>{
-   const marker=L.circleMarker([i.lat,i.lng],{radius:6,color:'#18353d',weight:2,fillColor:phaseColor(i),fillOpacity:1}).addTo(state.markers);
+   const marker=L.circleMarker([i.lat,i.lng],{radius:4,color:'#fff',weight:1,fillColor:phaseColor(i),fillOpacity:1}).addTo(state.markers);
    marker.bindTooltip(e(i.title));marker.on('click',()=>{select(i.id,true);});state.markerIndex.set(i.id,marker);
   });
  }

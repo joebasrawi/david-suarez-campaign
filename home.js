@@ -1,5 +1,5 @@
 import {json, escape as e, date, thumbnailFallback, newsExcerpt} from './shared.js?v=da4eebcc5e';
-import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer} from './city-map.js?v=e410b87006';
+import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer,groupMapPoints} from './city-map.js?v=094b460af6';
 const $=s=>document.querySelector(s);
 async function init(){
  const {youtube,agenda,news}=await json('home-summary');
@@ -71,6 +71,23 @@ async function initHomeMap(){
  let items=[],areas=[],map,markers,boundaries;
  const url=item=>'active-projects/?project='+encodeURIComponent(item.id);
  const choose=feature=>{picker.value=feature.properties.name;render();};
+ let visibleProjects=[];
+ function drawMarkers(){
+  if(!map||!markers)return;
+  markers.clearLayers();
+  for(const group of groupMapPoints(map,visibleProjects)){
+   if(group.length===1){
+    const i=group[0];
+    L.circleMarker([i.lat,i.lng],{radius:5,color:'#17343c',weight:1.5,fillColor:phaseColor(i),fillOpacity:1}).addTo(markers)
+     .bindPopup('<strong>'+e(i.title)+'</strong><br>'+e(i.sourceLayer?.phase||i.phase)+'<a href="'+url(i)+'">View project details ↗</a>');
+   }else{
+    const center=[group.reduce((n,i)=>n+i.lat,0)/group.length,group.reduce((n,i)=>n+i.lng,0)/group.length];
+    const marker=L.marker(center,{icon:L.divIcon({className:'project-cluster',html:'<span>'+group.length+'</span>',iconSize:[34,34],iconAnchor:[17,17]}),title:group.length+' project features. Zoom in to explore.',alt:group.length+' project features'}).addTo(markers);
+    if(map.getZoom()<17)marker.on('click',()=>map.fitBounds(group.map(i=>[i.lat,i.lng]),{padding:[50,50],maxZoom:Math.min(17,map.getZoom()+2),animate:!matchMedia('(prefers-reduced-motion: reduce)').matches}));
+    else marker.bindPopup('<strong>'+group.length+' project features</strong><ul>'+group.map(i=>'<li><a href="'+url(i)+'">'+e(i.title)+'</a></li>').join('')+'</ul>');
+   }
+  }
+ }
  function render(){
   const selected=areas.find(f=>f.properties.name===picker.value);
   const projects=items.filter(i=>!selected||pointInFeature(i,selected)).sort((a,b)=>(b.sourceLayer?.phase==='Construction')-(a.sourceLayer?.phase==='Construction')||a.title.localeCompare(b.title));
@@ -79,17 +96,14 @@ async function initHomeMap(){
   list.innerHTML=distinct.slice(0,3).map(i=>'<a class="map-project-link" href="'+url(i)+'"><span><i class="phase-dot" style="--marker:'+phaseColor(i)+'"></i>'+e(i.sourceLayer?.phase||i.phase||'Project')+'</span><strong>'+e(i.title)+' <span aria-hidden="true" class="project-arrow">↗</span></strong></a>').join('')||'<p class="source-note">No project points fall inside this neighborhood in the saved feed. Larger projects may cross its boundary.</p>';
   $('#home-map-link').href='active-projects/'+(selected?'?area='+encodeURIComponent(selected.properties.name):'');
   if(!map)return;
-  boundaries?.remove();boundaries=boundaryLayer(map,selected?[selected]:areas,choose);
+  visibleProjects=projects;
+  boundaries?.remove();boundaries=boundaryLayer(map,selected?[selected]:[],choose);
   if(selected)map.fitBounds(boundaries.getBounds(),{padding:[32,32],maxZoom:15,animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});
   else map.fitBounds([[25.758,-80.17],[25.877,-80.113]],{padding:[15,15]});
-  markers.clearLayers();
-  projects.forEach(i=>{
-   const marker=L.circleMarker([i.lat,i.lng],{radius:6,color:'#132f38',weight:2,fillColor:phaseColor(i),fillOpacity:1}).addTo(markers);
-   marker.bindPopup('<strong>'+e(i.title)+'</strong><br>'+e(i.sourceLayer?.phase||i.phase)+'<a href="'+url(i)+'">View project details ↗</a>');
-  });
+  drawMarkers();
  }
  picker.addEventListener('change',render);
- $('#home-map-legend').innerHTML=legendMarkup();
+ $('#home-map-legend').innerHTML=legendMarkup()+'<p class="source-note">Numbers group nearby project features. Select a number to zoom in.</p>';
  try{
   const [data,geography]=await Promise.all([json('city-projects'),json('neighborhoods').catch(()=>null)]);
   items=data.items.filter(i=>Number.isFinite(i.lat)&&Number.isFinite(i.lng));
@@ -100,7 +114,7 @@ async function initHomeMap(){
  try{
   await loadMapLibrary();region.replaceChildren();
   map=L.map(region,{scrollWheelZoom:false,dragging:!matchMedia('(pointer: coarse)').matches,tap:false});
-  installBasemap(map);markers=L.layerGroup().addTo(map);render();
+  installBasemap(map);markers=L.layerGroup().addTo(map);map.on('zoomend',drawMarkers);render();
  }catch{region.innerHTML='<div class="map-loading"><p>The map is unavailable right now.</p><a href="active-projects/">Browse the project directory</a></div>';}
  finally{region.setAttribute('aria-busy','false');}
 }

@@ -29,3 +29,15 @@ export function boundaryLayer(map,features,onSelect){
     if(onSelect)layer.on('click',()=>onSelect(feature));
   }}).addTo(map);
 }
+
+// Group nearby points at the current zoom; all source records stay accessible.
+export function groupMapPoints(map,items,size=60){
+  const groups=new Map();
+  for(const item of items){
+    const p=map.project([item.lat,item.lng],map.getZoom());
+    const key=Math.floor(p.x/size)+':'+Math.floor(p.y/size);
+    if(!groups.has(key))groups.set(key,[]);
+    groups.get(key).push(item);
+  }
+  return [...groups.values()];
+}

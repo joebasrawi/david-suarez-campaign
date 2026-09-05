@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
-import {pointInFeature,neighborhoods,phaseColor} from '../city-map.js';
+import {pointInFeature,neighborhoods,phaseColor,groupMapPoints} from '../city-map.js';
+const mapStub={getZoom:()=>12,project:([lat,lng])=>({x:lng,y:lat})};
+const points=[{lat:1,lng:1},{lat:2,lng:2},{lat:180,lng:180}];
+const grouped=groupMapPoints(mapStub,points);
+assert.deepEqual(grouped.map(g=>g.length),[2,1]);
+assert.equal(grouped.flat().length,points.length,'Clustering preserves every source feature');
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 const polygon={geometry:{type:'Polygon',coordinates:[[[0,0],[4,0],[4,4],[0,4],[0,0]],[[1,1],[2,1],[2,2],[1,2],[1,1]]]}};
 assert.equal(pointInFeature({lat:3,lng:3},polygon),true);
