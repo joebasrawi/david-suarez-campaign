@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-04T19:55:24.088Z",
+  "generatedAt": "2026-09-05T04:37:40.822Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-04&end_date=2026-11-03&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-05&end_date=2026-11-04&per_page=50&page=3"
   },
   "items": [
     {
@@ -665,6 +665,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-11-03/",
+      "note": ""
+    },
+    {
+      "id": "10104092",
+      "title": "Presentations and Awards*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 1.305.224.1968 or 1.888.475.4499 Access ID: 81392857671# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-04T17:00:00",
+      "endLocal": "2026-11-04T19:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/presentations-and-awards/2026-11-04/",
       "note": ""
     }
   ]
