@@ -24,7 +24,11 @@ function initFilm(){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const connection=navigator.connection;
  let wanted=!reduced.matches&&!connection?.saveData,visible=true;
- function label(){const playing=!film.paused;control.textContent=playing?'Pause video':'Play video';control.setAttribute('aria-label',playing?'Pause background video':'Play background video');}
+ function label(){
+  const playing=!film.paused,label=playing?'Pause background video':'Play background video';
+  control.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor">'+(playing?'<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>':'<path d="M8 5v14l11-7z"/>')+'</svg>';
+  control.setAttribute('aria-label',label);control.setAttribute('title',label);
+ }
  function sync(){
   film.autoplay=wanted&&visible&&!document.hidden;
   if(!wanted||!visible||document.hidden){film.pause();label();return;}

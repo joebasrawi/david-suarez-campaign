@@ -44,7 +44,8 @@ body .display-menu { flex-shrink:0; width:auto; }
 .theme-toggle { display:flex; align-items:center; gap:8px; flex-shrink:0; min-height:44px; padding:8px; border:0; background:transparent; color:var(--text); font:inherit; font-size:13px; cursor:pointer; }
 .theme-toggle span { font-size:19px; }
 .theme-toggle:hover { color:var(--accent); }
-body .hero-film-control { position:absolute; bottom:20px; right:24px; width:auto; margin:0; padding:8px 16px; background:#0b222ce8; color:#fff; border:1px solid #78949e; }
+body .hero-film-control { position:absolute; bottom:20px; right:24px; display:grid; place-items:center; width:44px; height:44px; margin:0; padding:0; background:#0b222ce8; color:#fff; border:1px solid #78949e; }
+body .hero-film-control[hidden] { display:none; }
 body .display-menu .nav-dropdown { left:auto; right:0; width:258px; padding:20px; }
 .display-label { display:block; font-size:12px; color:var(--subtle); margin-bottom:12px; }
 .theme-options { display:flex; gap:4px; }

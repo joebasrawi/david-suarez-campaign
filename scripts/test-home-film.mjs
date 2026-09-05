@@ -20,6 +20,7 @@ for(const options of [{reduced:true},{saveData:true}]){
 }
 const h=harness({mobile:true});assert.equal(h.film.src,'mobile.mp4');assert.equal(h.film.paused,false);
 h.events['control:click']();assert.equal(h.film.paused,true);assert.equal(h.control['aria-label'],'Play background video');
+assert.equal(h.control.title,'Play background video');assert.ok(h.control.innerHTML.includes('<svg'));assert.ok(h.control.innerHTML.includes('aria-hidden="true"'));
 h.events['control:click']();assert.equal(h.film.paused,false);
 h.doc.hidden=true;h.events.visibilitychange();assert.equal(h.film.paused,true);
 h.doc.hidden=false;h.events.visibilitychange();assert.equal(h.film.paused,false);
