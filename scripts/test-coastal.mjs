@@ -52,6 +52,8 @@ assert.ok(!directory.includes('global-search-form'));
 assert.ok(!about.includes('id="official-people"'));
 assert.ok(commission.includes('id="official-people"'));
 assert.ok(home.includes('id="home-neighborhood"'));
+assert.ok(!home.includes('href="sources/'));
+await assert.rejects(()=>read('sources/index.html'),{code:'ENOENT'},'Removed sources page must not be rebuilt');
 assert.ok((await read('media/app.js')).includes('shelf-track'));
 for(const route of ['', 'resident-guide/', 'meetings/', 'news/', 'legislation/', 'commission-agenda/', 'commission-actions/', 'about/', 'active-projects/']) {
  const html=await read(route+'index.html');

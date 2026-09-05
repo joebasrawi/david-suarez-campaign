@@ -28,7 +28,7 @@ const fixture=context.parseMeeting(lines,{id:1,date:'February 5, 2026'},{templat
 assert.equal(fixture[0].voteType,'Consent agenda');assert.equal(fixture[1].voteSummary,'');assert.equal(fixture[1].rollCall.length,0);
 const multi=['R7 A A RESOLUTION OF THE MAYOR AND CITY COMMISSION TO APPROVE A PROJECT.','ACTION: Resolution adopted. Vote: 6-1.','VOTES:','Mayor Test: Yes','Another motion. Vote: 7-0.','VOTES:','Mayor Test: Yes'];
 assert.equal(context.parseMeeting(multi,{id:1,date:'February 5, 2026'},{templateId:1,compileOutputType:1})[0].voteSummary,'');
-const routes=['','resident-guide','search','meetings','news','sources','about','commission','legislation','commission-agenda','commission-actions','active-projects','media'];
+const routes=['','resident-guide','search','meetings','news','about','commission','legislation','commission-agenda','commission-actions','active-projects','media'];
 let checked=0;
 for(const route of routes){
  const file=new URL(`${route?route+'/':''}index.html`,root),html=await readFile(file,'utf8');
