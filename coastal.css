@@ -222,15 +222,17 @@ body[data-page="news"] .page-head .editorial-deck + p { display:none; }
 .profile-story h2,.contact-david h2 { font-size:clamp(28px,3.2vw,42px); line-height:1.14; letter-spacing:-.035em; margin:0; }
 .profile-story p { color:var(--subtle); font-size:17px; }
 .profile-story a { color:var(--accent); font-size:13px; }
-.david-paths { display:grid; grid-template-columns:.7fr 1.3fr; gap:32px; }
-.david-paths > a { text-decoration:none; background:var(--panel); border-radius:12px; overflow:hidden; }
-.david-paths > a:first-child { padding:38px; display:flex; flex-direction:column; justify-content:center; }
-.david-paths > a:first-child > span:last-child { font-size:34px; margin-top:32px; color:var(--accent); }
-.david-paths h2 { font-size:28px; line-height:1.15; font-weight:500; }
-.david-paths span,.david-paths p { color:var(--subtle); font-size:14px; }
-.david-paths img { width:100%; aspect-ratio:16/9; object-fit:contain; }
-.david-paths > a > div { padding:24px; }
-.david-paths h2 { margin:10px 0; }
+.david-paths { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+.david-paths > a { display:flex; align-items:center; gap:24px; min-height:164px; padding:24px; text-decoration:none; background:var(--panel); border:1px solid var(--rule); border-radius:8px; overflow:hidden; transition:border-color 160ms ease; }
+.david-paths > a:hover { border-color:var(--accent); }
+.david-paths > a:first-child { display:grid; grid-template-columns:1fr auto; align-content:center; column-gap:16px; row-gap:8px; }
+.david-paths > a:first-child h2 { grid-column:1; }
+.david-paths > a:first-child p { grid-column:1 / -1; grid-row:2; margin:0; }
+.david-paths > a:first-child > span:last-child { font-size:24px; color:var(--accent); }
+.david-paths h2 { font-size:22px; line-height:1.25; font-weight:500; margin:0; }
+.david-paths p { color:var(--subtle); font-size:14px; line-height:1.5; margin:8px 0 0; }
+.david-paths img { display:block; flex:0 0 42%; width:42%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:4px; }
+.david-paths > a > div { min-width:0; }
 .contact-david { display:grid; grid-template-columns:1.4fr 1fr; gap:60px; padding-block:80px; }
 .contact-email { display:inline-block; margin:24px 0 8px; font-size:clamp(17px,2vw,26px); color:var(--accent); overflow-wrap:anywhere; }
 .contact-david p { color:var(--subtle); line-height:1.8; }
