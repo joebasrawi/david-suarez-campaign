@@ -9,7 +9,7 @@ async function init(){
  const image=$('#featured-image');image.src='https://i.ytimg.com/vi/'+item.id+'/maxresdefault.jpg';image.alt=item.title;image.dataset.video=item.id;thumbnailFallback();
  }}
  const cards=[];
- if(agenda){const m=agenda.nextMeeting;const d=new Date(m.date+'T12:00:00');cards.push('<article class="official-item agenda-preview"><span class="official-label">Your next commission meeting</span><time class="meeting-date-art" datetime="'+e(m.date)+'"><span>'+d.toLocaleDateString('en-US',{month:'long'})+'</span><strong>'+d.getDate()+'</strong></time><div><h3>'+m.itemCount+' items for consideration.</h3><a href="commission-agenda/">See what’s on the agenda ↗</a></div></article>');}
+ if(agenda){const m=agenda.nextMeeting;const d=new Date(m.date+'T12:00:00');cards.push('<article class="official-item agenda-preview"><span class="official-label">Your next commission meeting</span><time class="meeting-date-art" datetime="'+e(m.date)+'">'+e(d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}))+'</time><div><h3>'+m.itemCount+' items for consideration.</h3><a href="commission-agenda/">See what’s on the agenda ↗</a></div></article>');}
  if(news)news.items.slice(0,2).forEach(i=>cards.push('<article class="official-item news-preview"><span class="official-label">City announcement · '+e(date(i.publishedAt,true))+'</span><div><h3>'+e(i.title)+'</h3><p>'+e(newsExcerpt(i.summary))+'</p></div><a href="'+e(i.url)+'" target="_blank" rel="noreferrer">Read announcement ↗</a></article>'));
  $('#official-updates').innerHTML=cards.join('')||'<p class="loading-copy">Updates could not be loaded. <a href="news/">Try city news</a>.</p>';
 

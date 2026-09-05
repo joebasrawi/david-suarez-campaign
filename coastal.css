@@ -116,10 +116,8 @@ body.home-cinematic .official-item:last-child { border:0; }
 body.home-cinematic .official-item h3 { font-size:24px; font-weight:500; line-height:1.22; color:var(--text); }
 body.home-cinematic .official-item p { font-size:14px; color:var(--subtle); display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
 body.home-cinematic .official-item a,body.home-cinematic .today-all,body.home-cinematic .official-label { color:var(--accent); }
-.meeting-date-art { display:flex; gap:10px; align-items:baseline; color:var(--accent); }
-.meeting-date-art strong { font-size:82px; font-weight:400; line-height:1; letter-spacing:-.065em; }
-.meeting-date-art > span { font-size:18px; }
-body.home-cinematic .agenda-preview { background:var(--panel); }
+.meeting-date-art { display:block; color:var(--text); font-size:clamp(25px,2.4vw,32px); font-weight:500; line-height:1.25; letter-spacing:-.025em; text-wrap:balance; }
+body.home-cinematic .agenda-preview { background:var(--panel); justify-content:flex-start; gap:20px; }
 body.home-cinematic .agenda-preview h3 { font-size:19px; }
 body.home-cinematic .city-today .section-line { align-items:end; gap:20px; margin-bottom:28px; }
 body.home-cinematic .city-today h2 { margin:0; }
