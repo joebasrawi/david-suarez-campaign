@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-06T04:47:37.644Z",
+  "generatedAt": "2026-09-07T04:51:33.932Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-06&end_date=2026-11-05&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-07&end_date=2026-11-06&per_page=50&page=3"
   },
   "items": [
     {
@@ -676,6 +676,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/presentations-and-awards/2026-11-04/",
+      "note": ""
+    },
+    {
+      "id": "10104223",
+      "title": "Board of Adjustment*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82869615309 1.301.715.8592 or 877.853.5257 Access ID: 82869615309# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-06T09:00:00",
+      "endLocal": "2026-11-06T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-11-06/",
       "note": ""
     }
   ]
