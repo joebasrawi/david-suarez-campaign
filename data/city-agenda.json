@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T19:51:35.444Z",
+  "generatedAt": "2026-09-07T21:34:59.067Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 208,
+    "itemCount": 209,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -43,7 +43,7 @@
     {
       "id": "regular-agenda-resolutions",
       "label": "Regular Agenda — Resolutions",
-      "count": 48
+      "count": 49
     },
     {
       "id": "regular-agenda-discussables",
@@ -4253,6 +4253,38 @@
       "davidInvolved": true,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7X"
+    },
+    {
+      "id": "2026-09-10-regular-agenda-resolutions-r7y",
+      "itemNumber": "R7Y",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Condemn Ice Actions, Express Solidarity with Co...",
+      "summary": "Condemn Ice Actions, Express Solidarity with Co. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, CONDEMNING THE RECENT ACTIONS OF THE U.S. IMMIGRATION AND CUSTOMS ENFORCEMENT (ICE) IN MINNEAPOLIS, EXPRESSING SOLIDARITY WITH IMPACTED COMMUNITIES, RECOGNIZING THE LOSS OF TWO MINNEAPOLIS RESIDENTS, ALEX PRETTI AND RENÉE GOOD, DURING THESE ACTIONS, AND URGING FEDERAL AUTHORITIES TO ENSURE THAT IMMIGRATION ENFORCEMENT IS CONDUCTED IN A MANNER THAT RESPECTS HUMAN RIGHTS AND DUE PROCESS.",
+      "status": "Not reached on 7/22/2026 - R7 Z; Not reached on 6/24/2026 - R7 O; Not reached on 5/20/2026 - R7 L; Not reached on 4/22/2026 - R7 H; Not reached on 3/18/2026 - R7 H; Not reached on 2/25/2026 - R7 G; Not reached on 2/5/202",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Tanya Bhatt",
+        "Commissioner Alex Fernandez",
+        "Commissioner Laura Dominguez",
+        "Commissioner Monica Matteo-Salinas"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt",
+        "alex-fernandez",
+        "laura-dominguez",
+        "monica-matteo-salinas"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7Y"
     },
     {
       "id": "2026-09-10-regular-agenda-resolutions-r7z",
