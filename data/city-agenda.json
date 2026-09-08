@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T21:34:59.067Z",
+  "generatedAt": "2026-09-08T16:42:52.752Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 209,
+    "itemCount": 210,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -43,7 +43,7 @@
     {
       "id": "regular-agenda-resolutions",
       "label": "Regular Agenda — Resolutions",
-      "count": 49
+      "count": 50
     },
     {
       "id": "regular-agenda-discussables",
@@ -131,11 +131,13 @@
       "sponsors": [
         "Procurement",
         "Mayor Steven Meiner",
-        "Commissioner Joseph Magazine"
+        "Commissioner Joseph Magazine",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "steven-meiner",
-        "joseph-magazine"
+        "joseph-magazine",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -319,10 +321,12 @@
       "neighborhood": "South Beach",
       "departments": [],
       "sponsors": [
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -566,10 +570,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -618,10 +624,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -723,11 +731,13 @@
       "sponsors": [
         "City Attorney",
         "Commissioner Monica Matteo-Salinas",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "monica-matteo-salinas",
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -860,10 +870,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1068,10 +1080,14 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "monica-matteo-salinas",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1174,11 +1190,13 @@
       "sponsors": [
         "City Attorney",
         "Commissioner Laura Dominguez",
-        "Vice-Mayor Alex Fernandez"
+        "Vice-Mayor Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
         "laura-dominguez",
-        "alex-fernandez"
+        "alex-fernandez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1202,11 +1220,13 @@
       "sponsors": [
         "City Attorney",
         "Commissioner Monica Matteo-Salinas",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "monica-matteo-salinas",
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1757,11 +1777,15 @@
       "sponsors": [
         "Parks, Facilities, Fleet & Beaches",
         "Commissioner Joseph Magazine",
-        "Commissioner David Suarez"
+        "Commissioner David Suarez",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "joseph-magazine",
-        "david-suarez"
+        "david-suarez",
+        "monica-matteo-salinas",
+        "tanya-bhatt"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -1877,11 +1901,13 @@
       "sponsors": [
         "Public Works",
         "Commissioner Laura Dominguez",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
         "laura-dominguez",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1953,10 +1979,12 @@
       ],
       "sponsors": [
         "Planning",
-        "Commissioner Alex Fernandez"
+        "Commissioner Alex Fernandez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -2110,10 +2138,12 @@
       ],
       "sponsors": [
         "Education and Performance Initiatives",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Mayor Steven Meiner"
       ],
       "officialSponsors": [
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "steven-meiner"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -3683,6 +3713,31 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AW"
+    },
+    {
+      "id": "2026-09-10-regular-agenda-resolutions-r7ax",
+      "itemNumber": "R7AX",
+      "type": "Resolution",
+      "section": "Regular Agenda — Resolutions",
+      "title": "Extend Gmcvb Marketing Services Agreement Three...",
+      "summary": "Extend Gmcvb Marketing Services Agreement Three. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, WAIVING, BY 5/7TH VOTE, THE FORMAL COMPETITIVE BIDDING REQUIREMENT IN SECTION 2-367 OF THE CITY CODE, AS BEING IN THE BEST INTEREST OF THE CITY, AND ACCEPTING THE RECOMMENDATION OF THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE (FERC), AT ITS JULY 8, 2026 MEETING, AND APPROVING, IN SUBSTANTIAL FORM, AMENDMENT NO. 1 TO THE PROFESSIONAL SERVICES AGREEMENT BETWEEN THE CITY AND GREATER MIAMI CONVENTION AND VISITORS BUREAU, INC. (GMCVB\"), FOR DESTINATION MARKETING, COMMUNICATIONS, PUBLIC RELATIONS AND BRANDING SERVICES; SAID AMENDMENT EXTENDING THE TERM OF THE AGREEMENT, ON A MONTH-TO-MONTH BASIS, FOR AN ADDITIONAL THREE (3) MONTHS, COMMENCING ON OCTOBER 1, 2026 AND EXPIRING ON DECEMBER 31, 2026, UNTIL SUCH TIME AS A NEW AGREEMENT WITH GMCVB IS APPROVED; FURTHER, AUTHORIZING THE CITY MANAGER TO FINALIZE THE AMENDMENT; AND FURTHER, AUTHORIZING THE CITY MANAGER AND CITY CLERK TO EXECUTE THE AMENDMENT.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Economic Development",
+        "Item moved from C7 J"
+      ],
+      "sponsors": [
+        "Economic Development",
+        "Item moved from C7 J"
+      ],
+      "officialSponsors": [],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R7AX"
     },
     {
       "id": "2026-09-10-regular-agenda-resolutions-r7b",
