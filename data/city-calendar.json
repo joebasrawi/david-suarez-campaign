@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T04:50:14.363Z",
+  "generatedAt": "2026-09-09T20:59:32.999Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -357,6 +357,17 @@
       "location": "1100 Washington Ave, Miami Beach, FL 33139, USA",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/womens-self-defense-class/",
+      "note": ""
+    },
+    {
+      "id": "397203",
+      "title": "Miami Beach Baila! by Commissioner Joe Magazine",
+      "description": "FREE, open air dancing for our residents of all ages! Date: Sunday, September 20 Time: 7:30 PM – 10 PM Location: SoundScape Park 400 17th Street Miami Beach JOIN OUR WHATSAPP GROUP For more info: 786.697.9182",
+      "startLocal": "2026-09-20T19:30:00",
+      "endLocal": "2026-09-20T22:00:00",
+      "location": "SoundScape Park, 400 17th Street, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-baila-by-commissioner-joe-magazine/",
       "note": ""
     },
     {

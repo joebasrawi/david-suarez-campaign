@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:44:06.209Z",
+  "generatedAt": "2026-09-09T20:59:34.447Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 212,
+    "itemCount": 213,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -33,7 +33,7 @@
     {
       "id": "consent-agenda-resolutions",
       "label": "Consent Agenda — Resolutions",
-      "count": 60
+      "count": 61
     },
     {
       "id": "regular-agenda-ordinances",
@@ -1400,6 +1400,32 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BH"
+    },
+    {
+      "id": "2026-09-10-consent-agenda-resolutions-c7bi",
+      "itemNumber": "C7BI",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Establish Resident Parking Permit Pilot Program",
+      "summary": "Establish Resident Parking Permit Pilot Program. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE FAVORABLE RECOMMENDATION OF THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE, AT ITS MARCH 25, 2026 MEETING, AND APPROVING THE ESTABLISHMENT OF A 12-MONTH PILOT PROGRAM, COMMENCING OCTOBER 1, 2026, AND CONCLUDING SEPTEMBER 30, 2027, TO IMPLEMENT AN ANNUAL FLAT-FEE RESIDENT PARKING PERMIT ALLOWING ELIGIBLE CITY OF MIAMI BEACH RESIDENTS TO PARK FOR UP TO THREE (3) HOURS PER DAY ON-STREET AND IN ELIGIBLE MUNICIPAL PARKING LOTS LOCATED WITHIN NON-RESIDENTIAL PARKING ZONES; ESTABLISHING AN ANNUAL PERMIT FEE OF $300 WHEN PAID IN A SINGLE LUMP-SUM PAYMENT; AUTHORIZING, WHEN ADMINISTRATIVELY AND TECHNOLOGICALLY AVAILABLE, A RECURRING MONTHLY SUBSCRIPTION OPTION AT A COST OF $30 PER MONTH, SUBJECT TO A 12-MONTH COMMITMENT; ESTABLISHING FIVE (5) GEOGRAPHIC PARKING ZONES FOR PURPOSES OF ADMINISTERING THE PILOT PROGRAM, AS FURTHER DEPICTED AND DEFINED IN EXHIBIT \"A\"; AND AUTHORIZING THE CITY ADMINISTRATION TO IMPLEMENT, ADMINISTER, MONITOR, AND EVALUATE THE PILOT PROGRAM.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Parking"
+      ],
+      "sponsors": [
+        "Parking",
+        "Commissioner Alex Fernandez"
+      ],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BI"
     },
     {
       "id": "2026-09-10-consent-agenda-resolutions-c7c",
@@ -2804,12 +2830,14 @@
         "City Attorney",
         "Commissioner Alex Fernandez",
         "Commissioner Laura Dominguez",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "alex-fernandez",
         "laura-dominguez",
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -3668,10 +3696,12 @@
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "Parking"
+        "Parking",
+        "Item moved to C7 BI"
       ],
       "sponsors": [
         "Parking",
+        "Item moved to C7 BI",
         "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [

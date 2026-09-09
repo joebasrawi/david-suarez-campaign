@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:44:22.965Z",
+  "generatedAt": "2026-09-09T20:59:54.778Z",
   "youtube": {
     "items": [
       {
@@ -19,7 +19,7 @@
       "type": "City Commission",
       "date": "2026-09-10",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-      "itemCount": 212,
+      "itemCount": 213,
       "url": "https://miamibeachagenda.com/agenda/september/10/2026",
       "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
     }
@@ -27,19 +27,19 @@
   "news": {
     "items": [
       {
+        "id": "408534",
+        "title": "Miami Beach Commissioner Alex J. Fernandez Appointed to Serve on Florida League of Cities Legislative Policy Committee",
+        "summary": "Miami Beach official appointed to the Development, Code Compliance, and Redevelopment Committee",
+        "publishedAt": "2026-09-08T14:04:00",
+        "url": "https://www.miamibeachfl.gov/miami-beach-commissioner-alex-j-fernandez-appointed-to-serve-on-florida-league-of-cities-legislative-policy-committee/",
+        "label": "Official city news"
+      },
+      {
         "id": "408350",
         "title": "Miami Beach Gains Approval from State on Beachfront Management Plan",
         "summary": "The 10-year update was approved by Florida’s Acquisition and Restoration Council",
         "publishedAt": "2026-09-03T11:14:00",
         "url": "https://www.miamibeachfl.gov/miami-beach-gains-approval-from-state-on-beachfront-management-plan/",
-        "label": "Official city news"
-      },
-      {
-        "id": "408303",
-        "title": "SoundScape Cinema Series Set to Launch 17th Season",
-        "summary": "This year’s lineup features “Toy Story 5” and “Supergirl”",
-        "publishedAt": "2026-09-02T12:51:00",
-        "url": "https://www.miamibeachfl.gov/soundscape-cinema-series-set-to-launch-17th-season/",
         "label": "Official city news"
       }
     ]

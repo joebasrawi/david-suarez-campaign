@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T23:23:01.591Z",
+  "generatedAt": "2026-09-09T20:59:44.938Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "408534",
+      "title": "Miami Beach Commissioner Alex J. Fernandez Appointed to Serve on Florida League of Cities Legislative Policy Committee",
+      "summary": "Miami Beach official appointed to the Development, Code Compliance, and Redevelopment Committee",
+      "publishedAt": "2026-09-08T14:04:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-commissioner-alex-j-fernandez-appointed-to-serve-on-florida-league-of-cities-legislative-policy-committee/",
+      "label": "Official city news"
+    },
     {
       "id": "408350",
       "title": "Miami Beach Gains Approval from State on Beachfront Management Plan",
@@ -77,14 +85,6 @@
       "summary": "Debbie Tackett is one of the foremost authorities on the city’s architectural heritage",
       "publishedAt": "2026-07-24T08:03:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-names-new-planning-director/",
-      "label": "Official city news"
-    },
-    {
-      "id": "404455",
-      "title": "Groundbreaking Set for Marine Patrol Facility in Miami Beach",
-      "summary": "The $13 million facility will be located at Maurice Gibb Memorial Park",
-      "publishedAt": "2026-07-21T10:31:00",
-      "url": "https://www.miamibeachfl.gov/groundbreaking-set-for-marine-patrol-facility-in-miami-beach/",
       "label": "Official city news"
     }
   ]
