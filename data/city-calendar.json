@@ -1,100 +1,12 @@
 {
-  "generatedAt": "2026-09-08T16:42:50.976Z",
+  "generatedAt": "2026-09-09T04:50:14.363Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-08&end_date=2026-11-07&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-09&end_date=2026-11-08&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10104212",
-      "title": "Planning Board*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86143426327 Access ID: 86143426327# 1.929.205.6099 or 877.853.5257 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-08T09:00:00",
-      "endLocal": "2026-09-08T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-09-08/",
-      "note": ""
-    },
-    {
-      "id": "396749",
-      "title": "Miami Beach Convention Center Advisory Board",
-      "description": "https://us06web.zoom.us/j/82374361950?pwd=VTCUuEl5alieDItjLu5RvuhtUFW7mj.1 Meeting ID: 82374361950# Passcode: 086744",
-      "startLocal": "2026-09-08T09:30:00",
-      "endLocal": "2026-09-08T11:30:00",
-      "location": "Virtual Zoom Meeting",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/miami-beach-convention-center-advisory-board/",
-      "note": ""
-    },
-    {
-      "id": "396751",
-      "title": "Miami Beach Employees’ Retirement Plan Board",
-      "description": "Miami Beach Chamber of Commerce 1920 Meridian Avenue, 2 nd Floor",
-      "startLocal": "2026-09-08T10:00:00",
-      "endLocal": "2026-09-08T12:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/miami-beach-employees-retirement-plan-board/",
-      "note": ""
-    },
-    {
-      "id": "396753",
-      "title": "LGBTQIA+ Advisory Committee",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-09-08T13:30:00",
-      "endLocal": "2026-09-08T15:30:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/lgbtqia-advisory-committee-3/",
-      "note": ""
-    },
-    {
-      "id": "396755",
-      "title": "Committee on the Homeless",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/86841921916?pwd=3dL4W4Eg6kDfb3Rsv8075L3FgPvZbX.1 Meeting ID: 86841921916# Passcode: 284523 1.305.224.1968 or 868.4192.1916 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-09-08T15:30:00",
-      "endLocal": "2026-09-08T17:30:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/committee-on-the-homeless/",
-      "note": ""
-    },
-    {
-      "id": "396757",
-      "title": "Budget Advisory and Government Spending Efficiency Committee",
-      "description": "Hybrid Meeting https://bit.ly/3SSugBf Meeting ID: 279565273850437 Passcode: SH2JA9ow 1.786.636.1480 or 740.663.614 Access ID: 740663614# Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-09-08T16:30:00",
-      "endLocal": "2026-09-08T18:30:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/budget-advisory-and-government-spending-efficiency-committee/",
-      "note": ""
-    },
-    {
-      "id": "396759",
-      "title": "North Beach CRA Advisory Committee",
-      "description": "Normandy Shores Golf Club 2401 Biarritz Drive",
-      "startLocal": "2026-09-08T16:30:00",
-      "endLocal": "2026-09-08T18:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/north-beach-cra-advisory-committee/",
-      "note": ""
-    },
-    {
-      "id": "396893",
-      "title": "Mondays with Monica",
-      "description": "https://miamibeachfl-gov.zoom.us/j/83377402686 Meeting ID: 83377402686# 1.305.224.1968 or 833.7740.2686",
-      "startLocal": "2026-09-08T17:30:00",
-      "endLocal": "2026-09-08T18:30:00",
-      "location": "Virtual Zoom Meeting",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/mondays-with-monica-2/",
-      "note": ""
-    },
     {
       "id": "396762",
       "title": "Red Light Camera Hearings",
