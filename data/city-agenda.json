@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T21:14:29.966Z",
+  "generatedAt": "2026-09-09T16:44:06.209Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 210,
+    "itemCount": 212,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -23,7 +23,7 @@
     {
       "id": "consent-agenda-committee-assignments",
       "label": "Consent Agenda — Committee Assignments",
-      "count": 6
+      "count": 7
     },
     {
       "id": "consent-agenda-committee-reports",
@@ -48,7 +48,7 @@
     {
       "id": "regular-agenda-discussables",
       "label": "Regular Agenda — Discussables",
-      "count": 32
+      "count": 33
     },
     {
       "id": "city-attorney-reports-executive-sessions-r10",
@@ -358,6 +358,29 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4F"
+    },
+    {
+      "id": "2026-09-10-consent-agenda-committee-assignments-c4g",
+      "itemNumber": "C4G",
+      "type": "Committee assignment",
+      "section": "Consent Agenda — Committee Assignments",
+      "title": "Cd-3 Bonus Floor Area Regulations Referral",
+      "summary": "Cd-3 Bonus Floor Area Regulations Referral. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "REFERRAL TO THE PLANNING BOARD PURSUANT TO SECTION 7.1.10.5 OF THE RESILIENCY CODE REGARDING CHANGES TO THE CITY'S REGULATIONS AND COMPREHENSIVE PLAN PERMITTING UP TO 5,000 SQUARE FEET OF BONUS FLOOR AREA FOR CD-3 ZONED PROPERTIES BETWEEN LINCOLN ROAD AND 17TH STREET AND MERIDIAN AVENUE AND MERIDIAN COURT.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/C4G"
     },
     {
       "id": "2026-09-10-consent-agenda-committee-reports-c6a",
@@ -770,12 +793,14 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Joseph Magazine"
+        "Commissioner Joseph Magazine",
+        "Commissioner David Suarez"
       ],
       "officialSponsors": [
-        "joseph-magazine"
+        "joseph-magazine",
+        "david-suarez"
       ],
-      "davidInvolved": false,
+      "davidInvolved": true,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7AM"
     },
@@ -1080,7 +1105,7 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Pedestrianize Ocean Drive Holidays",
       "summary": "Pedestrianize Ocean Drive Holidays. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, URGING MIAMI-DADE COUNTY TO AUTHORIZE THE ANNUAL CLOSURE OF OCEAN DRIVE, BETWEEN 5TH STREET AND 15TH STREET, TO VEHICULAR TRAFFIC FROM THANKSGIVING DAY UNTIL VALENTINE’S DAY EACH YEAR IN ORDER TO PEDESTRIANIZE OCEAN DRIVE FOR THE HOLIDAYS; DIRECTING THE CITY MANAGER AND CITY CLERK TO TRANSMIT THIS RESOLUTION TO THE MIAMI-DADE COUNTY BOARD OF COUNTY COMMISSIONERS AND THE MIAMI-DADE COUNTY DEPARTMENT OF TRANSPORTATION AND PUBLIC WORKS; AND PROVIDING THAT THE ADMINISTRATION SHALL TAKE ALL ACTION NECESSARY TO EFFECTUATE REVIEW AND APPROVAL BY MIAMI-DADE COUNTY AND ADVISE THE MAYOR AND CITY COMMISSION VIA LETTER TO COMMISSION (“LTC”) REGARDING COUNTY ACTION AND NEXT STEPS.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, URGING MIAMI-DADE COUNTY TO AUTHORIZE THE ANNUAL CLOSURE OF OCEAN DRIVE, BETWEEN 5TH STREET AND 15TH STREET, TO VEHICULAR TRAFFIC FROM THANKSGIVING DAY UNTIL VALENTINE’S DAY EACH YEAR IN ORDER TO PEDESTRIANIZE OCEAN DRIVE FOR THE HOLIDAYS; DIRECTING THE CITY MANAGER AND CITY CLERK TO TRANSMIT THIS RESOLUTION TO THE MIAMI-DADE COUNTY BOARD OF COUNTY COMMISSIONERS AND THE MIAMI-DADE COUNTY DEPARTMENT OF TRANSPORTATION AND PUBLIC WORKS; AND PROVIDING THAT THE ADMINISTRATION SHALL TAKE ALL ACTION NECESSARY TO EFFECTUATE REVIEW AND APPROVAL BY MIAMI-DADE COUNTY AND ADVISE THE MAYOR AND CITY COMMISSION VIA LETTER TO COMMISSION (“LTC”) REGARDING COUNTY ACTION AND NEXT STEPS .",
       "status": "On upcoming agenda",
       "meetingDate": "2026-09-10",
       "hearingTime": "",
@@ -1311,12 +1336,14 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Vice-Mayor Alex Fernandez"
+        "Vice-Mayor Alex Fernandez",
+        "Commissioner David Suarez"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "david-suarez"
       ],
-      "davidInvolved": false,
+      "davidInvolved": true,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BF"
     },
@@ -1669,9 +1696,12 @@
         "Housing and Community Services"
       ],
       "sponsors": [
-        "Housing and Community Services"
+        "Housing and Community Services",
+        "Vice-Mayor Alex Fernandez"
       ],
-      "officialSponsors": [],
+      "officialSponsors": [
+        "alex-fernandez"
+      ],
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7O"
@@ -3561,16 +3591,18 @@
       "section": "Regular Agenda — Resolutions",
       "title": "Update Cybersecurity Procurement Framework",
       "summary": "Update Cybersecurity Procurement Framework. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, UPDATING THE CITY’S EXISTING CYBERSECURITY PROCUREMENT FRAMEWORK ESTABLISHED PURSUANT TO RESOLUTION NO. 2023-32733; CONTINUING THE WAIVER OF COMPETITIVE BIDDING REQUIREMENTS AS TO FUTURE CYBERSECURITY-RELATED EQUIPMENT, SOFTWARE, AND/OR SERVICES SPECIFICALLY INVOLVING THE CITY’S CYBERSECURITY OR CRITICAL CYBERSECURITY INFRASTRUCTURE, AND FINDING SUCH WAIVER TO BE IN THE CITY’S BEST INTEREST; ESTABLISHING UPDATED PROCEDURES TO PROTECT THE CONFIDENTIAL AND EXEMPT NATURE OF THE CITY’S CYBERSECURITY SYSTEMS, ASSETS, AND INFORMATION WHILE PRESERVING COMPETITION, PRICE REASONABLENESS, ACCOUNTABILITY, AND TRANSPARENCY; REQUIRING THE CITY ADMINISTRATION TO ENDEAVOR TO OBTAIN AT LEAST THREE (3) QUOTATIONS FROM QUALIFIED SUPPLIERS OR VENDORS PRIOR TO ENTERING INTO ANY CONTRACT PURSUANT TO THIS RESOLUTION; LIMITING PURCHASES TO FUNDS DULY APPROPRIATED AND AVAILABLE THROUGH THE CITY’S BUDGET PROCESS; AND FURTHER CONTINUING THE REQUIREMENT TO REPORT PURCHASES MADE PURSUANT TO THIS RESOLUTION TO THE CITY COMMISSION ON A QUARTERLY BASIS, VIA LETTER TO COMMISSION, WITH SUFFICIENT INFORMATION TO PROVIDE TRANSPARENCY AND ACCOUNTABILITY WITHOUT DISCLOSING INFORMATION THAT IS CONFIDENTIAL OR EXEMPT UNDER FLORIDA LAW; AND SUPERSEDING AND REPLACING RESOLUTION NO. 2023-32733 IN ITS ENTIRETY.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, UPDATING THE CITY'S EXISTING CYBERSECURITY PROCUREMENT FRAMEWORK ESTABLISHED PURSUANT TO RESOLUTION NO. 2023-32733; CONTINUING THE WAIVER, BY 5/7TH VOTE, OF THE COMPETITIVE BIDDING REQUIREMENTS AS TO FUTURE CYBERSECURITY-RELATED EQUIPMENT, SOFTWARE, AND/OR SERVICES SPECIFICALLY INVOLVING THE CITY'S CYBERSECURITY OR CRITICAL CYBERSECURITY INFRASTRUCTURE, FINDING SUCH WAIVER TO BE IN THE CITY'S BEST INTEREST; ESTABLISHING UPDATED PROCEDURES TO PROTECT THE CONFIDENTIAL AND EXEMPT NATURE OF THE CITY'S CYBERSECURITY SYSTEMS, ASSETS, AND INFORMATION WHILE PRESERVING COMPETITION, PRICE REASONABLENESS, ACCOUNTABILITY, AND TRANSPARENCY; REQUIRING THE CITY ADMINISTRATION TO ENDEAVOR TO OBTAIN AT LEAST THREE (3) QUOTATIONS FROM QUALIFIED SUPPLIERS OR VENDORS PRIOR TO ENTERING INTO ANY CONTRACT, TASK ORDER OR PURCHASE ORDER PURSUANT TO THIS RESOLUTION; LIMITING PURCHASES PURSUANT TO THIS RESOLUTION TO FUNDS DULY APPROPRIATED AND AVAILABLE THROUGH THE CITY'S BUDGET PROCESS; CONTINUING THE REQUIREMENT TO REPORT PURCHASES MADE PURSUANT TO THIS RESOLUTION TO THE CITY COMMISSION, ON A MONTHLY BASIS, VIA LETTER TO COMMISSION, WITH SUFFICIENT INFORMATION TO PROVIDE TRANSPARENCY AND ACCOUNTABILITY WITHOUT DISCLOSING INFORMATION THAT IS CONFIDENTIAL AND EXEMPT UNDER FLORIDA LAW; AND FURTHER, PROVIDING THAT THIS RESOLUTION SUPERSEDES AND REPLACES RESOLUTION NO. 2023-32733 IN ITS ENTIRETY.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-09-10",
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "Information Technology"
+        "Information Technology",
+        "Resolution uploaded on 9/9/2026"
       ],
       "sponsors": [
-        "Information Technology"
+        "Information Technology",
+        "Resolution uploaded on 9/9/2026"
       ],
       "officialSponsors": [],
       "davidInvolved": false,
@@ -3680,15 +3712,17 @@
       "title": "Untitled Art Fair License",
       "summary": "Untitled Art Fair License. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING THE MUTLI-YEAR LICENSE AGREEMENT BETWEEN THE CITY OF MIAMI BEACH AND INFORMA MARKETS ART, LLC FOR USE OF 191,650 SQUARE FEET OF THE LUMMUS PARK BEACHFRONT BETWEEN 10 AND 12½ STREETS AND 12,000 SQUARE FEET OF THE LUMMUS PARK SPOIL FOR THE UNTITLED ART FAIR DURING ART WEEK MIAMI BEACH, FOR AN INITIAL TERM OF FIVE (5) CONSECUTIVE ANNUAL SHOWS FROM 2026 TO 2030, WITH A FIVE (5)-YEAR RENEWAL OPTION.",
-      "status": "On upcoming agenda",
+      "status": "Deferred to October 14, 2026",
       "meetingDate": "2026-09-10",
       "hearingTime": "",
       "neighborhood": "South Beach",
       "departments": [
-        "Tourism and Culture"
+        "Tourism and Culture",
+        "Deferred to October 14, 2026"
       ],
       "sponsors": [
         "Tourism and Culture",
+        "Deferred to October 14, 2026",
         "Commissioner Laura Dominguez"
       ],
       "officialSponsors": [
@@ -4011,16 +4045,18 @@
       "section": "Regular Agenda — Resolutions",
       "title": "Approve 1940 Park Ave Ground Lease",
       "summary": "Approve 1940 Park Ave Ground Lease. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATIONS OF THE PLANNING BOARD AND THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE; APPROVING, FOLLOWING FIRST READING, AS AUTHORIZED BY SECTION 82-37 OF THE CITY CODE, SECTION 1.03(B)(4) OF THE CITY CHARTER IN EFFECT AT THE TIME OF THE AWARD PURSUANT TO REQUEST FOR PROPOSALS (RFP) 2023-115-KB, A GROUND LEASE AGREEMENT (“LEASE”) BETWEEN THE CITY, AS LANDLORD, AND 1940 BARCLAY PARTNERS, LLC, A DELAWARE LIMITED LIABILITY COMPANY, AS TENANT, FOR THE CITY-OWNED PROPERTY LOCATED AT 1940 PARK AVENUE, FOR THE DESIGN, DEVELOPMENT, CONSTRUCTION, FINANCING, AND OPERATION OF THE BARCLAY MIXED-USE MULTIFAMILY RESIDENTIAL HOUSING PROJECT (“PROJECT”); PROVIDING THAT THE PROJECT SHALL BE CONSISTENT WITH THE TERM SHEET APPROVED PURSUANT TO CITY COMMISSION RESOLUTION NO. 2025-33910; PROVIDING FOR RENT-RESTRICTED RESIDENTIAL UNITS, SENIOR HOUSING UNITS, GROUND FLOOR RETAIL SPACE, AND COMPLIANCE WITH HISTORIC PRESERVATION REQUIREMENTS; AND FURTHER PROVIDING FOR A MAXIMUM LEASE TERM OF NINETY-NINE (99) YEARS, COMPRISED OF AN INITIAL FIFTY-ONE (51) YEAR TERM WITH TWO (2) RENEWAL PERIODS OF TWENTY-FOUR (24) YEARS EACH, AT THE TENANT’S OPTION; PROVIDING FOR A ONE-TIME LEASE PAYMENT OF TWO MILLION DOLLARS ($2,000,000) DUE UPON POSSESSION; AND SETTING THE SECOND AND FINAL READING OF THE LEASE FOR A TIME CERTAIN.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE, AND APPROVING, FOLLOWING FIRST READING, AS AUTHORIZED BY SECTION 82-37 OF THE CITY CODE, SECTION 1.03(B)(4) OF THE CITY CHARTER (IN EFFECT AT THE TIME OF THE RFP AWARD), AND REQUEST FOR PROPOSALS (RFP) 2023-115-KB, A LONG-TERM GROUND LEASE AGREEMENT (“LEASE”) BETWEEN THE CITY, AS LANDLORD, AND 1940 BARCLAY PARTNERS, LLC, A DELAWARE LIMITED LIABILITY COMPANY, AS TENANT, FOR THE CITY-OWNED PROPERTY LOCATED AT 1940 PARK AVENUE, FOR THE DESIGN, DEVELOPMENT, CONSTRUCTION, FINANCING, AND OPERATION OF THE BARCLAY MIXED-USE MULTIFAMILY RESIDENTIAL HOUSING PROJECT, WHICH LEASE IS CONSISTENT WITH THE TERM SHEET APPROVED PURSUANT TO CITY COMMISSION RESOLUTION NO. 2025-33910AND PROVIDES FOR RENT-RESTRICTED RESIDENTIAL UNITS, SENIOR HOUSING UNITS, GROUND FLOOR RETAIL SPACE, AND COMPLIANCE WITH HISTORIC PRESERVATION REQUIREMENTS; AND FURTHER PROVIDING FOR A MAXIMUM LEASE TERM OF NINETY-NINE (99) YEARS, COMPRISED OF AN INITIAL FIFTY-ONE (51) YEAR TERM WITH TWO (2) RENEWAL PERIODS OF TWENTY-FOUR (24) YEARS EACH, AT THE TENANT’S OPTION; PROVIDING FOR A ONE-TIME LEASE PAYMENT OF TWO MILLION DOLLARS ($2,000,000) DUE UPON POSSESSION; AND SETTING THE SECOND AND FINAL READING OF THE LEASE FOR A TIME CERTAIN.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-09-10",
       "hearingTime": "",
       "neighborhood": "South Beach",
       "departments": [
-        "Economic Development"
+        "Economic Development",
+        "Resolution uploaded on 9/9/2026"
       ],
       "sponsors": [
-        "Economic Development"
+        "Economic Development",
+        "Resolution uploaded on 9/9/2026"
       ],
       "officialSponsors": [],
       "davidInvolved": false,
@@ -4542,6 +4578,38 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AF"
+    },
+    {
+      "id": "2026-09-10-regular-agenda-discussables-r9ag",
+      "itemNumber": "R9AG",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Urge County Close Ocean Drive Holidays",
+      "summary": "Urge County Close Ocean Drive Holidays. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS AND TAKE ACTION - ANNUAL CLOSURE OF OCEAN DRIVE, BETWEEN 5TH STREET AND 15TH STREET, TO VEHICULAR TRAFFIC FROM THANKSGIVING DAY UNTIL VALENTINE’S DAY EACH YEAR IN ORDER TO PEDESTRIANIZE OCEAN DRIVE FOR THE HOLIDAYS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney",
+        "Item moved from C7 AY"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Item moved from C7 AY",
+        "Commissioner Laura Dominguez",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "laura-dominguez",
+        "monica-matteo-salinas",
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AG"
     },
     {
       "id": "2026-09-10-regular-agenda-discussables-r9b",
