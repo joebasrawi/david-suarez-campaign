@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T16:30:26.087Z",
+  "generatedAt": "2026-09-10T20:55:56.270Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -349,6 +349,50 @@
       "note": ""
     },
     {
+      "id": "397240",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-09-22T09:00:00",
+      "endLocal": "2026-09-22T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-4/",
+      "note": ""
+    },
+    {
+      "id": "397242",
+      "title": "Committee for Quality Education",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-09-22T09:00:00",
+      "endLocal": "2026-09-22T11:00:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/committee-for-quality-education/",
+      "note": ""
+    },
+    {
+      "id": "397244",
+      "title": "Production Industry Council",
+      "description": "Hybrid Meeting https://bit.ly/3YFAJil Meeting ID: 29544556590650# Passcode: L2zE9xr2 1.786.636.1480 Access ID: 499712655# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
+      "startLocal": "2026-09-22T11:00:00",
+      "endLocal": "2026-09-22T13:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/production-industry-council/",
+      "note": ""
+    },
+    {
+      "id": "397246",
+      "title": "Youth Commission Meeting",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-09-22T16:00:00",
+      "endLocal": "2026-09-22T18:00:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/youth-commission-meeting-2/",
+      "note": ""
+    },
+    {
       "id": "10104364",
       "title": "Affordable Housing Advisory Committee",
       "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
@@ -371,6 +415,17 @@
       "note": ""
     },
     {
+      "id": "397256",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Attorney’s Conference Room",
+      "startLocal": "2026-09-23T15:00:00",
+      "endLocal": "2026-09-23T17:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-12/",
+      "note": ""
+    },
+    {
       "id": "393929",
       "title": "City Commission* – Second Budget Meeting",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -385,11 +440,44 @@
       "id": "396671",
       "title": "Land Use and Sustainability Committee**",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-24T14:00:00",
+      "startLocal": "2026-09-24T13:00:00",
       "endLocal": "2026-09-24T17:00:00",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee-2/",
+      "note": ""
+    },
+    {
+      "id": "397250",
+      "title": "Parks & Recreational Facilities Advisory Board",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-09-24T17:30:00",
+      "endLocal": "2026-09-24T19:30:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/parks-recreational-facilities-advisory-board/",
+      "note": ""
+    },
+    {
+      "id": "397252",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-09-25T09:00:00",
+      "endLocal": "2026-09-25T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-5/",
+      "note": ""
+    },
+    {
+      "id": "397254",
+      "title": "Miami Beach Visitor and Convention Authority Board",
+      "description": "Miami Beach Convention Center 1901 Convention Center Drive Board Room",
+      "startLocal": "2026-09-25T11:30:00",
+      "endLocal": "2026-09-25T13:30:00",
+      "location": "Miami Beach Convention Center, 1901 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-visitor-and-convention-authority-board/",
       "note": ""
     },
     {
