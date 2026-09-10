@@ -1,45 +1,12 @@
 {
-  "generatedAt": "2026-09-09T20:59:32.999Z",
+  "generatedAt": "2026-09-10T04:51:42.766Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-09&end_date=2026-11-08&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-10&end_date=2026-11-09&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "396762",
-      "title": "Red Light Camera Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-09T14:00:00",
-      "endLocal": "2026-09-09T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/red-light-camera-hearings-2/",
-      "note": ""
-    },
-    {
-      "id": "396764",
-      "title": "Human Rights Committee",
-      "description": "Miami Beach City Hall",
-      "startLocal": "2026-09-09T16:30:00",
-      "endLocal": "2026-09-09T18:30:00",
-      "location": "Parking Department Conference Room 2nd Floor; 1755 Meridian Avenue Miami Beach, FL 33139",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/human-rights-committee/",
-      "note": ""
-    },
-    {
-      "id": "394806",
-      "title": "Virtual Town Hall Meeting with Mayor Steven Meiner",
-      "description": "Join Mayor Steven Meiner for a virtual town hall meeting ahead of the September 10 City Commission Meeting. Wednesday, September 9 5:30 PM Zoom Link: https://miamibeachfl-gov.zoom.us/j/89869137516",
-      "startLocal": "2026-09-09T17:30:00",
-      "endLocal": "2026-09-09T19:00:00",
-      "location": "Zoom Meeting",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/virtual-town-hall-meeting-with-mayor-steven-meiner/",
-      "note": ""
-    },
     {
       "id": "10104081",
       "title": "City Commission*",
@@ -599,6 +566,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-11-06/",
+      "note": ""
+    },
+    {
+      "id": "10104339",
+      "title": "Public Safety and Neighborhood Quality of Life Committee**",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/87833352956 Webinar ID: 87833352956# 1.312.626.6799 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-09T09:00:00",
+      "endLocal": "2026-11-09T13:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/public-safety-and-neighborhood-quality-of-life-committee/2026-11-09/",
       "note": ""
     }
   ]
