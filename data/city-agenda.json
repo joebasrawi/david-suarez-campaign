@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T20:59:34.447Z",
+  "generatedAt": "2026-09-10T11:28:46.331Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 213,
+    "itemCount": 214,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -33,7 +33,7 @@
     {
       "id": "consent-agenda-resolutions",
       "label": "Consent Agenda — Resolutions",
-      "count": 61
+      "count": 62
     },
     {
       "id": "regular-agenda-ordinances",
@@ -1426,6 +1426,36 @@
       "davidInvolved": false,
       "isNew": true,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BI"
+    },
+    {
+      "id": "2026-09-10-consent-agenda-resolutions-c7bj",
+      "itemNumber": "C7BJ",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Coordinate Beachfront Activation with Art Basel",
+      "summary": "Coordinate Beachfront Activation with Art Basel. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION (1) TO COLLABORATE WITH THE HUGUL EVENT PRODUCERS AND THE NATIONAL HOTEL TO PREPARE AND TRANSMIT A FORMAL REQUEST TO ART BASEL (ART BASEL MIAMI BEACH) SEEKING AUTHORIZATION FOR THE PROPOSED BEACHFRONT ACTIVATION; (2) TO IDENTIFY AND TAKE ANY NECESSARY ACTIONS, INCLUDING COORDINATION WITH CITY DEPARTMENTS, PERMITTING, AND AGREEMENTS, TO FACILITATE THE ACTIVATION IF AUTHORIZED; AND (3) TO REPORT ITS PROGRESS VIA LETTER TO COMMISSION (LTC) AS DEVELOPMENTS WARRANT, BUT NO LESS THAN EVERY THIRTY (30) DAYS BEGINNING OCTOBER 1, 2026.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Alex Fernandez",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas",
+        "alex-fernandez",
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/C7BJ"
     },
     {
       "id": "2026-09-10-consent-agenda-resolutions-c7c",
@@ -3718,16 +3748,18 @@
       "section": "Regular Agenda — Resolutions",
       "title": "Induct George Neary Hall Fame",
       "summary": "Induct George Neary Hall Fame. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE 2026 MIAMI BEACH HALL OF FAME SELECTION COMMITTEE, AND RATIFYING THE INDUCTION OF GEORGE NEARY FOR SELECTION, AS A MEMBER OF THE MIAMI BEACH HALL OF FAME.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE 2026 MIAMI BEACH HALL OF FAME SELECTION COMMITTEE TO RATIFY THE INDUCTION OF GEORGE NEARY INTO THE MIAMI BEACH HALL OF FAME.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-09-10",
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "Tourism and Culture"
+        "Tourism and Culture",
+        "Resolution uploaded on 9/9/2026"
       ],
       "sponsors": [
-        "Tourism and Culture"
+        "Tourism and Culture",
+        "Resolution uploaded on 9/9/2026"
       ],
       "officialSponsors": [],
       "davidInvolved": false,
