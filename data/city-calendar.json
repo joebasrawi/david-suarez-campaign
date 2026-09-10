@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T04:51:42.766Z",
+  "generatedAt": "2026-09-10T16:30:26.087Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -104,6 +104,17 @@
       "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/health-advisory-committee/",
+      "note": ""
+    },
+    {
+      "id": "397225",
+      "title": "Value Adjustment Board & Property Fraud Alert Outreach Meetings",
+      "description": "VALUE ADJUSTMENT BOARD Learn how to challenge your property assessment or exemption denials. Understand your rights Learn the step-by-step process Get answers to your questions PROPERTY FRAUD ALERT Protect your home and property from fraud. Learn how property fraud happens Discover how to safeguard your property Know what to do if you suspect fraud JOIN US VIRTUALLY Monday, September 14th, 2026 6:30 PM -7:30 PM Join from App – Zoom miamibeachfl-gov.zoom.us/j/86079674593",
+      "startLocal": "2026-09-14T18:30:00",
+      "endLocal": "2026-09-14T19:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/value-adjustment-board-property-fraud-alert-outreach-meetings/",
       "note": ""
     },
     {
@@ -401,6 +412,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-10-06/",
+      "note": ""
+    },
+    {
+      "id": "397236",
+      "title": "We Stand with Israel",
+      "description": "You are cordially invited to join Mayor Steven Meiner and the City Commission to honor the victims of the October 7, 2023 attack. Wednesday, October 7 9 AM Miami Beach Fire Station 2 2300 Pine Tree Drive",
+      "startLocal": "2026-10-07T09:00:00",
+      "endLocal": "2026-10-07T09:00:00",
+      "location": "Miami Beach Fire Station 2, 2300 Pine Tree Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/we-stand-with-israel/",
       "note": ""
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T11:28:46.331Z",
+  "generatedAt": "2026-09-10T16:30:27.995Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-09-10",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 214,
+    "itemCount": 215,
     "url": "https://miamibeachagenda.com/agenda/september/10/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6189"
   },
@@ -48,7 +48,7 @@
     {
       "id": "regular-agenda-discussables",
       "label": "Regular Agenda — Discussables",
-      "count": 33
+      "count": 34
     },
     {
       "id": "city-attorney-reports-executive-sessions-r10",
@@ -1434,7 +1434,7 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Coordinate Beachfront Activation with Art Basel",
       "summary": "Coordinate Beachfront Activation with Art Basel. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION (1) TO COLLABORATE WITH THE HUGUL EVENT PRODUCERS AND THE NATIONAL HOTEL TO PREPARE AND TRANSMIT A FORMAL REQUEST TO ART BASEL (ART BASEL MIAMI BEACH) SEEKING AUTHORIZATION FOR THE PROPOSED BEACHFRONT ACTIVATION; (2) TO IDENTIFY AND TAKE ANY NECESSARY ACTIONS, INCLUDING COORDINATION WITH CITY DEPARTMENTS, PERMITTING, AND AGREEMENTS, TO FACILITATE THE ACTIVATION IF AUTHORIZED; AND (3) TO REPORT ITS PROGRESS VIA LETTER TO COMMISSION (LTC) AS DEVELOPMENTS WARRANT, BUT NO LESS THAN EVERY THIRTY (30) DAYS BEGINNING OCTOBER 1, 2026.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION (1) TO COLLABORATE WITH THE HUGEL EVENT PRODUCERS AND THE NATIONAL HOTEL TO PREPARE AND TRANSMIT A FORMAL REQUEST TO ART BASEL (ART BASEL MIAMI BEACH) SEEKING AUTHORIZATION FOR THE PROPOSED BEACHFRONT ACTIVATION; (2) TO IDENTIFY AND TAKE ANY NECESSARY ACTIONS, INCLUDING COORDINATION WITH CITY DEPARTMENTS, PERMITTING, AND AGREEMENTS, TO FACILITATE THE ACTIVATION IF AUTHORIZED; AND (3) TO REPORT ITS PROGRESS VIA LETTER TO COMMISSION (LTC) AS DEVELOPMENTS WARRANT, BUT NO LESS THAN EVERY THIRTY (30) DAYS BEGINNING OCTOBER 1, 2026.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-09-10",
       "hearingTime": "",
@@ -4662,16 +4662,41 @@
         "Item moved from C7 AY",
         "Commissioner Laura Dominguez",
         "Commissioner Monica Matteo-Salinas",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Joseph Magazine"
       ],
       "officialSponsors": [
         "laura-dominguez",
         "monica-matteo-salinas",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "joseph-magazine"
       ],
       "davidInvolved": false,
       "isNew": true,
       "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AG"
+    },
+    {
+      "id": "2026-09-10-regular-agenda-discussables-r9ah",
+      "itemNumber": "R9AH",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "Host Community Meeting on Local Applications Im...",
+      "summary": "Host Community Meeting on Local Applications Im. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION: DUE TO SCALE AND NUMBER OF RECENT LIVE LOCAL APPLICATIONS, HOST A COMMUNITY MEETING REGARDING THE EFFECTS, CONSEQUENCES AND IMPACT OF SAID APPLICATIONS IN MIAMI BEACH.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-09-10",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Joseph Magazine"
+      ],
+      "officialSponsors": [
+        "joseph-magazine"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/09/10/2026/R9AH"
     },
     {
       "id": "2026-09-10-regular-agenda-discussables-r9b",
