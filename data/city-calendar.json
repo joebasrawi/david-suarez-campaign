@@ -1,45 +1,12 @@
 {
-  "generatedAt": "2026-09-10T20:55:56.270Z",
+  "generatedAt": "2026-09-11T04:48:38.279Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-10&end_date=2026-11-09&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-11&end_date=2026-11-10&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10104081",
-      "title": "City Commission*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-10",
-      "endLocal": "2026-09-10",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/city-commission/2026-09-10/",
-      "note": "Time discrepancy: the City calendar lists 9:00 a.m.; the annual commission schedule lists 8:30 a.m. Confirm the start time in the official meeting notice."
-    },
-    {
-      "id": "397017",
-      "title": "WAVE Special Executive Board",
-      "description": "Zoom Meeting https://us06web.zoom.us/j/83542318798 Meeting ID: 83542318798#",
-      "startLocal": "2026-09-10T14:00:00",
-      "endLocal": "2026-09-10T15:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/wave-special-executive-board/",
-      "note": ""
-    },
-    {
-      "id": "393927",
-      "title": "City Commission* Budget – Related",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-10T17:01:00",
-      "endLocal": "2026-09-10T19:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/city-commission-first-budget-meeting/",
-      "note": ""
-    },
     {
       "id": "396965",
       "title": "Design Review Board*",
@@ -687,6 +654,28 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/public-safety-and-neighborhood-quality-of-life-committee/2026-11-09/",
+      "note": ""
+    },
+    {
+      "id": "10104232",
+      "title": "Historic Preservation Board*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or .888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-10T09:00:00",
+      "endLocal": "2026-11-10T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/historic-preservation-board/2026-11-10/",
+      "note": ""
+    },
+    {
+      "id": "10104347",
+      "title": "Land Use and Sustainability Committee**",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-10T15:00:00",
+      "endLocal": "2026-11-10T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-11-10/",
       "note": ""
     }
   ]
