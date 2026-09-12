@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-09-11T16:34:23.854Z",
+  "generatedAt": "2026-09-12T04:42:23.948Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-11&end_date=2026-11-10&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-12&end_date=2026-11-11&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "396965",
-      "title": "Design Review Board*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-11T09:00:00",
-      "endLocal": "2026-09-11T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/design-review-board-3-2/",
-      "note": ""
-    },
     {
       "id": "397042",
       "title": "Special Magistrate Hearings",
