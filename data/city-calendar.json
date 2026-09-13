@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-12T04:42:23.948Z",
+  "generatedAt": "2026-09-13T04:55:50.298Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-12&end_date=2026-11-11&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-13&end_date=2026-11-12&per_page=50&page=3"
   },
   "items": [
     {
@@ -665,6 +665,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-11-10/",
+      "note": ""
+    },
+    {
+      "id": "392560",
+      "title": "West Avenue Phase II Neighborhood Improvement Project: Latest Updates & Community Discussion",
+      "description": "Join Commissioner Alex J. Fernandez for a virtual community meeting to explore progress, upcoming plans and a review of construction site updates for the West Avenue Phase II Neighborhood Improvement Project. Thursday, November 12 11 AM Zoom link: https://us06web.zoom.us/j/82324069554",
+      "startLocal": "2026-11-12T11:00:00",
+      "endLocal": "2026-11-12T11:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion/",
       "note": ""
     }
   ]
