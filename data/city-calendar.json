@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-13T04:55:50.298Z",
+  "generatedAt": "2026-09-14T05:04:44.361Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-13&end_date=2026-11-12&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-14&end_date=2026-11-13&per_page=50&page=3"
   },
   "items": [
     {
@@ -676,6 +676,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion/",
+      "note": ""
+    },
+    {
+      "id": "10104328",
+      "title": "Finance and Economic Resiliency Committee**",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86360595462 Webinar ID: 86360595462# 1.301.715.8592 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-13T09:30:00",
+      "endLocal": "2026-11-13T12:30:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/finance-and-economic-resiliency-committee-2/2026-11-13/",
       "note": ""
     }
   ]
