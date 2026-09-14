@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T20:59:44.938Z",
+  "generatedAt": "2026-09-14T21:53:29.714Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "408649",
+      "title": "Three Largest Trees of Their Kind in Florida Can be Found in Miami Beach",
+      "summary": "The coastal city also has a fourth tree that is the second largest of its kind in the state",
+      "publishedAt": "2026-09-14T10:22:00",
+      "url": "https://www.miamibeachfl.gov/three-largest-trees-of-their-kind-in-florida-can-be-found-in-miami-beach/",
+      "label": "Official city news"
+    },
     {
       "id": "408534",
       "title": "Miami Beach Commissioner Alex J. Fernandez Appointed to Serve on Florida League of Cities Legislative Policy Committee",
@@ -77,14 +85,6 @@
       "summary": "A national recognition of Miami Beach’s creative leadership and Sister Cities engagement",
       "publishedAt": "2026-07-28T15:46:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-honored-with-2026-sister-cities-international-innovation-in-arts-and-culture-award/",
-      "label": "Official city news"
-    },
-    {
-      "id": "404461",
-      "title": "Miami Beach Names New Planning Director",
-      "summary": "Debbie Tackett is one of the foremost authorities on the city’s architectural heritage",
-      "publishedAt": "2026-07-24T08:03:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-names-new-planning-director/",
       "label": "Official city news"
     }
   ]
