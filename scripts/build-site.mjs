@@ -91,7 +91,7 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  html=html.replace(/<p class="(?:chapter-label|editorial-deck)">[^<]*<\/p>/g,'');
  if(route==='media')html=html.replace('<div class="player-copy">','<div class="player-copy" id="player-copy">');
  const iconBase=route?'../':'';
- if(!html.includes('rel="icon"')) html=html.replace('</head>',`<link rel="icon" href="${iconBase}assets/david-suarez-logo.ico?v=2" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" sizes="192x192" href="${iconBase}assets/david-suarez-logo-192.png?v=2"><link rel="apple-touch-icon" href="${iconBase}apple-touch-icon.png?v=2"></head>`);
+ if(!html.includes('rel="icon"')) html=html.replace('</head>',`<link rel="icon" href="${iconBase}assets/david-suarez-dark.ico?v=3" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" sizes="192x192" href="${iconBase}assets/david-suarez-dark-192.png?v=3"><link rel="apple-touch-icon" href="${iconBase}apple-touch-icon.png?v=3"></head>`);
  html=addLoadingShells(html,route);
  if(!html.includes('id="loading-noscript"')) html=html.replace('</head>','<noscript id="loading-noscript"><style>.loading-skeleton{display:none!important}</style></noscript></head>');
  const base=route?'../':'';
