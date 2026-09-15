@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T05:00:48.821Z",
+  "generatedAt": "2026-09-15T21:27:21.026Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -52,17 +52,6 @@
       "note": ""
     },
     {
-      "id": "397056",
-      "title": "Lincoln Road Business Improvement District Nominating Committee",
-      "description": "Zoom Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNMmJYNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.8592",
-      "startLocal": "2026-09-15T11:30:00",
-      "endLocal": "2026-09-15T12:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/lincoln-road-business-improvement-district-nominating-committee/",
-      "note": ""
-    },
-    {
       "id": "396536",
       "title": "Affordable Housing Town Hall with Commissioner Monica Matteo‑Salinas",
       "description": "Join Commissioner Monica Matteo‑Salinas for an in‑person Affordable Housing Town Hall to explore the current state of affordable housing in Miami Beach. &nbsp; Tuesday, September 15 2 PM – 4 PM City Hall Commission Chambers | 3rd Floor 1700 Convention Center Drive Zoom Link: https://miamibeachfl-gov.zoom.us/j/81375716222 &nbsp;",
@@ -82,17 +71,6 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/disability-access-committee-3/",
-      "note": ""
-    },
-    {
-      "id": "397060",
-      "title": "Animal Welfare Committee",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Attorney’s Large Conference Room",
-      "startLocal": "2026-09-15T17:00:00",
-      "endLocal": "2026-09-15T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/animal-welfare-committee-2/",
       "note": ""
     },
     {
@@ -219,10 +197,10 @@
     {
       "id": "397203",
       "title": "Miami Beach Baila! by Commissioner Joe Magazine",
-      "description": "FREE, open air dancing for our residents of all ages! Date: Sunday, September 20 Time: 7:30 PM – 10 PM Location: SoundScape Park 400 17th Street Miami Beach JOIN OUR WHATSAPP GROUP For more info: 786.697.9182",
-      "startLocal": "2026-09-20T19:30:00",
-      "endLocal": "2026-09-20T22:00:00",
-      "location": "SoundScape Park, 400 17th Street, Miami Beach",
+      "description": "LOCATION & TIME UPDATE To make sure we can dance rain or shine, we have partnered with “Andres Carne de Res”, a beautiful indoor location for our first “Miami Beach ¡Baila!” In addition, we are hosting a FREE Beginner Bachata Lesson from 6:00 PM – 6:30 PM. MIAMI BEACH ¡BAILA! FREE, social dancing for our residents of all ages! Salsa | Bachata | Merengue | Kizomba | Zouk Date: Sunday, September 20 Time: 6 PM – 9:30 PM Location: Andres Carne de Res 455 Lincoln Rd Miami Beach JOIN OUR WHATSAPP GROUP For more info: 786.697.9182",
+      "startLocal": "2026-09-20T18:00:00",
+      "endLocal": "2026-09-20T21:30:00",
+      "location": "Andres Carne de Res, 455 Lincoln Rd, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/miami-beach-baila-by-commissioner-joe-magazine/",
       "note": ""
@@ -291,6 +269,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/finance-and-economic-resiliency-committee-2/2026-09-23/",
+      "note": ""
+    },
+    {
+      "id": "397056",
+      "title": "Lincoln Road Business Improvement District Nominating Committee",
+      "description": "Zoom Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNMmJYNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.8592",
+      "startLocal": "2026-09-23T10:30:00",
+      "endLocal": "2026-09-23T11:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/lincoln-road-business-improvement-district-nominating-committee/",
       "note": ""
     },
     {
