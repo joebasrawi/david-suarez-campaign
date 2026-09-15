@@ -90,6 +90,8 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  // Remove legacy decorative introductions from retained reader pages as well.
  html=html.replace(/<p class="(?:chapter-label|editorial-deck)">[^<]*<\/p>/g,'');
  if(route==='media')html=html.replace('<div class="player-copy">','<div class="player-copy" id="player-copy">');
+ const iconBase=route?'../':'';
+ if(!html.includes('rel="icon"')) html=html.replace('</head>',`<link rel="icon" href="${iconBase}favicon.ico?v=suarez-1" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="${iconBase}assets/favicon-192.png?v=suarez-1"><link rel="apple-touch-icon" href="${iconBase}assets/apple-touch-icon.png?v=suarez-1"></head>`);
  html=addLoadingShells(html,route);
  if(!html.includes('id="loading-noscript"')) html=html.replace('</head>','<noscript id="loading-noscript"><style>.loading-skeleton{display:none!important}</style></noscript></head>');
  const base=route?'../':'';
