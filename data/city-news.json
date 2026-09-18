@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T21:53:29.714Z",
+  "generatedAt": "2026-09-18T20:58:29.497Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "408872",
+      "title": "Limited Time to Purchase Commemorative Bricks for ‘Pathway of Inclusion’",
+      "summary": "Beach View Park Nears Completion in Miami Beach",
+      "publishedAt": "2026-09-18T13:52:00",
+      "url": "https://www.miamibeachfl.gov/limited-time-to-purchase-commemorative-bricks-for-pathway-of-inclusion/",
+      "label": "Official city news"
+    },
     {
       "id": "408649",
       "title": "Three Largest Trees of Their Kind in Florida Can be Found in Miami Beach",
@@ -77,14 +85,6 @@
       "summary": "Miami Beach Moves Closer to Completing Landmark Convention Headquarter Hotel with Grand Hyatt Miami Beach Topping-Off Milestone",
       "publishedAt": "2026-07-28T18:00:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-moves-closer-to-completing-landmark-convention-headquarter-hotel-with-grand-hyatt-miami-beach-topping-off-milestone/",
-      "label": "Official city news"
-    },
-    {
-      "id": "406207",
-      "title": "Miami Beach Honored With 2026 Sister Cities International Innovation in Arts and Culture Award",
-      "summary": "A national recognition of Miami Beach’s creative leadership and Sister Cities engagement",
-      "publishedAt": "2026-07-28T15:46:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-honored-with-2026-sister-cities-international-innovation-in-arts-and-culture-award/",
       "label": "Official city news"
     }
   ]

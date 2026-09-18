@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T16:31:00.357Z",
+  "generatedAt": "2026-09-18T20:58:19.610Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -38,6 +38,17 @@
       "location": "Andres Carne de Res, 455 Lincoln Rd, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/miami-beach-baila-by-commissioner-joe-magazine/",
+      "note": ""
+    },
+    {
+      "id": "397447",
+      "title": "Hispanic Affairs Committee",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 2 nd Floor Building Department Conference Room",
+      "startLocal": "2026-09-21T17:00:00",
+      "endLocal": "2026-09-21T19:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/hispanic-affairs-committee-3/",
       "note": ""
     },
     {
