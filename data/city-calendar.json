@@ -1,78 +1,12 @@
 {
-  "generatedAt": "2026-09-17T04:59:02.742Z",
+  "generatedAt": "2026-09-18T04:51:43.484Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-17&end_date=2026-11-16&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-18&end_date=2026-11-17&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "397064",
-      "title": "Fire and Police Pension Board",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/86331526604 Webinar ID: 86331526604# 1.305.224.1968 or 863.3152.6604 Fire and Police Pension Office 1111 Lincoln Road, Suite 801",
-      "startLocal": "2026-09-17T08:30:00",
-      "endLocal": "2026-09-17T10:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/fire-and-police-pension-board-2/",
-      "note": ""
-    },
-    {
-      "id": "10104337",
-      "title": "Public Safety and Neighborhood Quality of Life Committee**",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/87833352956 Webinar ID: 87833352956# 1.312.626.6799 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-17T09:00:00",
-      "endLocal": "2026-09-17T13:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/public-safety-and-neighborhood-quality-of-life-committee/2026-09-17/",
-      "note": ""
-    },
-    {
-      "id": "397066",
-      "title": "Special Events Community Reviews",
-      "description": "Microsoft Teams Meeting http://bit.ly/41SpTb0 Meeting ID: 2126269514152# Passcode: KV9kQ69Z 1.786.636.1480 Access ID: 775022511#",
-      "startLocal": "2026-09-17T14:00:00",
-      "endLocal": "2026-09-17T15:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-events-community-reviews-4/",
-      "note": ""
-    },
-    {
-      "id": "397068",
-      "title": "Neighborhood Resiliency Projects Advisory Committee",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/87629999648 Webinar ID: 87629999648# Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-09-17T16:00:00",
-      "endLocal": "2026-09-17T18:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/neighborhood-resiliency-projects-advisory-committee/",
-      "note": ""
-    },
-    {
-      "id": "397070",
-      "title": "Ad Hoc Nightlife Industry Taskforce Advisory Committee",
-      "description": "Miami Beach Police Department 1100 Washington Avenue, 1 st floor Community Room",
-      "startLocal": "2026-09-17T16:00:00",
-      "endLocal": "2026-09-17T18:00:00",
-      "location": "Miami Beach Police Department – Community Room, 1100 Washington Avenue, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/ad-hoc-nightlife-industry-taskforce-advisory-committee/",
-      "note": ""
-    },
-    {
-      "id": "397072",
-      "title": "Mayor’s 41st Street Committee",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/85702020601?pwd=KsC6BT4wQ0SmSBTCgRVc14WeJYWUeB.1 Webinar ID: 85702020601# Passcode: 442556 First Horizon Bank 400 Arthur Godfrey Rd Ste 102",
-      "startLocal": "2026-09-17T17:00:00",
-      "endLocal": "2026-09-17T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/mayors-41st-street-committee/",
-      "note": ""
-    },
     {
       "id": "10104221",
       "title": "Board of Adjustment*",
@@ -500,6 +434,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/finance-and-economic-resiliency-committee-2/2026-11-13/",
+      "note": ""
+    },
+    {
+      "id": "10104366",
+      "title": "Affordable Housing Advisory Committee",
+      "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
+      "startLocal": "2026-11-17T17:00:00",
+      "endLocal": "2026-11-17T19:00:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2/2026-11-17/",
       "note": ""
     }
   ]
