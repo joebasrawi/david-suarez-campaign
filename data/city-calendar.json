@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T04:51:43.484Z",
+  "generatedAt": "2026-09-18T16:31:00.357Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -82,17 +82,6 @@
       "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/youth-commission-meeting-2/",
-      "note": ""
-    },
-    {
-      "id": "10104364",
-      "title": "Affordable Housing Advisory Committee",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-09-22T17:00:00",
-      "endLocal": "2026-09-22T19:00:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2/2026-09-22/",
       "note": ""
     },
     {
@@ -184,6 +173,17 @@
       "note": ""
     },
     {
+      "id": "397430",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-10-01T09:00:00",
+      "endLocal": "2026-10-01T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-13/",
+      "note": ""
+    },
+    {
       "id": "392116",
       "title": "West Avenue Phase II Neighborhood Improvement Project: On Site Walkthrough",
       "description": "Join Commissioner Alex J. Fernandez for an in-person community walkthrough to see the progress firsthand, learn about upcoming plans and get the latest updates on the construction site for the West Avenue Phase II Neighborhood Improvement Project. Thursday, October 1 11 AM On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
@@ -192,6 +192,17 @@
       "location": "On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-on-site-walkthrough-8/",
+      "note": ""
+    },
+    {
+      "id": "397434",
+      "title": "Sunshine Meeting hosted by Commissioner Matteo-Salinas to discuss future Public Works projects in the Lakeview Neighborhood",
+      "description": "",
+      "startLocal": "2026-10-01T18:00:00",
+      "endLocal": "2026-10-01T20:00:00",
+      "location": "Muss Park, 4300 Chase Avenue, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/sunshine-meeting-hosted-by-commissioner-matteo-salinas-to-discuss-future-public-works-projects-in-the-lakeview-neighborhood/",
       "note": ""
     },
     {
