@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-09-18T20:58:19.610Z",
+  "generatedAt": "2026-09-19T04:43:50.946Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-18&end_date=2026-11-17&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-19&end_date=2026-11-18&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "10104221",
-      "title": "Board of Adjustment*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82869615309 1.301.715.8592 or 877.853.5257 Access ID: 82869615309# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-18T09:00:00",
-      "endLocal": "2026-09-18T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-09-18/",
-      "note": ""
-    },
     {
       "id": "395927",
       "title": "Women’s Self Defense Class",
@@ -467,6 +456,17 @@
       "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2/2026-11-17/",
+      "note": ""
+    },
+    {
+      "id": "10104083",
+      "title": "City Commission*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-18",
+      "endLocal": "2026-11-18",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/city-commission/2026-11-18/",
       "note": ""
     }
   ]
