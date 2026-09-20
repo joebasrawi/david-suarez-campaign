@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-09-19T04:43:50.946Z",
+  "generatedAt": "2026-09-20T04:59:55.268Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-19&end_date=2026-11-18&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-20&end_date=2026-11-19&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "395927",
-      "title": "Women’s Self Defense Class",
-      "description": "Learn how to keep yourself safe! Commissioner Monica Matteo-Salinas invites you to a free women’s self defense class. Saturday, September 19 9 AM – 12 PM Miami Beach Police Department 1100 Washington Avenue Register at bit.ly/4cbzBdl . For any further questions, email monica@miamibeachfl.gov.",
-      "startLocal": "2026-09-19T09:00:00",
-      "endLocal": "2026-09-19T12:00:00",
-      "location": "1100 Washington Ave, Miami Beach, FL 33139, USA",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/womens-self-defense-class/",
-      "note": ""
-    },
     {
       "id": "397203",
       "title": "Miami Beach Baila! by Commissioner Joe Magazine",
@@ -467,6 +456,28 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission/2026-11-18/",
+      "note": ""
+    },
+    {
+      "id": "10104251",
+      "title": "Design Review Board*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-19T09:00:00",
+      "endLocal": "2026-11-19T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/design-review-board-3/2026-11-19/",
+      "note": ""
+    },
+    {
+      "id": "10104298",
+      "title": "Miami Beach Business-Ready Day",
+      "description": "MIAMI BEACH BUSINESS READY DAYS Thursday, February 19 | 9AM – 2PM City Hall (1700 Convention Center Drive, City Hall Building Department – 2nd Floor Conference Room) The City of Miami Beach will host a Business-Ready Day on Thursday, February 19 , from 9 a.m. to 2 p.m. at City Hall (1700 Convention Center Drive, City Hall Building Department – 2nd Floor Conference Room) . Business Ready Days are held quarterly and are designed to serve as a one-stop resource for local entrepreneurs and business owners. During the event, businesses can receive personalized assistance with obtaining or renewing their Business Tax Receipt (BTR), along with guidance on City and County regulatory requirements. Representatives from all departments involved in the BTR process will be available to provide coordinated, in-person support. Participating City of Miami Beach departments include Planning and Zoning, Building, Finance, Fire, Economic Development, Procurement, Tourism and Culture, Public Works, and the Office of Emergency Management. County partners include the Miami-Dade County Building Department, Department of Regulatory and Economic Resources (DERM), Water and Sewer Department, and the Miami-Dade County Tax Collector’s Office. Together, these agencies will help businesses better understand permitting, compliance, and operational requirements. The Economic Development Department will be available to discuss business incentive programs, site selection assistance, and the City’s Business Concierge Service, which supports businesses navigating City processes and accessing local resources. The Public Works Department will provide guidance on the Sidewalk Café Program, including application requirements and best practices for activating outdoor dining spaces. The Procurement Department will offer guidance on vendor certification and local government contracting opportunities, while the Office of Emergency Management will share information on the Business Emergency Response Team (BERT) program. Partner organizations will also participate, including BrightStar Credit Union, which will be on site to share information about its business banking products, financial programs, funding opportunities, and small business resources.",
+      "startLocal": "2026-11-19T09:00:00",
+      "endLocal": "2026-11-19T14:00:00",
+      "location": "Building Department 2nd Floor Conf. Room, 1700 Convention Center Dr, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-business-ready-day/2026-11-19/",
       "note": ""
     }
   ]
