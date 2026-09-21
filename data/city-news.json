@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:58:29.497Z",
+  "generatedAt": "2026-09-21T22:02:20.279Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "408935",
+      "title": "Calling All Young Musicians for the Miami Beach Youth Music Festival",
+      "summary": "Auditions are now open for musicians 18 and under",
+      "publishedAt": "2026-09-21T09:22:00",
+      "url": "https://www.miamibeachfl.gov/calling-all-young-musicians-for-the-miami-beach-youth-music-festival/",
+      "label": "Official city news"
+    },
     {
       "id": "408872",
       "title": "Limited Time to Purchase Commemorative Bricks for ‘Pathway of Inclusion’",
@@ -77,14 +85,6 @@
       "summary": "Visitors are invited to enjoy discounted parking from Aug. 1 through Oct. 31",
       "publishedAt": "2026-07-29T09:43:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-brings-back-1-hourly-parking-rates/",
-      "label": "Official city news"
-    },
-    {
-      "id": "406220",
-      "title": "Miami Beach Moves Closer to Completing Landmark Convention Headquarter Hotel with Grand Hyatt Miami Beach Topping-Off Milestone",
-      "summary": "Miami Beach Moves Closer to Completing Landmark Convention Headquarter Hotel with Grand Hyatt Miami Beach Topping-Off Milestone",
-      "publishedAt": "2026-07-28T18:00:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-moves-closer-to-completing-landmark-convention-headquarter-hotel-with-grand-hyatt-miami-beach-topping-off-milestone/",
       "label": "Official city news"
     }
   ]

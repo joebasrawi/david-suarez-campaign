@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T05:05:18.448Z",
+  "generatedAt": "2026-09-21T22:02:09.677Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -148,6 +148,17 @@
       "location": "Miami Beach Convention Center, 1901 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/miami-beach-visitor-and-convention-authority-board/",
+      "note": ""
+    },
+    {
+      "id": "397477",
+      "title": "Community Veterinary Care Wellness on Wheels Grand Opening Ceremony",
+      "description": "Join Miami-Dade Animal Services , in partnership with Commissioner Laura Dominguez and Miami-Dade County District 5 Commissioner Vicki L. Lopez for the Community Veterinary Care Wellness on Wheels Grand Opening Ceremony. Monday, September 28 10 AM 13 Street & Michigan Avenue (Behind the Flamingo Park Basketball Courts) The WOW Mobile service offers free mobile veterinary care for owned dogs and cats in Miami Beach. Starting on Monday, September 28 until Wednesday, December 23, the service will be available Mondays through Wednesdays at 13 Street & Michigan Avenue from 8:30 a.m. – 4:30 p.m. with a lunch break from 12-1 p.m. Please note that the services will not be available on Monday, October 12 for Columbus Day and Wednesday, November 11 for Veterans Day. Services provided at the mobile unit include vaccines, deworming, microchipping and more.",
+      "startLocal": "2026-09-28T10:00:00",
+      "endLocal": "2026-09-28T10:00:00",
+      "location": "13 Street & Michigan Avenue, 13 Street & Michigan Avenue, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/community-veterinary-care-wellness-on-wheels-grand-opening-ceremony/",
       "note": ""
     },
     {
