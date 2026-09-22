@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-09-21T22:02:09.677Z",
+  "generatedAt": "2026-09-22T05:07:04.026Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-21&end_date=2026-11-20&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-22&end_date=2026-11-21&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "397447",
-      "title": "Hispanic Affairs Committee",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 2 nd Floor Building Department Conference Room",
-      "startLocal": "2026-09-21T17:00:00",
-      "endLocal": "2026-09-21T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/hispanic-affairs-committee-3/",
-      "note": ""
-    },
     {
       "id": "397240",
       "title": "Special Magistrate Hearings",
