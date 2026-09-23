@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T22:02:20.279Z",
+  "generatedAt": "2026-09-23T17:11:21.516Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "408969",
+      "title": "Free Mobile Veterinary Care Coming to Miami Beach",
+      "summary": "Miami-Dade County Animal Services’ Wellness on Wheels (WOW) Mobile will provide free pet wellness services to Miami Beach residents",
+      "publishedAt": "2026-09-22T12:44:00",
+      "url": "https://www.miamibeachfl.gov/free-mobile-veterinary-care-coming-to-miami-beach/",
+      "label": "Official city news"
+    },
     {
       "id": "408935",
       "title": "Calling All Young Musicians for the Miami Beach Youth Music Festival",
@@ -77,14 +85,6 @@
       "summary": "Application window opened today, August 5 – August 19, 2026",
       "publishedAt": "2026-08-05T08:59:00",
       "url": "https://www.miamibeachfl.gov/new-need-based-parking-discount-available-for-miami-beach-workers/",
-      "label": "Official city news"
-    },
-    {
-      "id": "407851",
-      "title": "Miami Beach Brings Back $1 Hourly Parking Rates",
-      "summary": "Visitors are invited to enjoy discounted parking from Aug. 1 through Oct. 31",
-      "publishedAt": "2026-07-29T09:43:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-brings-back-1-hourly-parking-rates/",
       "label": "Official city news"
     }
   ]
