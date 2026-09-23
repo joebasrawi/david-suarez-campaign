@@ -1,56 +1,12 @@
 {
-  "generatedAt": "2026-09-22T05:07:04.026Z",
+  "generatedAt": "2026-09-23T04:52:00.300Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-22&end_date=2026-11-21&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-23&end_date=2026-11-22&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "397240",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-22T09:00:00",
-      "endLocal": "2026-09-22T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-4/",
-      "note": ""
-    },
-    {
-      "id": "397242",
-      "title": "Committee for Quality Education",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-09-22T09:00:00",
-      "endLocal": "2026-09-22T11:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/committee-for-quality-education/",
-      "note": ""
-    },
-    {
-      "id": "397244",
-      "title": "Production Industry Council",
-      "description": "Hybrid Meeting https://bit.ly/3YFAJil Meeting ID: 29544556590650# Passcode: L2zE9xr2 1.786.636.1480 Access ID: 499712655# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
-      "startLocal": "2026-09-22T11:00:00",
-      "endLocal": "2026-09-22T13:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/production-industry-council/",
-      "note": ""
-    },
-    {
-      "id": "397246",
-      "title": "Youth Commission Meeting",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-09-22T16:00:00",
-      "endLocal": "2026-09-22T18:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/youth-commission-meeting-2/",
-      "note": ""
-    },
     {
       "id": "10104326",
       "title": "Finance and Economic Resiliency Committee**",
