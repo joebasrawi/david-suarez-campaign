@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-16T17:06:02.906Z",
+  "generatedAt": "2026-09-24T05:00:20.921Z",
   "timezone": "America/New_York",
   "coverage": {
     "startDate": "2026-01-01",
     "throughDate": "2026-07-22",
-    "meetingCount": 10,
+    "meetingCount": 11,
     "publishedMinutesCount": 9,
-    "pendingMinutesCount": 1
+    "pendingMinutesCount": 2
   },
   "source": {
     "label": "City of Miami Beach PrimeGov approved minutes",
@@ -120,6 +120,15 @@
       "minutesStatus": "Pending publication",
       "officialMeetingUrl": "https://miamibeachfl.primegov.com/public/portal?fromiframe=true",
       "videoUrl": "https://miamibeachfl.new.swagit.com/videos/400548",
+      "itemCount": 0
+    },
+    {
+      "id": 1321,
+      "date": "2026-09-23",
+      "title": "Commission Meeting - Budget Related",
+      "minutesStatus": "Pending publication",
+      "officialMeetingUrl": "https://miamibeachfl.primegov.com/public/portal?fromiframe=true",
+      "videoUrl": "https://miamibeachfl.new.swagit.com/videos/402095",
       "itemCount": 0
     }
   ],

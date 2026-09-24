@@ -1,56 +1,12 @@
 {
-  "generatedAt": "2026-09-23T21:34:39.153Z",
+  "generatedAt": "2026-09-24T05:00:09.373Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-23&end_date=2026-11-22&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-24&end_date=2026-11-23&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "10104326",
-      "title": "Finance and Economic Resiliency Committee**",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86360595462 Webinar ID: 86360595462# 1.301.715.8592 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-23T09:30:00",
-      "endLocal": "2026-09-23T12:30:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/finance-and-economic-resiliency-committee-2/2026-09-23/",
-      "note": ""
-    },
-    {
-      "id": "397056",
-      "title": "Lincoln Road Business Improvement District Nominating Committee",
-      "description": "Zoom Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNMmJYNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.8592",
-      "startLocal": "2026-09-23T10:30:00",
-      "endLocal": "2026-09-23T11:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/lincoln-road-business-improvement-district-nominating-committee/",
-      "note": ""
-    },
-    {
-      "id": "397256",
-      "title": "Special Magistrate Hearings – Revocation of License",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Attorney’s Conference Room",
-      "startLocal": "2026-09-23T15:00:00",
-      "endLocal": "2026-09-23T17:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-12/",
-      "note": ""
-    },
-    {
-      "id": "393929",
-      "title": "City Commission* – Final Budget 2027 Hearing",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-23T17:01:00",
-      "endLocal": "2026-09-23T20:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/city-commission-second-budget-meeting/",
-      "note": ""
-    },
     {
       "id": "396671",
       "title": "Land Use and Sustainability Committee**",
