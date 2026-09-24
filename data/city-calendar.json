@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T05:00:09.373Z",
+  "generatedAt": "2026-09-24T17:17:33.477Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -107,6 +107,28 @@
       "note": ""
     },
     {
+      "id": "397537",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-10-05T09:00:00",
+      "endLocal": "2026-10-05T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-14/",
+      "note": ""
+    },
+    {
+      "id": "397539",
+      "title": "Sister Cities",
+      "description": "Hybrid Meeting https://bit.ly/4056H89 Meeting ID: 263778306138# Passcode: a8yH93vn 1.786.636.1480 Conference ID: 803556619# Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Economic Development Conference Room",
+      "startLocal": "2026-10-05T12:00:00",
+      "endLocal": "2026-10-05T14:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/sister-cities-2/",
+      "note": ""
+    },
+    {
       "id": "10104213",
       "title": "Planning Board*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86143426327 Access ID: 86143426327# 1.929.205.6099 or 877.853.5257 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
@@ -115,6 +137,39 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-10-06/",
+      "note": ""
+    },
+    {
+      "id": "397541",
+      "title": "Black Affairs Advisory Committee",
+      "description": "Hybrid Meeting http://bit.ly/4m65Vk4 Meeting ID: 2471439076129# Passcode: pg7h3vd2 1.786.636.1480 Access ID: 315500952# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor Conference Room",
+      "startLocal": "2026-10-06T10:00:00",
+      "endLocal": "2026-10-06T12:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/black-affairs-advisory-committee-3/",
+      "note": ""
+    },
+    {
+      "id": "397543",
+      "title": "Commission for Women",
+      "description": "Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Parking Department Conference Room",
+      "startLocal": "2026-10-06T17:30:00",
+      "endLocal": "2026-10-06T19:30:00",
+      "location": "Parking Department Conference Room (1755 Meridian Ave. 2nd Floor, Miami Beach, FL 33139)",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/commission-for-women-2/",
+      "note": ""
+    },
+    {
+      "id": "397545",
+      "title": "Police Citizens Relations Committee",
+      "description": "Hybrid Meeting https://bit.ly/PCRC2025 Meeting ID: 22859201878373# Passcode: eV9BP7PV 1.786.636.1480 or 814.819.746 Phone Conference ID: 814819746# Miami Beach Police Department 1100 Washington Avenue, 1 st Floor MJS Community Room",
+      "startLocal": "2026-10-06T18:00:00",
+      "endLocal": "2026-10-06T20:00:00",
+      "location": "Miami Beach Police Department – Community Room, 1100 Washington Avenue, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/police-citizens-relations-committee-2/",
       "note": ""
     },
     {
@@ -140,14 +195,25 @@
       "note": ""
     },
     {
-      "id": "396550",
+      "id": "397547",
+      "title": "Cultural Arts Council",
+      "description": "Hybrid Meeting https://bit.ly/4iRb67v Meeting ID: 21674066867961# Passcode: a4e2dz3Y 1.786.636.1480 or 583.158.791 Access ID: 583158791# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor Conference Room",
+      "startLocal": "2026-10-08T12:00:00",
+      "endLocal": "2026-10-08T14:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/cultural-arts-council-3/",
+      "note": ""
+    },
+    {
+      "id": "397549",
       "title": "General Obligation Bond Oversight Committee",
-      "description": "Hybrid Meeting https://us02web.zoom.us/j/7265621380?omn=88619478810 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room &nbsp;",
+      "description": "Hybrid Meeting https://us02web.zoom.us/j/7265621380?omn=88619478810 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
       "startLocal": "2026-10-08T16:00:00",
       "endLocal": "2026-10-08T18:00:00",
       "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/general-obligation-bond-oversight-committee/",
+      "url": "https://events.miamibeachfl.gov/event/general-obligation-bond-oversight-committee-2/",
       "note": ""
     },
     {
