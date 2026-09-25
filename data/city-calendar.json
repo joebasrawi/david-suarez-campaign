@@ -1,34 +1,12 @@
 {
-  "generatedAt": "2026-09-24T17:17:33.477Z",
+  "generatedAt": "2026-09-25T05:04:40.477Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-24&end_date=2026-11-23&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-25&end_date=2026-11-24&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "396671",
-      "title": "Land Use and Sustainability Committee**",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-24T13:00:00",
-      "endLocal": "2026-09-24T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee-2/",
-      "note": ""
-    },
-    {
-      "id": "397250",
-      "title": "Parks & Recreational Facilities Advisory Board",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-09-24T17:30:00",
-      "endLocal": "2026-09-24T19:30:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/parks-recreational-facilities-advisory-board/",
-      "note": ""
-    },
     {
       "id": "397252",
       "title": "Special Magistrate Hearings",
@@ -456,6 +434,17 @@
       "location": "Building Department 2nd Floor Conf. Room, 1700 Convention Center Dr, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/miami-beach-business-ready-day/2026-11-19/",
+      "note": ""
+    },
+    {
+      "id": "10104348",
+      "title": "Land Use and Sustainability Committee**",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-24T11:00:00",
+      "endLocal": "2026-11-24T13:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-11-24/",
       "note": ""
     }
   ]
