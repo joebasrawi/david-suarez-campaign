@@ -1,34 +1,12 @@
 {
-  "generatedAt": "2026-09-25T05:04:40.477Z",
+  "generatedAt": "2026-09-26T05:07:30.281Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-25&end_date=2026-11-24&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-26&end_date=2026-11-25&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "397252",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-25T09:00:00",
-      "endLocal": "2026-09-25T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-5/",
-      "note": ""
-    },
-    {
-      "id": "397254",
-      "title": "Miami Beach Visitor and Convention Authority Board",
-      "description": "Miami Beach Convention Center 1901 Convention Center Drive Board Room",
-      "startLocal": "2026-09-25T11:30:00",
-      "endLocal": "2026-09-25T13:30:00",
-      "location": "Miami Beach Convention Center, 1901 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/miami-beach-visitor-and-convention-authority-board/",
-      "note": ""
-    },
     {
       "id": "397477",
       "title": "Community Veterinary Care Wellness on Wheels Grand Opening Ceremony",
