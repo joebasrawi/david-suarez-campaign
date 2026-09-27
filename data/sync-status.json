@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T21:16:38.936Z",
+  "generatedAt": "2026-09-27T05:25:56.735Z",
   "source": {
     "label": "Public data publishing workflow",
     "url": "https://github.com/joebasrawi/david-suarez-campaign/actions/workflows/sync-public-data.yml"
@@ -7,44 +7,45 @@
   "items": [
     {
       "name": "youtube",
-      "status": "success",
-      "checkedAt": "2026-09-26T21:16:06.453Z"
+      "status": "failed",
+      "checkedAt": "2026-09-27T05:25:19.568Z",
+      "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "calendar",
       "status": "success",
-      "checkedAt": "2026-09-26T21:16:07.047Z"
+      "checkedAt": "2026-09-27T05:25:19.982Z"
     },
     {
       "name": "agendas",
       "status": "failed",
-      "checkedAt": "2026-09-26T21:16:08.275Z",
+      "checkedAt": "2026-09-27T05:25:21.199Z",
       "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "actions",
       "status": "success",
-      "checkedAt": "2026-09-26T21:16:15.228Z"
+      "checkedAt": "2026-09-27T05:25:31.897Z"
     },
     {
       "name": "news",
       "status": "success",
-      "checkedAt": "2026-09-26T21:16:16.146Z"
+      "checkedAt": "2026-09-27T05:25:32.669Z"
     },
     {
       "name": "projects",
       "status": "success",
-      "checkedAt": "2026-09-26T21:16:34.582Z"
+      "checkedAt": "2026-09-27T05:25:52.069Z"
     },
     {
       "name": "neighborhoods",
       "status": "success",
-      "checkedAt": "2026-09-26T21:16:38.177Z"
+      "checkedAt": "2026-09-27T05:25:56.434Z"
     },
     {
       "name": "records",
       "status": "failed",
-      "checkedAt": "2026-09-26T21:16:38.861Z",
+      "checkedAt": "2026-09-27T05:25:56.617Z",
       "message": "The source could not be refreshed. The last validated snapshot remains available."
     }
   ]
