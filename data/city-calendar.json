@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T05:37:29.028Z",
+  "generatedAt": "2026-09-28T23:21:26.542Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -49,6 +49,17 @@
       "location": "On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-on-site-walkthrough-8/",
+      "note": ""
+    },
+    {
+      "id": "397608",
+      "title": "Production Industry Council",
+      "description": "Hybrid Meeting https://bit.ly/4hh9zZp Meeting ID: 228657923664477# Passcode: 5y7Bk9PY 1.786.636.1480 Access ID: 506284348# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
+      "startLocal": "2026-10-01T17:00:00",
+      "endLocal": "2026-10-01T19:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/production-industry-council-4/",
       "note": ""
     },
     {
@@ -140,6 +151,17 @@
       "note": ""
     },
     {
+      "id": "397606",
+      "title": "Production Industry Council",
+      "description": "Hybrid Meeting https://bit.ly/4rEZiK3 Meeting ID: 245992362013940# Passcode: N83Jt6ps 1.786.636.1480 Access ID: 488754961# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
+      "startLocal": "2026-10-07T17:00:00",
+      "endLocal": "2026-10-07T19:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/production-industry-council-2/",
+      "note": ""
+    },
+    {
       "id": "10104250",
       "title": "Design Review Board*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
@@ -170,6 +192,17 @@
       "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/general-obligation-bond-oversight-committee-2/",
+      "note": ""
+    },
+    {
+      "id": "397610",
+      "title": "Sunshine Meeting hosted by Commissioner Matteo-Salinas to discuss future Public Works projects in the Lakeview Neighborhood",
+      "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/87611722129 Webinar ID : 87611722129# 1.305.224.1968 or 888.475.4499",
+      "startLocal": "2026-10-08T18:00:00",
+      "endLocal": "2026-10-08T19:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/sunshine-meeting-hosted-by-commissioner-matteo-salinas-to-discuss-future-public-works-projects-in-the-lakeview-neighborhood-2/",
       "note": ""
     },
     {
