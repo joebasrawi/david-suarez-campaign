@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-27T05:25:19.977Z",
+  "generatedAt": "2026-09-28T05:37:29.028Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-27&end_date=2026-11-26&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-28&end_date=2026-11-27&per_page=50&page=2"
   },
   "items": [
     {
