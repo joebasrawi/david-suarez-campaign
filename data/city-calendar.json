@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T05:50:45.144Z",
+  "generatedAt": "2026-09-29T22:22:39.933Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -107,6 +107,17 @@
       "note": ""
     },
     {
+      "id": "397637",
+      "title": "Arthur “Art” Martineau Plaque Unveiling Ceremony",
+      "description": "Join the City of Miami Beach and Commissioner Tanya K. Bhatt for a plaque unveiling ceremony in honor of the life and legacy of Arthur “Art” Martineau for his 25 years of dedicated service to Miami Beach PD Tuesday, October 6 10 AM Miami Beach Police Athletic League Headquarters 999 11 Street",
+      "startLocal": "2026-10-06T10:00:00",
+      "endLocal": "2026-10-06T10:00:00",
+      "location": "Miami Beach Police Athletic Headquarters, 999 11 Street",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/arthur-art-martineau-plaque-unveiling-ceremony/",
+      "note": ""
+    },
+    {
       "id": "397543",
       "title": "Commission for Women",
       "description": "Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Parking Department Conference Room",
@@ -184,6 +195,17 @@
       "note": ""
     },
     {
+      "id": "397660",
+      "title": "Community Meeting hosted by Laura Dominguez to discuss the South Beach Marine Park",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor and Commissioner’s Conference Room",
+      "startLocal": "2026-10-08T16:30:00",
+      "endLocal": "2026-10-08T18:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/community-meeting-hosted-by-laura-dominguez-to-discuss-the-south-beach-marine-park/",
+      "note": ""
+    },
+    {
       "id": "397610",
       "title": "Sunshine Meeting hosted by Commissioner Matteo-Salinas to discuss future Public Works projects in the Lakeview Neighborhood",
       "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/87611722129 Webinar ID : 87611722129# 1.305.224.1968 or 888.475.4499",
@@ -192,6 +214,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/sunshine-meeting-hosted-by-commissioner-matteo-salinas-to-discuss-future-public-works-projects-in-the-lakeview-neighborhood-2/",
+      "note": ""
+    },
+    {
+      "id": "397631",
+      "title": "North Beach Community Redevelopment Agency Five-Year Strategic Plan Open House",
+      "description": "The North Beach Community Redevelopment Agency (NBCRA) is hosting an interactive open house to recognize community priorities, concerns, and ideas that could be explored within a five-year strategic finance, investment, and implementation plan. The NBCRA will present the purpose, role, boundaries, goals, existing conditions, trends, insights, and patterns, and identify needs and challenges. Participants will be invited to consider early-win projects that are achievable and measurable and discuss funding tools, financial considerations, and how NBCRA dollars can be used responsibly and transparently. Feedback will help inform project selection and the development of the final strategy. North Shore Youth Center, 501 72nd Street – First Floor Game Room Thursday, October 8, from 6-7:30 p.m. If you have questions, please contact the NBCRA at nbcra@miamibeachfl.gov",
+      "startLocal": "2026-10-08T18:00:00",
+      "endLocal": "2026-10-08T19:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/north-beach-community-redevelopment-agency-five-year-strategic-plan-open-house/",
       "note": ""
     },
     {

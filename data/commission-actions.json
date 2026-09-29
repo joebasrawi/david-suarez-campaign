@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-29T05:50:56.985Z",
+  "generatedAt": "2026-09-29T22:22:51.013Z",
   "timezone": "America/New_York",
   "coverage": {
     "startDate": "2026-01-01",
-    "throughDate": "2026-09-10",
+    "throughDate": "2026-09-23",
     "meetingCount": 11,
-    "publishedMinutesCount": 10,
-    "pendingMinutesCount": 1
+    "publishedMinutesCount": 11,
+    "pendingMinutesCount": 0
   },
   "source": {
     "label": "City of Miami Beach PrimeGov approved minutes",
@@ -118,7 +118,7 @@
       "date": "2026-09-10",
       "title": "Commission Meeting",
       "minutesStatus": "Approved minutes published",
-      "minutesPublishedAt": "2026-09-28T23:36:05.177",
+      "minutesPublishedAt": "2026-09-29T13:52:00.003",
       "minutesUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6190&compileOutputType=1",
       "officialMeetingUrl": "https://miamibeachfl.primegov.com/public/portal?fromiframe=true",
       "videoUrl": "https://miamibeachfl.new.swagit.com/videos/400548",
@@ -128,10 +128,12 @@
       "id": 1321,
       "date": "2026-09-23",
       "title": "Commission Meeting - Budget Related",
-      "minutesStatus": "Pending publication",
+      "minutesStatus": "Approved minutes published",
+      "minutesPublishedAt": "2026-09-29T20:16:12.77",
+      "minutesUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1",
       "officialMeetingUrl": "https://miamibeachfl.primegov.com/public/portal?fromiframe=true",
       "videoUrl": "https://miamibeachfl.new.swagit.com/videos/402095",
-      "itemCount": 0
+      "itemCount": 8
     }
   ],
   "items": [
@@ -47085,7 +47087,7 @@
       ],
       "voteBlockCount": 1,
       "sourcePage": 129,
-      "recordExcerpt": "ACTION: Resolution 2026-34456 was adopted. The Title of the Resolution was read into the\nrecord. The Public Hearing was held. Commissioner Magazine made a motion to adopt the\nResolution; seconded by Vice Mayor Fernandez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nThe Second Reading Public Hearing is scheduled for September 23, 2026, at 5:01 p.m. Rafael\nE. Granado to notice. Lilia Cardillo to place on the Commission Agenda, if received. Tameka Otto\nStewart to handle.\nClerk’s Note: Items R7 B through R7 L were discussed together. All substantive discussion and\nall votes for these budget Items are documented under Item R7 B. Each individual Item (R7 C\nthrough R7 L) also includes its own motion, vote, and Second Reading information as required.\nCity Clerk Rafael E. Granado stated that Items R7 B through R7 L would be called together. He\nexplained that he would read the short titles for each Item into the record before beginning the\nunified discussion. Thereafter, City Clerk Granado read the titles. City Clerk Granado emphasized\nthat all the Items would be discussed together, with individual votes taken separately afterward.\nCity Manager Eric Carpenter asked to be recognized. He thanked staff involved in preparing the\nFY 2027 budget and explained that the budget development process began the previous\nDecember, involving months of collaboration, analysis, and alignment with the City’s long-term\nfinancial goals. He stated that the Commission’s direction at the May budget retreat and at the\nJune and July Finance and Economic Resiliency Committee workshops helped refine the\nAdministration’s recommendations. He recalled that the Commission had directed staff in July to\nprepare a rolled-back budget, which provided a transparent baseline for evaluating fiscal impacts.\nOver the summer recess, the Administration incorporated additional feedback, resulting in the\nproposed FY 2027 budget now before the Commission. City Manager Carpenter highlighted key\nfeatures of the budget, including a proposed operating millage rate at its lowest level in more than\na decade, a 1% increase in non-Police and Fire current service-level budgets (less than half the\nrate of inflation), an increase of $10 million in capital funding for infrastructure and community\nimprovements, and a property-tax increase of only 1.7% for the average homesteaded property\nowner. He added that over 40 full-time positions were eliminated to increase efficiency. He\nconcluded by thanking Jason Greene, Tameka Otto Stewart, and the entire Budget Team for their\nten months of intensive work.\nMayor Steven Meiner acknowledged the City Manager and thanked him for presenting the\noverview.\nJason Greene, Chief Financial Officer, thanked the City Manager, the Mayor, and the\nCommissioners. He stated that the Administration would now bring up a presentation to guide the\ndiscussion. Click here to view. He reviewed the multi-month budget development process,\nexplaining that it begins every December with internal work among departments. He referenced\nthe May budget retreat, June and July workshops, the issuance of TRIM notices in August, and\nthe publication of the proposed preliminary budget on August 31. He explained that this year the\nAdministration produced both a program-based budget and a line-item detailed budget, reflecting\nthe Commission’s direction and acknowledging the City’s difficult financial year. He stated that\ncertified taxable values showed a total increase of approximately 3.5%, combining both existing\nproperty values and new construction. He explained that the proposed millage represented a\nsecond consecutive year of millage reduction, noting a 0.05 decrease in operating millage\nadopted in July, along with a small decrease in voted-debt millage. He stated that the combined\nreduction totaled 0.0586 mills, making FY 2027 the second consecutive year of lowering millage\nrates.\nCommissioner Bhatt stated that the millage reduction approved the previous year had generated\nsignificant discussion, particularly about whether the City would be better served by maintaining\nthe millage to support infrastructure needs or returning the savings to taxpayers. She asked CFO\nGreene to clarify who received the $500 homesteaded property-owner checks issued last year,\nhow many checks were issued, and the total amount disbursed.\nCFO Greene responded that approximately 12,000 to 14,000 checks were issued, totaling around\n$7 million. He clarified that Commissioner Bhatt’s current question concerned the fiscal impact of\nlowering the millage by 0.05 mills, which reduced City revenues by $3.1 million. He stated that of\nthat $3.1 million, the value that went to median homesteaded properties was approximately\n$53,000. He added that approximately $1.85 million of the savings went to non-homesteaded\nproperties valued over $1 million, which included second homes, apartments, hotels, and\ncommercial uses.\nCommissioner Bhatt asked CFO Greene to repeat the amount that went to non-homesteaded\nproperties valued over $1 million.\nCFO Greene reiterated that the amount was $1.85 million of the $3.1 million.\nCommissioner Bhatt stated that while the millage reduction had been framed as helping residents\nstruggling with affordability issues, the vast majority of the savings went to properties valued at\nover $1 million, not to median-income homesteaded residents.\nCommissioner Suarez asked whether Commissioner Bhatt was referring to the $500 checks or\nthe millage reduction.\nCFO Greene clarified that the discussion concerned the millage decrease, not the check program.\nHe explained again that millage relief is progressive in nature: properties with higher taxable\nvalues receive greater dollar reductions. He distinguished the homestead-related distribution by\nnoting that all homesteaded properties combined received approximately $666,000 of the\nsavings, while non-homesteaded properties under $1 million received approximately $170,000.\nCFO Greene resumed the budget presentation and stated that the Administration would bring the\npresentation slides back up. He reiterated that certified taxable values showed modest growth\nand repeated that the City was operating under a difficult financial environment. He then resumed\nexplaining the comparative millage history, describing a chart showing the City's operating millage\nat its lowest point in roughly ten years and nearly its lowest point in fifteen years. He said the chart\ndemonstrated that while the City's operating millage declined approximately 8% since 2012,\ncapital investment increased roughly 89% over the same period, illustrating the Commission’s\nlong-term focus on directing more millage capacity toward capital improvements.\nTameka Otto Stewart, Budget Director, stated that she wanted to briefly return to the July meeting.\nShe reminded the Commission that, based on a rollback millage rate, the Administration identified\na $20.8 million gap and recommended approximately $18 million in reductions, along with a small\nnumber of enhancements. She reminded the Commission that $7.7 million of those reductions\nhad been accepted. She explained that the current budget presented a balanced plan achieved\nthrough adjustments made during recess and informed by the July direction. She then previewed\nthat the following slides would detail how the balanced budget was reached.\nCFO Greene reiterated that the budget stabilization reserve shown in their materials was an\nimportant point of discussion. He stated that several items requiring Commission direction had\nbeen postponed from July and were now part of the pending decision points. He explained that\nany funds restored to the budget through these decisions would reduce the stabilization reserve.\nHe urged the Commission to maintain as much recurring stabilization funding as possible given\nuncertainty in the property market and the potential impact of the upcoming constitutional\namendment. He added that, while the Administration recommended retaining recurring\nstabilization dollars, there were opportunities to restore certain cuts as one-time allocations.\nOMB Director Otto Stewart, Office of Management and Budget Director, reviewed the General\nFund summary. She stated that the current year’s budget totaled $483 million, and the FY 2027\nproposal totaled $516 million, a 7% increase. She highlighted that property-tax revenues\nincreased by 3%, while expenditures were increasing at 7%. She explained the reasons behind\nthe increase, including the full impact of the most recent collective bargaining agreement for\nPolice and Fire, which resulted in a $21 million increase for those departments, approximately\n4%. She noted that current-service-level increases for all non-public-safety departments were\nheld at 1%, less than half of CPI. She also stated that enhancements were included, $7.7 million\nin reductions were absorbed, capital funding increased by $10 million, and budget stabilization\nincreased by roughly $2 million.\nCFO Greene emphasized that the 1% increase for non-public-safety departments occurred before\napplying the $7.7 million in reductions, representing significant discipline. He again emphasized\nthat although the budget technically advertised a tax increase due to not being at rollback,\nhomesteaded taxpayers would see only 1.7% increases, far below inflation. He provided a\nnational context, noting economists projected inflation possibly increasing due to international\ninstability, and stated that achieving a budget with only a 1.7% homesteaded tax impact was “a\nbig win.”\nCommissioner Magazine stated that when public safety was removed from year-over-year\ncomparisons, the operating budget actually declined, illustrating efficiencies achieved across\ndepartments and acknowledging that most enhancements were concentrated in Police, Fire,\ncleanliness, and facilities. Commissioner Magazine emphasized the importance of supporting\npublic safety while maintaining fiscal discipline in other areas.\nOMB Director Otto Stewart confirmed Commissioner Magazine’s description and transitioned into\nthe staffing slide. She stated that enhanced public safety staffing, including Police, Fire, Code,\nPark Rangers, Homeless Services, and Municipal Prosecutors, increased by 143 positions\n(14.4%) over ten years. She explained that all other departments combined increased by only 8\npositions (0.7%), and if positions added to building and housing (funded by grants) were removed\nfrom the calculation, the City actually had 11 fewer positions across all non-public-safety areas\ncompared to ten years ago.\nCFO Greene reiterated that the analysis reflected the City’s longstanding commitment to public\nsafety and capital infrastructure rather than administrative growth. He stated that, over ten years,\npublic safety expanded significantly while total staffing outside public safety was flat or slightly\nnegative.\nCommissioner Magazine stated that although the staffing trends showed disciplined\nadministrative growth, they also demonstrated that public-facing amenities and services might not\nhave increased as quickly as needed. Commissioner Magazine noted that enhancements\nproposed for the Fiscal Year were modest, and that limited growth outside public safety could\naffect the City's ability to deliver resident-serving programs.\nCFO Greene stated that capital millage growth, approximately 89% over ten years, also reflected\nCommission priorities. He said the next portion of the presentation would review specific decision\npoints postponed from July and requiring Commission direction. He introduced the first regulatory\nimpact slide relating to Senate Bill 1134, noting that several items were identified as non-\ncompliant and removed from the proposed budget. He added that one item remained in the\nbudget, pending Commission direction, and required further clarity before staff could finalize the\nrecommended plan.\nThe discussion turned to the effects of Senate Bill 1134. CFO Greene explained that four elements\nof the budget were evaluated for compliance with the law. He stated that the first two were\nremoved entirely because they were deemed non-compliant. He added that a third item remained\ntechnically in the budget because it had been added after \"pencils down\" and would be removed\nbefore final adoption. He stated that the fourth item required direction from the Commission,\nspecifically the $47,000 allocation for the Pride Lines Youth Safe Space Program. He explained\nthat the program’s original scope was deemed non-compliant but that the entity expressed interest\nin submitting a re-scoped, compliant proposal expected to focus on HIV testing. He asked the\nCommission whether the Administration should remove the funding now and allow the entity to\nreturn with a revised proposal later, or whether the Commission preferred to keep the $47,000 as\na placeholder until the revised program could be reviewed and cleared legally.\nVice Mayor Fernandez stated that Pride Lines intended to address HIV impacts across all\ndemographics and was seeking to redesign the program holistically rather than targeting the\nprogram toward any single community. Vice Mayor Fernandez stated that, given the significance\nof HIV-related issues in Miami Beach, keeping the placeholder would allow the Commission to\nevaluate the forthcoming revised proposal once the City Attorney confirmed its compliance with\nSB 1134. Vice Mayor Fernandez stated that maintaining the placeholder would preserve flexibility\nand avoid delaying funding if the program ultimately met statutory requirements.\nCFO Greene stated that if there were no objections, the Administration would proceed with\nkeeping the placeholder and would return with a Resolution to approve the re-scoped program\nonce it came forward. He noted that the Commission would retain authority to evaluate the revised\nproposal and determine whether it aligned with the City’s expectations.\nCommissioner Magazine asked for clarification regarding the Pride Lines funding.\nIn response, Vice Mayor Fernandez restated that Pride Lines had been asked to redesign the\nscope of services to comply with SB 1134. He explained that the organization intended to submit\na revised proposal centered on HIV testing and broader community health needs, and that\nkeeping the $47,000 as a placeholder would allow the Commission to review the updated\nproposal once the City Attorney confirmed its compliance.\nCFO Greene stated again that, absent objections, the Administration would keep the funding in\nthe budget as a placeholder and return with a formal item to approve the grant once the revised\nprogram was submitted and cleared. He then transitioned to the next set of decision points. CFO\nGreene stated that certain reductions had been identified in July and were incorporated into the\ncurrent budget as cuts unless restored. He reminded the Commission that the Administration\nrecommended restoring any selected items on a one-time basis unless they involved employee-\nrelated positions, which would require recurring funding.\nOMB Director Otto Stewart presented the slide containing 17 reduction items totaling $479,000.\nShe reviewed several examples, including employee-appreciation events, Halloween events,\nservice reductions in beach maintenance, and reductions involving crime-scene positions. She\nnoted one reduction involving a program whose provider was relocating outside Miami Beach and\nstated that staff recommended leaving that particular reduction in place. She asked the\nCommission to indicate which reductions, if any, they wished to restore.\nCommissioner Magazine stated that he would keep all of the listed reductions in place to preserve\nefficiencies and avoid expanding recurring costs unnecessarily. He stated that belt-tightening\nacross departments was appropriate given the City’s fiscal conditions.\nCommissioner Dominguez stated that while reductions were generally appropriate, certain items\nshould not be cut, including employee-appreciation events, the Halloween event, and the\nremaining crime-scene technician position. She stated that employee morale and retention were\ndirectly affected by recognition efforts, and maintaining morale was essential in a high-demand\nworkforce environment. She also stated that the crime-scene function was critical and that\neliminating the remaining filled position would negatively affect public-safety operations.\nCFO Greene responded to Commissioner Dominguez’s comments regarding the crime-scene\npositions. He explained that one of the crime-scene technicians would retire at the end of the\nmonth, which meant that the position would be vacant for the new Fiscal Year. He stated that\nanother position was already vacant, and the third was filled. He clarified that, in technical terms,\ntwo of the three positions would be vacant moving into the Fiscal Year. He explained that the\nAdministration could work with the Commission to determine how to address these vacancies\nmoving forward.\nCommissioner Dominguez stated that her counter-proposal was to keep employee-appreciation\nfunding, keep the Halloween event, and preserve funding for the remaining crime-scene\ntechnician position. She stated that morale matters and that employees deserved recognition for\ntheir work. She explained that the Halloween event was meaningful to families and staff and\nshould not be eliminated. She added that public safety staffing should not be reduced where\npositions were still needed to support operations.\nCommissioner Suarez stated that he disagreed with funding employee-appreciation or Halloween\nevents through taxpayer dollars. He stated that, in his view, such expenses were not essential\ngovernment functions. He said employees could be recognized without allocating public funding\nto such events. He then asked the Police Chief to explain whether the",
+      "recordExcerpt": "ACTION: Resolution 2026-34456 was adopted. The Title of the Resolution was read into the\nrecord. The Public Hearing was held. Commissioner Magazine made a motion to adopt the\nResolution; seconded by Vice Mayor Fernandez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nThe Second Reading Public Hearing is scheduled for September 23, 2026, at 5:01 p.m. Rafael\nE. Granado to notice. Lilia Cardillo to place on the Commission Agenda, if received. Tameka Otto\nStewart to handle.\nClerk’s Note: Items R7 B through R7 L were discussed together. All substantive discussion and\nall votes for these budget Items are documented under Item R7 B. Each individual Item (R7 C\nthrough R7 L) also includes its own motion, vote, and Second Reading information as required.\nCity Clerk Rafael E. Granado stated that Items R7 B through R7 L would be called together. He\nexplained that he would read the short titles for each Item into the record before beginning the\nunified discussion. Thereafter, City Clerk Granado read the titles. City Clerk Granado emphasized\nthat all the Items would be discussed together, with individual votes taken separately afterward.\nCity Manager Eric Carpenter asked to be recognized. He thanked staff involved in preparing the\nFY 2027 budget and explained that the budget development process began the previous\nDecember, involving months of collaboration, analysis, and alignment with the City’s long-term\nfinancial goals. He stated that the Commission’s direction at the May budget retreat and at the\nJune and July Finance and Economic Resiliency Committee workshops helped refine the\nAdministration’s recommendations. He recalled that the Commission had directed staff in July to\nprepare a rolled-back budget, which provided a transparent baseline for evaluating fiscal impacts.\nOver the summer recess, the Administration incorporated additional feedback, resulting in the\nproposed FY 2027 budget now before the Commission. City Manager Carpenter highlighted key\nfeatures of the budget, including a proposed operating millage rate at its lowest level in more than\na decade, a 1% increase in non-Police and Fire current service-level budgets (less than half the\nrate of inflation), an increase of $10 million in capital funding for infrastructure and community\nimprovements, and a property-tax increase of only 1.7% for the average homesteaded property\nowner. He added that over 40 full-time positions were eliminated to increase efficiency. He\nconcluded by thanking Jason Greene, Tameka Otto Stewart, and the entire Budget Team for their\nten months of intensive work.\nMayor Steven Meiner acknowledged the City Manager and thanked him for presenting the\noverview.\nJason Greene, Chief Financial Officer, thanked the City Manager, the Mayor, and the\nCommissioners. He stated that the Administration would now bring up a presentation to guide the\ndiscussion. Click here to view. He reviewed the multi-month budget development process,\nexplaining that it begins every December with internal work among departments. He referenced\nthe May budget retreat, June and July workshops, the issuance of TRIM notices in August, and\nthe publication of the proposed preliminary budget on August 31. He explained that this year the\nAdministration produced both a program-based budget and a line-item detailed budget, reflecting\nthe Commission’s direction and acknowledging the City’s difficult financial year. He stated that\ncertified taxable values showed a total increase of approximately 3.5%, combining both existing\nproperty values and new construction. He explained that the proposed millage represented a\nsecond consecutive year of millage reduction, noting a 0.0500 decrease in operating millage\nadopted in July, along with a small decrease in voted-debt millage. He stated that the combined\nreduction totaled 0.0586 mills, making FY 2027 the second consecutive year of lowering millage\nrates.\nCommissioner Bhatt stated that the millage reduction approved the previous year had generated\nsignificant discussion, particularly about whether the City would be better served by maintaining\nthe millage to support infrastructure needs or returning the savings to taxpayers. She asked CFO\nGreene to clarify who received the $500 homesteaded property-owner checks issued last year,\nhow many checks were issued, and the total amount disbursed.\nCFO Greene responded that approximately 12,000 to 14,000 checks were issued, totaling around\n$7 million. He clarified that Commissioner Bhatt’s current question concerned the fiscal impact of\nlowering the millage by 0.0500 mills, which reduced City revenues by $3.1 million. He stated that\nof that $3.1 million, the value that went to median homesteaded properties was approximately\n$53,000. He added that approximately $1.85 million of the savings went to non-homesteaded\nproperties valued over $1 million, which included second homes, apartments, hotels, and\ncommercial uses.\nCommissioner Bhatt asked CFO Greene to repeat the amount that went to non-homesteaded\nproperties valued over $1 million.\nCFO Greene reiterated that the amount was $1.85 million of the $3.1 million.\nCommissioner Bhatt stated that while the millage reduction had been framed as helping residents\nstruggling with affordability issues, the vast majority of the savings went to properties valued at\nover $1 million, not to median-income homesteaded residents.\nCommissioner Suarez asked whether Commissioner Bhatt was referring to the $500 checks or\nthe millage reduction.\nCFO Greene clarified that the discussion concerned the millage decrease, not the check program.\nHe explained again that millage relief is progressive in nature: properties with higher taxable\nvalues receive greater dollar reductions. He distinguished the homestead-related distribution by\nnoting that all homesteaded properties combined received approximately $666,000 of the\nsavings, while non-homesteaded properties under $1 million received approximately $170,000.\nCFO Greene resumed the budget presentation and stated that the Administration would bring the\npresentation slides back up. He reiterated that certified taxable values showed modest growth\nand repeated that the City was operating under a difficult financial environment. He then resumed\nexplaining the comparative millage history, describing a chart showing the City's operating millage\nat its lowest point in roughly ten years and nearly its lowest point in fifteen years. He said the chart\ndemonstrated that while the City's operating millage declined approximately 8% since 2012,\ncapital investment increased roughly 89% over the same period, illustrating the Commission’s\nlong-term focus on directing more millage capacity toward capital improvements.\nTameka Otto Stewart, Budget Director, stated that she wanted to briefly return to the July meeting.\nShe reminded the Commission that, based on a rollback millage rate, the Administration identified\na $20.8 million gap and recommended approximately $18 million in reductions, along with a small\nnumber of enhancements. She reminded the Commission that $7.7 million of those reductions\nhad been accepted. She explained that the current budget presented a balanced plan achieved\nthrough adjustments made during recess and informed by the July direction. She then previewed\nthat the following slides would detail how the balanced budget was reached.\nCFO Greene reiterated that the budget stabilization reserve shown in their materials was an\nimportant point of discussion. He stated that several items requiring Commission direction had\nbeen postponed from July and were now part of the pending decision points. He explained that\nany funds restored to the budget through these decisions would reduce the stabilization reserve.\nHe urged the Commission to maintain as much recurring stabilization funding as possible given\nuncertainty in the property market and the potential impact of the upcoming constitutional\namendment. He added that, while the Administration recommended retaining recurring\nstabilization dollars, there were opportunities to restore certain cuts as one-time allocations.\nOMB Director Otto Stewart reviewed the General Fund summary. She stated that the current\nyear’s budget totaled $483 million, and the FY 2027 proposal totaled $516 million, a 7% increase.\nShe highlighted that property-tax revenues increased by 3%, while expenditures were increasing\nat 7%. She explained the reasons behind the increase, including the full impact of the most recent\ncollective bargaining agreement for Police and Fire, which resulted in a $21 million increase for\nthose departments, approximately 4%. She noted that current-service-level increases for all non-\npublic-safety departments were held at 1%, less than half of CPI. She also stated that\nenhancements were included, $7.7 million in reductions were absorbed, capital funding increased\nby $10 million, and budget stabilization increased by roughly $2 million.\nCFO Greene emphasized that the 1% increase for non-public-safety departments occurred before\napplying the $7.7 million in reductions, representing significant discipline. He again emphasized\nthat although the budget technically advertised a tax increase due to not being at rollback,\nhomesteaded taxpayers would see only 1.7% increases, far below inflation. He provided a\nnational context, noting economists projected inflation possibly increasing due to international\ninstability, and stated that achieving a budget with only a 1.7% homesteaded tax impact was “a\nbig win.”\nCommissioner Magazine stated that when public safety was removed from year-over-year\ncomparisons, the operating budget actually declined, illustrating efficiencies achieved across\ndepartments and acknowledging that most enhancements were concentrated in Police, Fire,\ncleanliness, and facilities. Commissioner Magazine emphasized the importance of supporting\npublic safety while maintaining fiscal discipline in other areas.\nOMB Director Otto Stewart confirmed Commissioner Magazine’s description and transitioned into\nthe staffing slide. She stated that enhanced public safety staffing, including Police, Fire, Code,\nPark Rangers, Homeless Services, and Municipal Prosecutors, increased by 143 positions\n(14.4%) over ten years. She explained that all other departments combined increased by only 8\npositions (0.7%), and if positions added to building and housing (funded by grants) were removed\nfrom the calculation, the City actually had 11 fewer positions across all non-public-safety areas\ncompared to ten years ago.\nCFO Greene reiterated that the analysis reflected the City’s longstanding commitment to public\nsafety and capital infrastructure rather than administrative growth. He stated that, over ten years,\npublic safety expanded significantly while total staffing outside public safety was flat or slightly\nnegative.\nCommissioner Magazine stated that although the staffing trends showed disciplined\nadministrative growth, they also demonstrated that public-facing amenities and services might not\nhave increased as quickly as needed. Commissioner Magazine noted that enhancements\nproposed for the Fiscal Year were modest, and that limited growth outside public safety could\naffect the City's ability to deliver resident-serving programs.\nCFO Greene stated that capital millage growth, approximately 89% over ten years, also reflected\nCommission priorities. He said the next portion of the presentation would review specific decision\npoints postponed from July and requiring Commission direction. He introduced the first regulatory\nimpact slide relating to Senate Bill 1134, noting that several items were identified as non-\ncompliant and removed from the proposed budget. He added that one item remained in the\nbudget, pending Commission direction, and required further clarity before staff could finalize the\nrecommended plan.\nThe discussion turned to the effects of Senate Bill 1134. CFO Greene explained that four elements\nof the budget were evaluated for compliance with the law. He stated that the first two were\nremoved entirely because they were deemed non-compliant. He added that a third item remained\ntechnically in the budget because it had been added after \"pencils down\" and would be removed\nbefore final adoption. He stated that the fourth item required direction from the Commission,\nspecifically the $47,000 allocation for the Pride Lines Youth Safe Space Program. He explained\nthat the program’s original scope was deemed non-compliant but that the entity expressed interest\nin submitting a re-scoped, compliant proposal expected to focus on HIV testing. He asked the\nCommission whether the Administration should remove the funding now and allow the entity to\nreturn with a revised proposal later, or whether the Commission preferred to keep the $47,000 as\na placeholder until the revised program could be reviewed and cleared legally.\nVice Mayor Fernandez stated that Pride Lines intended to address HIV impacts across all\ndemographics and was seeking to redesign the program holistically rather than targeting the\nprogram toward any single community. Vice Mayor Fernandez stated that, given the significance\nof HIV-related issues in Miami Beach, keeping the placeholder would allow the Commission to\nevaluate the forthcoming revised proposal once the City Attorney confirmed its compliance with\nSB 1134. Vice Mayor Fernandez stated that maintaining the placeholder would preserve flexibility\nand avoid delaying funding if the program ultimately met statutory requirements.\nCFO Greene stated that if there were no objections, the Administration would proceed with\nkeeping the placeholder and would return with a Resolution to approve the re-scoped program\nonce it came forward. He noted that the Commission would retain authority to evaluate the revised\nproposal and determine whether it aligned with the City’s expectations.\nCommissioner Magazine asked for clarification regarding the Pride Lines funding.\nIn response, Vice Mayor Fernandez restated that Pride Lines had been asked to redesign the\nscope of services to comply with SB 1134. He explained that the organization intended to submit\na revised proposal centered on HIV testing and broader community health needs, and that\nkeeping the $47,000 as a placeholder would allow the Commission to review the updated\nproposal once the City Attorney confirmed its compliance.\nCFO Greene stated again that, absent objections, the Administration would keep the funding in\nthe budget as a placeholder and return with a formal item to approve the grant once the revised\nprogram was submitted and cleared. He then transitioned to the next set of decision points. CFO\nGreene stated that certain reductions had been identified in July and were incorporated into the\ncurrent budget as cuts unless restored. He reminded the Commission that the Administration\nrecommended restoring any selected items on a one-time basis unless they involved employee-\nrelated positions, which would require recurring funding.\nOMB Director Otto Stewart presented the slide containing 17 reduction items totaling $479,000.\nShe reviewed several examples, including employee-appreciation events, Halloween events,\nservice reductions in beach maintenance, and reductions involving crime-scene positions. She\nnoted one reduction involving a program whose provider was relocating outside Miami Beach and\nstated that staff recommended leaving that particular reduction in place. She asked the\nCommission to indicate which reductions, if any, they wished to restore.\nCommissioner Magazine stated that he would keep all of the listed reductions in place to preserve\nefficiencies and avoid expanding recurring costs unnecessarily. He stated that belt-tightening\nacross departments was appropriate given the City’s fiscal conditions.\nCommissioner Dominguez stated that while reductions were generally appropriate, certain items\nshould not be cut, including employee-appreciation events, the Halloween event, and the\nremaining crime-scene technician position. She stated that employee morale and retention were\ndirectly affected by recognition efforts, and maintaining morale was essential in a high-demand\nworkforce environment. She also stated that the crime-scene function was critical and that\neliminating the remaining filled position would negatively affect public-safety operations.\nCFO Greene responded to Commissioner Dominguez’s comments regarding the crime-scene\npositions. He explained that one of the crime-scene technicians would retire at the end of the\nmonth, which meant that the position would be vacant for the new Fiscal Year. He stated that\nanother position was already vacant, and the third was filled. He clarified that, in technical terms,\ntwo of the three positions would be vacant moving into the Fiscal Year. He explained that the\nAdministration could work with the Commission to determine how to address these vacancies\nmoving forward.\nCommissioner Dominguez stated that her counter-proposal was to keep employee-appreciation\nfunding, keep the Halloween event, and preserve funding for the remaining crime-scene\ntechnician position. She stated that morale matters and that employees deserved recognition for\ntheir work. She explained that the Halloween event was meaningful to families and staff and\nshould not be eliminated. She added that public safety staffing should not be reduced where\npositions were still needed to support operations.\nCommissioner Suarez stated that he disagreed with funding employee-appreciation or Halloween\nevents through taxpayer dollars. He stated that, in his view, such expenses were not essential\ngovernment functions. He said employees could be recognized without allocating public funding\nto such events. He then asked the Police Chief to explain whether the crime-scene positions were\nrecommende",
       "motion": "Magazine made a motion to adopt the Resolution; seconded by Vice Mayor Fernandez.",
       "amendments": [],
       "sponsors": [],
@@ -49237,6 +49239,387 @@
       "amendments": [],
       "sponsors": [],
       "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6190&compileOutputType=1#page=206"
+    },
+    {
+      "id": "2026-09-23-r7-a",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 A",
+      "title": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ADOPTING: 1) THE FINAL AD VALOREM MILLAGE OF 5.8060 MILLS FOR FISCAL YEAR 2027 FOR GENERAL OPERATING PURPOSES, WHICH IS FOUR AND ONE TENTH PERCENT (4.1%) MORE THAN THE \"ROLLED-BACK\" RATE OF 5.5762 MILLS; AND 2) THE DEBT SERVICE MILLAGE RATE OF 0.2693 MILLS.",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34470 was adopted. The Title of the Resolution was read into the record.",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 3,
+      "recordExcerpt": "ACTION: Resolution 2026-34470 was adopted. The Title of the Resolution was read into the record.\nThe Public Hearing was held. A motion was made by Vice-Mayor Fernandez to adopt the Resolution;\nseconded by Commissioner Suarez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nThe Item was called by the City Clerk. No public speakers requested to speak, and no discussion\nwas held.\nA motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Commissioner\nSuarez. Vote: 7-0.\nHandouts or Reference Materials:\n1. Ad in The Miami-Dade County Website for Legal Ads and Public Notices 09232026-01\n5:59:13 p.m.",
+      "motion": "A motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Commissioner Suarez.",
+      "amendments": [],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=3"
+    },
+    {
+      "id": "2026-09-23-r7-b",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 B",
+      "title": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ADOPTING THE FINAL BUDGETS FOR THE GENERAL, G.O. DEBT SERVICE, CITY CENTER RDA AD VALOREM TAXES, NORTH BEACH CRA AD VALOREM TAXES, ENTERPRISE, INTERNAL SERVICE, AND SPECIAL REVENUE FUNDS FOR FISCAL YEAR 2027",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34471 was adopted as amended. The Title of the Resolution was read into the record. The Public Hearing was held. A motion was made by Commissioner Magazine to adopt Item R7 B as amended, including direction to refer Attachment C, Item 38, to the Finance and Economic Resiliency Committee (FERC) for further review of its implementation; seconded by",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 4,
+      "recordExcerpt": "ACTION: Resolution 2026-34471 was adopted as amended. The Title of the Resolution was read\ninto the record. The Public Hearing was held. A motion was made by Commissioner Magazine to\nadopt Item R7 B as amended, including direction to refer Attachment C, Item 38, to the Finance and\nEconomic Resiliency Committee (FERC) for further review of its implementation; seconded by\nCommissioner Dominguez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nDIRECTION / REFERRAL TO FINANCE AND ECONOMIC RESILIENCY COMMITTEE:\nA referral was included directing that Attachment C, Item 38, an $800,000 Parking Department\nfunding request for loading-zone technology and curbside-management software, be reviewed by the\nFinance and Economic Resiliency Committee (FERC) for further discussion of its implementation.\nJason Greene to place on the Committee pending list. William Macdonald to handle.\nSee comments and action with Item R9 B.\nCommissioner Magazine moved to adopt the Resolution as amended and began discussing an issue\nhe observed while reviewing the budget documents. He stated that, as Chair of the Finance and\nEconomic Resiliency Committee, he had been reviewing line items individually and was generally\ncomfortable with the contents. However, he pointed out that one expenditure appeared unusually\nlarge: an $800,000 funding item listed as Item 38. He stated that he was “fine including it” but believed\nthe magnitude of the expenditure warranted additional review. Commissioner Magazine asked that\nthe Commission make a referral to the Finance and Economic Resiliency Committee (FERC) for a\ndeeper discussion on implementation of the item. He explained that although the funding appeared\nacceptable, he wanted to ensure a fuller understanding of operational needs and impacts before the\nCity proceeded. He clarified that this funding item was related to parking and was not an initiative\noriginally proposed by the Commission but by the Parking Department. He stated that this referral\nwould allow a more robust conversation about how the item would be implemented.\nCFO Jason Greene responded, stating that Item 38 was one of the “enhancements” being\nconsidered.\nCommissioner Magazine repeated that it had not come through Commission enhancement channels\nbut through the Parking Department. He stated that while he was comfortable including the item in\nthe budget, its cost made it prudent to refer the implementation details to FERC.\nOffice of Management & Budget Director Tameka Otto Stewart asked for clarification on which\nattachment Commissioner Magazine was referring to.\nCommissioner Magazine responded that he was referring to Attachment C, specifically the recurring\nexpenditure enhancements.\nCFO Greene located the referenced document and stated that the item listed in Attachment C 38 was\ndescribed as $800,000 additional funding for loading-zone technology and curbside-management\nsoftware.\nCommissioner Magazine stated that he was comfortable with that figure and description, but\nreiterated that he still wanted the matter referred to FERC for further implementation discussion given\nthe significance of the cost.\nCity Clerk Granado stated that the referral to FERC would be included as direction. He clarified that\nCommissioner Magazine had made the motion to adopt R7 B as amended, seconded by\nCommissioner Dominguez. He asked whether this was correct, and both Commissioner Magazine\nand CFO Greene confirmed that the motion was indeed as amended, including the FERC referral\nand any items discussed earlier in the meeting. City Clerk Granado stated that the amendments\ndiscussed at the beginning of the meeting (R9 B) were included within R7 B as amended.\nNo public speakers requested to speak, and the Public Hearing was closed.\nCity Clerk Granado called the vote. No Commissioners voiced opposition, and the Clerk announced\nthat R7 B was approved as amended. Vote: 7-0.\nHandouts or Reference Materials:\n1. Ad in The Miami-Dade County Website for Legal Ads and Public Notices 09232026-01\n6:01:46 p.m.",
+      "motion": "A motion was made by Commissioner Magazine to adopt Item R7 B as amended, including direction to refer Attachment C, Item 38, to the Finance and Economic Resiliency Committee (FERC) for further review of its implementation; seconded by Commissioner Dominguez.",
+      "amendments": [
+        "The official action was adopted as amended; see the approved minutes for the complete amendment language."
+      ],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=4"
+    },
+    {
+      "id": "2026-09-23-r7-c",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 C",
+      "title": "A RESOLUTION OF THE BOARD OF DIRECTORS OF THE NORMANDY SHORES LOCAL GOVERNMENT NEIGHBORHOOD IMPROVEMENT DISTRICT ADOPTING, ON A UNANIMOUS VOTE, THE FINAL AD VALOREM MILLAGE RATE OF 0.7364 MILLS FOR FISCAL YEAR 2027 FOR THE NORMANDY SHORES LOCAL GOVERNMENT NEIGHBORHOOD IMPROVEMENT DISTRICT, WHICH IS TWELVE AND TWO TENTHS PERCENT (12.2%) MORE THAN THE \"ROLLED-BACK\" RATE OF 0.6565 MILLS.",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34472 was adopted. The Title of the Resolution was read into the record.",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 5,
+      "recordExcerpt": "ACTION: Resolution 2026-34472 was adopted. The Title of the Resolution was read into the record.\nThe Public Hearing was held. A motion was made by Vice-Mayor Fernandez to adopt the Resolution;\nseconded by Dominguez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nThe City Clerk called the Item and announced that the Hybrid City Commission meeting was\nrecessing and convening as the Board of Directors of the Normandy Shores Local Government\nNeighborhood Improvement District for consideration of Items R7 C and R7 D.\nNo public speakers requested to speak, and no discussion was held.\nA motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Dominguez.\nVote: 7-0.\nHandouts or Reference Materials:\n1. Ad in The Miami-Dade County Website for Legal Ads and Public Notices 09232026-01\n6:02:17 p.m.",
+      "motion": "A motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Dominguez.",
+      "amendments": [],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=5"
+    },
+    {
+      "id": "2026-09-23-r7-d",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 D",
+      "title": "A RESOLUTION OF THE BOARD OF DIRECTORS OF THE NORMANDY SHORES LOCAL GOVERNMENT NEIGHBORHOOD IMPROVEMENT DISTRICT ADOPTING THE FINAL OPERATING BUDGET FOR FISCAL YEAR 2027.",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34473 was adopted. The Title of the Resolution was read into the record.",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 6,
+      "recordExcerpt": "ACTION: Resolution 2026-34473 was adopted. The Title of the Resolution was read into the record.\nThe Public Hearing was held. A motion was made by Vice-Mayor Fernandez to adopt the Resolution;\nseconded by Mayor Meiner. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nNo public speakers requested to speak, and no discussion was held.\nA motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Mayor Meiner.\nVote: 7-0.\nCity Clerk Granado concluded the meeting of the Board of Directors of the Normandy Shores Local\nGovernment Neighborhood Improvement District and reconvened the City Commission meeting\nfollowing adoption of the Item.\nHandouts or Reference Materials:\n1. Ad in The Miami-Dade County Website for Legal Ads and Public Notices 09232026-01\n6:02:49 p.m.",
+      "motion": "A motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Mayor Meiner.",
+      "amendments": [],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=6"
+    },
+    {
+      "id": "2026-09-23-r7-e",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 E",
+      "title": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ADOPTING THE FINAL CAPITAL IMPROVEMENT PLAN FOR FISCAL YEARS 2027 - 2031 AND ADOPTING THE CITY OF MIAMI BEACH FINAL CAPITAL BUDGET FOR FISCAL YEAR 2027.",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34474 was adopted. The Title of the Resolution was read into the record.",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 7,
+      "recordExcerpt": "ACTION: Resolution 2026-34474 was adopted. The Title of the Resolution was read into the record.\nThe Public Hearing was held. A motion was made by Vice-Mayor Fernandez to adopt the Resolution;\nseconded by Dominguez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nThe Item was called by the City Clerk. No public speakers requested to speak, and no discussion\nwas held.\nA motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Dominguez.\nVote: 7-0.\nHandouts or Reference Materials:\n1. Ad in The Miami-Dade County Website for Legal Ads and Public Notices 09232026-01\n6:03:21 p.m.",
+      "motion": "A motion was made by Vice-Mayor Fernandez to adopt the Resolution; seconded by Dominguez.",
+      "amendments": [],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=7"
+    },
+    {
+      "id": "2026-09-23-r7-f",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 F",
+      "title": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ADOPTING THE FINAL OPERATING BUDGET FOR THE NORTH BEACH COMMUNITY REDEVELOPMENT AREA FOR FISCAL YEAR 2027. JOINT CITY COMMISSION AND NBCRA",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34475 was adopted. Vice-Mayor Fernandez made a motion to adopt the Resolution; seconded by Commissioner Suarez. Vote: 7-0.",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 8,
+      "recordExcerpt": "ACTION: Resolution 2026-34475 was adopted. Vice-Mayor Fernandez made a motion to adopt the\nResolution; seconded by Commissioner Suarez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nThe Item was called by the City Clerk. No discussion was held.\nVice-Mayor Fernandez made a motion to adopt the Resolution; seconded by Commissioner Suarez.\nVote: 7-0.\nSee companion Item NBCRA 1.\n6:03:39 p.m.",
+      "motion": "Fernandez made a motion to adopt the Resolution; seconded by Commissioner Suarez.",
+      "amendments": [],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=8"
+    },
+    {
+      "id": "2026-09-23-r7-g",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R7 G",
+      "title": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ADOPTING AND APPROPRIATING THE NORTH BEACH COMMUNITY REDEVELOPMENT AGENCY CAPITAL BUDGET FOR FISCAL YEAR 2027 AND ADOPTING THE CAPITAL IMPROVEMENT PLAN FOR FISCAL YEARS 2027 – 2031.",
+      "outcome": "Passed",
+      "action": "Resolution 2026-34476 was adopted. Vice-Mayor Fernandez made a motion to adopt the Resolution; seconded by Commissioner Dominguez. Vote: 7-0.",
+      "voteSummary": "7-0",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Item-specific vote extracted from the minutes.",
+      "rollCall": [
+        {
+          "member": "Mayor Steven Meiner",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Tanya K. Bhatt",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Laura Dominguez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Vice-Mayor Alex Fernandez",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Joseph Magazine",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner Monica Matteo-Salinas",
+          "vote": "Yes"
+        },
+        {
+          "member": "Commissioner David Suarez",
+          "vote": "Yes"
+        }
+      ],
+      "voteBlockCount": 1,
+      "sourcePage": 8,
+      "recordExcerpt": "ACTION: Resolution 2026-34476 was adopted. Vice-Mayor Fernandez made a motion to adopt the\nResolution; seconded by Commissioner Dominguez. Vote: 7-0.\nVOTES:\nMayor Steven Meiner: Yes\nCommissioner Tanya K. Bhatt: Yes\nCommissioner Laura Dominguez: Yes\nVice-Mayor Alex Fernandez: Yes\nCommissioner Joseph Magazine: Yes\nCommissioner Monica Matteo-Salinas: Yes\nCommissioner David Suarez: Yes\nTameka Otto Stewart to handle.\nThe Item was called by the City Clerk. No discussion was held.\nVice-Mayor Fernandez made a motion to adopt the Resolution; seconded by Commissioner\nDominguez. Vote: 7-0.\nSee companion Item NBCRA 2.\nDiscussion Items - R9\n5:16:45 p.m.",
+      "motion": "Fernandez made a motion to adopt the Resolution; seconded by Commissioner Dominguez.",
+      "amendments": [],
+      "sponsors": [],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=8"
+    },
+    {
+      "id": "2026-09-23-r9-b",
+      "meetingId": 1321,
+      "meetingDate": "2026-09-23",
+      "itemNumber": "R9 B",
+      "title": "DISCUSS/TAKE ACTION: FY 2027 FUNDING FOR MIAMI BEACH PRIDE AND MIAMI-DADE LGBTQ+ & ALLIED CHAMBER OF COMMERCE.",
+      "outcome": "Passed",
+      "action": "RDA 721-2026 adopted. Motion made by Board Member Fernandez to adopt the RDA Resolution; seconded by Board Member Suarez. Vote: 7-0. Board Member Vicky Lopez was absent.",
+      "voteSummary": "",
+      "voteType": "Separate vote",
+      "consentPlacement": "Regular agenda",
+      "voteBasis": "Multiple roll calls appear in this item. Open the minutes to match each vote to its motion; no single vote is inferred here.",
+      "rollCall": [],
+      "voteBlockCount": 5,
+      "sourcePage": 15,
+      "recordExcerpt": "ACTION: RDA 721-2026 adopted. Motion made by Board Member Fernandez to adopt the RDA\nResolution; seconded by Board Member Suarez. Vote: 7-0. Board Member Vicky Lopez was absent.\nVOTES:\nChairperson of the Board Steven Meiner: Yes\nMember of the Board Tanya K. Bhatt: Yes\nMember of the Board Laura Dominguez: Yes\nMember of the Board Alex Fernandez: Yes\nMember of the Board Joseph Magazine: Yes\nMember of the Board Monica Matteo-Salinas: Yes\nMember of the Board David Suarez: Yes\nMember of the Board Miami-Dade County Commissioner Vicky Lopez: Absent\nTameka Otto Stewart to handle.\nSecretary Rafael E. Granado announced that the meeting of the Miami Beach Redevelopment\nAgency (RDA) is now in session. The Hybrid City Commission Meeting was recessed. Member of the\nBoard Miami-Dade County Commissioner Vicky Lopez is absent.\nThe City Clerk called the Item. No discussion was held.\nMotion made by Board Member Fernandez to adopt the RDA Resolution; seconded by Board Member\nSuarez. Vote: 7-0. Board Member Vicky Lopez was absent.\n6:04:46 p.m.\nRDA-2 A RESOLUTION OF THE CHAIRPERSON AND MEMBERS OF THE MIAMI BEACH\nREDEVELOPMENT AGENCY, ADOPTING THE FINAL OPERATING BUDGETS FOR THE CITY\nCENTER REDEVELOPMENT AREA, THE ANCHOR SHOPS AND PARKING GARAGE, THE\nPENNSYLVANIA AVENUE SHOPS AND PARKING GARAGE, AND THE COLLINS PARK PARKING\nGARAGE FOR FISCAL YEAR 2027.\nApplicable Area: Citywide\nManagement and Budget\nACTION: RDA 722-2026 adopted. Motion made by Board Member Fernandez to adopt the RDA\nResolution; seconded by Board Member Suarez. Vote: 7-0. Board Member Vicky Lopez was absent.\nVOTES:\nChairperson of the Board Steven Meiner: Yes\nMember of the Board Tanya K. Bhatt: Yes\nMember of the Board Laura Dominguez: Yes\nMember of the Board Alex Fernandez: Yes\nMember of the Board Joseph Magazine: Yes\nMember of the Board Monica Matteo-Salinas: Yes\nMember of the Board David Suarez: Yes\nMember of the Board Miami-Dade County Commissioner Vicky Lopez: Absent\nTameka Otto Stewart to handle.\nThe City Clerk called the Item. No discussion was held.\nMotion made by Board Member Fernandez to adopt the RDA Resolution; seconded by Board Member\nSuarez. Vote: 7-0. Board Member Vicky Lopez was absent.\nSecretary Rafael E. Granado announced that the meeting of the Miami Beach Redevelopment\nAgency (RDA) is concluded. The Hybrid City Commission Meeting is reconvening.\nNorth Beach Community Redevelopment Agency (NBCRA)\n6:05:01 p.m.\nCRA-1 A RESOLUTION OF THE CHAIRPERSON AND BOARD OF DIRECTORS OF THE NORTH BEACH\nCOMMUNITY REDEVELOPMENT AGENCY, ADOPTING THE FINAL OPERATING BUDGET FOR\nTHE NORTH BEACH COMMUNITY REDEVELOPMENT AREA FOR FISCAL YEAR 2027. JOINT\nCITY COMMISSION AND NBCRA\nApplicable Area: Citywide\nManagement and Budget\nACTION: CRA 048-2026 adopted. Motion made by Board Member Fernandez to adopt the NBCRA\nResolution; seconded by Suarez. Vote: 7-0.\nVOTES:\nChairperson Steven Meiner: Yes\nBoard Member Tanya K. Bhatt: Yes\nBoard Member Laura Dominguez: Yes\nBoard Member Alex Fernandez: Yes\nBoard Member Joseph Magazine: Yes\nBoard Member Monica Matteo-Salinas: Yes\nBoard Member David Suarez: Yes\nMember of the Board Miami-Dade County Commissioner Micky Steinberg: Absent\nTameka Otto Stewart to handle.\nSecretary Rafael E. Granado announced that the North Beach Community Redevelopment Agency\n(NBCRA) meeting is now in session. The Hybrid City Commission Meeting was recessed. Miami-\nDade County Commissioner Micky Steinberg was absent.\nThe City Clerk called the Item. No discussion was held.\nMotion made by Board Member Fernandez to adopt the NBCRA Resolution; seconded by Board\nMember Suarez. Vote: 7-0. Board Member Micky Steinberg was absent.\n6:05:25 p.m.\nCRA-2 A RESOLUTION OF THE CHAIRPERSON AND BOARD OF DIRECTORS OF THE NORTH BEACH\nCOMMUNITY REDEVELOPMENT AGENCY, ADOPTING AND APPROPRIATING THE NORTH\nBEACH COMMUNITY REDEVELOPMENT AGENCY CAPITAL BUDGET FOR FISCAL YEAR 2027\nAND ADOPTING THE CAPITAL IMPROVEMENT PLAN FOR FISCAL YEARS 2027 – 2031.\nApplicable Area: North Beach\nManagement and Budget\nACTION: CRA 049-2026 adopted. Motion made by Board Member Fernandez to adopt the NBCRA\nResolution; seconded by Suarez. Vote: 7-0.\nVOTES:\nChairperson Steven Meiner: Yes\nBoard Member Tanya K. Bhatt: Yes\nBoard Member Laura Dominguez: Yes\nBoard Member Alex Fernandez: Yes\nBoard Member Joseph Magazine: Yes\nBoard Member Monica Matteo-Salinas: Yes\nBoard Member David Suarez: Yes\nMember of the Board Miami-Dade County Commissioner Micky Steinberg: Absent\nTameka Otto Stewart to handle.\nThe City Clerk called the Item. No discussion was held.\nMotion made by Board Member Fernandez to adopt the NBCRA Resolution; seconded by Board\nMember Suarez. Vote: 7-0. Board Member Micky Steinberg was absent.\nSecretary Rafael E. Granado announced that the North Beach Community Redevelopment Agency\n(NBCRA) meeting has concluded. The Hybrid City Commission Meeting is reconvening, and all City\nCommission members are present.\n6:05:59 p.m.\nCLOSING REMARKS\nMayor Meiner stated that the moment represented something the entire City should be proud of,\nincluding its residents, businesses, and the City organization as a whole. He thanked Chief Financial\nOfficer Greene, Office of Management & Budget Director Tameka Otto Stewart, City Manager\nCarpenter, and all Departments for meeting the Commission’s challenge to tighten their budgets while\ncontinuing to deliver, and in certain cases increase, services for residents and businesses. He noted\nthat the City lowered its property tax rate for the second consecutive year, achieving the lowest\nmillage rate in 11 years. He explained that these gains occurred while enhancing services such as\nsanitation, Police, safe-streets initiatives, clean-streets efforts, and infrastructure improvements for\ndry streets. He emphasized that achieving these outcomes required significant effort from all involved.\nMayor Meiner thanked Commissioner Magazine for serving as Chair of the Finance and Economic\nResiliency Committee and for providing leadership throughout the budget process. He stated that it\nwas “a great day to celebrate,” and adjourned the meeting.\nThe Meeting was adjourned at 6:07:00 p.m.\nNotices\n1. MIAMI BEACH REDEVELOPMENT AGENCY (RDA) AND NORTH BEACH COMMUNITY\nREDEVELOPMENT AGENCY (CRA) MEMBERS.\nApplicable Area: Citywide\nCity Clerk\n2. USE OF AUDIO-VISUAL EQUIPMENT FOR PRESENTATIONS DURING PUBLIC MEETINGS.\n09232026-02\nApplicable Area: Citywide\nCity Clerk\n3. HOW A PERSON MAY PARTICIPATE DURING THE HYBRID CITY COMMISSION MEETING\n/ COMMISSION MEETING PROCEDURES. 09232026-02\nApplicable Area: Citywide\nCity Clerk\n4. 2026 COMMISSION MEETING DATES.\nApplicable Area: Citywide\nCity Clerk\n5. ADVERTISEMENTS.\nApplicable Area: Citywide\nCity Clerk\n6. RESIDENTS’ RIGHT TO KNOW ITEMS.\nApplicable Area: Citywide\nCity Clerk\n7. TIME CERTAIN AND AGENDA ITEMS LIST.\nApplicable Area: Citywide\nCity Clerk",
+      "motion": "",
+      "amendments": [],
+      "sponsors": [
+        "steven-meiner",
+        "monica-matteo-salinas",
+        "laura-dominguez",
+        "alex-fernandez",
+        "tanya-bhatt",
+        "david-suarez",
+        "joseph-magazine"
+      ],
+      "sourceUrl": "https://miamibeachfl.primegov.com/Public/CompiledDocument?meetingTemplateId=6262&compileOutputType=1#page=15"
     }
   ]
 }
