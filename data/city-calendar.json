@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-30T05:40:36.972Z",
+  "generatedAt": "2026-09-30T22:21:45.748Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-30&end_date=2026-11-29&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-30&end_date=2026-11-29&per_page=50&page=3"
   },
   "items": [
     {
@@ -228,6 +228,50 @@
       "note": ""
     },
     {
+      "id": "397672",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-10-12T09:00:00",
+      "endLocal": "2026-10-12T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-6/",
+      "note": ""
+    },
+    {
+      "id": "397674",
+      "title": "Transportation, Parking and Bicycle-Pedestrian Facilities Committee",
+      "description": "Hybrid Meeting https://bit.ly/3SUNUsj Meeting ID: 285434409450# Passcode: MDVo4c 1.786.636.1480 Phone Conference ID: 915395453# Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Parking Department Conference Room",
+      "startLocal": "2026-10-12T15:30:00",
+      "endLocal": "2026-10-12T17:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/transportation-parking-and-bicycle-pedestrian-facilities-committee-2/",
+      "note": ""
+    },
+    {
+      "id": "397676",
+      "title": "Hispanic Affairs Committee",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 2 nd Floor Building Department Conference Room",
+      "startLocal": "2026-10-12T17:00:00",
+      "endLocal": "2026-10-12T19:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/hispanic-affairs-committee-4/",
+      "note": ""
+    },
+    {
+      "id": "397696",
+      "title": "Mondays with Monica",
+      "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/83377402686 Meeting ID: 83377402686# 1.305.224.1968 or 833.7740.2686",
+      "startLocal": "2026-10-12T17:30:00",
+      "endLocal": "2026-10-12T18:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/mondays-with-monica-3/",
+      "note": ""
+    },
+    {
       "id": "10104231",
       "title": "Historic Preservation Board*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or .888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -239,6 +283,72 @@
       "note": ""
     },
     {
+      "id": "397678",
+      "title": "Marine and Waterfront Protection Authority",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-10-13T09:00:00",
+      "endLocal": "2026-10-13T11:00:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/marine-and-waterfront-protection-authority-3/",
+      "note": ""
+    },
+    {
+      "id": "397680",
+      "title": "Miami Beach Convention Center Advisory Board",
+      "description": "https://us06web.zoom.us/j/82374361950?pwd=VTCUuEl5alieDItjLu5RvuhtUFW7mj.1 Meeting ID: 82374361950# Passcode: 086744",
+      "startLocal": "2026-10-13T09:30:00",
+      "endLocal": "2026-10-13T11:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-convention-center-advisory-board-2/",
+      "note": ""
+    },
+    {
+      "id": "397682",
+      "title": "LGBTQIA+ Advisory Committee",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
+      "startLocal": "2026-10-13T13:30:00",
+      "endLocal": "2026-10-13T15:30:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/lgbtqia-advisory-committee-2/",
+      "note": ""
+    },
+    {
+      "id": "397684",
+      "title": "Committee on the Homeless",
+      "description": "Hybrid Meeting https://us06web.zoom.us/j/86841921916?pwd=3dL4W4Eg6kDfb3Rsv8075L3FgPvZbX.1 Meeting ID: 86841921916# Passcode: 284523 1.305.224.1968 or 868.4192.1916 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
+      "startLocal": "2026-10-13T15:30:00",
+      "endLocal": "2026-10-13T17:30:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/committee-on-the-homeless-2/",
+      "note": ""
+    },
+    {
+      "id": "397686",
+      "title": "Budget Advisory and Government Spending Efficiency Committee",
+      "description": "Hybrid Meeting https://bit.ly/4r1KP9b Meeting ID: 27611854106875# Passcode: DQ9JQ6v6 1.786.636.1480 or 203.982.903 Access ID: 203982903# Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-10-13T16:30:00",
+      "endLocal": "2026-10-13T18:30:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/budget-advisory-and-government-spending-efficiency-committee-2/",
+      "note": ""
+    },
+    {
+      "id": "397688",
+      "title": "North Beach CRA Advisory Committee",
+      "description": "Normandy Shores Golf Club 2401 Biarritz Drive",
+      "startLocal": "2026-10-13T16:30:00",
+      "endLocal": "2026-10-13T18:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/north-beach-cra-advisory-committee-2/",
+      "note": ""
+    },
+    {
       "id": "10104082",
       "title": "City Commission*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -247,6 +357,28 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission/2026-10-14/",
+      "note": ""
+    },
+    {
+      "id": "397690",
+      "title": "Fire and Police Pension Board",
+      "description": "Hybrid Meeting https://us06web.zoom.us/j/82535765796 Meeting ID: 82535765796# 1.305.224.1968 or 825.3576.5796 Fire and Police Pension Office 1111 Lincoln Road, Suite 801",
+      "startLocal": "2026-10-15T08:30:00",
+      "endLocal": "2026-10-15T10:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/fire-and-police-pension-board-4/",
+      "note": ""
+    },
+    {
+      "id": "397692",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-10-15T09:00:00",
+      "endLocal": "2026-10-15T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-15/",
       "note": ""
     },
     {
@@ -269,6 +401,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-10-16/",
+      "note": ""
+    },
+    {
+      "id": "397694",
+      "title": "Audit Committee",
+      "description": "Hybrid Meeting https://teams.microsoft.com/meet/284253159459068?p=PxFy2Yw7bhQ3UBGfrz Meeting ID: 284253159459068# Passcode: fk2gT3eY 1.786.636.1480 or 219.490.248 Access ID: 219490248# Old City Hall Miami Beach 1130 Washington Avenue, 6 th Floor",
+      "startLocal": "2026-10-16T09:00:00",
+      "endLocal": "2026-10-16T11:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/audit-committee-2/",
       "note": ""
     },
     {
