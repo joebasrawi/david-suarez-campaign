@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-09-30T22:21:45.748Z",
+  "generatedAt": "2026-10-01T06:05:57.402Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-09-30&end_date=2026-11-29&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-01&end_date=2026-11-30&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "397528",
-      "title": "Special Magistrate Hearing – Revocation of License",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-09-30T11:00:00",
-      "endLocal": "2026-09-30T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearing-revocation-of-license/",
-      "note": ""
-    },
     {
       "id": "397430",
       "title": "Special Magistrate Hearings",
