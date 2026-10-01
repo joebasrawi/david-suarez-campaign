@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T17:11:21.516Z",
+  "generatedAt": "2026-10-01T22:45:49.647Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "409244",
+      "title": "Miami Beach To Honor Legacy of Arthur “Big Art” Martineau",
+      "summary": "Martineau changed lives as executive director of the Miami Beach PAL",
+      "publishedAt": "2026-10-01T12:56:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-legacy-of-arthur-big-art-martineau/",
+      "label": "Official city news"
+    },
     {
       "id": "408969",
       "title": "Free Mobile Veterinary Care Coming to Miami Beach",
@@ -77,14 +85,6 @@
       "summary": "The city scored an A+ in stormwater compliance based on an independent report released by nonprofit Miami Waterkeeper",
       "publishedAt": "2026-08-27T11:02:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-outperforms-all-other-miami-dade-cities-in-stormwater-report-card/",
-      "label": "Official city news"
-    },
-    {
-      "id": "407861",
-      "title": "New Need-Based Parking Discount Available for Miami Beach Workers",
-      "summary": "Application window opened today, August 5 – August 19, 2026",
-      "publishedAt": "2026-08-05T08:59:00",
-      "url": "https://www.miamibeachfl.gov/new-need-based-parking-discount-available-for-miami-beach-workers/",
       "label": "Official city news"
     }
   ]

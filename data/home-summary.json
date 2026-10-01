@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T11:33:03.305Z",
+  "generatedAt": "2026-10-01T22:46:14.698Z",
   "youtube": {
     "items": [
       {
@@ -27,19 +27,19 @@
   "news": {
     "items": [
       {
+        "id": "409244",
+        "title": "Miami Beach To Honor Legacy of Arthur “Big Art” Martineau",
+        "summary": "Martineau changed lives as executive director of the Miami Beach PAL",
+        "publishedAt": "2026-10-01T12:56:00",
+        "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-legacy-of-arthur-big-art-martineau/",
+        "label": "Official city news"
+      },
+      {
         "id": "408969",
         "title": "Free Mobile Veterinary Care Coming to Miami Beach",
         "summary": "Miami-Dade County Animal Services’ Wellness on Wheels (WOW) Mobile will provide free pet wellness services to Miami Beach residents",
         "publishedAt": "2026-09-22T12:44:00",
         "url": "https://www.miamibeachfl.gov/free-mobile-veterinary-care-coming-to-miami-beach/",
-        "label": "Official city news"
-      },
-      {
-        "id": "408935",
-        "title": "Calling All Young Musicians for the Miami Beach Youth Music Festival",
-        "summary": "Auditions are now open for musicians 18 and under",
-        "publishedAt": "2026-09-21T09:22:00",
-        "url": "https://www.miamibeachfl.gov/calling-all-young-musicians-for-the-miami-beach-youth-music-festival/",
         "label": "Official city news"
       }
     ]
