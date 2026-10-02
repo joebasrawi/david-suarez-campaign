@@ -1,56 +1,12 @@
 {
-  "generatedAt": "2026-10-01T22:45:35.275Z",
+  "generatedAt": "2026-10-02T05:48:56.622Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-01&end_date=2026-11-30&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-02&end_date=2026-12-01&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "397430",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-01T09:00:00",
-      "endLocal": "2026-10-01T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-13/",
-      "note": ""
-    },
-    {
-      "id": "392116",
-      "title": "West Avenue Phase II Neighborhood Improvement Project: On Site Walkthrough",
-      "description": "Join Commissioner Alex J. Fernandez for an in-person community walkthrough to see the progress firsthand, learn about upcoming plans and get the latest updates on the construction site for the West Avenue Phase II Neighborhood Improvement Project. Thursday, October 1 11 AM On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
-      "startLocal": "2026-10-01T11:00:00",
-      "endLocal": "2026-10-01T11:00:00",
-      "location": "On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-on-site-walkthrough-8/",
-      "note": ""
-    },
-    {
-      "id": "397608",
-      "title": "Production Industry Council",
-      "description": "Hybrid Meeting https://bit.ly/4hh9zZp Meeting ID: 228657923664477# Passcode: 5y7Bk9PY 1.786.636.1480 Access ID: 506284348# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
-      "startLocal": "2026-10-01T17:00:00",
-      "endLocal": "2026-10-01T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/production-industry-council-4/",
-      "note": ""
-    },
-    {
-      "id": "397434",
-      "title": "Sunshine Meeting hosted by Commissioner Matteo-Salinas to discuss future Public Works projects in the Lakeview Neighborhood",
-      "description": "",
-      "startLocal": "2026-10-01T18:00:00",
-      "endLocal": "2026-10-01T20:00:00",
-      "location": "Muss Park, 4300 Chase Avenue, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/sunshine-meeting-hosted-by-commissioner-matteo-salinas-to-discuss-future-public-works-projects-in-the-lakeview-neighborhood/",
-      "note": ""
-    },
     {
       "id": "397537",
       "title": "Special Magistrate Hearings",
@@ -186,10 +142,10 @@
     {
       "id": "397660",
       "title": "Community Meeting hosted by Laura Dominguez to discuss the South Beach Marine Park",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor and Commissioner’s Conference Room",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor and Commissioner’s Conference Room https://miamibeachfl-gov.zoom.us/j/82090365375 305.224.1968 or 888 475 4499 Webinar ID: 820 9036 5375",
       "startLocal": "2026-10-08T16:30:00",
       "endLocal": "2026-10-08T18:00:00",
-      "location": "",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/community-meeting-hosted-by-laura-dominguez-to-discuss-the-south-beach-marine-park/",
       "note": ""
