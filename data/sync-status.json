@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T21:25:46.419Z",
+  "generatedAt": "2026-10-04T06:01:44.877Z",
   "source": {
     "label": "Public data publishing workflow",
     "url": "https://github.com/joebasrawi/david-suarez-campaign/actions/workflows/sync-public-data.yml"
@@ -7,45 +7,45 @@
   "items": [
     {
       "name": "youtube",
-      "status": "success",
-      "checkedAt": "2026-10-03T21:24:53.592Z"
+      "status": "failed",
+      "checkedAt": "2026-10-04T06:00:56.329Z",
+      "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "calendar",
       "status": "success",
-      "checkedAt": "2026-10-03T21:24:54.534Z"
+      "checkedAt": "2026-10-04T06:00:58.397Z"
     },
     {
       "name": "agendas",
       "status": "failed",
-      "checkedAt": "2026-10-03T21:24:55.923Z",
+      "checkedAt": "2026-10-04T06:01:12.691Z",
       "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "actions",
-      "status": "failed",
-      "checkedAt": "2026-10-03T21:25:26.179Z",
-      "message": "The source could not be refreshed. The last validated snapshot remains available."
+      "status": "success",
+      "checkedAt": "2026-10-04T06:01:19.855Z"
     },
     {
       "name": "news",
       "status": "success",
-      "checkedAt": "2026-10-03T21:25:27.029Z"
+      "checkedAt": "2026-10-04T06:01:20.862Z"
     },
     {
       "name": "projects",
       "status": "success",
-      "checkedAt": "2026-10-03T21:25:45.805Z"
+      "checkedAt": "2026-10-04T06:01:40.636Z"
     },
     {
       "name": "neighborhoods",
       "status": "success",
-      "checkedAt": "2026-10-03T21:25:45.931Z"
+      "checkedAt": "2026-10-04T06:01:44.244Z"
     },
     {
       "name": "records",
       "status": "failed",
-      "checkedAt": "2026-10-03T21:25:46.338Z",
+      "checkedAt": "2026-10-04T06:01:44.809Z",
       "message": "The source could not be refreshed. The last validated snapshot remains available."
     }
   ]

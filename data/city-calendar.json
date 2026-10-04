@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-03T05:25:30.908Z",
+  "generatedAt": "2026-10-04T06:00:58.395Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-03&end_date=2026-12-02&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-04&end_date=2026-12-03&per_page=50&page=3"
   },
   "items": [
     {
@@ -555,6 +555,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-11-24/",
+      "note": ""
+    },
+    {
+      "id": "392566",
+      "title": "West Avenue Phase II Neighborhood Improvement Project: On Site Walkthrough",
+      "description": "Join Commissioner Alex J. Fernandez for an in-person community walkthrough to see the progress firsthand, learn about upcoming plans and get the latest updates on the construction site for the West Avenue Phase II Neighborhood Improvement Project. Thursday, December 3 11 AM On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
+      "startLocal": "2026-12-03T11:00:00",
+      "endLocal": "2026-12-03T11:00:00",
+      "location": "On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-on-site-walkthrough-9/",
       "note": ""
     }
   ]
