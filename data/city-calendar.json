@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04T06:00:58.395Z",
+  "generatedAt": "2026-10-05T05:51:03.299Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-04&end_date=2026-12-03&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-05&end_date=2026-12-04&per_page=50&page=3"
   },
   "items": [
     {
@@ -566,6 +566,17 @@
       "location": "On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-on-site-walkthrough-9/",
+      "note": ""
+    },
+    {
+      "id": "10104224",
+      "title": "Board of Adjustment*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82869615309 1.301.715.8592 or 877.853.5257 Access ID: 82869615309# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-12-04T09:00:00",
+      "endLocal": "2026-12-04T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-12-04/",
       "note": ""
     }
   ]
