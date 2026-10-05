@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T05:51:03.299Z",
+  "generatedAt": "2026-10-05T14:53:23.257Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -228,17 +228,6 @@
       "note": ""
     },
     {
-      "id": "397680",
-      "title": "Miami Beach Convention Center Advisory Board",
-      "description": "https://us06web.zoom.us/j/82374361950?pwd=VTCUuEl5alieDItjLu5RvuhtUFW7mj.1 Meeting ID: 82374361950# Passcode: 086744",
-      "startLocal": "2026-10-13T09:30:00",
-      "endLocal": "2026-10-13T11:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/miami-beach-convention-center-advisory-board-2/",
-      "note": ""
-    },
-    {
       "id": "397682",
       "title": "LGBTQIA+ Advisory Committee",
       "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
@@ -324,6 +313,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion-6/",
+      "note": ""
+    },
+    {
+      "id": "397812",
+      "title": "Special Events Community Reviews",
+      "description": "Microsoft Teams Meeting http://bit.ly/4xMFeaD Meeting ID: 254413135646867# Passcode: oe74mF7r 1.786.636.1480 Access ID: 695213131#",
+      "startLocal": "2026-10-15T14:00:00",
+      "endLocal": "2026-10-15T15:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-events-community-reviews/",
       "note": ""
     },
     {
