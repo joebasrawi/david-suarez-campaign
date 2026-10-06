@@ -1,34 +1,12 @@
 {
-  "generatedAt": "2026-10-06T00:08:01.331Z",
+  "generatedAt": "2026-10-06T06:29:45.961Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-05&end_date=2026-12-05&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-06&end_date=2026-12-05&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "397537",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-05T09:00:00",
-      "endLocal": "2026-10-05T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-14/",
-      "note": ""
-    },
-    {
-      "id": "397539",
-      "title": "Sister Cities",
-      "description": "Hybrid Meeting https://bit.ly/4056H89 Meeting ID: 263778306138# Passcode: a8yH93vn 1.786.636.1480 Conference ID: 803556619# Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Economic Development Conference Room",
-      "startLocal": "2026-10-05T12:00:00",
-      "endLocal": "2026-10-05T14:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/sister-cities-2/",
-      "note": ""
-    },
     {
       "id": "10104213",
       "title": "Planning Board*",
