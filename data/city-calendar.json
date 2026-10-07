@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T13:34:13.750Z",
+  "generatedAt": "2026-10-07T23:10:11.105Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -137,6 +137,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/mondays-with-monica-3/",
+      "note": ""
+    },
+    {
+      "id": "397894",
+      "title": "SOFNA – Special Meeting Regarding the Live Local Act",
+      "description": "Continuum South Tower 100 South Pointe Drive, 4 th Floor",
+      "startLocal": "2026-10-12T18:00:00",
+      "endLocal": "2026-10-12T20:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/sofna-special-meeting-regarding-the-live-local-act/",
       "note": ""
     },
     {
@@ -423,6 +434,39 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/early-voting-for-the-november-3-2026-general-election-miami-beach-special-election-a-secure-vote-by-mail-drop-box-will-be-available-and-staffed-at-each-early-voting-location-during-early-voting-ho/2026-10-22/",
+      "note": ""
+    },
+    {
+      "id": "397887",
+      "title": "Special Magistrate Hearings",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-10-22T09:00:00",
+      "endLocal": "2026-10-22T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-17/",
+      "note": ""
+    },
+    {
+      "id": "397889",
+      "title": "Parks & Recreational Facilities Advisory Board",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-10-22T17:30:00",
+      "endLocal": "2026-10-22T19:30:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/parks-recreational-facilities-advisory-board-2/",
+      "note": ""
+    },
+    {
+      "id": "397891",
+      "title": "Public Safety Appreciation Day",
+      "description": "City Hall will be closed except for Early Voting",
+      "startLocal": "2026-10-23",
+      "endLocal": "2026-10-23",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/public-safety-appreciation-day/",
       "note": ""
     },
     {
