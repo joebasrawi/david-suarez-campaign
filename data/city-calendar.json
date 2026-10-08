@@ -1,45 +1,12 @@
 {
-  "generatedAt": "2026-10-07T23:10:11.105Z",
+  "generatedAt": "2026-10-08T06:15:22.382Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-07&end_date=2026-12-06&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-08&end_date=2026-12-07&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "397236",
-      "title": "We Stand with Israel",
-      "description": "You are cordially invited to join Mayor Steven Meiner and the City Commission to honor the victims of the October 7, 2023 attack. Wednesday, October 7 9 AM Miami Beach Fire Station 2 2300 Pine Tree Drive",
-      "startLocal": "2026-10-07T09:00:00",
-      "endLocal": "2026-10-07T09:00:00",
-      "location": "Miami Beach Fire Station 2, 2300 Pine Tree Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/we-stand-with-israel/",
-      "note": ""
-    },
-    {
-      "id": "397839",
-      "title": "MBNA and FDOT meeting with elected officials to discuss ongoing projects in the Mid-Beach neighborhood",
-      "description": "Zoom Meeting https://us06web.zoom.us/j/7684255934?pwd=uQOqIXH3Azx7gJXCg36ajQWmuT40TI.1&omn=83490921179 Meeting ID: 7684255934#",
-      "startLocal": "2026-10-07T16:00:00",
-      "endLocal": "2026-10-07T17:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/mbna-and-fdot-meeting-with-elected-officials-to-discuss-ongoing-projects-in-the-mid-beach-neighborhood/",
-      "note": ""
-    },
-    {
-      "id": "397606",
-      "title": "Production Industry Council",
-      "description": "Hybrid Meeting https://bit.ly/4rEZiK3 Meeting ID: 245992362013940# Passcode: N83Jt6ps 1.786.636.1480 Access ID: 488754961# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
-      "startLocal": "2026-10-07T17:00:00",
-      "endLocal": "2026-10-07T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/production-industry-council-2/",
-      "note": ""
-    },
     {
       "id": "10104250",
       "title": "Design Review Board*",
