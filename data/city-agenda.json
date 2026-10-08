@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T13:43:23.043Z",
+  "generatedAt": "2026-10-08T23:25:44.509Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-10-14",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 199,
+    "itemCount": 202,
     "url": "https://miamibeachagenda.com/agenda/october/14/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6247"
   },
@@ -23,7 +23,7 @@
     {
       "id": "consent-agenda-committee-assignments",
       "label": "Consent Agenda — Committee Assignments",
-      "count": 8
+      "count": 10
     },
     {
       "id": "consent-agenda-committee-reports",
@@ -48,7 +48,7 @@
     {
       "id": "regular-agenda-discussables",
       "label": "Regular Agenda — Discussables",
-      "count": 34
+      "count": 35
     },
     {
       "id": "city-attorney-reports-executive-sessions-r10",
@@ -355,6 +355,52 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/10/14/2026/C4H"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-committee-assignments-c4i",
+      "itemNumber": "C4I",
+      "type": "Committee assignment",
+      "section": "Consent Agenda — Committee Assignments",
+      "title": "Study Robot/drone Litter Collection Feasibility",
+      "summary": "Study Robot/drone Litter Collection Feasibility. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DUAL REFERRAL TO THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE (PSNQLC) AND FINANCE AND ECONOMIC RESILIENCY COMMITTEE (FERC) TO DISCUSS THE FEASIBILITY, COST, AND BENEFITS OF DEPLOYING ROBOTS AND DRONES CAPABLE OF DETECTING AND COLLECTING LITTER IN MIAMI BEACH PARKS, BEACHES, AND PUBLIC SPACES. THE REFERRAL SHOULD INCLUDE A REVIEW OF AVAILABLE TECHNOLOGIES, POTENTIAL PILOT PROGRAMS, REGULATORY CONSIDERATIONS, AND OPERATIONAL IMPACTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C4I"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-committee-assignments-c4j",
+      "itemNumber": "C4J",
+      "type": "Committee assignment",
+      "section": "Consent Agenda — Committee Assignments",
+      "title": "Rename Golf Club Pickleball Courts Dan Gelber",
+      "summary": "Rename Golf Club Pickleball Courts Dan Gelber. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "REFERRAL TO THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE TO CONSIDER RENAMING THE PICKLEBALL COURTS AT THE MIAMI BEACH GOLF CLUB AS THE DAN GELBER PICKLEBALL COURTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Monica Matteo-Salinas"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C4J"
     },
     {
       "id": "2026-10-14-consent-agenda-committee-reports-c6a",
@@ -2637,7 +2683,7 @@
       "title": "Adopt First Amendment to Fy2027 Capital Budget",
       "summary": "Adopt First Amendment to Fy2027 Capital Budget. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ADOPTING THE FIRST AMENDMENT TO THE CAPITAL BUDGET FOR FISCAL YEAR 2027 AS SET FORTH IN ATTACHMENTS A, “PROJECTS”; B, “SOURCE OF FUNDS”; AND C “PROGRAMS”.",
-      "status": "On upcoming agenda",
+      "status": "Item Withdrawn",
       "meetingDate": "2026-10-14",
       "hearingTime": "2:00 p.m. Public Hearing",
       "neighborhood": "South Beach",
@@ -3293,10 +3339,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner David Suarez"
+        "Commissioner David Suarez",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
-        "david-suarez"
+        "david-suarez",
+        "alex-fernandez"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -3413,10 +3461,12 @@
       "hearingTime": "2:15 p.m. Public Hearing",
       "neighborhood": "South Beach",
       "departments": [
-        "City Manager"
+        "City Manager",
+        "Resolution uploaded on 10/8/2026"
       ],
       "sponsors": [
         "City Manager",
+        "Resolution uploaded on 10/8/2026",
         "Commissioner Joseph Magazine",
         "Commissioner Tanya Bhatt"
       ],
@@ -4246,6 +4296,32 @@
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/10/14/2026/R9AH"
+    },
+    {
+      "id": "2026-10-14-regular-agenda-discussables-r9ai",
+      "itemNumber": "R9AI",
+      "type": "Commission item",
+      "section": "Regular Agenda — Discussables",
+      "title": "AI Streamlines Building Permit Process",
+      "summary": "AI Streamlines Building Permit Process. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "DISCUSS/TAKE ACTION: NEXT STEPS IN THE IMPLEMENTATION OF ARTIFICIAL INTELLIGENCE TO STREAMLINE BUILDING PERMITTING PROCESS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "Item moved from C4 G"
+      ],
+      "sponsors": [
+        "Item moved from C4 G",
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/R9AI"
     },
     {
       "id": "2026-10-14-regular-agenda-discussables-r9b",
