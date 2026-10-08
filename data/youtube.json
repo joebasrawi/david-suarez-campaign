@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:27:35.449Z",
+  "generatedAt": "2026-10-08T13:43:19.092Z",
   "source": {
     "label": "Commissioner David Suarez on YouTube",
     "url": "https://www.youtube.com/@CommissionerDavidSuarez",
@@ -8,11 +8,21 @@
   "channelId": "UCFSRLFAu-wZdguhiP021UUA",
   "items": [
     {
+      "id": "hy1_Ey4oWik",
+      "title": "Live Local Act: Miami Beach Can Fight Back — Here's How",
+      "series": "City Issues",
+      "publishedAt": "2026-10-08T03:49:04+00:00",
+      "updatedAt": "2026-10-08T10:48:24+00:00",
+      "url": "https://www.youtube.com/watch?v=hy1_Ey4oWik",
+      "thumbnail": "https://i.ytimg.com/vi/hy1_Ey4oWik/hqdefault.jpg",
+      "duration": "3:06"
+    },
+    {
       "id": "WpDh1IzQ-mQ",
       "title": "How Miami Beach Government Works, Part 4: Who Actually Controls What?",
       "series": "Miami Beach Civics",
       "publishedAt": "2026-10-02T15:34:52+00:00",
-      "updatedAt": "2026-10-04T14:58:42+00:00",
+      "updatedAt": "2026-10-07T07:52:57+00:00",
       "url": "https://www.youtube.com/watch?v=WpDh1IzQ-mQ",
       "thumbnail": "https://i.ytimg.com/vi/WpDh1IzQ-mQ/hqdefault.jpg",
       "duration": "2:15"
@@ -89,7 +99,7 @@
       "title": "Recycling Ancient Alps Buildings for Future Functionality #shorts",
       "series": "City Issues",
       "publishedAt": "2026-08-20T13:48:48+00:00",
-      "updatedAt": "2026-09-29T21:15:32+00:00",
+      "updatedAt": "2026-10-05T13:56:24+00:00",
       "url": "https://www.youtube.com/watch?v=u7B-nMyBJXA",
       "thumbnail": "https://i.ytimg.com/vi/u7B-nMyBJXA/hqdefault.jpg"
     },
