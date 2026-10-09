@@ -1,67 +1,12 @@
 {
-  "generatedAt": "2026-10-08T13:43:20.821Z",
+  "generatedAt": "2026-10-09T06:17:53.500Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-08&end_date=2026-12-07&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-09&end_date=2026-12-08&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10104250",
-      "title": "Design Review Board*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-08T09:00:00",
-      "endLocal": "2026-10-08T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/design-review-board-3/2026-10-08/",
-      "note": ""
-    },
-    {
-      "id": "397547",
-      "title": "Cultural Arts Council",
-      "description": "Hybrid Meeting https://bit.ly/4iRb67v Meeting ID: 21674066867961# Passcode: a4e2dz3Y 1.786.636.1480 or 583.158.791 Access ID: 583158791# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor Conference Room",
-      "startLocal": "2026-10-08T12:00:00",
-      "endLocal": "2026-10-08T14:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/cultural-arts-council-3/",
-      "note": ""
-    },
-    {
-      "id": "397549",
-      "title": "General Obligation Bond Oversight Committee",
-      "description": "Hybrid Meeting https://us02web.zoom.us/j/7265621380?omn=88619478810 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-10-08T16:00:00",
-      "endLocal": "2026-10-08T18:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/general-obligation-bond-oversight-committee-2/",
-      "note": ""
-    },
-    {
-      "id": "397660",
-      "title": "Community Meeting hosted by Laura Dominguez to discuss the South Beach Marine Park",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3rd Floor Commission Chamber https://miamibeachfl-gov.zoom.us/j/82090365375 305.224.1968 or 888 475 4499 Webinar ID: 820 9036 5375",
-      "startLocal": "2026-10-08T16:30:00",
-      "endLocal": "2026-10-08T18:00:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/community-meeting-hosted-by-laura-dominguez-to-discuss-the-south-beach-marine-park/",
-      "note": ""
-    },
-    {
-      "id": "397610",
-      "title": "Sunshine Meeting hosted by Commissioner Matteo-Salinas to discuss future Public Works projects in the Lakeview Neighborhood",
-      "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/87611722129 Webinar ID : 87611722129# 1.305.224.1968 or 888.475.4499",
-      "startLocal": "2026-10-08T18:00:00",
-      "endLocal": "2026-10-08T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/sunshine-meeting-hosted-by-commissioner-matteo-salinas-to-discuss-future-public-works-projects-in-the-lakeview-neighborhood-2/",
-      "note": ""
-    },
     {
       "id": "397672",
       "title": "Special Magistrate Hearings",
@@ -742,6 +687,28 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-12-04/",
+      "note": ""
+    },
+    {
+      "id": "10104215",
+      "title": "Planning Board*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86143426327 Access ID: 86143426327# 1.929.205.6099 or 877.853.5257 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-12-08T09:00:00",
+      "endLocal": "2026-12-08T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-12-08/",
+      "note": ""
+    },
+    {
+      "id": "394809",
+      "title": "Virtual Town Hall Meeting with Mayor Steven Meiner",
+      "description": "https://miamibeachfl-gov.zoom.us/j/89869137516 1.929.205.6099 or 877.853.5257 Meeting ID: 89869137516#",
+      "startLocal": "2026-12-08T17:30:00",
+      "endLocal": "2026-12-08T19:00:00",
+      "location": "Zoom Meeting",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/virtual-town-hall-meeting-with-mayor-steven-meiner-2/",
       "note": ""
     }
   ]
