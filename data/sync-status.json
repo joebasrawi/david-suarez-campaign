@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T18:24:41.481Z",
+  "generatedAt": "2026-10-10T06:01:53.868Z",
   "source": {
     "label": "Public data publishing workflow",
     "url": "https://github.com/joebasrawi/david-suarez-campaign/actions/workflows/sync-public-data.yml"
@@ -7,43 +7,46 @@
   "items": [
     {
       "name": "youtube",
-      "status": "success",
-      "checkedAt": "2026-10-09T18:24:21.137Z"
+      "status": "failed",
+      "checkedAt": "2026-10-10T06:00:46.856Z",
+      "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "calendar",
       "status": "success",
-      "checkedAt": "2026-10-09T18:24:22.115Z"
+      "checkedAt": "2026-10-10T06:00:48.134Z"
     },
     {
       "name": "agendas",
-      "status": "success",
-      "checkedAt": "2026-10-09T18:24:24.175Z"
+      "status": "failed",
+      "checkedAt": "2026-10-10T06:01:18.137Z",
+      "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "actions",
       "status": "success",
-      "checkedAt": "2026-10-09T18:24:35.044Z"
+      "checkedAt": "2026-10-10T06:01:28.280Z"
     },
     {
       "name": "news",
-      "status": "success",
-      "checkedAt": "2026-10-09T18:24:36.160Z"
+      "status": "failed",
+      "checkedAt": "2026-10-10T06:01:29.015Z",
+      "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "projects",
       "status": "success",
-      "checkedAt": "2026-10-09T18:24:40.663Z"
+      "checkedAt": "2026-10-10T06:01:49.007Z"
     },
     {
       "name": "neighborhoods",
       "status": "success",
-      "checkedAt": "2026-10-09T18:24:40.850Z"
+      "checkedAt": "2026-10-10T06:01:52.952Z"
     },
     {
       "name": "records",
       "status": "failed",
-      "checkedAt": "2026-10-09T18:24:41.378Z",
+      "checkedAt": "2026-10-10T06:01:53.766Z",
       "message": "The source could not be refreshed. The last validated snapshot remains available."
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-09T06:17:53.500Z",
+  "generatedAt": "2026-10-10T06:00:48.131Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-09&end_date=2026-12-08&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-10&end_date=2026-12-09&per_page=50&page=3"
   },
   "items": [
     {
@@ -709,6 +709,17 @@
       "location": "Zoom Meeting",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/virtual-town-hall-meeting-with-mayor-steven-meiner-2/",
+      "note": ""
+    },
+    {
+      "id": "10104084",
+      "title": "City Commission*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-12-09",
+      "endLocal": "2026-12-09",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/city-commission/2026-12-09/",
       "note": ""
     }
   ]
