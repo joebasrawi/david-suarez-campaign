@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T18:24:41.480Z",
+  "generatedAt": "2026-10-10T12:41:55.576Z",
   "youtube": {
     "items": [
       {
@@ -19,7 +19,7 @@
       "type": "City Commission",
       "date": "2026-10-14",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-      "itemCount": 203,
+      "itemCount": 207,
       "url": "https://miamibeachagenda.com/agenda/october/14/2026",
       "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6247"
     }
@@ -27,19 +27,19 @@
   "news": {
     "items": [
       {
-        "id": "409244",
-        "title": "Miami Beach To Honor Legacy of Arthur “Big Art” Martineau",
-        "summary": "Martineau changed lives as executive director of the Miami Beach PAL",
-        "publishedAt": "2026-10-01T12:56:00",
-        "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-legacy-of-arthur-big-art-martineau/",
+        "id": "409516",
+        "title": "Miami Beach to Award Grants for Privately-Owned Seawalls",
+        "summary": "Applications are now open for up to $20,000 per property through the city’s Private Property Adaptation Program",
+        "publishedAt": "2026-10-06T11:54:00",
+        "url": "https://www.miamibeachfl.gov/miami-beach-to-award-grants-for-privately-owned-seawalls/",
         "label": "Official city news"
       },
       {
-        "id": "408969",
-        "title": "Free Mobile Veterinary Care Coming to Miami Beach",
-        "summary": "Miami-Dade County Animal Services’ Wellness on Wheels (WOW) Mobile will provide free pet wellness services to Miami Beach residents",
-        "publishedAt": "2026-09-22T12:44:00",
-        "url": "https://www.miamibeachfl.gov/free-mobile-veterinary-care-coming-to-miami-beach/",
+        "id": "409521",
+        "title": "Third Anniversary of Attack on Israel to Be Observed in Miami Beach",
+        "summary": "City officials will honor the victims of the Oct. 7 attack and reaffirm support for Israel",
+        "publishedAt": "2026-10-02T12:08:00",
+        "url": "https://www.miamibeachfl.gov/third-anniversary-of-attack-on-israel-to-be-observed-in-miami-beach/",
         "label": "Official city news"
       }
     ]

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T22:45:49.647Z",
+  "generatedAt": "2026-10-10T12:41:28.137Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,22 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "409516",
+      "title": "Miami Beach to Award Grants for Privately-Owned Seawalls",
+      "summary": "Applications are now open for up to $20,000 per property through the city’s Private Property Adaptation Program",
+      "publishedAt": "2026-10-06T11:54:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-to-award-grants-for-privately-owned-seawalls/",
+      "label": "Official city news"
+    },
+    {
+      "id": "409521",
+      "title": "Third Anniversary of Attack on Israel to Be Observed in Miami Beach",
+      "summary": "City officials will honor the victims of the Oct. 7 attack and reaffirm support for Israel",
+      "publishedAt": "2026-10-02T12:08:00",
+      "url": "https://www.miamibeachfl.gov/third-anniversary-of-attack-on-israel-to-be-observed-in-miami-beach/",
+      "label": "Official city news"
+    },
     {
       "id": "409244",
       "title": "Miami Beach To Honor Legacy of Arthur “Big Art” Martineau",
@@ -69,22 +85,6 @@
       "summary": "This year’s lineup features “Toy Story 5” and “Supergirl”",
       "publishedAt": "2026-09-02T12:51:00",
       "url": "https://www.miamibeachfl.gov/soundscape-cinema-series-set-to-launch-17th-season/",
-      "label": "Official city news"
-    },
-    {
-      "id": "408256",
-      "title": "Celebrate Hispanic Heritage Month in Miami Beach",
-      "summary": "Free events are planned around the city",
-      "publishedAt": "2026-09-01T13:49:00",
-      "url": "https://www.miamibeachfl.gov/celebrate-hispanic-heritage-month-in-miami-beach/",
-      "label": "Official city news"
-    },
-    {
-      "id": "408119",
-      "title": "Miami Beach Outperforms all Other Miami-Dade Cities in Stormwater Report Card",
-      "summary": "The city scored an A+ in stormwater compliance based on an independent report released by nonprofit Miami Waterkeeper",
-      "publishedAt": "2026-08-27T11:02:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-outperforms-all-other-miami-dade-cities-in-stormwater-report-card/",
       "label": "Official city news"
     }
   ]
