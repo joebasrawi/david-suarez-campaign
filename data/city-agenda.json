@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T12:41:19.500Z",
+  "generatedAt": "2026-10-10T21:50:30.321Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -4343,10 +4343,12 @@
       "neighborhood": "Citywide",
       "departments": [],
       "sponsors": [
-        "Commissioner Joseph Magazine"
+        "Commissioner Joseph Magazine",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "joseph-magazine"
+        "joseph-magazine",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -4441,10 +4443,12 @@
       "neighborhood": "Citywide",
       "departments": [],
       "sponsors": [
-        "Commissioner Joseph Magazine"
+        "Commissioner Joseph Magazine",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "joseph-magazine"
+        "joseph-magazine",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": true,
