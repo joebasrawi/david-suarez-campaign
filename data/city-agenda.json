@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T15:40:14.573Z",
+  "generatedAt": "2026-10-13T00:48:10.220Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-10-14",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 207,
+    "itemCount": 210,
     "url": "https://miamibeachagenda.com/agenda/october/14/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6247"
   },
@@ -23,7 +23,7 @@
     {
       "id": "consent-agenda-committee-assignments",
       "label": "Consent Agenda — Committee Assignments",
-      "count": 10
+      "count": 11
     },
     {
       "id": "consent-agenda-committee-reports",
@@ -33,7 +33,7 @@
     {
       "id": "consent-agenda-resolutions",
       "label": "Consent Agenda — Resolutions",
-      "count": 43
+      "count": 45
     },
     {
       "id": "regular-agenda-ordinances",
@@ -403,6 +403,29 @@
       "url": "https://miamibeachagenda.com/agenda/10/14/2026/C4J"
     },
     {
+      "id": "2026-10-14-consent-agenda-committee-assignments-c4k",
+      "itemNumber": "C4K",
+      "type": "Committee assignment",
+      "section": "Consent Agenda — Committee Assignments",
+      "title": "Committee Discusses Co-naming Street Morris Lap...",
+      "summary": "Committee Discusses Co-naming Street Morris Lap. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "REFERRAL TO THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE TO DISCUSS CO-NAMING A PORTION OF A STREET NEAR THE SITE OF THE SOUTH SHORE COMMUNITY CENTER, LOCATED AT 833 6TH STREET, MIAMI BEACH, FOR MORRIS LAPIDUS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [],
+      "sponsors": [
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C4K"
+    },
+    {
       "id": "2026-10-14-consent-agenda-committee-reports-c6a",
       "itemNumber": "C6A",
       "type": "Committee report",
@@ -666,10 +689,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Mayor Steven Meiner"
+        "Mayor Steven Meiner",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "steven-meiner"
+        "steven-meiner",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -692,10 +717,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Vice-Mayor Alex Fernandez"
+        "Vice-Mayor Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -770,10 +797,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Alex Fernandez"
+        "Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -796,10 +825,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Mayor Steven Meiner"
+        "Mayor Steven Meiner",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "steven-meiner"
+        "steven-meiner",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -874,10 +905,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Vice-Mayor Alex Fernandez"
+        "Vice-Mayor Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": true,
@@ -900,10 +933,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Vice-Mayor Alex Fernandez"
+        "Vice-Mayor Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": true,
@@ -926,10 +961,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Mayor Steven Meiner"
+        "Mayor Steven Meiner",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "steven-meiner"
+        "steven-meiner",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": true,
@@ -952,14 +989,68 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Mayor Steven Meiner"
+        "Mayor Steven Meiner",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "steven-meiner"
+        "steven-meiner",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": true,
       "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AQ"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-resolutions-c7ar",
+      "itemNumber": "C7AR",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Purchase Solar Surveillance Cameras for Parking",
+      "summary": "Purchase Solar Surveillance Cameras for Parking. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION TO PURCHASE, BY UTILIZING SURPLUS PARKING DEPARTMENT FUNDS, ADDITIONAL ARLO BATTERY-POWERED, SOLAR-CHARGING OUTDOOR SURVEILLANCE CAMERAS TO ASSIST THE CITY’S PARKING DEPARTMENT IN PROACTIVELY, EFFICIENTLY, AND EFFECTIVELY MONITORING AND DETECTING VEHICLES ILLEGALLY PARKED IN DESIGNATED NO-PARKING HOT SPOTS THROUGHOUT THE CITY.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AR"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-resolutions-c7as",
+      "itemNumber": "C7AS",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Establish 2027 State Legislative Priorities Agenda",
+      "summary": "Establish 2027 State Legislative Priorities Agenda. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION TO INCLUDE THE FOLLOWING PRIORITIES IN THE CITY’S 2027 STATE LEGISLATIVE AGENDA: (I) AMEND THE TRANSPORTATION CONCURRENCY PROVISIONS OF CHAPTER 163, PART II, FLORIDA STATUTES (THE COMMUNITY PLANNING ACT), TO PERMIT LOCAL GOVERNMENTS TO DENY DEVELOPMENT APPLICATIONS FAILING TO SATISFY TRANSPORTATION CONCURRENCY REQUIREMENTS ADOPTED IN THE LOCAL COMPREHENSIVE PLAN; (II) AMEND THE ELIGIBILITY REQUIREMENTS FOR AFFORDABLE HOUSING INCENTIVES GRANTED PURSUANT TO STATE LAW TO ESTABLISH A MINIMUM UNIT SIZE REQUIREMENT, REQUIRE A MIX OF UNIT TYPES, REQUIRE A PROJECT QUALIFYING FOR DEVELOPMENT INCENTIVES TO DEDICATE A MINIMUM PERCENTAGE OF THE TOTAL SQUARE FOOTAGE OF THE DEVELOPMENT FOR AFFORDABLE HOUSING, AND REQUIRE THE AFFORDABILITY PERIOD FOR SUCH HOUSING TO BE EXTENDED IN PERPETUITY; (III) RECOGNIZE AND PROVIDE FOR THE ABILITY OF LOCAL GOVERNMENTS TO FINANCE THE COSTS OF REMEDYING EXISTING INFRASTRUCTURE DEFICIENCIES, INCLUDING VIA FEES ON NEW DEVELOPMENT; (IV) AUTHORIZE THE CREATION OF ADDITIONAL AD-VALOREM TAX EXEMPTIONS TO ENCOURAGE ADAPTIVE REUSE REDEVELOPMENT; AND (V) AUTHORIZE SEPARATE LEGAL OR ADMINISTRATIVE ENTITIES CREATED BY AN INTERLOCAL AGREEMENT UNDER SECTION 163.01(7), FLORIDA STATUTES, TO ISSUE BONDS TO FINANCE AFFORDABLE AND WORKFORCE HOUSING DEVELOPMENTS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Tanya Bhatt"
+      ],
+      "officialSponsors": [
+        "tanya-bhatt"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AS"
     },
     {
       "id": "2026-10-14-consent-agenda-resolutions-c7b",
@@ -1026,12 +1117,9 @@
         "Economic Development"
       ],
       "sponsors": [
-        "Economic Development",
-        "Commissioner Monica Matteo-Salinas"
+        "Economic Development"
       ],
-      "officialSponsors": [
-        "monica-matteo-salinas"
-      ],
+      "officialSponsors": [],
       "davidInvolved": false,
       "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7D"
@@ -1557,10 +1645,14 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "monica-matteo-salinas",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1583,10 +1675,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner David Suarez"
+        "Commissioner David Suarez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
-        "david-suarez"
+        "david-suarez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -3444,11 +3538,13 @@
       "sponsors": [
         "City Attorney",
         "Commissioner David Suarez",
-        "Commissioner Alex Fernandez"
+        "Commissioner Alex Fernandez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
         "david-suarez",
-        "alex-fernandez"
+        "alex-fernandez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -4344,11 +4440,15 @@
       "departments": [],
       "sponsors": [
         "Commissioner Joseph Magazine",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Laura Dominguez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
         "joseph-magazine",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "laura-dominguez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -4444,11 +4544,15 @@
       "departments": [],
       "sponsors": [
         "Commissioner Joseph Magazine",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Laura Dominguez",
+        "Commissioner Monica Matteo-Salinas"
       ],
       "officialSponsors": [
         "joseph-magazine",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "laura-dominguez",
+        "monica-matteo-salinas"
       ],
       "davidInvolved": false,
       "isNew": true,
@@ -4510,7 +4614,7 @@
       "officialTitle": "DISCUSS THE MIAMI-DADE COUNTY PUBLIC SCHOOLS (M-DCPS) SECURE OUR FUTURE REFERENDUM.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-10-14",
-      "hearingTime": "10:00 a.m.",
+      "hearingTime": "9:29 a.m.",
       "neighborhood": "Citywide",
       "departments": [
         "Education and Performance Initiatives"
