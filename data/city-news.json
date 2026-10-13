@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T12:41:28.137Z",
+  "generatedAt": "2026-10-13T14:21:22.221Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "409585",
+      "title": "Miami Beach Kicks Off New Season of Culture Crawl",
+      "summary": "Enjoy free admission to a wide range of events from Oct. 15 through July 2027",
+      "publishedAt": "2026-10-12T12:12:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-kicks-off-new-season-of-culture-crawl/",
+      "label": "Official city news"
+    },
     {
       "id": "409516",
       "title": "Miami Beach to Award Grants for Privately-Owned Seawalls",
@@ -77,14 +85,6 @@
       "summary": "The 10-year update was approved by Florida’s Acquisition and Restoration Council",
       "publishedAt": "2026-09-03T11:14:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-gains-approval-from-state-on-beachfront-management-plan/",
-      "label": "Official city news"
-    },
-    {
-      "id": "408303",
-      "title": "SoundScape Cinema Series Set to Launch 17th Season",
-      "summary": "This year’s lineup features “Toy Story 5” and “Supergirl”",
-      "publishedAt": "2026-09-02T12:51:00",
-      "url": "https://www.miamibeachfl.gov/soundscape-cinema-series-set-to-launch-17th-season/",
       "label": "Official city news"
     }
   ]

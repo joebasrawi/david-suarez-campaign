@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T00:48:10.220Z",
+  "generatedAt": "2026-10-13T14:21:12.213Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -186,10 +186,12 @@
       "neighborhood": "Citywide",
       "departments": [],
       "sponsors": [
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -255,10 +257,12 @@
       "neighborhood": "Citywide",
       "departments": [],
       "sponsors": [
-        "Commissioner Alex Fernandez"
+        "Commissioner Alex Fernandez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -690,11 +694,13 @@
       "sponsors": [
         "City Attorney",
         "Mayor Steven Meiner",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "steven-meiner",
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -718,11 +724,13 @@
       "sponsors": [
         "City Attorney",
         "Vice-Mayor Alex Fernandez",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "alex-fernandez",
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1192,10 +1200,12 @@
       ],
       "sponsors": [
         "Environment and Sustainability",
-        "Commissioner Alex Fernandez"
+        "Commissioner Alex Fernandez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1512,11 +1522,13 @@
         "City Attorney",
         "Item Deferred to November 18, 2026",
         "Vice-Mayor Alex Fernandez",
-        "Commissioner David Suarez"
+        "Commissioner David Suarez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
         "alex-fernandez",
-        "david-suarez"
+        "david-suarez",
+        "tanya-bhatt"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -1539,10 +1551,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1647,12 +1661,14 @@
         "City Attorney",
         "Commissioner Laura Dominguez",
         "Commissioner Monica Matteo-Salinas",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Mayor Steven Meiner"
       ],
       "officialSponsors": [
         "laura-dominguez",
         "monica-matteo-salinas",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "steven-meiner"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -3177,14 +3193,16 @@
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "​​​​​​​Mayor Steven Meiner"
       ],
       "sponsors": [
         "City Attorney",
         "Commissioner Tanya Bhatt",
         "Commissioner Alex Fernandez",
         "Commissioner Joseph Magazine",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "​​​​​​​Mayor Steven Meiner"
       ],
       "officialSponsors": [
         "tanya-bhatt",
@@ -3533,13 +3551,15 @@
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "​​​​​​​Mayor Steven Meiner"
       ],
       "sponsors": [
         "City Attorney",
         "Commissioner David Suarez",
         "Commissioner Alex Fernandez",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "​​​​​​​Mayor Steven Meiner"
       ],
       "officialSponsors": [
         "david-suarez",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T15:40:11.052Z",
+  "generatedAt": "2026-10-13T14:21:08.588Z",
   "source": {
     "label": "Commissioner David Suarez on YouTube",
     "url": "https://www.youtube.com/@CommissionerDavidSuarez",
@@ -8,11 +8,21 @@
   "channelId": "UCFSRLFAu-wZdguhiP021UUA",
   "items": [
     {
+      "id": "qQnOLzhwo1s",
+      "title": "Ride Along: How Pot Holes in Miami Beach Get Fixed",
+      "series": "Ride Along",
+      "publishedAt": "2026-10-12T17:25:58+00:00",
+      "updatedAt": "2026-10-13T11:24:08+00:00",
+      "url": "https://www.youtube.com/watch?v=qQnOLzhwo1s",
+      "thumbnail": "https://i.ytimg.com/vi/qQnOLzhwo1s/hqdefault.jpg",
+      "duration": "2:13"
+    },
+    {
       "id": "hy1_Ey4oWik",
       "title": "Live Local Act: Miami Beach Can Fight Back — Here's How",
       "series": "City Issues",
       "publishedAt": "2026-10-08T03:49:04+00:00",
-      "updatedAt": "2026-10-09T19:26:25+00:00",
+      "updatedAt": "2026-10-12T03:35:42+00:00",
       "url": "https://www.youtube.com/watch?v=hy1_Ey4oWik",
       "thumbnail": "https://i.ytimg.com/vi/hy1_Ey4oWik/hqdefault.jpg",
       "duration": "3:06"
@@ -128,7 +138,7 @@
       "title": "Miami Beach Civics 101 Part 2: How Laws REALLY Get Passed in Miami Beach",
       "series": "Miami Beach Civics",
       "publishedAt": "2026-07-24T13:00:20+00:00",
-      "updatedAt": "2026-10-01T04:49:32+00:00",
+      "updatedAt": "2026-10-13T03:20:45+00:00",
       "url": "https://www.youtube.com/watch?v=NJVUxNR6tnM",
       "thumbnail": "https://i.ytimg.com/vi/NJVUxNR6tnM/hqdefault.jpg",
       "duration": "1:50"

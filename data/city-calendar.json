@@ -1,67 +1,12 @@
 {
-  "generatedAt": "2026-10-13T00:48:08.473Z",
+  "generatedAt": "2026-10-13T14:21:10.123Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-12&end_date=2026-12-12&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-13&end_date=2026-12-12&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "397672",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-12T09:00:00",
-      "endLocal": "2026-10-12T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-6/",
-      "note": ""
-    },
-    {
-      "id": "397674",
-      "title": "Transportation, Parking and Bicycle-Pedestrian Facilities Committee",
-      "description": "Hybrid Meeting https://bit.ly/3SUNUsj Meeting ID: 285434409450# Passcode: MDVo4c 1.786.636.1480 Phone Conference ID: 915395453# Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Parking Department Conference Room",
-      "startLocal": "2026-10-12T15:30:00",
-      "endLocal": "2026-10-12T17:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/transportation-parking-and-bicycle-pedestrian-facilities-committee-2/",
-      "note": ""
-    },
-    {
-      "id": "397676",
-      "title": "Hispanic Affairs Committee",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 2 nd Floor Building Department Conference Room",
-      "startLocal": "2026-10-12T17:00:00",
-      "endLocal": "2026-10-12T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/hispanic-affairs-committee-4/",
-      "note": ""
-    },
-    {
-      "id": "397696",
-      "title": "Mondays with Monica",
-      "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/83377402686 Meeting ID: 83377402686# 1.305.224.1968 or 833.7740.2686",
-      "startLocal": "2026-10-12T17:30:00",
-      "endLocal": "2026-10-12T18:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/mondays-with-monica-3/",
-      "note": ""
-    },
-    {
-      "id": "397894",
-      "title": "SOFNA – Special Meeting Regarding the Live Local Act",
-      "description": "Continuum South Tower 100 South Pointe Drive, 4 th Floor",
-      "startLocal": "2026-10-12T18:00:00",
-      "endLocal": "2026-10-12T20:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/sofna-special-meeting-regarding-the-live-local-act/",
-      "note": ""
-    },
     {
       "id": "10104231",
       "title": "Historic Preservation Board*",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T00:48:28.115Z",
+  "generatedAt": "2026-10-13T14:21:28.132Z",
   "youtube": {
     "items": [
       {
@@ -27,19 +27,19 @@
   "news": {
     "items": [
       {
+        "id": "409585",
+        "title": "Miami Beach Kicks Off New Season of Culture Crawl",
+        "summary": "Enjoy free admission to a wide range of events from Oct. 15 through July 2027",
+        "publishedAt": "2026-10-12T12:12:00",
+        "url": "https://www.miamibeachfl.gov/miami-beach-kicks-off-new-season-of-culture-crawl/",
+        "label": "Official city news"
+      },
+      {
         "id": "409516",
         "title": "Miami Beach to Award Grants for Privately-Owned Seawalls",
         "summary": "Applications are now open for up to $20,000 per property through the city’s Private Property Adaptation Program",
         "publishedAt": "2026-10-06T11:54:00",
         "url": "https://www.miamibeachfl.gov/miami-beach-to-award-grants-for-privately-owned-seawalls/",
-        "label": "Official city news"
-      },
-      {
-        "id": "409521",
-        "title": "Third Anniversary of Attack on Israel to Be Observed in Miami Beach",
-        "summary": "City officials will honor the victims of the Oct. 7 attack and reaffirm support for Israel",
-        "publishedAt": "2026-10-02T12:08:00",
-        "url": "https://www.miamibeachfl.gov/third-anniversary-of-attack-on-israel-to-be-observed-in-miami-beach/",
         "label": "Official city news"
       }
     ]
