@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T14:21:12.213Z",
+  "generatedAt": "2026-10-13T22:52:43.548Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-10-14",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 210,
+    "itemCount": 214,
     "url": "https://miamibeachagenda.com/agenda/october/14/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6247"
   },
@@ -33,7 +33,7 @@
     {
       "id": "consent-agenda-resolutions",
       "label": "Consent Agenda — Resolutions",
-      "count": 45
+      "count": 49
     },
     {
       "id": "regular-agenda-ordinances",
@@ -211,10 +211,12 @@
       "neighborhood": "South Beach",
       "departments": [],
       "sponsors": [
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -689,13 +691,15 @@
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "sponsors": [
         "City Attorney",
         "Mayor Steven Meiner",
         "Commissioner Monica Matteo-Salinas",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "steven-meiner",
@@ -834,11 +838,13 @@
       "sponsors": [
         "City Attorney",
         "Mayor Steven Meiner",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "steven-meiner",
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -965,12 +971,14 @@
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "sponsors": [
         "City Attorney",
         "Mayor Steven Meiner",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "steven-meiner",
@@ -993,12 +1001,14 @@
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "sponsors": [
         "City Attorney",
         "Mayor Steven Meiner",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "steven-meiner",
@@ -1059,6 +1069,110 @@
       "davidInvolved": false,
       "isNew": true,
       "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AS"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-resolutions-c7at",
+      "itemNumber": "C7AT",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Report Dev Impacts on Emergency Services, Evacu...",
+      "summary": "Report Dev Impacts on Emergency Services, Evacu. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION TO PREPARE A REPORT ON ANTICIPATED IMPACTS TO EMERGENCY SERVICES RESPONSE AND CAPACITY, HURRICANE EVACUATION ROUTES, AND PUBLIC SAFETY DURING SEVERE WEATHER EVENTS CAUSED BY DEVELOPMENT APPLICATIONS WHICH ARE PENDING OR APPROVED AND WHICH ARE ANTICIPATED TO BE CONSTRUCTED PURSUANT TO THE LIVE LOCAL ACT; AND FURTHER, DIRECTING THE CITY MANAGER TO TRANSMIT SUCH REPORT TO THE MAYOR AND CITY COMMISSION VIA LETTER TO COMMISSION WITHIN 90 DAYS OF THE DATE OF THIS RESOLUTION.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Monica Matteo-Salinas"
+      ],
+      "officialSponsors": [
+        "monica-matteo-salinas"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AT"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-resolutions-c7au",
+      "itemNumber": "C7AU",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Community Engagement for Sewer Pump Station Pro...",
+      "summary": "Community Engagement for Sewer Pump Station Pro. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, REQUESTING CONTINUED COMMUNITY ENGAGEMENT FOR THE PROPOSED SEWER PUMP STATION AT OR NEAR 42ND STREET AND ALTON ROAD, AND REFERRING THE MATTER TO THE NEIGHBORHOOD RESILIENCY PROJECTS COMMITTEE FOR REVIEW AND RECOMMENDATIONS, WITHOUT DELAYING OR INTERRUPTING THE PROJECT'S ONGOING PROGRESS.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner Laura Dominguez"
+      ],
+      "officialSponsors": [
+        "laura-dominguez"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AU"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-resolutions-c7av",
+      "itemNumber": "C7AV",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Mayor Meiner Appointed to Arsht Center Board",
+      "summary": "Mayor Meiner Appointed to Arsht Center Board. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPOINTING MAYOR STEVEN MEINER TO ONE OF THE CITY OF MIAMI BEACH’S THREE SEATS ON THE BOARD OF DIRECTORS OF THE ADRIENNE ARSHT CENTER TRUST, INC., FOR A THREE-YEAR TERM.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "Citywide",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AV"
+    },
+    {
+      "id": "2026-10-14-consent-agenda-resolutions-c7aw",
+      "itemNumber": "C7AW",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Clean Up 5th Street Bridge Construction Site",
+      "summary": "Clean Up 5th Street Bridge Construction Site. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION TO COORDINATE WITH THE CONTRACTOR, AS NECESSARY, TO CLEAN UP AND IMPROVE THE APPEARANCE OF THE 5TH STREET PEDESTRIAN BRIDGE CONSTRUCTION SITE, INCLUDING THE INSTALLATION OF TEMPORARY LANDSCAPING, GRASS, AND SOD, AS APPROPRIATE, IN ANTICIPATION OF THE UPCOMING HOLIDAY SEASON AND THE INCREASED NUMBER OF RESIDENTS AND VISITORS ENJOYING THE CITY.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-10-14",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Mayor Steven Meiner"
+      ],
+      "officialSponsors": [
+        "steven-meiner"
+      ],
+      "davidInvolved": false,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/10/14/2026/C7AW"
     },
     {
       "id": "2026-10-14-consent-agenda-resolutions-c7b",
@@ -1201,11 +1315,13 @@
       "sponsors": [
         "Environment and Sustainability",
         "Commissioner Alex Fernandez",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Mayor Steven Meiner"
       ],
       "officialSponsors": [
         "alex-fernandez",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "steven-meiner"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1290,7 +1406,7 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Designate Parking Spaces Goodwill Trailers",
       "summary": "Designate Parking Spaces Goodwill Trailers. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE FAVORABLE RECOMMENDATION OF THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE AT ITS SEPTEMBER 23, 2026 MEETING; AND AUTHORIZING THE CITY ADMINISTRATION TO DESIGNATE ADDITIONAL PARKING SPACES IN MUNICIPAL PARKING LOTS THROUGHOUT THE CITY FOR GOODWILL SOUTH FLORIDA DONATION TRAILERS.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE FAVORABLE RECOMMENDATION OF THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE AT ITS SEPTEMBER 23, 2026 MEETING; AND AUTHORIZING THE CITY ADMINISTRATION TO DESIGNATE ADDITIONAL PARKING SPACES IN MUNICIPAL PARKING LOTS THROUGHOUT THE CITY FOR GOODWILL SOUTH FLORIDA DONATION TRAILERS, WITH LOCATIONS TO BE SELECTED BASED ON OPERATIONAL SUITABILITY AND PARKING AVAILABILITY TO MINIMIZE IMPACTS TO PUBLIC PARKING OPERATIONS.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-10-14",
       "hearingTime": "",
@@ -1435,7 +1551,7 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Fund Cultural Arts Grants $28,785",
       "summary": "Fund Cultural Arts Grants $28,785. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING THE CULTURAL ARTS GRANT PROGRAM FUNDING RECOMMENDATIONS FOR AN ADDITIONAL TWO (2) GRANTS FOR THE FISCAL YEAR 2026/2027 IN THE TOTAL AMOUNT OF $28,785; AND FURTHER AUTHORIZING THE CITY MANAGER AND CITY CLERK TO EXECUTE THE GRANT AGREEMENTS RELATED TO THE APPROVED FUNDS.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING THE CULTURAL ARTS GRANT PROGRAM FUNDING RECOMMENDATIONS FOR AN ADDITIONAL THREE (3) GRANTS FOR THE FISCAL YEAR 2026/2027 IN THE TOTAL AMOUNT OF $42,297; FURTHER, AUTHORIZING THE CITY MANAGER TO FINALIZE THE GRANT AGREEMENTS RELATED TO THE APPROVED FUNDS; AND FURTHER, AUTHORIZING THE CITY MANAGER AND CITY CLERK TO EXECUTE THE GRANT AGREEMENTS RELATED TO THE APPROVED FUNDS.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-10-14",
       "hearingTime": "",
@@ -1481,7 +1597,7 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Adopt Transportation Hierarchy Master Plan",
       "summary": "Adopt Transportation Hierarchy Master Plan. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE LAND USE AND SUSTAINABILITY COMMITTEE, AT ITS SEPTEMBER 24, 2026 MEETING, TO INCORPORATE THE CURRENT ADOPTED TRANSPORTATION MODE HIERARCHY – CONSISTING OF PEDESTRIANS FIRST; TRANSIT, BICYCLISTS, AND FREIGHT SECOND; AND PRIVATE VEHICLES LAST – IN THE UPCOMING 2026 TRANSPORTATION MASTER PLAN FOR THE CITY OF MIAMI BEACH.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, ACCEPTING THE RECOMMENDATION OF THE LAND USE AND SUSTAINABILITY COMMITTEE AT ITS SEPTEMBER 24, 2026 MEETING TO INCORPORATE THE CURRENT ADOPTED TRANSPORTATION MODE HIERARCHY, CONSISTING OF PEDESTRIANS FIRST; TRANSIT, BICYCLISTS, AND FREIGHT SECOND; AND PRIVATE VEHICLES LAST, IN THE FORTHCOMING 2026 TRANSPORTATION MASTER PLAN FOR THE CITY OF MIAMI BEACH.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-10-14",
       "hearingTime": "",
@@ -1552,11 +1668,13 @@
       "sponsors": [
         "City Attorney",
         "Commissioner Laura Dominguez",
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "laura-dominguez",
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1662,13 +1780,15 @@
         "Commissioner Laura Dominguez",
         "Commissioner Monica Matteo-Salinas",
         "Commissioner Tanya Bhatt",
-        "Mayor Steven Meiner"
+        "Mayor Steven Meiner",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "laura-dominguez",
         "monica-matteo-salinas",
         "tanya-bhatt",
-        "steven-meiner"
+        "steven-meiner",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1692,11 +1812,13 @@
       "sponsors": [
         "City Attorney",
         "Commissioner David Suarez",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "david-suarez",
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "alex-fernandez"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -2050,7 +2172,7 @@
       "title": "Grant Peoples Gas Natural Gas Franchise",
       "summary": "Grant Peoples Gas Natural Gas Franchise. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "AN ORDINANCE OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, GRANTING TO PEOPLES GAS SYSTEM, INC., A FLORIDA CORPORATION, ITS SUCCESSORS AND ASSIGNS, A NON- EXCLUSIVE NATURAL GAS FRANCHISE AGREEMENT TO USE THE PUBLIC RIGHTS-OF-WAY OF THE CITY OF MIAMI BEACH, FLORIDA; PRESCRIBING THE PROVISIONS AND CONDITIONS UNDER WHICH SAID FRANCHISE SHALL BE EXERCISED; PROVIDING FOR PAYMENT OF A FRANCHISE FEE TO THE CITY; AND PROVIDING FOR REPEALER, SEVERABILITY AND AN EFFECTIVE DATE.",
-      "status": "Not reached on 9/10/2026 - R5 AH",
+      "status": "Item Opened and Continued to November 18, 2026",
       "meetingDate": "2026-10-14",
       "hearingTime": "3:20 p.m. First Reading Public Hearing",
       "neighborhood": "Citywide",
@@ -2772,12 +2894,14 @@
         "Planning",
         "Commissioner Joseph Magazine",
         "Commissioner Tanya Bhatt",
-        "Mayor Steven Meiner"
+        "Mayor Steven Meiner",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "joseph-magazine",
         "tanya-bhatt",
-        "steven-meiner"
+        "steven-meiner",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -4011,7 +4135,7 @@
       "section": "Regular Agenda — Resolutions",
       "title": "Analyze Personnel Costs, Modify Salary Portal",
       "summary": "Analyze Personnel Costs, Modify Salary Portal. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "\"TRUTH IN TRANSPARENCY\" RESOLUTION A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY MANAGER TO TAKE THE FOLLOWING ACTIONS: (1) ANALYZE AND PRESENT A WRITTEN PLAN TO THE CITY COMMISSION, AT ITS SEPTEMBER 10, 2026 MEETING, TO LIMIT THE LONG-TERM GROWTH OF PERSONNEL COSTS, INCLUDING AN ANALYSIS OF THE FINANCIAL IMPACT ON THE CITY'S OVERTIME COSTS THAT WOULD RESULT FROM THE ELIMINATION OR REDUCTION IN THE NUMBER OF SWORN LAW ENFORCEMENT POSITIONS AND POSITIONS IN THE FIRE DEPARTMENT WHILE MAINTAINING THE CURRENT LEVEL OF SERVICE IN PUBLIC SAFETY; (2) MODIFY THE CITY EMPLOYEE SALARY PORTAL TO PROVIDE FOR \"TRUTH IN TRANSPARENCY\" AS IT RELATES TO EMPLOYEE PAY AS FOLLOWS: LIMIT THE PORTAL TO ACTIVE CITY EMPLOYEES; INCLUDE A BREAKDOWN OF EMPLOYEE COMPENSATION, PARTICULARLY IN REGARD TO YEARLY GROSS PAY, BY SEPARATELY IDENTIFYING BASE SALARY, OVERTIME, AND OFF-DUTY PAY, AND THE NUMBER OF OVERTIME AND OFF-DUTY HOURS WORKED; CLARIFY THAT OFF-DUTY HOURS ARE PRIVATELY FUNDED AND NOT FUNDED BY THE CITY; REMOVE THE “LAST PAYCHECK GROSS” COLUMN TO PROTECT EMPLOYEES FROM PHISHING ATTACKS AND OTHER PREDATORY PRACTICES; AND DIRECT THE CITY ADMINISTRATION TO REMOVE INACTIVE, RESERVE, AND FORMER EMPLOYEES, ALONG WITH ANY OTHER INFORMATION THAT MAY BE DISPLAYED IN ERROR; AND (3) ISSUE A COMPETITIVE SOLICITATION, WITHIN 30 DAYS, TO CONDUCT A SALARY AND COMPENSATION STUDY.",
+      "officialTitle": "\"TRUTH IN TRANSPARENCY\" RESOLUTION A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY MANAGER TO TAKE THE FOLLOWING ACTIONS: (1) ANALYZE AND PRESENT A WRITTEN PLAN TO THE CITY COMMISSION, AT ITS DECEMBER 9, 2026 MEETING, TO LIMIT THE LONG-TERM GROWTH OF PERSONNEL COSTS, INCLUDING AN ANALYSIS OF THE FINANCIAL IMPACT ON THE CITY'S OVERTIME COSTS THAT WOULD RESULT FROM THE ELIMINATION OR REDUCTION IN THE NUMBER OF SWORN LAW ENFORCEMENT POSITIONS AND POSITIONS IN THE FIRE DEPARTMENT WHILE MAINTAINING THE CURRENT LEVEL OF SERVICE IN PUBLIC SAFETY; (2) MODIFY THE CITY EMPLOYEE SALARY PORTAL TO PROVIDE FOR \"TRUTH IN TRANSPARENCY\" AS IT RELATES TO EMPLOYEE PAY AS FOLLOWS: LIMIT THE PORTAL TO ACTIVE CITY EMPLOYEES; INCLUDE A BREAKDOWN OF EMPLOYEE COMPENSATION, PARTICULARLY IN REGARD TO YEARLY GROSS PAY, BY SEPARATELY IDENTIFYING BASE SALARY, OVERTIME, AND OFF-DUTY PAY, AND THE NUMBER OF OVERTIME AND OFF-DUTY HOURS WORKED; CLARIFY THAT OFF-DUTY HOURS ARE PRIVATELY FUNDED AND NOT FUNDED BY THE CITY; REMOVE THE “LAST PAYCHECK GROSS” COLUMN TO PROTECT EMPLOYEES FROM PHISHING ATTACKS AND OTHER PREDATORY PRACTICES; AND DIRECT THE CITY ADMINISTRATION TO REMOVE INACTIVE, RESERVE, AND FORMER EMPLOYEES, ALONG WITH ANY OTHER INFORMATION THAT MAY BE DISPLAYED IN ERROR; AND (3) ISSUE A COMPETITIVE SOLICITATION, WITHIN 30 DAYS, TO CONDUCT A SALARY STUDY OR PREPARE A BENCHMARKING COMPENSATION TOOL.",
       "status": "Not reached on 9/10/2026 - R7 P; Not reached on 7/22/2026 - C7 AN (Separated by Commissioner Suarez)",
       "meetingDate": "2026-10-14",
       "hearingTime": "",
@@ -4457,12 +4581,15 @@
       "meetingDate": "2026-10-14",
       "hearingTime": "",
       "neighborhood": "Citywide",
-      "departments": [],
+      "departments": [
+        "​​​​​​​Commissioner Alex Fernandez"
+      ],
       "sponsors": [
         "Commissioner Joseph Magazine",
         "Commissioner Tanya Bhatt",
         "Commissioner Laura Dominguez",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "joseph-magazine",
@@ -4561,12 +4688,15 @@
       "meetingDate": "2026-10-14",
       "hearingTime": "",
       "neighborhood": "Citywide",
-      "departments": [],
+      "departments": [
+        "​​​​​​​Commissioner Alex Fernandez"
+      ],
       "sponsors": [
         "Commissioner Joseph Magazine",
         "Commissioner Tanya Bhatt",
         "Commissioner Laura Dominguez",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "​​​​​​​Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "joseph-magazine",
