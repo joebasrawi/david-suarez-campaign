@@ -1,78 +1,12 @@
 {
-  "generatedAt": "2026-10-13T14:21:10.123Z",
+  "generatedAt": "2026-10-14T05:01:34.239Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-13&end_date=2026-12-12&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-14&end_date=2026-12-13&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10104231",
-      "title": "Historic Preservation Board*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or .888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-13T09:00:00",
-      "endLocal": "2026-10-13T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/historic-preservation-board/2026-10-13/",
-      "note": ""
-    },
-    {
-      "id": "397678",
-      "title": "Marine and Waterfront Protection Authority",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-10-13T09:00:00",
-      "endLocal": "2026-10-13T11:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/marine-and-waterfront-protection-authority-3/",
-      "note": ""
-    },
-    {
-      "id": "397682",
-      "title": "LGBTQIA+ Advisory Committee",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-10-13T13:30:00",
-      "endLocal": "2026-10-13T15:30:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/lgbtqia-advisory-committee-2/",
-      "note": ""
-    },
-    {
-      "id": "397684",
-      "title": "Committee on the Homeless",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/86841921916?pwd=3dL4W4Eg6kDfb3Rsv8075L3FgPvZbX.1 Meeting ID: 86841921916# Passcode: 284523 1.305.224.1968 or 868.4192.1916 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-10-13T15:30:00",
-      "endLocal": "2026-10-13T17:30:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/committee-on-the-homeless-2/",
-      "note": ""
-    },
-    {
-      "id": "397686",
-      "title": "Budget Advisory and Government Spending Efficiency Committee",
-      "description": "Hybrid Meeting https://bit.ly/4r1KP9b Meeting ID: 27611854106875# Passcode: DQ9JQ6v6 1.786.636.1480 or 203.982.903 Access ID: 203982903# Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-10-13T16:30:00",
-      "endLocal": "2026-10-13T18:30:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/budget-advisory-and-government-spending-efficiency-committee-2/",
-      "note": ""
-    },
-    {
-      "id": "397688",
-      "title": "North Beach CRA Advisory Committee",
-      "description": "Normandy Shores Golf Club 2401 Biarritz Drive",
-      "startLocal": "2026-10-13T16:30:00",
-      "endLocal": "2026-10-13T18:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/north-beach-cra-advisory-committee-2/",
-      "note": ""
-    },
     {
       "id": "10104082",
       "title": "City Commission*",
