@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T05:01:34.239Z",
+  "generatedAt": "2026-10-14T17:18:51.061Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -192,6 +192,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/public-safety-and-neighborhood-quality-of-life-committee/2026-10-21/",
+      "note": ""
+    },
+    {
+      "id": "398158",
+      "title": "Street Re-naming Ceremony In Memory of Judge Irving and Hazel Cypen",
+      "description": "Join the City of Miami Beach along with Commissioner Laura Dominguez and Miami-Dade County District 4 Commissioner Micky Steinberg for a street re-naming ceremony in memory of Judge Irving and Hazel Cypen. Wednesday, October 21 2 PM Belle Isle Park Island Avenue on Belle Isle",
+      "startLocal": "2026-10-21T14:00:00",
+      "endLocal": "2026-10-21T14:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/street-renaming-ceremony-in-memory-of-judge-irving-and-hazel-cypen/",
       "note": ""
     },
     {
