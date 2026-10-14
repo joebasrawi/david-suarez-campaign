@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T05:01:36.497Z",
+  "generatedAt": "2026-10-14T12:03:28.182Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -3501,15 +3501,17 @@
       "title": "Approve Untitled Art Fair Multi-year License",
       "summary": "Approve Untitled Art Fair Multi-year License. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING THE MUTLI-YEAR LICENSE AGREEMENT BETWEEN THE CITY OF MIAMI BEACH AND INFORMA MARKETS ART, LLC FOR USE OF 191,650 SQUARE FEET OF THE LUMMUS PARK BEACHFRONT BETWEEN 10 AND 12½ STREETS AND 12,000 SQUARE FEET OF THE LUMMUS PARK SPOIL FOR THE UNTITLED ART FAIR DURING ART WEEK MIAMI BEACH, FOR AN INITIAL TERM OF FIVE (5) CONSECUTIVE ANNUAL SHOWS FROM 2026 TO 2030, WITH A FIVE (5)-YEAR RENEWAL OPTION.",
-      "status": "Item Withdrawn",
+      "status": "Deferred on 9/10/2026 - R7 AV",
       "meetingDate": "2026-10-14",
       "hearingTime": "",
       "neighborhood": "South Beach",
       "departments": [
-        "Tourism and Culture"
+        "Tourism and Culture",
+        "Item Deferred"
       ],
       "sponsors": [
         "Tourism and Culture",
+        "Item Deferred",
         "Commissioner Laura Dominguez"
       ],
       "officialSponsors": [
