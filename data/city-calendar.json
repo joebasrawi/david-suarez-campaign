@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-10-14T17:18:51.061Z",
+  "generatedAt": "2026-10-15T11:40:01.425Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-14&end_date=2026-12-13&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-15&end_date=2026-12-14&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10104082",
-      "title": "City Commission*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-14",
-      "endLocal": "2026-10-14",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/city-commission/2026-10-14/",
-      "note": ""
-    },
     {
       "id": "397692",
       "title": "Special Magistrate Hearings",
