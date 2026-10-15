@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T11:40:01.425Z",
+  "generatedAt": "2026-10-15T17:08:26.007Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -316,6 +316,17 @@
       "note": ""
     },
     {
+      "id": "398194",
+      "title": "Committee for Quality Education",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
+      "startLocal": "2026-10-27T09:00:00",
+      "endLocal": "2026-10-27T11:00:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/committee-for-quality-education-3/",
+      "note": ""
+    },
+    {
       "id": "10104346",
       "title": "Land Use and Sustainability Committee**",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -324,6 +335,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-10-27/",
+      "note": ""
+    },
+    {
+      "id": "398196",
+      "title": "Youth Commission Meeting",
+      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
+      "startLocal": "2026-10-27T16:00:00",
+      "endLocal": "2026-10-27T18:00:00",
+      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/youth-commission-meeting-3/",
       "note": ""
     },
     {
@@ -368,6 +390,17 @@
       "location": "On the corner of Lincoln Road and Alton Road (Next to Citizen M Hotel)",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-on-site-walkthrough/",
+      "note": ""
+    },
+    {
+      "id": "398198",
+      "title": "Miami Beach Visitor and Convention Authority Board",
+      "description": "Miami Beach Visitor and Convention Authority Office 1701 Meridian Avenue, Suite 403 Harold Rosen War Room",
+      "startLocal": "2026-10-29T13:00:00",
+      "endLocal": "2026-10-29T15:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-visitor-and-convention-authority-board-4/",
       "note": ""
     },
     {
