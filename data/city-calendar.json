@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T04:40:22.861Z",
+  "generatedAt": "2026-10-16T21:19:32.422Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -258,6 +258,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/early-voting-for-the-november-3-2026-general-election-miami-beach-special-election-a-secure-vote-by-mail-drop-box-will-be-available-and-staffed-at-each-early-voting-location-during-early-voting-ho/2026-10-25/",
+      "note": ""
+    },
+    {
+      "id": "398331",
+      "title": "Miami Beach Baila! by Commissioner Joe Magazine",
+      "description": "MIAMI BEACH ¡BAILA! FREE, social dancing for our residents of all ages! Salsa | Bachata | Merengue | Kizomba | Zouk Date: Sunday, October 25 Lesson: 7 PM – 7:30 PM Party: 7:30 PM – 10 PM Location: At the iconic “The Betsy” Hotel 1433 Collins Ave JOIN OUR WHATSAPP GROUP For more info: 786.697.9182",
+      "startLocal": "2026-10-25T19:00:00",
+      "endLocal": "2026-10-25T22:00:00",
+      "location": "The Betsy South Beach, 1440 Ocean Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/miami-beach-baila-by-commissioner-joe-magazine-october2026/",
       "note": ""
     },
     {
