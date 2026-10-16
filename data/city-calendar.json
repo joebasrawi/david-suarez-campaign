@@ -1,45 +1,12 @@
 {
-  "generatedAt": "2026-10-15T17:08:26.007Z",
+  "generatedAt": "2026-10-16T04:40:22.861Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-15&end_date=2026-12-14&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-16&end_date=2026-12-15&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "397692",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-15T09:00:00",
-      "endLocal": "2026-10-15T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-15/",
-      "note": ""
-    },
-    {
-      "id": "392119",
-      "title": "West Avenue Phase II Neighborhood Improvement Project: Latest Updates & Community Discussion",
-      "description": "Join Commissioner Alex J. Fernandez for a virtual community meeting to explore progress, upcoming plans and a review of construction site updates for the West Avenue Phase II Neighborhood Improvement Project. Thursday, October 15 11 AM Zoom link: https://us06web.zoom.us/j/82324069554",
-      "startLocal": "2026-10-15T11:00:00",
-      "endLocal": "2026-10-15T11:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion-6/",
-      "note": ""
-    },
-    {
-      "id": "397812",
-      "title": "Special Events Community Reviews",
-      "description": "Microsoft Teams Meeting http://bit.ly/4xMFeaD Meeting ID: 254413135646867# Passcode: oe74mF7r 1.786.636.1480 Access ID: 695213131#",
-      "startLocal": "2026-10-15T14:00:00",
-      "endLocal": "2026-10-15T15:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-events-community-reviews/",
-      "note": ""
-    },
     {
       "id": "10104222",
       "title": "Board of Adjustment*",
@@ -643,6 +610,28 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/design-review-board-3/2026-12-10/",
+      "note": ""
+    },
+    {
+      "id": "10104233",
+      "title": "Historic Preservation Board*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or .888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-12-15T09:00:00",
+      "endLocal": "2026-12-15T17:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/historic-preservation-board/2026-12-15/",
+      "note": ""
+    },
+    {
+      "id": "10104367",
+      "title": "Affordable Housing Advisory Committee",
+      "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
+      "startLocal": "2026-12-15T17:00:00",
+      "endLocal": "2026-12-15T19:00:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2/2026-12-15/",
       "note": ""
     }
   ]
