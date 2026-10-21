@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T17:17:11.686Z",
+  "generatedAt": "2026-10-21T17:20:08.625Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,22 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "409980",
+      "title": "Miami Beach To Honor the Late Hazel Abrams Cypen",
+      "summary": "A portion of Venetian Way will be co-named in honor of the centenarian",
+      "publishedAt": "2026-10-20T10:42:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-the-late-hazel-abrams-cypen/",
+      "label": "Official city news"
+    },
+    {
+      "id": "409988",
+      "title": "Copy of _Template Communications Press Releases",
+      "summary": "12 artists will exhibit site-specific installations at iconic Miami Beach area hotels with $35,000 in prize money up for grabs during Art Week Miami Beach",
+      "publishedAt": "2026-10-19T13:51:00",
+      "url": "https://www.miamibeachfl.gov/2026-installment-of-no-vacancy-miami-beach-on-display-november-12-through-december-19/",
+      "label": "Official city news"
+    },
     {
       "id": "409941",
       "title": "2026 Miami Beach Hispanic Heritage Award Winners",
@@ -69,22 +85,6 @@
       "summary": "Martineau changed lives as executive director of the Miami Beach PAL",
       "publishedAt": "2026-10-01T12:56:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-legacy-of-arthur-big-art-martineau/",
-      "label": "Official city news"
-    },
-    {
-      "id": "408969",
-      "title": "Free Mobile Veterinary Care Coming to Miami Beach",
-      "summary": "Miami-Dade County Animal Services’ Wellness on Wheels (WOW) Mobile will provide free pet wellness services to Miami Beach residents",
-      "publishedAt": "2026-09-22T12:44:00",
-      "url": "https://www.miamibeachfl.gov/free-mobile-veterinary-care-coming-to-miami-beach/",
-      "label": "Official city news"
-    },
-    {
-      "id": "408935",
-      "title": "Calling All Young Musicians for the Miami Beach Youth Music Festival",
-      "summary": "Auditions are now open for musicians 18 and under",
-      "publishedAt": "2026-09-21T09:22:00",
-      "url": "https://www.miamibeachfl.gov/calling-all-young-musicians-for-the-miami-beach-youth-music-festival/",
       "label": "Official city news"
     }
   ]
