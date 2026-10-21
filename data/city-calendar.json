@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T17:19:58.898Z",
+  "generatedAt": "2026-10-21T21:48:14.029Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -401,6 +401,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/cultural-arts-council/",
+      "note": ""
+    },
+    {
+      "id": "398448",
+      "title": "Disability Access Committee – Walking Tour of The Wolfsonian Accessibility Upgrades",
+      "description": "The Wolfsonian 1001 Washington Avenue",
+      "startLocal": "2026-11-05T13:00:00",
+      "endLocal": "2026-11-05T15:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/disability-access-committee-walking-tour-of-the-wolfsonian-accessibility-upgrades/",
       "note": ""
     },
     {
