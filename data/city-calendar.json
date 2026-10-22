@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T17:17:40.322Z",
+  "generatedAt": "2026-10-22T21:43:11.497Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -126,17 +126,6 @@
       "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/committee-for-quality-education-3/",
-      "note": ""
-    },
-    {
-      "id": "10104346",
-      "title": "Land Use and Sustainability Committee**",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-27T11:00:00",
-      "endLocal": "2026-10-27T13:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-10-27/",
       "note": ""
     },
     {
@@ -452,7 +441,7 @@
       "title": "Special City Commission*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
       "startLocal": "2026-11-16T09:00:00",
-      "endLocal": "2026-11-16T17:00:00",
+      "endLocal": "2026-11-16T10:00:00",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission-2/",
@@ -470,14 +459,25 @@
       "note": ""
     },
     {
+      "id": "398493",
+      "title": "City Commission*",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-18T08:30:00",
+      "endLocal": "2026-11-18T19:00:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/city-commission-3/",
+      "note": ""
+    },
+    {
       "id": "10104083",
       "title": "City Commission*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-11-18",
-      "endLocal": "2026-11-18",
+      "startLocal": "2026-11-18T09:00:00",
+      "endLocal": "2026-11-18T17:00:00",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/city-commission/2026-11-18/",
+      "url": "https://events.miamibeachfl.gov/event/city-commission-3-2/2026-11-18/",
       "note": ""
     },
     {
@@ -516,10 +516,10 @@
     {
       "id": "398432",
       "title": "City Commission* – Workshop",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
       "startLocal": "2026-11-30T16:30:00",
       "endLocal": "2026-11-30T19:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission-workshop/",
       "note": ""
@@ -572,11 +572,11 @@
       "id": "10104084",
       "title": "City Commission*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-12-09",
-      "endLocal": "2026-12-09",
+      "startLocal": "2026-12-09T09:00:00",
+      "endLocal": "2026-12-09T17:00:00",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/city-commission/2026-12-09/",
+      "url": "https://events.miamibeachfl.gov/event/city-commission-3-2/2026-12-09/",
       "note": ""
     },
     {
