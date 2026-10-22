@@ -1,67 +1,12 @@
 {
-  "generatedAt": "2026-10-21T21:48:14.029Z",
+  "generatedAt": "2026-10-22T04:59:31.876Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-21&end_date=2026-12-20&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-22&end_date=2026-12-21&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10107653",
-      "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 1 st Floor Conference Room North Shore Branch Library 7501 Collins Avenue",
-      "startLocal": "2026-10-21T07:00:00",
-      "endLocal": "2026-10-21T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/early-voting-for-the-november-3-2026-general-election-miami-beach-special-election-a-secure-vote-by-mail-drop-box-will-be-available-and-staffed-at-each-early-voting-location-during-early-voting-ho/2026-10-21/",
-      "note": ""
-    },
-    {
-      "id": "10104338",
-      "title": "Public Safety and Neighborhood Quality of Life Committee**",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/87833352956 Webinar ID: 87833352956# 1.312.626.6799 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-21T09:00:00",
-      "endLocal": "2026-10-21T13:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/public-safety-and-neighborhood-quality-of-life-committee/2026-10-21/",
-      "note": ""
-    },
-    {
-      "id": "398158",
-      "title": "Street Re-naming Ceremony In Memory of Judge Irving and Hazel Cypen",
-      "description": "Join the City of Miami Beach along with Commissioner Laura Dominguez and Miami-Dade County District 4 Commissioner Micky Steinberg for a street re-naming ceremony in memory of Judge Irving and Hazel Cypen. Wednesday, October 21 2 PM Belle Isle Park Island Avenue on Belle Isle",
-      "startLocal": "2026-10-21T14:00:00",
-      "endLocal": "2026-10-21T14:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/street-renaming-ceremony-in-memory-of-judge-irving-and-hazel-cypen/",
-      "note": ""
-    },
-    {
-      "id": "397885",
-      "title": "Human Rights Committee",
-      "description": "Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Parking Department Conference Room",
-      "startLocal": "2026-10-21T16:30:00",
-      "endLocal": "2026-10-21T18:30:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/human-rights-committee-2/",
-      "note": ""
-    },
-    {
-      "id": "10104091",
-      "title": "Presentations and Awards*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 1.305.224.1968 or 1.888.475.4499 Access ID: 81392857671# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-21T17:00:00",
-      "endLocal": "2026-10-21T19:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/presentations-and-awards/2026-10-21/",
-      "note": ""
-    },
     {
       "id": "10107654",
       "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
