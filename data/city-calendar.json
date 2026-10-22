@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T12:02:44.697Z",
+  "generatedAt": "2026-10-22T17:17:40.322Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -360,6 +360,17 @@
       "note": ""
     },
     {
+      "id": "398485",
+      "title": "Second Virtual Community Meeting for the Proposed FAR Increase for 1751, 1757 & 1775 Collins Avenue",
+      "description": "The City of Miami Beach invites you to attend the second virtual community meeting to discuss the proposed .5 Floor Area Ratio (FAR) increase for the 1751, 1757 & 1775 Collins Avenue development. The meeting will focus on proposed amendments to the City Code and Comprehensive Plan, including an increase in maximum allowable FAR, as part of a broader set of incentives designed to support and encourage responsible development in the area. Thursday, November 5, 2026 at 5 p.m. Webinar ID: 813 2664 6957 via Zoom: https://miamibeachfl-gov.zoom.us/j/81326646957 If you have additional questions, please email Neighborhood Affairs Coordinator Nicholas Levy at NicholasLevy@miamibeachfl.gov",
+      "startLocal": "2026-11-05T17:00:00",
+      "endLocal": "2026-11-05T18:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/second-virtual-community-meeting-for-the-proposed-far-increase-for-1751-1757-1775-collins-avenue/",
+      "note": ""
+    },
+    {
       "id": "10104223",
       "title": "Board of Adjustment*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82869615309 1.301.715.8592 or 877.853.5257 Access ID: 82869615309# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -412,6 +423,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion/",
+      "note": ""
+    },
+    {
+      "id": "398480",
+      "title": "Special City Commission* – Live Local Act",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "startLocal": "2026-11-12T15:30:00",
+      "endLocal": "2026-11-12T18:30:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/special-city-commission/",
       "note": ""
     },
     {

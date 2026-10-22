@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T17:20:08.625Z",
+  "generatedAt": "2026-10-22T17:17:52.059Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "410019",
+      "title": "Miami Beach Launches ‘Find Your Wonder’ Campaign to Celebrate Year-Round Arts & Culture",
+      "summary": "Developed in partnership with the Greater Miami Convention & Visitors Bureau",
+      "publishedAt": "2026-10-21T12:08:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-launches-find-your-wonder-campaign-to-celebrate-year-round-arts-culture/",
+      "label": "Official city news"
+    },
     {
       "id": "409980",
       "title": "Miami Beach To Honor the Late Hazel Abrams Cypen",
@@ -17,7 +25,7 @@
     },
     {
       "id": "409988",
-      "title": "Copy of _Template Communications Press Releases",
+      "title": "2026 Installment of No Vacancy, Miami Beach on Display November 12 through December 19",
       "summary": "12 artists will exhibit site-specific installations at iconic Miami Beach area hotels with $35,000 in prize money up for grabs during Art Week Miami Beach",
       "publishedAt": "2026-10-19T13:51:00",
       "url": "https://www.miamibeachfl.gov/2026-installment-of-no-vacancy-miami-beach-on-display-november-12-through-december-19/",
@@ -77,14 +85,6 @@
       "summary": "City officials will honor the victims of the Oct. 7 attack and reaffirm support for Israel",
       "publishedAt": "2026-10-02T12:08:00",
       "url": "https://www.miamibeachfl.gov/third-anniversary-of-attack-on-israel-to-be-observed-in-miami-beach/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409244",
-      "title": "Miami Beach To Honor Legacy of Arthur “Big Art” Martineau",
-      "summary": "Martineau changed lives as executive director of the Miami Beach PAL",
-      "publishedAt": "2026-10-01T12:56:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-legacy-of-arthur-big-art-martineau/",
       "label": "Official city news"
     }
   ]

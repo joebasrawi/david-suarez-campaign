@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T17:20:36.218Z",
+  "generatedAt": "2026-10-22T17:18:18.683Z",
   "youtube": {
     "items": [
       {
@@ -27,19 +27,19 @@
   "news": {
     "items": [
       {
+        "id": "410019",
+        "title": "Miami Beach Launches ‘Find Your Wonder’ Campaign to Celebrate Year-Round Arts & Culture",
+        "summary": "Developed in partnership with the Greater Miami Convention & Visitors Bureau",
+        "publishedAt": "2026-10-21T12:08:00",
+        "url": "https://www.miamibeachfl.gov/miami-beach-launches-find-your-wonder-campaign-to-celebrate-year-round-arts-culture/",
+        "label": "Official city news"
+      },
+      {
         "id": "409980",
         "title": "Miami Beach To Honor the Late Hazel Abrams Cypen",
         "summary": "A portion of Venetian Way will be co-named in honor of the centenarian",
         "publishedAt": "2026-10-20T10:42:00",
         "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-the-late-hazel-abrams-cypen/",
-        "label": "Official city news"
-      },
-      {
-        "id": "409988",
-        "title": "Copy of _Template Communications Press Releases",
-        "summary": "12 artists will exhibit site-specific installations at iconic Miami Beach area hotels with $35,000 in prize money up for grabs during Art Week Miami Beach",
-        "publishedAt": "2026-10-19T13:51:00",
-        "url": "https://www.miamibeachfl.gov/2026-installment-of-no-vacancy-miami-beach-on-display-november-12-through-december-19/",
         "label": "Official city news"
       }
     ]
