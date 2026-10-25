@@ -1,7 +1,17 @@
 {
-  "generatedAt": "2026-10-22T17:18:18.683Z",
+  "generatedAt": "2026-10-25T16:55:16.567Z",
   "youtube": {
     "items": [
+      {
+        "id": "CSPidKkXXyE",
+        "title": "I'm a City Commissioner, and I Want You to Give Me Less Money. Here's Why.",
+        "series": "City Issues",
+        "publishedAt": "2026-10-20T16:51:49+00:00",
+        "updatedAt": "2026-10-23T23:06:58+00:00",
+        "url": "https://www.youtube.com/watch?v=CSPidKkXXyE",
+        "thumbnail": "https://i.ytimg.com/vi/CSPidKkXXyE/hqdefault.jpg",
+        "duration": "2:34"
+      },
       {
         "id": "PYm_7eJxilE",
         "title": "Suarez Sound Off Ep. 006 — Selling Miami: Real Estate & Real Life | Dina Goldentayer",
@@ -11,6 +21,36 @@
         "url": "https://www.youtube.com/watch?v=PYm_7eJxilE",
         "thumbnail": "https://i.ytimg.com/vi/PYm_7eJxilE/hqdefault.jpg",
         "duration": "31:05"
+      },
+      {
+        "id": "WpDh1IzQ-mQ",
+        "title": "How Miami Beach Government Works, Part 4: Who Actually Controls What?",
+        "series": "Miami Beach Civics",
+        "publishedAt": "2026-10-02T15:34:52+00:00",
+        "updatedAt": "2026-10-07T07:52:57+00:00",
+        "url": "https://www.youtube.com/watch?v=WpDh1IzQ-mQ",
+        "thumbnail": "https://i.ytimg.com/vi/WpDh1IzQ-mQ/hqdefault.jpg",
+        "duration": "2:15"
+      },
+      {
+        "id": "qQnOLzhwo1s",
+        "title": "Ride Along: How Pot Holes in Miami Beach Get Fixed",
+        "series": "Ride Along",
+        "publishedAt": "2026-10-12T17:25:58+00:00",
+        "updatedAt": "2026-10-16T10:29:04+00:00",
+        "url": "https://www.youtube.com/watch?v=qQnOLzhwo1s",
+        "thumbnail": "https://i.ytimg.com/vi/qQnOLzhwo1s/hqdefault.jpg",
+        "duration": "2:13"
+      },
+      {
+        "id": "V2sDUO2tT5Y",
+        "title": "These Miami Beach Cops Were Caught Exchanging 100s of Explicit Pornographic Material While On Duty",
+        "series": "Accountability",
+        "publishedAt": "2026-08-12T12:01:24+00:00",
+        "updatedAt": "2026-10-15T04:55:48+00:00",
+        "url": "https://www.youtube.com/watch?v=V2sDUO2tT5Y",
+        "thumbnail": "https://i.ytimg.com/vi/V2sDUO2tT5Y/hqdefault.jpg",
+        "duration": "6:59"
       }
     ]
   },

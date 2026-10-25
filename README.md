@@ -19,4 +19,13 @@ The scheduled GitHub Action refreshes:
 - the latest videos from Commissioner Suarez's YouTube channel; and
 - City Clerk ordinance and resolution registry status.
 
+The homepage's “Watch David” section uses the newest upload across the channel,
+plus the newest thumbnail for each of its four series. The existing six-hour sync
+rebuilds `data/home-summary.json`; the next page load picks up those changes.
+YouTube outages retain the last good catalog, and a failed browser request leaves
+the built homepage fallback visible. No API key is required.
+
+Run `npm test` for offline regression checks and `npm run build` to regenerate the
+static pages (including the homepage's no-JavaScript video fallback).
+
 See [the content and data architecture](docs/CONTENT_AND_DATA_ARCHITECTURE.md) for source-labeling and review rules.
