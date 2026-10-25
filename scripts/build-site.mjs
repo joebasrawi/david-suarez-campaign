@@ -55,7 +55,8 @@ for (const route of ['', 'commission-agenda','commission-actions','media','activ
  const file = new URL(`${route ? route+'/' : ''}index.html`,root);
  let html = await readFile(file,'utf8');
  if(route===''){
-   html=html.replace(/<main\b[\s\S]*?<\/main>/,homeLayout()).replace('<body>','<body class="home-cinematic">');
+   const home=homeLayout(JSON.parse(await readFile(new URL('data/youtube.json',root),'utf8')).items);
+   html=html.replace(/<main\b[\s\S]*?<\/main>/,()=>home).replace('<body>','<body class="home-cinematic">');
  }
  if(route==='active-projects')html=html.replace(/<main\b[\s\S]*?<\/main>/,projectsLayout);
  html = html.replace(/<header class="(?:site-header|hub-header|topbar)"[\s\S]*?<\/header>/,header(route));
@@ -76,6 +77,9 @@ for(const entry of ['home.js','pages.js','media/app.js','active-projects/explore
  const code=await readFile(file,'utf8');
  await writeFile(file,code.replace(/(from ['"](?:\.\.\/|\.\/)shared\.js)(?:\?v=[a-f0-9]+)?(['"])/g,'$1?v='+sharedHash+'$2'));
 }
+const homeVideoHash=createHash('sha256').update(await readFile(new URL('home-videos.js',root))).digest('hex').slice(0,10);
+const homeFile=new URL('home.js',root);
+await writeFile(homeFile,(await readFile(homeFile,'utf8')).replace(/(from ['"]\.\/home-videos\.js)(?:\?v=[a-f0-9]+)?(['"])/g,'$1?v='+homeVideoHash+'$2'));
 // Content-versioned local assets prevent older browser caches hiding a release.
 const mapHash=createHash('sha256').update(await readFile(new URL('city-map.js',root))).digest('hex').slice(0,10);
 for(const entry of ['home.js','active-projects/explorer.js']){

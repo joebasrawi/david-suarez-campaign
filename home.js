@@ -1,13 +1,10 @@
-import {json, escape as e, date, thumbnailFallback, newsExcerpt} from './shared.js?v=da4eebcc5e';
+import {renderHomeVideos} from './home-videos.js?v=482f56434d';
+import {json, escape as e, date, newsExcerpt} from './shared.js?v=da4eebcc5e';
 import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer,groupMapPoints} from './city-map.js?v=094b460af6';
 const $=s=>document.querySelector(s);
 async function init(){
  const {youtube,agenda,news}=await json('home-summary');
- if(youtube){const item=youtube.items.find(i=>i.series==='Suarez Sound Off')||youtube.items[0];if(item){
- $('#featured-title').textContent=item.title.replace(/^Suarez Sound Off\s*Ep\.\s*\d+\s*[—-]\s*/i,'').replace(/\s*\|.*$/,'');
- $('#featured-series').textContent=item.series;$('#featured-date').textContent=date(item.publishedAt);$('#featured-link').href='media/?video='+item.id;$('#featured-link').textContent='Watch episode';
- const image=$('#featured-image');image.src='https://i.ytimg.com/vi/'+item.id+'/maxresdefault.jpg';image.alt=item.title;image.dataset.video=item.id;thumbnailFallback();
- }}
+ renderHomeVideos(youtube?.items);
  const cards=[];
  if(agenda){const m=agenda.nextMeeting;const d=new Date(m.date+'T12:00:00');cards.push('<article class="official-item agenda-preview"><span class="official-label">Your next commission meeting</span><time class="meeting-date-art" datetime="'+e(m.date)+'">'+e(d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}))+'</time><div><h3>'+m.itemCount+' items for consideration.</h3><a href="commission-agenda/">See what’s on the agenda ↗</a></div></article>');}
  if(news)news.items.slice(0,2).forEach(i=>cards.push('<article class="official-item news-preview"><span class="official-label">City announcement · '+e(date(i.publishedAt,true))+'</span><div><h3>'+e(i.title)+'</h3><p>'+e(newsExcerpt(i.summary))+'</p></div><a href="'+e(i.url)+'" target="_blank" rel="noreferrer">Read announcement ↗</a></article>'));
