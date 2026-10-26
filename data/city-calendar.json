@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T13:15:25.609Z",
+  "generatedAt": "2026-10-26T22:44:55.971Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -327,17 +327,6 @@
       "note": ""
     },
     {
-      "id": "392560",
-      "title": "West Avenue Phase II Neighborhood Improvement Project: Latest Updates & Community Discussion",
-      "description": "Join Commissioner Alex J. Fernandez for a virtual community meeting to explore progress, upcoming plans and a review of construction site updates for the West Avenue Phase II Neighborhood Improvement Project. Thursday, November 12 11 AM Zoom link: https://us06web.zoom.us/j/82324069554",
-      "startLocal": "2026-11-12T11:00:00",
-      "endLocal": "2026-11-12T11:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion/",
-      "note": ""
-    },
-    {
       "id": "398480",
       "title": "Special City Commission* – Live Local Act",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -361,7 +350,7 @@
     },
     {
       "id": "398429",
-      "title": "Special City Commission*",
+      "title": "Special City Commission – Accept Election Results*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
       "startLocal": "2026-11-16T09:00:00",
       "endLocal": "2026-11-16T10:00:00",
@@ -412,6 +401,17 @@
       "location": "Building Department 2nd Floor Conf. Room, 1700 Convention Center Dr, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/miami-beach-business-ready-day/2026-11-19/",
+      "note": ""
+    },
+    {
+      "id": "392560",
+      "title": "West Avenue Phase II Neighborhood Improvement Project: Latest Updates & Community Discussion",
+      "description": "Join Commissioner Alex J. Fernandez for a virtual community meeting to explore progress, upcoming plans and a review of construction site updates for the West Avenue Phase II Neighborhood Improvement Project. Thursday, November 19 11 AM Zoom link: https://us06web.zoom.us/j/82324069554 &nbsp;",
+      "startLocal": "2026-11-19T11:00:00",
+      "endLocal": "2026-11-19T12:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion/",
       "note": ""
     },
     {
