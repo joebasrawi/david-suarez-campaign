@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T04:56:51.024Z",
+  "generatedAt": "2026-10-26T13:15:25.609Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -294,6 +294,17 @@
       "note": ""
     },
     {
+      "id": "398564",
+      "title": "Affordable Housing Advisory Committee",
+      "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
+      "startLocal": "2026-11-09T17:00:00",
+      "endLocal": "2026-11-09T19:00:00",
+      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2-2/",
+      "note": ""
+    },
+    {
       "id": "10104232",
       "title": "Historic Preservation Board*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or .888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
@@ -357,17 +368,6 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission-2/",
-      "note": ""
-    },
-    {
-      "id": "10104366",
-      "title": "Affordable Housing Advisory Committee",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-11-17T17:00:00",
-      "endLocal": "2026-11-17T19:00:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2/2026-11-17/",
       "note": ""
     },
     {
