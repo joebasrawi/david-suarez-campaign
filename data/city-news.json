@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T17:17:52.059Z",
+  "generatedAt": "2026-10-27T22:22:28.184Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "410122",
+      "title": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park",
+      "summary": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park $1.5 million artificial turf replacement project is part of broader partnership to expand youth access to soccer and World Cup experiences across South Florida",
+      "publishedAt": "2026-10-26T13:55:00",
+      "url": "https://www.miamibeachfl.gov/fifa-world-cup-2026-miami-host-committee-city-of-miami-beach-and-griffin-catalyst-celebrate-one-game-one-future-legacy-investment-at-normandy-isle-park/",
+      "label": "Official city news"
+    },
     {
       "id": "410019",
       "title": "Miami Beach Launches ‘Find Your Wonder’ Campaign to Celebrate Year-Round Arts & Culture",
@@ -77,14 +85,6 @@
       "summary": "Applications are now open for up to $20,000 per property through the city’s Private Property Adaptation Program",
       "publishedAt": "2026-10-06T11:54:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-to-award-grants-for-privately-owned-seawalls/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409521",
-      "title": "Third Anniversary of Attack on Israel to Be Observed in Miami Beach",
-      "summary": "City officials will honor the victims of the Oct. 7 attack and reaffirm support for Israel",
-      "publishedAt": "2026-10-02T12:08:00",
-      "url": "https://www.miamibeachfl.gov/third-anniversary-of-attack-on-israel-to-be-observed-in-miami-beach/",
       "label": "Official city news"
     }
   ]

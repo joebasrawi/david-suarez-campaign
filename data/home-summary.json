@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:55:16.567Z",
+  "generatedAt": "2026-10-27T22:22:55.515Z",
   "youtube": {
     "items": [
       {
@@ -67,19 +67,19 @@
   "news": {
     "items": [
       {
+        "id": "410122",
+        "title": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park",
+        "summary": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park $1.5 million artificial turf replacement project is part of broader partnership to expand youth access to soccer and World Cup experiences across South Florida",
+        "publishedAt": "2026-10-26T13:55:00",
+        "url": "https://www.miamibeachfl.gov/fifa-world-cup-2026-miami-host-committee-city-of-miami-beach-and-griffin-catalyst-celebrate-one-game-one-future-legacy-investment-at-normandy-isle-park/",
+        "label": "Official city news"
+      },
+      {
         "id": "410019",
         "title": "Miami Beach Launches ‘Find Your Wonder’ Campaign to Celebrate Year-Round Arts & Culture",
         "summary": "Developed in partnership with the Greater Miami Convention & Visitors Bureau",
         "publishedAt": "2026-10-21T12:08:00",
         "url": "https://www.miamibeachfl.gov/miami-beach-launches-find-your-wonder-campaign-to-celebrate-year-round-arts-culture/",
-        "label": "Official city news"
-      },
-      {
-        "id": "409980",
-        "title": "Miami Beach To Honor the Late Hazel Abrams Cypen",
-        "summary": "A portion of Venetian Way will be co-named in honor of the centenarian",
-        "publishedAt": "2026-10-20T10:42:00",
-        "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-the-late-hazel-abrams-cypen/",
         "label": "Official city news"
       }
     ]
