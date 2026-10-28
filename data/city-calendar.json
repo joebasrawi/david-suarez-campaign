@@ -1,45 +1,12 @@
 {
-  "generatedAt": "2026-10-27T05:14:26.079Z",
+  "generatedAt": "2026-10-28T05:52:46.916Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-27&end_date=2026-12-26&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-28&end_date=2026-12-27&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "10107659",
-      "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 1 st Floor Conference Room North Shore Branch Library 7501 Collins Avenue",
-      "startLocal": "2026-10-27T07:00:00",
-      "endLocal": "2026-10-27T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/early-voting-for-the-november-3-2026-general-election-miami-beach-special-election-a-secure-vote-by-mail-drop-box-will-be-available-and-staffed-at-each-early-voting-location-during-early-voting-ho/2026-10-27/",
-      "note": ""
-    },
-    {
-      "id": "398194",
-      "title": "Committee for Quality Education",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-10-27T09:00:00",
-      "endLocal": "2026-10-27T11:00:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/committee-for-quality-education-3/",
-      "note": ""
-    },
-    {
-      "id": "398196",
-      "title": "Youth Commission Meeting",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-10-27T16:00:00",
-      "endLocal": "2026-10-27T18:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/youth-commission-meeting-3/",
-      "note": ""
-    },
     {
       "id": "10107660",
       "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
