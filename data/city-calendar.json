@@ -1,34 +1,12 @@
 {
-  "generatedAt": "2026-10-28T05:52:46.916Z",
+  "generatedAt": "2026-10-29T05:57:11.448Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-28&end_date=2026-12-27&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-29&end_date=2026-12-28&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "10107660",
-      "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 1 st Floor Conference Room North Shore Branch Library 7501 Collins Avenue",
-      "startLocal": "2026-10-28T07:00:00",
-      "endLocal": "2026-10-28T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/early-voting-for-the-november-3-2026-general-election-miami-beach-special-election-a-secure-vote-by-mail-drop-box-will-be-available-and-staffed-at-each-early-voting-location-during-early-voting-ho/2026-10-28/",
-      "note": ""
-    },
-    {
-      "id": "10104327",
-      "title": "Finance and Economic Resiliency Committee**",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86360595462 Webinar ID: 86360595462# 1.301.715.8592 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-10-28T10:30:00",
-      "endLocal": "2026-10-28T12:30:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/finance-and-economic-resiliency-committee-2/2026-10-28/",
-      "note": ""
-    },
     {
       "id": "10107661",
       "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
