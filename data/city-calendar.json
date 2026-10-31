@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-10-30T22:27:25.094Z",
+  "generatedAt": "2026-10-31T05:54:19.862Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-30&end_date=2026-12-29&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-10-31&end_date=2026-12-30&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10107662",
-      "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 1 st Floor Conference Room North Shore Branch Library 7501 Collins Avenue",
-      "startLocal": "2026-10-30T07:00:00",
-      "endLocal": "2026-10-30T19:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/early-voting-for-the-november-3-2026-general-election-miami-beach-special-election-a-secure-vote-by-mail-drop-box-will-be-available-and-staffed-at-each-early-voting-location-during-early-voting-ho/2026-10-30/",
-      "note": ""
-    },
     {
       "id": "10107663",
       "title": "Early Voting for the November 3, 2026 General Election/Miami Beach Special Election **A secure Vote-by-Mail drop box will be available and staffed at each Early Voting location during Early Voting hours of operation.",
