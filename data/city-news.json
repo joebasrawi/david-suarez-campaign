@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T22:22:28.184Z",
+  "generatedAt": "2026-11-03T19:34:27.836Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "410456",
+      "title": "Miami Beach to Honor Veterans with High-Tech Letter Campaign",
+      "summary": "The Letters of Gratitude will be displayed on The Betsy Orb as part of the city’s America 250 celebration culminating on Veterans Day",
+      "publishedAt": "2026-11-02T14:50:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-veterans-with-high-tech-letter-campaign/",
+      "label": "Official city news"
+    },
     {
       "id": "410122",
       "title": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park",
@@ -77,14 +85,6 @@
       "summary": "Enjoy free admission to a wide range of events from Oct. 15 through July 2027",
       "publishedAt": "2026-10-12T12:12:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-kicks-off-new-season-of-culture-crawl/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409516",
-      "title": "Miami Beach to Award Grants for Privately-Owned Seawalls",
-      "summary": "Applications are now open for up to $20,000 per property through the city’s Private Property Adaptation Program",
-      "publishedAt": "2026-10-06T11:54:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-to-award-grants-for-privately-owned-seawalls/",
       "label": "Official city news"
     }
   ]

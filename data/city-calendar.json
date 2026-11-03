@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T06:57:03.212Z",
+  "generatedAt": "2026-11-03T19:34:12.098Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -294,6 +294,17 @@
       "note": ""
     },
     {
+      "id": "398761",
+      "title": "Commission for Women – Josephine Baker Florida Historical Marker Ceremony",
+      "description": "",
+      "startLocal": "2026-11-12T11:00:00",
+      "endLocal": "2026-11-12T13:00:00",
+      "location": "Maurice Gibb Memorial Park, 18th St & Purdy Avenue, Miami Beach, FL 33139, USA",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/commission-for-women-josephine-baker-florida-historical-marker-ceremony/",
+      "note": ""
+    },
+    {
       "id": "398704",
       "title": "Production Industry Council",
       "description": "Hybrid Meeting https://bit.ly/3YFAJil Meeting ID: 29544556590650# Passcode: L2zE9xr2 1.786.636.1480 Access ID: 499712655# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor",
@@ -346,6 +357,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission-2/",
+      "note": ""
+    },
+    {
+      "id": "398769",
+      "title": "Mondays with Monica",
+      "description": "Commissioner Monica Matteo-Salinas invites you to Mondays with Monica, a virtual meeting ahead of the Wednesday, November 18 City Commission meeting where residents can ask questions, share input and talk through upcoming agenda items as well as broader neighborhood issues. Monday, November 16 5:30 PM – 6:30 PM Zoom link: us06web.zoom.us/j/83377402686 Webinar ID: 833 7740 2686",
+      "startLocal": "2026-11-16T17:30:00",
+      "endLocal": "2026-11-16T18:30:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/mondays-with-monica/",
       "note": ""
     },
     {
@@ -423,6 +445,17 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/city-commission-workshop/",
+      "note": ""
+    },
+    {
+      "id": "398765",
+      "title": "The Art of Diplomacy",
+      "description": "",
+      "startLocal": "2026-12-01T17:00:00",
+      "endLocal": "2026-12-01T19:00:00",
+      "location": "",
+      "category": "City Government",
+      "url": "https://events.miamibeachfl.gov/event/the-art-of-diplomacy/",
       "note": ""
     },
     {
