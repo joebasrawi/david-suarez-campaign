@@ -1,56 +1,12 @@
 {
-  "generatedAt": "2026-11-03T19:34:12.098Z",
+  "generatedAt": "2026-11-04T06:38:16.991Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-03&end_date=2027-01-02&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-04&end_date=2027-01-03&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "398438",
-      "title": "Election Day",
-      "description": "Individual Voting Precincts Voters must vote at their assigned polling place.",
-      "startLocal": "2026-11-03T07:00:00",
-      "endLocal": "2026-11-03T19:00:00",
-      "location": "City Hall First Floor, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/election-day/",
-      "note": ""
-    },
-    {
-      "id": "10104214",
-      "title": "Planning Board*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86143426327 Access ID: 86143426327# 1.929.205.6099 or 877.853.5257 &nbsp; Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-11-03T09:00:00",
-      "endLocal": "2026-11-03T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/planning-board-3/2026-11-03/",
-      "note": ""
-    },
-    {
-      "id": "398440",
-      "title": "Black Affairs Advisory Committee",
-      "description": "Hybrid Meeting http://bit.ly/4m65Vk4 Meeting ID: 2471439076129# Passcode: pg7h3vd2 1.786.636.1480 Access ID: 315500952# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor Conference Room",
-      "startLocal": "2026-11-03T10:00:00",
-      "endLocal": "2026-11-03T12:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/black-affairs-advisory-committee/",
-      "note": ""
-    },
-    {
-      "id": "398442",
-      "title": "Neighborhood Resiliency Projects Advisory Committee",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/87629999648 Webinar ID: 87629999648# Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager’s Large Conference Room",
-      "startLocal": "2026-11-03T16:00:00",
-      "endLocal": "2026-11-03T18:00:00",
-      "location": "City Manager’s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/neighborhood-resiliency-projects-advisory-committee-3/",
-      "note": ""
-    },
     {
       "id": "10104092",
       "title": "Presentations and Awards*",
