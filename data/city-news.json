@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T06:58:09.505Z",
+  "generatedAt": "2026-11-05T20:03:53.171Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,14 +7,6 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
-    {
-      "id": "410613",
-      "title": "Miami Beach Wants to Help Stores and Restaurants Avoid Food Waste and Lend a Helping Hand",
-      "summary": "The city’s new voluntary food waste diversion pilot program aims to connect food establishments with local food recovery organizations",
-      "publishedAt": "2026-11-03T12:49:00",
-      "url": "https://www.miamibeachfl.gov/communications-press-release-template-copy-10/",
-      "label": "Official city news"
-    },
     {
       "id": "410595",
       "title": "New Outdoor Exhibit in Miami Beach Commemorates 100 Years of Ocean Rescue",
@@ -85,6 +77,14 @@
       "summary": "Agreement spans 2026-2031, with an optional extension through 2033",
       "publishedAt": "2026-10-15T08:59:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-approves-new-long-term-agreement-with-art-basel/",
+      "label": "Official city news"
+    },
+    {
+      "id": "409918",
+      "title": "Miami Beach to Host 18th Annual Veterans Day Parade and Celebration",
+      "summary": "Along Ocean Drive from 5-15 streets",
+      "publishedAt": "2026-10-14T09:42:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-to-host-18th-annual-veterans-day-parade-and-celebration/",
       "label": "Official city news"
     }
   ]
