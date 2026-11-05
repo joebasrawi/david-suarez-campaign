@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T19:34:27.836Z",
+  "generatedAt": "2026-11-05T06:58:09.505Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,22 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "410613",
+      "title": "Miami Beach Wants to Help Stores and Restaurants Avoid Food Waste and Lend a Helping Hand",
+      "summary": "The city’s new voluntary food waste diversion pilot program aims to connect food establishments with local food recovery organizations",
+      "publishedAt": "2026-11-03T12:49:00",
+      "url": "https://www.miamibeachfl.gov/communications-press-release-template-copy-10/",
+      "label": "Official city news"
+    },
+    {
+      "id": "410595",
+      "title": "New Outdoor Exhibit in Miami Beach Commemorates 100 Years of Ocean Rescue",
+      "summary": "The free exhibit runs from Thursday, Nov. 5 through February in Lummus Park",
+      "publishedAt": "2026-11-03T12:08:00",
+      "url": "https://www.miamibeachfl.gov/new-outdoor-exhibit-in-miami-beach-commemorates-100-years-of-ocean-rescue/",
+      "label": "Official city news"
+    },
     {
       "id": "410456",
       "title": "Miami Beach to Honor Veterans with High-Tech Letter Campaign",
@@ -69,22 +85,6 @@
       "summary": "Agreement spans 2026-2031, with an optional extension through 2033",
       "publishedAt": "2026-10-15T08:59:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-approves-new-long-term-agreement-with-art-basel/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409918",
-      "title": "Miami Beach to Host 18th Annual Veterans Day Parade and Celebration",
-      "summary": "Along Ocean Drive from 5-15 streets",
-      "publishedAt": "2026-10-14T09:42:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-to-host-18th-annual-veterans-day-parade-and-celebration/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409585",
-      "title": "Miami Beach Kicks Off New Season of Culture Crawl",
-      "summary": "Enjoy free admission to a wide range of events from Oct. 15 through July 2027",
-      "publishedAt": "2026-10-12T12:12:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-kicks-off-new-season-of-culture-crawl/",
       "label": "Official city news"
     }
   ]

@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-11-04T06:38:16.991Z",
+  "generatedAt": "2026-11-05T06:57:59.613Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-04&end_date=2027-01-03&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-05&end_date=2027-01-04&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "10104092",
-      "title": "Presentations and Awards*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 1.305.224.1968 or 1.888.475.4499 Access ID: 81392857671# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-11-04T17:00:00",
-      "endLocal": "2026-11-04T19:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/presentations-and-awards/2026-11-04/",
-      "note": ""
-    },
     {
       "id": "398444",
       "title": "Special Magistrate Hearings",
