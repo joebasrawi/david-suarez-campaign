@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T20:03:53.171Z",
+  "generatedAt": "2026-11-06T19:29:57.617Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,30 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "410675",
+      "title": "Miami Beach Earns ‘Best of the Best’ Award for its Beaches",
+      "summary": "The city took top honors among restored beaches in the US",
+      "publishedAt": "2026-11-05T08:53:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-earns-best-of-the-best-award-for-its-beaches/",
+      "label": "Official city news"
+    },
+    {
+      "id": "410693",
+      "title": "Legendary Performer Josephine Baker To Be Honored in Miami Beach",
+      "summary": "The acclaimed singer and dancer’s appearance in the city more than 75 years ago played a pivotal role in ending racially segregated performances",
+      "publishedAt": "2026-11-04T08:03:00",
+      "url": "https://www.miamibeachfl.gov/legendary-performer-josephine-baker-to-be-honored-in-miami-beach/",
+      "label": "Official city news"
+    },
+    {
+      "id": "410681",
+      "title": "Miami Beach Wants to Help Stores and Restaurants Avoid Food Waste and Lend a Helping Hand",
+      "summary": "The city’s new voluntary food waste diversion pilot program aims to connect food establishments with local food recovery organizations",
+      "publishedAt": "2026-11-03T12:49:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-wants-to-help-stores-and-restaurants-avoid-food-waste-and-lend-a-helping-hand/",
+      "label": "Official city news"
+    },
     {
       "id": "410595",
       "title": "New Outdoor Exhibit in Miami Beach Commemorates 100 Years of Ocean Rescue",
@@ -61,30 +85,6 @@
       "summary": "Recipients will be honored at Ole Ole Steakhouse on Oct. 20",
       "publishedAt": "2026-10-16T13:20:00",
       "url": "https://www.miamibeachfl.gov/2026-miami-beach-hispanic-heritage-award-winners/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409934",
-      "title": "Halloween-Themed Yappy Hour Returns to Miami Beach",
-      "summary": "Bring your furry friends to Flamingo Park on Tuesday, Oct. 20 from 3:30-6:30 p.m.",
-      "publishedAt": "2026-10-15T10:48:00",
-      "url": "https://www.miamibeachfl.gov/halloween-themed-yappy-hour-returns-to-miami-beach/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409926",
-      "title": "Miami Beach Approves New Long-Term Agreement with Art Basel",
-      "summary": "Agreement spans 2026-2031, with an optional extension through 2033",
-      "publishedAt": "2026-10-15T08:59:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-approves-new-long-term-agreement-with-art-basel/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409918",
-      "title": "Miami Beach to Host 18th Annual Veterans Day Parade and Celebration",
-      "summary": "Along Ocean Drive from 5-15 streets",
-      "publishedAt": "2026-10-14T09:42:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-to-host-18th-annual-veterans-day-parade-and-celebration/",
       "label": "Official city news"
     }
   ]

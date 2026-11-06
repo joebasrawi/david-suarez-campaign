@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T06:57:50.180Z",
+  "generatedAt": "2026-11-06T19:29:48.121Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
@@ -38,17 +38,6 @@
       "location": "",
       "category": "City Government",
       "url": "https://events.miamibeachfl.gov/event/transportation-parking-and-bicycle-pedestrian-facilities-committee-3/",
-      "note": ""
-    },
-    {
-      "id": "398564",
-      "title": "Affordable Housing Advisory Committee",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/82203444036?pwd=g8e1UcLdUuynbRN6nS5bZteLVtH93r.1 Meeting ID: 82203444036# Passcode: 967983 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Mayor’s Conference Room",
-      "startLocal": "2026-11-09T17:00:00",
-      "endLocal": "2026-11-09T19:00:00",
-      "location": "Mayor and Comission Conference Room, 1700 Convention Center Dr. 4th Floor, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/affordable-housing-advisory-committee-3-2-2-2/",
       "note": ""
     },
     {
@@ -393,10 +382,10 @@
       "note": ""
     },
     {
-      "id": "10104083",
+      "id": "10107795",
       "title": "City Commission*",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-11-18T09:00:00",
+      "startLocal": "2026-11-18T08:30:00",
       "endLocal": "2026-11-18T17:00:00",
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "category": "City Government",
