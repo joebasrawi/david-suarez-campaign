@@ -1,56 +1,12 @@
 {
-  "generatedAt": "2026-11-05T20:03:49.707Z",
+  "generatedAt": "2026-11-06T06:57:50.180Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-05&end_date=2027-01-04&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-06&end_date=2027-01-05&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "398444",
-      "title": "Special Magistrate Hearings",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-11-05T09:00:00",
-      "endLocal": "2026-11-05T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-20/",
-      "note": ""
-    },
-    {
-      "id": "398446",
-      "title": "Cultural Arts Council",
-      "description": "Hybrid Meeting https://bit.ly/4iRb67v Meeting ID: 21674066867961# Passcode: a4e2dz3Y 1.786.636.1480 or 583.158.791 Access ID: 583158791# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor Conference Room",
-      "startLocal": "2026-11-05T12:00:00",
-      "endLocal": "2026-11-05T14:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/cultural-arts-council/",
-      "note": ""
-    },
-    {
-      "id": "398448",
-      "title": "Disability Access Committee – Walking Tour of The Wolfsonian Accessibility Upgrades",
-      "description": "The Wolfsonian 1001 Washington Avenue",
-      "startLocal": "2026-11-05T13:00:00",
-      "endLocal": "2026-11-05T15:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/disability-access-committee-walking-tour-of-the-wolfsonian-accessibility-upgrades/",
-      "note": ""
-    },
-    {
-      "id": "398485",
-      "title": "Second Virtual Community Meeting for the Proposed FAR Increase for 1751, 1757 & 1775 Collins Avenue",
-      "description": "The City of Miami Beach invites you to attend the second virtual community meeting to discuss the proposed .5 Floor Area Ratio (FAR) increase for the 1751, 1757 & 1775 Collins Avenue development. The meeting will focus on proposed amendments to the City Code and Comprehensive Plan, including an increase in maximum allowable FAR, as part of a broader set of incentives designed to support and encourage responsible development in the area. Thursday, November 5, 2026 at 5 p.m. Webinar ID: 813 2664 6957 via Zoom: https://miamibeachfl-gov.zoom.us/j/81326646957 If you have additional questions, please email Neighborhood Affairs Coordinator Nicholas Levy at NicholasLevy@miamibeachfl.gov",
-      "startLocal": "2026-11-05T17:00:00",
-      "endLocal": "2026-11-05T18:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/second-virtual-community-meeting-for-the-proposed-far-increase-for-1751-1757-1775-collins-avenue/",
-      "note": ""
-    },
     {
       "id": "10104223",
       "title": "Board of Adjustment*",
