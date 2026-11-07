@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-11-06T19:29:48.121Z",
+  "generatedAt": "2026-11-07T06:09:47.358Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-06&end_date=2027-01-05&per_page=50&page=3"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-07&end_date=2027-01-06&per_page=50&page=3"
   },
   "items": [
-    {
-      "id": "10104223",
-      "title": "Board of Adjustment*",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82869615309 1.301.715.8592 or 877.853.5257 Access ID: 82869615309# &nbsp; Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "startLocal": "2026-11-06T09:00:00",
-      "endLocal": "2026-11-06T17:00:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/board-of-adjustment-2/2026-11-06/",
-      "note": ""
-    },
     {
       "id": "10104339",
       "title": "Public Safety and Neighborhood Quality of Life Committee**",
