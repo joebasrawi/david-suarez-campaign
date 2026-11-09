@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T19:29:57.617Z",
+  "generatedAt": "2026-11-09T22:29:08.617Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,14 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "410801",
+      "title": "Miami Beach Once Again Becomes Center of Global Art World",
+      "summary": "Immerse yourself in eye-catching public art, international performances and elevated special events during Art Week Miami Beach on Nov. 30 to Dec. 6, 2026",
+      "publishedAt": "2026-11-09T10:21:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-once-again-becomes-center-of-global-art-world/",
+      "label": "Official city news"
+    },
     {
       "id": "410675",
       "title": "Miami Beach Earns ‘Best of the Best’ Award for its Beaches",
@@ -77,14 +85,6 @@
       "summary": "12 artists will exhibit site-specific installations at iconic Miami Beach area hotels with $35,000 in prize money up for grabs during Art Week Miami Beach",
       "publishedAt": "2026-10-19T13:51:00",
       "url": "https://www.miamibeachfl.gov/2026-installment-of-no-vacancy-miami-beach-on-display-november-12-through-december-19/",
-      "label": "Official city news"
-    },
-    {
-      "id": "409941",
-      "title": "2026 Miami Beach Hispanic Heritage Award Winners",
-      "summary": "Recipients will be honored at Ole Ole Steakhouse on Oct. 20",
-      "publishedAt": "2026-10-16T13:20:00",
-      "url": "https://www.miamibeachfl.gov/2026-miami-beach-hispanic-heritage-award-winners/",
       "label": "Official city news"
     }
   ]

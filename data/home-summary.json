@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T13:15:00.277Z",
+  "generatedAt": "2026-11-09T22:29:35.253Z",
   "youtube": {
     "items": [
       {
@@ -57,19 +57,19 @@
   "news": {
     "items": [
       {
+        "id": "410801",
+        "title": "Miami Beach Once Again Becomes Center of Global Art World",
+        "summary": "Immerse yourself in eye-catching public art, international performances and elevated special events during Art Week Miami Beach on Nov. 30 to Dec. 6, 2026",
+        "publishedAt": "2026-11-09T10:21:00",
+        "url": "https://www.miamibeachfl.gov/miami-beach-once-again-becomes-center-of-global-art-world/",
+        "label": "Official city news"
+      },
+      {
         "id": "410675",
         "title": "Miami Beach Earns ‘Best of the Best’ Award for its Beaches",
         "summary": "The city took top honors among restored beaches in the US",
         "publishedAt": "2026-11-05T08:53:00",
         "url": "https://www.miamibeachfl.gov/miami-beach-earns-best-of-the-best-award-for-its-beaches/",
-        "label": "Official city news"
-      },
-      {
-        "id": "410693",
-        "title": "Legendary Performer Josephine Baker To Be Honored in Miami Beach",
-        "summary": "The acclaimed singer and dancer’s appearance in the city more than 75 years ago played a pivotal role in ending racially segregated performances",
-        "publishedAt": "2026-11-04T08:03:00",
-        "url": "https://www.miamibeachfl.gov/legendary-performer-josephine-baker-to-be-honored-in-miami-beach/",
         "label": "Official city news"
       }
     ]
