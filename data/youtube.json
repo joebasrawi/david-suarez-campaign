@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T13:14:34.086Z",
+  "generatedAt": "2026-11-11T19:41:31.064Z",
   "source": {
     "label": "Commissioner David Suarez on YouTube",
     "url": "https://www.youtube.com/@CommissionerDavidSuarez",
@@ -8,11 +8,21 @@
   "channelId": "UCFSRLFAu-wZdguhiP021UUA",
   "items": [
     {
+      "id": "YSWMMF2ZPPI",
+      "title": "How Government Works | Part 5: Your Voice Matters!",
+      "series": "Miami Beach Civics",
+      "publishedAt": "2026-11-11T00:03:30+00:00",
+      "updatedAt": "2026-11-11T07:33:09+00:00",
+      "url": "https://www.youtube.com/watch?v=YSWMMF2ZPPI",
+      "thumbnail": "https://i.ytimg.com/vi/YSWMMF2ZPPI/hqdefault.jpg",
+      "duration": "2:58"
+    },
+    {
       "id": "V3oRsOHpWTk",
       "title": "How Miami Beach Keeps Its Streets Clean | Ride Along With Our Crew",
       "series": "Ride Along",
       "publishedAt": "2026-11-06T21:12:54+00:00",
-      "updatedAt": "2026-11-07T03:10:21+00:00",
+      "updatedAt": "2026-11-09T23:41:10+00:00",
       "url": "https://www.youtube.com/watch?v=V3oRsOHpWTk",
       "thumbnail": "https://i.ytimg.com/vi/V3oRsOHpWTk/hqdefault.jpg",
       "duration": "2:43"
