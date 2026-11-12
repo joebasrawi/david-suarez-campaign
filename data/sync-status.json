@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T07:22:28.078Z",
+  "generatedAt": "2026-11-12T20:04:20.236Z",
   "source": {
     "label": "Public data publishing workflow",
     "url": "https://github.com/joebasrawi/david-suarez-campaign/actions/workflows/sync-public-data.yml"
@@ -7,47 +7,44 @@
   "items": [
     {
       "name": "youtube",
-      "status": "failed",
-      "checkedAt": "2026-11-12T07:21:52.279Z",
-      "message": "The source could not be refreshed. The last validated snapshot remains available."
+      "status": "success",
+      "checkedAt": "2026-11-12T20:03:41.405Z"
     },
     {
       "name": "calendar",
       "status": "success",
-      "checkedAt": "2026-11-12T07:21:52.981Z"
+      "checkedAt": "2026-11-12T20:03:41.965Z"
     },
     {
       "name": "agendas",
       "status": "failed",
-      "checkedAt": "2026-11-12T07:21:54.013Z",
+      "checkedAt": "2026-11-12T20:03:43.134Z",
       "message": "The source could not be refreshed. The last validated snapshot remains available."
     },
     {
       "name": "actions",
       "status": "success",
-      "checkedAt": "2026-11-12T07:22:06.049Z"
+      "checkedAt": "2026-11-12T20:03:53.924Z"
     },
     {
       "name": "news",
       "status": "success",
-      "checkedAt": "2026-11-12T07:22:06.815Z"
+      "checkedAt": "2026-11-12T20:03:54.835Z"
     },
     {
       "name": "projects",
-      "status": "failed",
-      "checkedAt": "2026-11-12T07:22:17.307Z",
-      "message": "The source could not be refreshed. The last validated snapshot remains available."
+      "status": "success",
+      "checkedAt": "2026-11-12T20:04:18.843Z"
     },
     {
       "name": "neighborhoods",
-      "status": "failed",
-      "checkedAt": "2026-11-12T07:22:27.803Z",
-      "message": "The source could not be refreshed. The last validated snapshot remains available."
+      "status": "success",
+      "checkedAt": "2026-11-12T20:04:18.995Z"
     },
     {
       "name": "records",
       "status": "success",
-      "checkedAt": "2026-11-12T07:22:27.949Z"
+      "checkedAt": "2026-11-12T20:04:20.083Z"
     }
   ]
 }
