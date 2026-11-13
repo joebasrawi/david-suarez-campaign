@@ -1,10 +1,11 @@
+import { validateAgenda } from './agenda-validation.mjs';
 import { access, readFile } from 'node:fs/promises';
 import { ROOT } from './lib.mjs';
 
 const checks = [
   ['data/youtube.json', 5],
   ['data/city-calendar.json', 1],
-  ['data/city-agenda.json', 100],
+  ['data/city-agenda.json', 1],
   ['data/commission-actions.json', 400],
   ['data/city-news.json', 3],
   ['data/city-projects.json', 50],
@@ -20,12 +21,7 @@ for (const [file, minimum] of checks) {
 }
 
 const agenda = JSON.parse(await readFile(new URL('../data/city-agenda.json', import.meta.url), 'utf8'));
-if (!agenda.nextMeeting?.date || !agenda.nextMeeting?.officialAgendaUrl || agenda.nextMeeting.itemCount < 1) {
-  throw new Error('data/city-agenda.json failed next-meeting validation.');
-}
-if (!Array.isArray(agenda.sections) || agenda.sections.length < 6 || agenda.sections.reduce((total, section) => total + section.count, 0) !== agenda.items.length) {
-  throw new Error('data/city-agenda.json failed section validation.');
-}
+validateAgenda({items:agenda.items,sections:agenda.sections,itemCount:agenda.nextMeeting?.itemCount,meetingDate:agenda.nextMeeting?.date,officialAgendaUrl:agenda.nextMeeting?.officialAgendaUrl});
 
 const commissioners = JSON.parse(await readFile(new URL('../data/commissioners.json', import.meta.url), 'utf8'));
 const commissionerSlugs = new Set(commissioners.items.map(person => person.slug));

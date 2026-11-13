@@ -1,3 +1,4 @@
+import { validateAgenda } from './agenda-validation.mjs';
 import { readFile } from 'node:fs/promises';
 import { cleanText, fetchText, isoNow, writeSnapshot } from './lib.mjs';
 
@@ -112,10 +113,9 @@ for (const [, sectionHeading, sectionBlock] of sectionMatches) {
   items.push(...sectionItems);
 }
 
-const itemCount = Number.isFinite(pageItemCount) && pageItemCount > 0 ? pageItemCount : items.length;
-if (items.length < 100 || itemCount !== items.length) {
-  throw new Error(`Agenda parsing mismatch: page reports ${itemCount} items and ${items.length} were parsed.`);
-}
+const itemCount = pageItemCount;
+// Require the source's explicit count. Missing/partial/empty pages never replace last-good data.
+validateAgenda({items, sections, itemCount, meetingDate, officialAgendaUrl});
 
 await writeSnapshot('data/city-agenda.json', {
   generatedAt: isoNow(),
