@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-399081@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261127T190000Z
+DTEND:20261127T210000Z
+SUMMARY:Washington Avenue Business Improvement District Annual Meeting
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Hybrid Meeting https://us06web.zoom.us/j/83542318798?pwd=CRxF
+ vP7ByrpkM8vm6lWxpuHqhbNso6.1 Washington Avenue BID Office 1210 Washingto
+ n Avenue\, Suite 220\nSource and updates: https://events.miamibeachfl.go
+ v/event/washington-avenue-business-improvement-district-annual-meeting/\
+ nSaved calendar entries are one-time copies. Check the source before att
+ ending.
+URL:https://davidsuarezmb.com/events/city-399081/
+END:VEVENT
+END:VCALENDAR

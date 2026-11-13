@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398769@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261116T223000Z
+DTEND:20261116T233000Z
+SUMMARY:Mondays with Monica
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Commissioner Monica Matteo-Salinas invites you to Mondays wit
+ h Monica\, a virtual meeting ahead of the Wednesday\, November 18 City C
+ ommission meeting where residents can ask questions\, share input and ta
+ lk through upcoming agenda items as well as broader neighborhood issues.
+  Monday\, November 16 5:30 PM – 6:30 PM Zoom link: us06web.zoom.us/j/8
+ 3377402686 Webinar ID: 833 7740 2686\nSource and updates: https://events
+ .miamibeachfl.gov/event/mondays-with-monica/\nSaved calendar entries are
+  one-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398769/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398837@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261116T150000Z
+DTEND:20261116T160000Z
+SUMMARY:Lincoln Road Business Improvement District Executive Committee
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Zoom Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNMmJ
+ YNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.859
+ 2\nSource and updates: https://events.miamibeachfl.gov/event/lincoln-roa
+ d-business-improvement-district-executive-committee-2/\nSaved calendar e
+ ntries are one-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398837/
+END:VEVENT
+END:VCALENDAR

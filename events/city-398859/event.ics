@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398859@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T230000Z
+DTEND:20261118T010000Z
+SUMMARY:The Stormwater Critical Needs Project #2 – Muss Park
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/83085510558
+  Access ID: 83085510558# 1.305.224.1968 or 312 626 6799 Miami Beach City
+  Hall 1700 Convention Center Dr\, 3 rd Floor Commission Chamber\nSource 
+ and updates: https://events.miamibeachfl.gov/event/the-stormwater-critic
+ al-needs-project-2-muss-park/\nSaved calendar entries are one-time copie
+ s. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398859/
+END:VEVENT
+END:VCALENDAR

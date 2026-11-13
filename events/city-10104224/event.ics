@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-10104224@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261204T140000Z
+DTEND:20261204T220000Z
+SUMMARY:Board of Adjustment
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82869615309
+  1.301.715.8592 or 877.853.5257 Access ID: 82869615309#   Miami Beach C
+ ity Hall 1700 Convention Center Dr\, 3 rd Floor Commission Chamber\nSour
+ ce and updates: https://events.miamibeachfl.gov/event/board-of-adjustmen
+ t-2/2026-12-04/\nSaved calendar entries are one-time copies. Check the s
+ ource before attending.
+URL:https://davidsuarezmb.com/events/city-10104224/
+END:VEVENT
+END:VCALENDAR

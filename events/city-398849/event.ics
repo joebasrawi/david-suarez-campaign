@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398849@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T143000Z
+DTEND:20261117T163000Z
+SUMMARY:Art in Public Places
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Hybrid Meeting https://bit.ly/CMB-AiPP26 Meeting ID: 22767074
+ 876147# Passcode: G3hB7Ai6 1.786.636.1480 or 848.023.452 Access ID: 8480
+ 23452# Miami Beach City Hall 1755 Meridian Avenue\, 5 th Floor Conferenc
+ e Room\nSource and updates: https://events.miamibeachfl.gov/event/art-in
+ -public-places-2/\nSaved calendar entries are one-time copies. Check the
+  source before attending.
+URL:https://davidsuarezmb.com/events/city-398849/
+END:VEVENT
+END:VCALENDAR

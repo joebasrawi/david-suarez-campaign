@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-394809@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261208T223000Z
+DTEND:20261209T000000Z
+SUMMARY:Virtual Town Hall Meeting with Mayor Steven Meiner
+LOCATION:Zoom Meeting
+DESCRIPTION:https://miamibeachfl-gov.zoom.us/j/89869137516 1.929.205.6099
+  or 877.853.5257 Meeting ID: 89869137516#\nSource and updates: https://e
+ vents.miamibeachfl.gov/event/virtual-town-hall-meeting-with-mayor-steven
+ -meiner-2/\nSaved calendar entries are one-time copies. Check the source
+  before attending.
+URL:https://davidsuarezmb.com/events/city-394809/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398863@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261118T213000Z
+DTEND:20261118T233000Z
+SUMMARY:Human Rights Committee
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Miami Beach City Hall 1755 Meridian Avenue\, 2 nd Floor Parki
+ ng Department Conference Room\nSource and updates: https://events.miamib
+ eachfl.gov/event/human-rights-committee-3/\nSaved calendar entries are o
+ ne-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398863/
+END:VEVENT
+END:VCALENDAR

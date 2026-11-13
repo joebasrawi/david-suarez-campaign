@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   sync:
@@ -22,19 +23,28 @@ jobs:
         id: refresh
         continue-on-error: true
         run: npm run sync:data
+      - name: Regenerate Events from validated City snapshot
+        run: python3 scripts/build-events-preview.py
+      - name: Validate Events failure handling
+        run: python3 scripts/test-events.py
       - name: Validate snapshots and regression checks
         run: npm test
       - name: Commit changed snapshots
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
-          if git diff --quiet -- data; then
+          if test -z "$(git status --porcelain -- data events julia-tuttle-cleanup)"; then
             echo "Public feeds are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data events julia-tuttle-cleanup
           git commit -m "chore: refresh public data"
           git push
+          # GITHUB_TOKEN pushes do not automatically trigger a Pages build.
+          gh api --method POST "repos/$GH_REPO/pages/builds"
       - name: Report any source refresh failures
         if: steps.refresh.outcome == 'failure'
         run: |

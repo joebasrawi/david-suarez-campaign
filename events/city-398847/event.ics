@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398847@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T140000Z
+DTEND:20261117T160000Z
+SUMMARY:Committee for Quality Education
+LOCATION:City Manager’s Large Conference Room\, 1700 Convention Center 
+ Drive\, Miami Beach
+DESCRIPTION:Miami Beach City Hall 1700 Convention Center Drive\, 4 th Flo
+ or City Manager’s Large Conference Room\nSource and updates: https://e
+ vents.miamibeachfl.gov/event/committee-for-quality-education-4/\nSaved c
+ alendar entries are one-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398847/
+END:VEVENT
+END:VCALENDAR

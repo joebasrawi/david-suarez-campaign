@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398873@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261119T220000Z
+DTEND:20261120T000000Z
+SUMMARY:Mayor’s 41st Street Blue Ribbon Committee
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Hybrid Meeting https://us06web.zoom.us/j/85702020601?pwd=KsC6
+ BT4wQ0SmSBTCgRVc14WeJYWUeB.1 Webinar ID: 85702020601# Passcode: 442556 F
+ irst Horizon Bank 400 Arthur Godfrey Rd Ste 102\nSource and updates: htt
+ ps://events.miamibeachfl.gov/event/mayors-41st-street-blue-ribbon-commit
+ tee/\nSaved calendar entries are one-time copies. Check the source befor
+ e attending.
+URL:https://davidsuarezmb.com/events/city-398873/
+END:VEVENT
+END:VCALENDAR

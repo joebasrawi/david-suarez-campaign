@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398867@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261119T150000Z
+DTEND:20261119T170000Z
+SUMMARY:Lincoln Road Business Improvement District Annual Meeting
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Hybrid Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNM
+ mJYNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.8
+ 592 Andres Carne de Res 455 Lincoln Road\nSource and updates: https://ev
+ ents.miamibeachfl.gov/event/lincoln-road-business-improvement-district-a
+ nnual-meeting/\nSaved calendar entries are one-time copies. Check the so
+ urce before attending.
+URL:https://davidsuarezmb.com/events/city-398867/
+END:VEVENT
+END:VCALENDAR

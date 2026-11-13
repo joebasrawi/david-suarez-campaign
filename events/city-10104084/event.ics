@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-10104084@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261209T140000Z
+DTEND:20261209T220000Z
+SUMMARY:City Commission
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671
+  Access ID: 81392857671# 1.305.224.1968 or 888.475.4499   Miami Beach C
+ ity Hall 1700 Convention Center Dr\, 3 rd Floor Commission Chamber\nSour
+ ce and updates: https://events.miamibeachfl.gov/event/city-commission-3-
+ 2/2026-12-09/\nSaved calendar entries are one-time copies. Check the sou
+ rce before attending.
+URL:https://davidsuarezmb.com/events/city-10104084/
+END:VEVENT
+END:VCALENDAR

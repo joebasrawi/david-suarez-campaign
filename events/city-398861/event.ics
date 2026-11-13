@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398861@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261118T200000Z
+DTEND:20261118T210000Z
+SUMMARY:Miami Beach Visitor and Convention Authority Board
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Zoom Meeting https://us06web.zoom.us/j/86531117070?pwd=p3Pno5
+ ILs1JzJ7bApr39ZEZCaFx3By.1 Meeting ID: 86531117070# Passcode: 867943\nSo
+ urce and updates: https://events.miamibeachfl.gov/event/miami-beach-visi
+ tor-and-convention-authority-board-2/\nSaved calendar entries are one-ti
+ me copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398861/
+END:VEVENT
+END:VCALENDAR
