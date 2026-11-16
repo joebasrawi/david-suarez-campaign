@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T06:44:05.774Z",
+  "updatedAt": "2026-11-16T22:15:50.198Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
@@ -276,6 +276,17 @@
       "location": "City Manager\u2019s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
       "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager\u2019s Large Conference Room",
       "source": "https://events.miamibeachfl.gov/event/parks-recreational-facilities-advisory-board-3/",
+      "category": "City calendar",
+      "allDay": false
+    },
+    {
+      "id": "city-399136",
+      "title": "Sister Cities Committee \u2013 Special Meeting",
+      "start": "2026-11-20T14:00:00-05:00",
+      "end": "2026-11-20T15:00:00-05:00",
+      "location": "See the official event notice for location and participation details.",
+      "description": "Andres Carne De Res 455 Lincoln Road",
+      "source": "https://events.miamibeachfl.gov/event/sister-cities-committee-special-meeting/",
       "category": "City calendar",
       "allDay": false
     },
