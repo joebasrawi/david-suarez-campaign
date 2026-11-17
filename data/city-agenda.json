@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T08:03:59.127Z",
+  "generatedAt": "2026-11-17T21:01:52.724Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -490,10 +490,12 @@
       "neighborhood": "Citywide",
       "departments": [],
       "sponsors": [
-        "Commissioner Tanya Bhatt"
+        "Commissioner Tanya Bhatt",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
-        "tanya-bhatt"
+        "tanya-bhatt",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -929,7 +931,7 @@
       "section": "Consent Agenda — Committee Assignments",
       "title": "Renew Urban Sports Equipment",
       "summary": "Renew Urban Sports Equipment. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "REFERRAL TO THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE - DISCUSS RENEWING THE CONTRACT AND INSTALLATION OF ADDITIONAL URBAN SPORTS EQUIPMENT (USE) AT CITYWIDE PARKS WITH DIGITAL SPONSORSHIP DISPLAYS.",
+      "officialTitle": "REFERRAL TO THE FINANCE AND ECONOMIC RESILIENCY COMMITTEE AND THE PUBLIC SAFETY AND NEIGHBORHOOD QUALITY OF LIFE COMMITTEE - DISCUSS RENEWING THE CONTRACT AND INSTALLATION OF ADDITIONAL URBAN SPORTS EQUIPMENT (USE) AT CITYWIDE PARKS WITH DIGITAL SPONSORSHIP DISPLAYS.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-11-18",
       "hearingTime": "",
@@ -1343,10 +1345,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -1791,11 +1795,13 @@
       "sponsors": [
         "City Attorney",
         "Mayor Steven Meiner",
-        "Commissioner Monica Matteo-Salinas"
+        "Commissioner Monica Matteo-Salinas",
+        "Commissioner Alex Fernandez"
       ],
       "officialSponsors": [
         "steven-meiner",
-        "monica-matteo-salinas"
+        "monica-matteo-salinas",
+        "alex-fernandez"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -2323,16 +2329,18 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Approve Untitled Art Fair License",
       "summary": "Approve Untitled Art Fair License. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING, IN SUBSTANTIAL FORM, THE MUTLI-YEAR LICENSE AGREEMENT BETWEEN THE CITY OF MIAMI BEACH AND INFORMA MARKETS ART, LLC FOR USE OF 195,000 SQUARE FEET OF THE LUMMUS PARK BEACHFRONT BETWEEN 10 AND 12½ STREETS AND 12,000 SQUARE FEET OF THE LUMMUS PARK SPOIL FOR THE UNTITLED ART FAIR DURING ART WEEK MIAMI BEACH, FOR AN INITIAL TERM OF FIVE (5) CONSECUTIVE ANNUAL SHOWS FROM 2027 TO 2031, WITH A FIVE (5)-YEAR RENEWAL OPTION; FURTHER, AUTHORIZING THE CITY MANAGER TO FINALIZE THE AGREEMENT; FURTHER, UPON COMPLETION OF SUCCESSFUL NEGOTIATIONS, AUTHORIZING THE CITY MANAGER AND CITY CLERK TO EXECUTE THE AGREEMENT IN A FORM ACCEPTABLE TO THE CITY ATTORNEY.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, APPROVING, IN SUBSTANTIAL FORM, THE MULTI-YEAR LICENSE AGREEMENT BETWEEN THE CITY OF MIAMI BEACH AND INFORMA MARKETS ART, LLC FOR USE OF 195,000 SQUARE FEET OF THE LUMMUS PARK BEACHFRONT BETWEEN 10 AND 13 STREETS AND 15,000 SQUARE FEET OF THE LUMMUS PARK SPOIL FOR THE UNTITLED ART FAIR DURING ART WEEK MIAMI BEACH, FOR AN INITIAL TERM OF FIVE (5) CONSECUTIVE ANNUAL SHOWS FROM 2027 TO 2031, WITH A FIVE (5)-YEAR RENEWAL OPTION; FURTHER, AUTHORIZING THE CITY MANAGER TO FINALIZE THE AGREEMENT; AND FURTHER, AUTHORIZING THE CITY MANAGER AND CITY CLERK TO EXECUTIVE THE AGREEMENT, UPON COMPLETION OF NEGOTIATIONS, IN A FORM ACCEPTABLE TO THE CITY ATTORNEY.",
       "status": "Deferred on 10/14/2026 - R7 AR; Deferred on 9/10/2026 - R7 AV",
       "meetingDate": "2026-11-18",
       "hearingTime": "",
       "neighborhood": "South Beach",
       "departments": [
-        "Tourism and Culture"
+        "Tourism and Culture",
+        "Resolution uploaded on 11/17/2026"
       ],
       "sponsors": [
         "Tourism and Culture",
+        "Resolution uploaded on 11/17/2026",
         "Commissioner Laura Dominguez"
       ],
       "officialSponsors": [
@@ -2350,15 +2358,17 @@
       "title": "Install Beach Access Public Signage",
       "summary": "Install Beach Access Public Signage. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, DIRECTING THE CITY ADMINISTRATION TO INSTALL SIGNAGE AT BEACH ENTRANCES AND OTHER BEACH AREAS INFORMING THE PUBLIC THAT CITY BEACHES ARE PUBLIC AND FREE TO ENJOY, THAT BEACHGOERS MAY USE THEIR OWN TOWELS OR BEACH CHAIRS WITHOUT RENTING CONCESSION EQUIPMENT, THAT UNOCCUPIED CONCESSION CHAIRS AND UMBRELLAS MAY BE MOVED UPON REQUEST AT NO ADDITIONAL CHARGE TO ACCOMMODATE BEACHGOERS, AND THAT BEACH CHAIRS AND UMBRELLAS ARE AVAILABLE FOR RENT AS AN OPTIONAL AMENITY AND FURTHER DIRECTING THE ADMINISTRATION TO WORK WITH THE SPONSOR ON IMPLEMENTATION.",
-      "status": "Deferred on 10/14/2026 - C7 T; Deferred on 9/10/2026 - C7 BF",
+      "status": "Item Deferred to December 9, 2026",
       "meetingDate": "2026-11-18",
       "hearingTime": "",
       "neighborhood": "Citywide",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "Item Deferred to December 9, 2026"
       ],
       "sponsors": [
         "City Attorney",
+        "Item Deferred to December 9, 2026",
         "Vice-Mayor Alex Fernandez",
         "Commissioner David Suarez",
         "Commissioner Tanya Bhatt"
@@ -2445,10 +2455,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Laura Dominguez"
+        "Commissioner Laura Dominguez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "laura-dominguez"
+        "laura-dominguez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,
@@ -3066,7 +3078,7 @@
       "title": "Peoples Gas System Franchise Agreement",
       "summary": "Peoples Gas System Franchise Agreement. Open the official record for complete legal language, attachments, and fiscal details.",
       "officialTitle": "AN ORDINANCE OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, GRANTING TO PEOPLES GAS SYSTEM, INC., A FLORIDA CORPORATION, ITS SUCCESSORS AND ASSIGNS, A NON-EXCLUSIVE NATURAL GAS FRANCHISE AGREEMENT TO USE THE PUBLIC RIGHTS-OF-WAY OF THE CITY OF MIAMI BEACH, FLORIDA; PRESCRIBING THE PROVISIONS AND CONDITIONS UNDER WHICH SAID FRANCHISE SHALL BE EXERCISED; PROVIDING FOR PAYMENT OF A FRANCHISE FEE TO THE CITY; AND PROVIDING FOR REPEALER, SEVERABILITY AND AN EFFECTIVE DATE.",
-      "status": "Item Opened and Continued to December 9, 2026",
+      "status": "Item Opened and Continued to January 2027",
       "meetingDate": "2026-11-18",
       "hearingTime": "9:15 a.m. First Reading Public Hearing",
       "neighborhood": "Citywide",
@@ -3341,12 +3353,10 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner David Suarez",
-        "Commissioner Alex Fernandez"
+        "Commissioner David Suarez"
       ],
       "officialSponsors": [
-        "david-suarez",
-        "alex-fernandez"
+        "david-suarez"
       ],
       "davidInvolved": true,
       "isNew": false,
@@ -3647,7 +3657,7 @@
       "section": "Regular Agenda — Ordinances",
       "title": "Amend Construction Parking Enforcement Fines",
       "summary": "Amend Construction Parking Enforcement Fines. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "AN ORDINANCE OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, AMENDING CHAPTER 106 OF THE CODE OF THE CITY OF MIAMI BEACH, FLORIDA, ENTITLED \"TRAFFIC AND VEHICLES,\" BY AMENDING ARTICLE II, ENTITLED \"METERED PARKING,\" BY AMENDING DIVISION 3, ENTITLED “CONSTRUCTION PARKING AND TRAFFIC MANAGEMENT PLAN,” BY AMENDING SECTION 106-103, ENTITLED \"ENFORCEMENT,\" THEREOF, TO AMEND SUBSECTION (2) TO AMEND FINES TO COMPLY WITH STATE LAW AND TO ADD ADDITIONAL NONMONETARY PENALTIES; AND PROVIDING FOR REPEALER, SEVERABILITY, CODIFICATION, AND AN EFFECTIVE DATE.",
+      "officialTitle": "AN ORDINANCE OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, AMENDING, BY A 5/7THS VOTE, CHAPTER 106 OF THE CODE OF THE CITY OF MIAMI BEACH, FLORIDA, ENTITLED \"TRAFFIC AND VEHICLES,\" BY AMENDING ARTICLE II, ENTITLED \"METERED PARKING,\" BY AMENDING DIVISION 3, ENTITLED \"CONSTRUCTION PARKING AND TRAFFIC MANAGEMENT PLAN,\" BY AMENDING SECTION 106-103, ENTITLED \"ENFORCEMENT,\" TO AMEND FINES TO COMPLY WITH STATE LAW AND TO ADD ADDITIONAL NONMONETARY PENALTIES; AND TO REPEAL SECTION 106-104 \"REVOCATION OF PERMITS AND OTHER PENALTIES\"; AND PROVIDING FOR REPEALER, SEVERABILITY, CODIFICATION, AND AN EFFECTIVE DATE.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-11-18",
       "hearingTime": "10:55 a.m. First Reading Public Hearing",
@@ -3657,10 +3667,12 @@
       ],
       "sponsors": [
         "City Attorney",
-        "Commissioner Alex Fernandez"
+        "Commissioner Alex Fernandez",
+        "Commissioner Tanya Bhatt"
       ],
       "officialSponsors": [
-        "alex-fernandez"
+        "alex-fernandez",
+        "tanya-bhatt"
       ],
       "davidInvolved": false,
       "isNew": false,

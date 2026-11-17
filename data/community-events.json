@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T08:03:57.507Z",
+  "updatedAt": "2026-11-17T21:01:50.807Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
@@ -204,11 +204,11 @@
     },
     {
       "id": "city-398873",
-      "title": "Mayor\u2019s 41st Street Blue Ribbon Committee",
+      "title": "Mayor\u2019s 41st Street Committee",
       "start": "2026-11-19T17:00:00-05:00",
       "end": "2026-11-19T19:00:00-05:00",
       "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/85702020601?pwd=KsC6BT4wQ0SmSBTCgRVc14WeJYWUeB.1 Webinar ID: 85702020601# Passcode: 442556 First Horizon Bank 400 Arthur Godfrey Rd Ste 102",
+      "description": "Hybrid Meeting https://us06web.zoom.us/j/85702020601?pwd=KsC6BT4wQ0SmSBTCgRVc14WeJYWUeB.1 Webinar ID: 85702020601# Passcode: 442556 First Horizon Bank 400 W 41 st Street, Suite 210",
       "source": "https://events.miamibeachfl.gov/event/mayors-41st-street-blue-ribbon-committee/",
       "category": "City calendar",
       "allDay": false
