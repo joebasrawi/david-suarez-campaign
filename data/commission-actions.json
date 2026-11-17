@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-06T06:58:03.931Z",
+  "generatedAt": "2026-11-17T08:04:11.537Z",
   "timezone": "America/New_York",
   "coverage": {
     "startDate": "2026-01-01",
     "throughDate": "2026-10-14",
-    "meetingCount": 12,
+    "meetingCount": 13,
     "publishedMinutesCount": 12,
-    "pendingMinutesCount": 0
+    "pendingMinutesCount": 1
   },
   "source": {
     "label": "City of Miami Beach PrimeGov approved minutes",
@@ -145,6 +145,15 @@
       "officialMeetingUrl": "https://miamibeachfl.primegov.com/public/portal?fromiframe=true",
       "videoUrl": "https://miamibeachfl.new.swagit.com/videos/403911",
       "itemCount": 199
+    },
+    {
+      "id": 1331,
+      "date": "2026-11-16",
+      "title": "Special Commission Meeting",
+      "minutesStatus": "Pending publication",
+      "officialMeetingUrl": "https://miamibeachfl.primegov.com/public/portal?fromiframe=true",
+      "videoUrl": "https://miamibeachfl.new.swagit.com/videos/408665",
+      "itemCount": 0
     }
   ],
   "items": [

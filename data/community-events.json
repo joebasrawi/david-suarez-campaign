@@ -1,64 +1,9 @@
 {
-  "updatedAt": "2026-11-16T22:15:50.198Z",
+  "updatedAt": "2026-11-17T08:03:57.507Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
   "items": [
-    {
-      "id": "city-398429",
-      "title": "Special City Commission \u2013 Accept Election Results",
-      "start": "2026-11-16T09:00:00-05:00",
-      "end": "2026-11-16T10:00:00-05:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "source": "https://events.miamibeachfl.gov/event/city-commission-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398837",
-      "title": "Lincoln Road Business Improvement District Executive Committee",
-      "start": "2026-11-16T10:00:00-05:00",
-      "end": "2026-11-16T11:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Zoom Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNMmJYNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.8592",
-      "source": "https://events.miamibeachfl.gov/event/lincoln-road-business-improvement-district-executive-committee-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398841",
-      "title": "Sister Cities \u2013 The Art of Diplomacy",
-      "start": "2026-11-16T12:00:00-05:00",
-      "end": "2026-11-16T14:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Miami Beach City Hall 1755 Meridian Avenue, 2 nd Floor Economic Development Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/sister-cities-the-art-of-diplomacy/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398843",
-      "title": "Hispanic Affairs Committee",
-      "start": "2026-11-16T17:00:00-05:00",
-      "end": "2026-11-16T19:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 2 nd Floor Building Department Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/hispanic-affairs-committee/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398769",
-      "title": "Mondays with Monica",
-      "start": "2026-11-16T17:30:00-05:00",
-      "end": "2026-11-16T18:30:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Commissioner Monica Matteo-Salinas invites you to Mondays with Monica, a virtual meeting ahead of the Wednesday, November 18 City Commission meeting where residents can ask questions, share input and talk through upcoming agenda items as well as broader neighborhood issues. Monday, November 16 5:30 PM \u2013 6:30 PM Zoom link: us06web.zoom.us/j/83377402686 Webinar ID: 833 7740 2686",
-      "source": "https://events.miamibeachfl.gov/event/mondays-with-monica/",
-      "category": "City calendar",
-      "allDay": false
-    },
     {
       "id": "city-398845",
       "title": "Special Magistrate Hearings",
