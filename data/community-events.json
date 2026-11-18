@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T07:40:16.458Z",
+  "updatedAt": "2026-11-18T20:39:46.004Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
@@ -12,17 +12,6 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671 Access ID: 81392857671# 1.305.224.1968 or 888.475.4499 \u00a0 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
       "source": "https://events.miamibeachfl.gov/event/city-commission-3-2/2026-11-18/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398861",
-      "title": "Miami Beach Visitor and Convention Authority Board",
-      "start": "2026-11-18T15:00:00-05:00",
-      "end": "2026-11-18T16:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Zoom Meeting https://us06web.zoom.us/j/86531117070?pwd=p3Pno5ILs1JzJ7bApr39ZEZCaFx3By.1 Meeting ID: 86531117070# Passcode: 867943",
-      "source": "https://events.miamibeachfl.gov/event/miami-beach-visitor-and-convention-authority-board-2/",
       "category": "City calendar",
       "allDay": false
     },

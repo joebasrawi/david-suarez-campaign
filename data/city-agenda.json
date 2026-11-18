@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T21:01:52.724Z",
+  "generatedAt": "2026-11-18T20:39:47.248Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -10,7 +10,7 @@
     "type": "City Commission",
     "date": "2026-11-18",
     "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach, FL 33139",
-    "itemCount": 249,
+    "itemCount": 250,
     "url": "https://miamibeachagenda.com/agenda/november/18/2026",
     "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6280"
   },
@@ -33,7 +33,7 @@
     {
       "id": "consent-agenda-resolutions",
       "label": "Consent Agenda — Resolutions",
-      "count": 54
+      "count": 55
     },
     {
       "id": "regular-agenda-competitive-bid-reports",
@@ -1363,16 +1363,18 @@
       "section": "Consent Agenda — Resolutions",
       "title": "Waive Zoning Cycle Lincoln Road Overlay",
       "summary": "Waive Zoning Cycle Lincoln Road Overlay. Open the official record for complete legal language, attachments, and fiscal details.",
-      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, WAIVING THE ANNUAL ZONING CYCLE ON A FIVE-SEVENTHS (5/7THS) VOTE PURSUANT TO SECTION 2.3.2 OF THE LAND DEVELOPMENT REGULATIONS (LDRs), UPON A DETERMINATION THAT AN EMERGENCY EXISTS, FOR THE CONSIDERATION OF CERTAIN PROPOSED AMENDMENTS TO THE 2050 COMPREHENSIVE PLAN AND LAND DEVELOPMENT REGULATIONS IN CONNECTION WITH THE PROPOSED “LINCOLN ROAD NORTH OVERLAY DISTRICT,” TO BE CONSIDERED OUTSIDE OF THE DESIGNATED ANNUAL ZONING CYCLE; AND FURTHER, WAIVING THE EXTENDED REVIEW PROCESS APPLICABLE TO PROPOSED FLOOR-AREA RATIO (FAR) INCREASES ON A FIVE-SEVENTHS (5/7THS) VOTE PURSUANT TO SECTION 7.1.10.5(A) OF THE LDRs, IN CONNECTION WITH THE PROPOSED AMENDMENTS TO THE 2050 COMPREHENSIVE PLAN AND LAND DEVELOPMENT REGULATIONS, TO CREATE THE “LINCOLN ROAD NORTH OVERLAY DISTRICT,” PROVIDED THAT SUCH WAIVER SHALL BE LIMITED TO LEGISLATIVE AMENDMENTS RESULTING IN AN INCREASE IN FLOOR AREA THAT DOES NOT EXCEED TEN PERCENT (10%) OF THE ALLOWABLE FLOOR AREA FOR AN INDIVIDUAL PROPERTY OR SITE, NOT TO EXCEED A TOTAL OF FIVE THOUSAND (5,000) ADDITIONAL SQUARE FEET OF FLOOR AREA PER PROPERTY OR SITE.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA, WAIVING THE ANNUAL ZONING CYCLE ON A FIVE-SEVENTHS (5/7THS) VOTE PURSUANT TO SECTION 2.3.2 OF THE LAND DEVELOPMENT REGULATIONS (LDRs), UPON A DETERMINATION THAT AN EMERGENCY EXISTS, FOR THE CONSIDERATION OF CERTAIN PROPOSED AMENDMENTS TO THE 2050 COMPREHENSIVE PLAN AND LAND DEVELOPMENT REGULATIONS IN CONNECTION WITH THE PROPOSED “LINCOLN ROAD NORTH OVERLAY DISTRICT,” TO BE CONSIDERED OUTSIDE OF THE DESIGNATED ANNUAL ZONING CYCLE; AND FURTHER, WAIVING THE EXTENDED REVIEW PROCESS APPLICABLE TO PROPOSED FLOOR-AREA RATIO (FAR) INCREASES ON A FIVE-SEVENTHS (5/7THS) VOTE PURSUANT TO SECTION 7.1.10.5(A) OF THE LDRs, IN CONNECTION WITH THE PROPOSED AMENDMENTS TO THE 2050 COMPREHENSIVE PLAN AND LAND DEVELOPMENT REGULATIONS, TO CREATE THE “LINCOLN ROAD NORTH OVERLAY DISTRICT,” PROVIDED THAT SUCH WAIVER SHALL BE LIMITED TO LEGISLATIVE AMENDMENTS RESULTING IN AN INCREASE IN FLOOR AREA THAT DOES NOT EXCEED TEN PERCENT (10%) OF THE ALLOWABLE FLOOR AREA FOR AN INDIVIDUAL PROPERTY OR SITE, NOT TO EXCEED A TOTAL OF FIVE THOUSAND (5,000) ADDITIONAL SQUARE FEET OF FLOOR AREA WITHIN THE OVERLAY.",
       "status": "On upcoming agenda",
       "meetingDate": "2026-11-18",
       "hearingTime": "",
       "neighborhood": "South Beach",
       "departments": [
-        "City Attorney"
+        "City Attorney",
+        "Revised Resolution uploaded on 11/18/2026"
       ],
       "sponsors": [
         "City Attorney",
+        "Revised Resolution uploaded on 11/18/2026",
         "Commissioner Joseph Magazine"
       ],
       "officialSponsors": [
@@ -1911,6 +1913,32 @@
       "davidInvolved": false,
       "isNew": true,
       "url": "https://miamibeachagenda.com/agenda/11/18/2026/C7BB"
+    },
+    {
+      "id": "2026-11-18-consent-agenda-resolutions-c7bc",
+      "itemNumber": "C7BC",
+      "type": "Resolution",
+      "section": "Consent Agenda — Resolutions",
+      "title": "Hold 5th St Bridge Study Pending Approval",
+      "summary": "Hold 5th St Bridge Study Pending Approval. Open the official record for complete legal language, attachments, and fiscal details.",
+      "officialTitle": "A RESOLUTION OF THE MAYOR AND CITY COMMISSION OF THE CITY OF MIAMI BEACH, FLORIDA TO DIRECT THE CITY ADMINISTRATION (1) TO HOLD THE PROPOSED STANTEC CONSULTING SERVICES, INC. FEASIBILITY STUDY FOR THE 5TH STREET PEDESTRIAN BRIDGE AND WITHHOLD ANY WORK ORDER, PURCHASE ORDER, NOTICE TO PROCEED, OR AUTHORIZATION OF NEW WORK OR SPENDING PENDING EXPRESS COMMISSION APPROVAL, (2) TO REQUIRE, TO THE EXTENT LEGALLY POSSIBLE, A WRITTEN AGREEMENT FOR TCH 500 ALTON, LLC TO PAY THE FULL COST OF THE STUDY AND ANY APPROVED RELATED SERVICES AT NO NET COST TO THE CITY, AND (3) TO SUBMIT THE FINAL SCOPE, TOTAL COST, PROCUREMENT AUTHORITY, AND DEVELOPER FUNDING AGREEMENT FOR APPROVAL BY THE CITY COMMISSION AT ITS DECEMBER 9, 2026 MEETING BEFORE PROCEEDING.",
+      "status": "On upcoming agenda",
+      "meetingDate": "2026-11-18",
+      "hearingTime": "",
+      "neighborhood": "South Beach",
+      "departments": [
+        "City Attorney"
+      ],
+      "sponsors": [
+        "City Attorney",
+        "Commissioner David Suarez"
+      ],
+      "officialSponsors": [
+        "david-suarez"
+      ],
+      "davidInvolved": true,
+      "isNew": true,
+      "url": "https://miamibeachagenda.com/agenda/11/18/2026/C7BC"
     },
     {
       "id": "2026-11-18-consent-agenda-resolutions-c7c",
