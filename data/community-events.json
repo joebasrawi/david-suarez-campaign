@@ -1,97 +1,9 @@
 {
-  "updatedAt": "2026-11-17T21:01:50.807Z",
+  "updatedAt": "2026-11-18T07:40:16.458Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
   "items": [
-    {
-      "id": "city-398845",
-      "title": "Special Magistrate Hearings",
-      "start": "2026-11-17T09:00:00-05:00",
-      "end": "2026-11-17T17:00:00-05:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "source": "https://events.miamibeachfl.gov/event/special-magistrate-hearings-7/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398847",
-      "title": "Committee for Quality Education",
-      "start": "2026-11-17T09:00:00-05:00",
-      "end": "2026-11-17T11:00:00-05:00",
-      "location": "City Manager\u2019s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager\u2019s Large Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/committee-for-quality-education-4/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398849",
-      "title": "Art in Public Places",
-      "start": "2026-11-17T09:30:00-05:00",
-      "end": "2026-11-17T11:30:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://bit.ly/CMB-AiPP26 Meeting ID: 22767074876147# Passcode: G3hB7Ai6 1.786.636.1480 or 848.023.452 Access ID: 848023452# Miami Beach City Hall 1755 Meridian Avenue, 5 th Floor Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/art-in-public-places-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398851",
-      "title": "OPEB Q3 2026 Review",
-      "start": "2026-11-17T13:00:00-05:00",
-      "end": "2026-11-17T15:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://bit.ly/4jKIcIC Meeting ID: 217602542977037# Passcode: 2CE7tR7J 1.786.636.1480 or 790.897.334 Access ID: 790897334# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor OBPI Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/opeb-q3-2026-review/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398853",
-      "title": "Disability Access Committee",
-      "start": "2026-11-17T15:30:00-05:00",
-      "end": "2026-11-17T17:30:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://bit.ly/3HiqDc6 Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor Public Works Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/disability-access-committee-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398855",
-      "title": "Youth Commission Meeting",
-      "start": "2026-11-17T16:00:00-05:00",
-      "end": "2026-11-17T18:00:00-05:00",
-      "location": "City Manager\u2019s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager\u2019s Large Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/youth-commission-meeting-4/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398857",
-      "title": "Animal Welfare Committee",
-      "start": "2026-11-17T17:00:00-05:00",
-      "end": "2026-11-17T19:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Attorney\u2019s Large Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/animal-welfare-committee-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398859",
-      "title": "The Stormwater Critical Needs Project #2 \u2013 Muss Park",
-      "start": "2026-11-17T18:00:00-05:00",
-      "end": "2026-11-17T20:00:00-05:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/83085510558 Access ID: 83085510558# 1.305.224.1968 or 312 626 6799 Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
-      "source": "https://events.miamibeachfl.gov/event/the-stormwater-critical-needs-project-2-muss-park/",
-      "category": "City calendar",
-      "allDay": false
-    },
     {
       "id": "city-10107795",
       "title": "City Commission",
