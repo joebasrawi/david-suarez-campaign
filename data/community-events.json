@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T07:36:09.109Z",
+  "updatedAt": "2026-11-19T20:45:55.676Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
@@ -133,6 +133,17 @@
       "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
       "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037 1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
       "source": "https://events.miamibeachfl.gov/event/land-use-and-sustainability-committee/2026-11-24/",
+      "category": "City calendar",
+      "allDay": false
+    },
+    {
+      "id": "city-399254",
+      "title": "Pine Tree Drive Bicycle and Pedestrian Improvements",
+      "start": "2026-11-24T17:30:00-05:00",
+      "end": "2026-11-24T18:30:00-05:00",
+      "location": "See the official event notice for location and participation details.",
+      "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/88938218140 1.305.224.1968 or 1.301.715.8592 Webinar ID: 88938218140#",
+      "source": "https://events.miamibeachfl.gov/event/pine-tree-drive-bicycle-and-pedestrian-improvements/",
       "category": "City calendar",
       "allDay": false
     },

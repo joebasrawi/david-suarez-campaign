@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-399254@davidsuarezmb.com
+DTSTAMP:20261119T204555Z
+DTSTART:20261124T223000Z
+DTEND:20261124T233000Z
+SUMMARY:Pine Tree Drive Bicycle and Pedestrian Improvements
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Zoom Meeting https://miamibeachfl-gov.zoom.us/j/88938218140 1
+ .305.224.1968 or 1.301.715.8592 Webinar ID: 88938218140#\nSource and upd
+ ates: https://events.miamibeachfl.gov/event/pine-tree-drive-bicycle-and-
+ pedestrian-improvements/\nSaved calendar entries are one-time copies. Ch
+ eck the source before attending.
+URL:https://davidsuarezmb.com/events/city-399254/
+END:VEVENT
+END:VCALENDAR
