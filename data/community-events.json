@@ -1,108 +1,9 @@
 {
-  "updatedAt": "2026-11-19T20:45:55.676Z",
+  "updatedAt": "2026-11-20T20:29:19.631Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
   "items": [
-    {
-      "id": "city-398865",
-      "title": "Fire and Police Pension Board",
-      "start": "2026-11-19T08:30:00-05:00",
-      "end": "2026-11-19T10:30:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/81865956724 Meeting ID: 81865956724# 1.305.224.1968 or 818.6595.6724 Fire and Police Pension Office 1111 Lincoln Road, Suite 801",
-      "source": "https://events.miamibeachfl.gov/event/fire-and-police-pension-board/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-10104251",
-      "title": "Design Review Board",
-      "start": "2026-11-19T09:00:00-05:00",
-      "end": "2026-11-19T17:00:00-05:00",
-      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
-      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924 Access ID: 82273941924# 1.305.224.1968 or 888.475.4499 \u00a0 Miami Beach City Hall 1700 Convention Center Drive, 3 rd Floor Commission Chamber",
-      "source": "https://events.miamibeachfl.gov/event/design-review-board-3/2026-11-19/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-399240",
-      "title": "POSTPONED \u2013 Miami Beach Business-Ready Day",
-      "start": "2026-11-19T09:00:00-05:00",
-      "end": "2026-11-19T14:00:00-05:00",
-      "location": "Building Department 2nd Floor Conf. Room, 1700 Convention Center Dr, Miami Beach",
-      "description": "MIAMI BEACH BUSINESS READY DAYS Thursday, February 19 | 9AM \u2013 2PM City Hall (1700 Convention Center Drive, City Hall Building Department \u2013 2nd Floor Conference Room) The City of Miami Beach will host a Business-Ready Day on Thursday, February 19 , from 9 a.m. to 2 p.m. at City Hall (1700 Convention Center Drive, City Hall Building Department \u2013 2nd Floor Conference Room) . Business Ready Days are held quarterly and are designed to serve as a one-stop resource for local entrepreneurs and business owners. During the event, businesses can receive personalized assistance with obtaining or renewing their Business Tax Receipt (BTR), along with guidance on City and County regulatory requirements. Representatives from all departments involved in the BTR process will be available to provide coordinated, in-person support. Participating City of Miami Beach departments include Planning and Zoning, Building, Finance, Fire, Economic Development, Procurement, Tourism and Culture, Public Works, and the Office of Emergency Management. County partners include the Miami-Dade County Building Department, Department of Regulatory and Economic Resources (DERM), Water and Sewer Department, and the Miami-Dade County Tax Collector\u2019s Office. Together, these agencies will help businesses better understand permitting, compliance, and operational requirements. The Economic Development Department will be available to discuss business incentive programs, site selection assistance, and the City\u2019s Business Concierge Service, which supports businesses navigating City processes and accessing local resources. The Public Works Department will provide guidance on the Sidewalk Caf\u00e9 Program, including application requirements and best practices for activating outdoor dining spaces. The Procurement Department will offer guidance on vendor certification and local government contracting opportunities, while the Office of Emergency Management will share information on the Business Emergency Response Team (BERT) program. Partner organizations will also participate, including BrightStar Credit Union, which will be on site to share information about its business banking products, financial programs, funding opportunities, and small business resources.",
-      "source": "https://events.miamibeachfl.gov/event/miami-beach-business-ready-day-2026-11-19/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398867",
-      "title": "Lincoln Road Business Improvement District Annual Meeting",
-      "start": "2026-11-19T10:00:00-05:00",
-      "end": "2026-11-19T12:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://zoom.us/j/4744547055?pwd=YXo1TmUrR0ZNMmJYNlVLZVVEVjczZz09 Meeting ID: 4744547055# Password: 808879 1.301.715.8592 Andres Carne de Res 455 Lincoln Road",
-      "source": "https://events.miamibeachfl.gov/event/lincoln-road-business-improvement-district-annual-meeting/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-392560",
-      "title": "West Avenue Phase II Neighborhood Improvement Project: Latest Updates & Community Discussion",
-      "start": "2026-11-19T11:00:00-05:00",
-      "end": "2026-11-19T12:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Join Commissioner Alex J. Fernandez for a virtual community meeting to explore progress, upcoming plans and a review of construction site updates for the West Avenue Phase II Neighborhood Improvement Project. Thursday, November 19 11 AM Zoom link: https://us06web.zoom.us/j/82324069554",
-      "source": "https://events.miamibeachfl.gov/event/west-avenue-phase-ii-neighborhood-improvement-project-latest-updates-community-discussion/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398869",
-      "title": "Special Events Community Reviews",
-      "start": "2026-11-19T14:00:00-05:00",
-      "end": "2026-11-19T15:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Microsoft Teams Meeting http://bit.ly/4xMFeaD Meeting ID: 254413135646867# Passcode: oe74mF7r 1.786.636.1480 Access ID: 695213131#",
-      "source": "https://events.miamibeachfl.gov/event/special-events-community-reviews-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398871",
-      "title": "Ad Hoc Nightlife Industry Taskforce Advisory Committee",
-      "start": "2026-11-19T16:00:00-05:00",
-      "end": "2026-11-19T18:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Miami Beach Police Department 1100 Washington Avenue, 1 st floor Community Room",
-      "source": "https://events.miamibeachfl.gov/event/ad-hoc-nightlife-industry-taskforce-advisory-committee-2/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398873",
-      "title": "Mayor\u2019s 41st Street Committee",
-      "start": "2026-11-19T17:00:00-05:00",
-      "end": "2026-11-19T19:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/85702020601?pwd=KsC6BT4wQ0SmSBTCgRVc14WeJYWUeB.1 Webinar ID: 85702020601# Passcode: 442556 First Horizon Bank 400 W 41 st Street, Suite 210",
-      "source": "https://events.miamibeachfl.gov/event/mayors-41st-street-blue-ribbon-committee/",
-      "category": "City calendar",
-      "allDay": false
-    },
-    {
-      "id": "city-398875",
-      "title": "Parks & Recreational Facilities Advisory Board",
-      "start": "2026-11-19T17:30:00-05:00",
-      "end": "2026-11-19T19:30:00-05:00",
-      "location": "City Manager\u2019s Large Conference Room, 1700 Convention Center Drive, Miami Beach",
-      "description": "Miami Beach City Hall 1700 Convention Center Drive, 4 th Floor City Manager\u2019s Large Conference Room",
-      "source": "https://events.miamibeachfl.gov/event/parks-recreational-facilities-advisory-board-3/",
-      "category": "City calendar",
-      "allDay": false
-    },
     {
       "id": "city-399136",
       "title": "Sister Cities Committee \u2013 Special Meeting",
@@ -182,7 +83,7 @@
     },
     {
       "id": "city-398432",
-      "title": "City Commission* \u2013 Workshop",
+      "title": "City Commission* \u2013 Workshop on Citywide Priorities and Matters of Public Interest",
       "start": "2026-11-30T16:30:00-05:00",
       "end": "2026-11-30T19:00:00-05:00",
       "location": "See the official event notice for location and participation details.",
@@ -193,7 +94,7 @@
     },
     {
       "id": "city-398765",
-      "title": "The Art of Diplomacy",
+      "title": "Sister Cities \u2013 The Art of Diplomacy",
       "start": "2026-12-01T17:00:00-05:00",
       "end": "2026-12-01T19:00:00-05:00",
       "location": "See the official event notice for location and participation details.",

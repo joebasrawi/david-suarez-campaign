@@ -5,10 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:city-398432@davidsuarezmb.com
-DTSTAMP:20261119T204555Z
+DTSTAMP:20261120T202919Z
 DTSTART:20261130T213000Z
 DTEND:20261201T000000Z
-SUMMARY:City Commission* – Workshop
+SUMMARY:City Commission* – Workshop on Citywide Priorities and Matters 
+ of Public Interest
 LOCATION:See the official event notice for location and participation det
  ails.
 DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/81392857671

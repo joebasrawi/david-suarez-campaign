@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T20:39:47.248Z",
+  "generatedAt": "2026-11-20T20:29:21.462Z",
   "timezone": "America/New_York",
   "source": {
     "label": "Miami Beach Agenda navigator",
@@ -1832,7 +1832,7 @@
         "steven-meiner"
       ],
       "davidInvolved": false,
-      "isNew": true,
+      "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/11/18/2026/C7AZ"
     },
     {
@@ -1885,7 +1885,7 @@
         "monica-matteo-salinas"
       ],
       "davidInvolved": false,
-      "isNew": true,
+      "isNew": false,
       "url": "https://miamibeachagenda.com/agenda/11/18/2026/C7BA"
     },
     {
