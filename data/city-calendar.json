@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-11-20T20:29:19.631Z",
+  "generatedAt": "2026-11-21T07:21:51.615Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-20&end_date=2027-01-19&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-21&end_date=2027-01-20&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "399136",
-      "title": "Sister Cities Committee – Special Meeting",
-      "description": "Andres Carne De Res 455 Lincoln Road",
-      "startLocal": "2026-11-20T14:00:00",
-      "endLocal": "2026-11-20T15:00:00",
-      "location": "",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/sister-cities-committee-special-meeting/",
-      "note": ""
-    },
     {
       "id": "399013",
       "title": "Miami Beach Baila! by Commissioner Joe Magazine at the Bandshell",
