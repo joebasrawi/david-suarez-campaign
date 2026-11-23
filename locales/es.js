@@ -288,13 +288,20 @@ All events|Todos los eventos
 See the official event notice for location and participation details.|Consulte el aviso oficial del evento para conocer el lugar y cómo participar.
 See the full official City calendar|Ver el calendario oficial completo de la Ciudad
 Stop the under-15 e-bike ban|Detengamos la prohibición de bicicletas eléctricas para menores de 15
+It isn't law yet. It's in committee now, and you can help stop it before it goes back to the full Commission.|Todavía no es ley. Ahora está en comité, y puedes ayudar a detenerla antes de que vuelva a la Comisión.
+Show up when it's heard.|Preséntate cuando la discutan.
+Anyone can speak during public comment. Meetings are at City Hall, 1700 Convention Center Drive, and you can also join by Zoom.|Cualquier persona puede hablar durante el comentario público. Las reuniones son en el Ayuntamiento, 1700 Convention Center Drive, y también puedes participar por Zoom.
+Next meeting:|Próxima reunión:
+On the City Commission agenda, sent to committee|En la agenda de la Comisión, enviada a comité
+Now|Ahora
+In committee. This is where we can stop it.|En comité. Aquí es donde podemos detenerla.
+Only if it moves on|Solo si avanza
+It goes back to the full Commission for a vote|Vuelve a la Comisión para votación
 Skip to how to help|Ir a cómo ayudar
 The Commission wants your e-⁠bike/⁠scooter.|La Comisión quiere quitarte tu bicicleta eléctrica o patineta.
 A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
-It isn't law yet. The Commission has to vote one more time, and you can help stop it.|Todavía no es ley. La Comisión tiene que votar una vez más, y tú puedes ayudar a detenerla.
 Help stop it|Ayuda a detenerla
 What it would do|Lo que haría
-A red and yellow Miami Beach lifeguard tower on the sand at 8th Street|Una torre salvavidas roja y amarilla de Miami Beach en la arena de la calle 8
 What the proposal would do|Lo que haría la propuesta
 14 and under|14 años o menos
 Banned from riding.|Prohibido andar.
@@ -315,15 +322,8 @@ Email the Commission.|Escribe a la Comisión.
 Say who you are, where you go to school, how you get around, and ask them to vote no on item R5 H.|Di quién eres, a qué escuela vas, cómo te transportas y pídeles que voten no al punto R5 H.
 Write your email|Escribe tu correo
 Contact every commissioner|Contactar a cada comisionado
-Show up for the final vote.|Preséntate en la votación final.
-Anyone can speak for 2 minutes, no sign-up needed. City Hall, 1700 Convention Center Drive, 3rd floor Commission Chamber, or join by Zoom.|Cualquier persona puede hablar 2 minutos, sin inscribirse antes. Ayuntamiento, 1700 Convention Center Drive, Cámara de la Comisión en el 3.er piso, o por Zoom.
-Final vote:|Votación final:
 Date to be announced. Check back here.|Fecha por anunciar. Vuelve a consultar aquí.
 Where it stands|En qué punto está
-Proposed and heard for the first time|Propuesta y escuchada por primera vez
-Final vote. This is when we can stop it.|Votación final. Aquí es cuando podemos detenerla.
-Only if it passes|Solo si se aprueba
-Then it becomes city law|Entonces se convierte en ley de la ciudad
 For parents|Para padres
 The details|Los detalles
 The proposal is item R5 H, "Regulation of Micromobility Devices," sponsored by Commissioner Tanya K. Bhatt. It would add Section 70-75 to the City Code.|La propuesta es el punto R5 H, "Regulation of Micromobility Devices", presentada por la comisionada Tanya K. Bhatt. Agregaría la Sección 70-75 al Código de la Ciudad.
