@@ -1,31 +1,91 @@
-# David Suarez Miami Beach Resident Hub
+# David Suarez · Miami Beach Resident Hub
 
-A resident-first website for Miami Beach information and Commissioner David Suarez's original media.
+A website for Miami Beach residents to find City services, meetings, commission agendas and decisions, neighborhood projects, events, and Commissioner David Suarez’s videos and updates.
 
-The project is a static GitHub Pages site. Its source snapshots are refreshed from official City of Miami Beach feeds and the commissioner's official YouTube channel, then validated before publication.
+This is an independent resident hub, not the official City website. Official City records remain authoritative.
 
-## Public data
+## Site at a glance
 
-Run all feed synchronizations with Node.js 20 or newer:
+- **Live site:** [davidsuarezmb.com](https://davidsuarezmb.com)
+- **Repository:** [joebasrawi/david-suarez-mb](https://github.com/joebasrawi/david-suarez-mb) (renamed from `david-suarez-campaign` on Nov 22, 2026; old links redirect)
+- **Hosting:** GitHub Pages, published from the root of `main`, with Cloudflare in front. The custom domain is set by the checked-in `CNAME` file.
+- **Frontend:** static HTML, CSS, and JavaScript. There is no application server or database.
+- **Content:** checked-in JSON snapshots in `data/`, refreshed by scripts and a scheduled GitHub Action.
+- **Languages:** every page has an ES/EN switch (`language.js`, `locales/es.js`). Official titles, news, videos and event names stay in their original language.
+
+The published files live at the repository root. There is no `dist/` directory. Node.js and Python are used for maintenance and validation, not to serve the site.
+
+## Local setup
+
+Use Node.js 20 or newer (the workflow uses Node.js 22) and Python 3.
+
+```sh
+git clone https://github.com/joebasrawi/david-suarez-mb.git
+cd david-suarez-mb
+npm install --ignore-scripts --no-audit --no-fund
+npm test
+```
+
+To preview, serve the repository root over HTTP:
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Open `http://localhost:8000`. Use an HTTP server rather than opening files directly, because pages load JavaScript modules and JSON snapshots. Add `?lang=es` to a URL to see the Spanish version.
+
+## Build and validate
+
+```sh
+npm run build
+python3 scripts/build-events-preview.py
+npm test
+python3 scripts/test-events.py
+```
+
+The build updates page HTML and asset versions **in place**, and also writes `404.html`, `robots.txt` and `sitemap.xml`. Commit those changes along with the source edits. Most layouts are generated from `scripts/`. If you edit only the generated HTML, the next build can overwrite it.
+
+The events pages copy their header from `about/index.html`, so rebuild them after `npm run build`.
+
+`npm test` checks data snapshots, site structure and asset references, motion, the homepage film and videos, the YouTube sync, and the coastal theme. It does not replace a browser review.
+
+## Publishing
+
+Pushing to `main` publishes the site through GitHub Pages within a minute or two. Confirm `npm test` passes first.
+
+To redirect `http://` to `https://`, use Cloudflare's "Always Use HTTPS" setting. Don't turn on GitHub's "Enforce HTTPS" while Cloudflare's SSL mode is Flexible, because that causes a redirect loop.
+
+## Public data updates
+
+Refresh all sources manually with:
 
 ```sh
 npm run sync:data
+npm test
 ```
 
-The scheduled GitHub Action refreshes:
+The [Sync public data workflow](.github/workflows/sync-public-data.yml) runs every six hours (at minute 17) and can be started manually in GitHub Actions. It refreshes the data, rebuilds the events pages, runs the tests, commits changed `data/` and `events/` files, and asks Pages to rebuild.
 
-- upcoming City Government calendar entries;
-- Public Works construction, design and planning projects;
-- the latest videos from Commissioner Suarez's YouTube channel; and
-- City Clerk ordinance and resolution registry status.
+Sources include the commissioner’s YouTube channel, City meetings and news, commission agendas and recorded actions, Public Works projects, neighborhood data, and City Clerk registry status. The browser reads the saved snapshots.
 
-The homepage's “Watch David” section uses the newest upload across the channel,
-plus the newest thumbnail for each of its four series. The existing six-hour sync
-rebuilds `data/home-summary.json`; the next page load picks up those changes.
-YouTube outages retain the last good catalog, and a failed browser request leaves
-the built homepage fallback visible. No API key is required.
+- **Homepage videos:** the newest upload across the channel, plus the newest thumbnail for each of the four series, from `data/home-summary.json`. No API key is needed.
+- **Next commission meeting:** the agenda source keeps showing the last meeting until the next agenda is posted. Once that date has passed, the site shows the next regular meeting from the City calendar as "Agenda not posted yet".
 
-Run `npm test` for offline regression checks and `npm run build` to regenerate the
-static pages (including the homepage's no-JavaScript video fallback).
+If a source refresh fails, the sync keeps the previous snapshot and records the failure in `data/sync-status.json`. If validation fails, nothing is committed. Check snapshot timestamps before treating information as current. Resident-facing legal summaries need human verification against the official record. See the [content and data architecture](docs/CONTENT_AND_DATA_ARCHITECTURE.md).
 
-See [the content and data architecture](docs/CONTENT_AND_DATA_ARCHITECTURE.md) for source-labeling and review rules.
+## Project layout
+
+| Path | Purpose |
+| --- | --- |
+| `index.html`, root `*.css` and `*.js` | Homepage, shared styles, navigation, language switch and browser behavior |
+| `about/`, `commission/`, `resident-guide/`, `search/` | Profile, elected officials, resident services and section directory |
+| `meetings/`, `commission-agenda/`, `commission-actions/`, `legislation/`, `news/` | City meetings, records and announcements |
+| `events/`, `julia-tuttle-cleanup/` | Event listings with calendar files (generated by `scripts/build-events-preview.py`) |
+| `g20/` | G20 traffic guide for Dec 10–16, 2026 (standalone page) |
+| `active-projects/`, `media/` | Project explorer and video library |
+| `locales/` | Spanish interface text |
+| `assets/` | Images, video, icons and the link-preview image |
+| `data/` | Public JSON snapshots and sync status |
+| `scripts/` | Page generation, source refreshes and validation |
+| `.github/workflows/` | Scheduled data maintenance |
+| `docs/` | Content architecture and source-review guidance |
