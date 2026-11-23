@@ -1,4 +1,4 @@
-import {json,escape as e,date,matches,thumbnailFallback} from '../shared.js?v=da4eebcc5e';
+import {json,escape as e,date,matches,thumbnailFallback} from '../shared.js?v=f6b5f20337';
 const $=s=>document.querySelector(s),params=new URLSearchParams(location.search);
 const state={items:[],series:params.get('series')||'all',query:params.get('q')||'',selected:params.get('video')};
 const descriptions={'Suarez Sound Off':'Interviews hosted by David.','Miami Beach Civics':'How Miami Beach city government works.','Ride Along':'David joins City crews on the job.','Accountability':'David’s accountability reports.','City Issues':'David’s updates on local issues.'};

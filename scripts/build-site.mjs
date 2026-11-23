@@ -5,12 +5,13 @@ import {addLoadingShells} from './ui-shells.mjs';
 import {homeLayout} from './home-layout.mjs';
 import {aboutLayout, commissionLayout, directoryLayout, projectsLayout} from './editorial-layouts.mjs';
 const root = new URL('../',import.meta.url);
+const SITE = 'https://davidsuarezmb.com/';
 const esc = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 function header(route) {
  const b=route?'../':'./';
  const link=(slug,label)=>`<a href="${b}${slug}/"${route===slug?' aria-current="page"':''}>${label}</a>`;
  const city=['meetings','commission-agenda','commission-actions','legislation','news','commission'].includes(route);
- return `<header class="hub-header"><div class="container hub-top"><a class="brand" href="${b}" aria-label="David Suarez resident hub home"><span class="brand-first">David</span><span class="brand-last">Suarez</span><span class="brand-office">Miami Beach Commissioner</span></a><nav id="hub-nav" class="hub-nav" aria-label="Primary navigation">${link('resident-guide','Residents')}<details class="nav-group"${city?' data-current="true"':''}><summary>City Hall</summary><div class="nav-dropdown">${link('commission-agenda','Next agenda')}${link('commission-actions','Decisions & votes')}${link('meetings','Meetings & participation')}${link('legislation','Ordinances & resolutions')}${link('news','Miami Beach Today')}${link('commission','Mayor & commission')}</div></details>${link('active-projects','Projects')}${link('events','Events')}${link('media','Watch')}${link('about','About David')}</nav><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode"><span aria-hidden="true">◐</span> Display</button><button type="button" class="hub-menu" data-menu aria-expanded="false" aria-controls="hub-nav">Menu</button></div></header>`;
+ return `<header class="hub-header"><div class="container hub-top"><a class="brand" href="${b}" aria-label="David Suarez resident hub home"><span class="brand-first">David</span><span class="brand-last">Suarez</span><span class="brand-office">Miami Beach Commissioner</span></a><nav id="hub-nav" class="hub-nav" aria-label="Primary navigation">${link('resident-guide','Residents')}<details class="nav-group"${city?' data-current="true"':''}><summary>City Hall</summary><div class="nav-dropdown">${link('commission-agenda','Commission agenda')}${link('commission-actions','Decisions & votes')}${link('meetings','Meetings & participation')}${link('legislation','Ordinances & resolutions')}${link('news','Miami Beach Today')}${link('commission','Mayor & commission')}</div></details>${link('active-projects','Projects')}${link('events','Events')}${link('media','Watch')}${link('about','About David')}</nav><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode"><span aria-hidden="true">◐</span> Display</button><button type="button" class="hub-menu" data-menu aria-expanded="false" aria-controls="hub-nav">Menu</button></div></header>`;
 }
 function footer(route) {
   const b = route ? '../' : './';
@@ -96,6 +97,14 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  if(route==='media')html=html.replace('<div class="player-copy">','<div class="player-copy" id="player-copy">');
  const iconBase=route?'../':'';
  if(!html.includes('rel="icon"')) html=html.replace('</head>',`<link rel="icon" href="${iconBase}assets/david-suarez-dark.ico?v=3" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" sizes="192x192" href="${iconBase}assets/david-suarez-dark-192.png?v=3"><link rel="apple-touch-icon" href="${iconBase}apple-touch-icon.png?v=3"></head>`);
+ // Link previews (iMessage, social apps, search) need absolute URLs and an image on every page.
+ const pageUrl=SITE+(route?route+'/':'');
+ if(!html.includes('property="og:title"')){
+   const title=html.match(/<title>([^<]*)<\/title>/)?.[1]||'David Suarez';
+   const description=html.match(/<meta name="description" content="([^"]*)"/)?.[1]||'';
+   html=html.replace('</head>',`<meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:type" content="website"></head>`);
+ }
+ if(!html.includes('property="og:image"'))html=html.replace('</head>',`<meta property="og:url" content="${pageUrl}"><meta property="og:site_name" content="David Suarez · Miami Beach"><meta property="og:image" content="${SITE}assets/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Miami Beach coastline from the water"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${pageUrl}"></head>`);
  html=addLoadingShells(html,route);
  if(!html.includes('id="loading-noscript"')) html=html.replace('</head>','<noscript id="loading-noscript"><style>.loading-skeleton{display:none!important}</style></noscript></head>');
  const base=route?'../':'';
@@ -115,4 +124,17 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  }
  await writeFile(file,html);
 }
+// Crawlers: list the public sections, and give missing URLs a branded page instead of GitHub's default.
+const sitemapRoutes=['','resident-guide','meetings','commission-agenda','commission-actions','legislation','news','commission','active-projects','events','media','about','search'];
+await writeFile(new URL('sitemap.xml',root),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes.map(r=>`  <url><loc>${SITE}${r?r+'/':''}</loc></url>`).join('\n')}\n</urlset>\n`);
+await writeFile(new URL('robots.txt',root),`User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
+// GitHub Pages serves 404.html at any depth, so every local path must be absolute.
+let notFound=await readFile(new URL('search/index.html',root),'utf8');
+notFound=notFound.replace(/(href|src)="\.\.\//g,'$1="/')
+ .replace(/<title>[^<]*<\/title>/,'<title>Page not found | David Suarez</title>')
+ .replace(/<meta property="og:url"[^>]*>|<link rel="canonical"[^>]*>/g,'')
+ .replace('</head>','<meta name="robots" content="noindex"></head>')
+ .replace(/ data-page="[^"]*"/,' data-page="not-found"')
+ .replace(/<section class="page-head">[\s\S]*?<\/section>/,'<section class="page-head"><div class="container"><p class="breadcrumb"><a href="/">Resident hub</a></p><h1>Page not found</h1><p>That page may have moved. Pick a section below or go back to the <a href="/">homepage</a>.</p></div></section>');
+await writeFile(new URL('404.html',root),notFound);
 console.log(`Built ${Object.keys(pages).length} resident pages and unified navigation on five existing pages.`);
