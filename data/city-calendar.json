@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-11-22T07:01:49.465Z",
+  "generatedAt": "2026-11-23T07:51:06.926Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Events Calendar",
     "url": "https://events.miamibeachfl.gov/City%20Meetings/",
-    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-22&end_date=2027-01-21&per_page=50&page=2"
+    "feedUrl": "https://events.miamibeachfl.gov/wp-json/tribe/events/v1/events?categories=659&start_date=2026-11-23&end_date=2027-01-22&per_page=50&page=2"
   },
   "items": [
-    {
-      "id": "399013",
-      "title": "Miami Beach Baila! by Commissioner Joe Magazine at the Bandshell",
-      "description": "MIAMI BEACH ¡BAILA! by Commissioner Joe Magazine at THE BANDSHELL FREE, monthly, social dancing for our residents of all ages! Salsa | Bachata | Merengue Join Commissioner Joe Magazine for another exciting edition of his monthly Salsa, Bachata & Merengue Social – this time at the iconic Miami Beach Bandshell. Bring the whole family for an unforgettable evening of latin dancing, vibrant music and community spirit. New to dancing? Come early for a free lesson, learn some new moves and make some friends along the way! Click here to RSVP Date: Sunday, November 22 Lesson: 7 PM – 7:30 PM Party: 7:30 PM – 10 PM Location: The Miami Beach Bandshell 7275 Collins Avenue Dress Code: Smart Casual Parking: $1.25/h 299 72nd St Important: rain or shine, covered openair space. For more info: 786.697.9182 Stay Updated! Join our VIP Event Announcements: SAVE this number +1 786 697 9182 as “MB Baila!” Message “JOIN” on Whatsapp",
-      "startLocal": "2026-11-22T19:00:00",
-      "endLocal": "2026-11-22T22:00:00",
-      "location": "Miami Beach Bandshell, 7275 Collins Avenue, Miami Beach",
-      "category": "City Government",
-      "url": "https://events.miamibeachfl.gov/event/miami-beach-baila-by-commissioner-joe-magazine-november2026/",
-      "note": ""
-    },
     {
       "id": "10104348",
       "title": "Land Use and Sustainability Committee**",
