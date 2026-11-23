@@ -288,15 +288,17 @@ All events|Todos los eventos
 See the official event notice for location and participation details.|Consulte el aviso oficial del evento para conocer el lugar y cómo participar.
 See the full official City calendar|Ver el calendario oficial completo de la Ciudad
 Stop the under-15 e-bike ban|Detengamos la prohibición de bicicletas eléctricas para menores de 15
-It isn't law yet. It's in committee now, and you can help stop it before it goes back to the full Commission.|Todavía no es ley. Ahora está en comité, y puedes ayudar a detenerla antes de que vuelva a la Comisión.
+It isn't law yet. It was sent to the Public Safety committee, and you can help stop it there.|Todavía no es ley. La enviaron al comité de Seguridad Pública, y puedes ayudar a detenerla ahí.
+Anyone can speak for 2 minutes during public comment, in the Commission Chamber at City Hall, 1700 Convention Center Drive, 3rd floor, or by Zoom.|Cualquier persona puede hablar 2 minutos durante el comentario público, en la Cámara de la Comisión del Ayuntamiento, 1700 Convention Center Drive, 3.er piso, o por Zoom.
+Tuesday, December 15, 2026, 2:00 p.m.|martes 15 de diciembre de 2026, 2:00 p. m.
+Public Safety and Neighborhood Quality of Life Committee. The agenda isn't posted yet, so check back here.|Comité de Seguridad Pública y Calidad de Vida Vecinal. La agenda aún no se ha publicado, así que vuelve a consultar aquí.
+The Commission sent it to the Public Safety committee|La Comisión la envió al comité de Seguridad Pública
+December 15, 2026|15 de diciembre de 2026
+Committee meeting, 2:00 p.m. This is where we can stop it.|Reunión del comité, 2:00 p. m. Aquí es donde podemos detenerla.
+It goes back to the full Commission, January at the earliest|Vuelve a la Comisión, como pronto en enero
 Show up when it's heard.|Preséntate cuando la discutan.
-Anyone can speak during public comment. Meetings are at City Hall, 1700 Convention Center Drive, and you can also join by Zoom.|Cualquier persona puede hablar durante el comentario público. Las reuniones son en el Ayuntamiento, 1700 Convention Center Drive, y también puedes participar por Zoom.
 Next meeting:|Próxima reunión:
-On the City Commission agenda, sent to committee|En la agenda de la Comisión, enviada a comité
-Now|Ahora
-In committee. This is where we can stop it.|En comité. Aquí es donde podemos detenerla.
 Only if it moves on|Solo si avanza
-It goes back to the full Commission for a vote|Vuelve a la Comisión para votación
 Skip to how to help|Ir a cómo ayudar
 The Commission wants your e-⁠bike/⁠scooter.|La Comisión quiere quitarte tu bicicleta eléctrica o patineta.
 A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
@@ -322,7 +324,6 @@ Email the Commission.|Escribe a la Comisión.
 Say who you are, where you go to school, how you get around, and ask them to vote no on item R5 H.|Di quién eres, a qué escuela vas, cómo te transportas y pídeles que voten no al punto R5 H.
 Write your email|Escribe tu correo
 Contact every commissioner|Contactar a cada comisionado
-Date to be announced. Check back here.|Fecha por anunciar. Vuelve a consultar aquí.
 Where it stands|En qué punto está
 For parents|Para padres
 The details|Los detalles
