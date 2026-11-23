@@ -289,8 +289,7 @@ See the official event notice for location and participation details.|Consulte e
 See the full official City calendar|Ver el calendario oficial completo de la Ciudad
 Stop the under-15 e-bike ban|Detengamos la prohibición de bicicletas eléctricas para menores de 15
 Skip to how to help|Ir a cómo ayudar
-Proposal · Not law yet|Propuesta · Todavía no es ley
-Don't let them take your ride.|No dejes que te quiten tu forma de moverte.
+The Commission wants your e-⁠bike/⁠scooter.|La Comisión quiere quitarte tu bicicleta eléctrica o patineta.
 A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
 It isn't law yet. The Commission has to vote one more time, and you can help stop it.|Todavía no es ley. La Comisión tiene que votar una vez más, y tú puedes ayudar a detenerla.
 Help stop it|Ayuda a detenerla

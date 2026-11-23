@@ -20,7 +20,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--warm); outline-
 .hero { background: var(--canvas); color: #f0f5f2; padding-block: clamp(2rem,5vw,4rem) clamp(2.5rem,6vw,4.5rem); border-top: 1px solid #ffffff1a }
 .hero-grid { display: grid; grid-template-columns: 1.25fr .9fr; gap: clamp(1.5rem,4vw,3.5rem); align-items: center }
 .stamp { display: inline-block; margin: 0; padding: .35rem .8rem; border: 2px solid var(--alert); color: #ffb49a; font-weight: 800; font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; border-radius: 6px; transform: rotate(-1.5deg) }
-.hero h1 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(3rem,8vw,6.4rem); line-height: .92; letter-spacing: .005em; margin: 1rem 0 1.2rem; color: #fff }
+.nw { white-space: nowrap }
+.hero h1 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.6rem,7vw,5.6rem); line-height: .92; letter-spacing: .005em; margin: 0 0 1.2rem; color: #fff }
 .lead { font-size: clamp(1.1rem,2vw,1.3rem); max-width: 38rem; color: #c9d8dc; margin: 0 0 .8rem }
 .lead.strong { color: var(--mint); font-weight: 700 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem }
