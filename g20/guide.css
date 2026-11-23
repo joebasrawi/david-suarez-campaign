@@ -34,3 +34,10 @@ a:focus-visible { outline: 3px solid #de7500; outline-offset: 3px }
  a, .date { color: #9cead3 }
  .skip { background: #082c43 }
 }
+
+/* Language switch beside the wordmark. */
+.mast { display:flex; align-items:center; justify-content:space-between; gap:1rem }
+.language-toggle { display:inline-flex; align-items:center; gap:3px; min-width:54px; min-height:44px; padding:6px; border:0; background:transparent; color:inherit; font:inherit; font-size:13px; cursor:pointer }
+.language-toggle [data-lang-es], .language-toggle [data-lang-en] { opacity:.7 }
+.language-toggle .is-current { opacity:1; font-weight:700; text-decoration:underline; text-underline-offset:4px }
+.language-toggle:focus-visible { outline:2px solid #a2efda; outline-offset:2px }
