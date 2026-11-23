@@ -300,13 +300,13 @@ Next meeting:|Próxima reunión:
 Only if it moves on|Solo si avanza
 Skip to how to help|Ir a cómo ayudar
 The Commission wants your e-⁠bike/⁠scooter.|La Comisión quiere quitarte tu bicicleta eléctrica o patineta.
-A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
+A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, even with a parent right beside them, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, incluso con uno de sus padres al lado, y obligaría a todos los demás a llevar identificación.
 Speak up|Alza la voz
 What it would do|Lo que haría
 What the proposal would do|Lo que haría la propuesta
 14 and under|14 años o menos
 Banned from riding.|Prohibido andar.
-No e-bike, e-scooter or other motorized scooter on any street, sidewalk or bike lane in the city.|Nada de bicicleta eléctrica, patineta eléctrica ni otro vehículo motorizado de este tipo en ninguna calle, acera o ciclovía de la ciudad.
+No e-bike, e-scooter or other motorized scooter on any street, sidewalk or bike lane in the city. Not even with a parent.|Nada de bicicleta eléctrica, patineta eléctrica ni otro vehículo motorizado de este tipo en ninguna calle, acera o ciclovía de la ciudad. Ni siquiera con tus padres.
 15 and up|15 años o más
 ID every ride.|Identificación siempre.
 You'd have to carry a photo ID whenever you ride. A Florida school ID with your name, photo and date of birth counts.|Tendrías que llevar una identificación con foto cada vez que andes. Sirve la identificación escolar de Florida con tu nombre, foto y fecha de nacimiento.
@@ -325,7 +325,9 @@ Write your email|Escribe tu correo
 Contact every commissioner|Contactar a cada comisionado
 Where it stands|En qué punto está
 For parents|Para padres
-The details|Los detalles
+Your kids, your call.|Sus hijos, su decisión.
+The proposal has no exception for parents. Even if you're riding right beside your child, a 14-year-old couldn't use an e-bike or e-scooter anywhere in the city. Decisions like that belong with families.|La propuesta no tiene ninguna excepción para los padres. Aunque usted vaya justo al lado de su hijo, un niño de 14 años no podría usar una bicicleta eléctrica ni una patineta eléctrica en ningún lugar de la ciudad. Esas decisiones les corresponden a las familias.
+A parent on an e-bike riding next to a child on a scooter|Un padre en bicicleta eléctrica junto a un niño en patineta
 The proposal is item R5 H, "Regulation of Micromobility Devices," sponsored by Commissioner Tanya K. Bhatt. It would add Section 70-75 to the City Code.|La propuesta es el punto R5 H, "Regulation of Micromobility Devices", presentada por la comisionada Tanya K. Bhatt. Agregaría la Sección 70-75 al Código de la Ciudad.
 A rider breaking it could get a ticket from police or a park ranger. It is a noncriminal traffic infraction, with fines set by state law (F.S. 316.655). The rules would apply on public streets, sidewalks, bike lanes and alleys, not on private property.|Quien la incumpla podría recibir una multa de la policía o de un guardaparques. Es una infracción de tránsito no penal, con multas fijadas por la ley estatal (F.S. 316.655). Las reglas aplicarían en calles, aceras, ciclovías y callejones públicos, no en propiedad privada.
 Florida law allowed cities to set these age and ID limits in 2025. Doral set a minimum age of 15, and the City of Miami set 16.|Una ley de Florida de 2025 permitió a las ciudades fijar estos límites de edad e identificación. Doral fijó una edad mínima de 15 años y la Ciudad de Miami, de 16.

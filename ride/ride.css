@@ -70,6 +70,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--warm); outline-
 
 .parents { padding-block: clamp(2.4rem,5vw,3.6rem) clamp(2.6rem,6vw,4rem) }
 .parents p { max-width: 46rem }
+.lead-dark { font-size: 1.25rem; font-weight: 700; color: var(--ink) }
 .sources { padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .3rem 1.4rem }
 .sources a { display: inline-block; padding-block: .5rem; font-weight: 700 }
 
@@ -93,7 +94,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--warm); outline-
  .fact { background: var(--panel); border-color: #ffffff1f; border-top-color: var(--teal) }
  .fact.hot { background: #071a22; border-top-color: var(--alert) }
  .fact .big, .note { color: #afc2c8 }
- .section-title.dark { color: #fff }
+ .section-title.dark, .lead-dark { color: #fff }
  .timeline li { border-color: #33505b }
  .band, .hero, .mast-bar, .foot { background: #071a22 }
  .skip { background: var(--canvas) }
