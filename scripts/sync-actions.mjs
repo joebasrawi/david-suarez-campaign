@@ -27,7 +27,7 @@ function isPageFurniture(line) {
 
 async function extractPdfLines(url) {
   const response = await fetch(url, {
-    headers: { 'user-agent': 'DavidSuarezResidentHub/1.0 (+https://github.com/joebasrawi/david-suarez-campaign)' },
+    headers: { 'user-agent': 'DavidSuarezResidentHub/1.0 (+https://github.com/joebasrawi/david-suarez-mb)' },
     signal: AbortSignal.timeout(90_000)
   });
   if (!response.ok) throw new Error(`${url} returned HTTP ${response.status}`);

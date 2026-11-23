@@ -7,5 +7,5 @@ for(const name of jobs){
 }
 await import('./validate-data.mjs');
 await import('./build-home-summary.mjs');
-await writeSnapshot('data/sync-status.json',{generatedAt:isoNow(),source:{label:'Public data publishing workflow',url:'https://github.com/joebasrawi/david-suarez-campaign/actions/workflows/sync-public-data.yml'},items});
+await writeSnapshot('data/sync-status.json',{generatedAt:isoNow(),source:{label:'Public data publishing workflow',url:'https://github.com/joebasrawi/david-suarez-mb/actions/workflows/sync-public-data.yml'},items});
 if(items.some(i=>i.status==='failed'))process.exitCode=1;
