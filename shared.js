@@ -70,3 +70,13 @@ thumbnailFallback();
  document.querySelector('#reset-filters')?.addEventListener('click',()=>queueMicrotask(updateFilterCounts));
  new MutationObserver(updateFilterCounts).observe(document.querySelector('main')||document.body,{childList:true,subtree:true});
  updateFilterCounts();
+// The agenda source keeps showing the last meeting until the next agenda is posted,
+// so compare its date with today (Miami time) before calling it "next".
+export const todayInMiami = () => new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York'}).format(new Date());
+export function commissionStatus(agenda, calendarItems = []) {
+  const today = todayInMiami(), meeting = agenda?.nextMeeting;
+  if (meeting?.date && meeting.date >= today) return {posted:true, date:meeting.date, meeting};
+  const next = calendarItems.filter(i => /^City Commission\*?\s*$/i.test(i.title || '') && (i.startLocal || '').slice(0,10) >= today)
+    .sort((a,b) => a.startLocal.localeCompare(b.startLocal))[0];
+  return {posted:false, date:next ? next.startLocal.slice(0,10) : '', url:next?.url || '', location:next?.location || '', meeting};
+}

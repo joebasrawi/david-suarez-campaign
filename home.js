@@ -1,12 +1,12 @@
 import {renderHomeVideos} from './home-videos.js?v=482f56434d';
-import {json, escape as e, date, newsExcerpt} from './shared.js?v=da4eebcc5e';
+import {json, escape as e, date, newsExcerpt, commissionStatus} from './shared.js?v=f6b5f20337';
 import {phaseColor,legendMarkup,pointInFeature,neighborhoods,installBasemap,boundaryLayer,groupMapPoints} from './city-map.js?v=094b460af6';
 const $=s=>document.querySelector(s);
 async function init(){
  const {youtube,agenda,news}=await json('home-summary');
  renderHomeVideos(youtube?.items);
  const cards=[];
- if(agenda){const m=agenda.nextMeeting;const d=new Date(m.date+'T12:00:00');cards.push('<article class="official-item agenda-preview"><span class="official-label">Your next commission meeting</span><time class="meeting-date-art" datetime="'+e(m.date)+'">'+e(d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}))+'</time><div><h3>'+m.itemCount+' items for consideration.</h3><a href="commission-agenda/">See what’s on the agenda ↗</a></div></article>');}
+ if(agenda){const m=agenda.nextMeeting,s=commissionStatus(agenda,agenda.commissionMeetings),show=s.date||m.date;const d=new Date(show+'T12:00:00');const label=s.posted||s.date?'Your next commission meeting':'Most recent commission meeting';const body=s.posted?'<h3>'+m.itemCount+' items for consideration.</h3><a href="commission-agenda/">See what’s on the agenda ↗</a>':s.date?'<h3>Agenda not posted yet.</h3><a href="commission-agenda/">Review the '+e(date(m.date,true))+' agenda ↗</a>':'<h3>'+m.itemCount+' items were considered.</h3><a href="commission-agenda/">Review that agenda ↗</a>';cards.push('<article class="official-item agenda-preview"><span class="official-label">'+label+'</span><time class="meeting-date-art" datetime="'+e(show)+'">'+e(d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}))+'</time><div>'+body+'</div></article>');}
  if(news)news.items.slice(0,2).forEach(i=>cards.push('<article class="official-item news-preview"><span class="official-label">City announcement · '+e(date(i.publishedAt,true))+'</span><div><h3>'+e(i.title)+'</h3><p>'+e(newsExcerpt(i.summary))+'</p></div><a href="'+e(i.url)+'" target="_blank" rel="noreferrer">Read announcement ↗</a></article>'));
  $('#official-updates').innerHTML=cards.join('')||'<p class="loading-copy">Updates could not be loaded. <a href="news/">Try city news</a>.</p>';
 

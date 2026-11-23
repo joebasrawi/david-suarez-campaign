@@ -69,7 +69,11 @@ function setupFilters() {
 function renderMeeting() {
   const meeting = state.agenda.nextMeeting;
   document.querySelector('#meeting-title').textContent = 'Commission agenda';
-  document.querySelector('#meeting-meta').textContent = `${displayDate(meeting.date)} · ${meeting.itemCount} items for consideration`;
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date());
+  // The source keeps the last agenda until the next one is posted.
+  document.querySelector('#meeting-meta').textContent = meeting.date >= today
+    ? `${displayDate(meeting.date)} · ${meeting.itemCount} items for consideration`
+    : `${displayDate(meeting.date)} · ${meeting.itemCount} items considered · The next agenda has not been posted yet`;
   document.querySelector('#official-agenda-link').href = meeting.officialAgendaUrl;
 }
 

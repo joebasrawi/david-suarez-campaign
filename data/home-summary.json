@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T07:02:29.935Z",
+  "generatedAt": "2026-11-23T04:56:03.762Z",
   "youtube": {
     "items": [
       {
@@ -62,7 +62,15 @@
       "itemCount": 250,
       "url": "https://miamibeachagenda.com/agenda/november/18/2026",
       "officialAgendaUrl": "https://miamibeachfl.primegov.com/Portal/Meeting?meetingTemplateId=6280"
-    }
+    },
+    "commissionMeetings": [
+      {
+        "title": "City Commission*",
+        "startLocal": "2026-12-09T09:00:00",
+        "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+        "url": "https://events.miamibeachfl.gov/event/city-commission-3-2/2026-12-09/"
+      }
+    ]
   },
   "news": {
     "items": [
