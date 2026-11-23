@@ -299,7 +299,9 @@ Show up when it's heard.|Preséntate cuando la discutan.
 Next meeting:|Próxima reunión:
 Only if it moves on|Solo si avanza
 Skip to how to help|Ir a cómo ayudar
-The Commission wants your e-⁠bike/⁠scooter.|La Comisión quiere quitarte tu bicicleta eléctrica o patineta.
+The Commission wants to|La Comisión quiere
+ban|prohibir
+your scooter.|tu patineta.
 A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, even with a parent right beside them, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, incluso con uno de sus padres al lado, y obligaría a todos los demás a llevar identificación.
 Speak up|Alza la voz
 What it would do|Lo que haría
