@@ -16,7 +16,7 @@
 .hero-content { padding:130px 0 70px; }
 .hero-identity { margin:0 0 20px; font-size:15px; font-weight:500; color:#fff; }
 .coastal-hero h1 { max-width:800px; margin:0 0 30px; font-family:var(--sans); font-size:clamp(64px,7.8vw,112px); font-weight:600; letter-spacing:-.065em; line-height:.98; color:#fff; text-wrap:balance; }
-.hero-links { display:flex; gap:12px; align-items:center; }
+.hero-links { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
 .home-cinematic .visual-button { display:inline-flex; justify-content:center; align-items:center; min-height:48px; gap:16px; padding:12px 22px; border-radius:8px; background:#d7efde; color:#102b31; text-decoration:none; font-size:14px; font-weight:600; border:1px solid transparent; transition:background 180ms,transform 180ms; }
 .home-cinematic .visual-button:hover { background:#eef9f1; transform:translateY(-2px); }
 .home-cinematic .visual-button.secondary { color:white; border-color:#ffffff65; background:#09273466; }
