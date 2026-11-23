@@ -287,40 +287,46 @@ Details & add to calendar|Detalles y agregar al calendario
 All events|Todos los eventos
 See the official event notice for location and participation details.|Consulte el aviso oficial del evento para conocer el lugar y cómo participar.
 See the full official City calendar|Ver el calendario oficial completo de la Ciudad
-E-bike and scooter age limit|Límite de edad para bicicletas eléctricas y patinetas
-Skip to how to speak up|Ir a cómo dar su opinión
-Proposed Miami Beach law|Propuesta de ley en Miami Beach
-Under 15? You could lose your e-bike.|¿Menor de 15? Podrías perder tu bicicleta eléctrica.
-The City Commission is considering a law that would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|La Comisión de la Ciudad está considerando una ley que prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
-Speak up before the final vote|Da tu opinión antes de la votación final
-What the law would do|Lo que haría la ley
+Stop the under-15 e-bike ban|Detengamos la prohibición de bicicletas eléctricas para menores de 15
+Skip to how to help|Ir a cómo ayudar
+Proposal · Not law yet|Propuesta · Todavía no es ley
+Don't let them take your ride.|No dejes que te quiten tu forma de moverte.
+A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
+It isn't law yet. The Commission has to vote one more time, and you can help stop it.|Todavía no es ley. La Comisión tiene que votar una vez más, y tú puedes ayudar a detenerla.
+Help stop it|Ayuda a detenerla
+What it would do|Lo que haría
+A red and yellow Miami Beach lifeguard tower on the sand at 8th Street|Una torre salvavidas roja y amarilla de Miami Beach en la arena de la calle 8
+What the proposal would do|Lo que haría la propuesta
 14 and under|14 años o menos
-No riding.|No podrías andar.
-You couldn't ride an e-bike, e-scooter or any other motorized scooter on any street, sidewalk or bike lane in the city.|No podrías andar en bicicleta eléctrica, patineta eléctrica ni ningún otro vehículo motorizado de este tipo en ninguna calle, acera o ciclovía de la ciudad.
+Banned from riding.|Prohibido andar.
+No e-bike, e-scooter or other motorized scooter on any street, sidewalk or bike lane in the city.|Nada de bicicleta eléctrica, patineta eléctrica ni otro vehículo motorizado de este tipo en ninguna calle, acera o ciclovía de la ciudad.
 15 and up|15 años o más
-Carry ID, every ride.|Lleva identificación siempre.
-You'd need a photo ID on you whenever you ride. A Florida school ID with your name, photo and date of birth counts.|Tendrías que llevar una identificación con foto cada vez que andes. Sirve la identificación escolar de Florida con tu nombre, foto y fecha de nacimiento.
-Pedal bikes|Bicicletas de pedal
-Not affected.|No cambian.
-Regular bikes with no motor, and wheelchairs or other mobility aids, are not covered.|Las bicicletas normales sin motor, las sillas de ruedas y otras ayudas de movilidad no están incluidas.
-Have your say|Da tu opinión
-The Commission still has to vote on this law a second time before it becomes final. Students and parents can both weigh in.|La Comisión todavía tiene que votar esta ley una segunda vez antes de que sea definitiva. Estudiantes y padres pueden opinar.
-Show this page to your parents.|Muéstrales esta página a tus padres.
-This affects how you get to school, practice and work. Talk about it together.|Esto afecta cómo llegas a la escuela, a tus prácticas y al trabajo. Hablen del tema juntos.
-Send an email.|Envía un correo electrónico.
-Tell the Commission who you are, where you go to school and how you get around. Short and polite works best.|Cuéntale a la Comisión quién eres, a qué escuela vas y cómo te transportas. Lo breve y respetuoso funciona mejor.
-Email David's office|Escribir a la oficina de David
-Find every commissioner's contact|Ver el contacto de cada comisionado
-Speak at the final vote.|Habla en la votación final.
-Anyone can speak for up to 2 minutes, and there's no sign-up. Come to City Hall, 1700 Convention Center Drive, 3rd floor Commission Chamber, or join by Zoom.|Cualquier persona puede hablar hasta 2 minutos, sin inscribirse antes. Ven al Ayuntamiento, 1700 Convention Center Drive, Cámara de la Comisión en el 3.er piso, o participa por Zoom.
+ID every ride.|Identificación siempre.
+You'd have to carry a photo ID whenever you ride. A Florida school ID with your name, photo and date of birth counts.|Tendrías que llevar una identificación con foto cada vez que andes. Sirve la identificación escolar de Florida con tu nombre, foto y fecha de nacimiento.
+Break it|Si la incumples
+Get a ticket.|Te multan.
+Police and park rangers could write you up. It's a traffic infraction with fines set by state law.|La policía y los guardaparques podrían multarte. Es una infracción de tránsito con multas fijadas por la ley estatal.
+Regular pedal bikes, wheelchairs and other mobility aids would not be affected.|Las bicicletas normales de pedal, las sillas de ruedas y otras ayudas de movilidad no se verían afectadas.
+How we stop it|Cómo la detenemos
+Your voice counts. Use it.|Tu voz cuenta. Úsala.
+Commissioners listen when students and parents show up. It takes 5 minutes.|Los comisionados escuchan cuando estudiantes y padres se presentan. Toma 5 minutos.
+Show your parents.|Muéstraselo a tus padres.
+This changes how you get to school, practice and work. Show them this page and ask them to speak up with you.|Esto cambia cómo llegas a la escuela, a tus prácticas y al trabajo. Muéstrales esta página y pídeles que alcen la voz contigo.
+Email the Commission.|Escribe a la Comisión.
+Say who you are, where you go to school, how you get around, and ask them to vote no on item R5 H.|Di quién eres, a qué escuela vas, cómo te transportas y pídeles que voten no al punto R5 H.
+Write your email|Escribe tu correo
+Contact every commissioner|Contactar a cada comisionado
+Show up for the final vote.|Preséntate en la votación final.
+Anyone can speak for 2 minutes, no sign-up needed. City Hall, 1700 Convention Center Drive, 3rd floor Commission Chamber, or join by Zoom.|Cualquier persona puede hablar 2 minutos, sin inscribirse antes. Ayuntamiento, 1700 Convention Center Drive, Cámara de la Comisión en el 3.er piso, o por Zoom.
 Final vote:|Votación final:
 Date to be announced. Check back here.|Fecha por anunciar. Vuelve a consultar aquí.
 Where it stands|En qué punto está
-First hearing at the City Commission|Primera audiencia en la Comisión de la Ciudad
-Second hearing and final vote|Segunda audiencia y votación final
-If it passes|Si se aprueba
-It becomes city law on the date the Commission sets|Se convierte en ley de la ciudad en la fecha que fije la Comisión
+Proposed and heard for the first time|Propuesta y escuchada por primera vez
+Final vote. This is when we can stop it.|Votación final. Aquí es cuando podemos detenerla.
+Only if it passes|Solo si se aprueba
+Then it becomes city law|Entonces se convierte en ley de la ciudad
 For parents|Para padres
+The details|Los detalles
 The proposal is item R5 H, "Regulation of Micromobility Devices," sponsored by Commissioner Tanya K. Bhatt. It would add Section 70-75 to the City Code.|La propuesta es el punto R5 H, "Regulation of Micromobility Devices", presentada por la comisionada Tanya K. Bhatt. Agregaría la Sección 70-75 al Código de la Ciudad.
 A rider breaking it could get a ticket from police or a park ranger. It is a noncriminal traffic infraction, with fines set by state law (F.S. 316.655). The rules would apply on public streets, sidewalks, bike lanes and alleys, not on private property.|Quien la incumpla podría recibir una multa de la policía o de un guardaparques. Es una infracción de tránsito no penal, con multas fijadas por la ley estatal (F.S. 316.655). Las reglas aplicarían en calles, aceras, ciclovías y callejones públicos, no en propiedad privada.
 Florida law allowed cities to set these age and ID limits in 2025. Doral set a minimum age of 15, and the City of Miami set 16.|Una ley de Florida de 2025 permitió a las ciudades fijar estos límites de edad e identificación. Doral fijó una edad mínima de 15 años y la Ciudad de Miami, de 16.
@@ -328,7 +334,7 @@ Read the proposed ordinance|Leer la ordenanza propuesta
 Read the City Attorney's memo|Leer el memorando del Abogado de la Ciudad
 November 18 agenda|Agenda del 18 de noviembre
 Not the official City website. Official City records remain authoritative.|Este no es el sitio web oficial de la Ciudad. Los documentos oficiales de la Ciudad son la fuente autorizada.
-E-bike rules for teens may change|Las reglas de bicicletas eléctricas para jóvenes podrían cambiar
+Help stop the under-15 e-bike ban|Ayuda a detener la prohibición para menores de 15
 `.trim().split('\n').map(line => line.split('|')));
 
 Object.assign(spanish, Object.fromEntries(`
