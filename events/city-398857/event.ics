@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398857@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T220000Z
+DTEND:20261118T000000Z
+SUMMARY:Animal Welfare Committee
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Miami Beach City Hall 1700 Convention Center Drive\, 4 th Flo
+ or City Attorney’s Large Conference Room\nSource and updates: https://
+ events.miamibeachfl.gov/event/animal-welfare-committee-2/\nSaved calenda
+ r entries are one-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398857/
+END:VEVENT
+END:VCALENDAR

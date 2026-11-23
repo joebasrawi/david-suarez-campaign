@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398869@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261119T190000Z
+DTEND:20261119T200000Z
+SUMMARY:Special Events Community Reviews
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Microsoft Teams Meeting http://bit.ly/4xMFeaD Meeting ID: 254
+ 413135646867# Passcode: oe74mF7r 1.786.636.1480 Access ID: 695213131#\nS
+ ource and updates: https://events.miamibeachfl.gov/event/special-events-
+ community-reviews-2/\nSaved calendar entries are one-time copies. Check 
+ the source before attending.
+URL:https://davidsuarezmb.com/events/city-398869/
+END:VEVENT
+END:VCALENDAR

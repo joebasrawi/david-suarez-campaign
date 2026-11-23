@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:julia-tuttle-cleanup@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261219T130000Z
+DTEND:20261219T150000Z
+SUMMARY:Julia Tuttle Causeway Shoreline Cleanup
+LOCATION:Julia Tuttle Causeway\, westbound
+DESCRIPTION:King tides have left a wave of trash along the shoreline. Joi
+ n us to help protect our bay. RSVP required at cleanmiamibeach.org. Wear
+  closed-toe shoes and bring a reusable water bottle. Volunteers under 16
+  must be accompanied by a guardian. Community service hours are availabl
+ e. Check RSVP information for the precise meeting point.\nSource and upd
+ ates: https://cleanmiamibeach.org/\nSaved calendar entries are one-time 
+ copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/julia-tuttle-cleanup/
+END:VEVENT
+END:VCALENDAR

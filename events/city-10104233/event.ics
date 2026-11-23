@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-10104233@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261215T140000Z
+DTEND:20261215T220000Z
+SUMMARY:Historic Preservation Board
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/82273941924
+  Access ID: 82273941924# 1.305.224.1968 or .888.475.4499   Miami Beach 
+ City Hall 1700 Convention Center Dr\, 3 rd Floor Commission Chamber\nSou
+ rce and updates: https://events.miamibeachfl.gov/event/historic-preserva
+ tion-board/2026-12-15/\nSaved calendar entries are one-time copies. Chec
+ k the source before attending.
+URL:https://davidsuarezmb.com/events/city-10104233/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-10104329@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261216T143000Z
+DTEND:20261216T173000Z
+SUMMARY:Finance and Economic Resiliency Committee
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86360595462
+  Webinar ID: 86360595462# 1.301.715.8592 or 888.475.4499   Miami Beach 
+ City Hall 1700 Convention Center Drive\, 3 rd Floor Commission Chamber\n
+ Source and updates: https://events.miamibeachfl.gov/event/finance-and-ec
+ onomic-resiliency-committee-2/2026-12-16/\nSaved calendar entries are on
+ e-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-10104329/
+END:VEVENT
+END:VCALENDAR

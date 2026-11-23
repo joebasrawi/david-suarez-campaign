@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398845@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T140000Z
+DTEND:20261117T220000Z
+SUMMARY:Special Magistrate Hearings
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Miami Beach City Hall 1700 Convention Center Drive\, 3 rd Flo
+ or Commission Chamber\nSource and updates: https://events.miamibeachfl.g
+ ov/event/special-magistrate-hearings-7/\nSaved calendar entries are one-
+ time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398845/
+END:VEVENT
+END:VCALENDAR

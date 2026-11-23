@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-10104215@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261208T140000Z
+DTEND:20261208T220000Z
+SUMMARY:Planning Board
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/86143426327
+  Access ID: 86143426327# 1.929.205.6099 or 877.853.5257   Miami Beach C
+ ity Hall 1700 Convention Center Drive\, 3 rd Floor Commission Chamber\nS
+ ource and updates: https://events.miamibeachfl.gov/event/planning-board-
+ 3/2026-12-08/\nSaved calendar entries are one-time copies. Check the sou
+ rce before attending.
+URL:https://davidsuarezmb.com/events/city-10104215/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-10104348@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261124T160000Z
+DTEND:20261124T180000Z
+SUMMARY:Land Use and Sustainability Committee
+LOCATION:City Hall Commission Chamber\, 1700 Convention Center Drive\, Mi
+ ami Beach
+DESCRIPTION:Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85059923037
+  1.301.715.8592 or 888.475.4499 Webinar ID: 85059923037# Miami Beach Cit
+ y Hall 1700 Convention Center Dr\, 3 rd Floor Commission Chamber\nSource
+  and updates: https://events.miamibeachfl.gov/event/land-use-and-sustain
+ ability-committee/2026-11-24/\nSaved calendar entries are one-time copie
+ s. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-10104348/
+END:VEVENT
+END:VCALENDAR

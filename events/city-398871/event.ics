@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398871@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261119T210000Z
+DTEND:20261119T230000Z
+SUMMARY:Ad Hoc Nightlife Industry Taskforce Advisory Committee
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Miami Beach Police Department 1100 Washington Avenue\, 1 st f
+ loor Community Room\nSource and updates: https://events.miamibeachfl.gov
+ /event/ad-hoc-nightlife-industry-taskforce-advisory-committee-2/\nSaved 
+ calendar entries are one-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398871/
+END:VEVENT
+END:VCALENDAR

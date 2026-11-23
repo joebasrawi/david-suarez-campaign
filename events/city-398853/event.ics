@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398853@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T203000Z
+DTEND:20261117T223000Z
+SUMMARY:Disability Access Committee
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Hybrid Meeting https://bit.ly/3HiqDc6 Miami Beach City Hall 1
+ 700 Convention Center Drive\, 4 th Floor Public Works Conference Room\nS
+ ource and updates: https://events.miamibeachfl.gov/event/disability-acce
+ ss-committee-2/\nSaved calendar entries are one-time copies. Check the s
+ ource before attending.
+URL:https://davidsuarezmb.com/events/city-398853/
+END:VEVENT
+END:VCALENDAR

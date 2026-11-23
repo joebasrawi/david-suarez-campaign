@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398851@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T180000Z
+DTEND:20261117T200000Z
+SUMMARY:OPEB Q3 2026 Review
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Hybrid Meeting https://bit.ly/4jKIcIC Meeting ID: 21760254297
+ 7037# Passcode: 2CE7tR7J 1.786.636.1480 or 790.897.334 Access ID: 790897
+ 334# Miami Beach City Hall 1700 Convention Center Dr\, 3 rd Floor OBPI C
+ onference Room\nSource and updates: https://events.miamibeachfl.gov/even
+ t/opeb-q3-2026-review/\nSaved calendar entries are one-time copies. Chec
+ k the source before attending.
+URL:https://davidsuarezmb.com/events/city-398851/
+END:VEVENT
+END:VCALENDAR

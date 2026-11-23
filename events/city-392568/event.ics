@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-392568@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261217T160000Z
+DTEND:20261217T160000Z
+SUMMARY:West Avenue Phase II Neighborhood Improvement Project: Latest Upd
+ ates & Community Discussion
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Join Commissioner Alex J. Fernandez for a virtual community m
+ eeting to explore progress\, upcoming plans and a review of construction
+  site updates for the West Avenue Phase II Neighborhood Improvement Proj
+ ect. Thursday\, December 17 11 AM Zoom link: https://us06web.zoom.us/j/8
+ 2324069554\nSource and updates: https://events.miamibeachfl.gov/event/we
+ st-avenue-phase-ii-neighborhood-improvement-project-latest-updates-commu
+ nity-discussion-7/\nSaved calendar entries are one-time copies. Check th
+ e source before attending.
+URL:https://davidsuarezmb.com/events/city-392568/
+END:VEVENT
+END:VCALENDAR

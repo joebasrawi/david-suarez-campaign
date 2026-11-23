@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-398855@davidsuarezmb.com
+DTSTAMP:20261113T065441Z
+DTSTART:20261117T210000Z
+DTEND:20261117T230000Z
+SUMMARY:Youth Commission Meeting
+LOCATION:City Manager’s Large Conference Room\, 1700 Convention Center 
+ Drive\, Miami Beach
+DESCRIPTION:Miami Beach City Hall 1700 Convention Center Drive\, 4 th Flo
+ or City Manager’s Large Conference Room\nSource and updates: https://e
+ vents.miamibeachfl.gov/event/youth-commission-meeting-4/\nSaved calendar
+  entries are one-time copies. Check the source before attending.
+URL:https://davidsuarezmb.com/events/city-398855/
+END:VEVENT
+END:VCALENDAR

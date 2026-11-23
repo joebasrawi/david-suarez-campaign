@@ -1,0 +1,21 @@
+.loading-skeleton{display:none!important}
+.cleanup-wrap{padding:clamp(40px,7vw,90px) 0 64px}.cleanup-kicker{font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted,#b7cbd1)}.cleanup-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}.cleanup-wrap h1{font-family:Anton, sans-serif;text-transform:uppercase;font-size:clamp(3rem,6vw,5.6rem);line-height:1.02;letter-spacing:0;margin:18px 0 24px}.cleanup-lede{font-size:1.2rem;line-height:1.7;max-width:40em}.cleanup-detail{border-top:1px solid currentColor;padding:22px 0}.cleanup-detail h2{font-size:1rem;margin:0 0 8px}.cleanup-detail p{margin:0;line-height:1.7}.cleanup-cal{margin-top:38px;padding-top:26px;border-top:1px solid currentColor}.cleanup-links{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.cleanup-links a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border:1px solid currentColor;border-radius:4px;text-decoration:none;font-weight:700}.cleanup-links a:hover,.cleanup-links a:focus-visible{outline:2px solid currentColor;outline-offset:3px}.cleanup-note{font-size:.9rem;line-height:1.6;opacity:.8}.cleanup-checklist{padding-left:1.2em;line-height:1.9}.cleanup-rsvp{margin-top:20px}@media(max-width:760px){.cleanup-grid{grid-template-columns:1fr}.cleanup-wrap h1{font-size:3rem}.cleanup-links a{flex:1 1 140px}}
+.events-list{display:grid;gap:0}.event-row{display:grid;grid-template-columns:170px 1fr 24px;gap:24px;text-decoration:none;padding:24px 0;border-top:1px solid #537277}.event-row h2{font-size:1.35rem;margin:5px 0}.event-row p{margin:0;line-height:1.6}.event-row:hover h2{text-decoration:underline}.event-meta{opacity:.75;font-size:.88rem}.event-feature{padding:24px;border:1px solid #7aa99c;margin:28px 0 36px}.event-detail-text{white-space:pre-line;line-height:1.8}.event-filters{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.event-filters button{padding:10px 16px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:4px}.event-filters button[aria-pressed="true"]{background:#b3ddcc;color:#071b24}.event-row[hidden]{display:none}@media(max-width:600px){.event-row{grid-template-columns:1fr 18px;gap:8px}.event-date{grid-column:1/-1}.event-row h2{font-size:1.15rem}}
+.event-flyer{margin:0 0 28px}.event-flyer img{display:block;width:100%;max-width:600px;height:auto}.event-flyer figcaption{font-size:.85rem;line-height:1.6;margin-top:10px;opacity:.8}
+
+/* Focused event layout: essential details and action alongside original artwork. */
+body[data-page="events"] .cleanup-wrap{padding-top:28px}
+body[data-page="events"] .cleanup-wrap h1{font-size:clamp(2rem,3.8vw,3.5rem)!important;max-width:28ch!important;margin:10px 0 24px}
+.cleanup-grid.has-flyer{grid-template-columns:minmax(240px,400px) minmax(320px,1fr);gap:clamp(28px,5vw,64px);max-width:1050px}
+.has-flyer .event-flyer{margin:0}.has-flyer .event-flyer img{max-width:400px}
+.event-information .cleanup-lede{margin-top:0;font-size:1.35rem;line-height:1.5}
+.event-information .event-detail-text{line-height:1.65;max-width:52ch}
+.event-information .cleanup-cal{border:0;padding-top:12px;margin-top:0}
+.event-information .cleanup-cal h2{display:none}
+.event-information .cleanup-links a{background:#b3ddcc;color:#071b24;border:0;padding:16px 26px;font-size:1.05rem;border-radius:6px;box-shadow:0 5px 20px #0002}
+.event-information .cleanup-links a:hover{background:#d5f5e7}
+@media(max-width:760px){.cleanup-grid.has-flyer{grid-template-columns:1fr;gap:24px}.has-flyer .event-information{grid-row:1}.has-flyer .event-flyer{grid-row:2;max-width:400px}.cleanup-wrap{padding-top:20px!important}.event-information .cleanup-lede{font-size:1.15rem}.event-information .cleanup-links a{width:100%}}
+.cleanup-grid.has-flyer{max-width:none;grid-template-columns:minmax(280px,.85fr) minmax(360px,1.15fr)}
+.has-flyer .event-flyer img{max-width:460px;width:100%}
+.event-information .event-detail-text{max-width:none}
+@media(max-width:760px){.cleanup-grid.has-flyer{grid-template-columns:1fr}.has-flyer .event-flyer{max-width:460px}}
