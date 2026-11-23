@@ -287,14 +287,13 @@ Details & add to calendar|Detalles y agregar al calendario
 All events|Todos los eventos
 See the official event notice for location and participation details.|Consulte el aviso oficial del evento para conocer el lugar y cómo participar.
 See the full official City calendar|Ver el calendario oficial completo de la Ciudad
-Stop the under-15 e-bike ban|Detengamos la prohibición de bicicletas eléctricas para menores de 15
-It isn't law yet. It was sent to the Public Safety committee, and you can help stop it there.|Todavía no es ley. La enviaron al comité de Seguridad Pública, y puedes ayudar a detenerla ahí.
+It isn't law yet. It was sent to the Public Safety committee, where it can still change. Make sure they hear from you.|Todavía no es ley. La enviaron al comité de Seguridad Pública, donde todavía puede cambiar. Asegúrate de que te escuchen.
 Anyone can speak for 2 minutes during public comment, in the Commission Chamber at City Hall, 1700 Convention Center Drive, 3rd floor, or by Zoom.|Cualquier persona puede hablar 2 minutos durante el comentario público, en la Cámara de la Comisión del Ayuntamiento, 1700 Convention Center Drive, 3.er piso, o por Zoom.
 Tuesday, December 15, 2026, 2:00 p.m.|martes 15 de diciembre de 2026, 2:00 p. m.
 Public Safety and Neighborhood Quality of Life Committee. The agenda isn't posted yet, so check back here.|Comité de Seguridad Pública y Calidad de Vida Vecinal. La agenda aún no se ha publicado, así que vuelve a consultar aquí.
 The Commission sent it to the Public Safety committee|La Comisión la envió al comité de Seguridad Pública
 December 15, 2026|15 de diciembre de 2026
-Committee meeting, 2:00 p.m. This is where we can stop it.|Reunión del comité, 2:00 p. m. Aquí es donde podemos detenerla.
+Committee meeting, 2:00 p.m. This is where it can still change.|Reunión del comité, 2:00 p. m. Aquí es donde todavía puede cambiar.
 It goes back to the full Commission, January at the earliest|Vuelve a la Comisión, como pronto en enero
 Show up when it's heard.|Preséntate cuando la discutan.
 Next meeting:|Próxima reunión:
@@ -302,7 +301,7 @@ Only if it moves on|Solo si avanza
 Skip to how to help|Ir a cómo ayudar
 The Commission wants your e-⁠bike/⁠scooter.|La Comisión quiere quitarte tu bicicleta eléctrica o patineta.
 A proposal at City Hall would ban anyone under 15 from riding e-bikes and e-scooters in Miami Beach, and make every other rider carry ID.|Una propuesta en el Ayuntamiento prohibiría a los menores de 15 años andar en bicicletas eléctricas y patinetas eléctricas en Miami Beach, y obligaría a todos los demás a llevar identificación.
-Help stop it|Ayuda a detenerla
+Speak up|Alza la voz
 What it would do|Lo que haría
 What the proposal would do|Lo que haría la propuesta
 14 and under|14 años o menos
@@ -315,13 +314,13 @@ Break it|Si la incumples
 Get a ticket.|Te multan.
 Police and park rangers could write you up. It's a traffic infraction with fines set by state law.|La policía y los guardaparques podrían multarte. Es una infracción de tránsito con multas fijadas por la ley estatal.
 Regular pedal bikes, wheelchairs and other mobility aids would not be affected.|Las bicicletas normales de pedal, las sillas de ruedas y otras ayudas de movilidad no se verían afectadas.
-How we stop it|Cómo la detenemos
+How to be heard|Cómo hacerte escuchar
 Your voice counts. Use it.|Tu voz cuenta. Úsala.
 Commissioners listen when students and parents show up. It takes 5 minutes.|Los comisionados escuchan cuando estudiantes y padres se presentan. Toma 5 minutos.
 Show your parents.|Muéstraselo a tus padres.
 This changes how you get to school, practice and work. Show them this page and ask them to speak up with you.|Esto cambia cómo llegas a la escuela, a tus prácticas y al trabajo. Muéstrales esta página y pídeles que alcen la voz contigo.
 Email the Commission.|Escribe a la Comisión.
-Say who you are, where you go to school, how you get around, and ask them to vote no on item R5 H.|Di quién eres, a qué escuela vas, cómo te transportas y pídeles que voten no al punto R5 H.
+Say who you are, where you go to school, how you get around, and how item R5 H would affect you. Ideas for what would work better help too.|Di quién eres, a qué escuela vas, cómo te transportas y cómo te afectaría el punto R5 H. Las ideas sobre qué funcionaría mejor también ayudan.
 Write your email|Escribe tu correo
 Contact every commissioner|Contactar a cada comisionado
 Where it stands|En qué punto está
@@ -334,7 +333,7 @@ Read the proposed ordinance|Leer la ordenanza propuesta
 Read the City Attorney's memo|Leer el memorando del Abogado de la Ciudad
 November 18 agenda|Agenda del 18 de noviembre
 Not the official City website. Official City records remain authoritative.|Este no es el sitio web oficial de la Ciudad. Los documentos oficiales de la Ciudad son la fuente autorizada.
-Help stop the under-15 e-bike ban|Ayuda a detener la prohibición para menores de 15
+Under 15? Speak up on e-bike rules|¿Menor de 15? Opina sobre las reglas de bicicletas eléctricas
 `.trim().split('\n').map(line => line.split('|')));
 
 Object.assign(spanish, Object.fromEntries(`
