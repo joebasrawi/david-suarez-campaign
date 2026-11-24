@@ -418,3 +418,6 @@ html[lang="es"] .hub-top { gap:14px; }
   .theme-toggle { font-size:0; gap:0; }
   .theme-toggle span { font-size:19px; }
 }
+/* "Stay informed" signup link in the main menu */
+body .hub-nav a.nav-signup,body.home-cinematic .hub-nav a.nav-signup { align-self:center; min-height:0; padding:8px 14px; border-radius:999px; background:var(--accent); color:var(--accent-ink); font-weight:600; text-decoration:none; }
+body .hub-nav a.nav-signup:hover { color:var(--accent-ink); filter:brightness(1.08); }
