@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T22:16:04.161Z",
+  "generatedAt": "2026-11-24T22:34:02.182Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,22 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "411623",
+      "title": "City of Miami Beach Announces Top Three Finalists for Its 2026 Legacy Purchase Program at Art Basel Miami Beach",
+      "summary": "Public Voting Opens November 20 to Choose the Next Artwork for the City’s Public Art Collection",
+      "publishedAt": "2026-11-19T15:14:00",
+      "url": "https://www.miamibeachfl.gov/city-of-miami-beach-announces-top-three-finalists-for-its-2026-legacy-purchase-program-at-art-basel-miami-beach/",
+      "label": "Official city news"
+    },
+    {
+      "id": "411617",
+      "title": "Miami Beach Authorizes Legal Action to Save Savoy and Arlington Hotels from Demolition",
+      "summary": "The city will challenge Florida’s unpopular Resiliency and Safe Structures Act",
+      "publishedAt": "2026-11-18T11:06:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-authorizes-legal-action-to-save-savoy-and-arlington-hotels-from-demolition/",
+      "label": "Official city news"
+    },
     {
       "id": "411041",
       "title": "Miami Beach Invites the Public to “Find Your Wonder” Through Interactive Arts & Culture Pop-Ups",
@@ -69,22 +85,6 @@
       "summary": "The Letters of Gratitude will be displayed on The Betsy Orb as part of the city’s America 250 celebration culminating on Veterans Day",
       "publishedAt": "2026-11-02T14:50:00",
       "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-veterans-with-high-tech-letter-campaign/",
-      "label": "Official city news"
-    },
-    {
-      "id": "410122",
-      "title": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park",
-      "summary": "FIFA World Cup 2026™ Miami Host Committee, City of Miami Beach and Griffin Catalyst Celebrate ONE GAME ONE FUTURE Legacy Investment at Normandy Isle Park $1.5 million artificial turf replacement project is part of broader partnership to expand youth access to soccer and World Cup experiences across South Florida",
-      "publishedAt": "2026-10-26T13:55:00",
-      "url": "https://www.miamibeachfl.gov/fifa-world-cup-2026-miami-host-committee-city-of-miami-beach-and-griffin-catalyst-celebrate-one-game-one-future-legacy-investment-at-normandy-isle-park/",
-      "label": "Official city news"
-    },
-    {
-      "id": "410019",
-      "title": "Miami Beach Launches ‘Find Your Wonder’ Campaign to Celebrate Year-Round Arts & Culture",
-      "summary": "Developed in partnership with the Greater Miami Convention & Visitors Bureau",
-      "publishedAt": "2026-10-21T12:08:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-launches-find-your-wonder-campaign-to-celebrate-year-round-arts-culture/",
       "label": "Official city news"
     }
   ]
