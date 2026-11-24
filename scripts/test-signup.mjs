@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
 import {handle, validate} from '../worker/src/index.js';
 import {SIGNUP_ENDPOINT} from './home-layout.mjs';
 import {spanish} from '../locales/es.js';
@@ -24,6 +25,16 @@ assert.ok(home.includes('14*864e5'), 'closing the popup snoozes it for 14 days')
 assert.ok(home.includes("remember({signedUp:true})"), 'signing up stops the popup for good');
 assert.ok(home.includes("section.querySelector('form').cloneNode(true)"), 'popup reuses the section form');
 assert.ok(spanish['Close'], 'Spanish for the close button');
+
+// Every page with the main menu has the Stay informed link, pointing at the homepage section.
+const pages = execFileSync('git', ['ls-files', '*.html'], {cwd: new URL('.', root)}).toString().trim().split('\n');
+for (const page of pages) {
+  const text = await read(page);
+  if (!text.includes('id="hub-nav"')) continue;
+  const depth = page.split('/').length - 1;
+  assert.ok(text.includes(`<a class="nav-signup" href="${page === '404.html' ? '/' : depth ? '../'.repeat(depth) : './'}#stay-informed" data-signup-open>Stay informed</a>`), `${page}: Stay informed menu link`);
+}
+assert.ok(home.includes("location.hash==='#stay-informed'"), 'arriving at /#stay-informed opens the popup');
 
 // Validation.
 assert.deepEqual(validate({firstName: ' Ana ', email: 'ANA@Example.com '}).signup, {firstName: 'Ana', lastName: '', email: 'ana@example.com', phone: ''});

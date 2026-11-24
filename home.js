@@ -161,7 +161,6 @@ function initSignupPopup(section,endpoint){
  if(typeof HTMLDialogElement!=='function')return;
  const memory=signupMemory(),params=new URLSearchParams(location.search);
  const snoozed=memory.dismissedAt&&Date.now()-memory.dismissedAt<14*864e5;
- if(params.get('signup')!=='popup'&&(memory.signedUp||snoozed))return;
  const dialog=document.createElement('dialog');
  dialog.className='signup-popup';
  dialog.setAttribute('aria-labelledby','signup-popup-title');
@@ -175,15 +174,32 @@ function initSignupPopup(section,endpoint){
  dialog.querySelector('.signup-close').addEventListener('click',close);
  dialog.addEventListener('click',event=>{if(event.target===dialog)close();});
  bindSignup(form,endpoint,()=>setTimeout(close,2200));
- const delay=params.get('signup')==='popup'?300:5000;
- setTimeout(()=>{
-  // Don't interrupt someone already filling in the inline form or another dialog.
-  if(section.contains(document.activeElement)||document.querySelector('dialog[open]')||signupMemory().signedUp)return;
+ function open(){
+  if(dialog.open)return;
+  document.querySelector('dialog[open]')?.close();
   dialog.showModal();
   // On touch screens, don't pop the keyboard before they've chosen to sign up.
   if(matchMedia('(pointer: fine)').matches)form.elements.firstName.focus({preventScroll:true});
   else{dialog.tabIndex=-1;dialog.focus({preventScroll:true});}
- },delay);
+ }
+ // The "Stay informed" menu link opens the popup here; from other pages it lands on /#stay-informed.
+ document.querySelectorAll('[data-signup-open]').forEach(link=>link.addEventListener('click',event=>{
+  event.preventDefault();
+  const menu=document.querySelector('[data-menu][aria-expanded="true"]');
+  if(menu)menu.click();
+  open();
+ }));
+ if(location.hash==='#stay-informed'||params.get('signup')==='popup'){
+  history.replaceState(null,'',location.pathname+location.search);
+  setTimeout(open,300);
+  return;
+ }
+ if(memory.signedUp||snoozed)return;
+ setTimeout(()=>{
+  // Don't interrupt someone already filling in the inline form or another dialog.
+  if(section.contains(document.activeElement)||document.querySelector('dialog[open]')||signupMemory().signedUp)return;
+  open();
+ },5000);
 }
 function initSignup(){
  const section=$('#stay-informed');
