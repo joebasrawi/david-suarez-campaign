@@ -126,13 +126,12 @@ if(mapRegion){
 }
 
 // Stay informed: posts to the signup Worker, which adds the person to iContact.
-function initSignup(){
- const section=$('#stay-informed');
- if(!section)return;
- const endpoint=section.dataset.signupEndpoint;
- if(!endpoint&&new URLSearchParams(location.search).get('signup')!=='preview')return;
- section.hidden=false;
- const form=section.querySelector('form'),status=section.querySelector('.signup-status'),button=form.querySelector('button');
+// The same form shows inline on the page and in a popup a few seconds after arrival.
+const SIGNUP_KEY='suarez-signup';
+function signupMemory(){try{return JSON.parse(localStorage.getItem(SIGNUP_KEY)||'{}');}catch{return {};}}
+function remember(value){try{localStorage.setItem(SIGNUP_KEY,JSON.stringify(value));}catch{}}
+function bindSignup(form,endpoint,onSuccess){
+ const status=form.querySelector('.signup-status'),button=form.querySelector('button[type="submit"]');
  const messages={first_name:'Please enter your first name.',email:'Please enter a valid email address.',phone:'Please enter a valid phone number, or leave it blank.'};
  const say=(text,state)=>{status.textContent=text;status.dataset.state=state||'';};
  function check(data){
@@ -152,10 +151,48 @@ function initSignup(){
   try{
    const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
    const result=await response.json().catch(()=>({}));
-   if(response.ok&&result.ok){form.reset();say('Thanks! You’re signed up.','success');}
+   if(response.ok&&result.ok){form.reset();say('Thanks! You’re signed up.','success');remember({signedUp:true});onSuccess?.();}
    else say(messages[result.error]||'Something went wrong. Please try again.','error');
   }catch{say('Something went wrong. Please try again.','error');}
   finally{button.disabled=false;}
  });
+}
+function initSignupPopup(section,endpoint){
+ if(typeof HTMLDialogElement!=='function')return;
+ const memory=signupMemory(),params=new URLSearchParams(location.search);
+ const snoozed=memory.dismissedAt&&Date.now()-memory.dismissedAt<14*864e5;
+ if(params.get('signup')!=='popup'&&(memory.signedUp||snoozed))return;
+ const dialog=document.createElement('dialog');
+ dialog.className='signup-popup';
+ dialog.setAttribute('aria-labelledby','signup-popup-title');
+ dialog.innerHTML='<button class="signup-close" type="button" aria-label="Close">×</button><h2 id="signup-popup-title">Stay informed</h2><p class="signup-lede">Get updates from David on what’s happening in Miami Beach.</p>';
+ const form=section.querySelector('form').cloneNode(true);
+ form.querySelector('.signup-status').textContent='';
+ dialog.append(form);
+ document.body.append(dialog);
+ const close=()=>{if(dialog.open)dialog.close();};
+ dialog.addEventListener('close',()=>{if(!signupMemory().signedUp)remember({dismissedAt:Date.now()});});
+ dialog.querySelector('.signup-close').addEventListener('click',close);
+ dialog.addEventListener('click',event=>{if(event.target===dialog)close();});
+ bindSignup(form,endpoint,()=>setTimeout(close,2200));
+ const delay=params.get('signup')==='popup'?300:5000;
+ setTimeout(()=>{
+  // Don't interrupt someone already filling in the inline form or another dialog.
+  if(section.contains(document.activeElement)||document.querySelector('dialog[open]')||signupMemory().signedUp)return;
+  dialog.showModal();
+  // On touch screens, don't pop the keyboard before they've chosen to sign up.
+  if(matchMedia('(pointer: fine)').matches)form.elements.firstName.focus({preventScroll:true});
+  else{dialog.tabIndex=-1;dialog.focus({preventScroll:true});}
+ },delay);
+}
+function initSignup(){
+ const section=$('#stay-informed');
+ if(!section)return;
+ const endpoint=section.dataset.signupEndpoint,mode=new URLSearchParams(location.search).get('signup');
+ const preview=mode==='preview'||mode==='popup';
+ if(!endpoint&&!preview)return;
+ section.hidden=false;
+ initSignupPopup(section,endpoint);
+ bindSignup(section.querySelector('form'),endpoint);
 }
 initSignup();

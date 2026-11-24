@@ -55,6 +55,7 @@ Last name|Apellido
 Email|Correo electrónico
 Phone (optional)|Teléfono (opcional)
 Sign up|Suscribirse
+Close|Cerrar
 You can unsubscribe at any time.|Puede cancelar su suscripción en cualquier momento.
 Please enter your first name.|Escriba su nombre.
 Please enter a valid email address.|Escriba un correo electrónico válido.
