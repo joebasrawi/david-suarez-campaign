@@ -48,6 +48,21 @@ The visionary behind Fontainebleau|El visionario detrás de Fontainebleau
 Watch episode|Ver episodio
 David’s office|Oficina de David
 Contact David’s office|Contactar a la oficina de David
+Stay informed|Manténgase informado
+Get updates from David on what’s happening in Miami Beach.|Reciba noticias de David sobre lo que pasa en Miami Beach.
+First name|Nombre
+Last name|Apellido
+Email|Correo electrónico
+Phone (optional)|Teléfono (opcional)
+Sign up|Suscribirse
+You can unsubscribe at any time.|Puede cancelar su suscripción en cualquier momento.
+Please enter your first name.|Escriba su nombre.
+Please enter a valid email address.|Escriba un correo electrónico válido.
+Please enter a valid phone number, or leave it blank.|Escriba un número de teléfono válido o deje el campo vacío.
+Sign-ups aren’t connected yet.|Las suscripciones aún no están conectadas.
+Signing you up…|Procesando su suscripción…
+Thanks! You’re signed up.|¡Gracias! Ya está suscrito.
+Something went wrong. Please try again.|Algo salió mal. Inténtelo de nuevo.
 Resident services|Servicios para residentes
 Resident hub|Portal para residentes
 Resident dashboard|Panel para residentes

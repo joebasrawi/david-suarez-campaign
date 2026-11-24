@@ -1,0 +1,14 @@
+name = "davidsuarezmb-signup"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Public settings. The API AppId, username and password are secrets:
+#   npx wrangler secret put ICONTACT_APP_ID
+#   npx wrangler secret put ICONTACT_USERNAME
+#   npx wrangler secret put ICONTACT_PASSWORD
+# Folder 17163 = "Miami Beach City Commission Race"; list 212967 = "DavidSuarezMB Website - Stay Informed".
+[vars]
+ALLOWED_ORIGINS = "https://davidsuarezmb.com,https://www.davidsuarezmb.com"
+ICONTACT_ACCOUNT_ID = "1783545"
+ICONTACT_FOLDER_ID = "17163"
+ICONTACT_LIST_ID = "212967"

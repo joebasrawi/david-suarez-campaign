@@ -124,3 +124,38 @@ if(mapRegion){
  if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();initHomeMap();}},{rootMargin:'300px'});observer.observe(mapRegion);}
  else initHomeMap();
 }
+
+// Stay informed: posts to the signup Worker, which adds the person to iContact.
+function initSignup(){
+ const section=$('#stay-informed');
+ if(!section)return;
+ const endpoint=section.dataset.signupEndpoint;
+ if(!endpoint&&new URLSearchParams(location.search).get('signup')!=='preview')return;
+ section.hidden=false;
+ const form=section.querySelector('form'),status=section.querySelector('.signup-status'),button=form.querySelector('button');
+ const messages={first_name:'Please enter your first name.',email:'Please enter a valid email address.',phone:'Please enter a valid phone number, or leave it blank.'};
+ const say=(text,state)=>{status.textContent=text;status.dataset.state=state||'';};
+ function check(data){
+  if(!data.firstName.trim())return 'first_name';
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email.trim()))return 'email';
+  const digits=data.phone.replace(/\D/g,'');
+  if(data.phone.trim()&&(digits.length<10||digits.length>15))return 'phone';
+  return '';
+ }
+ form.addEventListener('submit',async event=>{
+  event.preventDefault();
+  const data=Object.fromEntries(new FormData(form));
+  const problem=check(data);
+  if(problem){say(messages[problem],'error');form.elements[problem==='first_name'?'firstName':problem].focus();return;}
+  if(!endpoint){say('Sign-ups aren’t connected yet.','error');return;}
+  button.disabled=true;say('Signing you up…');
+  try{
+   const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+   const result=await response.json().catch(()=>({}));
+   if(response.ok&&result.ok){form.reset();say('Thanks! You’re signed up.','success');}
+   else say(messages[result.error]||'Something went wrong. Please try again.','error');
+  }catch{say('Something went wrong. Please try again.','error');}
+  finally{button.disabled=false;}
+ });
+}
+initSignup();
