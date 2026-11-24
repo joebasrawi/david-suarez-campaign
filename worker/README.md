@@ -17,7 +17,7 @@ The homepage "Stay informed" form posts here. The Worker checks the input and ad
    npx wrangler deploy
    ```
 
-5. Put the Worker URL in `SIGNUP_ENDPOINT` in `scripts/home-layout.mjs`, run `npm run build && npm test`, and commit. The section stays hidden until that URL is set.
+5. Put the Worker URL (live: `https://davidsuarezmb-signup.davidsuarezmb.workers.dev`, on Joe's Cloudflare account) in `SIGNUP_ENDPOINT` in `scripts/home-layout.mjs`, run `npm run build && npm test`, and commit. The section stays hidden until that URL is set.
 
 To try the form before it goes live, open `/?signup=preview`.
 
