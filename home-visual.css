@@ -159,3 +159,32 @@
  .home-signup h2 { font-size:26px; }
  .home-signup .signup-fields { grid-template-columns:1fr; }
 }
+/* Stay informed popup (same form as the inline section) */
+.signup-popup { width:min(560px,calc(100vw - 32px)); max-height:calc(100dvh - 32px); overflow:auto; box-sizing:border-box; padding:32px; border:1px solid var(--rule); border-radius:18px; background:var(--panel); color:var(--text); box-shadow:0 24px 80px #0008; }
+.signup-popup::backdrop { background:#04121acc; backdrop-filter:blur(3px); }
+.signup-popup[open] { animation:signup-in .28s ease-out; }
+@keyframes signup-in { from { opacity:0; transform:translateY(14px); } }
+@media (prefers-reduced-motion: reduce) { .signup-popup[open] { animation:none; } }
+.signup-popup h2 { font-weight:500; font-size:30px; letter-spacing:-.03em; margin:0 0 8px; padding-right:40px; }
+.signup-popup .signup-lede { color:var(--subtle); margin:0 0 22px; }
+.signup-popup .signup-close { position:absolute; top:14px; right:14px; width:40px; height:40px; border:0; border-radius:999px; background:transparent; color:var(--subtle); font-size:26px; line-height:1; cursor:pointer; }
+.signup-popup .signup-close:hover,.signup-popup .signup-close:focus-visible { background:var(--selected); color:var(--text); }
+.signup-popup .signup-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 16px; }
+.signup-popup .hub-field { display:grid; gap:8px; font-size:13px; color:var(--subtle); }
+.signup-popup .hub-field input { width:100%; box-sizing:border-box; background:var(--canvas); color:var(--text); border:1px solid var(--rule); border-radius:10px; padding:10px 12px; min-height:46px; font:inherit; font-size:16px; }
+.signup-popup .hub-field input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+.signup-popup .signup-trap { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+.signup-popup .signup-actions { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:20px; }
+.signup-popup .hub-button { cursor:pointer; border-radius:999px; }
+.signup-popup .hub-button:disabled { opacity:.6; cursor:progress; }
+.signup-popup .signup-status { margin:0; font-size:14px; }
+.signup-popup .signup-status[data-state="error"] { color:#ffb4a8; }
+:root[data-theme="light"] .signup-popup .signup-status[data-state="error"] { color:#b3261e; }
+.signup-popup .signup-status[data-state="success"] { color:var(--accent); }
+.signup-popup .signup-note { color:var(--subtle); font-size:12px; margin:14px 0 0; }
+@media (max-width:600px) {
+ .signup-popup { margin:auto auto 0; width:100vw; max-width:100vw; border-radius:18px 18px 0 0; padding:26px 20px 28px; }
+ .signup-popup .signup-fields { grid-template-columns:1fr; }
+ .signup-popup h2 { font-size:25px; }
+}
+.signup-popup:focus { outline:none; }

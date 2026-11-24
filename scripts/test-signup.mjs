@@ -18,6 +18,13 @@ const home = await read('home.js');
 const copy = [...section.matchAll(/>([^<>]+)</g), ...home.slice(home.indexOf('function initSignup')).matchAll(/'([A-Z][^']+[.…])'/g)].map(m => m[1].trim()).filter(Boolean);
 for (const text of copy) if (!['Website'].includes(text)) assert.ok(spanish[text], `Spanish for "${text}"`);
 
+// Popup: opens once after a delay, stays away after closing (14 days) or signing up, and clones the same form.
+assert.ok(home.includes('dialog.showModal()'), 'popup uses a modal dialog');
+assert.ok(home.includes('14*864e5'), 'closing the popup snoozes it for 14 days');
+assert.ok(home.includes("remember({signedUp:true})"), 'signing up stops the popup for good');
+assert.ok(home.includes("section.querySelector('form').cloneNode(true)"), 'popup reuses the section form');
+assert.ok(spanish['Close'], 'Spanish for the close button');
+
 // Validation.
 assert.deepEqual(validate({firstName: ' Ana ', email: 'ANA@Example.com '}).signup, {firstName: 'Ana', lastName: '', email: 'ana@example.com', phone: ''});
 assert.equal(validate({firstName: '', email: 'a@b.co'}).error, 'first_name');
