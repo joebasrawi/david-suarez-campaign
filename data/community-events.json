@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T07:51:06.926Z",
+  "updatedAt": "2026-11-24T00:00:07.362Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
@@ -78,6 +78,28 @@
       "location": "See the official event notice for location and participation details.",
       "description": "",
       "source": "https://events.miamibeachfl.gov/event/the-art-of-diplomacy/",
+      "category": "City calendar",
+      "allDay": false
+    },
+    {
+      "id": "city-399338",
+      "title": "Stormwater Critical Needs Project #1 \u2013 North Nautilus F.",
+      "start": "2026-12-01T18:00:00-05:00",
+      "end": "2026-12-01T19:00:00-05:00",
+      "location": "City Hall Commission Chamber, 1700 Convention Center Drive, Miami Beach",
+      "description": "Hybrid Meeting https://miamibeachfl-gov.zoom.us/j/85658745381 1.305.224.1968 or 312.626.6799 Access ID: 85658745381# Miami Beach City Hall 1700 Convention Center Dr, 3 rd Floor Commission Chamber",
+      "source": "https://events.miamibeachfl.gov/event/stormwater-critical-needs-project-1-north-nautilus-f/",
+      "category": "City calendar",
+      "allDay": false
+    },
+    {
+      "id": "city-399342",
+      "title": "North Beach Residential Incentives",
+      "start": "2026-12-02T18:00:00-05:00",
+      "end": "2026-12-02T19:00:00-05:00",
+      "location": "See the official event notice for location and participation details.",
+      "description": "Zoom Meeting https://miamibeachfl-gov.zoom.us/j/82819041021 1.305.224.1968 or 929.205.6099 Access ID: 82819041021#",
+      "source": "https://events.miamibeachfl.gov/event/north-beach-residential-incentives/",
       "category": "City calendar",
       "allDay": false
     },

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//David Suarez Resident Hub//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:city-399342@davidsuarezmb.com
+DTSTAMP:20261124T000007Z
+DTSTART:20261202T230000Z
+DTEND:20261203T000000Z
+SUMMARY:North Beach Residential Incentives
+LOCATION:See the official event notice for location and participation det
+ ails.
+DESCRIPTION:Zoom Meeting https://miamibeachfl-gov.zoom.us/j/82819041021 1
+ .305.224.1968 or 929.205.6099 Access ID: 82819041021#\nSource and update
+ s: https://events.miamibeachfl.gov/event/north-beach-residential-incenti
+ ves/\nSaved calendar entries are one-time copies. Check the source befor
+ e attending.
+URL:https://davidsuarezmb.com/events/city-399342/
+END:VEVENT
+END:VCALENDAR
