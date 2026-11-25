@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T22:34:02.182Z",
+  "generatedAt": "2026-11-25T21:48:41.137Z",
   "timezone": "America/New_York",
   "source": {
     "label": "City of Miami Beach Press Releases",
@@ -7,6 +7,30 @@
     "apiUrl": "https://www.miamibeachfl.gov/wp-json/wp/v2"
   },
   "items": [
+    {
+      "id": "411664",
+      "title": "Celebrate the Holidays in Miami Beach",
+      "summary": "Experience a full range of family-friendly events",
+      "publishedAt": "2026-11-25T10:26:00",
+      "url": "https://www.miamibeachfl.gov/celebrate-the-holidays-in-miami-beach/",
+      "label": "Official city news"
+    },
+    {
+      "id": "411655",
+      "title": "City of Miami Beach Unveils Flying Colors, a New Public Mural by Artist Michelle Weinberg in North Beach",
+      "summary": "City of Miami Beach Unveils Flying Colors, a New Public Mural by Artist Michelle Weinberg in North Beach",
+      "publishedAt": "2026-11-24T11:49:00",
+      "url": "https://www.miamibeachfl.gov/city-of-miami-beach-unveils-flying-colors-a-new-public-mural-by-artist-michelle-weinberg-in-north-beach/",
+      "label": "Official city news"
+    },
+    {
+      "id": "411650",
+      "title": "Miami Beach Bicycle Registration Program Expands to Include Scooters and Other Micromobility Devices",
+      "summary": "The initiative is part of a larger strategy to boost pedestrian and rider safety",
+      "publishedAt": "2026-11-23T08:34:00",
+      "url": "https://www.miamibeachfl.gov/miami-beach-bicycle-registration-program-expands-to-include-scooters-and-other-micromobility-devices/",
+      "label": "Official city news"
+    },
     {
       "id": "411623",
       "title": "City of Miami Beach Announces Top Three Finalists for Its 2026 Legacy Purchase Program at Art Basel Miami Beach",
@@ -61,30 +85,6 @@
       "summary": "The acclaimed singer and dancer’s appearance in the city more than 75 years ago played a pivotal role in ending racially segregated performances",
       "publishedAt": "2026-11-04T08:03:00",
       "url": "https://www.miamibeachfl.gov/legendary-performer-josephine-baker-to-be-honored-in-miami-beach/",
-      "label": "Official city news"
-    },
-    {
-      "id": "410681",
-      "title": "Miami Beach Wants to Help Stores and Restaurants Avoid Food Waste and Lend a Helping Hand",
-      "summary": "The city’s new voluntary food waste diversion pilot program aims to connect food establishments with local food recovery organizations",
-      "publishedAt": "2026-11-03T12:49:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-wants-to-help-stores-and-restaurants-avoid-food-waste-and-lend-a-helping-hand/",
-      "label": "Official city news"
-    },
-    {
-      "id": "410595",
-      "title": "New Outdoor Exhibit in Miami Beach Commemorates 100 Years of Ocean Rescue",
-      "summary": "The free exhibit runs from Thursday, Nov. 5 through February in Lummus Park",
-      "publishedAt": "2026-11-03T12:08:00",
-      "url": "https://www.miamibeachfl.gov/new-outdoor-exhibit-in-miami-beach-commemorates-100-years-of-ocean-rescue/",
-      "label": "Official city news"
-    },
-    {
-      "id": "410456",
-      "title": "Miami Beach to Honor Veterans with High-Tech Letter Campaign",
-      "summary": "The Letters of Gratitude will be displayed on The Betsy Orb as part of the city’s America 250 celebration culminating on Veterans Day",
-      "publishedAt": "2026-11-02T14:50:00",
-      "url": "https://www.miamibeachfl.gov/miami-beach-to-honor-veterans-with-high-tech-letter-campaign/",
       "label": "Official city news"
     }
   ]
