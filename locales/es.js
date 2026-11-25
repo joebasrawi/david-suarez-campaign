@@ -354,6 +354,17 @@ Read the City Attorney's memo|Leer el memorando del Abogado de la Ciudad
 November 18 agenda|Agenda del 18 de noviembre
 Not the official City website. Official City records remain authoritative.|Este no es el sitio web oficial de la Ciudad. Los documentos oficiales de la Ciudad son la fuente autorizada.
 Under 15? Speak up on e-bike rules|¿Menor de 15? Opina sobre las reglas de bicicletas eléctricas
+Free from the City of Miami Beach|Gratis, de la Ciudad de Miami Beach
+Flooding on your street?|¿Se inunda tu calle?
+Report it.|Repórtalo.
+Get the Miami Beach Gov app to report flooding, clogged drains and other problems straight to the City, with a photo and your location.|Descarga la aplicación Miami Beach Gov para reportar inundaciones, drenajes tapados y otros problemas directamente a la Ciudad, con una foto y tu ubicación.
+Download on the|Descárgala en el
+Get it on|Disponible en
+Rather call?|¿Prefieres llamar?
+Public Works Control Room, 24/7:|Sala de Control de Obras Públicas, 24/7:
+For an emergency, call 911.|En caso de emergencia, llama al 911.
+The Miami Beach Gov app is made and run by the City of Miami Beach.|La aplicación Miami Beach Gov es de la Ciudad de Miami Beach.
+Get updates from David|Recibe noticias de David
 `.trim().split('\n').map(line => line.split('|')));
 
 Object.assign(spanish, Object.fromEntries(`

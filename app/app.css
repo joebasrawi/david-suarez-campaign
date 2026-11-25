@@ -1,0 +1,40 @@
+/* Same tokens as ride/ride.css: Anton display, Inter text, deep teal canvas, mint accent. */
+:root { --canvas:#0b222c; --mint:#b8e0cc; --teal:#28796e; --warm:#edbd79; --alert:#e8643a; --display:"Anton", Impact, sans-serif; --sans:"Inter", system-ui, sans-serif }
+* { box-sizing: border-box }
+html { background: var(--canvas) }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font: 1.08rem/1.55 var(--sans); background: var(--canvas); color: #f0f5f2 }
+.wrap { max-width: 60rem; padding-inline: clamp(1rem,4vw,3.5rem); margin: auto; width: 100% }
+a { color: var(--mint); text-underline-offset: .18em }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px }
+
+.mast-bar { border-bottom: 1px solid #ffffff1a }
+.mast { padding-block: .9rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem }
+.brand { display: inline-grid; grid-template-columns: max-content; text-decoration: none; line-height: 1 }
+.brand-first { justify-self: start; padding: 2px 9px 3px; background: var(--teal); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .33em; text-transform: uppercase }
+.brand-last { font-family: var(--display); color: #fff; font-size: 38px; line-height: .95; letter-spacing: .01em; text-transform: uppercase }
+.brand-office { color: var(--mint); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; margin-top: 3px }
+.language-toggle { display: inline-flex; gap: .3rem; align-items: center; min-height: 44px; padding: .4rem .8rem; border: 1px solid #ffffff55; border-radius: 8px; background: transparent; color: #fff; font: 800 .85rem var(--sans); letter-spacing: .08em; cursor: pointer }
+.language-toggle .is-current { color: var(--mint) }
+
+.hero { flex: 1; padding-block: clamp(2.2rem,7vw,5rem) }
+.eyebrow { margin: 0 0 .8rem; color: var(--mint); font-weight: 800; font-size: .85rem; letter-spacing: .16em; text-transform: uppercase }
+h1 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.7rem,8vw,5.6rem); line-height: .92; letter-spacing: .005em; margin: 0 0 1.2rem; color: #fff; max-width: 14ch }
+.accent { color: var(--mint) }
+.lead { font-size: clamp(1.1rem,2.2vw,1.3rem); max-width: 36rem; color: #c9d8dc; margin: 0 0 2rem }
+
+.stores { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 2.6rem }
+.store { display: inline-flex; align-items: center; gap: .8rem; min-height: 64px; min-width: 15rem; padding: .7rem 1.4rem; border-radius: 12px; background: #fff; color: #0b222c; text-decoration: none; font: 800 1.35rem/1.1 var(--sans); transition: transform .18s, background .18s }
+.store small { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .02em; color: #3b5259 }
+.store svg { width: 30px; height: 30px; flex: none }
+.store:hover { transform: translateY(-2px); background: #e9f5ef }
+
+.call { border-top: 1px solid #ffffff1f; padding-top: 1.6rem }
+.call-line { margin: 0 0 .3rem; font-size: 1.15rem; font-weight: 600 }
+.call-line a { font-family: var(--display); font-weight: 400; font-size: 1.7rem; letter-spacing: .02em; text-decoration: none; white-space: nowrap }
+.note { margin: 0; color: #9fb4ba; font-size: .95rem }
+
+.foot { border-top: 1px solid #ffffff1a; padding-block: 1.4rem; color: #9fb4ba; font-size: .92rem }
+.foot p { margin: 0 }
+
+@media (max-width: 30rem) { .store { width: 100% } }
+@media (prefers-reduced-motion: reduce) { .store { transition: none } .store:hover { transform: none } }
