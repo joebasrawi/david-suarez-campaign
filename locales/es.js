@@ -354,17 +354,65 @@ Read the City Attorney's memo|Leer el memorando del Abogado de la Ciudad
 November 18 agenda|Agenda del 18 de noviembre
 Not the official City website. Official City records remain authoritative.|Este no es el sitio web oficial de la Ciudad. Los documentos oficiales de la Ciudad son la fuente autorizada.
 Under 15? Speak up on e-bike rules|¿Menor de 15? Opina sobre las reglas de bicicletas eléctricas
-Free from the City of Miami Beach|Gratis, de la Ciudad de Miami Beach
-Flooding on your street?|¿Se inunda tu calle?
-Report it.|Repórtalo.
-Get the Miami Beach Gov app to report flooding, clogged drains and other problems straight to the City, with a photo and your location.|Descarga la aplicación Miami Beach Gov para reportar inundaciones, drenajes tapados y otros problemas directamente a la Ciudad, con una foto y tu ubicación.
+See it.|Míralo.
+Snap it.|Tómale foto.
+Report|Reporta
+flooding.|inundaciones.
+potholes.|baches.
+graffiti.|grafitis.
+and more.|y más.
+flooding, potholes, graffiti and more.|inundaciones, baches, grafitis y más.
+The City's free app|La aplicación gratuita de la Ciudad
+iPhone & Android|iPhone y Android
+Miami Beach Gov is the City of Miami Beach's free app. Take a photo, drop a pin, and your report goes straight to the City.|Miami Beach Gov es la aplicación gratuita de la Ciudad de Miami Beach. Toma una foto, marca el lugar en el mapa y tu reporte llega directamente a la Ciudad.
 Download on the|Descárgala en el
 Get it on|Disponible en
-Rather call?|¿Prefieres llamar?
-Public Works Control Room, 24/7:|Sala de Control de Obras Públicas, 24/7:
-For an emergency, call 911.|En caso de emergencia, llama al 911.
-The Miami Beach Gov app is made and run by the City of Miami Beach.|La aplicación Miami Beach Gov es de la Ciudad de Miami Beach.
+Rather call? Public Works Control Room, 24/7:|¿Prefieres llamar? Sala de Control de Obras Públicas, 24/7:
+· Emergency:|· Emergencias:
+New report|Nuevo reporte
+What's the problem?|¿Cuál es el problema?
+Flooding|Inundación
+Pothole|Bache
+Graffiti|Grafiti
+And more|Y más
+Add a photo|Agrega una foto
+Where is it?|¿Dónde está?
+Report sent|Reporte enviado
+to the City of Miami Beach|a la Ciudad de Miami Beach
+Three taps|Tres toques
+Snap a photo|Toma una foto
+Show the City exactly what you're seeing.|Muéstrale a la Ciudad exactamente lo que ves.
+Drop a pin|Marca el lugar
+The map marks the spot, so crews know where to go.|El mapa marca el punto, para que las cuadrillas sepan adónde ir.
+Send it|Envíalo
+Your report goes straight to the City of Miami Beach.|Tu reporte llega directamente a la Ciudad de Miami Beach.
+More than reports|Más que reportes
+Beach conditions|Condiciones de la playa
+Free trolley tracker|Ubicación del trolley gratis
+Pay City fees|Paga cargos de la Ciudad
+MBTV live|MBTV en vivo
+City news|Noticias de la Ciudad
+Meetings & events|Reuniones y eventos
+Parks & culture|Parques y cultura
+Get it free|Descárgala gratis
+Miami Beach Gov is the City of Miami Beach's official app. This page is from Commissioner David Suarez to help residents find it.|Miami Beach Gov es la aplicación oficial de la Ciudad de Miami Beach. Esta página es del comisionado David Suarez para ayudar a los residentes a encontrarla.
 Get updates from David|Recibe noticias de David
+On a computer? Scan with your phone's camera.|¿Estás en una computadora? Escanéalo con la cámara de tu teléfono.
+QR code to get the Miami Beach Gov app|Código QR para descargar la aplicación Miami Beach Gov
+Tap Report a Concern, add a photo and the location, and your report goes straight to the City of Miami Beach.|Toca Report a Concern, agrega una foto y el lugar, y tu reporte llega directamente a la Ciudad de Miami Beach.
+Real screens from the City's App Store listing|Pantallas reales de la ficha de la Ciudad en el App Store
+The Miami Beach Gov app home screen, with a Report a Concern button above Trolley, Mayor and Commission, City Hall, Payments and Events|La pantalla de inicio de la aplicación Miami Beach Gov, con el botón Report a Concern sobre Trolley, Mayor and Commission, City Hall, Payments y Events
+Tap Report a Concern|Toca Report a Concern
+It's the first button on the app's home screen.|Es el primer botón en la pantalla de inicio.
+Add a photo and the spot|Agrega una foto y el lugar
+Show the City what you're seeing and where it is.|Muéstrale a la Ciudad lo que ves y dónde está.
+Submit|Envíalo
+Then follow it under My Requests.|Después síguelo en My Requests.
+Pay bills|Paga facturas
+Mayor & Commission|Alcaldía y Comisión
+City Hall directory|Directorio del Ayuntamiento
+Parks & recreation|Parques y recreación
+Arts & culture|Arte y cultura
 `.trim().split('\n').map(line => line.split('|')));
 
 Object.assign(spanish, Object.fromEntries(`

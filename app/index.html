@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Get the free Miami Beach Gov app from the City of Miami Beach to report flooding and other problems, pay fees, and follow City news.">
+  <meta name="description" content="Miami Beach Gov is the City of Miami Beach's free app. Report flooding, potholes, graffiti and more with a photo and the location, and check beach conditions, the free trolley, City news and meetings.">
   <meta name="theme-color" content="#0b222c">
-  <meta property="og:title" content="Get the Miami Beach Gov app">
-  <meta property="og:description" content="Report flooding and other problems to the City, right from your phone. Free on the App Store and Google Play.">
+  <meta property="og:title" content="See it. Snap it. Report it. Get the Miami Beach Gov app">
+  <meta property="og:description" content="Report flooding, potholes, graffiti and more straight to the City of Miami Beach. Free on iPhone and Android.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://davidsuarezmb.com/app/">
   <meta property="og:site_name" content="David Suarez · Miami Beach">
@@ -20,14 +20,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
   <script>
-    // Phones go straight to their store. ?stay keeps the page (for previews and sharing).
+    // Put the visitor's own store first. With ?go (the QR on this page), phones jump straight to their store.
     (function () {
       var ua = navigator.userAgent || '';
-      if (/[?&]stay\b/.test(location.search)) return;
       var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
       var android = /Android/i.test(ua);
-      if (ios) location.replace('https://apps.apple.com/us/app/miami-beach-gov/id883739690');
-      else if (android) location.replace('https://play.google.com/store/apps/details?id=gov.miamibeachfl.mbegov');
+      if (/[?&]go\b/.test(location.search)) {
+        if (ios) return location.replace('https://apps.apple.com/us/app/miami-beach-gov/id883739690');
+        if (android) return location.replace('https://play.google.com/store/apps/details?id=gov.miamibeachfl.mbegov');
+      }
+      document.documentElement.className += ios ? ' is-ios' : (android ? ' is-android' : '');
     })();
   </script>
   <script type="module" src="../language.js"></script>
@@ -38,31 +40,75 @@
     <button class="language-toggle" type="button" data-language-toggle aria-label="Cambiar a español" title="Cambiar a español" aria-pressed="false"><span data-lang-es lang="es">ES</span><span aria-hidden="true">/</span><span data-lang-en lang="en" class="is-current">EN</span></button>
   </div></header>
 
-  <main class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Free from the City of Miami Beach</p>
-      <h1>Flooding on your street? <span class="accent">Report it.</span></h1>
-      <p class="lead">Get the Miami Beach Gov app to report flooding, clogged drains and other problems straight to the City, with a photo and your location.</p>
-      <div class="stores">
-        <a class="store" href="https://apps.apple.com/us/app/miami-beach-gov/id883739690">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5ZM14.2 6.13c.6-.73 1-1.74.9-2.75-.87.04-1.92.58-2.54 1.3-.56.64-1.05 1.67-.92 2.66.97.07 1.96-.5 2.56-1.2Z"/></svg>
-          <span><small>Download on the</small>App Store</span>
-        </a>
-        <a class="store" href="https://play.google.com/store/apps/details?id=gov.miamibeachfl.mbegov">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l.1.1 9.7-9.7v-.2L3.7 2.2l-.1.1Zm12.9 12.9-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2-.1-.1Zm-.1.1L13.1 12l-9.5 9.7c.4.4.9.4 1.6.1l11.2-6.5m0-11.2L5.2 2.2c-.7-.4-1.2-.3-1.6.1l9.5 9.7 3.3-3.3Z"/></svg>
-          <span><small>Get it on</small>Google Play</span>
-        </a>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><img class="app-icon" src="img/icon.jpg" width="40" height="40" alt="">Miami Beach Gov · The City's free app</p>
+          <h1><span class="line">See it.</span> <span class="line">Snap it.</span> <span class="line">Report <span class="rotator" aria-hidden="true"><span class="words"><span>flooding.</span><span>potholes.</span><span>graffiti.</span><span>and more.</span><span>flooding.</span></span></span><span class="sr">flooding, potholes, graffiti and more.</span></span></h1>
+          <p class="lead">Tap Report a Concern, add a photo and the location, and your report goes straight to the City of Miami Beach.</p>
+          <div class="stores" id="get">
+            <a class="store store-ios" href="https://apps.apple.com/us/app/miami-beach-gov/id883739690"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5ZM14.2 6.13c.6-.73 1-1.74.9-2.75-.87.04-1.92.58-2.54 1.3-.56.64-1.05 1.67-.92 2.66.97.07 1.96-.5 2.56-1.2Z"/></svg><span><small>Download on the</small>App Store</span></a>
+            <a class="store store-android" href="https://play.google.com/store/apps/details?id=gov.miamibeachfl.mbegov"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l.1.1 9.7-9.7v-.2L3.7 2.2l-.1.1Zm12.9 12.9-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2-.1-.1Zm-.1.1L13.1 12l-9.5 9.7c.4.4.9.4 1.6.1l11.2-6.5m0-11.2L5.2 2.2c-.7-.4-1.2-.3-1.6.1l9.5 9.7 3.3-3.3Z"/></svg><span><small>Get it on</small>Google Play</span></a>
+            <div class="qr"><img src="img/qr.svg" width="120" height="120" alt="QR code to get the Miami Beach Gov app"><span>On a computer? Scan with your phone's camera.</span></div>
+          </div>
+          <p class="call">Rather call? Public Works Control Room, 24/7: <a href="tel:+13056737625">305.673.7625</a> · Emergency: <a href="tel:911">911</a></p>
+        </div>
+
+        <figure class="phone">
+          <div class="screen">
+            <img class="shot shot1" src="img/home.jpg" width="750" height="1333" alt="The Miami Beach Gov app home screen, with a Report a Concern button above Trolley, Mayor and Commission, City Hall, Payments and Events">
+            <img class="shot shot2" src="img/request.jpg" width="750" height="1333" alt="" loading="lazy">
+            <img class="shot shot3" src="img/submit.jpg" width="750" height="1333" alt="" loading="lazy">
+            <span class="tap tap1" aria-hidden="true"></span><span class="tap tap2" aria-hidden="true"></span><span class="tap tap3" aria-hidden="true"></span>
+          </div>
+          <figcaption>Real screens from the City's App Store listing</figcaption>
+        </figure>
       </div>
-      <div class="call">
-        <p class="eyebrow">Rather call?</p>
-        <p class="call-line">Public Works Control Room, 24/7: <a href="tel:+13056737625">305.673.7625</a></p>
-        <p class="note">For an emergency, call 911.</p>
+    </section>
+
+    <section class="steps">
+      <div class="wrap">
+        <h2 class="section-title">Three taps</h2>
+        <ol class="step-list">
+          <li><span class="num">1</span><h3>Tap Report a Concern</h3><p>It's the first button on the app's home screen.</p></li>
+          <li><span class="num">2</span><h3>Add a photo and the spot</h3><p>Show the City what you're seeing and where it is.</p></li>
+          <li><span class="num">3</span><h3>Submit</h3><p>Then follow it under My Requests.</p></li>
+        </ol>
       </div>
-    </div>
+    </section>
+
+    <section class="features">
+      <div class="wrap">
+        <h2 class="section-title">More than reports</h2>
+        <ul class="feature-grid">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 10h16M8 17l-2 4M16 17l2 4"/><circle cx="8" cy="13.5" r="1"/><circle cx="16" cy="13.5" r="1"/></svg><span>Free trolley tracker</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4"/><path d="M12 1v2M4.2 4.2l1.4 1.4M1 11h2M21 11h2M18.4 5.6l1.4-1.4M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg><span>Beach conditions</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg><span>Pay bills</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/></svg><span>Mayor &amp; Commission</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-6h6v6M2 10l10-6 10 6"/></svg><span>City Hall directory</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7 14h3M14 14h3M7 18h3"/></svg><span>Meetings &amp; events</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13v16H6a2 2 0 0 1-2-2zM17 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h3"/></svg><span>City news</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4M10 8.5v5l4.5-2.5z"/></svg><span>MBTV live</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3 3-5 5.5-5 8a5 5 0 0 0 10 0c0-2.5-2-5-5-8ZM12 16v5M8 21h8"/></svg><span>Parks &amp; recreation</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.5-.8 1.5-1.6 0-1-.8-1.4-.8-2.4 0-1 .8-1.6 1.8-1.6H17a4 4 0 0 0 4-4c0-4.7-4-8.4-9-8.4Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg><span>Arts &amp; culture</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap final-inner">
+        <h2 class="section-title">Get it free</h2>
+        <div class="stores">
+          <a class="store store-ios" href="https://apps.apple.com/us/app/miami-beach-gov/id883739690"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5ZM14.2 6.13c.6-.73 1-1.74.9-2.75-.87.04-1.92.58-2.54 1.3-.56.64-1.05 1.67-.92 2.66.97.07 1.96-.5 2.56-1.2Z"/></svg><span><small>Download on the</small>App Store</span></a>
+          <a class="store store-android" href="https://play.google.com/store/apps/details?id=gov.miamibeachfl.mbegov"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l.1.1 9.7-9.7v-.2L3.7 2.2l-.1.1Zm12.9 12.9-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2-.1-.1Zm-.1.1L13.1 12l-9.5 9.7c.4.4.9.4 1.6.1l11.2-6.5m0-11.2L5.2 2.2c-.7-.4-1.2-.3-1.6.1l9.5 9.7 3.3-3.3Z"/></svg><span><small>Get it on</small>Google Play</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="foot"><div class="wrap">
-    <p>The Miami Beach Gov app is made and run by the City of Miami Beach. <a href="../#stay-informed">Get updates from David</a></p>
+    <p>Miami Beach Gov is the City of Miami Beach's official app. This page is from Commissioner David Suarez to help residents find it. <a href="../#stay-informed">Get updates from David</a></p>
   </div></footer>
 </body>
 </html>
