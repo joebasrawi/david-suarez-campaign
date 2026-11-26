@@ -105,6 +105,12 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
    html=html.replace('</head>',`<meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:type" content="website"></head>`);
  }
  if(!html.includes('property="og:image"'))html=html.replace('</head>',`<meta property="og:url" content="${pageUrl}"><meta property="og:site_name" content="David Suarez · Miami Beach"><meta property="og:image" content="${SITE}assets/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Miami Beach coastline from the water"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${pageUrl}"></head>`);
+ // Structured data so search engines can identify David and this site.
+ if((route===''||route==='about')&&!html.includes('application/ld+json')){
+   const person={'@type':'Person','@id':SITE+'#david','name':'David Suarez','jobTitle':'Miami Beach City Commissioner, Group 5','url':SITE+'about/','worksFor':{'@type':'GovernmentOrganization','name':'City of Miami Beach','url':'https://www.miamibeachfl.gov/'},'sameAs':['https://www.instagram.com/davidsuarezmb/','https://www.youtube.com/@CommissionerDavidSuarez']};
+   const graph=route===''?[{'@type':'WebSite','@id':SITE+'#site','url':SITE,'name':'David Suarez · Miami Beach Resident Hub','inLanguage':['en','es'],'publisher':{'@id':SITE+'#david'}},person]:[person];
+   html=html.replace('</head>',`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':graph})}</script></head>`);
+ }
  html=addLoadingShells(html,route);
  if(!html.includes('id="loading-noscript"')) html=html.replace('</head>','<noscript id="loading-noscript"><style>.loading-skeleton{display:none!important}</style></noscript></head>');
  const base=route?'../':'';
@@ -126,7 +132,7 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  await writeFile(file,html);
 }
 // Crawlers: list the public sections, and give missing URLs a branded page instead of GitHub's default.
-const sitemapRoutes=['','resident-guide','meetings','commission-agenda','commission-actions','legislation','news','commission','active-projects','events','media','about','search','ride','app'];
+const sitemapRoutes=['','resident-guide','meetings','commission-agenda','commission-actions','legislation','news','commission','active-projects','events','media','about','search','ride','app','g20','events/julia-tuttle-cleanup'];
 await writeFile(new URL('sitemap.xml',root),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes.map(r=>`  <url><loc>${SITE}${r?r+'/':''}</loc></url>`).join('\n')}\n</urlset>\n`);
 await writeFile(new URL('robots.txt',root),`User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
 // GitHub Pages serves 404.html at any depth, so every local path must be absolute.
