@@ -336,17 +336,17 @@ async function flatEngine({ data, apps, byId, cb }) {
     const marker = new maplibregl.Marker({ element: wrap, anchor: 'bottom', offset: [0, -6] }).setLngLat(a.center).addTo(map);
     markers.set(a.id, { marker, el });
     el.addEventListener('click', ev => { ev.stopPropagation(); cb.pick(a.id); });
+    wrap.addEventListener('click', ev => { ev.stopPropagation(); cb.pick(a.id); });
     el.addEventListener('mouseenter', () => cb.hover(a.id, true));
     el.addEventListener('mouseleave', () => cb.hover(a.id, false));
   }
 
   // Intro: fly in, then grow the approved towers from the ground
-  const pad = () => phone() ? { top: 70, bottom: innerHeight * .58 + 10, left: 10, right: 10 } : { top: 80, bottom: 40, left: document.querySelector('.panel').offsetWidth + 60, right: 40 };
   const bounds = apps.filter(a => a.center).reduce((b, a) => b.extend(a.center), new maplibregl.LngLatBounds(apps.find(a => a.center).center, apps.find(a => a.center).center));
   // Desktop: a tilted view of the whole beach beside the panel. Phones: flat, fit into the strip above the sheet.
-  const phonePad = () => ({ top: 130, bottom: Math.round(innerHeight * .58) + 64, left: 36, right: 64 });
+  const phonePad = () => ({ top: 84, bottom: Math.round(cb.cover()) + 40, left: 28, right: 56 });
   const home = () => phone()
-    ? { center: bounds.getCenter(), zoom: 10.45, padding: phonePad(), bearing: 0, pitch: 0 }
+    ? { ...(map.cameraForBounds(bounds, { padding: phonePad() }) || { center: bounds.getCenter(), zoom: 10.45 }), padding: { top: 0, bottom: 0, left: 0, right: 0 }, bearing: 0, pitch: 0 }
     : { center: [-80.1335, 25.8135], zoom: 12.55, padding: { top: 60, bottom: 20, left: document.querySelector('.panel').offsetWidth + 40, right: 20 }, bearing: -20, pitch: 52 };
 
   const grow = (to = 1, ms = 1800) => {
@@ -390,7 +390,7 @@ async function flatEngine({ data, apps, byId, cb }) {
       markers.forEach(({ el }, key) => el.classList.toggle('is-active', key === a.id));
       showRings(a); compareBuildings(a);
       if (fly && a.center) {
-        const padding = phone() ? { top: 60, bottom: innerHeight * .72, left: 20, right: 20 } : { top: 80, bottom: 60, left: document.querySelector('.panel').offsetWidth + 40, right: detailWidth + 60 };
+        const padding = phone() ? { top: 70, bottom: Math.round(cb.cover()) + 10, left: 20, right: 20 } : { top: 80, bottom: 60, left: document.querySelector('.panel').offsetWidth + 40, right: detailWidth + 60 };
         const cam = { center: a.center, zoom: a.stories && a.stories > 14 ? 16.6 : 17.1, pitch: 62, bearing: map.getBearing() - 18, padding };
         reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2200, curve: 1.6, essential: true });
       }
@@ -559,14 +559,81 @@ async function main() {
       : a.layer === 'park' ? `<div class="tip">${esc(a.location)}<small>${esc(L('Park', 'Parque'))}</small></div>`
       : a.layer === 'str' ? `<div class="tip">${esc(a.location)}<small>${esc(L(`${a.licensed} licensed short-term rental units`, `${a.licensed} unidades con licencia`))}</small></div>`
       : `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`,
-    L, title, esc, reduced, phone, matches, flood,
+    L, title, esc, reduced, phone, matches, flood, cover: () => coverPx(),
     overlays: around ? { parks: around.parks, beaches: around.beaches, bikeways: around.bikeways, trolleyRoutes: around.trolleyRoutes, closures: around.closures, str: strData?.parcels } : {} };
+
+  // Phones: the panel is a bottom sheet with three heights. Drag the handle (or the kicker) to resize; tap it to step up.
+  const panel = document.querySelector('.panel');
+  const panelScroll = panel.querySelector('.panel-scroll');
+  const handle = panel.querySelector('.sheet-handle');
+  const SNAPS = ['peek', 'half', 'full'];
+  const sheet = { snap: 'half', before: null };
+  const snapPx = name => {
+    const H = app.clientHeight, max = parseFloat(getComputedStyle(panel).maxHeight) || H - 74;
+    if (name === 'peek') { const tabs = panel.querySelector('.views'); return Math.min(max, Math.round(tabs.offsetTop + tabs.offsetHeight + 14)); }
+    if (name === 'full') return max;
+    return Math.min(max, Math.round(H * .46));
+  };
+  function coverPx() {
+    if (!phone()) return 0;
+    if (active && !detail.hidden) return Math.max(detail.offsetHeight, snapPx('peek'));
+    return snapPx(sheet.snap);
+  }
+  const setCover = () => app.style.setProperty('--cover', coverPx() + 'px');
+  function setSheet(name) {
+    sheet.snap = name;
+    if (!phone()) { panel.style.removeProperty('--sheet-h'); panel.classList.remove('is-peek'); app.style.removeProperty('--cover'); return; }
+    if (name === 'peek') panelScroll.scrollTop = 0;
+    panel.classList.toggle('is-peek', name === 'peek');
+    app.dataset.sheet = name;
+    panel.style.setProperty('--sheet-h', snapPx(name) + 'px');
+    handle.setAttribute('aria-expanded', String(name === 'full'));
+    handle.setAttribute('aria-label', name === 'full' ? L('Show more of the map', 'Mostrar más del mapa') : L('Show more of the list', 'Mostrar más de la lista'));
+    setCover();
+  }
+  let drag = null, dragged = false;
+  function dragStart(e) {
+    if (!phone() || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    drag = { y: e.clientY, h: panel.offsetHeight, t: performance.now(), lastY: e.clientY, lastT: performance.now(), v: 0 };
+    dragged = false;
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  }
+  function dragMove(e) {
+    if (!drag) return;
+    const dy = drag.y - e.clientY;
+    if (!dragged && Math.abs(dy) < 6) return;
+    if (!dragged) { dragged = true; panel.classList.add('is-dragging'); panel.classList.remove('is-peek'); }
+    const now = performance.now();
+    drag.v = (drag.lastY - e.clientY) / Math.max(1, now - drag.lastT); drag.lastY = e.clientY; drag.lastT = now;
+    panel.style.setProperty('--sheet-h', Math.max(snapPx('peek') - 30, Math.min(snapPx('full'), drag.h + dy)) + 'px');
+  }
+  function dragEnd() {
+    if (!drag) return;
+    const d = drag; drag = null;
+    if (!dragged) return;
+    panel.classList.remove('is-dragging');
+    const h = panel.offsetHeight + d.v * 180; // a flick carries it toward the next height
+    setSheet(SNAPS.reduce((best, n) => (Math.abs(snapPx(n) - h) < Math.abs(snapPx(best) - h) ? n : best), 'half'));
+  }
+  for (const zone of [handle, panel.querySelector('.intro .kicker')]) {
+    zone.addEventListener('pointerdown', dragStart);
+    zone.addEventListener('pointermove', dragMove);
+    zone.addEventListener('pointerup', dragEnd);
+    zone.addEventListener('pointercancel', dragEnd);
+  }
+  handle.addEventListener('click', () => {
+    if (dragged) { dragged = false; return; }
+    if (active) close();
+    setSheet(sheet.snap === 'full' ? 'peek' : SNAPS[SNAPS.indexOf(sheet.snap) + 1]);
+  });
+  addEventListener('resize', () => setSheet(sheet.snap));
+  setSheet('half');
 
   // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
   let engine = null;
   if (key && params.get('engine') !== 'flat') {
-    try { engine = await (await import('./engine-photo.js?v=7')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+    try { engine = await (await import('./engine-photo.js?v=8')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
     catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
   }
   if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
@@ -606,7 +673,10 @@ async function main() {
     listEl.querySelectorAll('.card').forEach(el => el.classList.toggle('is-active', el.dataset.id === id));
     detailBody.innerHTML = detailHtml(a);
     detail.hidden = false; requestAnimationFrame(() => detail.classList.add('is-open'));
-    listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+    detail.scrollTop = 0;
+    app.classList.add('is-detail');
+    if (phone()) { if (sheet.before === null) sheet.before = sheet.snap; setSheet('peek'); }
+    if (!phone()) listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
     history.replaceState(null, '', location.pathname + location.search + '#' + id);
     engine.select(a, { fly, detailWidth: detail.offsetWidth });
   }
@@ -616,6 +686,8 @@ async function main() {
     setTimeout(() => { if (!active) detail.hidden = true; }, 450);
     document.querySelectorAll('.card.is-active').forEach(el => el.classList.remove('is-active'));
     history.replaceState(null, '', location.pathname + location.search);
+    app.classList.remove('is-detail');
+    if (phone()) { setSheet(sheet.before || 'half'); sheet.before = null; }
     engine.clear();
   }
   detail.querySelector('[data-close]').addEventListener('click', close);
@@ -625,7 +697,11 @@ async function main() {
   listEl.addEventListener('mouseover', e => { const c = e.target.closest('.card'); if (c) hover(c.dataset.id, true); });
   listEl.addEventListener('mouseleave', () => hover(null, false));
 
-  document.querySelectorAll('.view-tab').forEach(t => t.addEventListener('click', () => applyView(t.dataset.view)));
+  document.querySelectorAll('.view-tab').forEach(t => t.addEventListener('click', () => {
+    applyView(t.dataset.view);
+    if (phone() && !active && sheet.snap === 'peek') setSheet('half');
+    if (phone()) t.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+  }));
   const reviewBtn = document.querySelector('[data-review]');
   reviewBtn.addEventListener('click', () => {
     state.review = reviewBtn.getAttribute('aria-pressed') !== 'true';
@@ -665,7 +741,7 @@ async function main() {
   addEventListener('blur', () => held.clear());
 
   document.addEventListener('language:change', () => {
-    renderHead(); renderList();
+    renderHead(); renderList(); setSheet(sheet.snap);
     if (active) detailBody.innerHTML = detailHtml(byId.get(active));
     updated();
     engine.relabel?.();
