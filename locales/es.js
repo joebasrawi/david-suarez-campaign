@@ -397,6 +397,11 @@ Parks & culture|Parques y cultura
 Get it free|Descárgala gratis
 Miami Beach Gov is the City of Miami Beach's official app. This page is from Commissioner David Suarez to help residents find it.|Miami Beach Gov es la aplicación oficial de la Ciudad de Miami Beach. Esta página es del comisionado David Suarez para ayudar a los residentes a encontrarla.
 Get updates from David|Recibe noticias de David
+Live Local|Live Local
+Other development|Otros proyectos
+Also on the map:|También en el mapa:
+other development projects|otros proyectos de desarrollo
+filed with the City's land use boards since 2023.|presentados ante las juntas de uso de suelo de la Ciudad desde 2023.
 Skip to the list of applications|Ir a la lista de solicitudes
 Live Local Act · Miami Beach|Ley Live Local · Miami Beach
 Live Local projects.|proyectos Live Local.

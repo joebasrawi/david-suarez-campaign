@@ -1,7 +1,7 @@
 // Photorealistic engine: Google Photorealistic 3D Tiles in CesiumJS, with the Live Local overlays on top.
 // Loaded only when the page has a Google Maps key; any failure falls back to the stylized MapLibre engine.
 const BASE = 'https://cdn.jsdelivr.net/npm/cesium@1.123.0/Build/Cesium/';
-const CORAL = '#ff6a45', MINT = '#78d6c8', TALLER = '#bfefff';
+const CORAL = '#ff6a45', MINT = '#78d6c8', AMBER = '#edbd79', TALLER = '#bfefff';
 
 const loadScript = src => new Promise((resolve, reject) => { const s = document.createElement('script'); s.src = src; s.onload = resolve; s.onerror = () => reject(new Error('Could not load ' + src)); document.head.appendChild(s); });
 const loadCss = href => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l); };
@@ -50,21 +50,23 @@ export async function create({ data, apps, byId, cb, key }) {
   const seen = new Set();
   for (const f of data.parcels.features) {
     const a = byId.get(f.properties.id); if (!a) continue;
-    const k = JSON.stringify(ring(f.geometry)[0]) + a.stage; if (seen.has(k)) continue; seen.add(k);
+    const k = JSON.stringify(ring(f.geometry)[0]); if (seen.has(k)) continue; seen.add(k);
+    const dev = a.layer === 'dev', main = dev ? AMBER : CORAL;
     const hierarchy = new C.PolygonHierarchy(fromRing(ring(f.geometry)));
-    if (a.stage === 'approved') {
+    if (a.stage === 'approved' && projM(a) > 0) {
       entities.push(viewer.entities.add({ id: `ll:${a.id}:vol:${entities.length}`, polygon: {
         hierarchy, height: ground, extrudedHeight: new C.CallbackProperty(() => ground + Math.max(0.5, projM(a) * grow), false),
-        material: new C.ColorMaterialProperty(new C.CallbackProperty(() => C.Color.fromCssColorString(CORAL).withAlpha(state.active === a.id ? .72 : .5), false)),
-        outline: true, outlineColor: C.Color.fromCssColorString('#ffd2c4'), outlineWidth: 1 }, properties: { app: a.id, stage: a.stage } }));
+        material: new C.ColorMaterialProperty(new C.CallbackProperty(() => C.Color.fromCssColorString(main).withAlpha(state.active === a.id ? .72 : dev ? .42 : .5), false)),
+        outline: true, outlineColor: C.Color.fromCssColorString(dev ? '#f8e4bd' : '#ffd2c4'), outlineWidth: 1 }, properties: { app: a.id, stage: a.stage, layer: a.layer } }));
     }
     entities.push(viewer.entities.add({ id: `ll:${a.id}:drape:${entities.length}`, polygon: {
       hierarchy, classificationType: C.ClassificationType.CESIUM_3D_TILE,
       material: new C.ColorMaterialProperty(new C.CallbackProperty(t => {
+        if (dev) return C.Color.fromCssColorString(AMBER).withAlpha(state.active === a.id ? .7 : a.stage === 'approved' ? .38 : .26);
         if (a.stage === 'approved') return C.Color.fromCssColorString(CORAL).withAlpha(.35);
         const p = cb.reduced ? .5 : (Math.sin(performance.now() / 520) + 1) / 2;
         return C.Color.fromCssColorString(MINT).withAlpha(state.active === a.id ? .7 : .28 + p * .3);
-      }, false)) }, properties: { app: a.id, stage: a.stage } }));
+      }, false)) }, properties: { app: a.id, stage: a.stage, layer: a.layer } }));
   }
 
   // HTML pins that ride on top of each site.
@@ -73,9 +75,9 @@ export async function create({ data, apps, byId, cb, key }) {
   for (const a of apps) {
     if (!a.center) continue;
     const el = document.createElement('button');
-    el.type = 'button'; el.className = `pin ${a.stage}`; el.dataset.id = a.id;
+    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : ''}`; el.dataset.id = a.id; el.dataset.layer = a.layer;
     el.setAttribute('aria-label', `${cb.title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
-    el.innerHTML = a.stories ? `<b>${a.stories}</b>` : '<i></i>';
+    el.innerHTML = a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap pin-abs'; wrap.appendChild(el); layer.appendChild(wrap);
     el.addEventListener('click', ev => { ev.stopPropagation(); cb.pick(a.id); });
     el.addEventListener('mouseenter', () => cb.hover(a.id, true));
@@ -87,7 +89,7 @@ export async function create({ data, apps, byId, cb, key }) {
   scene.postRender.addEventListener(() => {
     const camPos = scene.camera.positionWC;
     for (const { wrap, a } of pins.values()) {
-      const top = C.Cartesian3.fromDegrees(a.center[0], a.center[1], ground + projM(a) * grow + 12);
+      const top = C.Cartesian3.fromDegrees(a.center[0], a.center[1], ground + (a.stage === 'approved' ? projM(a) : 0) * grow + 12);
       const p = toWindow(scene, top, scratch);
       const behind = C.Cartesian3.dot(C.Cartesian3.subtract(top, camPos, new C.Cartesian3()), scene.camera.directionWC) < 0;
       if (!p || behind) { wrap.style.opacity = '0'; continue; }
@@ -189,8 +191,8 @@ export async function create({ data, apps, byId, cb, key }) {
       fly(home(), 2.4);
     },
     filter(f) {
-      for (const e of entities) e.show = f === 'all' || e.properties.stage.getValue() === f;
-      pins.forEach(({ el, a }) => el.classList.toggle('is-dim', f !== 'all' && a.stage !== f));
+      for (const e of entities) e.show = cb.matches({ layer: e.properties.layer.getValue(), stage: e.properties.stage.getValue() }, f);
+      pins.forEach(({ el, a }) => el.classList.toggle('is-dim', !cb.matches(a, f)));
     },
     relabel() { for (const e of ringEntities) if (e.label) e.label.text = ringLabel(e.properties.ring.getValue()); }
   };

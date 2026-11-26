@@ -7,7 +7,7 @@ const detailBody = detail.querySelector('.detail-body');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const phone = () => matchMedia('(max-width: 52rem)').matches;
 const METERS_PER_STORY = 3.4;
-const COLORS = { approved: '#ff6a45', review: '#78d6c8', building: '#132f3a', buildingTop: '#1b3e4b' };
+const COLORS = { approved: '#ff6a45', review: '#78d6c8', dev: '#edbd79', devReview: '#f3dcae', building: '#132f3a', buildingTop: '#1b3e4b' };
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const date = iso => iso ? new Date(iso + 'T12:00:00').toLocaleDateString(locale(), { month: 'short', day: 'numeric', year: 'numeric' }) : null;
@@ -60,10 +60,20 @@ function featuresFor(data) {
   return { type: 'FeatureCollection', features: [...byKey.values()].map((f, i) => ({ ...f, id: i, properties: { ...f.properties, h: f.properties.stories ? Math.round((f.properties.stories * 10.5) / 5) * 5 * 0.3048 : 0 } })) };
 }
 
+// Filters: all | ll (Live Local) | dev (other development) | review (anything under review)
+const matches = (a, f) => f === 'all' || (f === 'll' && a.layer === 'll') || (f === 'dev' && a.layer === 'dev') || (f === 'review' && a.stage !== 'approved');
+const filterExpr = f => f === 'all' ? null : f === 'review' ? ['!=', ['get', 'stage'], 'approved'] : ['==', ['get', 'layer'], f];
+const KIND = { new: ['New building', 'Edificio nuevo'], major: ['Major renovation', 'Gran renovación'], rezoning: ['Rezoning', 'Cambio de zonificación'] };
+function devCard(a) {
+  const ht = a.stories ? `<span class="ht">${a.stories}<small>${L('stories', 'pisos')}</small></span>` : `<span class="ht na">${esc(L(...KIND[a.kind]))}</span>`;
+  const when = a.stage === 'approved' ? L('Approved', 'Aprobado') : a.stage === 'denied' ? L('Denied', 'Denegado') : L(`Filed ${date(a.filed)}`, `Presentado el ${date(a.filed)}`);
+  return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${a.stage}" data-layer="dev"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(a.location)}</span>${ht}<span class="meta">${esc(when)} · ${esc(a.boards.map(b => b.replace(' Board', '')).join(' + '))}</span></button></li>`;
+}
 function card(a) {
+  if (a.layer === 'dev') return devCard(a);
   const ht = a.stories ? `<span class="ht">${a.stories}<small>stories</small></span>` : `<span class="ht na">In review</span>`;
   const when = a.stage === 'approved' ? L('Approved', 'Aprobado') : L(`Filed ${date(a.filed)}`, `Presentado el ${date(a.filed)}`);
-  return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${a.stage}"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(title(a.location))}</span>${ht}<span class="meta">${esc(when)} · ${esc(a.number)}</span></button></li>`;
+  return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${a.stage}" data-layer="ll"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(title(a.location))}</span>${ht}<span class="meta">${esc(when)} · ${esc(a.number)}</span></button></li>`;
 }
 
 function owners(a) {
@@ -71,7 +81,43 @@ function owners(a) {
   return [...new Set(a.sites.map(s => (s.owner || '').replace(/\s+C\/O\b.*$/i, '').trim()).filter(o => o && !/REFERENCE ONLY/i.test(o)))];
 }
 
+function devDetailHtml(a) {
+  const status = a.stage === 'approved' ? L('Approved', 'Aprobado') : a.stage === 'denied' ? L('Denied', 'Denegado') : a.status === 'On Hold' ? L('On hold', 'En espera') : L('Under review', 'En revisión');
+  const hero = a.stories
+    ? `<p class="hero-num dev"><b>${a.stories}</b><span>${L(`stories${a.stage === 'approved' ? ' approved' : ' proposed'} · about ${a.heightFt} ft`, `pisos ${a.stage === 'approved' ? 'aprobados' : 'propuestos'} · unos ${a.heightFt} pies`)}</span></p>` : '';
+  const q = a.compare?.quarterMile;
+  let compare = '';
+  if (a.heightFt && q?.tallest) {
+    const rows = [
+      { k: L('This project', 'Este proyecto'), ft: a.heightFt, note: L(`about ${a.heightFt} ft · ${a.stories} stories`, `unos ${a.heightFt} pies · ${a.stories} pisos`), cls: 'me dev' },
+      { k: L('Tallest within ¼ mile', 'Más alto a ¼ de milla'), ft: q.tallest.ft, note: `${q.tallest.ft} ft${q.tallest.address ? ' · ' + title(q.tallest.address.toLowerCase().replace(/\b\w/g, x => x.toUpperCase())) : ''}`, cls: 'tall' },
+      { k: L('Typical building within ¼ mile', 'Edificio típico a ¼ de milla'), ft: q.typicalFt, note: `${q.typicalFt} ft`, cls: 'typ' }
+    ];
+    const max = Math.max(...rows.map(r => r.ft));
+    compare = `<section class="compare"><h3>${L('How it compares', 'Cómo se compara')}</h3><ul>${rows.map((r, i) => `<li class="${r.cls}"><span class="k">${esc(r.k)}</span><span class="track"><span class="fill" style="--w:${Math.max(2, (r.ft / max) * 100).toFixed(1)}%;--d:${0.25 + i * 0.12}s"></span></span><span class="v">${esc(r.note)}</span></li>`).join('')}</ul><p class="fine">${L('Existing heights: Miami-Dade County LiDAR. Project height from the case description, estimated at 10.5 ft per story.', 'Alturas existentes: LiDAR del Condado Miami-Dade. Altura del proyecto según la descripción del caso, estimada a 10.5 pies por piso.')}</p></section>`;
+  }
+  const facts = [
+    [L('What was filed', 'Lo que se presentó'), a.summary, true],
+    [L('First filed', 'Primera presentación'), date(a.filed)],
+    [L('Owner of record', 'Propietario registrado'), a.owner, true],
+    a.lotSize ? [L('Lot size', 'Tamaño del lote'), `${num(a.lotSize)} sq ft`] : null,
+    a.existing?.yearBuilt ? [L('Built there now', 'Construido allí hoy'), a.existing.floors ? L(`${a.existing.floors}-story building, ${a.existing.yearBuilt}`, `Edificio de ${a.existing.floors} pisos, ${a.existing.yearBuilt}`) : String(a.existing.yearBuilt)] : null
+  ].filter(f => f && f[1]);
+  const cases = a.cases.map(c => `<li><a href="${esc(c.link)}" target="_blank" rel="noopener"><b>${esc(c.number)}</b><span>${esc(c.board.replace(' Board', ''))} · ${esc(c.type)} · ${esc(c.status)} · ${esc(date(c.filed))}</span></a></li>`).join('');
+  return `
+    <span class="status dev ${a.stage}">${esc(status)} · ${esc(L(...KIND[a.kind]))}</span>
+    <h2 id="detail-title">${esc(a.location)}</h2>
+    <p class="case">${esc(a.boards.join(' · '))}</p>
+    ${hero}
+    ${compare}
+    <dl class="facts">${facts.map(([k, v, wide]) => `<div class="${wide ? 'wide' : ''}"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+    <h3 class="cases-title">${L('City case files', 'Expedientes de la Ciudad')}</h3>
+    <ul class="cases">${cases}</ul>
+    <p class="fine">${L('Cases and descriptions: City of Miami Beach Civic Access. Owner: City parcel map.', 'Casos y descripciones: Civic Access de la Ciudad de Miami Beach. Propietario: mapa de parcelas de la Ciudad.')}</p>`;
+}
+
 function detailHtml(a) {
+  if (a.layer === 'dev') return devDetailHtml(a);
   const sale = a.sites.filter(s => s.lastSale?.price).sort((x, y) => (y.lastSale.date || '').localeCompare(x.lastSale.date || ''))[0];
   const lot = a.sites.reduce((n, s) => n + (Number(s.lotSize) || 0), 0);
   const built = a.sites.map(s => s.existing).filter(e => e?.yearBuilt);
@@ -133,12 +179,12 @@ async function flatEngine({ data, apps, byId, cb }) {
   await new Promise(r => map.on('load', r));
   const fc = featuresFor(data);
   map.addSource('ll', { type: 'geojson', data: fc });
-  map.addLayer({ id: 'll-glow', type: 'line', source: 'll', paint: { 'line-color': ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review], 'line-width': 10, 'line-blur': 8, 'line-opacity': .55 } });
-  map.addLayer({ id: 'll-plate', type: 'fill', source: 'll', paint: { 'fill-color': ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review], 'fill-opacity': ['match', ['get', 'stage'], 'approved', .25, .32] } });
-  map.addLayer({ id: 'll-tower', type: 'fill-extrusion', source: 'll', filter: ['==', ['get', 'stage'], 'approved'], paint: {
-    'fill-extrusion-color': ['case', ['boolean', ['feature-state', 'active'], false], '#ff8a6b', COLORS.approved],
+  map.addLayer({ id: 'll-glow', type: 'line', source: 'll', paint: { 'line-color': ['case', ['==', ['get', 'layer'], 'dev'], ['match', ['get', 'stage'], 'approved', COLORS.dev, COLORS.devReview], ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review]], 'line-width': 10, 'line-blur': 8, 'line-opacity': .55 } });
+  map.addLayer({ id: 'll-plate', type: 'fill', source: 'll', paint: { 'fill-color': ['case', ['==', ['get', 'layer'], 'dev'], ['match', ['get', 'stage'], 'approved', COLORS.dev, COLORS.devReview], ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review]], 'fill-opacity': ['match', ['get', 'stage'], 'approved', .25, .32] } });
+  map.addLayer({ id: 'll-tower', type: 'fill-extrusion', source: 'll', filter: ['all', ['==', ['get', 'stage'], 'approved'], ['>', ['get', 'h'], 0]], paint: {
+    'fill-extrusion-color': ['case', ['boolean', ['feature-state', 'active'], false], ['case', ['==', ['get', 'layer'], 'dev'], '#f6d08f', '#ff8a6b'], ['case', ['==', ['get', 'layer'], 'dev'], COLORS.dev, COLORS.approved]],
     'fill-extrusion-height': 0, 'fill-extrusion-base': 0, 'fill-extrusion-opacity': .92, 'fill-extrusion-vertical-gradient': true } });
-  map.addLayer({ id: 'll-line', type: 'line', source: 'll', paint: { 'line-color': ['match', ['get', 'stage'], 'approved', '#ffb39f', '#c9f3ec'], 'line-width': ['case', ['boolean', ['feature-state', 'active'], false], 3, 1.6] } });
+  map.addLayer({ id: 'll-line', type: 'line', source: 'll', paint: { 'line-color': ['case', ['==', ['get', 'layer'], 'dev'], '#f6d9a6', ['match', ['get', 'stage'], 'approved', '#ffb39f', '#c9f3ec']], 'line-width': ['case', ['boolean', ['feature-state', 'active'], false], 3, 1.6] } });
 
   // Quarter-mile and one-mile rings around the selected site
   const circle = (c, r, n = 128) => { const k = Math.PI / 180, out = []; for (let i = 0; i <= n; i++) { const t = (i / n) * 2 * Math.PI; out.push([c[0] + (r / (111320 * Math.cos(c[1] * k))) * Math.sin(t), c[1] + (r / 110540) * Math.cos(t)]); } return out; };
@@ -167,8 +213,8 @@ async function flatEngine({ data, apps, byId, cb }) {
   for (const a of apps) {
     if (!a.center) continue;
     const el = document.createElement('button');
-    el.type = 'button'; el.className = `pin ${a.stage}`; el.dataset.id = a.id; el.setAttribute('aria-label', `${title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
-    el.innerHTML = a.stories ? `<b>${a.stories}</b>` : '<i></i>';
+    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : ''}`; el.dataset.layer = a.layer; el.dataset.id = a.id; el.setAttribute('aria-label', `${title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
+    el.innerHTML = a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap'; wrap.appendChild(el);
     const marker = new maplibregl.Marker({ element: wrap, anchor: 'bottom', offset: [0, -6] }).setLngLat(a.center).addTo(map);
     markers.set(a.id, { marker, el });
@@ -200,8 +246,8 @@ async function flatEngine({ data, apps, byId, cb }) {
   if (!reduced) {
     (function pulse(now) {
       const p = (Math.sin(now / 520) + 1) / 2;
-      map.setPaintProperty('ll-glow', 'line-opacity', ['match', ['get', 'stage'], 'approved', .5, .25 + p * .55]);
-      map.setPaintProperty('ll-glow', 'line-width', ['match', ['get', 'stage'], 'approved', 10, 6 + p * 10]);
+      map.setPaintProperty('ll-glow', 'line-opacity', ['case', ['==', ['get', 'layer'], 'dev'], .35, ['match', ['get', 'stage'], 'approved', .5, .25 + p * .55]]);
+      map.setPaintProperty('ll-glow', 'line-width', ['case', ['==', ['get', 'layer'], 'dev'], 6, ['match', ['get', 'stage'], 'approved', 10, 6 + p * 10]]);
       requestAnimationFrame(pulse);
     })(0);
   }
@@ -239,39 +285,51 @@ async function flatEngine({ data, apps, byId, cb }) {
       const cam = home(); reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });
     },
     filter(f) {
-      markers.forEach(({ el }) => el.classList.toggle('is-dim', f !== 'all' && !el.classList.contains(f)));
-      const filter = f === 'all' ? null : ['==', ['get', 'stage'], f];
-      for (const id of ['ll-glow', 'll-plate', 'll-line']) map.setFilter(id, filter);
-      map.setFilter('ll-tower', f === 'review' ? ['==', 1, 0] : ['==', ['get', 'stage'], 'approved']);
+      markers.forEach(({ el }) => el.classList.toggle('is-dim', !matches({ layer: el.dataset.layer, stage: el.classList.contains('approved') ? 'approved' : 'review' }, f)));
+      const expr = filterExpr(f);
+      for (const id of ['ll-glow', 'll-plate', 'll-line']) map.setFilter(id, expr);
+      map.setFilter('ll-tower', ['all', ['==', ['get', 'stage'], 'approved'], ['>', ['get', 'h'], 0], expr || true]);
     }
   };
 }
 
 async function main() {
-  const data = await fetch('../data/live-local.json?v=' + Date.now().toString().slice(0, -5)).then(r => r.json());
-  const apps = data.applications;
+  const v = Date.now().toString().slice(0, -5);
+  const [data, dev] = await Promise.all([
+    fetch('../data/live-local.json?v=' + v).then(r => r.json()),
+    fetch('../data/development.json?v=' + v).then(r => r.json()).catch(() => ({ projects: [], parcels: { features: [] } }))
+  ]);
+  const ll = data.applications.map(a => ({ ...a, layer: 'll' }));
+  const devApps = dev.projects.map(p => ({ ...p, layer: 'dev', number: p.id }));
+  const apps = [...ll, ...devApps];
+  data.parcels = { type: 'FeatureCollection', features: [
+    ...data.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'll' } })),
+    ...dev.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'dev', stories: f.properties.stage === 'approved' ? f.properties.stories : null } }))
+  ] };
   const byId = new Map(apps.map(a => [a.id, a]));
-  const approved = apps.filter(a => a.stage === 'approved');
+  const approved = ll.filter(a => a.stage === 'approved');
 
   // Numbers and list
   const set = (k, v) => document.querySelectorAll(`[data-count="${k}"]`).forEach(el => (el.textContent = v));
-  set('total', apps.length); set('approved', approved.length); set('review', apps.length - approved.length);
+  set('total', ll.length); set('approved', approved.length); set('review', ll.length - approved.length); set('dev', devApps.length);
   set('tallest', Math.max(...approved.map(a => a.stories || 0)));
   const updated = () => (document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`));
   updated();
-  const order = [...apps].sort((a, b) => (a.stage === b.stage ? (b.stories || 0) - (a.stories || 0) || (b.filed || '').localeCompare(a.filed || '') : a.stage === 'approved' ? -1 : 1));
-  listEl.innerHTML = order.map(card).join('');
-  listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${0.45 + i * 0.045}s`));
+  const llOrder = [...ll].sort((a, b) => (a.stage === b.stage ? (b.stories || 0) - (a.stories || 0) || (b.filed || '').localeCompare(a.filed || '') : a.stage === 'approved' ? -1 : 1));
+  const order = [...llOrder, ...devApps];
+  const renderList = () => (listEl.innerHTML = llOrder.map(card).join('') + `<li class="list-head" data-layer="dev"><span>${L('Other development since 2023', 'Otros proyectos desde 2023')}</span><small>${L(`${devApps.length} projects from the Design Review, Historic Preservation and Planning boards`, `${devApps.length} proyectos de las juntas de Revisión de Diseño, Preservación Histórica y Planificación`)}</small></li>` + devApps.map(card).join(''));
+  renderList();
+  listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${Math.min(1.4, 0.45 + i * 0.045)}s`));
 
   let active = null;
-  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}</small></div>`, L, title, esc, reduced, phone };
+  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`, L, title, esc, reduced, phone, matches };
 
   // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
   const want = new URLSearchParams(location.search).get('engine');
   let engine = null;
   if (key && want !== 'flat') {
-    try { engine = await (await import('./engine-photo.js?v=2')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+    try { engine = await (await import('./engine-photo.js?v=3')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
     catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
   }
   if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
@@ -312,12 +370,13 @@ async function main() {
   document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
     const f = chip.dataset.filter;
     document.querySelectorAll('.chip').forEach(c => { const on = c === chip; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on); });
-    listEl.querySelectorAll('.card').forEach(el => (el.parentElement.hidden = f !== 'all' && el.dataset.stage !== f));
+    listEl.querySelectorAll('.card').forEach(el => (el.parentElement.hidden = !matches({ layer: el.dataset.layer, stage: el.dataset.stage }, f)));
+    listEl.querySelector('.list-head').hidden = f === 'll';
     engine.filter(f);
   }));
 
   document.addEventListener('language:change', () => {
-    listEl.innerHTML = order.map(card).join('');
+    renderList();
     if (active) { listEl.querySelector(`.card[data-id="${CSS.escape(active)}"]`)?.classList.add('is-active'); detailBody.innerHTML = detailHtml(byId.get(active)); }
     updated();
     engine.relabel?.();

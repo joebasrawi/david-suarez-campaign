@@ -20,10 +20,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="live-local.css?v=4">
+  <link rel="stylesheet" href="live-local.css?v=6">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
   <script type="module" src="../language.js"></script>
-  <script type="module" src="live-local.js?v=3"></script>
+  <script type="module" src="live-local.js?v=4"></script>
 </head>
 <body>
   <a class="skip" href="#list">Skip to the list of applications</a>
@@ -47,18 +47,20 @@
             <div><dt>Under review</dt><dd data-count="review">9</dd></div>
             <div><dt>Tallest approved</dt><dd><span data-count="tallest">21</span><small> stories</small></dd></div>
           </dl>
+          <p class="also"><span class="dot dev" aria-hidden="true"></span>Also on the map: <b><span data-count="dev">71</span> other development projects</b> filed with the City's land use boards since 2023.</p>
         </section>
 
         <div class="filters" role="group" aria-label="Show">
           <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="chip" data-filter="approved" aria-pressed="false"><span class="dot approved" aria-hidden="true"></span>Approved</button>
+          <button type="button" class="chip" data-filter="ll" aria-pressed="false"><span class="dot approved" aria-hidden="true"></span>Live Local</button>
+          <button type="button" class="chip" data-filter="dev" aria-pressed="false"><span class="dot dev" aria-hidden="true"></span>Other development</button>
           <button type="button" class="chip" data-filter="review" aria-pressed="false"><span class="dot review" aria-hidden="true"></span>Under review</button>
         </div>
 
         <ol class="list" id="list" aria-label="Live Local Act applications"></ol>
 
         <footer class="sources">
-          <p><strong>Sources.</strong> The City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists, each case's Civic Access file, the City's parcel map, and the signed approval orders. Heights come from the signed orders, so they're shown for approved projects only.</p>
+          <p><strong>Sources.</strong> The City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists, each case's Civic Access file, Design Review, Historic Preservation and Planning Board cases filed since 2023 (new buildings, major renovations and rezonings; single-family homes left out), the City's parcel map, Miami-Dade County LiDAR building heights, and the signed approval orders. Heights come from the signed orders, so they're shown for approved projects only.</p>
           <p class="updated" data-updated></p>
           <p>See something wrong? <a href="../about/">Tell David's office</a>.</p>
         </footer>
@@ -75,6 +77,7 @@
     <div class="legend" aria-hidden="true">
       <span><i class="sw approved"></i>Approved · height from the signed order</span>
       <span><i class="sw review"></i>Under review · height not public yet</span>
+      <span><i class="sw dev"></i>Other development</span>
     </div>
 
     <div class="loader" aria-hidden="true"><span></span></div>
