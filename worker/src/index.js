@@ -9,9 +9,11 @@ export function validate(body) {
     lastName: clean(body?.lastName, 60),
     email: clean(body?.email, 254).toLowerCase(),
     phone: clean(body?.phone, 30),
+    smsConsent: body?.smsConsent === 'yes' || body?.smsConsent === true,
   };
   if (!signup.firstName) return {error: 'first_name'};
   if (!EMAIL.test(signup.email)) return {error: 'email'};
+  if (signup.smsConsent && !signup.phone) return {error: 'sms_phone'};
   if (signup.phone) {
     const digits = signup.phone.replace(/\D/g, '');
     if (digits.length < 10 || digits.length > 15 || /[^\d\s().+-]/.test(signup.phone)) return {error: 'phone'};
@@ -70,7 +72,9 @@ export async function handle(request, env, fetchImpl = fetch) {
     const added = await icontact(env, 'contacts', [contact], fetchImpl);
     const contactId = added.contacts?.[0]?.contactId;
     if (!contactId) throw new Error('iContact returned no contactId: ' + JSON.stringify(added).slice(0, 300));
-    await icontact(env, 'subscriptions', [{contactId, listId: env.ICONTACT_LIST_ID, status: 'normal'}], fetchImpl);
+    // Text-message consent is kept as its own list, so the subscription date records when it was given.
+    const lists = [env.ICONTACT_LIST_ID, signup.smsConsent && env.ICONTACT_SMS_LIST_ID].filter(Boolean);
+    await icontact(env, 'subscriptions', lists.map(listId => ({contactId, listId, status: 'normal'})), fetchImpl);
     return reply(200, {ok: true}, origin);
   } catch (failure) {
     console.error(failure);
