@@ -132,20 +132,21 @@ function signupMemory(){try{return JSON.parse(localStorage.getItem(SIGNUP_KEY)||
 function remember(value){try{localStorage.setItem(SIGNUP_KEY,JSON.stringify(value));}catch{}}
 function bindSignup(form,endpoint,onSuccess){
  const status=form.querySelector('.signup-status'),button=form.querySelector('button[type="submit"]');
- const messages={first_name:'Please enter your first name.',email:'Please enter a valid email address.',phone:'Please enter a valid phone number, or leave it blank.'};
+ const messages={first_name:'Please enter your first name.',email:'Please enter a valid email address.',phone:'Please enter a valid phone number, or leave it blank.',sms_phone:'Add your mobile number to get text messages.'};
  const say=(text,state)=>{status.textContent=text;status.dataset.state=state||'';};
  function check(data){
   if(!data.firstName.trim())return 'first_name';
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email.trim()))return 'email';
   const digits=data.phone.replace(/\D/g,'');
   if(data.phone.trim()&&(digits.length<10||digits.length>15))return 'phone';
+  if(data.smsConsent&&!data.phone.trim())return 'sms_phone';
   return '';
  }
  form.addEventListener('submit',async event=>{
   event.preventDefault();
   const data=Object.fromEntries(new FormData(form));
   const problem=check(data);
-  if(problem){say(messages[problem],'error');form.elements[problem==='first_name'?'firstName':problem].focus();return;}
+  if(problem){say(messages[problem],'error');form.elements[problem==='first_name'?'firstName':problem==='sms_phone'?'phone':problem].focus();return;}
   if(!endpoint){say('Sign-ups aren’t connected yet.','error');return;}
   button.disabled=true;say('Signing you up…');
   try{

@@ -22,7 +22,12 @@ with tempfile.TemporaryDirectory() as tmp:
  assert b'DTSTART:20261219T130000Z' in ics and b'DTEND:20261219T150000Z' in ics
  assert b'\r\n' in ics and all(len(line)<=75 for line in ics.split(b'\r\n'))
  page=(r/'events/julia-tuttle-cleanup/index.html').read_text()
- assert 'julia-tuttle-cleanup-dec19.png' in page and page.count('>Add to Calendar</a>')==1
+ assert 'julia-tuttle-cleanup-dec19.jpg' in page and page.count('>Add to Calendar</a>')==1
+ assert '<meta name="description" content="Saturday, December 19, 2026' in page and '<link rel="canonical" href="https://davidsuarezmb.com/events/julia-tuttle-cleanup/">' in page
+ ld=json.loads(page.split('<script type="application/ld+json">')[1].split('</script>')[0])
+ assert ld['@type']=='Event' and ld['startDate']=='2026-12-19T08:00:00-05:00' and page.count('application/ld+json')==1
+ alias=(r/'julia-tuttle-cleanup/index.html').read_text()
+ assert 'href="https://davidsuarezmb.com/events/julia-tuttle-cleanup/"' in alias and 'name="description"' in (r/'events/index.html').read_text()
  assert '<a href="event.ics">' in page
  assert len(json.loads((r/'data/community-events.json').read_text())['items'])==len(feed['items'])+1
  print('Events tests passed: idempotence, updates, empty/malformed/duplicate rejection with last-good preservation, manual cleanup, flyer, one CTA and ICS.')

@@ -57,6 +57,25 @@ Phone (optional)|Teléfono (opcional)
 Sign up|Suscribirse
 Close|Cerrar
 You can unsubscribe at any time.|Puede cancelar su suscripción en cualquier momento.
+Text me updates from David at this number. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Not required to sign up.|Envíenme actualizaciones de David por mensaje de texto a este número. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Responda STOP para cancelar o HELP para obtener ayuda. No es obligatorio para suscribirse.
+Add your mobile number to get text messages.|Agregue su número de celular para recibir mensajes de texto.
+Privacy|Privacidad
+How this site handles the information you share with us.|Cómo este sitio maneja la información que usted nos comparte.
+What we collect|Qué información recopilamos
+When you sign up to stay informed, we collect your first and last name, your email address and, if you choose, your mobile number. We don’t collect anything else through this site, and we don’t use advertising or tracking cookies.|Cuando se suscribe para mantenerse informado, recopilamos su nombre y apellido, su correo electrónico y, si lo desea, su número de celular. No recopilamos nada más a través de este sitio y no usamos cookies de publicidad ni de seguimiento.
+How we use it|Cómo la usamos
+We use your email address to send updates from David about Miami Beach. We use your mobile number only if you check the box to get text messages, and only to send those updates.|Usamos su correo electrónico para enviarle actualizaciones de David sobre Miami Beach. Usamos su número de celular solo si marca la casilla para recibir mensajes de texto, y solo para enviar esas actualizaciones.
+Text messages|Mensajes de texto
+Text messages are optional and not required to sign up. Message frequency varies. Message and data rates may apply. Reply STOP to any message to stop getting texts, or HELP for help. We don’t sell, rent or share mobile numbers or text-message consent with anyone else for their marketing.|Los mensajes de texto son opcionales y no son obligatorios para suscribirse. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Responda STOP a cualquier mensaje para dejar de recibirlos, o HELP para obtener ayuda. No vendemos, alquilamos ni compartimos números de celular ni el consentimiento para mensajes de texto con terceros para su publicidad.
+Who handles your information|Quién maneja su información
+Sign-ups are passed through a secure form service hosted by Cloudflare and stored with iContact, our email service. They handle your information only to deliver our messages. We don’t sell your information.|Las suscripciones pasan por un servicio de formularios seguro alojado en Cloudflare y se guardan en iContact, nuestro servicio de correo electrónico. Ellos manejan su información solo para entregar nuestros mensajes. No vendemos su información.
+Your browser|Su navegador
+This site saves a few settings in your own browser, such as your language, light or dark display, and whether you closed the sign-up window. They never leave your device.|Este sitio guarda algunas preferencias en su propio navegador, como el idioma, la apariencia clara u oscura y si cerró la ventana de suscripción. Nunca salen de su dispositivo.
+Unsubscribing|Cancelar la suscripción
+Every email has an unsubscribe link. You can also email the office and ask us to remove your information.|Cada correo electrónico incluye un enlace para cancelar la suscripción. También puede escribir a la oficina y pedirnos que eliminemos su información.
+Florida public records|Registros públicos de Florida
+Under Florida law, email addresses are public records. If you don’t want your email address released in response to a public records request, don’t send electronic mail to this entity. Instead, contact the office by phone or in writing.|Según la ley de Florida, las direcciones de correo electrónico son registros públicos. Si no desea que su dirección de correo electrónico se divulgue en respuesta a una solicitud de registros públicos, no envíe correo electrónico a esta entidad. En su lugar, comuníquese con la oficina por teléfono o por escrito.
+Last updated November 25, 2026.|Última actualización: November 25, 2026.
 Please enter your first name.|Escriba su nombre.
 Please enter a valid email address.|Escriba un correo electrónico válido.
 Please enter a valid phone number, or leave it blank.|Escriba un número de teléfono válido o deje el campo vacío.

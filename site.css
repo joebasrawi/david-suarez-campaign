@@ -177,3 +177,8 @@
 }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; } }
 @media print { .hub-header,.hub-footer,.agenda-tools,.item-browser,.detail-tools,.section-tabs,.meeting-status-row { display:none!important; } .reader-shell { display:block; height:auto; min-height:0; overflow:visible; } .item-detail { overflow:visible; } body { background:white; } }
+
+.privacy-body { max-width:720px; }
+.privacy-section h2 { font-size:20px; margin:28px 0 8px; }
+.privacy-section p { margin:0; line-height:1.7; }
+.privacy-updated { margin:32px 0 20px; font-size:14px; opacity:.75; }
