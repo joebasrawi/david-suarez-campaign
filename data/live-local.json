@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-26T00:31:22.417Z",
+  "generatedAt": "2026-11-26T00:50:15.542Z",
   "source": {
-    "label": "City of Miami Beach Live Local Act pages, Civic Access, City parcel layer and signed orders",
+    "label": "City of Miami Beach Live Local Act pages, Civic Access, City parcel layer, signed orders, and Miami-Dade County LiDAR building heights",
     "urls": [
       "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
       "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
@@ -55,6 +55,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/bc25201e-4e46-429a-baa9-ba0035cf881f?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
         "order": "https://www.miamibeachfl.gov/wp-content/uploads/2025/12/1960-Normandy-Approved-Live-Local-Act-Order.pdf"
+      },
+      "heightFt": 75,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 100,
+            "address": "2016 BAY DR",
+            "meters": 233
+          },
+          "typicalFt": 16,
+          "buildings": 324,
+          "taller": 2
+        },
+        "mile": {
+          "tallest": {
+            "ft": 147,
+            "address": "900 BAY DR",
+            "meters": 1513
+          },
+          "typicalFt": 16,
+          "buildings": 1709,
+          "taller": 6
+        }
       }
     },
     {
@@ -97,6 +120,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/b94ae962-9131-4b6c-9a2f-d477b35b0b25?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
         "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/06/PB24-0683-663-Alton-Rd-SIGNED-ORDER.pdf"
+      },
+      "heightFt": 170,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 201
+          },
+          "typicalFt": 23,
+          "buildings": 236,
+          "taller": 1
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1331
+          },
+          "typicalFt": 25,
+          "buildings": 1888,
+          "taller": 13
+        }
       }
     },
     {
@@ -139,6 +185,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/737b98d5-eac1-48c8-a38c-d68ff43e331a?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
         "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/09/PB24-0714-1826-Collins-Av-SIGNED-ORDER.pdf"
+      },
+      "heightFt": 160,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 196
+          },
+          "typicalFt": 40,
+          "buildings": 120,
+          "taller": 7
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 196
+          },
+          "typicalFt": 24,
+          "buildings": 2101,
+          "taller": 26
+        }
       }
     },
     {
@@ -181,6 +250,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/346976cd-47d2-4661-bdc0-3c21cf44b5fd?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
         "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/09/PB26-0814-7410-Collins-Av-SIGNED-ORDER.pdf"
+      },
+      "heightFt": 115,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 265,
+            "address": "7341 COLLINS AVE",
+            "meters": 146
+          },
+          "typicalFt": 22,
+          "buildings": 228,
+          "taller": 3
+        },
+        "mile": {
+          "tallest": {
+            "ft": 367,
+            "address": "6899 COLLINS AVE",
+            "meters": 669
+          },
+          "typicalFt": 20,
+          "buildings": 2188,
+          "taller": 19
+        }
       }
     },
     {
@@ -287,6 +379,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/ff2d8b61-ff5b-4866-bf40-72e1964d452d?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
         "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/10/PB24-0694-7401-7425-Harding-Av-SIGNED-ORDER-2.pdf"
+      },
+      "heightFt": 220,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 265,
+            "address": "7341 COLLINS AVE",
+            "meters": 214
+          },
+          "typicalFt": 22,
+          "buildings": 251,
+          "taller": 1
+        },
+        "mile": {
+          "tallest": {
+            "ft": 367,
+            "address": "6899 COLLINS AVE",
+            "meters": 703
+          },
+          "typicalFt": 20,
+          "buildings": 2270,
+          "taller": 3
+        }
       }
     },
     {
@@ -345,6 +460,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/402d8ac6-2064-4e37-b47f-cbb3e6756f26?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 245
+          },
+          "typicalFt": 23,
+          "buildings": 218,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1549
+          },
+          "typicalFt": 25,
+          "buildings": 1992,
+          "taller": null
+        }
       }
     },
     {
@@ -387,6 +525,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/d5188ecc-79d7-4e2a-965d-b8b06477a171?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 322
+          },
+          "typicalFt": 33,
+          "buildings": 140,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 322
+          },
+          "typicalFt": 25,
+          "buildings": 1069,
+          "taller": null
+        }
       }
     },
     {
@@ -426,6 +587,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/746addb5-9846-4779-b03d-0e466d6f66b8?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 270,
+            "address": "1601 COLLINS AVE",
+            "meters": 171
+          },
+          "typicalFt": 35,
+          "buildings": 132,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 844
+          },
+          "typicalFt": 25,
+          "buildings": 2056,
+          "taller": null
+        }
       }
     },
     {
@@ -500,6 +684,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/446ee3f0-9b9b-43e5-86f0-59e7fb6ee736?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 137,
+            "address": "533 COLLINS AVE",
+            "meters": 178
+          },
+          "typicalFt": 33,
+          "buildings": 134,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 787
+          },
+          "typicalFt": 25,
+          "buildings": 1443,
+          "taller": null
+        }
       }
     },
     {
@@ -542,6 +749,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/b0b26cd2-986f-4315-bcb6-5313b9b5adc7?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 348
+          },
+          "typicalFt": 22,
+          "buildings": 277,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1146
+          },
+          "typicalFt": 25,
+          "buildings": 1818,
+          "taller": null
+        }
       }
     },
     {
@@ -680,6 +910,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/8a8e2025-8bc1-4e3c-a7bf-fa1d1b972496?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 198
+          },
+          "typicalFt": 23,
+          "buildings": 238,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1422
+          },
+          "typicalFt": 25,
+          "buildings": 1922,
+          "taller": null
+        }
       }
     },
     {
@@ -722,6 +975,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/a357c9b0-317e-4840-afbd-c884a59a1b57?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 249,
+            "address": "1800 SUNSET HARBOUR DR",
+            "meters": 337
+          },
+          "typicalFt": 23,
+          "buildings": 210,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 1353
+          },
+          "typicalFt": 24,
+          "buildings": 2174,
+          "taller": null
+        }
       }
     },
     {
@@ -764,6 +1040,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/2fd159ba-0186-4799-b6b0-0271565a1d0f?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 249,
+            "address": "1800 SUNSET HARBOUR DR",
+            "meters": 328
+          },
+          "typicalFt": 25,
+          "buildings": 150,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 1446
+          },
+          "typicalFt": 24,
+          "buildings": 2214,
+          "taller": null
+        }
       }
     },
     {
@@ -806,6 +1105,29 @@
         "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/4e2868cd-6e46-4f74-a10b-62e562d5f596?tab=attachments",
         "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
         "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 348
+          },
+          "typicalFt": 22,
+          "buildings": 277,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1146
+          },
+          "typicalFt": 25,
+          "buildings": 1818,
+          "taller": null
+        }
       }
     }
   ],

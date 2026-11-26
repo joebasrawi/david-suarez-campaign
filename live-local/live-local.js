@@ -40,8 +40,8 @@ async function style() {
   s.layers.splice(labels, 0, {
     id: 'buildings-3d', type: 'fill-extrusion', source: 'mbb', minzoom: 12.5,
     paint: {
-      'fill-extrusion-color': ['interpolate', ['linear'], ['get', 'f'], 1, COLORS.building, 12, '#1d4351', 40, '#2a5866'],
-      'fill-extrusion-height': ['interpolate', ['linear'], ['zoom'], 12.5, 0, 14, ['*', ['get', 'f'], 3.4]],
+      'fill-extrusion-color': ['interpolate', ['linear'], ['get', 'h'], 0, COLORS.building, 60, '#1b3d4a', 200, '#24505e', 400, '#2d6070'],
+      'fill-extrusion-height': ['interpolate', ['linear'], ['zoom'], 12.5, 0, 14, ['*', ['max', ['get', 'h'], 14], 0.3048]],
       'fill-extrusion-opacity': .9,
       'fill-extrusion-vertical-gradient': true
     }
@@ -57,7 +57,7 @@ function featuresFor(data) {
     const prev = byKey.get(key);
     if (!prev || (prev.properties.stage !== 'approved' && f.properties.stage === 'approved')) byKey.set(key, f);
   }
-  return { type: 'FeatureCollection', features: [...byKey.values()].map((f, i) => ({ ...f, id: i, properties: { ...f.properties, h: f.properties.stories ? f.properties.stories * METERS_PER_STORY : 0 } })) };
+  return { type: 'FeatureCollection', features: [...byKey.values()].map((f, i) => ({ ...f, id: i, properties: { ...f.properties, h: f.properties.stories ? Math.round((f.properties.stories * 10.5) / 5) * 5 * 0.3048 : 0 } })) };
 }
 
 function card(a) {
@@ -87,8 +87,25 @@ function detailHtml(a) {
     a.uses ? ['Also includes', a.uses, true] : null
   ].filter(f => f && f[1]);
   const hero = a.stories
-    ? `<p class="hero-num"><b>${a.stories}</b><span>${L(`stories approved · about ${Math.round(a.stories * 10)} ft · at least 40% of rental units affordable for 30 years`, `pisos aprobados · unos ${Math.round(a.stories * 3.05)} m · al menos 40% de las unidades de alquiler asequibles por 30 años`)}</span></p>`
+    ? `<p class="hero-num"><b>${a.stories}</b><span>${L(`stories approved · about ${a.heightFt} ft · at least 40% of rental units affordable for 30 years`, `pisos aprobados · unos ${a.heightFt} pies (${Math.round(a.heightFt * 0.3048)} m) · al menos 40% de las unidades de alquiler asequibles por 30 años`)}</span></p>`
     : `<p class="hero-num pending"><span>Height isn't public until the City issues its order. The submitted plans are in the case file.</span></p>`;
+  const c = a.compare;
+  let compare = '';
+  if (c && c.quarterMile.tallest) {
+    const q = c.quarterMile, m = c.mile;
+    const rows = [
+      a.heightFt ? { k: L('This project (approved)', 'Este proyecto (aprobado)'), ft: a.heightFt, note: L(`about ${a.heightFt} ft · ${a.stories} stories`, `unos ${a.heightFt} pies · ${a.stories} pisos`), cls: 'me' } : null,
+      { k: L('Tallest within ¼ mile', 'Más alto a ¼ de milla'), ft: q.tallest.ft, note: `${q.tallest.ft} ft${q.tallest.address ? ' · ' + title(q.tallest.address.toLowerCase().replace(/\b\w/g, x => x.toUpperCase())) : ''}`, cls: 'tall' },
+      { k: L('Typical building within ¼ mile', 'Edificio típico a ¼ de milla'), ft: q.typicalFt, note: `${q.typicalFt} ft`, cls: 'typ' },
+      { k: L('Tallest within 1 mile', 'Más alto a 1 milla'), ft: m.tallest.ft, note: `${m.tallest.ft} ft${m.tallest.address ? ' · ' + title(m.tallest.address.toLowerCase().replace(/\b\w/g, x => x.toUpperCase())) : ''}`, cls: 'far' }
+    ].filter(Boolean);
+    const max = Math.max(...rows.map(r => r.ft));
+    const times = a.heightFt && q.typicalFt ? Math.round(a.heightFt / q.typicalFt) : null;
+    const lede = a.heightFt
+      ? (times >= 2 ? L(`About ${times}× the height of the typical building around it. ${q.taller === 0 ? 'Nothing within a quarter mile is taller.' : q.taller === 1 ? 'Only one building within a quarter mile is taller.' : q.taller + ' buildings within a quarter mile are taller.'}`, `Unas ${times} veces la altura del edificio típico a su alrededor. ${q.taller === 0 ? 'Nada a un cuarto de milla es más alto.' : q.taller === 1 ? 'Solo un edificio a un cuarto de milla es más alto.' : q.taller + ' edificios a un cuarto de milla son más altos.'}`) : '')
+      : L('Height not public yet. For context, what stands around it today:', 'La altura aún no es pública. Como referencia, lo que hay a su alrededor hoy:');
+    compare = `<section class="compare"><h3>${L('How it compares', 'Cómo se compara')}</h3>${lede ? `<p class="compare-lede">${esc(lede)}</p>` : ''}<ul>${rows.map((r, i) => `<li class="${r.cls}"><span class="k">${esc(r.k)}</span><span class="track"><span class="fill" style="--w:${Math.max(2, (r.ft / max) * 100).toFixed(1)}%;--d:${0.25 + i * 0.12}s"></span></span><span class="v">${esc(r.note)}</span></li>`).join('')}</ul><p class="fine">${L('Existing heights: Miami-Dade County building footprints (LiDAR). Project height estimated at 10.5 ft per story.', 'Alturas existentes: huellas de edificios del Condado Miami-Dade (LiDAR). Altura del proyecto estimada a 10.5 pies por piso.')}</p></section>`;
+  }
   const links = [
     a.links.order ? `<a href="${esc(a.links.order)}" target="_blank" rel="noopener">Read the signed approval</a>` : '',
     `<a class="${a.links.order ? 'ghost' : ''}" href="${esc(a.links.civicAccess)}" target="_blank" rel="noopener">Plans and filings (Civic Access)</a>`,
@@ -99,6 +116,7 @@ function detailHtml(a) {
     <h2 id="detail-title">${esc(title(a.location))}</h2>
     <p class="case">${esc(a.number)}${a.formerly ? ` · ${L('formerly', 'antes')} ${esc(a.formerly)}` : ''}</p>
     ${hero}
+    ${compare}
     <dl class="facts">${facts.map(([k, v, wide]) => `<div class="${wide ? 'wide' : ''}"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
     <div class="links">${links}</div>
     <p class="fine">Owner and sale data: City of Miami Beach parcel map. Status: City of Miami Beach Civic Access.</p>`;
@@ -135,6 +153,28 @@ async function main() {
     'fill-extrusion-color': ['case', ['boolean', ['feature-state', 'active'], false], '#ff8a6b', COLORS.approved],
     'fill-extrusion-height': 0, 'fill-extrusion-base': 0, 'fill-extrusion-opacity': .92, 'fill-extrusion-vertical-gradient': true } });
   map.addLayer({ id: 'll-line', type: 'line', source: 'll', paint: { 'line-color': ['match', ['get', 'stage'], 'approved', '#ffb39f', '#c9f3ec'], 'line-width': ['case', ['boolean', ['feature-state', 'active'], false], 3, 1.6] } });
+
+  // Quarter-mile and one-mile rings around the selected site
+  const circle = (c, r, n = 128) => { const k = Math.PI / 180, out = []; for (let i = 0; i <= n; i++) { const t = (i / n) * 2 * Math.PI; out.push([c[0] + (r / (111320 * Math.cos(c[1] * k))) * Math.sin(t), c[1] + (r / 110540) * Math.cos(t)]); } return out; };
+  map.addSource('rings', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'rings', type: 'line', source: 'rings', paint: { 'line-color': '#b8e0cc', 'line-width': 1.4, 'line-dasharray': [2, 3], 'line-opacity': 0 } }, 'll-glow');
+  map.addLayer({ id: 'ring-labels', type: 'symbol', source: 'rings', filter: ['==', ['geometry-type'], 'Point'], layout: { 'text-field': ['get', 'label'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-letter-spacing': .08 }, paint: { 'text-color': '#b8e0cc', 'text-halo-color': '#071c25', 'text-halo-width': 1.5, 'text-opacity': 0 } });
+  const showRings = a => {
+    if (!a?.center) return map.getSource('rings').setData({ type: 'FeatureCollection', features: [] });
+    const feats = [[402, L('¼ mile', '¼ milla')], [1609, L('1 mile', '1 milla')]].flatMap(([r, label]) => { const ring = circle(a.center, r); return [{ type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: ring } }, { type: 'Feature', properties: { label }, geometry: { type: 'Point', coordinates: ring[0] } }]; });
+    map.getSource('rings').setData({ type: 'FeatureCollection', features: feats });
+    fadePaint('rings', 'line-opacity', .7); fadePaint('ring-labels', 'text-opacity', 1);
+  };
+  function fadePaint(layer, prop, to, ms = 700) {
+    if (reduced) return map.setPaintProperty(layer, prop, to);
+    map.setPaintProperty(layer, prop + '-transition', { duration: ms, delay: 0 }); map.setPaintProperty(layer, prop, to);
+  }
+  const baseColor = ['interpolate', ['linear'], ['get', 'h'], 0, COLORS.building, 60, '#1b3d4a', 200, '#24505e', 400, '#2d6070'];
+  const compareBuildings = a => {
+    map.setPaintProperty('buildings-3d', 'fill-extrusion-color', a?.heightFt
+      ? ['case', ['>', ['get', 'h'], a.heightFt], '#8fb9c2', ['interpolate', ['linear'], ['get', 'h'], 0, '#0f2731', 200, '#183a46']]
+      : baseColor);
+  };
 
   // Markers (HTML, so they use the brand type)
   const markers = new Map();
@@ -210,6 +250,7 @@ async function main() {
     listEl.querySelectorAll('.card').forEach(el => el.classList.toggle('is-active', el.dataset.id === id));
     markers.forEach(({ el }, key) => el.classList.toggle('is-active', key === id));
     detailBody.innerHTML = detailHtml(a);
+    showRings(a); compareBuildings(a);
     detail.hidden = false; requestAnimationFrame(() => detail.classList.add('is-open'));
     listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
     history.replaceState(null, '', '#' + id);
@@ -225,6 +266,7 @@ async function main() {
     setTimeout(() => { if (!active) detail.hidden = true; }, 450);
     fc.features.forEach(f => map.setFeatureState({ source: 'll', id: f.id }, { active: false }));
     document.querySelectorAll('.card.is-active, .pin.is-active').forEach(el => el.classList.remove('is-active'));
+    fadePaint('rings', 'line-opacity', 0); fadePaint('ring-labels', 'text-opacity', 0); compareBuildings(null);
     history.replaceState(null, '', location.pathname + location.search);
     const cam = home();
     reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });

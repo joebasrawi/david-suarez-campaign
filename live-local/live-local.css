@@ -94,6 +94,21 @@ h1 .accent { color: var(--coral) }
 .hero-num span { color: #ffd2c6; font-weight: 600; font-size: .9rem }
 .hero-num.pending { background: rgba(255,255,255,.035); border-color: var(--line) }
 .hero-num.pending span { color: var(--muted) }
+.compare { margin: 0 0 1.2rem; padding: 1rem 1.05rem 1.05rem; border-radius: 16px; background: rgba(255,255,255,.035); border: 1px solid var(--line) }
+.compare h3 { margin: 0 0 .35rem; font: 400 1.25rem/1 var(--display); text-transform: uppercase; letter-spacing: .01em; color: #fff }
+.compare-lede { margin: 0 0 .85rem; color: #d7e4e6; font-size: .86rem; font-weight: 600 }
+.compare ul { list-style: none; margin: 0 0 .7rem; padding: 0; display: grid; gap: .7rem }
+.compare li { display: grid; grid-template-columns: 1fr; gap: .25rem }
+.compare .k { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase }
+.compare .track { position: relative; height: 10px; border-radius: 6px; background: rgba(255,255,255,.06); overflow: hidden }
+.compare .fill { position: absolute; inset: 0 auto 0 0; width: var(--w); border-radius: 6px; transform-origin: left; animation: bar 1.1s var(--ease) var(--d) both }
+@keyframes bar { from { transform: scaleX(0) } }
+.compare .me .fill { background: linear-gradient(90deg, #e8512f, #ff8a6b); box-shadow: 0 0 14px rgba(255,106,69,.5) }
+.compare .tall .fill { background: #8fb9c2 }
+.compare .typ .fill { background: #4f7782 }
+.compare .far .fill { background: #2f5561 }
+.compare .v { color: #fff; font-size: .8rem; font-weight: 600 }
+.compare .me .v { color: #ffc2b2 }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: .1rem 1rem; margin: 0 0 1.1rem }
 .facts div { padding: .6rem 0; border-bottom: 1px solid var(--line) }
 .facts div.wide { grid-column: 1 / -1 }

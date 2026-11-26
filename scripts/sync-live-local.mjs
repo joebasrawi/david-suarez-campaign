@@ -161,27 +161,59 @@ for (const a of applications) {
   for (const f of await parcelsFor(a.sites.map(s => s.folio), '')) features.push({ type: 'Feature', properties: { id: a.id, stage: a.stage, stories: a.stories }, geometry: f.geometry });
 }
 
-const BUILDINGS = 'https://gis.miamibeachfl.gov/public/rest/services/gc/gc_Buildings/MapServer/0/query';
+// Building footprints with LiDAR heights (feet) from Miami-Dade County's UBID/folio layer.
+// Only height, floors, year and (for taller buildings) street address are kept; owner fields are never read.
+const BUILDINGS = 'https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/ArcGIS/rest/services/BuildingFootprintUBIDFolio_gdb/FeatureServer/0/query';
 const buildings = [];
-for (let offset = 0; offset < 20000; offset += 1000) {
+for (let offset = 0; offset < 30000; offset += 2000) {
   const url = new URL(BUILDINGS);
-  url.search = new URLSearchParams({ where: '1=1', outFields: 'FLOORS', returnGeometry: 'true', outSR: '4326', geometryPrecision: '6', maxAllowableOffset: '0.000004', resultOffset: String(offset), resultRecordCount: '1000', orderByFields: 'OBJECTID', f: 'geojson' });
+  url.search = new URLSearchParams({ where: "CITY='MIAMI BEACH'", outFields: 'BLDG_HEIGHT,FLOORS,YEAR_BUILT,ADDRESS', returnGeometry: 'true', outSR: '4326', geometryPrecision: '6', maxAllowableOffset: '0.000004', resultOffset: String(offset), resultRecordCount: '2000', orderByFields: 'OBJECTID', f: 'geojson' });
   const page = await fetchJson(url);
-  for (const f of page.features || []) buildings.push({ type: 'Feature', properties: { f: Number(f.properties.FLOORS) || 1 }, geometry: f.geometry });
-  if (!page.features || page.features.length < 1000) break;
+  for (const f of page.features || []) {
+    if (!f.geometry) continue;
+    const ft = Math.round(Number(f.properties.BLDG_HEIGHT) || 0);
+    const props = { h: ft };
+    if (ft >= 60 && f.properties.ADDRESS) props.a = cleanText(f.properties.ADDRESS);
+    buildings.push({ type: 'Feature', properties: props, geometry: f.geometry });
+  }
+  if (!page.features || page.features.length < 2000) break;
 }
-if (buildings.length > 5000) {
-  // Compact JSON (no indentation): ~3 MB raw, ~0.6 MB gzipped. Rewritten only when the footprints change.
+
+// Neighborhood comparison for each application: tallest and typical heights within 1/4 mile and 1 mile,
+// skipping buildings on the application's own parcels (those are what would be replaced).
+const ring = g => (g.type === 'Polygon' ? g.coordinates[0] : g.coordinates[0][0]);
+const centroid = g => { const r = ring(g); return [r.reduce((s, p) => s + p[0], 0) / r.length, r.reduce((s, p) => s + p[1], 0) / r.length]; };
+const meters = (a, b) => { const R = 6371000, k = Math.PI / 180, dLat = (b[1] - a[1]) * k, dLng = (b[0] - a[0]) * k; const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * k) * Math.cos(b[1] * k) * Math.sin(dLng / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); };
+const inside = (pt, poly) => { const polys = poly.type === 'Polygon' ? [poly.coordinates] : poly.coordinates; return polys.some(rings => { let c = false; const r = rings[0]; for (let i = 0, j = r.length - 1; i < r.length; j = i++) { if (((r[i][1] > pt[1]) !== (r[j][1] > pt[1])) && (pt[0] < (r[j][0] - r[i][0]) * (pt[1] - r[i][1]) / (r[j][1] - r[i][1]) + r[i][0])) c = !c; } return c; }); };
+const points = buildings.map(b => ({ c: centroid(b.geometry), h: b.properties.h, a: b.properties.a || null }));
+const median = xs => { const s = [...xs].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : null; };
+for (const app of applications) {
+  if (!app.center) continue;
+  const own = (await parcelsFor(app.sites.map(s => s.folio), '')).map(f => f.geometry);
+  const near = points.filter(p => p.h > 0 && !own.some(g => inside(p.c, g))).map(p => ({ ...p, d: meters(app.center, p.c) }));
+  const quarter = near.filter(p => p.d <= 402), mile = near.filter(p => p.d <= 1609);
+  const top = xs => xs.reduce((m, p) => (p.h > (m?.h || 0) ? p : m), null);
+  const pick = p => (p ? { ft: p.h, address: p.a, meters: Math.round(p.d) } : null);
+  const estFt = app.stories ? Math.round((app.stories * 10.5) / 5) * 5 : null;
+  app.heightFt = estFt;
+  app.compare = {
+    quarterMile: { tallest: pick(top(quarter)), typicalFt: median(quarter.map(p => p.h)), buildings: quarter.length, taller: estFt ? quarter.filter(p => p.h > estFt).length : null },
+    mile: { tallest: pick(top(mile)), typicalFt: median(mile.map(p => p.h)), buildings: mile.length, taller: estFt ? mile.filter(p => p.h > estFt).length : null }
+  };
+}
+
+if (buildings.length > 8000) {
+  // Compact JSON (no indentation). Rewritten only when the footprints change.
   const file = path.join(ROOT, 'data/mb-buildings.json');
   const body = JSON.stringify(buildings);
   const previous = await readFile(file, 'utf8').then(t => JSON.stringify(JSON.parse(t).features)).catch(() => '');
-  if (previous !== body) await writeFile(file, `{"type":"FeatureCollection","source":"${BUILDINGS.replace('/query', '')}","generatedAt":"${isoNow()}","features":${body}}\n`);
+  if (previous !== body) await writeFile(file, `{"type":"FeatureCollection","source":"${BUILDINGS.replace('/query', '')}","units":"feet","generatedAt":"${isoNow()}","features":${body}}\n`);
 }
 
 await writeSnapshot('data/live-local.json', {
   generatedAt: isoNow(),
   source: {
-    label: 'City of Miami Beach Live Local Act pages, Civic Access, City parcel layer and signed orders',
+    label: 'City of Miami Beach Live Local Act pages, Civic Access, City parcel layer, signed orders, and Miami-Dade County LiDAR building heights',
     urls: [PAGES.approved, PAGES.review, `${ENERGOV}`, PARCELS.replace('/query', '')]
   },
   counts: { total: applications.length, approved: applications.filter(a => a.stage === 'approved').length, review: applications.filter(a => a.stage === 'review').length },
