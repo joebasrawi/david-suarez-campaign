@@ -1,5 +1,6 @@
 /* Live Local map. Brand tokens from the site: Anton display, Inter text, deep teal canvas, mint + coral accents. */
 :root {
+  --city: #6ea8ff;
   --ink: #071a22; --canvas: #0b222c; --panel: rgba(9, 28, 36, .78); --line: rgba(255,255,255,.09); --line-2: rgba(255,255,255,.16);
   --text: #eef4f1; --muted: #9fb4ba; --mint: #78d6c8; --mint-soft: #b8e0cc; --coral: #ff6a45; --warm: #edbd79; --teal: #28796e;
   --display: "Anton", Impact, sans-serif; --sans: "Inter", system-ui, sans-serif;
@@ -217,6 +218,40 @@ html[data-engine="photo"] .map-veil { background:
 .pin.dev.review i { width: 4px; height: 4px; background: var(--warm) }
 .pin.dev::after { width: 6px; height: 6px; margin-left: -3px; bottom: -4px }
 .pin.dev.review::after { background: var(--warm) }
+
+/* Views */
+.views { display: flex; flex-wrap: wrap; gap: .25rem; margin: 0 0 1.1rem; padding: .3rem; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid var(--line) }
+.views::-webkit-scrollbar { display: none }
+.view-tab { flex: 1 0 auto; min-height: 34px; padding: .3rem .65rem; border: 0; border-radius: 10px; background: transparent; color: #b9cacd; font: 700 .78rem var(--sans); white-space: nowrap; cursor: pointer; transition: background .3s var(--ease), color .3s }
+.view-tab:hover { color: #fff; background: rgba(255,255,255,.05) }
+.view-tab[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 4px 14px rgba(0,0,0,.25) }
+.view-head.is-in > * { animation: rise .55s var(--ease) both }
+.view-head.is-in > *:nth-child(2) { animation-delay: .06s } .view-head.is-in > *:nth-child(3) { animation-delay: .12s }
+h1 .accent-mint { color: var(--mint) } h1 .accent-warm { color: var(--warm) } h1 .accent-blue { color: var(--city) } h1 .accent-tide { color: #6fe3ff }
+.list-head:first-child { margin-top: 0; padding-top: 0; border-top: 0 }
+.chip[data-review].is-on { background: var(--mint); border-color: var(--mint); color: var(--ink) }
+.chip[hidden] { display: none }
+
+/* City projects */
+.dot.city, .sw.city { background: var(--city); box-shadow: 0 0 10px rgba(110,168,255,.6) }
+.card[data-layer="city"][data-stage] .bar { background: var(--city); box-shadow: 0 0 12px rgba(110,168,255,.4) }
+.card[data-layer="city"].is-active { background: rgba(110,168,255,.08); border-color: rgba(110,168,255,.5) }
+.ht.phase-build { color: #b9d4ff } .ht.phase-design { color: #9fb4ba } .ht.phase-plan { color: #7f959b }
+.status.city { background: rgba(110,168,255,.12); color: #b9d4ff; border-color: rgba(110,168,255,.4) }
+.pin.city { min-width: 14px; width: 14px; height: 14px; padding: 0; background: #0f2140; border: 2px solid var(--city); box-shadow: 0 4px 12px rgba(0,0,0,.4) }
+.pin.city.build { background: var(--city) }
+.pin.city i { width: 4px; height: 4px; border-radius: 50%; background: var(--city) }
+.pin.city.build i { background: #0f2140 }
+.pin.city::after { width: 6px; height: 6px; margin-left: -3px; bottom: -4px; background: var(--city) }
+.pin.city::before { display: none }
+
+/* Keyboard hint */
+.keys-hint { position: absolute; z-index: 3; right: clamp(1rem,2.4vw,2rem); top: 5.6rem; padding: .5rem .75rem; border-radius: 12px; background: rgba(7,26,34,.7); border: 1px solid var(--line); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #b9cacd; font-size: .72rem; font-weight: 600; opacity: 0; transition: opacity .6s var(--ease) 1.2s, transform .4s var(--ease) }
+.app[data-state="ready"] .keys-hint { opacity: 1 }
+html.is-flying .app .keys-hint, .app .detail.is-open ~ .keys-hint { opacity: 0; transition-delay: 0s; pointer-events: none }
+.keys-hint kbd { display: inline-grid; place-items: center; min-width: 1.45rem; height: 1.45rem; margin: 0 .08rem; padding: 0 .3rem; border-radius: 6px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-bottom-width: 2px; color: #fff; font: 700 .7rem var(--sans) }
+html[data-engine="flat"] .keys-hint { right: calc(clamp(1rem,2.4vw,2rem) + 52px) }
+@media (max-width: 52rem), (hover: none) { .keys-hint { display: none } }
 
 /* Loader */
 .loader { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; background: var(--ink); transition: opacity .9s var(--ease), visibility .9s }

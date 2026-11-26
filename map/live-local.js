@@ -91,8 +91,37 @@ function floodFacts(a) {
 }
 
 // Filters: all | ll (Live Local) | dev (other development) | review (anything under review)
-const matches = (a, f) => f === 'all' || (f === 'll' && a.layer === 'll') || (f === 'dev' && a.layer === 'dev') || (f === 'review' && a.stage !== 'approved');
-const filterExpr = f => f === 'all' ? null : f === 'review' ? ['!=', ['get', 'stage'], 'approved'] : ['==', ['get', 'layer'], f];
+// A filter state is { layers: ['ll', 'dev', 'city'], review: bool }.
+const matches = (a, f) => f.layers.includes(a.layer) && (!f.review || (a.layer === 'city' ? a.stage !== 'build' : a.stage !== 'approved'));
+const filterExpr = f => ['all', ['in', ['get', 'layer'], ['literal', f.layers]], f.review ? ['!=', ['get', 'stage'], 'approved'] : true];
+
+// City capital projects (Public Works and others), from the City's project map.
+const PHASE = { plan: ['Planning', 'Planificación'], design: ['Design', 'Diseño'], build: ['Construction', 'Construcción'] };
+const phaseOf = p => (/constr/i.test(p || '') ? 'build' : /design/i.test(p || '') ? 'design' : 'plan');
+function cityCard(a) {
+  return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${a.stage}" data-layer="city"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(a.location)}</span><span class="ht na phase-${a.stage}">${esc(L(...PHASE[a.stage]))}</span><span class="meta">${esc([a.department, a.neighborhood].filter(Boolean).join(' · '))}</span></button></li>`;
+}
+function cityDetailHtml(a) {
+  const facts = [
+    [L('What', 'Qué'), a.description, true],
+    [L('Where', 'Dónde'), a.limits, true],
+    [L('Phase', 'Fase'), L(...PHASE[a.stage])],
+    [L('Status', 'Estado'), a.status],
+    [L('Type', 'Tipo'), a.type],
+    [L('Department', 'Departamento'), a.department],
+    [L('Neighborhood', 'Vecindario'), a.neighborhood],
+    a.startDate ? [L('Start', 'Inicio'), date(a.startDate)] : null,
+    a.endDate ? [L('Expected end', 'Fin previsto'), date(a.endDate)] : null,
+    ...floodFacts(a)
+  ].filter(f => f && f[1] && f[1] !== 'null');
+  return `
+    <span class="status city phase-${a.stage}">${esc(L('City project', 'Proyecto de la Ciudad'))} · ${esc(L(...PHASE[a.stage]))}</span>
+    <h2 id="detail-title">${esc(a.location)}</h2>
+    <p class="case">${esc(a.projectNumber ? L(`Project ${a.projectNumber}`, `Proyecto ${a.projectNumber}`) : '')}</p>
+    <dl class="facts">${facts.map(([k, v, wide]) => `<div class="${wide ? 'wide' : ''}"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+    <div class="links">${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">${L('City project page', 'Página del proyecto')}</a>` : ''}<a class="${a.link ? 'ghost' : ''}" href="https://www.miamibeachfl.gov/city-hall/capital-improvement-projects/" target="_blank" rel="noopener">${L('City capital projects', 'Proyectos de capital de la Ciudad')}</a></div>
+    <p class="fine">${L('Source: City of Miami Beach capital project map.', 'Fuente: mapa de proyectos de capital de la Ciudad de Miami Beach.')}</p>`;
+}
 const KIND = { new: ['New building', 'Edificio nuevo'], major: ['Major renovation', 'Gran renovación'], rezoning: ['Rezoning', 'Cambio de zonificación'] };
 function devCard(a) {
   const ht = a.stories ? `<span class="ht">${a.stories}<small>${L('stories', 'pisos')}</small></span>` : `<span class="ht na">${esc(L(...KIND[a.kind]))}</span>`;
@@ -100,6 +129,7 @@ function devCard(a) {
   return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${a.stage}" data-layer="dev"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(a.location)}</span>${ht}<span class="meta">${esc(when)} · ${esc(a.boards.map(b => b.replace(' Board', '')).join(' + '))}</span></button></li>`;
 }
 function card(a) {
+  if (a.layer === 'city') return cityCard(a);
   if (a.layer === 'dev') return devCard(a);
   const ht = a.stories ? `<span class="ht">${a.stories}<small>stories</small></span>` : `<span class="ht na">In review</span>`;
   const when = a.stage === 'approved' ? L('Approved', 'Aprobado') : L(`Filed ${date(a.filed)}`, `Presentado el ${date(a.filed)}`);
@@ -148,6 +178,7 @@ function devDetailHtml(a) {
 }
 
 function detailHtml(a) {
+  if (a.layer === 'city') return cityDetailHtml(a);
   if (a.layer === 'dev') return devDetailHtml(a);
   const sale = a.sites.filter(s => s.lastSale?.price).sort((x, y) => (y.lastSale.date || '').localeCompare(x.lastSale.date || ''))[0];
   const lot = a.sites.reduce((n, s) => n + (Number(s.lotSize) || 0), 0);
@@ -253,8 +284,8 @@ async function flatEngine({ data, apps, byId, cb }) {
   for (const a of apps) {
     if (!a.center) continue;
     const el = document.createElement('button');
-    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : ''}`; el.dataset.layer = a.layer; el.dataset.id = a.id; el.setAttribute('aria-label', `${title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
-    el.innerHTML = a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
+    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : a.layer === 'city' ? ' city' : ''}`; el.dataset.layer = a.layer; el.dataset.stage = a.stage; el.dataset.id = a.id; el.setAttribute('aria-label', `${title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
+    el.innerHTML = a.layer === 'city' ? '<i></i>' : a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap'; wrap.appendChild(el);
     const marker = new maplibregl.Marker({ element: wrap, anchor: 'bottom', offset: [0, -6] }).setLngLat(a.center).addTo(map);
     markers.set(a.id, { marker, el });
@@ -324,60 +355,160 @@ async function flatEngine({ data, apps, byId, cb }) {
       fadePaint('rings', 'line-opacity', 0); fadePaint('ring-labels', 'text-opacity', 0); compareBuildings(null);
       const cam = home(); reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });
     },
+    // Keyboard flying: forward/right in screen pixels per second, turn in degrees per second.
+    move({ forward, right, turn, up }, dt, fast) {
+      map.stop();
+      const k = (fast ? 2.6 : 1) * dt;
+      if (forward || right) map.panBy([right * 520 * k, -forward * 520 * k], { duration: 0 });
+      if (turn) map.setBearing(map.getBearing() + turn * 70 * k);
+      if (up) map.setZoom(map.getZoom() - up * 1.1 * k);
+    },
     flood(on) { for (const id of ['flood-zones', 'flood-tidal', 'flood-tidal-line']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none'); },
     filter(f) {
-      markers.forEach(({ el }) => el.classList.toggle('is-dim', !matches({ layer: el.dataset.layer, stage: el.classList.contains('approved') ? 'approved' : 'review' }, f)));
+      markers.forEach(({ el }) => { const hide = !matches({ layer: el.dataset.layer, stage: el.dataset.stage }, f); el.classList.toggle('is-dim', hide); el.parentElement.style.display = hide ? 'none' : ''; });
       const expr = filterExpr(f);
       for (const id of ['ll-glow', 'll-plate', 'll-line']) map.setFilter(id, expr);
-      map.setFilter('ll-tower', ['all', ['==', ['get', 'stage'], 'approved'], ['>', ['get', 'h'], 0], expr || true]);
+      map.setFilter('ll-tower', ['all', ['==', ['get', 'stage'], 'approved'], ['>', ['get', 'h'], 0], expr]);
     }
   };
 }
 
 async function main() {
   const v = Date.now().toString().slice(0, -5);
-  const [data, dev] = await Promise.all([
-    fetch('../data/live-local.json?v=' + v).then(r => r.json()),
-    fetch('../data/development.json?v=' + v).then(r => r.json()).catch(() => ({ projects: [], parcels: { features: [] } }))
+  const get = (f, fallback) => fetch(`../data/${f}?v=${v}`).then(r => r.json()).catch(() => fallback);
+  const [data, dev, flood, cityRaw] = await Promise.all([
+    get('live-local.json', { applications: [], parcels: { features: [] }, generatedAt: new Date().toISOString() }),
+    get('development.json', { projects: [], parcels: { features: [] } }),
+    get('flood.json', null),
+    get('city-projects.json', { items: [] })
   ]);
-  const flood = await fetch('../data/flood.json?v=' + v).then(r => r.json()).catch(() => null);
   const ll = data.applications.map(a => ({ ...a, layer: 'll' }));
   const devApps = dev.projects.map(p => ({ ...p, layer: 'dev', number: p.id }));
-  const apps = [...ll, ...devApps];
+  const seenCity = new Set();
+  const city = cityRaw.items.filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lng) && !seenCity.has(p.projectNumber + p.title) && seenCity.add(p.projectNumber + p.title))
+    .map(p => ({ ...p, layer: 'city', id: 'CIP-' + p.id, number: p.projectNumber, location: p.title, stage: phaseOf(p.phase), center: [p.lng, p.lat], sites: [] }));
+  const apps = [...ll, ...devApps, ...city];
   for (const a of apps) a.flood = floodFor(a, flood);
   data.parcels = { type: 'FeatureCollection', features: [
     ...data.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'll' } })),
     ...dev.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'dev', stories: f.properties.stage === 'approved' ? f.properties.stories : null } }))
   ] };
   const byId = new Map(apps.map(a => [a.id, a]));
-  const approved = ll.filter(a => a.stage === 'approved');
 
-  // Numbers and list
-  const set = (k, v) => document.querySelectorAll(`[data-count="${k}"]`).forEach(el => (el.textContent = v));
-  set('total', ll.length); set('approved', approved.length); set('review', ll.length - approved.length); set('dev', devApps.length);
-  set('tallest', Math.max(...approved.map(a => a.stories || 0)));
-  const updated = () => (document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`));
-  updated();
+  // Numbers used across views
+  const llApproved = ll.filter(a => a.stage === 'approved');
+  const devApproved = devApps.filter(a => a.stage === 'approved');
+  const tallestLL = Math.max(0, ...llApproved.map(a => a.stories || 0));
+  const tallestDev = Math.max(0, ...devApproved.map(a => a.stories || 0));
+  const nearFrequent = apps.filter(a => a.layer !== 'city' && a.flood?.spot?.freq === 'Frequently').length;
+  const tidal = flood?.tidal.features || [];
+  const freqCount = q => tidal.filter(f => f.properties.freq === q).length;
+  const byPhase = ph => city.filter(a => a.stage === ph).length;
+
+  const stat = (k, n, unit = '') => `<div><dt>${esc(k)}</dt><dd>${n}${unit ? `<small> ${esc(unit)}</small>` : ''}</dd></div>`;
+  const VIEWS = {
+    overview: {
+      layers: ['ll', 'dev', 'city'], flood: false,
+      head: () => `<h1><span class="accent-mint">${L('Miami Beach,', 'Miami Beach,')}</span> ${L('mapped.', 'en un mapa.')}</h1>
+        <p class="lead">${L("What developers are building, what the City is building, and where it floods. Every point comes from public City and County records. Pick a view, or click anything on the map.", 'Lo que construyen los desarrolladores, lo que construye la Ciudad y dónde se inunda. Cada punto viene de registros públicos de la Ciudad y el Condado. Elige una vista o haz clic en el mapa.')}</p>
+        <dl class="stats">${stat(L('Development projects', 'Proyectos de desarrollo'), ll.length + devApps.length)}${stat(L('City projects', 'Proyectos de la Ciudad'), city.length)}${stat(L('Tidal flooding spots', 'Puntos de inundación'), tidal.length)}</dl>`
+    },
+    development: {
+      layers: ['ll', 'dev'], flood: false,
+      head: () => `<h1>${ll.length + devApps.length} ${L('development projects.', 'proyectos de desarrollo.')} <span class="accent-warm">${L('Since 2023.', 'Desde 2023.')}</span></h1>
+        <p class="lead">${L("New buildings, major renovations and rezonings before the City's Design Review, Historic Preservation and Planning boards, plus every Live Local Act application. Approved projects with a known height rise in 3D.", 'Edificios nuevos, grandes renovaciones y cambios de zonificación ante las juntas de la Ciudad, más cada solicitud de la Ley Live Local. Los proyectos aprobados con altura conocida se elevan en 3D.')}</p>
+        <dl class="stats">${stat(L('Approved', 'Aprobados'), llApproved.length + devApproved.length)}${stat(L('Under review', 'En revisión'), ll.length + devApps.length - llApproved.length - devApproved.length)}${stat(L('Tallest approved', 'Más alto aprobado'), Math.max(tallestLL, tallestDev), L('stories', 'pisos'))}</dl>`
+    },
+    livelocal: {
+      layers: ['ll'], flood: false,
+      head: () => `<h1>${ll.length} ${L('Live Local projects.', 'proyectos Live Local.')} <span class="accent">${L('No public hearing required.', 'Sin audiencia pública.')}</span></h1>
+        <p class="lead">${L("Florida's Live Local Act lets developers build apartments on commercial land at the city's highest allowed density and up to the tallest height allowed within a mile, if at least 40% of the rental units are affordable. In Miami Beach, the Planning Director approves these plans administratively, without a public hearing or Commission vote.", 'La Ley Live Local de Florida permite construir apartamentos en terrenos comerciales con la mayor densidad permitida en la ciudad y hasta la altura máxima permitida en un radio de una milla, si al menos el 40% de las unidades de alquiler son asequibles. En Miami Beach, el Director de Planificación aprueba estos planes de forma administrativa, sin audiencia pública ni votación de la Comisión.')}</p>
+        <dl class="stats">${stat(L('Approved', 'Aprobados'), llApproved.length)}${stat(L('Under review', 'En revisión'), ll.length - llApproved.length)}${stat(L('Tallest approved', 'Más alto aprobado'), tallestLL, L('stories', 'pisos'))}</dl>`
+    },
+    city: {
+      layers: ['city'], flood: false,
+      head: () => `<h1>${city.length} ${L('City projects.', 'proyectos de la Ciudad.')} <span class="accent-blue">${L('Your tax dollars at work.', 'Tus impuestos en acción.')}</span></h1>
+        <p class="lead">${L("Streets, drainage, parks and buildings the City itself is planning, designing or building, from the City's capital project map.", 'Calles, drenaje, parques y edificios que la propia Ciudad planifica, diseña o construye, según el mapa de proyectos de capital de la Ciudad.')}</p>
+        <dl class="stats">${stat(L('Planning', 'Planificación'), byPhase('plan'))}${stat(L('Design', 'Diseño'), byPhase('design'))}${stat(L('Construction', 'Construcción'), byPhase('build'))}</dl>`
+    },
+    flood: {
+      layers: ['ll', 'dev'], flood: true,
+      head: () => `<h1>${L('Where Miami Beach floods.', 'Dónde se inunda Miami Beach.')} <span class="accent-tide">${L("And what's going up there.", 'Y qué se construye allí.')}</span></h1>
+        <p class="lead">${L("FEMA flood zones and the City's own map of tidal flooding spots, with every development project on top. Open any project to see its flood zone and the nearest flooding spot.", 'Las zonas de inundación de FEMA y el mapa de la Ciudad de puntos de inundación por marea, con cada proyecto de desarrollo encima. Abre cualquier proyecto para ver su zona y el punto de inundación más cercano.')}</p>
+        <dl class="stats">${stat(L('Flood often', 'Se inundan a menudo'), freqCount('Frequently'))}${stat(L('Sometimes', 'A veces'), freqCount('Occasionally'))}${stat(L('Projects near frequent flooding', 'Proyectos cerca de inundación frecuente'), nearFrequent)}</dl>`
+    }
+  };
+  const LEGEND = {
+    ll: () => `<span><i class="sw approved"></i>${L('Live Local approved', 'Live Local aprobado')}</span><span><i class="sw review"></i>${L('Live Local under review', 'Live Local en revisión')}</span>`,
+    dev: () => `<span><i class="sw dev"></i>${L('Other development', 'Otros proyectos')}</span>`,
+    city: () => `<span><i class="sw city"></i>${L('City projects', 'Proyectos de la Ciudad')}</span>`
+  };
+
+  const state = { view: 'overview', layers: VIEWS.overview.layers, review: false, flood: false };
+  const params = new URLSearchParams(location.search);
+  if (VIEWS[params.get('view')]) state.view = params.get('view');
+
   const llOrder = [...ll].sort((a, b) => (a.stage === b.stage ? (b.stories || 0) - (a.stories || 0) || (b.filed || '').localeCompare(a.filed || '') : a.stage === 'approved' ? -1 : 1));
-  const order = [...llOrder, ...devApps];
-  const renderList = () => (listEl.innerHTML = llOrder.map(card).join('') + `<li class="list-head" data-layer="dev"><span>${L('Other development since 2023', 'Otros proyectos desde 2023')}</span><small>${L(`${devApps.length} projects from the Design Review, Historic Preservation and Planning boards`, `${devApps.length} proyectos de las juntas de Revisión de Diseño, Preservación Histórica y Planificación`)}</small></li>` + devApps.map(card).join(''));
-  renderList();
-  listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${Math.min(1.4, 0.45 + i * 0.045)}s`));
+  const cityOrder = [...city].sort((a, b) => ['build', 'design', 'plan'].indexOf(a.stage) - ['build', 'design', 'plan'].indexOf(b.stage) || a.location.localeCompare(b.location));
+  const head = (layer, title, sub) => `<li class="list-head" data-layer="${layer}"><span>${esc(title)}</span><small>${esc(sub)}</small></li>`;
+  function renderList() {
+    const f = state;
+    const parts = [];
+    const vis = xs => xs.filter(a => matches(a, f));
+    if (f.layers.includes('ll') && vis(llOrder).length) parts.push(head('ll', L('Live Local Act', 'Ley Live Local'), L(`${vis(llOrder).length} applications`, `${vis(llOrder).length} solicitudes`)), ...vis(llOrder).map(card));
+    if (f.layers.includes('dev') && vis(devApps).length) parts.push(head('dev', L('Development since 2023', 'Desarrollo desde 2023'), L(`${vis(devApps).length} projects from the land use boards`, `${vis(devApps).length} proyectos de las juntas de uso de suelo`)), ...vis(devApps).map(card));
+    if (f.layers.includes('city') && vis(cityOrder).length) parts.push(head('city', L('City projects', 'Proyectos de la Ciudad'), L(`${vis(cityOrder).length} in planning, design or construction`, `${vis(cityOrder).length} en planificación, diseño o construcción`)), ...vis(cityOrder).map(card));
+    listEl.innerHTML = parts.join('');
+    listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${Math.min(.9, i * 0.03)}s`));
+    if (active) listEl.querySelector(`.card[data-id="${CSS.escape(active)}"]`)?.classList.add('is-active');
+  }
+  const viewHead = document.querySelector('.view-head');
+  const legend = document.querySelector('.legend');
+  function renderHead() {
+    viewHead.classList.remove('is-in'); void viewHead.offsetWidth;
+    viewHead.innerHTML = VIEWS[state.view].head();
+    viewHead.classList.add('is-in');
+    legend.innerHTML = state.layers.map(l => LEGEND[l]()).join('');
+    document.querySelector('[data-review]').hidden = state.view === 'city';
+    if (state.view === 'city' && state.review) document.querySelector('[data-review]').click();
+  }
+  const updated = () => (document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`));
 
   let active = null;
-  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`, L, title, esc, reduced, phone, matches, flood };
+  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => a.layer === 'city'
+      ? `<div class="tip">${esc(a.location)}<small>${esc(L('City project', 'Proyecto de la Ciudad'))} · ${esc(L(...PHASE[a.stage]))}</small></div>`
+      : `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`,
+    L, title, esc, reduced, phone, matches, flood };
 
   // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
-  const want = new URLSearchParams(location.search).get('engine');
   let engine = null;
-  if (key && want !== 'flat') {
-    try { engine = await (await import('./engine-photo.js?v=4')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+  if (key && params.get('engine') !== 'flat') {
+    try { engine = await (await import('./engine-photo.js?v=6')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
     catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
   }
   if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
 
+  function applyView(id, { push = true } = {}) {
+    state.view = id;
+    state.layers = VIEWS[id].layers;
+    setFlood(VIEWS[id].flood);
+    document.querySelectorAll('.view-tab').forEach(t => t.setAttribute('aria-pressed', t.dataset.view === id));
+    renderHead(); renderList();
+    engine.filter(state);
+    if (push) { const u = new URL(location.href); id === 'overview' ? u.searchParams.delete('view') : u.searchParams.set('view', id); history.replaceState(null, '', u); }
+  }
+  function setFlood(on) {
+    state.flood = on;
+    const b = document.querySelector('[data-flood]');
+    b.setAttribute('aria-pressed', on); b.classList.toggle('is-on', on);
+    document.querySelector('.flood-key').hidden = !on;
+    engine.flood?.(on);
+  }
+
   app.dataset.state = 'ready';
+  applyView(state.view, { push: false });
+  updated();
   engine.intro();
 
   function hover(id, on) {
@@ -387,12 +518,13 @@ async function main() {
   }
   function select(id, { fly = true } = {}) {
     const a = byId.get(id); if (!a) return;
+    if (!matches(a, { layers: state.layers, review: false })) applyView(a.layer === 'city' ? 'city' : a.layer === 'll' ? 'livelocal' : 'development');
     active = id;
     listEl.querySelectorAll('.card').forEach(el => el.classList.toggle('is-active', el.dataset.id === id));
     detailBody.innerHTML = detailHtml(a);
     detail.hidden = false; requestAnimationFrame(() => detail.classList.add('is-open'));
     listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
-    history.replaceState(null, '', '#' + id);
+    history.replaceState(null, '', location.pathname + location.search + '#' + id);
     engine.select(a, { fly, detailWidth: detail.offsetWidth });
   }
   function close() {
@@ -410,25 +542,48 @@ async function main() {
   listEl.addEventListener('mouseover', e => { const c = e.target.closest('.card'); if (c) hover(c.dataset.id, true); });
   listEl.addEventListener('mouseleave', () => hover(null, false));
 
-  document.querySelectorAll('.chip[data-filter]').forEach(chip => chip.addEventListener('click', () => {
-    const f = chip.dataset.filter;
-    document.querySelectorAll('.chip[data-filter]').forEach(c => { const on = c === chip; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on); });
-    listEl.querySelectorAll('.card').forEach(el => (el.parentElement.hidden = !matches({ layer: el.dataset.layer, stage: el.dataset.stage }, f)));
-    listEl.querySelector('.list-head').hidden = f === 'll';
-    engine.filter(f);
-  }));
-
-  const floodBtn = document.querySelector('[data-flood]');
-  floodBtn?.addEventListener('click', () => {
-    const on = floodBtn.getAttribute('aria-pressed') !== 'true';
-    floodBtn.setAttribute('aria-pressed', on); floodBtn.classList.toggle('is-on', on);
-    document.querySelector('.flood-key').hidden = !on;
-    engine.flood?.(on);
+  document.querySelectorAll('.view-tab').forEach(t => t.addEventListener('click', () => applyView(t.dataset.view)));
+  const reviewBtn = document.querySelector('[data-review]');
+  reviewBtn.addEventListener('click', () => {
+    state.review = reviewBtn.getAttribute('aria-pressed') !== 'true';
+    reviewBtn.setAttribute('aria-pressed', state.review); reviewBtn.classList.toggle('is-on', state.review);
+    renderList(); engine.filter(state);
   });
+  document.querySelector('[data-flood]').addEventListener('click', () => setFlood(!state.flood));
+
+  // WASD move · Q/E turn · R/F up and down · Shift faster. Ignored while typing.
+  const held = new Set();
+  const KEYS = new Set(['w', 'a', 's', 'd', 'q', 'e', 'r', 'f', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright']);
+  let last = 0, looping = false;
+  const typing = () => /input|textarea|select/i.test(document.activeElement?.tagName || '') || document.activeElement?.isContentEditable;
+  function loop(now) {
+    if (!held.size) { looping = false; return; }
+    const dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
+    const has = k => held.has(k);
+    const forward = (has('w') || has('arrowup') ? 1 : 0) - (has('s') || has('arrowdown') ? 1 : 0);
+    const right = (has('d') ? 1 : 0) - (has('a') ? 1 : 0);
+    const turn = (has('e') || has('arrowright') ? 1 : 0) - (has('q') || has('arrowleft') ? 1 : 0);
+    const up = (has('r') ? 1 : 0) - (has('f') ? 1 : 0);
+    if (dt > 0) engine.move?.({ forward, right, turn, up }, dt, has('shift'));
+    requestAnimationFrame(loop);
+  }
+  addEventListener('keydown', e => {
+    const k = e.key.toLowerCase();
+    if (typing() || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (k === 'shift') { held.add('shift'); return; }
+    if (!KEYS.has(k)) return;
+    if (k.startsWith('arrow') && document.activeElement?.closest?.('.panel')) return;
+    e.preventDefault();
+    held.add(k);
+    document.documentElement.classList.add('is-flying');
+    if (!looping) { looping = true; last = 0; requestAnimationFrame(loop); }
+  });
+  addEventListener('keyup', e => { held.delete(e.key.toLowerCase()); if (!held.size || (held.size === 1 && held.has('shift'))) { held.delete('shift'); } });
+  addEventListener('blur', () => held.clear());
 
   document.addEventListener('language:change', () => {
-    renderList();
-    if (active) { listEl.querySelector(`.card[data-id="${CSS.escape(active)}"]`)?.classList.add('is-active'); detailBody.innerHTML = detailHtml(byId.get(active)); }
+    renderHead(); renderList();
+    if (active) detailBody.innerHTML = detailHtml(byId.get(active));
     updated();
     engine.relabel?.();
   });
@@ -440,5 +595,5 @@ async function main() {
 main().catch(error => {
   console.error(error);
   app.dataset.state = 'error';
-  listEl.innerHTML = '<li class="fine">The map could not load. The City\'s own lists are linked under Sources.</li>';
+  listEl.innerHTML = '<li class="fine">The map could not load. The sources are linked below.</li>';
 });

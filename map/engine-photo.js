@@ -75,9 +75,9 @@ export async function create({ data, apps, byId, cb, key }) {
   for (const a of apps) {
     if (!a.center) continue;
     const el = document.createElement('button');
-    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : ''}`; el.dataset.id = a.id; el.dataset.layer = a.layer;
+    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : a.layer === 'city' ? ' city' : ''}`; el.dataset.id = a.id; el.dataset.layer = a.layer;
     el.setAttribute('aria-label', `${cb.title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
-    el.innerHTML = a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
+    el.innerHTML = a.layer === 'city' ? '<i></i>' : a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap pin-abs'; wrap.appendChild(el); layer.appendChild(wrap);
     el.addEventListener('click', ev => { ev.stopPropagation(); cb.pick(a.id); });
     el.addEventListener('mouseenter', () => cb.hover(a.id, true));
@@ -88,7 +88,9 @@ export async function create({ data, apps, byId, cb, key }) {
   const scratch = new C.Cartesian2();
   scene.postRender.addEventListener(() => {
     const camPos = scene.camera.positionWC;
-    for (const { wrap, a } of pins.values()) {
+    for (const { wrap, a, el } of pins.values()) {
+      if (el.classList.contains('is-dim')) { wrap.style.opacity = '0'; wrap.style.pointerEvents = 'none'; continue; }
+      wrap.style.pointerEvents = '';
       const top = C.Cartesian3.fromDegrees(a.center[0], a.center[1], ground + (a.stage === 'approved' ? projM(a) : 0) * grow + 12);
       const p = toWindow(scene, top, scratch);
       const behind = C.Cartesian3.dot(C.Cartesian3.subtract(top, camPos, new C.Cartesian3()), scene.camera.directionWC) < 0;
@@ -210,6 +212,18 @@ export async function create({ data, apps, byId, cb, key }) {
     filter(f) {
       for (const e of entities) e.show = cb.matches({ layer: e.properties.layer.getValue(), stage: e.properties.stage.getValue() }, f);
       pins.forEach(({ el, a }) => el.classList.toggle('is-dim', !cb.matches(a, f)));
+    },
+    // Keyboard flying: move along the ground relative to where the camera faces; speed scales with altitude.
+    move({ forward, right, turn, up }, dt, fast) {
+      const cam = scene.camera; cam.cancelFlight();
+      const pos = cam.positionWC, normal = C.Ellipsoid.WGS84.geodeticSurfaceNormal(pos, new C.Cartesian3());
+      const height = Math.max(40, cam.positionCartographic.height - ground);
+      const speed = Math.min(2500, Math.max(35, height * 0.32)) * (fast ? 3 : 1) * dt;
+      const flat = v => { const d = C.Cartesian3.subtract(v, C.Cartesian3.multiplyByScalar(normal, C.Cartesian3.dot(v, normal), new C.Cartesian3()), new C.Cartesian3()); return C.Cartesian3.magnitude(d) < 1e-6 ? d : C.Cartesian3.normalize(d, d); };
+      if (forward) cam.move(flat(cam.directionWC), forward * speed);
+      if (right) cam.move(flat(cam.rightWC), right * speed);
+      if (up) { const h = cam.positionCartographic.height; if (!(up < 0 && h - ground < 45)) cam.move(normal, up * speed); }
+      if (turn) cam.look(normal, -turn * C.Math.toRadians(48) * (fast ? 2 : 1) * dt);
     },
     flood(on) { if (!floodEntities) buildFlood(); for (const e of floodEntities) e.show = on; },
     relabel() { for (const e of ringEntities) if (e.label) e.label.text = ringLabel(e.properties.ring.getValue()); }
