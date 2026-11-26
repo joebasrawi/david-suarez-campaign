@@ -397,6 +397,9 @@ Parks & culture|Parques y cultura
 Get it free|Descárgala gratis
 Miami Beach Gov is the City of Miami Beach's official app. This page is from Commissioner David Suarez to help residents find it.|Miami Beach Gov es la aplicación oficial de la Ciudad de Miami Beach. Esta página es del comisionado David Suarez para ayudar a los residentes a encontrarla.
 Get updates from David|Recibe noticias de David
+Getting around|Cómo moverse
+Parks & beaches|Parques y playas
+Short-term rentals|Alquileres a corto plazo
 Miami Beach Info Map|Mapa informativo de Miami Beach
 Overview|Resumen
 Development|Desarrollo

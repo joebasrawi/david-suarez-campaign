@@ -20,10 +20,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="live-local.css?v=9">
+  <link rel="stylesheet" href="live-local.css?v=10">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
   <script type="module" src="../language.js"></script>
-  <script type="module" src="live-local.js?v=7"></script>
+  <script type="module" src="live-local.js?v=8"></script>
 </head>
 <body>
   <a class="skip" href="#list">Skip to the list</a>
@@ -46,6 +46,9 @@
             <button type="button" class="view-tab" data-view="livelocal" aria-pressed="false">Live Local</button>
             <button type="button" class="view-tab" data-view="city" aria-pressed="false">City projects</button>
             <button type="button" class="view-tab" data-view="flood" aria-pressed="false">Flood risk</button>
+            <button type="button" class="view-tab" data-view="around" aria-pressed="false">Getting around</button>
+            <button type="button" class="view-tab" data-view="parks" aria-pressed="false">Parks &amp; beaches</button>
+            <button type="button" class="view-tab" data-view="str" aria-pressed="false">Short-term rentals</button>
           </nav>
           <div class="view-head" aria-live="polite"></div>
         </section>
@@ -64,7 +67,7 @@
         <ol class="list" id="list" aria-label="Places on the map"></ol>
 
         <footer class="sources">
-          <p><strong>Sources.</strong> All public records: the City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists and signed orders; Design Review, Historic Preservation and Planning Board cases filed since 2023 in <a href="https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService">Civic Access</a> (new buildings, major renovations and rezonings; single-family homes left out); the City's capital project map, parcel map, FEMA flood zones and tidal flooding map; and Miami-Dade County LiDAR building heights.</p>
+          <p><strong>Sources.</strong> All public records: the City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists and signed orders; Design Review, Historic Preservation and Planning Board cases filed since 2023 in <a href="https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService">Civic Access</a> (new buildings, major renovations and rezonings; single-family homes left out); the City's capital project map, parcel map, FEMA flood zones and tidal flooding map; Miami-Dade County LiDAR building heights; the City's lane closure, trolley and bike lane maps; Miami-Dade County park and beach boundaries; and the City's short-term rental Certificates of Use (counted by building only).</p>
           <p class="updated" data-updated></p>
           <p>See something wrong? <a href="../about/">Tell David's office</a>.</p>
         </footer>

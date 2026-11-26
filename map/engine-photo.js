@@ -75,9 +75,9 @@ export async function create({ data, apps, byId, cb, key }) {
   for (const a of apps) {
     if (!a.center) continue;
     const el = document.createElement('button');
-    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : a.layer === 'city' ? ' city' : ''}`; el.dataset.id = a.id; el.dataset.layer = a.layer;
+    el.type = 'button'; el.className = `pin ${a.stage} ${a.layer}`; el.dataset.id = a.id; el.dataset.layer = a.layer;
     el.setAttribute('aria-label', `${cb.title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
-    el.innerHTML = a.layer === 'city' ? '<i></i>' : a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
+    el.innerHTML = a.layer === 'str' ? `<b>${a.licensed}</b>` : ['city', 'road', 'park'].includes(a.layer) ? '<i></i>' : a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap pin-abs'; wrap.appendChild(el); layer.appendChild(wrap);
     el.addEventListener('click', ev => { ev.stopPropagation(); cb.pick(a.id); });
     el.addEventListener('mouseenter', () => cb.hover(a.id, true));
@@ -115,6 +115,22 @@ export async function create({ data, apps, byId, cb, key }) {
     const fa = { Frequently: .75, Occasionally: .5, Rarely: .3 };
     for (const f of cb.flood.tidal.features) for (const rings of polys(f.geometry))
       floodEntities.push(viewer.entities.add({ show: false, polygon: { hierarchy: hier(rings), classificationType: C.ClassificationType.CESIUM_3D_TILE, material: C.Color.fromCssColorString('#6fe3ff').withAlpha(fa[f.properties.freq] || .4) } }));
+  }
+
+  // Overlays for the extra views, built on first use and draped on the tiles.
+  const ovEntities = {};
+  function buildOverlay(name) {
+    const OV = cb.overlays || {}; const list = (ovEntities[name] = []);
+    const polys = g => (g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : []);
+    const lines = g => (g.type === 'LineString' ? [g.coordinates] : g.type === 'MultiLineString' ? g.coordinates : []);
+    const area = (fc, col, alpha) => { for (const f of fc?.features || []) for (const rings of polys(f.geometry)) list.push(viewer.entities.add({ polygon: { hierarchy: new C.PolygonHierarchy(fromRing(rings[0])), classificationType: C.ClassificationType.CESIUM_3D_TILE, material: C.Color.fromCssColorString(col).withAlpha(typeof alpha === 'function' ? alpha(f) : alpha) } })); };
+    const line = (fc, col, width, alpha = .95) => { for (const f of fc?.features || []) for (const c of lines(f.geometry)) list.push(viewer.entities.add({ polyline: { positions: C.Cartesian3.fromDegreesArray(c.flat()), width: typeof width === 'function' ? width(f) : width, clampToGround: true, classificationType: C.ClassificationType.CESIUM_3D_TILE, material: C.Color.fromCssColorString(typeof col === 'function' ? col(f) : col).withAlpha(alpha) } })); };
+    if (name === 'parks') area(OV.parks, '#5fd38a', .4);
+    if (name === 'beaches') area(OV.beaches, '#f4dca0', .3);
+    if (name === 'str') area(OV.str, '#c18cff', f => Math.min(.75, .3 + f.properties.licensed / 60));
+    if (name === 'bikeways') line(OV.bikeways, '#9be564', f => (f.properties.protected ? 5 : 3.5));
+    if (name === 'trolley') line(OV.trolleyRoutes, '#ffd166', 5);
+    if (name === 'closures') line(OV.closures, f => ((f.properties.expires || '') >= new Date().toISOString().slice(0, 10) ? '#ff8a3d' : '#a3654a'), 6);
   }
 
   // Rings (¼ mile, 1 mile) draped on the real ground, and tinted "taller than this project" buildings.
@@ -225,6 +241,7 @@ export async function create({ data, apps, byId, cb, key }) {
       if (up) { const h = cam.positionCartographic.height; if (!(up < 0 && h - ground < 45)) cam.move(normal, up * speed); }
       if (turn) cam.look(normal, -turn * C.Math.toRadians(48) * (fast ? 2 : 1) * dt);
     },
+    overlays(on) { for (const name of ['parks', 'beaches', 'str', 'bikeways', 'trolley', 'closures']) { if (on.includes(name) && !ovEntities[name]) buildOverlay(name); for (const e of ovEntities[name] || []) e.show = on.includes(name); } },
     flood(on) { if (!floodEntities) buildFlood(); for (const e of floodEntities) e.show = on; },
     relabel() { for (const e of ringEntities) if (e.label) e.label.text = ringLabel(e.properties.ring.getValue()); }
   };

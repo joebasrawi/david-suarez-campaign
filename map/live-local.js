@@ -92,7 +92,7 @@ function floodFacts(a) {
 
 // Filters: all | ll (Live Local) | dev (other development) | review (anything under review)
 // A filter state is { layers: ['ll', 'dev', 'city'], review: bool }.
-const matches = (a, f) => f.layers.includes(a.layer) && (!f.review || (a.layer === 'city' ? a.stage !== 'build' : a.stage !== 'approved'));
+const matches = (a, f) => f.layers.includes(a.layer) && (!f.review || !['ll', 'dev'].includes(a.layer) || a.stage !== 'approved');
 const filterExpr = f => ['all', ['in', ['get', 'layer'], ['literal', f.layers]], f.review ? ['!=', ['get', 'stage'], 'approved'] : true];
 
 // City capital projects (Public Works and others), from the City's project map.
@@ -128,7 +128,39 @@ function devCard(a) {
   const when = a.stage === 'approved' ? L('Approved', 'Aprobado') : a.stage === 'denied' ? L('Denied', 'Denegado') : L(`Filed ${date(a.filed)}`, `Presentado el ${date(a.filed)}`);
   return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${a.stage}" data-layer="dev"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(a.location)}</span>${ht}<span class="meta">${esc(when)} · ${esc(a.boards.map(b => b.replace(' Board', '')).join(' + '))}</span></button></li>`;
 }
+// Getting around (lane closures), parks, short-term rentals
+const TODAY = new Date().toISOString().slice(0, 10);
+function simpleCard(a, right, meta) {
+  return `<li><button type="button" class="card" data-id="${esc(a.id)}" data-stage="${esc(a.stage)}" data-layer="${a.layer}"><span class="bar" aria-hidden="true"></span><span class="addr">${esc(a.location)}</span><span class="ht na">${right}</span><span class="meta">${esc(meta)}</span></button></li>`;
+}
+function roadCard(a) { return simpleCard(a, esc(a.stage === 'open' ? L('Open permit', 'Permiso vigente') : L('Past end date', 'Vencido')), [a.kind, a.expires ? L(`ends ${date(a.expires)}`, `termina ${date(a.expires)}`) : ''].filter(Boolean).join(' · ')); }
+function parkCard(a) { return simpleCard(a, a.acres ? `${a.acres}<small>${L('acres', 'acres')}</small>` : '', [a.type, a.address].filter(Boolean).join(' · ')); }
+function strCard(a) { return simpleCard(a, `${a.licensed}<small>${L('licensed', 'licencias')}</small>`, a.pending ? L(`${a.pending} more pending`, `${a.pending} más pendientes`) : L('Certificates of Use', 'Certificados de Uso')); }
+const factsHtml = facts => `<dl class="facts">${facts.filter(f => f && f[1]).map(([k, v, wide]) => `<div class="${wide ? 'wide' : ''}"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
+function roadDetailHtml(a) {
+  return `<span class="status road">${esc(L('Right-of-way permit', 'Permiso de vía pública'))} · ${esc(a.stage === 'open' ? L('Open', 'Vigente') : L('Past end date', 'Vencido'))}</span>
+    <h2 id="detail-title">${esc(a.location)}</h2><p class="case">${esc(a.permit)}</p>
+    ${factsHtml([[L('Work', 'Trabajo'), a.kind, true], [L('What the permit says', 'Lo que dice el permiso'), a.desc, true], [L('Issued', 'Emitido'), date(a.issued)], [L('Permit end date', 'Fin del permiso'), date(a.expires)]])}
+    <p class="fine">${L("Source: City of Miami Beach lane closure map. The City lists this permit as active; work may already be finished if the end date has passed.", 'Fuente: mapa de cierres de carriles de la Ciudad de Miami Beach. La Ciudad lista este permiso como activo; el trabajo puede haber terminado si la fecha de fin ya pasó.')}</p>`;
+}
+function parkDetailHtml(a) {
+  return `<span class="status park">${esc(L('Park', 'Parque'))}</span><h2 id="detail-title">${esc(a.location)}</h2><p class="case">${esc(a.type || '')}</p>
+    ${factsHtml([[L('Address', 'Dirección'), a.address, true], a.acres ? [L('Size', 'Tamaño'), `${a.acres} ${L('acres', 'acres')}`] : null, a.phone ? [L('Phone', 'Teléfono'), a.phone] : null, ...floodFacts(a)])}
+    <div class="links"><a href="https://www.miamibeachfl.gov/city-hall/parks-and-recreation/" target="_blank" rel="noopener">${L('Parks & Recreation', 'Parques y Recreación')}</a><a class="ghost" href="https://www.miamibeachfl.gov/city-hall/fire/ocean-rescue/" target="_blank" rel="noopener">${L("Today's beach conditions", 'Condiciones de la playa hoy')}</a></div>
+    <p class="fine">${L('Source: Miami-Dade County park boundaries.', 'Fuente: límites de parques del Condado Miami-Dade.')}</p>`;
+}
+function strDetailHtml(a) {
+  return `<span class="status str">${esc(L('Short-term rentals', 'Alquileres a corto plazo'))}</span><h2 id="detail-title">${esc(a.location)}</h2><p class="case">${esc(L('Counted by building', 'Contado por edificio'))}</p>
+    <p class="hero-num str"><b>${a.licensed}</b><span>${L(`units with a short-term rental Certificate of Use${a.pending ? ` · ${a.pending} more pending` : ''}`, `unidades con Certificado de Uso para alquiler a corto plazo${a.pending ? ` · ${a.pending} más pendientes` : ''}`)}</span></p>
+    ${factsHtml([[L('Latest application', 'Última solicitud'), date(a.latest)], ...floodFacts(a)])}
+    <div class="links"><a href="https://www.miamibeachfl.gov/business/vacation-short-term-rentals/" target="_blank" rel="noopener">${L("City's short-term rental rules", 'Reglas de alquiler a corto plazo de la Ciudad')}</a></div>
+    <p class="fine">${L("Source: City of Miami Beach Civic Access, certificates filed since mid-2025. A certificate means the City approved the unit for short-term rental, not that it is currently rented. Units and owners are not shown.", 'Fuente: Civic Access de la Ciudad de Miami Beach, certificados presentados desde mediados de 2025. Un certificado significa que la Ciudad aprobó la unidad para alquiler a corto plazo, no que esté alquilada ahora. No se muestran unidades ni propietarios.')}</p>`;
+}
+
 function card(a) {
+  if (a.layer === 'road') return roadCard(a);
+  if (a.layer === 'park') return parkCard(a);
+  if (a.layer === 'str') return strCard(a);
   if (a.layer === 'city') return cityCard(a);
   if (a.layer === 'dev') return devCard(a);
   const ht = a.stories ? `<span class="ht">${a.stories}<small>stories</small></span>` : `<span class="ht na">In review</span>`;
@@ -178,6 +210,9 @@ function devDetailHtml(a) {
 }
 
 function detailHtml(a) {
+  if (a.layer === 'road') return roadDetailHtml(a);
+  if (a.layer === 'park') return parkDetailHtml(a);
+  if (a.layer === 'str') return strDetailHtml(a);
   if (a.layer === 'city') return cityDetailHtml(a);
   if (a.layer === 'dev') return devDetailHtml(a);
   const sale = a.sites.filter(s => s.lastSale?.price).sort((x, y) => (y.lastSale.date || '').localeCompare(x.lastSale.date || ''))[0];
@@ -248,6 +283,17 @@ async function flatEngine({ data, apps, byId, cb }) {
     map.addLayer({ id: 'flood-tidal', type: 'fill', source: 'flood-tidal', layout: { visibility: 'none' }, paint: { 'fill-color': FLOOD.tidal, 'fill-opacity': ['match', ['get', 'freq'], 'Frequently', .75, 'Occasionally', .5, .3] } }, before);
     map.addLayer({ id: 'flood-tidal-line', type: 'line', source: 'flood-tidal', layout: { visibility: 'none' }, paint: { 'line-color': '#d4f7ff', 'line-width': 1.2 } }, before);
   }
+  // Line and area overlays for the extra views
+  const OV = cb.overlays || {};
+  const addOv = (id, src, layers) => { if (!src) return; map.addSource(id, { type: 'geojson', data: src }); for (const l of layers) map.addLayer({ ...l, source: id, layout: { ...(l.layout || {}), visibility: 'none' } }, 'buildings-3d'); };
+  addOv('ov-parks', OV.parks, [{ id: 'ov-parks', type: 'fill', paint: { 'fill-color': '#5fd38a', 'fill-opacity': .32 } }, { id: 'ov-parks-line', type: 'line', paint: { 'line-color': '#9ff0bb', 'line-width': 1.2 } }]);
+  addOv('ov-beach', OV.beaches, [{ id: 'ov-beach', type: 'fill', paint: { 'fill-color': '#f4dca0', 'fill-opacity': .38 } }]);
+  addOv('ov-bike', OV.bikeways, [{ id: 'ov-bike', type: 'line', paint: { 'line-color': '#9be564', 'line-width': ['case', ['get', 'protected'], 3, 2], 'line-opacity': .85 } }]);
+  addOv('ov-trolley', OV.trolleyRoutes, [{ id: 'ov-trolley', type: 'line', paint: { 'line-color': '#ffd166', 'line-width': 3.2, 'line-opacity': .9 } }]);
+  addOv('ov-closures', OV.closures, [{ id: 'ov-closures', type: 'line', paint: { 'line-color': ['case', ['>=', ['get', 'expires'], TODAY], '#ff8a3d', '#a3654a'], 'line-width': 4, 'line-opacity': .9 } }]);
+  addOv('ov-str', OV.str, [{ id: 'ov-str', type: 'fill', paint: { 'fill-color': '#c18cff', 'fill-opacity': ['interpolate', ['linear'], ['get', 'licensed'], 0, .25, 30, .7] } }]);
+  const OVMAP = { parks: ['ov-parks', 'ov-parks-line'], beaches: ['ov-beach'], bikeways: ['ov-bike'], trolley: ['ov-trolley'], closures: ['ov-closures'], str: ['ov-str'] };
+
   const fc = featuresFor(data);
   map.addSource('ll', { type: 'geojson', data: fc });
   map.addLayer({ id: 'll-glow', type: 'line', source: 'll', paint: { 'line-color': ['case', ['==', ['get', 'layer'], 'dev'], ['match', ['get', 'stage'], 'approved', COLORS.dev, COLORS.devReview], ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review]], 'line-width': 10, 'line-blur': 8, 'line-opacity': .55 } });
@@ -284,8 +330,8 @@ async function flatEngine({ data, apps, byId, cb }) {
   for (const a of apps) {
     if (!a.center) continue;
     const el = document.createElement('button');
-    el.type = 'button'; el.className = `pin ${a.stage}${a.layer === 'dev' ? ' dev' : a.layer === 'city' ? ' city' : ''}`; el.dataset.layer = a.layer; el.dataset.stage = a.stage; el.dataset.id = a.id; el.setAttribute('aria-label', `${title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
-    el.innerHTML = a.layer === 'city' ? '<i></i>' : a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
+    el.type = 'button'; el.className = `pin ${a.stage} ${a.layer}`; el.dataset.layer = a.layer; el.dataset.stage = a.stage; el.dataset.id = a.id; el.setAttribute('aria-label', `${title(a.location)}, ${a.stage === 'approved' ? 'approved' : 'under review'}`);
+    el.innerHTML = a.layer === 'str' ? `<b>${a.licensed}</b>` : ['city', 'road', 'park'].includes(a.layer) ? '<i></i>' : a.layer === 'dev' ? (a.stories >= 5 ? `<b>${a.stories}</b>` : '<i></i>') : a.stories ? `<b>${a.stories}</b>` : '<i></i>';
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap'; wrap.appendChild(el);
     const marker = new maplibregl.Marker({ element: wrap, anchor: 'bottom', offset: [0, -6] }).setLngLat(a.center).addTo(map);
     markers.set(a.id, { marker, el });
@@ -355,6 +401,7 @@ async function flatEngine({ data, apps, byId, cb }) {
       fadePaint('rings', 'line-opacity', 0); fadePaint('ring-labels', 'text-opacity', 0); compareBuildings(null);
       const cam = home(); reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });
     },
+    overlays(on) { for (const [k, ids] of Object.entries(OVMAP)) for (const id of ids) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on.includes(k) ? 'visible' : 'none'); },
     // Keyboard flying: forward/right in screen pixels per second, turn in degrees per second.
     move({ forward, right, turn, up }, dt, fast) {
       map.stop();
@@ -382,12 +429,19 @@ async function main() {
     get('flood.json', null),
     get('city-projects.json', { items: [] })
   ]);
+  const [around, strData] = await Promise.all([get('around.json', null), get('str.json', null)]);
   const ll = data.applications.map(a => ({ ...a, layer: 'll' }));
   const devApps = dev.projects.map(p => ({ ...p, layer: 'dev', number: p.id }));
   const seenCity = new Set();
   const city = cityRaw.items.filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lng) && !seenCity.has(p.projectNumber + p.title) && seenCity.add(p.projectNumber + p.title))
     .map(p => ({ ...p, layer: 'city', id: 'CIP-' + p.id, number: p.projectNumber, location: p.title, stage: phaseOf(p.phase), center: [p.lng, p.lat], sites: [] }));
-  const apps = [...ll, ...devApps, ...city];
+  const mid = g => { const c = g.type === 'LineString' ? g.coordinates : g.type === 'MultiLineString' ? g.coordinates.flat() : g.type === 'Point' ? [g.coordinates] : (g.type === 'Polygon' ? g.coordinates[0] : g.coordinates[0][0]); return c[Math.floor(c.length / 2)]; };
+  const seenPermit = new Set();
+  const roads = (around?.closures.features || []).filter(f => !seenPermit.has(f.properties.permit) && seenPermit.add(f.properties.permit)).map((f, i) => ({ ...f.properties, layer: 'road', id: 'ROW-' + (f.properties.permit || i), number: f.properties.permit, location: f.properties.address || f.properties.permit, stage: (f.properties.expires || '') >= TODAY ? 'open' : 'past', center: mid(f.geometry), sites: [] }))
+    .sort((a, b) => (a.stage === b.stage ? (b.expires || '').localeCompare(a.expires || '') : a.stage === 'open' ? -1 : 1));
+  const parks = (around?.parks.features || []).map((f, i) => ({ ...f.properties, layer: 'park', id: 'PARK-' + i, location: f.properties.name, stage: 'park', sites: [] })).sort((a, b) => (b.acres || 0) - (a.acres || 0));
+  const rentals = (strData?.buildings || []).map(b => ({ ...b, layer: 'str', location: b.address, stage: 'str', sites: [] }));
+  const apps = [...ll, ...devApps, ...city, ...roads, ...parks, ...rentals];
   for (const a of apps) a.flood = floodFor(a, flood);
   data.parcels = { type: 'FeatureCollection', features: [
     ...data.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'll' } })),
@@ -431,6 +485,24 @@ async function main() {
         <p class="lead">${L("Streets, drainage, parks and buildings the City itself is planning, designing or building, from the City's capital project map.", 'Calles, drenaje, parques y edificios que la propia Ciudad planifica, diseña o construye, según el mapa de proyectos de capital de la Ciudad.')}</p>
         <dl class="stats">${stat(L('Planning', 'Planificación'), byPhase('plan'))}${stat(L('Design', 'Diseño'), byPhase('design'))}${stat(L('Construction', 'Construcción'), byPhase('build'))}</dl>`
     },
+    around: {
+      layers: ['road'], flood: false, overlays: ['trolley', 'bikeways', 'closures'],
+      head: () => `<h1>${L('Getting around.', 'Cómo moverse.')} <span class="accent-orange">${L('Closures, trolley & bike lanes.', 'Cierres, trolley y ciclovías.')}</span></h1>
+        <p class="lead">${L("Street and lane closure permits the City lists as active, plus the free trolley routes and stops and the City's bike lanes.", 'Permisos de cierre de calles y carriles que la Ciudad lista como activos, más las rutas y paradas del trolley gratuito y los carriles de bicicleta.')}</p>
+        <dl class="stats">${stat(L('Closure permits listed active', 'Permisos de cierre activos'), roads.length)}${stat(L('Trolley stops', 'Paradas de trolley'), around?.trolleyStops.features.length || 0)}${stat(L('Bike lane segments', 'Tramos de ciclovía'), around?.bikeways.features.length || 0)}</dl>`
+    },
+    parks: {
+      layers: ['park'], flood: false, overlays: ['parks', 'beaches', 'trolley'],
+      head: () => `<h1>${L('Parks & beaches.', 'Parques y playas.')}</h1>
+        <p class="lead">${L("Every City park, with the beach, and the trolley that gets you there. For today's flags, surf and water temperature, see the City's Ocean Rescue page linked in any park.", 'Cada parque de la Ciudad, la playa y el trolley para llegar. Para las banderas, el oleaje y la temperatura del agua de hoy, ve la página de Ocean Rescue de la Ciudad en cualquier parque.')}</p>
+        <dl class="stats">${stat(L('Parks', 'Parques'), parks.length)}${stat(L('Acres of parks', 'Acres de parques'), Math.round(parks.reduce((n, p) => n + (p.acres || 0), 0)))}${stat(L('Trolley routes', 'Rutas de trolley'), around?.trolleyRoutes.features.length || 0)}</dl>`
+    },
+    str: {
+      layers: ['str'], flood: false, overlays: ['str'],
+      head: () => `<h1>${L('Short-term rentals.', 'Alquileres a corto plazo.')} <span class="accent-purple">${L('Building by building.', 'Edificio por edificio.')}</span></h1>
+        <p class="lead">${L("Units the City has approved for short-term rental with a Certificate of Use, counted by building. A certificate doesn't prove a unit is being rented, and units and owners aren't shown.", 'Unidades que la Ciudad aprobó para alquiler a corto plazo con un Certificado de Uso, contadas por edificio. Un certificado no prueba que la unidad se esté alquilando, y no se muestran unidades ni propietarios.')}</p>
+        <dl class="stats">${stat(L('Licensed units', 'Unidades con licencia'), strData?.counts.licensed || 0)}${stat(L('Pending', 'Pendientes'), strData?.counts.pending || 0)}${stat(L('Buildings', 'Edificios'), rentals.length)}</dl>`
+    },
     flood: {
       layers: ['ll', 'dev'], flood: true,
       head: () => `<h1>${L('Where Miami Beach floods.', 'Dónde se inunda Miami Beach.')} <span class="accent-tide">${L("And what's going up there.", 'Y qué se construye allí.')}</span></h1>
@@ -441,7 +513,10 @@ async function main() {
   const LEGEND = {
     ll: () => `<span><i class="sw approved"></i>${L('Live Local approved', 'Live Local aprobado')}</span><span><i class="sw review"></i>${L('Live Local under review', 'Live Local en revisión')}</span>`,
     dev: () => `<span><i class="sw dev"></i>${L('Other development', 'Otros proyectos')}</span>`,
-    city: () => `<span><i class="sw city"></i>${L('City projects', 'Proyectos de la Ciudad')}</span>`
+    city: () => `<span><i class="sw city"></i>${L('City projects', 'Proyectos de la Ciudad')}</span>`,
+    road: () => `<span><i class="sw road"></i>${L('Closure permits', 'Permisos de cierre')}</span><span><i class="sw trolley"></i>${L('Trolley', 'Trolley')}</span><span><i class="sw bike"></i>${L('Bike lanes', 'Ciclovías')}</span>`,
+    park: () => `<span><i class="sw park"></i>${L('Parks', 'Parques')}</span><span><i class="sw beach"></i>${L('Beach', 'Playa')}</span><span><i class="sw trolley"></i>${L('Trolley', 'Trolley')}</span>`,
+    str: () => `<span><i class="sw str"></i>${L('Buildings with licensed short-term rentals', 'Edificios con alquileres con licencia')}</span>`
   };
 
   const state = { view: 'overview', layers: VIEWS.overview.layers, review: false, flood: false };
@@ -458,6 +533,9 @@ async function main() {
     if (f.layers.includes('ll') && vis(llOrder).length) parts.push(head('ll', L('Live Local Act', 'Ley Live Local'), L(`${vis(llOrder).length} applications`, `${vis(llOrder).length} solicitudes`)), ...vis(llOrder).map(card));
     if (f.layers.includes('dev') && vis(devApps).length) parts.push(head('dev', L('Development since 2023', 'Desarrollo desde 2023'), L(`${vis(devApps).length} projects from the land use boards`, `${vis(devApps).length} proyectos de las juntas de uso de suelo`)), ...vis(devApps).map(card));
     if (f.layers.includes('city') && vis(cityOrder).length) parts.push(head('city', L('City projects', 'Proyectos de la Ciudad'), L(`${vis(cityOrder).length} in planning, design or construction`, `${vis(cityOrder).length} en planificación, diseño o construcción`)), ...vis(cityOrder).map(card));
+    if (f.layers.includes('road') && vis(roads).length) parts.push(head('road', L('Street & lane closures', 'Cierres de calles y carriles'), L(`${vis(roads).length} permits the City lists as active`, `${vis(roads).length} permisos que la Ciudad lista como activos`)), ...vis(roads).map(card));
+    if (f.layers.includes('park') && vis(parks).length) parts.push(head('park', L('Parks', 'Parques'), L(`${vis(parks).length} parks, largest first`, `${vis(parks).length} parques, de mayor a menor`)), ...vis(parks).map(card));
+    if (f.layers.includes('str') && vis(rentals).length) parts.push(head('str', L('Buildings', 'Edificios'), L('Most licensed units first', 'Más unidades con licencia primero')), ...vis(rentals).map(card));
     listEl.innerHTML = parts.join('');
     listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${Math.min(.9, i * 0.03)}s`));
     if (active) listEl.querySelector(`.card[data-id="${CSS.escape(active)}"]`)?.classList.add('is-active');
@@ -469,7 +547,7 @@ async function main() {
     viewHead.innerHTML = VIEWS[state.view].head();
     viewHead.classList.add('is-in');
     legend.innerHTML = state.layers.map(l => LEGEND[l]()).join('');
-    document.querySelector('[data-review]').hidden = state.view === 'city';
+    document.querySelector('[data-review]').hidden = !state.layers.some(l => l === 'll' || l === 'dev');
     if (state.view === 'city' && state.review) document.querySelector('[data-review]').click();
   }
   const updated = () => (document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`));
@@ -477,14 +555,18 @@ async function main() {
   let active = null;
   const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => a.layer === 'city'
       ? `<div class="tip">${esc(a.location)}<small>${esc(L('City project', 'Proyecto de la Ciudad'))} · ${esc(L(...PHASE[a.stage]))}</small></div>`
+      : a.layer === 'road' ? `<div class="tip">${esc(a.location)}<small>${esc(a.kind)}</small></div>`
+      : a.layer === 'park' ? `<div class="tip">${esc(a.location)}<small>${esc(L('Park', 'Parque'))}</small></div>`
+      : a.layer === 'str' ? `<div class="tip">${esc(a.location)}<small>${esc(L(`${a.licensed} licensed short-term rental units`, `${a.licensed} unidades con licencia`))}</small></div>`
       : `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`,
-    L, title, esc, reduced, phone, matches, flood };
+    L, title, esc, reduced, phone, matches, flood,
+    overlays: around ? { parks: around.parks, beaches: around.beaches, bikeways: around.bikeways, trolleyRoutes: around.trolleyRoutes, closures: around.closures, str: strData?.parcels } : {} };
 
   // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
   let engine = null;
   if (key && params.get('engine') !== 'flat') {
-    try { engine = await (await import('./engine-photo.js?v=6')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+    try { engine = await (await import('./engine-photo.js?v=7')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
     catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
   }
   if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
@@ -496,6 +578,7 @@ async function main() {
     document.querySelectorAll('.view-tab').forEach(t => t.setAttribute('aria-pressed', t.dataset.view === id));
     renderHead(); renderList();
     engine.filter(state);
+    engine.overlays?.(VIEWS[id].overlays || []);
     if (push) { const u = new URL(location.href); id === 'overview' ? u.searchParams.delete('view') : u.searchParams.set('view', id); history.replaceState(null, '', u); }
   }
   function setFlood(on) {
@@ -518,7 +601,7 @@ async function main() {
   }
   function select(id, { fly = true } = {}) {
     const a = byId.get(id); if (!a) return;
-    if (!matches(a, { layers: state.layers, review: false })) applyView(a.layer === 'city' ? 'city' : a.layer === 'll' ? 'livelocal' : 'development');
+    if (!matches(a, { layers: state.layers, review: false })) applyView({ city: 'city', ll: 'livelocal', dev: 'development', road: 'around', park: 'parks', str: 'str' }[a.layer]);
     active = id;
     listEl.querySelectorAll('.card').forEach(el => el.classList.toggle('is-active', el.dataset.id === id));
     detailBody.innerHTML = detailHtml(a);

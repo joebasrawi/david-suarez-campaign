@@ -245,6 +245,27 @@ h1 .accent-mint { color: var(--mint) } h1 .accent-warm { color: var(--warm) } h1
 .pin.city::after { width: 6px; height: 6px; margin-left: -3px; bottom: -4px; background: var(--city) }
 .pin.city::before { display: none }
 
+/* Getting around / parks / short-term rentals */
+h1 .accent-orange { color: #ff8a3d } h1 .accent-purple { color: #c18cff }
+.sw.road { background: #ff8a3d } .sw.trolley { background: #ffd166 } .sw.bike { background: #9be564 } .sw.park { background: #5fd38a } .sw.beach { background: #f4dca0 } .sw.str { background: #c18cff }
+.card[data-layer="road"][data-stage] .bar { background: #ff8a3d } .card[data-layer="road"][data-stage="past"] .bar { background: #a3654a }
+.card[data-layer="park"][data-stage] .bar { background: #5fd38a } .card[data-layer="str"][data-stage] .bar { background: #c18cff }
+.card[data-layer="str"] .ht { color: #e3ccff }
+.status.road { background: rgba(255,138,61,.12); color: #ffb98a; border-color: rgba(255,138,61,.4) }
+.status.park { background: rgba(95,211,138,.12); color: #a5ecbe; border-color: rgba(95,211,138,.4) }
+.status.str { background: rgba(193,140,255,.12); color: #dcc2ff; border-color: rgba(193,140,255,.4) }
+.hero-num.str { background: linear-gradient(135deg, rgba(193,140,255,.16), rgba(193,140,255,.02)); border-color: rgba(193,140,255,.3) }
+.hero-num.str span { color: #e8d8ff }
+.pin.road, .pin.park { min-width: 12px; width: 12px; height: 12px; padding: 0; border: 2px solid #ff8a3d; background: #2b1608 }
+.pin.road.past { border-color: #a3654a }
+.pin.park { border-color: #5fd38a; background: #0d2a19 }
+.pin.road i, .pin.park i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; color: #ff8a3d }
+.pin.park i { color: #5fd38a }
+.pin.road::after, .pin.park::after { display: none } .pin.road::before, .pin.park::before { display: none }
+.pin.str { min-width: 24px; height: 24px; padding: 0 .35rem; background: linear-gradient(180deg, #d4adff, #9b63e8); color: #1d0b33; font-size: .9rem; box-shadow: 0 4px 12px rgba(155,99,232,.45) }
+.pin.str::after { background: #9b63e8; width: 6px; height: 6px; margin-left: -3px; bottom: -4px }
+.pin.str::before { display: none }
+
 /* Keyboard hint */
 .keys-hint { position: absolute; z-index: 3; right: clamp(1rem,2.4vw,2rem); top: 5.6rem; padding: .5rem .75rem; border-radius: 12px; background: rgba(7,26,34,.7); border: 1px solid var(--line); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #b9cacd; font-size: .72rem; font-weight: 600; opacity: 0; transition: opacity .6s var(--ease) 1.2s, transform .4s var(--ease) }
 .app[data-state="ready"] .keys-hint { opacity: 1 }
