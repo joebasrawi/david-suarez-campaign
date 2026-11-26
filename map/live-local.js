@@ -92,8 +92,15 @@ function floodFacts(a) {
 
 // Filters: all | ll (Live Local) | dev (other development) | review (anything under review)
 // A filter state is { layers: ['ll', 'dev', 'city'], review: bool }.
-const matches = (a, f) => f.layers.includes(a.layer) && (!f.review || !['ll', 'dev'].includes(a.layer) || a.stage !== 'approved');
-const filterExpr = f => ['all', ['in', ['get', 'layer'], ['literal', f.layers]], f.review ? ['!=', ['get', 'stage'], 'approved'] : true];
+// Search: f.q is the folded search text; a place matches when its text contains it as a phrase.
+const SEARCH = new Map();
+const fold = s => String(s ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9#&/-]+/g, ' ').trim();
+const searchText = a => fold([a.location, a.number, a.id, a.owner, a.applicant, a.formerly, a.summary, a.uses, a.planner, a.address, a.permit, a.kind && KIND[a.kind]?.[0], a.type, a.department, a.neighborhood, a.description, a.limits,
+  ...(a.sites || []).flatMap(x => [x.owner, x.address]), ...(a.cases || []).map(c => c.number)].filter(Boolean).join(' '));
+const found = (id, f) => !f.q || (SEARCH.get(id) || '').includes(f.q);
+const matches = (a, f) => f.layers.includes(a.layer) && (!f.review || !['ll', 'dev'].includes(a.layer) || a.stage !== 'approved') && found(a.id, f);
+const filterExpr = f => ['all', ['in', ['get', 'layer'], ['literal', f.layers]], f.review ? ['!=', ['get', 'stage'], 'approved'] : true,
+  f.q ? ['in', ['get', 'id'], ['literal', [...SEARCH.keys()].filter(id => found(id, f))]] : true];
 
 // City capital projects (Public Works and others), from the City's project map.
 const PHASE = { plan: ['Planning', 'Planificación'], design: ['Design', 'Diseño'], build: ['Construction', 'Construcción'] };
@@ -412,7 +419,7 @@ async function flatEngine({ data, apps, byId, cb }) {
     },
     flood(on) { for (const id of ['flood-zones', 'flood-tidal', 'flood-tidal-line']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none'); },
     filter(f) {
-      markers.forEach(({ el }) => { const hide = !matches({ layer: el.dataset.layer, stage: el.dataset.stage }, f); el.classList.toggle('is-dim', hide); el.parentElement.style.display = hide ? 'none' : ''; });
+      markers.forEach(({ el }) => { const hide = !matches({ id: el.dataset.id, layer: el.dataset.layer, stage: el.dataset.stage }, f); el.classList.toggle('is-dim', hide); el.parentElement.style.display = hide ? 'none' : ''; });
       const expr = filterExpr(f);
       for (const id of ['ll-glow', 'll-plate', 'll-line']) map.setFilter(id, expr);
       map.setFilter('ll-tower', ['all', ['==', ['get', 'stage'], 'approved'], ['>', ['get', 'h'], 0], expr]);
@@ -442,7 +449,7 @@ async function main() {
   const parks = (around?.parks.features || []).map((f, i) => ({ ...f.properties, layer: 'park', id: 'PARK-' + i, location: f.properties.name, stage: 'park', sites: [] })).sort((a, b) => (b.acres || 0) - (a.acres || 0));
   const rentals = (strData?.buildings || []).map(b => ({ ...b, layer: 'str', location: b.address, stage: 'str', sites: [] }));
   const apps = [...ll, ...devApps, ...city, ...roads, ...parks, ...rentals];
-  for (const a of apps) a.flood = floodFor(a, flood);
+  for (const a of apps) { a.flood = floodFor(a, flood); SEARCH.set(a.id, searchText(a)); }
   data.parcels = { type: 'FeatureCollection', features: [
     ...data.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'll' } })),
     ...dev.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'dev', stories: f.properties.stage === 'approved' ? f.properties.stories : null } }))
@@ -519,9 +526,12 @@ async function main() {
     str: () => `<span><i class="sw str"></i>${L('Buildings with licensed short-term rentals', 'Edificios con alquileres con licencia')}</span>`
   };
 
-  const state = { view: 'overview', layers: VIEWS.overview.layers, review: false, flood: false };
+  const state = { view: 'overview', layers: VIEWS.overview.layers, review: false, flood: false, q: '', query: '' };
   const params = new URLSearchParams(location.search);
   if (VIEWS[params.get('view')]) state.view = params.get('view');
+  const searchBox = document.querySelector('[data-search]');
+  const setQuery = text => { state.query = text; state.q = fold(text); };
+  if (params.get('q')) { searchBox.value = params.get('q'); setQuery(params.get('q')); }
 
   const llOrder = [...ll].sort((a, b) => (a.stage === b.stage ? (b.stories || 0) - (a.stories || 0) || (b.filed || '').localeCompare(a.filed || '') : a.stage === 'approved' ? -1 : 1));
   const cityOrder = [...city].sort((a, b) => ['build', 'design', 'plan'].indexOf(a.stage) - ['build', 'design', 'plan'].indexOf(b.stage) || a.location.localeCompare(b.location));
@@ -530,12 +540,13 @@ async function main() {
     const f = state;
     const parts = [];
     const vis = xs => xs.filter(a => matches(a, f));
-    if (f.layers.includes('ll') && vis(llOrder).length) parts.push(head('ll', L('Live Local Act', 'Ley Live Local'), L(`${vis(llOrder).length} applications`, `${vis(llOrder).length} solicitudes`)), ...vis(llOrder).map(card));
-    if (f.layers.includes('dev') && vis(devApps).length) parts.push(head('dev', L('Development since 2023', 'Desarrollo desde 2023'), L(`${vis(devApps).length} projects from the land use boards`, `${vis(devApps).length} proyectos de las juntas de uso de suelo`)), ...vis(devApps).map(card));
+    if (f.layers.includes('ll') && vis(llOrder).length) parts.push(head('ll', L('Live Local Act', 'Ley Live Local'), L(`${vis(llOrder).length} application${vis(llOrder).length === 1 ? '' : 's'}`, `${vis(llOrder).length} solicitud${vis(llOrder).length === 1 ? '' : 'es'}`)), ...vis(llOrder).map(card));
+    if (f.layers.includes('dev') && vis(devApps).length) parts.push(head('dev', L('Development since 2023', 'Desarrollo desde 2023'), L(`${vis(devApps).length} project${vis(devApps).length === 1 ? '' : 's'} from the land use boards`, `${vis(devApps).length} proyecto${vis(devApps).length === 1 ? '' : 's'} de las juntas de uso de suelo`)), ...vis(devApps).map(card));
     if (f.layers.includes('city') && vis(cityOrder).length) parts.push(head('city', L('City projects', 'Proyectos de la Ciudad'), L(`${vis(cityOrder).length} in planning, design or construction`, `${vis(cityOrder).length} en planificación, diseño o construcción`)), ...vis(cityOrder).map(card));
-    if (f.layers.includes('road') && vis(roads).length) parts.push(head('road', L('Street & lane closures', 'Cierres de calles y carriles'), L(`${vis(roads).length} permits the City lists as active`, `${vis(roads).length} permisos que la Ciudad lista como activos`)), ...vis(roads).map(card));
-    if (f.layers.includes('park') && vis(parks).length) parts.push(head('park', L('Parks', 'Parques'), L(`${vis(parks).length} parks, largest first`, `${vis(parks).length} parques, de mayor a menor`)), ...vis(parks).map(card));
+    if (f.layers.includes('road') && vis(roads).length) parts.push(head('road', L('Street & lane closures', 'Cierres de calles y carriles'), L(`${vis(roads).length} permit${vis(roads).length === 1 ? '' : 's'} the City lists as active`, `${vis(roads).length} permiso${vis(roads).length === 1 ? '' : 's'} que la Ciudad lista como activo${vis(roads).length === 1 ? '' : 's'}`)), ...vis(roads).map(card));
+    if (f.layers.includes('park') && vis(parks).length) parts.push(head('park', L('Parks', 'Parques'), L(`${vis(parks).length} park${vis(parks).length === 1 ? '' : 's'}, largest first`, `${vis(parks).length} parque${vis(parks).length === 1 ? '' : 's'}, de mayor a menor`)), ...vis(parks).map(card));
     if (f.layers.includes('str') && vis(rentals).length) parts.push(head('str', L('Buildings', 'Edificios'), L('Most licensed units first', 'Más unidades con licencia primero')), ...vis(rentals).map(card));
+    if (!parts.length && state.q) parts.push(`<li class="empty"><p>${esc(L(`Nothing in this view matches “${state.query.trim()}”.`, `Nada en esta vista coincide con “${state.query.trim()}”.`))}</p><button type="button" class="chip" data-clear-search>${esc(L('Clear search', 'Borrar búsqueda'))}</button></li>`);
     listEl.innerHTML = parts.join('');
     listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${Math.min(.9, i * 0.03)}s`));
     if (active) listEl.querySelector(`.card[data-id="${CSS.escape(active)}"]`)?.classList.add('is-active');
@@ -640,7 +651,7 @@ async function main() {
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
   let engine = null;
   if (key && params.get('engine') !== 'flat') {
-    try { engine = await (await import('./engine-photo.js?v=8')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+    try { engine = await (await import('./engine-photo.js?v=9')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
     catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
   }
   if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
@@ -698,9 +709,24 @@ async function main() {
     engine.clear();
   }
   detail.querySelector('[data-close]').addEventListener('click', close);
-  addEventListener('keydown', e => { if (e.key === 'Escape' && active) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && active && document.activeElement !== searchBox) close(); });
 
-  listEl.addEventListener('click', e => { const c = e.target.closest('.card'); if (c) select(c.dataset.id); });
+  listEl.addEventListener('click', e => {
+    if (e.target.closest('[data-clear-search]')) { searchBox.value = ''; runSearch(); searchBox.focus(); return; }
+    const c = e.target.closest('.card'); if (c) select(c.dataset.id);
+  });
+  // Search narrows the list and the map in every view; the text is kept in the URL (?q=) so a search can be shared.
+  let searchTimer = 0;
+  function runSearch() {
+    setQuery(searchBox.value);
+    renderList(); engine.filter(state);
+    const u = new URL(location.href); state.q ? u.searchParams.set('q', state.query.trim()) : u.searchParams.delete('q'); history.replaceState(null, '', u);
+  }
+  searchBox.addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(runSearch, 120); });
+  searchBox.addEventListener('keydown', e => { if (e.key === 'Escape' && searchBox.value) { e.stopPropagation(); searchBox.value = ''; runSearch(); } });
+  searchBox.addEventListener('focus', () => { if (phone() && sheet.snap !== 'full') setSheet('full'); });
+  const searchLabel = () => { const t = L('Search address, owner or case number', 'Buscar dirección, propietario o número de caso'); searchBox.placeholder = t; searchBox.setAttribute('aria-label', t); };
+  searchLabel();
   listEl.addEventListener('mouseover', e => { const c = e.target.closest('.card'); if (c) hover(c.dataset.id, true); });
   listEl.addEventListener('mouseleave', () => hover(null, false));
 
@@ -747,7 +773,7 @@ async function main() {
   addEventListener('blur', () => held.clear());
 
   document.addEventListener('language:change', () => {
-    renderHead(); renderList(); setSheet(sheet.snap);
+    renderHead(); renderList(); setSheet(sheet.snap); searchLabel();
     if (active) detailBody.innerHTML = detailHtml(byId.get(active));
     updated();
     engine.relabel?.();
