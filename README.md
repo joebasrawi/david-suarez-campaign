@@ -39,6 +39,7 @@ Open `http://localhost:8000`. Use an HTTP server rather than opening files direc
 ```sh
 npm run build
 python3 scripts/build-events-preview.py
+python3 scripts/build-social-cards.py   # needs Pillow: pip install pillow
 npm test
 python3 scripts/test-events.py
 ```
@@ -46,6 +47,8 @@ python3 scripts/test-events.py
 The build updates page HTML and asset versions **in place**, and also writes `404.html`, `robots.txt` and `sitemap.xml`. Commit those changes along with the source edits. Most layouts are generated from `scripts/`. If you edit only the generated HTML, the next build can overwrite it.
 
 The events pages copy their header from `about/index.html`, so rebuild them after `npm run build`.
+
+Link previews come last. `scripts/build-social-cards.py` draws a 1200×630 card for every page into `assets/social/` (navy, Anton caps in cream, one coral key word, no logo) and points that page's `og:image` at it with a `?v=` hash, so iMessage, WhatsApp and Facebook pick up changes. Headlines for the main pages live in its `PAGES` table, and `*word*` marks the coral word. Event cards are read from each event page, so new events get one automatically. The homepage keeps the coastline photo. `npm test` fails if a page is missing its own preview. After a preview changes, paste the link into Facebook's Sharing Debugger and click Scrape Again to refresh old shares.
 
 `npm test` checks data snapshots, site structure and asset references, motion, the homepage film and videos, the YouTube sync, and the coastal theme. It does not replace a browser review.
 
@@ -64,7 +67,7 @@ npm run sync:data
 npm test
 ```
 
-The [Sync public data workflow](.github/workflows/sync-public-data.yml) runs every six hours (at minute 17) and can be started manually in GitHub Actions. It refreshes the data, rebuilds the events pages, runs the tests, commits changed `data/` and `events/` files, and asks Pages to rebuild.
+The [Sync public data workflow](.github/workflows/sync-public-data.yml) runs every six hours (at minute 17) and can be started manually in GitHub Actions. It refreshes the data, rebuilds the events pages and their link preview cards, runs the tests, commits changed `data/`, `events/` and `assets/social/` files, and asks Pages to rebuild.
 
 Sources include the commissioner’s YouTube channel, City meetings and news, commission agendas and recorded actions, Public Works projects, neighborhood data, and City Clerk registry status. The browser reads the saved snapshots.
 
