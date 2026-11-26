@@ -122,29 +122,15 @@ function detailHtml(a) {
     <p class="fine">Owner and sale data: City of Miami Beach parcel map. Status: City of Miami Beach Civic Access.</p>`;
 }
 
-async function main() {
-  const [data] = await Promise.all([fetch('../data/live-local.json?v=' + Date.now().toString().slice(0, -5)).then(r => r.json()), waitFor(() => window.maplibregl)]);
-  const apps = data.applications;
-  const byId = new Map(apps.map(a => [a.id, a]));
-  const approved = apps.filter(a => a.stage === 'approved');
-
-  // Numbers and list
-  const set = (k, v) => document.querySelectorAll(`[data-count="${k}"]`).forEach(el => (el.textContent = v));
-  set('total', apps.length); set('approved', approved.length); set('review', apps.length - approved.length);
-  set('tallest', Math.max(...approved.map(a => a.stories || 0)));
-  document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`);
-  const order = [...apps].sort((a, b) => (a.stage === b.stage ? (b.stories || 0) - (a.stories || 0) || (b.filed || '').localeCompare(a.filed || '') : a.stage === 'approved' ? -1 : 1));
-  listEl.innerHTML = order.map(card).join('');
-  listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${0.45 + i * 0.045}s`));
-
-  // Map
+// ---------- Flat engine (MapLibre): stylized 3D city from LiDAR footprints ----------
+async function flatEngine({ data, apps, byId, cb }) {
+  await waitFor(() => window.maplibregl);
   const map = new maplibregl.Map({
     container: 'map', style: await style(), center: [-80.1335, 25.808], zoom: 11.7, pitch: 0, bearing: 0,
     maxBounds: [[-80.7, 25.4], [-79.6, 26.25]], attributionControl: { compact: true }, fadeDuration: 300
   });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
   await new Promise(r => map.on('load', r));
-
   const fc = featuresFor(data);
   map.addSource('ll', { type: 'geojson', data: fc });
   map.addLayer({ id: 'll-glow', type: 'line', source: 'll', paint: { 'line-color': ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review], 'line-width': 10, 'line-blur': 8, 'line-opacity': .55 } });
@@ -186,13 +172,12 @@ async function main() {
     const wrap = document.createElement('div'); wrap.className = 'pin-wrap'; wrap.appendChild(el);
     const marker = new maplibregl.Marker({ element: wrap, anchor: 'bottom', offset: [0, -6] }).setLngLat(a.center).addTo(map);
     markers.set(a.id, { marker, el });
-    el.addEventListener('click', ev => { ev.stopPropagation(); select(a.id); });
-    el.addEventListener('mouseenter', () => hover(a.id, true));
-    el.addEventListener('mouseleave', () => hover(a.id, false));
+    el.addEventListener('click', ev => { ev.stopPropagation(); cb.pick(a.id); });
+    el.addEventListener('mouseenter', () => cb.hover(a.id, true));
+    el.addEventListener('mouseleave', () => cb.hover(a.id, false));
   }
 
   // Intro: fly in, then grow the approved towers from the ground
-  app.dataset.state = 'ready';
   const pad = () => phone() ? { top: 70, bottom: innerHeight * .58 + 10, left: 10, right: 10 } : { top: 80, bottom: 40, left: document.querySelector('.panel').offsetWidth + 60, right: 40 };
   const bounds = apps.filter(a => a.center).reduce((b, a) => b.extend(a.center), new maplibregl.LngLatBounds(apps.find(a => a.center).center, apps.find(a => a.center).center));
   // Desktop: a tilted view of the whole beach beside the panel. Phones: flat, fit into the strip above the sheet.
@@ -200,8 +185,6 @@ async function main() {
   const home = () => phone()
     ? { center: bounds.getCenter(), zoom: 10.45, padding: phonePad(), bearing: 0, pitch: 0 }
     : { center: [-80.1335, 25.8135], zoom: 12.55, padding: { top: 60, bottom: 20, left: document.querySelector('.panel').offsetWidth + 40, right: 20 }, bearing: -20, pitch: 52 };
-  const intro = home();
-  if (reduced) map.jumpTo(intro); else map.flyTo({ ...intro, duration: 3200, curve: 1.3, essential: true });
 
   const grow = (to = 1, ms = 1800) => {
     if (reduced) return map.setPaintProperty('ll-tower', 'fill-extrusion-height', ['*', ['get', 'h'], to]);
@@ -212,7 +195,6 @@ async function main() {
       if (k < to) requestAnimationFrame(step);
     })(t0);
   };
-  setTimeout(() => grow(), reduced ? 0 : 1500);
 
   // Pulse the under-review footprints
   if (!reduced) {
@@ -230,46 +212,95 @@ async function main() {
     map.on('mousemove', layer, e => {
       const a = byId.get(e.features[0].properties.id); if (!a) return;
       map.getCanvas().style.cursor = 'pointer';
-      tip.setLngLat(e.lngLat).setHTML(`<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}</small></div>`).addTo(map);
-      hover(a.id, true);
+      tip.setLngLat(e.lngLat).setHTML(cb.tip(a)).addTo(map);
+      cb.hover(a.id, true);
     });
-    map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; tip.remove(); hover(null, false); });
-    map.on('click', layer, e => select(e.features[0].properties.id));
+    map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; tip.remove(); cb.hover(null, false); });
+    map.on('click', layer, e => cb.pick(e.features[0].properties.id));
   }
 
+  return {
+    intro() { const intro = home(); if (reduced) map.jumpTo(intro); else map.flyTo({ ...intro, duration: 3200, curve: 1.3, essential: true }); setTimeout(() => grow(), reduced ? 0 : 1500); },
+    hover(id) { markers.forEach(({ el }, key) => el.classList.toggle('is-hover', key === id)); },
+    select(a, { fly, detailWidth }) {
+      fc.features.forEach(f => map.setFeatureState({ source: 'll', id: f.id }, { active: f.properties.id === a.id }));
+      markers.forEach(({ el }, key) => el.classList.toggle('is-active', key === a.id));
+      showRings(a); compareBuildings(a);
+      if (fly && a.center) {
+        const padding = phone() ? { top: 60, bottom: innerHeight * .72, left: 20, right: 20 } : { top: 80, bottom: 60, left: document.querySelector('.panel').offsetWidth + 40, right: detailWidth + 60 };
+        const cam = { center: a.center, zoom: a.stories && a.stories > 14 ? 16.6 : 17.1, pitch: 62, bearing: map.getBearing() - 18, padding };
+        reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2200, curve: 1.6, essential: true });
+      }
+    },
+    clear() {
+      fc.features.forEach(f => map.setFeatureState({ source: 'll', id: f.id }, { active: false }));
+      markers.forEach(({ el }) => el.classList.remove('is-active'));
+      fadePaint('rings', 'line-opacity', 0); fadePaint('ring-labels', 'text-opacity', 0); compareBuildings(null);
+      const cam = home(); reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });
+    },
+    filter(f) {
+      markers.forEach(({ el }) => el.classList.toggle('is-dim', f !== 'all' && !el.classList.contains(f)));
+      const filter = f === 'all' ? null : ['==', ['get', 'stage'], f];
+      for (const id of ['ll-glow', 'll-plate', 'll-line']) map.setFilter(id, filter);
+      map.setFilter('ll-tower', f === 'review' ? ['==', 1, 0] : ['==', ['get', 'stage'], 'approved']);
+    }
+  };
+}
+
+async function main() {
+  const data = await fetch('../data/live-local.json?v=' + Date.now().toString().slice(0, -5)).then(r => r.json());
+  const apps = data.applications;
+  const byId = new Map(apps.map(a => [a.id, a]));
+  const approved = apps.filter(a => a.stage === 'approved');
+
+  // Numbers and list
+  const set = (k, v) => document.querySelectorAll(`[data-count="${k}"]`).forEach(el => (el.textContent = v));
+  set('total', apps.length); set('approved', approved.length); set('review', apps.length - approved.length);
+  set('tallest', Math.max(...approved.map(a => a.stories || 0)));
+  const updated = () => (document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`));
+  updated();
+  const order = [...apps].sort((a, b) => (a.stage === b.stage ? (b.stories || 0) - (a.stories || 0) || (b.filed || '').localeCompare(a.filed || '') : a.stage === 'approved' ? -1 : 1));
+  listEl.innerHTML = order.map(card).join('');
+  listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${0.45 + i * 0.045}s`));
+
   let active = null;
+  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}</small></div>`, L, title, esc, reduced, phone };
+
+  // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
+  const key = document.querySelector('meta[name="google-maps-key"]')?.content;
+  const want = new URLSearchParams(location.search).get('engine');
+  let engine = null;
+  if (key && want !== 'flat') {
+    try { engine = await (await import('./engine-photo.js?v=2')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+    catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
+  }
+  if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
+
+  app.dataset.state = 'ready';
+  engine.intro();
+
   function hover(id, on) {
     listEl.querySelectorAll('.card.is-hover').forEach(el => el.classList.remove('is-hover'));
-    markers.forEach(({ el }) => el.classList.remove('is-hover'));
-    if (on && id) { listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.classList.add('is-hover'); markers.get(id)?.el.classList.add('is-hover'); }
+    if (on && id) listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.classList.add('is-hover');
+    engine?.hover(on ? id : null);
   }
   function select(id, { fly = true } = {}) {
     const a = byId.get(id); if (!a) return;
     active = id;
-    fc.features.forEach(f => map.setFeatureState({ source: 'll', id: f.id }, { active: f.properties.id === id }));
     listEl.querySelectorAll('.card').forEach(el => el.classList.toggle('is-active', el.dataset.id === id));
-    markers.forEach(({ el }, key) => el.classList.toggle('is-active', key === id));
     detailBody.innerHTML = detailHtml(a);
-    showRings(a); compareBuildings(a);
     detail.hidden = false; requestAnimationFrame(() => detail.classList.add('is-open'));
     listEl.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
     history.replaceState(null, '', '#' + id);
-    if (fly && a.center) {
-      const padding = phone() ? { top: 60, bottom: innerHeight * .72, left: 20, right: 20 } : { top: 80, bottom: 60, left: document.querySelector('.panel').offsetWidth + 40, right: detail.offsetWidth + 60 };
-      const cam = { center: a.center, zoom: a.stories && a.stories > 14 ? 16.6 : 17.1, pitch: 62, bearing: map.getBearing() - 18, padding };
-      reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2200, curve: 1.6, essential: true });
-    }
+    engine.select(a, { fly, detailWidth: detail.offsetWidth });
   }
   function close() {
     active = null;
     detail.classList.remove('is-open');
     setTimeout(() => { if (!active) detail.hidden = true; }, 450);
-    fc.features.forEach(f => map.setFeatureState({ source: 'll', id: f.id }, { active: false }));
-    document.querySelectorAll('.card.is-active, .pin.is-active').forEach(el => el.classList.remove('is-active'));
-    fadePaint('rings', 'line-opacity', 0); fadePaint('ring-labels', 'text-opacity', 0); compareBuildings(null);
+    document.querySelectorAll('.card.is-active').forEach(el => el.classList.remove('is-active'));
     history.replaceState(null, '', location.pathname + location.search);
-    const cam = home();
-    reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });
+    engine.clear();
   }
   detail.querySelector('[data-close]').addEventListener('click', close);
   addEventListener('keydown', e => { if (e.key === 'Escape' && active) close(); });
@@ -278,24 +309,20 @@ async function main() {
   listEl.addEventListener('mouseover', e => { const c = e.target.closest('.card'); if (c) hover(c.dataset.id, true); });
   listEl.addEventListener('mouseleave', () => hover(null, false));
 
-  // Filters
   document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
     const f = chip.dataset.filter;
     document.querySelectorAll('.chip').forEach(c => { const on = c === chip; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on); });
     listEl.querySelectorAll('.card').forEach(el => (el.parentElement.hidden = f !== 'all' && el.dataset.stage !== f));
-    markers.forEach(({ el }) => el.classList.toggle('is-dim', f !== 'all' && !el.classList.contains(f)));
-    const filter = f === 'all' ? null : ['==', ['get', 'stage'], f];
-    for (const id of ['ll-glow', 'll-plate', 'll-line']) map.setFilter(id, filter);
-    map.setFilter('ll-tower', f === 'review' ? ['==', 1, 0] : ['==', ['get', 'stage'], 'approved']);
+    engine.filter(f);
   }));
 
   document.addEventListener('language:change', () => {
     listEl.innerHTML = order.map(card).join('');
     if (active) { listEl.querySelector(`.card[data-id="${CSS.escape(active)}"]`)?.classList.add('is-active'); detailBody.innerHTML = detailHtml(byId.get(active)); }
-    document.querySelector('[data-updated]').textContent = L(`Updated ${date(data.generatedAt.slice(0, 10))}.`, `Actualizado: ${date(data.generatedAt.slice(0, 10))}.`);
+    updated();
+    engine.relabel?.();
   });
 
-  // Deep link
   const start = decodeURIComponent(location.hash.slice(1));
   if (byId.has(start)) setTimeout(() => select(start), reduced ? 0 : 3300);
 }

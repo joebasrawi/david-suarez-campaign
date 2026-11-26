@@ -158,6 +158,26 @@ h1 .accent { color: var(--coral) }
 .pin.is-dim { opacity: .18; pointer-events: none }
 .pin-wrap { display: grid; place-items: center; padding-bottom: 6px }
 
+/* Photorealistic engine (Cesium) */
+.map.is-photo .cesium-viewer, .map.is-photo .cesium-viewer-cesiumWidgetContainer, .map.is-photo .cesium-widget, .map.is-photo canvas { width: 100%; height: 100% }
+.map.is-photo .cesium-viewer-bottom { left: auto !important; right: .6rem; bottom: .5rem; max-width: 34%; padding: .3rem .55rem; border-radius: 8px; background: rgba(7,26,34,.65); z-index: 3 }
+@media (max-width: 52rem) {
+  .map.is-photo .cesium-viewer-bottom { top: auto !important; bottom: calc(58vh + 6px) !important; left: .5rem !important; right: .5rem !important; max-width: none; padding: .15rem .45rem; background: rgba(7,26,34,.78) }
+  .map.is-photo .cesium-credit-logoContainer img { max-height: 12px; width: auto }
+  .map.is-photo .cesium-credit-logoContainer, .map.is-photo .cesium-credit-textContainer { display: inline }
+  .map.is-photo .cesium-credit-textContainer, .map.is-photo .cesium-credit-textContainer * { font-size: 8px !important; line-height: 1.3 }
+  html[data-engine="photo"] .legend { display: none }
+}
+.map.is-photo .cesium-credit-textContainer, .map.is-photo .cesium-credit-textContainer a { color: #a9bec3 !important; font: 500 10px var(--sans) }
+.pin-layer { position: absolute; inset: 0; pointer-events: none; z-index: 2; overflow: hidden }
+.pin-abs { position: absolute; left: 0; top: 0; will-change: transform; transition: opacity .25s }
+.pin-abs .pin { pointer-events: auto }
+.tip-float { position: absolute; left: 0; top: 0; z-index: 4; pointer-events: none }
+html[data-engine="photo"] .detail { max-height: calc(100% - 9.6rem) }
+html[data-engine="photo"] .map-veil { background:
+  linear-gradient(90deg, rgba(7,26,34,.55) 0, rgba(7,26,34,.15) calc(var(--panel-w) + 6rem), transparent calc(var(--panel-w) + 14rem)),
+  linear-gradient(180deg, rgba(7,26,34,.45) 0, transparent 14%) }
+
 /* Loader */
 .loader { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; background: var(--ink); transition: opacity .9s var(--ease), visibility .9s }
 .loader span { width: 44px; height: 44px; border-radius: 50%; border: 3px solid rgba(255,255,255,.1); border-top-color: var(--mint); animation: spin 1s linear infinite }
