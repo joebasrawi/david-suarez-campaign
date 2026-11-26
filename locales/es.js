@@ -64,7 +64,9 @@ Add your mobile number to get text messages.|Agregue su número de celular para 
 Privacy|Privacidad
 How this site handles the information you share with us.|Cómo este sitio maneja la información que usted nos comparte.
 What we collect|Qué información recopilamos
-When you sign up to stay informed, we collect your first and last name, your email address and, if you choose, your mobile number. We don’t collect anything else through this site, and we don’t use advertising or tracking cookies.|Cuando se suscribe para mantenerse informado, recopilamos su nombre y apellido, su correo electrónico y, si lo desea, su número de celular. No recopilamos nada más a través de este sitio y no usamos cookies de publicidad ni de seguimiento.
+When you sign up to stay informed, we collect your first and last name, your email address and, if you choose, your mobile number. We don’t collect anything else about you through this site, and we don’t use advertising or tracking cookies.|Cuando se suscribe para mantenerse informado, recopilamos su nombre y apellido, su correo electrónico y, si lo desea, su número de celular. No recopilamos nada más sobre usted a través de este sitio y no usamos cookies de publicidad ni de seguimiento.
+Visit counts|Conteo de visitas
+We use Cloudflare Web Analytics to count visits, such as which pages people read and which links brought them here. It uses no cookies, doesn’t follow you to other sites and doesn’t tell us who you are.|Usamos Cloudflare Web Analytics para contar las visitas, como qué páginas lee la gente y qué enlaces la trajeron aquí. No usa cookies, no lo sigue a otros sitios y no nos dice quién es usted.
 How we use it|Cómo la usamos
 We use your email address to send updates from David about Miami Beach. We use your mobile number only if you check the box to get text messages, and only to send those updates.|Usamos su correo electrónico para enviarle actualizaciones de David sobre Miami Beach. Usamos su número de celular solo si marca la casilla para recibir mensajes de texto, y solo para enviar esas actualizaciones.
 Text messages|Mensajes de texto
