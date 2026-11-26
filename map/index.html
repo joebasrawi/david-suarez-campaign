@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Miami Beach on one 3D map: development and Live Local projects, the City's own construction projects, and flood risk, all from public City and County records.">
+  <meta name="theme-color" content="#071a22">
+  <meta property="og:title" content="Miami Beach Info Map">
+  <meta property="og:description" content="What's being built, what the City is building, and where it floods. From public City and County records.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davidsuarezmb.com/map/">
+  <meta property="og:site_name" content="David Suarez · Miami Beach">
+  <meta property="og:image" content="https://davidsuarezmb.com/assets/social-card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="google-maps-key" content="AIzaSyA9cB2d4Ykqi2MvnVNGLDAKrNgk5J_DKeI"><!-- Browser key: restricted to davidsuarezmb.com (and localhost:8765) and to the Map Tiles API. -->
+  <link rel="canonical" href="https://davidsuarezmb.com/map/">
+  <title>Miami Beach Info Map | David Suarez</title>
+  <link rel="icon" href="../assets/david-suarez-dark.ico?v=3" sizes="16x16 32x32 48x48 64x64">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="live-local.css?v=10">
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+  <script type="module" src="../language.js"></script>
+  <script type="module" src="live-local.js?v=8"></script>
+</head>
+<body>
+  <a class="skip" href="#list">Skip to the list</a>
+  <div class="app" data-state="loading">
+    <div id="map" class="map" role="region" aria-label="3D map of Miami Beach"></div>
+    <div class="map-veil" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="David Suarez resident hub home"><span class="brand-first">David</span><span class="brand-last">Suarez</span><span class="brand-office">Miami Beach Commissioner</span></a>
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Cambiar a español" title="Cambiar a español" aria-pressed="false"><span data-lang-es lang="es">ES</span><span aria-hidden="true">/</span><span data-lang-en lang="en" class="is-current">EN</span></button>
+    </header>
+
+    <aside class="panel" aria-labelledby="title">
+      <div class="panel-scroll">
+        <section class="intro">
+          <p class="kicker"><span class="rule" aria-hidden="true"></span>Miami Beach Info Map</p>
+          <nav class="views" aria-label="Map views">
+            <button type="button" class="view-tab" data-view="overview" aria-pressed="true">Overview</button>
+            <button type="button" class="view-tab" data-view="development" aria-pressed="false">Development</button>
+            <button type="button" class="view-tab" data-view="livelocal" aria-pressed="false">Live Local</button>
+            <button type="button" class="view-tab" data-view="city" aria-pressed="false">City projects</button>
+            <button type="button" class="view-tab" data-view="flood" aria-pressed="false">Flood risk</button>
+            <button type="button" class="view-tab" data-view="around" aria-pressed="false">Getting around</button>
+            <button type="button" class="view-tab" data-view="parks" aria-pressed="false">Parks &amp; beaches</button>
+            <button type="button" class="view-tab" data-view="str" aria-pressed="false">Short-term rentals</button>
+          </nav>
+          <div class="view-head" aria-live="polite"></div>
+        </section>
+
+        <div class="filters" role="group" aria-label="Options">
+          <button type="button" class="chip" data-review aria-pressed="false"><span class="dot review" aria-hidden="true"></span>Under review only</button>
+          <button type="button" class="chip flood-toggle" data-flood aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s-5 5.6-5 9a5 5 0 0 0 10 0c0-3.4-5-9-5-9Z"/></svg>Flood layer</button>
+        </div>
+        <div class="flood-key" hidden>
+          <span><i style="background:#3d7bff"></i>VE · coastal, waves</span>
+          <span><i style="background:#43a6e8"></i>AE · 1% yearly flood</span>
+          <span><i style="background:#8fd0ef"></i>X · moderate to low</span>
+          <span><i style="background:#6fe3ff"></i>City-mapped tidal flooding</span>
+        </div>
+
+        <ol class="list" id="list" aria-label="Places on the map"></ol>
+
+        <footer class="sources">
+          <p><strong>Sources.</strong> All public records: the City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists and signed orders; Design Review, Historic Preservation and Planning Board cases filed since 2023 in <a href="https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService">Civic Access</a> (new buildings, major renovations and rezonings; single-family homes left out); the City's capital project map, parcel map, FEMA flood zones and tidal flooding map; Miami-Dade County LiDAR building heights; the City's lane closure, trolley and bike lane maps; Miami-Dade County park and beach boundaries; and the City's short-term rental Certificates of Use (counted by building only).</p>
+          <p class="updated" data-updated></p>
+          <p>See something wrong? <a href="../about/">Tell David's office</a>.</p>
+        </footer>
+      </div>
+    </aside>
+
+    <section class="detail" aria-live="polite" aria-labelledby="detail-title" hidden>
+      <button class="close" type="button" aria-label="Close details" data-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="detail-body"></div>
+    </section>
+
+    <div class="legend" aria-hidden="true"></div>
+    <div class="keys-hint" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move · <kbd>Q</kbd><kbd>E</kbd> turn · <kbd>R</kbd><kbd>F</kbd> up / down · <kbd>Shift</kbd> faster</div>
+
+    <div class="loader" aria-hidden="true"><span></span></div>
+  </div>
+  <noscript><p class="noscript">This map needs JavaScript. The City's own lists are linked under Sources.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,2548 @@
+{
+  "generatedAt": "2026-11-26T00:50:15.542Z",
+  "source": {
+    "label": "City of Miami Beach Live Local Act pages, Civic Access, City parcel layer, signed orders, and Miami-Dade County LiDAR building heights",
+    "urls": [
+      "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
+      "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+      "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService",
+      "https://gis.miamibeachfl.gov/public/rest/services/gc/gc_Cadastral/MapServer/6"
+    ]
+  },
+  "counts": {
+    "total": 14,
+    "approved": 5,
+    "review": 9
+  },
+  "applications": [
+    {
+      "id": "PB24-0716",
+      "number": "PB24-0716",
+      "formerly": null,
+      "stage": "approved",
+      "status": "Approved",
+      "type": "Conditional Use Approval",
+      "location": "1960 Normandy Drive",
+      "filed": "2024-09-06",
+      "completed": "2025-07-01",
+      "planner": "Belush, Michael",
+      "stories": 7,
+      "applicant": "Jakeal LLC",
+      "uses": "ground-floor commercial space",
+      "sites": [
+        {
+          "folio": "0232100110370",
+          "address": "1960 NORMANDY DR",
+          "owner": "JAKEAL LLC",
+          "lastSale": {
+            "date": "2019-11-26",
+            "price": 2200000
+          },
+          "zoning": "6100",
+          "lotSize": 25771,
+          "existing": {
+            "yearBuilt": 1971,
+            "floors": 2,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.141323,
+        25.851908
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/bc25201e-4e46-429a-baa9-ba0035cf881f?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
+        "order": "https://www.miamibeachfl.gov/wp-content/uploads/2025/12/1960-Normandy-Approved-Live-Local-Act-Order.pdf"
+      },
+      "heightFt": 75,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 100,
+            "address": "2016 BAY DR",
+            "meters": 233
+          },
+          "typicalFt": 16,
+          "buildings": 324,
+          "taller": 2
+        },
+        "mile": {
+          "tallest": {
+            "ft": 147,
+            "address": "900 BAY DR",
+            "meters": 1513
+          },
+          "typicalFt": 16,
+          "buildings": 1709,
+          "taller": 6
+        }
+      }
+    },
+    {
+      "id": "PB24-0683",
+      "number": "PB24-0683",
+      "formerly": null,
+      "stage": "approved",
+      "status": "Complete",
+      "type": "Conditional Use Approval",
+      "location": "663 Alton Road",
+      "filed": "2024-06-04",
+      "completed": "2026-06-10",
+      "planner": null,
+      "stories": 16,
+      "applicant": "South Beach Heights II, LLC",
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030098540",
+          "address": "663 ALTON RD",
+          "owner": "SOUTH BEACH HEIGHTS II LLC",
+          "lastSale": {
+            "date": "2004-02-01",
+            "price": 2000000
+          },
+          "zoning": "6400",
+          "lotSize": 7500,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.140367,
+        25.776798
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/b94ae962-9131-4b6c-9a2f-d477b35b0b25?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
+        "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/06/PB24-0683-663-Alton-Rd-SIGNED-ORDER.pdf"
+      },
+      "heightFt": 170,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 201
+          },
+          "typicalFt": 23,
+          "buildings": 236,
+          "taller": 1
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1331
+          },
+          "typicalFt": 25,
+          "buildings": 1888,
+          "taller": 13
+        }
+      }
+    },
+    {
+      "id": "PB24-0714",
+      "number": "PB24-0714",
+      "formerly": null,
+      "stage": "approved",
+      "status": "Under Review",
+      "type": "Conditional Use Approval",
+      "location": "1826 Collins Avenue",
+      "filed": "2024-08-12",
+      "completed": null,
+      "planner": null,
+      "stories": 15,
+      "applicant": "IC, LLC C/O Crescent Heights",
+      "uses": "office space at the 6th floor",
+      "sites": [
+        {
+          "folio": "0232340190050",
+          "address": "1826 COLLINS AVE",
+          "owner": "IC LLC",
+          "lastSale": {
+            "date": "1990-12-01",
+            "price": null
+          },
+          "zoning": "6400",
+          "lotSize": 9655,
+          "existing": {
+            "yearBuilt": 2012,
+            "floors": 3,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.129749,
+        25.794485
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/737b98d5-eac1-48c8-a38c-d68ff43e331a?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
+        "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/09/PB24-0714-1826-Collins-Av-SIGNED-ORDER.pdf"
+      },
+      "heightFt": 160,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 196
+          },
+          "typicalFt": 40,
+          "buildings": 120,
+          "taller": 7
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 196
+          },
+          "typicalFt": 24,
+          "buildings": 2101,
+          "taller": 26
+        }
+      }
+    },
+    {
+      "id": "PB26-0814",
+      "number": "PB26-0814",
+      "formerly": null,
+      "stage": "approved",
+      "status": "Approved",
+      "type": "Conditional Use Approval",
+      "location": "7410 Collins Avenue",
+      "filed": "2026-01-15",
+      "completed": "2026-10-14",
+      "planner": null,
+      "stories": 11,
+      "applicant": "BH Collins LLC",
+      "uses": "retail space at the ground floor",
+      "sites": [
+        {
+          "folio": "0232020030180",
+          "address": "7410 COLLINS AVE",
+          "owner": "BH COLLINS LLC",
+          "lastSale": {
+            "date": "2025-10-22",
+            "price": 15350000
+          },
+          "zoning": "6400",
+          "lotSize": 15000,
+          "existing": {
+            "yearBuilt": 1950,
+            "floors": 2,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.121285,
+        25.8598
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/346976cd-47d2-4661-bdc0-3c21cf44b5fd?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
+        "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/09/PB26-0814-7410-Collins-Av-SIGNED-ORDER.pdf"
+      },
+      "heightFt": 115,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 265,
+            "address": "7341 COLLINS AVE",
+            "meters": 146
+          },
+          "typicalFt": 22,
+          "buildings": 228,
+          "taller": 3
+        },
+        "mile": {
+          "tallest": {
+            "ft": 367,
+            "address": "6899 COLLINS AVE",
+            "meters": 669
+          },
+          "typicalFt": 20,
+          "buildings": 2188,
+          "taller": 19
+        }
+      }
+    },
+    {
+      "id": "PB24-0694",
+      "number": "PB24-0694",
+      "formerly": null,
+      "stage": "approved",
+      "status": "Complete",
+      "type": "Conditional Use Approval",
+      "location": "7401-7425 Harding Avenue",
+      "filed": "2024-06-26",
+      "completed": "2026-10-01",
+      "planner": "Tackett, Debbie",
+      "stories": 21,
+      "applicant": "BH Collins LLC",
+      "uses": "retail space at the ground and 2nd floor levels",
+      "sites": [
+        {
+          "folio": "0232020030210",
+          "address": "7425 HARDING AVE",
+          "owner": "BH COLLINS LLC",
+          "lastSale": {
+            "date": "2025-10-22",
+            "price": 15350000
+          },
+          "zoning": "6400",
+          "lotSize": 7500,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        },
+        {
+          "folio": "0232020030220",
+          "address": "7417 HARDING AVE",
+          "owner": "BH COLLINS LLC",
+          "lastSale": {
+            "date": "2025-10-22",
+            "price": 15350000
+          },
+          "zoning": "6400",
+          "lotSize": 7500,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        },
+        {
+          "folio": "0232020030230",
+          "address": "7409 HARDING AVE",
+          "owner": "BH COLLINS LLC",
+          "lastSale": {
+            "date": "2025-10-22",
+            "price": 15350000
+          },
+          "zoning": "6400",
+          "lotSize": 7500,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        },
+        {
+          "folio": "0232020030240",
+          "address": "7401 HARDING AVE",
+          "owner": "BH COLLINS LLC",
+          "lastSale": {
+            "date": "2025-10-22",
+            "price": 15350000
+          },
+          "zoning": "6400",
+          "lotSize": 7500,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        },
+        {
+          "folio": "0232020030270",
+          "address": "7418 HARDING AVE",
+          "owner": "HARDING 7418 LLC",
+          "lastSale": {
+            "date": "2022-11-21",
+            "price": 5618000
+          },
+          "zoning": "3900",
+          "lotSize": 15000,
+          "existing": {
+            "yearBuilt": 1946,
+            "floors": 2,
+            "units": 20
+          }
+        }
+      ],
+      "center": [
+        -80.121984,
+        25.859934
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/ff2d8b61-ff5b-4866-bf40-72e1964d452d?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/",
+        "order": "https://www.miamibeachfl.gov/wp-content/uploads/2026/10/PB24-0694-7401-7425-Harding-Av-SIGNED-ORDER-2.pdf"
+      },
+      "heightFt": 220,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 265,
+            "address": "7341 COLLINS AVE",
+            "meters": 214
+          },
+          "typicalFt": 22,
+          "buildings": 251,
+          "taller": 1
+        },
+        "mile": {
+          "tallest": {
+            "ft": 367,
+            "address": "6899 COLLINS AVE",
+            "meters": 703
+          },
+          "typicalFt": 20,
+          "buildings": 2270,
+          "taller": 3
+        }
+      }
+    },
+    {
+      "id": "LLA26-0002",
+      "number": "LLA26-0002",
+      "formerly": "PB24-0688",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "810 Alton Rd. and 824 Alton Rd.",
+      "filed": "2024-06-10",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030010530",
+          "address": "824 ALTON RD",
+          "owner": "824 DEVELOPMENT LLC",
+          "lastSale": {
+            "date": "2025-09-03",
+            "price": 5000000
+          },
+          "zoning": "6400",
+          "lotSize": 18000,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        },
+        {
+          "folio": "0242030010540",
+          "address": "810 ALTON RD",
+          "owner": "ALTON HOSTEL LLC",
+          "lastSale": {
+            "date": "2013-02-21",
+            "price": 4656000
+          },
+          "zoning": "6400",
+          "lotSize": 10500,
+          "existing": {
+            "yearBuilt": 1939,
+            "floors": 2,
+            "units": 16
+          }
+        }
+      ],
+      "center": [
+        -80.141208,
+        25.778649
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/402d8ac6-2064-4e37-b47f-cbb3e6756f26?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 245
+          },
+          "typicalFt": 23,
+          "buildings": 218,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1549
+          },
+          "typicalFt": 25,
+          "buildings": 1992,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0003",
+      "number": "LLA26-0003",
+      "formerly": "PB24-0689",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "42 Collins Ave.",
+      "filed": "2024-06-10",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030031260",
+          "address": "42 COLLINS AVE",
+          "owner": "42 COLLINS AVENUE LLC",
+          "lastSale": {
+            "date": "2018-05-01",
+            "price": 30750000
+          },
+          "zoning": "6502",
+          "lotSize": 32500,
+          "existing": {
+            "yearBuilt": 1970,
+            "floors": 4,
+            "units": 230
+          }
+        }
+      ],
+      "center": [
+        -80.134421,
+        25.769452
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/d5188ecc-79d7-4e2a-965d-b8b06477a171?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 322
+          },
+          "typicalFt": 33,
+          "buildings": 140,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 322
+          },
+          "typicalFt": 25,
+          "buildings": 1069,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0004",
+      "number": "LLA26-0004",
+      "formerly": "PB25-0800",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "1501 Collins Ave.",
+      "filed": "2025-09-05",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0232341630001",
+          "address": "1501 COLLINS AVE",
+          "owner": "REFERENCE ONLY",
+          "lastSale": null,
+          "zoning": "6501",
+          "lotSize": null,
+          "existing": {
+            "yearBuilt": null,
+            "floors": null,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.129775,
+        25.787997
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/746addb5-9846-4779-b03d-0e466d6f66b8?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 270,
+            "address": "1601 COLLINS AVE",
+            "meters": 171
+          },
+          "typicalFt": 35,
+          "buildings": 132,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 844
+          },
+          "typicalFt": 25,
+          "buildings": 2056,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0006",
+      "number": "LLA26-0006",
+      "formerly": "PB26-0840",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "425 - 455 Ocean Dr.",
+      "filed": "2026-04-10",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030030610",
+          "address": "444 OCEAN DR",
+          "owner": "SAHEL CORP",
+          "lastSale": {
+            "date": "1991-08-01",
+            "price": 1320000
+          },
+          "zoning": "3003",
+          "lotSize": 5750,
+          "existing": {
+            "yearBuilt": 1936,
+            "floors": 4,
+            "units": 27
+          }
+        },
+        {
+          "folio": "0242030030620",
+          "address": "436 OCEAN DR",
+          "owner": "SAHEL CORP",
+          "lastSale": {
+            "date": "1991-08-01",
+            "price": 1320000
+          },
+          "zoning": "3003",
+          "lotSize": 5757,
+          "existing": {
+            "yearBuilt": 1936,
+            "floors": 2,
+            "units": 26
+          }
+        },
+        {
+          "folio": "0242030120190",
+          "address": "455 OCEAN DR",
+          "owner": "SAVOY HOTEL PARTNERS LLC % THE SAVOY HOTEL",
+          "lastSale": {
+            "date": "2005-06-01",
+            "price": 28000000
+          },
+          "zoning": "3004",
+          "lotSize": 82276,
+          "existing": {
+            "yearBuilt": 1941,
+            "floors": 3,
+            "units": 75
+          }
+        }
+      ],
+      "center": [
+        -80.131654,
+        25.773905
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/446ee3f0-9b9b-43e5-86f0-59e7fb6ee736?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 137,
+            "address": "533 COLLINS AVE",
+            "meters": 178
+          },
+          "typicalFt": 33,
+          "buildings": 134,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 787
+          },
+          "typicalFt": 25,
+          "buildings": 1443,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0007",
+      "number": "LLA26-0007",
+      "formerly": "PB25-0796",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "1030 6 St.",
+      "filed": "2026-03-30",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030097860",
+          "address": "1030 6 ST",
+          "owner": "1030 PROPERTY INVESTMENTS LLC",
+          "lastSale": {
+            "date": "2022-06-23",
+            "price": 5700000
+          },
+          "zoning": "6503",
+          "lotSize": 15000,
+          "existing": {
+            "yearBuilt": 1938,
+            "floors": 2,
+            "units": 12
+          }
+        }
+      ],
+      "center": [
+        -80.139153,
+        25.775528
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/b0b26cd2-986f-4315-bcb6-5313b9b5adc7?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 348
+          },
+          "typicalFt": 22,
+          "buildings": 277,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1146
+          },
+          "typicalFt": 25,
+          "buildings": 1818,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0009",
+      "number": "LLA26-0009",
+      "formerly": "PB26-0836",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "709 - 755 Alton Rd.",
+      "filed": "2026-03-30",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030010250",
+          "address": "740 ALTON RD",
+          "owner": "740 ALTON RD LLC",
+          "lastSale": {
+            "date": "2019-05-07",
+            "price": 5350000
+          },
+          "zoning": "6400",
+          "lotSize": 18870,
+          "existing": {
+            "yearBuilt": 1950,
+            "floors": 2,
+            "units": null
+          }
+        },
+        {
+          "folio": "0242030010270",
+          "address": "710 ALTON RD",
+          "owner": "MIAMI DADE COUNTY GSA - R/E MGMT",
+          "lastSale": {
+            "date": "2006-01-30",
+            "price": 6995000
+          },
+          "zoning": "6400",
+          "lotSize": 25500,
+          "existing": {
+            "yearBuilt": 1950,
+            "floors": 1,
+            "units": null
+          }
+        },
+        {
+          "folio": "0242030098600",
+          "address": "709 ALTON RD",
+          "owner": "ALTON ROAD DEVELOPMENT LLC",
+          "lastSale": {
+            "date": "2014-06-24",
+            "price": 1363234
+          },
+          "zoning": "6400",
+          "lotSize": 45000,
+          "existing": {
+            "yearBuilt": 2018,
+            "floors": 5,
+            "units": null
+          }
+        },
+        {
+          "folio": "0242030098640",
+          "address": "755 ALTON RD",
+          "owner": "ALTON ROAD EIGHTH STREET LLC",
+          "lastSale": {
+            "date": "2026-01-27",
+            "price": null
+          },
+          "zoning": "6400",
+          "lotSize": 1875,
+          "existing": {
+            "yearBuilt": 1948,
+            "floors": 2,
+            "units": 1
+          }
+        },
+        {
+          "folio": "0242030098641",
+          "address": "755 ALTON RD",
+          "owner": "ALTON ROAD EIGHTH STREET LLC",
+          "lastSale": {
+            "date": "2026-01-27",
+            "price": null
+          },
+          "zoning": "6400",
+          "lotSize": 1875,
+          "existing": {
+            "yearBuilt": 1948,
+            "floors": 2,
+            "units": 1
+          }
+        },
+        {
+          "folio": "0242030098642",
+          "address": "755 ALTON RD",
+          "owner": "ALTON ROAD EIGHTH STREET LLC",
+          "lastSale": {
+            "date": "2026-01-27",
+            "price": null
+          },
+          "zoning": "6400",
+          "lotSize": 1875,
+          "existing": {
+            "yearBuilt": 1948,
+            "floors": 2,
+            "units": 1
+          }
+        },
+        {
+          "folio": "0242030098643",
+          "address": "755 ALTON RD",
+          "owner": "ALTON ROAD EIGHTH STREET LLC",
+          "lastSale": {
+            "date": "2026-01-27",
+            "price": null
+          },
+          "zoning": "6400",
+          "lotSize": 1875,
+          "existing": {
+            "yearBuilt": 1948,
+            "floors": 2,
+            "units": 1
+          }
+        }
+      ],
+      "center": [
+        -80.140659,
+        25.777615
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/8a8e2025-8bc1-4e3c-a7bf-fa1d1b972496?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 198
+          },
+          "typicalFt": 23,
+          "buildings": 238,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1422
+          },
+          "typicalFt": 25,
+          "buildings": 1922,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0010",
+      "number": "LLA26-0010",
+      "formerly": "PB26-0820",
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "1920 Alton Rd.",
+      "filed": "2026-02-11",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0232330220030",
+          "address": "1920 ALTON RD",
+          "owner": "ALTON OFFICE HOLDINGS II LLC",
+          "lastSale": {
+            "date": "2021-12-01",
+            "price": 21250000
+          },
+          "zoning": "6400",
+          "lotSize": 25600,
+          "existing": {
+            "yearBuilt": 1960,
+            "floors": 3,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.14162,
+        25.795361
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/a357c9b0-317e-4840-afbd-c884a59a1b57?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 249,
+            "address": "1800 SUNSET HARBOUR DR",
+            "meters": 337
+          },
+          "typicalFt": 23,
+          "buildings": 210,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 1353
+          },
+          "typicalFt": 24,
+          "buildings": 2174,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "LLA26-0012",
+      "number": "LLA26-0012",
+      "formerly": null,
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Live Local Act",
+      "location": "1771 West Ave.",
+      "filed": "2026-10-19",
+      "completed": null,
+      "planner": "Seiberling, James",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0232330120710",
+          "address": "1771 WEST AVE",
+          "owner": "EOS WELLNESS REAL ESTATE MIAMI LLC",
+          "lastSale": {
+            "date": "2025-06-16",
+            "price": 28500000
+          },
+          "zoning": "6400",
+          "lotSize": 25000,
+          "existing": {
+            "yearBuilt": 1965,
+            "floors": 1,
+            "units": null
+          }
+        }
+      ],
+      "center": [
+        -80.14233,
+        25.793178
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/2fd159ba-0186-4799-b6b0-0271565a1d0f?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 249,
+            "address": "1800 SUNSET HARBOUR DR",
+            "meters": 328
+          },
+          "typicalFt": 25,
+          "buildings": 150,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 385,
+            "address": "2001 COLLINS AVE",
+            "meters": 1446
+          },
+          "typicalFt": 24,
+          "buildings": 2214,
+          "taller": null
+        }
+      }
+    },
+    {
+      "id": "PB26-0837",
+      "number": "PB26-0837",
+      "formerly": null,
+      "stage": "review",
+      "status": "Under Review",
+      "type": "Planning Board - LDR Text Amendment",
+      "location": "1030 6 St.",
+      "filed": "2026-03-30",
+      "completed": "2026-07-07",
+      "planner": "Tackett, Debbie",
+      "stories": null,
+      "applicant": null,
+      "uses": null,
+      "sites": [
+        {
+          "folio": "0242030097860",
+          "address": "1030 6 ST",
+          "owner": "1030 PROPERTY INVESTMENTS LLC",
+          "lastSale": {
+            "date": "2022-06-23",
+            "price": 5700000
+          },
+          "zoning": "6503",
+          "lotSize": 15000,
+          "existing": {
+            "yearBuilt": 1938,
+            "floors": 2,
+            "units": 12
+          }
+        }
+      ],
+      "center": [
+        -80.139153,
+        25.775528
+      ],
+      "links": {
+        "civicAccess": "https://energovcss.miamibeachfl.gov/EnerGovProd/SelfService#/plan/4e2868cd-6e46-4f74-a10b-62e562d5f596?tab=attachments",
+        "cityList": "https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/",
+        "order": null
+      },
+      "heightFt": null,
+      "compare": {
+        "quarterMile": {
+          "tallest": {
+            "ft": 321,
+            "address": "650 WEST AVE",
+            "meters": 348
+          },
+          "typicalFt": 22,
+          "buildings": 277,
+          "taller": null
+        },
+        "mile": {
+          "tallest": {
+            "ft": 464,
+            "address": "100 S POINTE DR",
+            "meters": 1146
+          },
+          "typicalFt": 25,
+          "buildings": 1818,
+          "taller": null
+        }
+      }
+    }
+  ],
+  "parcels": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0716",
+          "stage": "approved",
+          "stories": 7
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.1415579227197,
+                25.851736311947
+              ],
+              [
+                -80.14149175878963,
+                25.85174190524023
+              ],
+              [
+                -80.1414131755747,
+                25.851748548848914
+              ],
+              [
+                -80.14134699366461,
+                25.85175414377482
+              ],
+              [
+                -80.14126958127859,
+                25.8517606904261
+              ],
+              [
+                -80.14119653589871,
+                25.851766867510538
+              ],
+              [
+                -80.14111610903316,
+                25.85177366613828
+              ],
+              [
+                -80.1410384780378,
+                25.85178022942541
+              ],
+              [
+                -80.14094928816675,
+                25.851787771343066
+              ],
+              [
+                -80.14095838281726,
+                25.85210407619786
+              ],
+              [
+                -80.14104205600434,
+                25.852099209545344
+              ],
+              [
+                -80.14113082122252,
+                25.852094279991803
+              ],
+              [
+                -80.14120953058641,
+                25.852090092449245
+              ],
+              [
+                -80.14130162985323,
+                25.85208541268091
+              ],
+              [
+                -80.1413581421553,
+                25.852077936379338
+              ],
+              [
+                -80.14143306875182,
+                25.85206725356418
+              ],
+              [
+                -80.14149320875697,
+                25.85205804123249
+              ],
+              [
+                -80.14157932646675,
+                25.85204384466319
+              ],
+              [
+                -80.14167419415463,
+                25.85202683751452
+              ],
+              [
+                -80.14166143829227,
+                25.851727560862017
+              ],
+              [
+                -80.1415579227197,
+                25.851736311947
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0683",
+          "stage": "approved",
+          "stories": 16
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14018260411876,
+                25.776747048734176
+              ],
+              [
+                -80.14018813591247,
+                25.776893959347532
+              ],
+              [
+                -80.14064276961882,
+                25.776876036876228
+              ],
+              [
+                -80.14063645830255,
+                25.776727930177337
+              ],
+              [
+                -80.14018260411876,
+                25.776747048734176
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0714",
+          "stage": "approved",
+          "stories": 15
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12952302658492,
+                25.794436114202288
+              ],
+              [
+                -80.12950033910705,
+                25.79457685047428
+              ],
+              [
+                -80.13010239336157,
+                25.79455875246513
+              ],
+              [
+                -80.13009725049398,
+                25.79441857354117
+              ],
+              [
+                -80.12952302658492,
+                25.794436114202288
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB26-0814",
+          "stage": "approved",
+          "stories": 11
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12109420418754,
+                25.859807546391306
+              ],
+              [
+                -80.121100389909,
+                25.859941980813506
+              ],
+              [
+                -80.12154725751351,
+                25.85992870987259
+              ],
+              [
+                -80.12154058781597,
+                25.859795168841455
+              ],
+              [
+                -80.12153334960689,
+                25.859650273804633
+              ],
+              [
+                -80.12108797069425,
+                25.859672018593496
+              ],
+              [
+                -80.12109420418754,
+                25.859807546391306
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0694",
+          "stage": "approved",
+          "stories": 21
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12162442710347,
+                25.860060184416817
+              ],
+              [
+                -80.12163208961194,
+                25.86019466115658
+              ],
+              [
+                -80.12208493313038,
+                25.86017785664159
+              ],
+              [
+                -80.12207686485075,
+                25.860035982219454
+              ],
+              [
+                -80.12162442710347,
+                25.860060184416817
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0694",
+          "stage": "approved",
+          "stories": 21
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12161649250861,
+                25.8599209491721
+              ],
+              [
+                -80.12162442710347,
+                25.860060184416817
+              ],
+              [
+                -80.12207686485075,
+                25.860035982219454
+              ],
+              [
+                -80.12206974766387,
+                25.85991080767571
+              ],
+              [
+                -80.12161649250861,
+                25.8599209491721
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0694",
+          "stage": "approved",
+          "stories": 21
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12160934679329,
+                25.859795516289015
+              ],
+              [
+                -80.12161649250861,
+                25.8599209491721
+              ],
+              [
+                -80.12206974766387,
+                25.85991080767571
+              ],
+              [
+                -80.12206190022832,
+                25.85977280325329
+              ],
+              [
+                -80.12160934679329,
+                25.859795516289015
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0694",
+          "stage": "approved",
+          "stories": 21
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12160101809026,
+                25.8596494069378
+              ],
+              [
+                -80.12160934679329,
+                25.859795516289015
+              ],
+              [
+                -80.12206190022832,
+                25.85977280325329
+              ],
+              [
+                -80.12205359821425,
+                25.85962678704884
+              ],
+              [
+                -80.12160101809026,
+                25.8596494069378
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB24-0694",
+          "stage": "approved",
+          "stories": 21
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12232086054004,
+                25.860030555144842
+              ],
+              [
+                -80.12232672516998,
+                25.860164077746884
+              ],
+              [
+                -80.122788126173,
+                25.860147143145788
+              ],
+              [
+                -80.12278119661337,
+                25.860004962413914
+              ],
+              [
+                -80.1227749328745,
+                25.85987637930196
+              ],
+              [
+                -80.12231512299455,
+                25.859899953314745
+              ],
+              [
+                -80.12232086054004,
+                25.860030555144842
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0002",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14099872498866,
+                25.778816445290413
+              ],
+              [
+                -80.14100317627657,
+                25.7789554423306
+              ],
+              [
+                -80.14146745154726,
+                25.77894289543437
+              ],
+              [
+                -80.141463532586,
+                25.77880216756323
+              ],
+              [
+                -80.14145791662654,
+                25.778600524803995
+              ],
+              [
+                -80.14099211384791,
+                25.778609959394956
+              ],
+              [
+                -80.14099872498866,
+                25.778816445290413
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0002",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14098637289982,
+                25.77843076550038
+              ],
+              [
+                -80.14099211384791,
+                25.778609959394956
+              ],
+              [
+                -80.14145791662654,
+                25.778600524803995
+              ],
+              [
+                -80.14145266890745,
+                25.778412128679996
+              ],
+              [
+                -80.14144265963942,
+                25.778412529063562
+              ],
+              [
+                -80.14098637289982,
+                25.77843076550038
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0003",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.13417424563116,
+                25.769731730594817
+              ],
+              [
+                -80.13455694381926,
+                25.769804654845945
+              ],
+              [
+                -80.13458909740845,
+                25.76966111472772
+              ],
+              [
+                -80.1346186876763,
+                25.769529021106628
+              ],
+              [
+                -80.134648513807,
+                25.76939587278691
+              ],
+              [
+                -80.13467867876116,
+                25.7692612181568
+              ],
+              [
+                -80.13470874790062,
+                25.769126981772963
+              ],
+              [
+                -80.13432481155773,
+                25.76905888153186
+              ],
+              [
+                -80.13429482442132,
+                25.769192888143415
+              ],
+              [
+                -80.1342651349627,
+                25.769325564215983
+              ],
+              [
+                -80.13423513634481,
+                25.769459622190077
+              ],
+              [
+                -80.13420494810781,
+                25.76959452389923
+              ],
+              [
+                -80.13417424563116,
+                25.769731730594817
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0004",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.12935787471625,
+                25.788150181982093
+              ],
+              [
+                -80.12935988497506,
+                25.788216501884612
+              ],
+              [
+                -80.12971820557966,
+                25.788209943780366
+              ],
+              [
+                -80.130250099339,
+                25.788200210115267
+              ],
+              [
+                -80.13026174756801,
+                25.788129013684447
+              ],
+              [
+                -80.13028393450728,
+                25.787993424596817
+              ],
+              [
+                -80.13030748124503,
+                25.787849510466177
+              ],
+              [
+                -80.13032937795234,
+                25.78771569602343
+              ],
+              [
+                -80.12979493791514,
+                25.787726255146584
+              ],
+              [
+                -80.12934529116849,
+                25.7877351381705
+              ],
+              [
+                -80.1293493664837,
+                25.78786955650933
+              ],
+              [
+                -80.12935370052446,
+                25.78801250904224
+              ],
+              [
+                -80.12935787471625,
+                25.788150181982093
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0006",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.13214148979309,
+                25.774154043573557
+              ],
+              [
+                -80.13248890839529,
+                25.77422046804677
+              ],
+              [
+                -80.1325162059591,
+                25.774089117747685
+              ],
+              [
+                -80.13217037651751,
+                25.774018894579545
+              ],
+              [
+                -80.13214148979309,
+                25.774154043573557
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0006",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.13217037651751,
+                25.774018894579545
+              ],
+              [
+                -80.1325162059591,
+                25.774089117747685
+              ],
+              [
+                -80.1325454580248,
+                25.773948359126106
+              ],
+              [
+                -80.13219684397778,
+                25.773895078252398
+              ],
+              [
+                -80.13217037651751,
+                25.774018894579545
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0006",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.1309207240262,
+                25.773565924593907
+              ],
+              [
+                -80.13084627569889,
+                25.77397523568485
+              ],
+              [
+                -80.13082767705536,
+                25.774077485899667
+              ],
+              [
+                -80.13082991211857,
+                25.774077898216916
+              ],
+              [
+                -80.13094615518152,
+                25.774099364058593
+              ],
+              [
+                -80.13161039936998,
+                25.77420665122203
+              ],
+              [
+                -80.13191314703333,
+                25.77425554746899
+              ],
+              [
+                -80.1319399664934,
+                25.774125187344563
+              ],
+              [
+                -80.13196692233706,
+                25.773994160070774
+              ],
+              [
+                -80.13199649376529,
+                25.773850423856334
+              ],
+              [
+                -80.13202408189166,
+                25.773716330453155
+              ],
+              [
+                -80.13171515336583,
+                25.773657071364127
+              ],
+              [
+                -80.13105856414701,
+                25.773531201731604
+              ],
+              [
+                -80.13093784973731,
+                25.773508059257402
+              ],
+              [
+                -80.1309348741354,
+                25.77350748907041
+              ],
+              [
+                -80.13093190052724,
+                25.773506918895283
+              ],
+              [
+                -80.13093147145757,
+                25.773506836900413
+              ],
+              [
+                -80.1309207240262,
+                25.773565924593907
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0007",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.13895921204708,
+                25.77553586151161
+              ],
+              [
+                -80.13896350865055,
+                25.775674412708696
+              ],
+              [
+                -80.13941728581047,
+                25.775658094709105
+              ],
+              [
+                -80.13941243961904,
+                25.775519647678852
+              ],
+              [
+                -80.13940741542581,
+                25.775376164655295
+              ],
+              [
+                -80.13895350112746,
+                25.7753971286358
+              ],
+              [
+                -80.13895921204708,
+                25.77553586151161
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14096288968038,
+                25.777700854273135
+              ],
+              [
+                -80.14096846042646,
+                25.777861040245117
+              ],
+              [
+                -80.14149859315918,
+                25.777846618136426
+              ],
+              [
+                -80.14149237714467,
+                25.777685951768213
+              ],
+              [
+                -80.14148863656361,
+                25.777547445426602
+              ],
+              [
+                -80.14095853500768,
+                25.777557861783762
+              ],
+              [
+                -80.14096288968038,
+                25.777700854273135
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14095424178628,
+                25.77741699627947
+              ],
+              [
+                -80.14095853500768,
+                25.777557861783762
+              ],
+              [
+                -80.14148863656361,
+                25.777547445426602
+              ],
+              [
+                -80.14148481547146,
+                25.777405858792093
+              ],
+              [
+                -80.14148102769352,
+                25.777265600138318
+              ],
+              [
+                -80.14147928118882,
+                25.77720089565744
+              ],
+              [
+                -80.14147769077286,
+                25.777141930193892
+              ],
+              [
+                -80.14094642133844,
+                25.777160274779405
+              ],
+              [
+                -80.14094997797072,
+                25.777277031783058
+              ],
+              [
+                -80.14095424178628,
+                25.77741699627947
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14019339783587,
+                25.777011370019704
+              ],
+              [
+                -80.14019478954107,
+                25.777048854137846
+              ],
+              [
+                -80.14019838442398,
+                25.777145680133426
+              ],
+              [
+                -80.14020361276111,
+                25.777286562004868
+              ],
+              [
+                -80.14020871581735,
+                25.777423940882258
+              ],
+              [
+                -80.14021395674747,
+                25.777565152287277
+              ],
+              [
+                -80.1402190383498,
+                25.777702051729964
+              ],
+              [
+                -80.14022433411245,
+                25.77784464810665
+              ],
+              [
+                -80.14033614704688,
+                25.777842908638583
+              ],
+              [
+                -80.14044783139981,
+                25.77784116561699
+              ],
+              [
+                -80.14055951674254,
+                25.77783942341807
+              ],
+              [
+                -80.14067127975854,
+                25.77783769332639
+              ],
+              [
+                -80.1406664226202,
+                25.77769156750741
+              ],
+              [
+                -80.1406617098272,
+                25.777549761680575
+              ],
+              [
+                -80.1406569434114,
+                25.777406266690996
+              ],
+              [
+                -80.14065245006927,
+                25.777271087548165
+              ],
+              [
+                -80.14064776845879,
+                25.777130214326988
+              ],
+              [
+                -80.14064515419531,
+                25.77705151647334
+              ],
+              [
+                -80.14064327059647,
+                25.77699483386338
+              ],
+              [
+                -80.14019339783587,
+                25.777011370019704
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14055951674254,
+                25.77783942341807
+              ],
+              [
+                -80.14056406897356,
+                25.777971672923595
+              ],
+              [
+                -80.14067558265285,
+                25.777967206352933
+              ],
+              [
+                -80.14067127975854,
+                25.77783769332639
+              ],
+              [
+                -80.14055951674254,
+                25.77783942341807
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14044783139981,
+                25.77784116561699
+              ],
+              [
+                -80.14045255400721,
+                25.77797631722151
+              ],
+              [
+                -80.14049236292598,
+                25.777974675791658
+              ],
+              [
+                -80.14056406897356,
+                25.777971672923595
+              ],
+              [
+                -80.14055951674254,
+                25.77783942341807
+              ],
+              [
+                -80.14044783139981,
+                25.77784116561699
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14033614704688,
+                25.777842908638583
+              ],
+              [
+                -80.14034103888362,
+                25.777980844089342
+              ],
+              [
+                -80.14045255400721,
+                25.77797631722151
+              ],
+              [
+                -80.14044783139981,
+                25.77784116561699
+              ],
+              [
+                -80.14033614704688,
+                25.777842908638583
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0009",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14022433411245,
+                25.77784464810665
+              ],
+              [
+                -80.1402295585157,
+                25.77798538912973
+              ],
+              [
+                -80.14034103888362,
+                25.777980844089342
+              ],
+              [
+                -80.14033614704688,
+                25.777842908638583
+              ],
+              [
+                -80.14022433411245,
+                25.77784464810665
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0010",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14149337533436,
+                25.795060550609556
+              ],
+              [
+                -80.14149669559565,
+                25.795198014313364
+              ],
+              [
+                -80.14150023619806,
+                25.79534461674082
+              ],
+              [
+                -80.14150288179357,
+                25.795454068438755
+              ],
+              [
+                -80.14150375627038,
+                25.795460986018366
+              ],
+              [
+                -80.14150593466972,
+                25.795467664874344
+              ],
+              [
+                -80.1415093506422,
+                25.79547390332624
+              ],
+              [
+                -80.1415139048187,
+                25.795479515746187
+              ],
+              [
+                -80.14151945782447,
+                25.795484333420298
+              ],
+              [
+                -80.14152584516991,
+                25.79548821366305
+              ],
+              [
+                -80.14153287526938,
+                25.795491038000158
+              ],
+              [
+                -80.14154033832371,
+                25.795492724858214
+              ],
+              [
+                -80.14154801136404,
+                25.795493221470505
+              ],
+              [
+                -80.14199894323113,
+                25.79548468526
+              ],
+              [
+                -80.1419943778362,
+                25.795330211183305
+              ],
+              [
+                -80.14199004476794,
+                25.795183632062383
+              ],
+              [
+                -80.14198598395298,
+                25.79504618836074
+              ],
+              [
+                -80.14149337533436,
+                25.795060550609556
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "LLA26-0012",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.14241135376278,
+                25.792952856618466
+              ],
+              [
+                -80.14241043601673,
+                25.79294543421016
+              ],
+              [
+                -80.14240811354792,
+                25.792938267992657
+              ],
+              [
+                -80.14240445859117,
+                25.792931573220272
+              ],
+              [
+                -80.14239957838117,
+                25.79292555091144
+              ],
+              [
+                -80.14239362216418,
+                25.79292038337677
+              ],
+              [
+                -80.14238676929192,
+                25.792916226025245
+              ],
+              [
+                -80.14237922525966,
+                25.792913203730183
+              ],
+              [
+                -80.14237121773095,
+                25.79291140900065
+              ],
+              [
+                -80.14236298762943,
+                25.79291089290243
+              ],
+              [
+                -80.14235478309166,
+                25.792911674048902
+              ],
+              [
+                -80.14234685057836,
+                25.792913726814124
+              ],
+              [
+                -80.14233943081493,
+                25.79291699123816
+              ],
+              [
+                -80.14210899562323,
+                25.793043480391486
+              ],
+              [
+                -80.14188749813945,
+                25.79316506279476
+              ],
+              [
+                -80.14204665887526,
+                25.79328697723974
+              ],
+              [
+                -80.14205862806777,
+                25.793504280890755
+              ],
+              [
+                -80.14213430556694,
+                25.793502422845485
+              ],
+              [
+                -80.14235307294452,
+                25.793495926881523
+              ],
+              [
+                -80.14236508132326,
+                25.793494597697855
+              ],
+              [
+                -80.14237666320633,
+                25.79349143183292
+              ],
+              [
+                -80.14238747693221,
+                25.793486521146757
+              ],
+              [
+                -80.14239720438526,
+                25.79348001089411
+              ],
+              [
+                -80.14240556202142,
+                25.793472091665702
+              ],
+              [
+                -80.14241230189144,
+                25.793462995783585
+              ],
+              [
+                -80.1424172256316,
+                25.79345299287048
+              ],
+              [
+                -80.14242019155354,
+                25.793442374546622
+              ],
+              [
+                -80.14242110866834,
+                25.79343145349187
+              ],
+              [
+                -80.14241135376278,
+                25.792952856618466
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "PB26-0837",
+          "stage": "review",
+          "stories": null
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -80.13895921204708,
+                25.77553586151161
+              ],
+              [
+                -80.13896350865055,
+                25.775674412708696
+              ],
+              [
+                -80.13941728581047,
+                25.775658094709105
+              ],
+              [
+                -80.13941243961904,
+                25.775519647678852
+              ],
+              [
+                -80.13940741542581,
+                25.775376164655295
+              ],
+              [
+                -80.13895350112746,
+                25.7753971286358
+              ],
+              [
+                -80.13895921204708,
+                25.77553586151161
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

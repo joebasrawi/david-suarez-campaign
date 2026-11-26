@@ -416,6 +416,54 @@ Parks & culture|Parques y cultura
 Get it free|Descárgala gratis
 Miami Beach Gov is the City of Miami Beach's official app. This page is from Commissioner David Suarez to help residents find it.|Miami Beach Gov es la aplicación oficial de la Ciudad de Miami Beach. Esta página es del comisionado David Suarez para ayudar a los residentes a encontrarla.
 Get updates from David|Recibe noticias de David
+Getting around|Cómo moverse
+Parks & beaches|Parques y playas
+Short-term rentals|Alquileres a corto plazo
+Miami Beach Info Map|Mapa informativo de Miami Beach
+Overview|Resumen
+Development|Desarrollo
+City projects|Proyectos de la Ciudad
+Flood risk|Riesgo de inundación
+Under review only|Solo en revisión
+Flood layer|Capa de inundación
+Skip to the list|Ir a la lista
+Flood risk|Riesgo de inundación
+VE · coastal, waves|VE · costera, oleaje
+AE · 1% yearly flood|AE · 1% anual
+X · moderate to low|X · moderado a bajo
+City-mapped tidal flooding|Inundación por marea (mapa de la Ciudad)
+Live Local|Live Local
+Other development|Otros proyectos
+Also on the map:|También en el mapa:
+other development projects|otros proyectos de desarrollo
+filed with the City's land use boards since 2023.|presentados ante las juntas de uso de suelo de la Ciudad desde 2023.
+Skip to the list of applications|Ir a la lista de solicitudes
+Live Local Act · Miami Beach|Ley Live Local · Miami Beach
+Live Local projects.|proyectos Live Local.
+No public hearing required.|Sin audiencia pública.
+Florida's Live Local Act lets developers build apartments on commercial land at the city's highest allowed density and up to the tallest height allowed within a mile, if at least 40% of the rental units are affordable. In Miami Beach, the Planning Director approves these plans administratively, without a public hearing or Commission vote. Here is every application on file.|La Ley Live Local de Florida permite a los desarrolladores construir apartamentos en terrenos comerciales con la mayor densidad permitida en la ciudad y hasta la altura máxima permitida en un radio de una milla, si al menos el 40% de las unidades de alquiler son asequibles. En Miami Beach, el Director de Planificación aprueba estos planes de forma administrativa, sin audiencia pública ni votación de la Comisión. Aquí está cada solicitud presentada.
+Approved|Aprobado
+Under review|En revisión
+Tallest approved|Más alto aprobado
+stories|pisos
+All|Todos
+In review|En revisión
+Approved · height from the signed order|Aprobado · altura según la orden firmada
+Under review · height not public yet|En revisión · altura aún no pública
+Height isn't public until the City issues its order. The submitted plans are in the case file.|La altura no es pública hasta que la Ciudad emita su orden. Los planos presentados están en el expediente.
+Filed|Presentado
+Applicant|Solicitante
+Owner of record|Propietario registrado
+Last sale|Última venta
+Lot size|Tamaño del lote
+Built there now|Construido allí hoy
+City planner|Planificador de la Ciudad
+Also includes|También incluye
+Read the signed approval|Leer la aprobación firmada
+Plans and filings (Civic Access)|Planos y documentos (Civic Access)
+City's Live Local list|Lista Live Local de la Ciudad
+Owner and sale data: City of Miami Beach parcel map. Status: City of Miami Beach Civic Access.|Datos de propietario y venta: mapa de parcelas de la Ciudad de Miami Beach. Estado: Civic Access de la Ciudad de Miami Beach.
+Close details|Cerrar detalles
 On a computer? Scan with your phone's camera.|¿Estás en una computadora? Escanéalo con la cámara de tu teléfono.
 QR code to get the Miami Beach Gov app|Código QR para descargar la aplicación Miami Beach Gov
 Tap Report a Concern, add a photo and the location, and your report goes straight to the City of Miami Beach.|Toca Report a Concern, agrega una foto y el lugar, y tu reporte llega directamente a la Ciudad de Miami Beach.
