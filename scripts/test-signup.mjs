@@ -12,7 +12,14 @@ const html = await read('index.html');
 const section = html.match(/<section class="home-signup"[^]*?<\/section>/)?.[0];
 assert.ok(section, 'homepage has the Stay informed section');
 assert.ok(section.includes('<h2 id="signup-title">Stay informed</h2>'));
-for (const name of ['firstName', 'lastName', 'email', 'phone', 'website']) assert.ok(section.includes(`name="${name}"`), `field ${name}`);
+for (const name of ['firstName', 'lastName', 'email', 'phone', 'smsConsent', 'website']) assert.ok(section.includes(`name="${name}"`), `field ${name}`);
+assert.ok(/<input name="smsConsent" type="checkbox" value="yes">/.test(section), 'text consent is an unchecked box');
+assert.ok(section.includes('Reply STOP to opt out, HELP for help. Not required to sign up.'), 'text consent wording');
+assert.ok(section.includes('<a href="privacy/">Privacy</a>'), 'form links the privacy page');
+const privacy = await read('privacy/index.html');
+for (const text of ['What we collect', 'Reply STOP', 'don’t sell, rent or share mobile numbers', 'Florida public records', 'Unsubscribing']) assert.ok(privacy.includes(text), `privacy page: ${text}`);
+for (const text of [...privacy.matchAll(/<(?:h1|h2|p)[^>]*>([^<]+)</g)].map(m => m[1].trim()).filter(t => t && !t.startsWith('Los títulos'))) assert.ok(spanish[text], `Spanish for privacy text "${text.slice(0, 40)}"`);
+assert.ok((await read('sitemap.xml')).includes('https://davidsuarezmb.com/privacy/'));
 assert.equal(section.includes(' hidden>'), !SIGNUP_ENDPOINT, 'hidden exactly when no endpoint is set');
 assert.ok(html.indexOf('home-signup') < html.indexOf('home-contact'), 'signup sits above the office contact');
 const home = await read('home.js');
@@ -37,11 +44,15 @@ for (const page of pages) {
 assert.ok(home.includes("location.hash==='#stay-informed'"), 'arriving at /#stay-informed opens the popup');
 
 // Validation.
-assert.deepEqual(validate({firstName: ' Ana ', email: 'ANA@Example.com '}).signup, {firstName: 'Ana', lastName: '', email: 'ana@example.com', phone: ''});
+assert.deepEqual(validate({firstName: ' Ana ', email: 'ANA@Example.com '}).signup, {firstName: 'Ana', lastName: '', email: 'ana@example.com', phone: '', smsConsent: false});
 assert.equal(validate({firstName: '', email: 'a@b.co'}).error, 'first_name');
 assert.equal(validate({firstName: 'A', email: 'nope'}).error, 'email');
 assert.equal(validate({firstName: 'A', email: 'a@b.co', phone: '12345'}).error, 'phone');
 assert.equal(validate({firstName: 'A', email: 'a@b.co', phone: '(305) 555-0100'}).signup.phone, '(305) 555-0100');
+assert.equal(validate({firstName: 'A', email: 'a@b.co', smsConsent: 'yes'}).error, 'sms_phone', 'texts need a number');
+assert.equal(validate({firstName: 'A', email: 'a@b.co', phone: '3055550100', smsConsent: 'yes'}).signup.smsConsent, true);
+assert.equal(validate({firstName: 'A', email: 'a@b.co', phone: '3055550100', smsConsent: 'on-ish'}).signup.smsConsent, false, 'only an explicit yes counts');
+assert.ok(home.includes("if(data.smsConsent&&!data.phone.trim())return 'sms_phone';"), 'the browser checks it too');
 
 // Worker against a fake iContact.
 const env = {ALLOWED_ORIGINS: 'https://davidsuarezmb.com', ICONTACT_ACCOUNT_ID: '11', ICONTACT_FOLDER_ID: '22', ICONTACT_LIST_ID: '33', ICONTACT_APP_ID: 'app', ICONTACT_USERNAME: 'user', ICONTACT_PASSWORD: 'pass'};
@@ -68,6 +79,19 @@ assert.equal(api.calls[0].init.headers['API-Version'], '2.2');
 assert.equal(api.calls[0].init.headers['API-Password'], 'pass');
 assert.equal(api.calls[1].url, 'https://app.icontact.com/icp/a/11/c/22/subscriptions');
 assert.deepEqual(api.calls[1].body, [{contactId: '777', listId: '33', status: 'normal'}]);
+
+// Text consent adds the SMS list, only when that list is configured and the box was checked.
+const smsEnv = {...env, ICONTACT_SMS_LIST_ID: '44'};
+api = fakeIcontact();
+res = await handle(post({firstName: 'Ana', email: 'ana@example.com', phone: '3055550100', smsConsent: 'yes'}), smsEnv, api.impl);
+assert.equal(res.status, 200);
+assert.deepEqual(api.calls[1].body, [{contactId: '777', listId: '33', status: 'normal'}, {contactId: '777', listId: '44', status: 'normal'}]);
+api = fakeIcontact();
+await handle(post({firstName: 'Ana', email: 'ana@example.com', phone: '3055550100'}), smsEnv, api.impl);
+assert.deepEqual(api.calls[1].body, [{contactId: '777', listId: '33', status: 'normal'}], 'no box, no SMS list');
+api = fakeIcontact();
+await handle(post({firstName: 'Ana', email: 'ana@example.com', phone: '3055550100', smsConsent: 'yes'}), env, api.impl);
+assert.equal(api.calls[1].body.length, 1, 'no SMS list configured yet: main list only');
 
 api = fakeIcontact();
 res = await handle(post({firstName: 'Ana', email: 'ana@example.com'}, 'https://evil.example'), env, api.impl);
