@@ -172,7 +172,7 @@ export async function create({ data, apps, byId, cb, key }) {
   // Camera
   const H = C.Math.toRadians;
   const home = () => cb.phone()
-    ? { destination: C.Cartesian3.fromDegrees(-80.1345, 25.700, 22000), orientation: { heading: H(0), pitch: H(-74), roll: 0 } }
+    ? { destination: C.Cartesian3.fromDegrees(-80.1345, 25.755, 16500), orientation: { heading: H(0), pitch: H(-74), roll: 0 } }
     : { destination: C.Cartesian3.fromDegrees(-80.1985, 25.7385, 3900), orientation: { heading: H(36), pitch: H(-22), roll: 0 } };
   const fly = (view, duration) => (cb.reduced ? scene.camera.setView(view) : scene.camera.flyTo({ ...view, duration, easingFunction: C.EasingFunction.CUBIC_IN_OUT }));
 

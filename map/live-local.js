@@ -562,17 +562,19 @@ async function main() {
     L, title, esc, reduced, phone, matches, flood, cover: () => coverPx(),
     overlays: around ? { parks: around.parks, beaches: around.beaches, bikeways: around.bikeways, trolleyRoutes: around.trolleyRoutes, closures: around.closures, str: strData?.parcels } : {} };
 
-  // Phones: the panel is a bottom sheet with three heights. Drag the handle (or the kicker) to resize; tap it to step up.
+  // Phones: the map fills the screen and the panel peeks up from the bottom (title + view tabs).
+  // Swipe up anywhere on it to open the list over the whole page; swipe down (from the top of the list) to put it back.
   const panel = document.querySelector('.panel');
   const panelScroll = panel.querySelector('.panel-scroll');
   const handle = panel.querySelector('.sheet-handle');
-  const SNAPS = ['peek', 'half', 'full'];
-  const sheet = { snap: 'half', before: null };
+  const sheet = { snap: 'peek', before: null };
+  const probe = Object.assign(document.createElement('div'), { style: 'position:fixed;visibility:hidden;padding-bottom:env(safe-area-inset-bottom)' });
+  document.body.appendChild(probe);
+  const safeBottom = () => parseFloat(getComputedStyle(probe).paddingBottom) || 0;
   const snapPx = name => {
-    const H = app.clientHeight, max = parseFloat(getComputedStyle(panel).maxHeight) || H - 74;
-    if (name === 'peek') { const tabs = panel.querySelector('.views'); return Math.min(max, Math.round(tabs.offsetTop + tabs.offsetHeight + 14)); }
-    if (name === 'full') return max;
-    return Math.min(max, Math.round(H * .46));
+    if (name === 'full') return app.clientHeight;
+    const tabs = panel.querySelector('.views');
+    return Math.round(tabs.offsetTop + tabs.offsetHeight + 12 + safeBottom());
   };
   function coverPx() {
     if (!phone()) return 0;
@@ -582,52 +584,57 @@ async function main() {
   const setCover = () => app.style.setProperty('--cover', coverPx() + 'px');
   function setSheet(name) {
     sheet.snap = name;
-    if (!phone()) { panel.style.removeProperty('--sheet-h'); panel.classList.remove('is-peek'); app.style.removeProperty('--cover'); return; }
+    if (!phone()) { panel.style.removeProperty('--sheet-h'); panel.classList.remove('is-peek'); delete app.dataset.sheet; app.style.removeProperty('--cover'); return; }
     if (name === 'peek') panelScroll.scrollTop = 0;
     panel.classList.toggle('is-peek', name === 'peek');
     app.dataset.sheet = name;
     panel.style.setProperty('--sheet-h', snapPx(name) + 'px');
     handle.setAttribute('aria-expanded', String(name === 'full'));
-    handle.setAttribute('aria-label', name === 'full' ? L('Show more of the map', 'Mostrar más del mapa') : L('Show more of the list', 'Mostrar más de la lista'));
+    handle.setAttribute('aria-label', name === 'full' ? L('Back to the map', 'Volver al mapa') : L('Open the list', 'Abrir la lista'));
     setCover();
   }
-  let drag = null, dragged = false;
-  function dragStart(e) {
-    if (!phone() || (e.pointerType === 'mouse' && e.button !== 0)) return;
-    drag = { y: e.clientY, h: panel.offsetHeight, t: performance.now(), lastY: e.clientY, lastT: performance.now(), v: 0 };
-    dragged = false;
-    e.currentTarget.setPointerCapture?.(e.pointerId);
-  }
-  function dragMove(e) {
+  // One drag model for touch and mouse. A drag starts once a gesture is clearly vertical:
+  // on the peeking sheet any vertical swipe drags it; on the open sheet the list scrolls, unless you pull down from its top.
+  let drag = null, justDragged = false;
+  const begin = (x, y) => { drag = { x, y, h: panel.offsetHeight, lastY: y, lastT: performance.now(), v: 0, mode: null }; };
+  function move(x, y, ev) {
     if (!drag) return;
-    const dy = drag.y - e.clientY;
-    if (!dragged && Math.abs(dy) < 6) return;
-    if (!dragged) { dragged = true; panel.classList.add('is-dragging'); panel.classList.remove('is-peek'); }
+    const dx = x - drag.x, dy = drag.y - y; // dy > 0: finger moving up
+    if (!drag.mode) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      if (Math.abs(dx) > Math.abs(dy)) { drag.mode = 'x'; return; }
+      drag.mode = sheet.snap !== 'full' || (dy < 0 && panelScroll.scrollTop <= 0) ? 'drag' : 'scroll';
+      if (drag.mode === 'drag') { panel.classList.add('is-dragging'); panel.classList.remove('is-peek'); drag.y = y; drag.lastY = y; }
+    }
+    if (drag.mode !== 'drag') return;
+    if (ev.cancelable) ev.preventDefault();
     const now = performance.now();
-    drag.v = (drag.lastY - e.clientY) / Math.max(1, now - drag.lastT); drag.lastY = e.clientY; drag.lastT = now;
-    panel.style.setProperty('--sheet-h', Math.max(snapPx('peek') - 30, Math.min(snapPx('full'), drag.h + dy)) + 'px');
+    drag.v = (drag.lastY - y) / Math.max(1, now - drag.lastT); drag.lastY = y; drag.lastT = now;
+    panel.style.setProperty('--sheet-h', Math.max(snapPx('peek') - 24, Math.min(snapPx('full'), drag.h + (drag.y - y))) + 'px');
   }
-  function dragEnd() {
+  function end() {
     if (!drag) return;
     const d = drag; drag = null;
-    if (!dragged) return;
+    if (d.mode !== 'drag') return;
     panel.classList.remove('is-dragging');
-    const h = panel.offsetHeight + d.v * 180; // a flick carries it toward the next height
-    setSheet(SNAPS.reduce((best, n) => (Math.abs(snapPx(n) - h) < Math.abs(snapPx(best) - h) ? n : best), 'half'));
+    justDragged = true; setTimeout(() => (justDragged = false), 350);
+    const h = panel.offsetHeight + d.v * 220; // a flick carries it the rest of the way
+    setSheet(h > (snapPx('peek') + snapPx('full')) / 2 ? 'full' : 'peek');
   }
-  for (const zone of [handle, panel.querySelector('.intro .kicker')]) {
-    zone.addEventListener('pointerdown', dragStart);
-    zone.addEventListener('pointermove', dragMove);
-    zone.addEventListener('pointerup', dragEnd);
-    zone.addEventListener('pointercancel', dragEnd);
-  }
+  panel.addEventListener('touchstart', e => { if (phone() && e.touches.length === 1) begin(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+  panel.addEventListener('touchmove', e => move(e.touches[0].clientX, e.touches[0].clientY, e), { passive: false });
+  panel.addEventListener('touchend', end);
+  panel.addEventListener('touchcancel', end);
+  panel.addEventListener('pointerdown', e => { if (phone() && e.pointerType === 'mouse' && e.button === 0) begin(e.clientX, e.clientY); });
+  addEventListener('pointermove', e => { if (e.pointerType === 'mouse') move(e.clientX, e.clientY, e); });
+  addEventListener('pointerup', e => { if (e.pointerType === 'mouse') end(); });
+  panel.addEventListener('click', e => { if (justDragged) { e.preventDefault(); e.stopPropagation(); } }, true);
   handle.addEventListener('click', () => {
-    if (dragged) { dragged = false; return; }
     if (active) close();
-    setSheet(sheet.snap === 'full' ? 'peek' : SNAPS[SNAPS.indexOf(sheet.snap) + 1]);
+    setSheet(sheet.snap === 'full' ? 'peek' : 'full');
   });
   addEventListener('resize', () => setSheet(sheet.snap));
-  setSheet('half');
+  setSheet('peek');
 
   // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
@@ -687,7 +694,7 @@ async function main() {
     document.querySelectorAll('.card.is-active').forEach(el => el.classList.remove('is-active'));
     history.replaceState(null, '', location.pathname + location.search);
     app.classList.remove('is-detail');
-    if (phone()) { setSheet(sheet.before || 'half'); sheet.before = null; }
+    if (phone()) { setSheet(sheet.before || 'peek'); sheet.before = null; }
     engine.clear();
   }
   detail.querySelector('[data-close]').addEventListener('click', close);
@@ -699,7 +706,6 @@ async function main() {
 
   document.querySelectorAll('.view-tab').forEach(t => t.addEventListener('click', () => {
     applyView(t.dataset.view);
-    if (phone() && !active && sheet.snap === 'peek') setSheet('half');
     if (phone()) t.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
   }));
   const reviewBtn = document.querySelector('[data-review]');
