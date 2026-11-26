@@ -172,7 +172,7 @@ export async function create({ data, apps, byId, cb, key }) {
   // Camera
   const H = C.Math.toRadians;
   const home = () => cb.phone()
-    ? { destination: C.Cartesian3.fromDegrees(-80.1345, 25.615, 34000), orientation: { heading: H(0), pitch: H(-74), roll: 0 } }
+    ? { destination: C.Cartesian3.fromDegrees(-80.1345, 25.700, 22000), orientation: { heading: H(0), pitch: H(-74), roll: 0 } }
     : { destination: C.Cartesian3.fromDegrees(-80.1985, 25.7385, 3900), orientation: { heading: H(36), pitch: H(-22), roll: 0 } };
   const fly = (view, duration) => (cb.reduced ? scene.camera.setView(view) : scene.camera.flyTo({ ...view, duration, easingFunction: C.EasingFunction.CUBIC_IN_OUT }));
 
@@ -209,8 +209,9 @@ export async function create({ data, apps, byId, cb, key }) {
       if (a.center) { showRings(a); showTaller(a); }
       if (go && a.center) {
         const h = Math.max(projM(a), 30);
-        // On phones the drawer covers the lower ~70%, so aim the camera a little south of the site to push it up the screen.
-        const aim = cb.phone() ? [a.center[0], a.center[1] - 0.0068] : a.center;
+        // On phones the drawer covers the bottom of the screen, so aim the camera south of the site to push it up into the open part.
+        const covered = cb.phone() ? Math.min(.75, cb.cover() / innerHeight) : 0;
+        const aim = cb.phone() ? [a.center[0], a.center[1] - 0.0097 * covered] : a.center;
         const target = new C.BoundingSphere(C.Cartesian3.fromDegrees(aim[0], aim[1], ground + h * .45), Math.max(h * .7, 50));
         const heading = scene.camera.heading + H(cb.phone() ? 0 : -14);
         const range = cb.phone() ? Math.max(900, h * 6.5) : Math.max(760, h * 4.6);
