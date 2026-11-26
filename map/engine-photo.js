@@ -227,7 +227,7 @@ export async function create({ data, apps, byId, cb, key }) {
       fly(home(), 2.4);
     },
     filter(f) {
-      for (const e of entities) e.show = cb.matches({ layer: e.properties.layer.getValue(), stage: e.properties.stage.getValue() }, f);
+      for (const e of entities) e.show = cb.matches({ id: e.properties.app.getValue(), layer: e.properties.layer.getValue(), stage: e.properties.stage.getValue() }, f);
       pins.forEach(({ el, a }) => el.classList.toggle('is-dim', !cb.matches(a, f)));
     },
     // Keyboard flying: move along the ground relative to where the camera faces; speed scales with altitude.
