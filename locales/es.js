@@ -10,6 +10,8 @@ Miami Beach Today|Miami Beach hoy
 Mayor & commission|Alcalde y comisión
 Mayor & commission.|Alcalde y comisión.
 Projects|Proyectos
+Map|Mapa
+Open the 3D Info Map|Abrir el mapa informativo en 3D
 Watch|Videos
 About David|Sobre David
 Display|Apariencia
