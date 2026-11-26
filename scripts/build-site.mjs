@@ -126,7 +126,7 @@ for (const route of [...Object.keys(pages),'','commission-agenda','commission-ac
  await writeFile(file,html);
 }
 // Crawlers: list the public sections, and give missing URLs a branded page instead of GitHub's default.
-const sitemapRoutes=['','resident-guide','meetings','commission-agenda','commission-actions','legislation','news','commission','active-projects','events','media','about','search','ride','app'];
+const sitemapRoutes=['','resident-guide','meetings','commission-agenda','commission-actions','legislation','news','commission','active-projects','events','media','about','search','ride','app','live-local'];
 await writeFile(new URL('sitemap.xml',root),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes.map(r=>`  <url><loc>${SITE}${r?r+'/':''}</loc></url>`).join('\n')}\n</urlset>\n`);
 await writeFile(new URL('robots.txt',root),`User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
 // GitHub Pages serves 404.html at any depth, so every local path must be absolute.
