@@ -25,6 +25,10 @@ jobs:
         run: npm run sync:data
       - name: Regenerate Events from validated City snapshot
         run: python3 scripts/build-events-preview.py
+      - name: Give every page its own link preview image
+        run: |
+          python3 -m pip install --quiet pillow==11.3.0
+          python3 scripts/build-social-cards.py
       - name: Validate Events failure handling
         run: python3 scripts/test-events.py
       - name: Validate snapshots and regression checks
@@ -34,13 +38,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          if test -z "$(git status --porcelain -- data events julia-tuttle-cleanup)"; then
+          if test -z "$(git status --porcelain -- data events julia-tuttle-cleanup assets/social g20)"; then
             echo "Public feeds are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data events julia-tuttle-cleanup
+          git add data events julia-tuttle-cleanup assets/social g20
           git commit -m "chore: refresh public data"
           git push
           # GITHUB_TOKEN pushes do not automatically trigger a Pages build.
