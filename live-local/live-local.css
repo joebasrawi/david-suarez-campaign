@@ -51,6 +51,13 @@ h1 .accent { color: var(--coral) }
 .chip.is-on { background: #fff; color: var(--ink); border-color: #fff }
 .dot { width: .6rem; height: .6rem; border-radius: 50% }
 .dot.approved, .sw.approved { background: var(--coral); box-shadow: 0 0 10px rgba(255,106,69,.7) }
+.flood-toggle svg { width: 14px; height: 14px; fill: #6fe3ff }
+.flood-toggle.is-on { background: #6fe3ff; border-color: #6fe3ff; color: var(--ink) }
+.flood-toggle.is-on svg { fill: var(--ink) }
+.flood-key { display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin: -.2rem 0 .8rem; padding: .6rem .75rem; border-radius: 12px; background: rgba(111,227,255,.06); border: 1px solid rgba(111,227,255,.2); color: #cfe7ee; font-size: .74rem; font-weight: 600 }
+.flood-key[hidden] { display: none }
+.flood-key span { display: inline-flex; align-items: center; gap: .4rem }
+.flood-key i { width: .7rem; height: .7rem; border-radius: 3px }
 .dot.dev, .sw.dev { background: var(--warm); box-shadow: 0 0 10px rgba(237,189,121,.6) }
 .dot.review, .sw.review { background: var(--mint); box-shadow: 0 0 10px rgba(120,214,200,.7) }
 

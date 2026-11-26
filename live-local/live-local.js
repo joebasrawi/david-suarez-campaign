@@ -60,6 +60,36 @@ function featuresFor(data) {
   return { type: 'FeatureCollection', features: [...byKey.values()].map((f, i) => ({ ...f, id: i, properties: { ...f.properties, h: f.properties.stories ? Math.round((f.properties.stories * 10.5) / 5) * 5 * 0.3048 : 0 } })) };
 }
 
+// Flood risk: FEMA zone at the site and the nearest City-mapped tidal flooding spot.
+const FLOOD = { VE: '#3d7bff', AE: '#43a6e8', X: '#8fd0ef', tidal: '#6fe3ff' };
+const inPoly = (pt, geom) => {
+  const polys = geom.type === 'Polygon' ? [geom.coordinates] : geom.coordinates;
+  let c = false;
+  for (const rings of polys) for (const r of rings) for (let i = 0, j = r.length - 1; i < r.length; j = i++)
+    if ((r[i][1] > pt[1]) !== (r[j][1] > pt[1]) && pt[0] < ((r[j][0] - r[i][0]) * (pt[1] - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c;
+  return c;
+};
+const metersBetween = (a, b) => { const k = Math.PI / 180, R = 6371000, dLat = (b[1] - a[1]) * k, dLng = (b[0] - a[0]) * k; return 2 * R * Math.asin(Math.sqrt(Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * k) * Math.cos(b[1] * k) * Math.sin(dLng / 2) ** 2)); };
+function floodFor(a, flood) {
+  if (!a.center || !flood) return null;
+  const rank = { VE: 3, AE: 2, X: 1 };
+  const zone = flood.zones.features.filter(f => inPoly(a.center, f.geometry)).sort((x, y) => (rank[y.properties.zone] || 0) - (rank[x.properties.zone] || 0))[0]?.properties || null;
+  const ringPt = g => (g.type === 'Polygon' ? g.coordinates[0] : g.coordinates[0][0]);
+  const spots = flood.tidal.features.map(f => { const r = ringPt(f.geometry); const inside = inPoly(a.center, f.geometry); const d = inside ? 0 : Math.min(...r.map(p => metersBetween(a.center, p))); return { ...f.properties, d }; }).filter(x => x.d <= 402).sort((x, y) => x.d - y.d);
+  return { zone, spot: spots[0] || null, spots: spots.length };
+}
+function floodFacts(a) {
+  const f = a.flood; if (!f) return [];
+  const z = f.zone;
+  const zoneText = !z ? L('Outside the mapped FEMA flood zones', 'Fuera de las zonas de inundación de FEMA')
+    : z.zone === 'VE' ? L(`VE, coastal high hazard with waves${z.bfe ? ` · base flood elevation ${z.bfe} ft` : ''}`, `VE, alto riesgo costero con oleaje${z.bfe ? ` · elevación base de inundación ${z.bfe} pies` : ''}`)
+    : z.zone === 'AE' ? L(`AE, 1% annual flood chance${z.bfe ? ` · base flood elevation ${z.bfe} ft` : ''}`, `AE, 1% de probabilidad anual de inundación${z.bfe ? ` · elevación base de inundación ${z.bfe} pies` : ''}`)
+    : L('X, moderate to low flood risk', 'X, riesgo de inundación moderado a bajo');
+  const freq = { Frequently: L('frequently', 'con frecuencia'), Occasionally: L('occasionally', 'ocasionalmente'), Rarely: L('rarely', 'rara vez') };
+  const spot = f.spot ? (f.spot.d === 0 ? L(`On a City-mapped tidal flooding spot (floods ${freq[f.spot.freq] || f.spot.freq})`, `En un punto de inundación por marea de la Ciudad (se inunda ${freq[f.spot.freq] || f.spot.freq})`) : L(`City-mapped tidal flooding spot ${Math.round(f.spot.d * 3.281)} ft away (floods ${freq[f.spot.freq] || f.spot.freq})`, `Punto de inundación por marea de la Ciudad a ${Math.round(f.spot.d * 3.281)} pies (se inunda ${freq[f.spot.freq] || f.spot.freq})`)) : null;
+  return [[L('FEMA flood zone', 'Zona de inundación FEMA'), zoneText, true], spot ? [L('Tidal flooding', 'Inundación por marea'), spot, true] : null].filter(Boolean);
+}
+
 // Filters: all | ll (Live Local) | dev (other development) | review (anything under review)
 const matches = (a, f) => f === 'all' || (f === 'll' && a.layer === 'll') || (f === 'dev' && a.layer === 'dev') || (f === 'review' && a.stage !== 'approved');
 const filterExpr = f => f === 'all' ? null : f === 'review' ? ['!=', ['get', 'stage'], 'approved'] : ['==', ['get', 'layer'], f];
@@ -100,6 +130,7 @@ function devDetailHtml(a) {
     [L('What was filed', 'Lo que se presentó'), a.summary, true],
     [L('First filed', 'Primera presentación'), date(a.filed)],
     [L('Owner of record', 'Propietario registrado'), a.owner, true],
+    ...floodFacts(a),
     a.lotSize ? [L('Lot size', 'Tamaño del lote'), `${num(a.lotSize)} sq ft`] : null,
     a.existing?.yearBuilt ? [L('Built there now', 'Construido allí hoy'), a.existing.floors ? L(`${a.existing.floors}-story building, ${a.existing.yearBuilt}`, `Edificio de ${a.existing.floors} pisos, ${a.existing.yearBuilt}`) : String(a.existing.yearBuilt)] : null
   ].filter(f => f && f[1]);
@@ -127,6 +158,7 @@ function detailHtml(a) {
     [a.stage === 'approved' ? 'Applicant' : 'Owner of record', (a.applicant || '').replace(/\s+C\/O\b.*$/i, '') || own[0] || null, true],
     a.applicant && own.length && norm(own[0]) !== norm(a.applicant.replace(/\s+C\/O\b.*$/i, '')) ? ['Owner of record', own.join(' · '), true] : null,
     sale ? ['Last sale', `${money(sale.lastSale.price)} · ${date(sale.lastSale.date)}`] : null,
+    ...floodFacts(a),
     lot ? ['Lot size', `${num(lot)} sq ft`] : null,
     built.length ? ['Built there now', built.length > 1 ? L(`${built.length} buildings, ${Math.min(...built.map(b => b.yearBuilt))}–${Math.max(...built.map(b => b.yearBuilt))}`, `${built.length} edificios, ${Math.min(...built.map(b => b.yearBuilt))}–${Math.max(...built.map(b => b.yearBuilt))}`) : (built[0].floors ? L(`${built[0].floors}-story building, ${built[0].yearBuilt}`, `Edificio de ${built[0].floors} pisos, ${built[0].yearBuilt}`) : String(built[0].yearBuilt)), true] : null,
     a.planner ? ['City planner', a.planner] : null,
@@ -177,6 +209,14 @@ async function flatEngine({ data, apps, byId, cb }) {
   });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
   await new Promise(r => map.on('load', r));
+  if (cb.flood) {
+    map.addSource('flood-zones', { type: 'geojson', data: cb.flood.zones });
+    map.addSource('flood-tidal', { type: 'geojson', data: cb.flood.tidal });
+    const before = 'buildings-3d';
+    map.addLayer({ id: 'flood-zones', type: 'fill', source: 'flood-zones', layout: { visibility: 'none' }, paint: { 'fill-color': ['match', ['get', 'zone'], 'VE', FLOOD.VE, 'AE', FLOOD.AE, FLOOD.X], 'fill-opacity': ['match', ['get', 'zone'], 'VE', .42, 'AE', .3, .12] } }, before);
+    map.addLayer({ id: 'flood-tidal', type: 'fill', source: 'flood-tidal', layout: { visibility: 'none' }, paint: { 'fill-color': FLOOD.tidal, 'fill-opacity': ['match', ['get', 'freq'], 'Frequently', .75, 'Occasionally', .5, .3] } }, before);
+    map.addLayer({ id: 'flood-tidal-line', type: 'line', source: 'flood-tidal', layout: { visibility: 'none' }, paint: { 'line-color': '#d4f7ff', 'line-width': 1.2 } }, before);
+  }
   const fc = featuresFor(data);
   map.addSource('ll', { type: 'geojson', data: fc });
   map.addLayer({ id: 'll-glow', type: 'line', source: 'll', paint: { 'line-color': ['case', ['==', ['get', 'layer'], 'dev'], ['match', ['get', 'stage'], 'approved', COLORS.dev, COLORS.devReview], ['match', ['get', 'stage'], 'approved', COLORS.approved, COLORS.review]], 'line-width': 10, 'line-blur': 8, 'line-opacity': .55 } });
@@ -284,6 +324,7 @@ async function flatEngine({ data, apps, byId, cb }) {
       fadePaint('rings', 'line-opacity', 0); fadePaint('ring-labels', 'text-opacity', 0); compareBuildings(null);
       const cam = home(); reduced ? map.jumpTo(cam) : map.flyTo({ ...cam, duration: 2000, curve: 1.4 });
     },
+    flood(on) { for (const id of ['flood-zones', 'flood-tidal', 'flood-tidal-line']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none'); },
     filter(f) {
       markers.forEach(({ el }) => el.classList.toggle('is-dim', !matches({ layer: el.dataset.layer, stage: el.classList.contains('approved') ? 'approved' : 'review' }, f)));
       const expr = filterExpr(f);
@@ -299,9 +340,11 @@ async function main() {
     fetch('../data/live-local.json?v=' + v).then(r => r.json()),
     fetch('../data/development.json?v=' + v).then(r => r.json()).catch(() => ({ projects: [], parcels: { features: [] } }))
   ]);
+  const flood = await fetch('../data/flood.json?v=' + v).then(r => r.json()).catch(() => null);
   const ll = data.applications.map(a => ({ ...a, layer: 'll' }));
   const devApps = dev.projects.map(p => ({ ...p, layer: 'dev', number: p.id }));
   const apps = [...ll, ...devApps];
+  for (const a of apps) a.flood = floodFor(a, flood);
   data.parcels = { type: 'FeatureCollection', features: [
     ...data.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'll' } })),
     ...dev.parcels.features.map(f => ({ ...f, properties: { ...f.properties, layer: 'dev', stories: f.properties.stage === 'approved' ? f.properties.stories : null } }))
@@ -322,14 +365,14 @@ async function main() {
   listEl.querySelectorAll('.card').forEach((el, i) => (el.style.transitionDelay = `${Math.min(1.4, 0.45 + i * 0.045)}s`));
 
   let active = null;
-  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`, L, title, esc, reduced, phone, matches };
+  const cb = { pick: id => select(id), hover: (id, on) => hover(id, on), tip: a => `<div class="tip">${esc(title(a.location))}<small>${a.stories ? a.stories + L(' stories · ', ' pisos · ') : ''}${a.stage === 'approved' ? L('Approved', 'Aprobado') : L('Under review', 'En revisión')}${a.layer === 'dev' ? ' · ' + L(...KIND[a.kind]) : ' · Live Local'}</small></div>`, L, title, esc, reduced, phone, matches, flood };
 
   // Engine: Google photorealistic 3D (Cesium) when a key is set and it loads; otherwise the stylized map.
   const key = document.querySelector('meta[name="google-maps-key"]')?.content;
   const want = new URLSearchParams(location.search).get('engine');
   let engine = null;
   if (key && want !== 'flat') {
-    try { engine = await (await import('./engine-photo.js?v=3')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
+    try { engine = await (await import('./engine-photo.js?v=4')).create({ data, apps, byId, cb, key }); document.documentElement.dataset.engine = 'photo'; }
     catch (error) { console.warn('Photorealistic 3D unavailable, using the stylized map.', error); document.getElementById('map').innerHTML = ''; }
   }
   if (!engine) { engine = await flatEngine({ data, apps, byId, cb }); document.documentElement.dataset.engine = 'flat'; }
@@ -367,13 +410,21 @@ async function main() {
   listEl.addEventListener('mouseover', e => { const c = e.target.closest('.card'); if (c) hover(c.dataset.id, true); });
   listEl.addEventListener('mouseleave', () => hover(null, false));
 
-  document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
+  document.querySelectorAll('.chip[data-filter]').forEach(chip => chip.addEventListener('click', () => {
     const f = chip.dataset.filter;
-    document.querySelectorAll('.chip').forEach(c => { const on = c === chip; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on); });
+    document.querySelectorAll('.chip[data-filter]').forEach(c => { const on = c === chip; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on); });
     listEl.querySelectorAll('.card').forEach(el => (el.parentElement.hidden = !matches({ layer: el.dataset.layer, stage: el.dataset.stage }, f)));
     listEl.querySelector('.list-head').hidden = f === 'll';
     engine.filter(f);
   }));
+
+  const floodBtn = document.querySelector('[data-flood]');
+  floodBtn?.addEventListener('click', () => {
+    const on = floodBtn.getAttribute('aria-pressed') !== 'true';
+    floodBtn.setAttribute('aria-pressed', on); floodBtn.classList.toggle('is-on', on);
+    document.querySelector('.flood-key').hidden = !on;
+    engine.flood?.(on);
+  });
 
   document.addEventListener('language:change', () => {
     renderList();

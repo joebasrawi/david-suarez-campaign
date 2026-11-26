@@ -20,10 +20,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="live-local.css?v=6">
+  <link rel="stylesheet" href="live-local.css?v=7">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
   <script type="module" src="../language.js"></script>
-  <script type="module" src="live-local.js?v=4"></script>
+  <script type="module" src="live-local.js?v=5"></script>
 </head>
 <body>
   <a class="skip" href="#list">Skip to the list of applications</a>
@@ -55,12 +55,19 @@
           <button type="button" class="chip" data-filter="ll" aria-pressed="false"><span class="dot approved" aria-hidden="true"></span>Live Local</button>
           <button type="button" class="chip" data-filter="dev" aria-pressed="false"><span class="dot dev" aria-hidden="true"></span>Other development</button>
           <button type="button" class="chip" data-filter="review" aria-pressed="false"><span class="dot review" aria-hidden="true"></span>Under review</button>
+          <button type="button" class="chip flood-toggle" data-flood aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s-5 5.6-5 9a5 5 0 0 0 10 0c0-3.4-5-9-5-9Z"/></svg>Flood risk</button>
+        </div>
+        <div class="flood-key" hidden>
+          <span><i style="background:#3d7bff"></i>VE · coastal, waves</span>
+          <span><i style="background:#43a6e8"></i>AE · 1% yearly flood</span>
+          <span><i style="background:#8fd0ef"></i>X · moderate to low</span>
+          <span><i style="background:#6fe3ff"></i>City-mapped tidal flooding</span>
         </div>
 
         <ol class="list" id="list" aria-label="Live Local Act applications"></ol>
 
         <footer class="sources">
-          <p><strong>Sources.</strong> The City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists, each case's Civic Access file, Design Review, Historic Preservation and Planning Board cases filed since 2023 (new buildings, major renovations and rezonings; single-family homes left out), the City's parcel map, Miami-Dade County LiDAR building heights, and the signed approval orders. Heights come from the signed orders, so they're shown for approved projects only.</p>
+          <p><strong>Sources.</strong> The City of Miami Beach's <a href="https://www.miamibeachfl.gov/city-hall/planning/approved-live-local-act-applications/">approved</a> and <a href="https://www.miamibeachfl.gov/city-hall/planning/live-local-act-applications-under-review/">under review</a> Live Local lists, each case's Civic Access file, Design Review, Historic Preservation and Planning Board cases filed since 2023 (new buildings, major renovations and rezonings; single-family homes left out), the City's parcel map, Miami-Dade County LiDAR building heights, the signed approval orders, and the City's FEMA flood zone and tidal flooding maps. Heights come from the signed orders, so they're shown for approved projects only.</p>
           <p class="updated" data-updated></p>
           <p>See something wrong? <a href="../about/">Tell David's office</a>.</p>
         </footer>

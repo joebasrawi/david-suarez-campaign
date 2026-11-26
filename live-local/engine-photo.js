@@ -98,6 +98,23 @@ export async function create({ data, apps, byId, cb, key }) {
     }
   });
 
+  // Flood risk overlay (FEMA zones + City tidal flooding spots), draped on the 3D tiles; built on first use.
+  let floodEntities = null;
+  function buildFlood() {
+    floodEntities = [];
+    if (!cb.flood) return;
+    const colors = { VE: ['#3d7bff', .4], AE: ['#43a6e8', .28], X: ['#8fd0ef', .12] };
+    const polys = g => (g.type === 'Polygon' ? [g.coordinates] : g.coordinates);
+    const hier = rings => new C.PolygonHierarchy(fromRing(rings[0]), rings.slice(1).map(h => new C.PolygonHierarchy(fromRing(h))));
+    for (const f of cb.flood.zones.features) {
+      const [col, alpha] = colors[f.properties.zone] || colors.X;
+      for (const rings of polys(f.geometry)) floodEntities.push(viewer.entities.add({ show: false, polygon: { hierarchy: hier(rings), classificationType: C.ClassificationType.CESIUM_3D_TILE, material: C.Color.fromCssColorString(col).withAlpha(alpha) } }));
+    }
+    const fa = { Frequently: .75, Occasionally: .5, Rarely: .3 };
+    for (const f of cb.flood.tidal.features) for (const rings of polys(f.geometry))
+      floodEntities.push(viewer.entities.add({ show: false, polygon: { hierarchy: hier(rings), classificationType: C.ClassificationType.CESIUM_3D_TILE, material: C.Color.fromCssColorString('#6fe3ff').withAlpha(fa[f.properties.freq] || .4) } }));
+  }
+
   // Rings (¼ mile, 1 mile) draped on the real ground, and tinted "taller than this project" buildings.
   const circle = (c, r, n = 160) => { const k = Math.PI / 180, out = []; for (let i = 0; i <= n; i++) { const t = (i / n) * 2 * Math.PI; out.push(c[0] + (r / (111320 * Math.cos(c[1] * k))) * Math.sin(t), c[1] + (r / 110540) * Math.cos(t)); } return out; };
   let ringEntities = [], tallerEntities = [], buildingsCache = null;
@@ -194,6 +211,7 @@ export async function create({ data, apps, byId, cb, key }) {
       for (const e of entities) e.show = cb.matches({ layer: e.properties.layer.getValue(), stage: e.properties.stage.getValue() }, f);
       pins.forEach(({ el, a }) => el.classList.toggle('is-dim', !cb.matches(a, f)));
     },
+    flood(on) { if (!floodEntities) buildFlood(); for (const e of floodEntities) e.show = on; },
     relabel() { for (const e of ringEntities) if (e.label) e.label.text = ringLabel(e.properties.ring.getValue()); }
   };
 }
