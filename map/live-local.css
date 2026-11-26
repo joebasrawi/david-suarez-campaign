@@ -192,10 +192,14 @@ h1 .accent { color: var(--coral) }
 .map.is-photo .cesium-viewer, .map.is-photo .cesium-viewer-cesiumWidgetContainer, .map.is-photo .cesium-widget, .map.is-photo canvas { width: 100%; height: 100% }
 .map.is-photo .cesium-viewer-bottom { left: auto !important; right: .6rem; bottom: .5rem; max-width: 34%; padding: .3rem .55rem; border-radius: 8px; background: rgba(7,26,34,.65); z-index: 3 }
 @media (max-width: 52rem) {
-  .map.is-photo .cesium-viewer-bottom { top: auto !important; bottom: calc(58vh + 6px) !important; left: .5rem !important; right: .5rem !important; max-width: none; padding: .15rem .45rem; background: rgba(7,26,34,.78) }
-  .map.is-photo .cesium-credit-logoContainer img { max-height: 12px; width: auto }
-  .map.is-photo .cesium-credit-logoContainer, .map.is-photo .cesium-credit-textContainer { display: inline }
-  .map.is-photo .cesium-credit-textContainer, .map.is-photo .cesium-credit-textContainer * { font-size: 8px !important; line-height: 1.3 }
+  /* Credits: Google's logo and data line only, small, no box, tucked just above the sheet */
+  .map.is-photo .cesium-viewer-bottom { top: auto !important; bottom: calc(var(--cover) + 3px) !important; left: .6rem !important; right: 4.5rem !important; max-width: none; padding: 0; border-radius: 0; background: none; line-height: 1.15; text-shadow: 0 1px 2px rgba(0,0,0,.9); opacity: .85; transition: bottom .42s var(--ease), opacity .3s var(--ease) }
+  .map.is-photo .cesium-credit-logoContainer { display: none !important }
+  .map.is-photo .cesium-viewer-bottom img { max-height: 9px !important; width: auto !important; vertical-align: -1px !important }
+  .map.is-photo .cesium-credit-textContainer { display: inline }
+  .map.is-photo .cesium-credit-textContainer, .map.is-photo .cesium-credit-textContainer * { font-size: 7px !important; line-height: 1.15 }
+  .map.is-photo .cesium-credit-delimiter { padding: 0 .15em }
+  .map.is-photo .cesium-credit-expand-link { font-size: 7px }
   html[data-engine="photo"] .legend { display: none }
 }
 .map.is-photo .cesium-credit-textContainer, .map.is-photo .cesium-credit-textContainer a { color: #a9bec3 !important; font: 500 10px var(--sans) }
@@ -281,21 +285,67 @@ html[data-engine="flat"] .keys-hint { right: calc(clamp(1rem,2.4vw,2rem) + 52px)
 .app[data-state="ready"] .loader, .app[data-state="error"] .loader { opacity: 0; visibility: hidden }
 .noscript { padding: 2rem }
 
-/* Phones: map on top, panel as a bottom sheet */
+/* Phones: map on top, panel as a bottom sheet with three heights (peek, half, full).
+   JS sets --sheet-h on the panel and --cover on .app (how much of the screen the sheet or the detail drawer covers). */
+.sheet-handle { display: none }
 @media (max-width: 52rem) {
   :root { --panel-w: 100% }
-  .map-veil { background: linear-gradient(180deg, rgba(7,26,34,.75) 0, transparent 22%, transparent 45%, rgba(7,26,34,.6) 100%) }
-  .topbar { padding: .8rem 1rem }
-  .brand-last { font-size: 28px }
-  .panel { top: auto; left: 0; right: 0; bottom: 0; width: 100%; height: 58%; border-radius: 22px 22px 0 0; border-bottom: 0; transform: translateY(40px) }
-  .panel::before { content: ""; position: absolute; top: .55rem; left: 50%; width: 2.6rem; height: 4px; margin-left: -1.3rem; border-radius: 2px; background: rgba(255,255,255,.25); z-index: 3 }
-  .panel-scroll { padding: 1.5rem 1.1rem 1.5rem }
-  .filters { margin: 0 -1.1rem .6rem; padding: .6rem 1.1rem }
-  h1 { font-size: 2.1rem }
-  .detail { top: auto; left: .6rem; right: .6rem; bottom: .6rem; width: auto; max-height: 72%; transform: translateY(30px) }
-  .legend { left: 1rem; right: auto; bottom: calc(58% + .8rem); font-size: .68rem; gap: .7rem; padding: .45rem .75rem }
-  .legend span:last-child { display: none }
-  .maplibregl-ctrl-top-right { top: 4.2rem }
+  .app { --cover: 110px }
+  .map-veil { background: linear-gradient(180deg, rgba(7,26,34,.72) 0, rgba(7,26,34,.2) 12%, transparent 20%) }
+  .topbar { padding: calc(.55rem + env(safe-area-inset-top)) 1rem .55rem }
+  .brand-first { padding: 2px 7px; font-size: 10px }
+  .brand-last { font-size: 24px }
+  .brand-office { font-size: 8px; margin-top: 2px }
+  .language-toggle { min-height: 38px; padding: .3rem .65rem; font-size: .74rem }
+
+  .panel { top: auto; left: 0; right: 0; bottom: 0; width: 100%; height: var(--sheet-h, 110px); max-height: 100%; border-radius: 22px 22px 0 0; border-bottom: 0; transform: translateY(40px);
+    transition: opacity .9s var(--ease) .25s, transform .9s var(--ease) .25s, height .42s var(--ease), border-radius .42s var(--ease) }
+  .panel { touch-action: none }
+  .app[data-sheet="full"] .panel { border-radius: 0; touch-action: auto }
+  .app[data-sheet="full"] .panel-scroll { padding-top: calc(1.6rem + env(safe-area-inset-top)) }
+  .app[data-sheet="full"] .sheet-handle { top: env(safe-area-inset-top) }
+  /* While the list covers the page, the map's chrome steps out of the way */
+  .topbar, .maplibregl-ctrl-top-right, .map.is-photo .cesium-viewer-bottom { transition: opacity .3s var(--ease) }
+  .app[data-sheet="full"] .topbar, .app[data-sheet="full"] .maplibregl-ctrl-top-right, .app[data-sheet="full"] .maplibregl-ctrl-bottom-right, .app[data-sheet="full"] .map.is-photo .cesium-viewer-bottom { opacity: 0; pointer-events: none }
+  .panel.is-dragging { transition: none }
+  .panel.is-peek .panel-scroll { overflow: hidden }
+  .sheet-handle { display: block; position: absolute; z-index: 4; top: 0; left: 0; right: 0; height: 1.6rem; padding: 0; border: 0; background: transparent; cursor: grab; touch-action: none }
+  .sheet-handle span { display: block; width: 2.6rem; height: 4px; margin: .55rem auto 0; border-radius: 2px; background: rgba(255,255,255,.32) }
+  .sheet-handle:focus-visible { outline-offset: -3px }
+  .panel-scroll { padding: 1.45rem 1rem calc(1.4rem + env(safe-area-inset-bottom)) }
+  .intro .kicker { margin: 0 0 .55rem }
+
+  /* View tabs: one swipeable row instead of three wrapped rows */
+  .views { touch-action: pan-x; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; gap: .4rem; margin: 0 -1rem .9rem; padding: .1rem 1rem .2rem; border: 0; border-radius: 0; background: none; scrollbar-width: none }
+  .view-tab { flex: none; min-height: 40px; padding: .35rem .9rem; border-radius: 999px; background: rgba(255,255,255,.06); scroll-snap-align: start; scroll-margin-left: 1rem }
+  .filters { top: -1.45rem; margin: 0 -1rem .6rem; padding: .6rem 1rem }
+  h1 { font-size: 2rem }
+  .lead { font-size: .9rem }
+  .card { padding: .8rem .85rem }
+
+  /* Detail: its own bottom sheet over the peeking panel */
+  .detail { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: min(58%, calc(100% - 8rem)); border-radius: 22px 22px 0 0; border-bottom: 0; overscroll-behavior: contain; transform: translateY(104%); transition: opacity .3s var(--ease), transform .5s var(--ease) }
+  html[data-engine="photo"] .detail { max-height: min(58%, calc(100% - 8rem)) }
+  .detail.is-open { transform: none }
+  .detail-body { padding: 1.25rem 1.1rem calc(1.2rem + env(safe-area-inset-bottom)) }
+  .detail h2 { margin-top: .7rem; font-size: 1.75rem }
+  .close { top: .7rem; right: .7rem; width: 42px; height: 42px }
+  .hero-num { padding: .85rem 1rem }
+  .hero-num b { font-size: 2.6rem }
+
+  /* Map chrome rides on top of whatever covers the bottom */
+  .legend { left: .75rem; right: .75rem; bottom: calc(var(--cover) + 2.1rem); width: max-content; max-width: calc(100% - 1.5rem); gap: .7rem; padding: .4rem .7rem; overflow-x: auto; scrollbar-width: none; white-space: nowrap; font-size: .66rem;
+    transition: opacity .8s var(--ease) .8s, bottom .42s var(--ease) }
+  .legend::-webkit-scrollbar { display: none }
+  .app.is-detail .legend, .app[data-sheet="full"] .legend { opacity: 0; transition-delay: 0s }
+  .maplibregl-ctrl-top-right { top: calc(4rem + env(safe-area-inset-top)) }
+  .maplibregl-ctrl-bottom-right, .maplibregl-ctrl-bottom-left { bottom: var(--cover); transition: bottom .42s var(--ease) }
+  .maplibregl-ctrl-attrib { font-size: 9px }
+}
+/* Bigger tap targets for the small pins on touch screens */
+@media (pointer: coarse) {
+  .pin-wrap::before { content: ""; position: absolute; inset: -10px -8px -4px }
+  .pin-abs { pointer-events: auto }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important }
