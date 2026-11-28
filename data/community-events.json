@@ -1,31 +1,9 @@
 {
-  "updatedAt": "2026-11-27T08:45:32.393Z",
+  "updatedAt": "2026-11-28T07:59:35.059Z",
   "timezone": "America/New_York",
   "source": "https://events.miamibeachfl.gov/City%20Meetings/",
   "coverage": "Official City calendar snapshot plus manually managed community events. Not an exhaustive list.",
   "items": [
-    {
-      "id": "city-399079",
-      "title": "Day After Thanksgiving",
-      "start": "2026-11-27T00:00:00-05:00",
-      "end": "2026-11-27T00:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "City Hall Closed",
-      "source": "https://events.miamibeachfl.gov/event/day-after-thanksgiving/",
-      "category": "City calendar",
-      "allDay": true
-    },
-    {
-      "id": "city-399081",
-      "title": "Washington Avenue Business Improvement District Annual Meeting",
-      "start": "2026-11-27T14:00:00-05:00",
-      "end": "2026-11-27T16:00:00-05:00",
-      "location": "See the official event notice for location and participation details.",
-      "description": "Hybrid Meeting https://us06web.zoom.us/j/83542318798?pwd=CRxFvP7ByrpkM8vm6lWxpuHqhbNso6.1 Washington Avenue BID Office 1210 Washington Avenue, Suite 220",
-      "source": "https://events.miamibeachfl.gov/event/washington-avenue-business-improvement-district-annual-meeting/",
-      "category": "City calendar",
-      "allDay": false
-    },
     {
       "id": "city-398432",
       "title": "City Commission* \u2013 Workshop on Citywide Priorities and Matters of Public Interest",

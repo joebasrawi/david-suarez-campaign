@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T03:19:12.202Z",
+  "generatedAt": "2026-11-28T07:59:34.771Z",
   "source": {
     "label": "Commissioner David Suarez on YouTube",
     "url": "https://www.youtube.com/@CommissionerDavidSuarez",
@@ -7,6 +7,16 @@
   },
   "channelId": "UCFSRLFAu-wZdguhiP021UUA",
   "items": [
+    {
+      "id": "AoEWn5i4gWI",
+      "title": "Suarez Sound Off Ep. 009 — The Miami Beach Sit-Down You’ve Been Waiting For | Kristen Rosen Gonzalez",
+      "series": "Suarez Sound Off",
+      "publishedAt": "2026-11-27T23:00:11+00:00",
+      "updatedAt": "2026-11-28T00:43:41+00:00",
+      "url": "https://www.youtube.com/watch?v=AoEWn5i4gWI",
+      "thumbnail": "https://i.ytimg.com/vi/AoEWn5i4gWI/hqdefault.jpg",
+      "duration": "1:41:35"
+    },
     {
       "id": "RsEa2n6OI3Y",
       "title": "🌊 ANOTHER DAY OF FLOODING IN MIAMI BEACH. ENOUGH IS ENOUGH.",
@@ -16,16 +26,6 @@
       "url": "https://www.youtube.com/watch?v=RsEa2n6OI3Y",
       "thumbnail": "https://i.ytimg.com/vi/RsEa2n6OI3Y/hqdefault.jpg",
       "duration": "1:13"
-    },
-    {
-      "id": "AoEWn5i4gWI",
-      "title": "Suarez Sound Off Ep. 009 — The Miami Beach Sit-Down You’ve Been Waiting For | Kristen Rosen Gonzalez",
-      "series": "Suarez Sound Off",
-      "publishedAt": "2026-11-20T20:15:04+00:00",
-      "updatedAt": "2026-11-25T04:35:11+00:00",
-      "url": "https://www.youtube.com/watch?v=AoEWn5i4gWI",
-      "thumbnail": "https://i.ytimg.com/vi/AoEWn5i4gWI/hqdefault.jpg",
-      "duration": "Upcoming"
     },
     {
       "id": "Sr8UXxSPhJQ",
